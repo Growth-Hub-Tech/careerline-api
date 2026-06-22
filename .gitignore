@@ -1,0 +1,13 @@
+# An Environment variables and shoudlnt be pushed to GitHub
+.env
+
+#Virtual environment... too large and unnecessary. Easy to install by the way
+venv/
+
+#Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+#VSCode settings
+.vscode/
