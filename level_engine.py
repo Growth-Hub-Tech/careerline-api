@@ -2,19 +2,19 @@ from database import fetch_one, get_connection
 
 def assign_level(learner_id, attempt_id, level_id):
 
-    # STEP 1: Get the skill_id from the attempt
+    #Get the skill_id from the attempt
     attempt = fetch_one(
         "SELECT skill_id FROM test_attempt WHERE attempt_id = %s",
         (attempt_id,)
     )
 
     if not attempt:
-        print(f"[ERROR] No attempt found with attempt_id={attempt_id}")
+        print(f"No attempt found with attempt_id={attempt_id}")
         return None
 
     skill_id = attempt["skill_id"]
 
-    # STEP 2: Get level name for readable output
+    #Get level name for readable output
     level = fetch_one(
         "SELECT level_name FROM proficiency_level WHERE level_id = %s",
         (level_id,)
@@ -22,7 +22,7 @@ def assign_level(learner_id, attempt_id, level_id):
 
     level_name = level["level_name"] if level else "UNKNOWN"
 
-    # STEP 3: UPSERT into learner_level
+    #UPSERT into learner_level
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
@@ -36,17 +36,17 @@ def assign_level(learner_id, attempt_id, level_id):
             """
             cursor.execute(query, (learner_id, skill_id, attempt_id, level_id))
         conn.commit()
-        print(f"[OK] Level assigned: learner={learner_id}, skill={skill_id}, level={level_name}")
+        print(f"Level assigned: learner={learner_id}, skill={skill_id}, level={level_name}")
 
     except Exception as e:
         conn.rollback()
-        print(f"[ERROR] Failed to assign level: {e}")
+        print(f"Failed to assign level: {e}")
         raise
 
     finally:
         conn.close()
 
-    # STEP 4: Return confirmation
+    #Return confirmation
     return {
         "learner_id": learner_id,
         "skill_id": skill_id,

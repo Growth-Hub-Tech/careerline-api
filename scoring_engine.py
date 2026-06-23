@@ -1,12 +1,12 @@
 from database import fetch_all, fetch_one, get_connection
 
 
-# SAVE DIFFICULTY ANALYTICS
+#SAVE DIFFICULTY ANALYTICS
 def save_difficulty_stats(attempt_id, level_stats):
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
-            # Clear old data first to avoid duplicate key errors on re-runs
+            #Clear old data first to avoid duplicate key errors on re-runs
             cursor.execute(
                 "DELETE FROM attempt_difficulty_score WHERE attempt_id = %s",
                 (attempt_id,)
@@ -22,7 +22,7 @@ def save_difficulty_stats(attempt_id, level_stats):
                 total = data["total"]
                 correct = data["correct"]
 
-                # Skip levels with no questions — avoid inserting empty rows
+                #Skip levels with no questions — avoid inserting empty rows
                 if total == 0:
                     continue
 
@@ -37,23 +37,23 @@ def save_difficulty_stats(attempt_id, level_stats):
                 ))
 
         conn.commit()
-        print(f"[OK] Difficulty stats saved for attempt_id={attempt_id}")
+        print(f"Difficulty stats saved for attempt_id={attempt_id}")
 
     except Exception as e:
         conn.rollback()
-        print(f"[ERROR] Failed to save difficulty stats: {e}")
-        raise  # Re-raise so the caller knows something went wrong
+        print(f"Failed to save difficulty stats: {e}")
+        raise  #Raise the error again so the caller knows something went wrong
 
     finally:
         conn.close()
 
 
-# SAVE SUBSKILL ANALYTICS
+#SAVE SUBSKILL ANALYTICS
 def save_subskill_stats(attempt_id, subskill_stats):
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
-            # Clear old data first
+            #Clear old data first
             cursor.execute(
                 "DELETE FROM attempt_subskill_score WHERE attempt_id = %s",
                 (attempt_id,)
@@ -83,21 +83,21 @@ def save_subskill_stats(attempt_id, subskill_stats):
                 ))
 
         conn.commit()
-        print(f"[OK] Subskill stats saved for attempt_id={attempt_id}")
+        print(f"Subskill stats saved for attempt_id={attempt_id}")
 
     except Exception as e:
         conn.rollback()
-        print(f"[ERROR] Failed to save subskill stats: {e}")
+        print(f"Failed to save subskill stats: {e}")
         raise
 
     finally:
         conn.close()
 
 
-# MAIN SCORING FUNCTION
+#MAIN SCORING FUNCTION
 def score_attempt(attempt_id):
 
-    # STEP 1: Get difficulty levels dynamically
+    #Getting the difficulty levels dynamically
     levels_data = fetch_all(
         "SELECT DISTINCT difficulty_level FROM questions"
     )
@@ -106,7 +106,7 @@ def score_attempt(attempt_id):
         for lvl in levels_data
     }
 
-    # STEP 2: Fetch answers with joins
+    #Fetching answers with joins
     fetch_query = """
         SELECT 
             opt.is_correct,
@@ -120,14 +120,14 @@ def score_attempt(attempt_id):
     answers = fetch_all(fetch_query, (attempt_id,))
 
     if not answers:
-        print(f"[WARN] No answers found for attempt_id={attempt_id}")
+        print(f"No answers found for attempt_id={attempt_id}")
         return None
 
-    # STEP 3: Initialize counters
+    #Initialize counters
     correct = 0
     subskill_stats = {}
 
-    # STEP 4: Process answers
+    #Process answers
     for ans in answers:
         level = ans["difficulty_level"]
         subskill = ans["subskill_id"]
@@ -146,12 +146,12 @@ def score_attempt(attempt_id):
             level_stats[level]["correct"] += 1
             subskill_stats[subskill]["correct"] += 1
 
-    # STEP 5: Calculate overall percentage
+    #Calculateing the overall percentage
     total = len(answers)
     total_answered = len(answers)
     percentage = round(correct, 2)
 
-    # STEP 6: Get proficiency level from DB
+    #Get proficiency level from DB
     level_data = fetch_one("""
         SELECT level_id 
         FROM level_threshold 
@@ -159,7 +159,7 @@ def score_attempt(attempt_id):
     """, (percentage,))
     level_id = level_data["level_id"] if level_data else None
 
-    # STEP 7: Update test_attempt record
+    #to update test_attempt record
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
@@ -172,19 +172,19 @@ def score_attempt(attempt_id):
                 WHERE attempt_id = %s
             """, (percentage, level_id, attempt_id))
         conn.commit()
-        print(f"[OK] test_attempt updated for attempt_id={attempt_id}")
+        print(f"Test_attempt updated for attempt_id={attempt_id}")
     except Exception as e:
         conn.rollback()
-        print(f"[ERROR] Failed to update test_attempt: {e}")
+        print(f"Failed to update test_attempt: {e}")
         raise
     finally:
         conn.close()
 
-    # STEP 8: Save analytics
+    #Save analytics
     save_difficulty_stats(attempt_id, level_stats)
     save_subskill_stats(attempt_id, subskill_stats)
 
-    # STEP 9: Return result
+    #Return result
     return {
         "score": correct,
         "total": total,
@@ -195,7 +195,7 @@ def score_attempt(attempt_id):
     }
 
 
-# TEST
+#TEST
 if __name__ == "__main__":
     attempt_id = 1
     result = score_attempt(attempt_id)
