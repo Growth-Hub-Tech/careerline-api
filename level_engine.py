@@ -57,7 +57,7 @@ def assign_level(learner_id, attempt_id, level_id):
     }
 
 
-# TEST
+#TEST
 if __name__ == "__main__":
     result = assign_level(learner_id=1, attempt_id=1, level_id=1)
     print("\nLEVEL ENGINE RESULT:", result)
