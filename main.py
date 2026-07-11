@@ -1,6 +1,7 @@
 from database import fetch_one, fetch_all, execute, get_connection
 from scoring_engine import score_attempt
 from level_engine import assign_level
+import random
 
 #LEARNER REGISTRATION
 def register_learner(full_name, email, phone):
@@ -24,7 +25,7 @@ def start_attempt(learner_id, skill_id):
     
     #Fetch the latest attempt for this learner and skill to get the ID
     attempt = fetch_one("SELECT attempt_id FROM test_attempt WHERE learner_id = %s AND skill_id = %s ORDER BY start_time DESC LIMIT 1", (learner_id, skill_id))
-    attempt_id = attempt["attempt_id"] # Extract attempt_id from the fetched row
+    attempt_id = attempt["attempt_id"] #Extract attempt_id from the fetched row
     print(f"New attempt started with ID {attempt_id}")
     
     #Fetch 25 random questions per difficulty level
@@ -46,9 +47,9 @@ def start_attempt(learner_id, skill_id):
         options = fetch_all(
             "SELECT option_id, option_text FROM options WHERE question_id = %s",
             (question["question_id"],))
-        question_dict = dict(question)          # Convert to plain dict
-        question_dict["options"] = list(options) # Attach options to the plain dict
-        questions[i] = question_dict             # Put the complete dict back into the list
+        question_dict = dict(question)          #Convert to plain dict
+        question_dict["options"] = random.sample(list(options), len(options)) #Shuffle options randomly
+        questions[i] = question_dict             #Put the complete dict back into the list
 
     #Return attempt details and questions to the caller
     return {
