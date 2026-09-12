@@ -1,7 +1,7 @@
-# An Environment variables and shoudlnt be pushed to GitHub
+#An Environment variables and shoudlnt be pushed to GitHub
 .env
 
-#Virtual environment... too large and unnecessary. Easy to install by the way
+#Virtual environment... too large and not necessary. Easy to install by the way
 venv/
 
 #Python cache files

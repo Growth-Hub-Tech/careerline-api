@@ -3,6 +3,7 @@ from scoring_engine import score_attempt
 from level_engine import assign_level
 import random
 
+
 #LEARNER REGISTRATION
 def register_learner(full_name, email, phone):
     #Check if email already exists
@@ -10,7 +11,7 @@ def register_learner(full_name, email, phone):
     if existing:
         print(f"Learner with email {email} already exists with ID {existing['learner_id']}")
         return existing["learner_id"]
-    
+
     #Creating new learner
     execute("INSERT INTO learner (full_name, email, phone_number) VALUES (%s, %s, %s)", (full_name, email, phone))
     new_learner = fetch_one("SELECT learner_id FROM learner WHERE email = %s", (email,)) #Selecting the new learner to get the ID
@@ -19,28 +20,50 @@ def register_learner(full_name, email, phone):
 
 
 #START TEST ATTEMPT
-def start_attempt(learner_id, skill_id):
-    #Create a new test attempt to get its ID
-    execute("INSERT INTO test_attempt (learner_id, skill_id) VALUES (%s, %s)", (learner_id, skill_id))
-    
-    #Fetch the latest attempt for this learner and skill to get the ID
-    attempt = fetch_one("SELECT attempt_id FROM test_attempt WHERE learner_id = %s AND skill_id = %s ORDER BY start_time DESC LIMIT 1", (learner_id, skill_id))
-    attempt_id = attempt["attempt_id"] #Extract attempt_id from the fetched row
+def start_attempt(learner_id, skill_id, declared_level):
+
+    #Validate declared level — must be one of the four accepted values
+    valid_levels = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
+    declared_level = declared_level.upper()
+    if declared_level not in valid_levels:
+        raise ValueError(f"Invalid level declared: {declared_level}. Must be one of {valid_levels}")
+
+    #Fetch the level_id for the declared level from proficiency_level table
+    level_data = fetch_one(
+        "SELECT level_id FROM proficiency_level WHERE level_name = %s",
+        (declared_level,)
+    )
+    if not level_data:
+        raise ValueError(f"Level {declared_level} not found in database")
+    declared_level_id = level_data["level_id"]
+
+    #Create a new test attempt and store the declared level
+    execute(
+        "INSERT INTO test_attempt (learner_id, skill_id, declared_level_id) VALUES (%s, %s, %s)",
+        (learner_id, skill_id, declared_level_id)
+    )
+
+    #Fetch the attempt that was just created to get its ID
+    attempt = fetch_one(
+        "SELECT attempt_id FROM test_attempt WHERE learner_id = %s AND skill_id = %s ORDER BY start_time DESC LIMIT 1",
+        (learner_id, skill_id)
+    )
+    attempt_id = attempt["attempt_id"]
     print(f"New attempt started with ID {attempt_id}")
-    
-    #Fetch 25 random questions per difficulty level
-    questions = []
-    levels = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
-    for level in levels:
-        #Fetch 25 random questions for this skill and difficulty level
-        level_questions = fetch_all("""SELECT q.question_id, q.question_text, q.difficulty_level, q.subskill_id
-            FROM questions q
-            JOIN subskills sub ON q.subskill_id = sub.subskill_id
-            WHERE sub.skill_id = %s AND q.difficulty_level = %s
-            ORDER BY RAND()
-            LIMIT 25""", (skill_id, level))
-        questions.extend(level_questions)
-    print(f"Fetched {len(questions)} questions for skill_id={skill_id}")
+
+    #Fetch 25 random questions for the declared level only
+    questions = fetch_all(
+        """
+        SELECT q.question_id, q.question_text, q.difficulty_level, q.subskill_id
+        FROM questions q
+        JOIN subskills sub ON q.subskill_id = sub.subskill_id
+        WHERE sub.skill_id = %s AND q.difficulty_level = %s
+        ORDER BY RAND()
+        LIMIT 25
+        """,
+        (skill_id, declared_level)
+    )
+    print(f"Fetched {len(questions)} questions for skill_id={skill_id} at {declared_level} level")
 
     #Fetch answer options for each question without revealing correct answer
     for i, question in enumerate(questions):
@@ -49,13 +72,14 @@ def start_attempt(learner_id, skill_id):
             (question["question_id"],))
         question_dict = dict(question)          #Convert to plain dict
         question_dict["options"] = random.sample(list(options), len(options)) #Shuffle options randomly
-        questions[i] = question_dict             #Put the complete dict back into the list
+        questions[i] = question_dict
 
     #Return attempt details and questions to the caller
     return {
         "attempt_id": attempt_id,
         "learner_id": learner_id,
         "skill_id": skill_id,
+        "declared_level": declared_level,
         "total_questions": len(questions),
         "questions": questions
     }
@@ -64,7 +88,7 @@ def start_attempt(learner_id, skill_id):
 #SUBMIT ANSWER AND SCORE
 def submit_and_score(attempt_id, learner_id, answers):
 
-    #Saving all learner answers to the DB in one transaction
+    #Save all learner answers to the DB in one transaction
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
@@ -72,7 +96,7 @@ def submit_and_score(attempt_id, learner_id, answers):
                 question_id = answer["question_id"]
                 selected_option_id = answer["selected_option_id"]
 
-                #Checking if the selected option is correct from the options table
+                #Check if the selected option is correct by looking it up in options table
                 option = fetch_one(
                     "SELECT is_correct FROM options WHERE option_id = %s",
                     (selected_option_id,)
@@ -104,23 +128,28 @@ def submit_and_score(attempt_id, learner_id, answers):
     score_result = score_attempt(attempt_id)
     print(f"Scoring complete: {score_result['percentage']}%")
 
-    #Assign proficiency level using the level engine
-    level_result = assign_level(
-        learner_id=learner_id,
-        attempt_id=attempt_id,
-        level_id=score_result["level_id"]
-    )
-    print(f"Level assigned: {level_result['level_name']}")
+    #Assign proficiency level using the level engine only if passed
+    if score_result["passed"]:
+        level_result = assign_level(
+            learner_id=learner_id,
+            attempt_id=attempt_id,
+            level_id=score_result["level_id"]
+        )
+        print(f"Level assigned: {level_result['level_name']}")
+    else:
+        print(f"Learner did not pass declared level — level not assigned")
 
     #Return the final combined result
     return {
         "learner_id": learner_id,
         "attempt_id": attempt_id,
         "score": score_result["score"],
-        "total_possible": 100,
+        "total_possible": 25,
         "percentage": score_result["percentage"],
-        "level": level_result["level_name"],
-        "level_id": score_result["level_id"],
+        "declared_level": score_result["declared_level"],
+        "status": score_result["status"],
+        "confirmed_level": score_result["confirmed_level"],
+        "level_suggestion": score_result["level_suggestion"],
         "difficulty_breakdown": score_result["level_breakdown"],
         "subskill_breakdown": score_result["subskill_breakdown"]
     }
@@ -129,15 +158,15 @@ def submit_and_score(attempt_id, learner_id, answers):
 #TESTING
 if __name__ == "__main__":
 
-    #Register a learner for testing
+    #Register a learner
     learner_id = register_learner(
         full_name="Joshua Excel",
         email="joshxcel@email.com",
         phone="08012345678"
     )
 
-    #Start a test attempt for skill 1
-    attempt_data = start_attempt(learner_id=learner_id, skill_id=1)
+    #Start a test attempt for skill 1 at JUNIOR level
+    attempt_data = start_attempt(learner_id=learner_id, skill_id=1, declared_level="JUNIOR")
     attempt_id = attempt_data["attempt_id"]
     questions = attempt_data["questions"]
 
@@ -159,9 +188,12 @@ if __name__ == "__main__":
 
     #Print final summary
     print("\n========== FINAL RESULT ==========")
-    print(f"Learner ID     : {final_result['learner_id']}")
-    print(f"Attempt ID     : {final_result['attempt_id']}")
-    print(f"Score          : {final_result['score']} / {final_result['total_possible']}")
-    print(f"Percentage     : {final_result['percentage']}%")
-    print(f"Level Assigned : {final_result['level']}")
+    print(f"Learner ID      : {final_result['learner_id']}")
+    print(f"Attempt ID      : {final_result['attempt_id']}")
+    print(f"Score           : {final_result['score']} / {final_result['total_possible']}")
+    print(f"Percentage      : {final_result['percentage']}%")
+    print(f"Declared Level  : {final_result['declared_level']}")
+    print(f"Status          : {final_result['status']}")
+    print(f"Confirmed Level : {final_result['confirmed_level']}")
+    print(f"Level Suggestion: {final_result['level_suggestion']}")
     print("==================================")
