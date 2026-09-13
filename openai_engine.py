@@ -5,16 +5,15 @@ from dotenv import load_dotenv
 #Load environment variables from .env file
 load_dotenv()
 
-#Initialize the Claude client using xAI's base URL and API key from .env
+#Initialize the OpenAI client using API key from .env
 client = OpenAI(
-    api_key=os.getenv("CLAUDE_API_KEY"),
-    base_url="https://api.x.ai/v1"
+    api_key=os.getenv("OPENAI_API_KEY")
 )
 
-#Getting Claude's benchmark for a weak subskill
-def get_claude_benchmark(skill_name, subskill_name, level_name, score):
+#MAIN FUNCTION — Get OpenAI's benchmark for a weak subskill
+def get_ai_benchmark(skill_name, subskill_name, level_name, score):
 
-    #Claude prompt
+    #Build the prompt to send to OpenAI
     prompt = f"""
     A learner scored {score}% on {subskill_name} in a {skill_name} assessment.
     Their current level is {level_name}.
@@ -27,9 +26,9 @@ def get_claude_benchmark(skill_name, subskill_name, level_name, score):
     """
 
     try:
-        #Calling the Claude API
+        #Call the OpenAI API
         response = client.chat.completions.create(
-            model="claude-sonnet-5",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "system",
@@ -44,27 +43,28 @@ def get_claude_benchmark(skill_name, subskill_name, level_name, score):
             temperature=0.7
         )
 
-        #Extracting the text response from Claude
-        claude_response = response.choices[0].message.content.strip()
+        #Extract the text response from OpenAI
+        ai_response = response.choices[0].message.content.strip()
 
-        #final recommendation from claude
-        recommendation = f"Score: {score}% — Key concepts to master in {subskill_name}:\n{claude_response}"
+        #Build the final recommendation combining score context and OpenAI advice
+        recommendation = f"Score: {score}% — Key concepts to master in {subskill_name}:\n{ai_response}"
 
         return recommendation
 
     except Exception as e:
-        #Just incase claude fails
-        print(f"Claude API call failed for {subskill_name}: {e}")
+        #If OpenAI API fails, fall back to generic message
+        print(f"[WARN] OpenAI API call failed for {subskill_name}: {e}")
         return f"Dedicate focused time to {subskill_name}. Significant improvement needed (score: {score}%)"
 
 
-#testing if claude api is working
+#TEST
 if __name__ == "__main__":
-    result = get_claude_benchmark(
+    result = get_ai_benchmark(
         skill_name="Frontend Web Development",
         subskill_name="JavaScript",
         level_name="JUNIOR",
         score=35
     )
-    print("\nCLAUDE RECOMMENDATION:")
+    print("\n===== AI BENCHMARK =====")
     print(result)
+    print("========================")

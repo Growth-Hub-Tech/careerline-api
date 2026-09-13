@@ -19,6 +19,85 @@ def register_learner(full_name, email, phone):
     return new_learner["learner_id"]
 
 
+#GET BEHAVIOURAL QUESTIONS — fetches 5 general + 5 skill-specific questions
+def get_behavioural_questions(skill_id):
+
+    #Fetch 5 general questions that apply to everyone
+    general_questions = fetch_all(
+        """
+        SELECT question_id, question_text, question_type
+        FROM behavioural_questions
+        WHERE question_type = 'GENERAL' AND is_active = TRUE
+        LIMIT 5
+        """,
+        None
+    )
+
+    #Fetch 5 skill-specific questions for the selected skill
+    skill_questions = fetch_all(
+        """
+        SELECT question_id, question_text, question_type
+        FROM behavioural_questions
+        WHERE skill_id = %s AND question_type = 'SKILL_SPECIFIC' AND is_active = TRUE
+        LIMIT 5
+        """,
+        (skill_id,)
+    )
+
+    #Fetch skill name for context
+    skill = fetch_one(
+        "SELECT skill_name FROM skills WHERE skill_id = %s",
+        (skill_id,)
+    )
+
+    #Combine both lists — general first then skill-specific
+    all_questions = list(general_questions) + list(skill_questions)
+
+    return {
+        "skill_id": skill_id,
+        "skill_name": skill["skill_name"] if skill else "Unknown",
+        "total_questions": len(all_questions),
+        "questions": all_questions
+    }
+
+
+#SUBMIT BEHAVIOURAL ANSWERS — saves learner's answers to learner_profile table
+def submit_behavioural_answers(learner_id, attempt_id, answers):
+
+    #Save each answer to the learner_profile table
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            for answer in answers:
+                cursor.execute(
+                    """
+                    INSERT INTO learner_profile
+                    (learner_id, attempt_id, question_id, answer_text)
+                    VALUES (%s, %s, %s, %s)
+                    """,
+                    (learner_id, attempt_id, answer["question_id"], answer["answer_text"])
+                )
+        #Commit all answers at once
+        conn.commit()
+        print(f"Behavioural answers saved for learner_id={learner_id}")
+
+    except Exception as e:
+        conn.rollback()
+        print(f"[ERROR] Failed to save behavioural answers: {e}")
+        raise
+
+    finally:
+        conn.close()
+
+    return {
+        "learner_id": learner_id,
+        "attempt_id": attempt_id,
+        "total_answers": len(answers),
+        "message": "Behavioural answers saved successfully"
+    }
+
+    
+
 #START TEST ATTEMPT
 def start_attempt(learner_id, skill_id, declared_level):
 

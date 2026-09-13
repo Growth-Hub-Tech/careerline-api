@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
-from main import register_learner, start_attempt, submit_and_score
+from main import register_learner, start_attempt, submit_and_score, get_behavioural_questions, submit_behavioural_answers
+#from main import register_learner, start_attempt, submit_and_score
 from recommendation_engine import generate_recommendations, get_learning_pathway
 
 app = FastAPI(
@@ -21,7 +22,7 @@ class StartAttemptRequest(BaseModel):
     skill_id: int
     declared_level: str  #Learner's self-declared level e.g BEGINNER, JUNIOR, MID, ADVANCED
 
-#Answer Item — a single answer submitted by the learner
+#single answer submitted by the learner
 class AnswerItem(BaseModel):
     question_id: int
     selected_option_id: int
@@ -31,6 +32,17 @@ class SubmitRequest(BaseModel):
     learner_id: int
     attempt_id: int
     answers: List[AnswerItem]
+
+#For behavioural Answer Item so a single behavioural answer be submitted by the learner
+class BehaviouralAnswerItem(BaseModel):
+    question_id: int
+    answer_text: str
+
+#Behavioural Answers Request
+class BehaviouralAnswersRequest(BaseModel):
+    learner_id: int
+    attempt_id: int
+    answers: List[BehaviouralAnswerItem]
 
 #BUILDING ENDPOINTS TO REGISTER LEARNER, START TEST ATTEMPT, SUBMIT ANSWERS & SCORES, GET LEARNING PATHWAY
 
@@ -115,6 +127,47 @@ def learning_pathway(learner_id: int, skill_id: int):
             "status": "Success",
             "learning_pathway": pathway,
             "message": f"Learning pathway retrieved for learner_id={learner_id} and skill_id={skill_id}"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+#Get Behavioural Questions for a specific skill
+@app.get("/api/behavioural-questions/{skill_id}")
+def behavioural_questions(skill_id: int):
+    try:
+        #Fetch 5 general and 5 skill-specific questions
+        questions = get_behavioural_questions(skill_id)
+        return {
+            "status": "Success",
+            "data": questions,
+            "message": f"Behavioural questions retrieved for skill_id={skill_id}"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+#Submit Behavioural Answers
+@app.post("/api/behavioural-answers")
+def behavioural_answers(data: BehaviouralAnswersRequest):
+    try:
+        #Convert list of BehaviouralAnswerItem objects to plain dictionaries
+        answers = [
+            {
+                "question_id": item.question_id,
+                "answer_text": item.answer_text}
+            for item in data.answers]
+
+        #Save answers using submit_behavioural_answers from main.py
+        result = submit_behavioural_answers(
+            learner_id=data.learner_id,
+            attempt_id=data.attempt_id,
+            answers=answers)
+
+        return {
+            "status": "Success",
+            "result": result,
+            "message": f"Behavioural answers saved for learner_id={data.learner_id}"}
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

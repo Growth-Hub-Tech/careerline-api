@@ -1,6 +1,6 @@
 #MAKING RECOMMENDATION FOR LEANER BASED ON THE WEAKNESS
 from database import fetch_all, fetch_one, execute, get_connection
-from grok_api import get_grok_benchmark
+from openai_engine import get_ai_benchmark
 
 #WEAKNESS THERESHOLD (ANY SUBSKILL BELOW 60%, TO BE CONSIDERED AS WEAK)
 WEAK_THERESHOLD = 60
@@ -80,9 +80,9 @@ def generate_recommendations(attempt_id, learner_id):
                 score = subskill["percentage_score"]
                 name = subskill["subskill_name"]
 
-                #Calling GROK API to get recommendation for this weak subskill
-                print(f"Calling Grok for {name} (score: {score}%)...")
-                action = get_grok_benchmark(skill_name, name, level_name, score)
+                #Calling OpenAI API to get recommendation for this weak subskill
+                print(f"Calling OpenAI for {name} (score: {score}%)...")
+                action = get_ai_benchmark(skill_name, name, level_name, score)
 
                 #Insert recommendation into DB
                 cursor.execute("""
@@ -112,7 +112,7 @@ def generate_recommendations(attempt_id, learner_id):
 
     except Exception as e:
         conn.rollback()
-        print(f"[ERROR] Failed to save recommendations: {e}")
+        print(f"Failed to save recommendations: {e}")
         raise
 
     finally:
