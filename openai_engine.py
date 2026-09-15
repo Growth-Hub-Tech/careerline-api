@@ -10,10 +10,10 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
-#MAIN FUNCTION — Get OpenAI's benchmark for a weak subskill
+#The main function to get OpenAI's benchmark for a weak subskill
 def get_ai_benchmark(skill_name, subskill_name, level_name, score):
 
-    #Build the prompt to send to OpenAI
+    #The prompt to be sent to OpenAI
     prompt = f"""
     A learner scored {score}% on {subskill_name} in a {skill_name} assessment.
     Their current level is {level_name}.

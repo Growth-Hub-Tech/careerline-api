@@ -19,7 +19,7 @@ def register_learner(full_name, email, phone):
     return new_learner["learner_id"]
 
 
-#GET BEHAVIOURAL QUESTIONS — fetches 5 general + 5 skill-specific questions
+#fetches 5 general + 5 skill-specific questions
 def get_behavioural_questions(skill_id):
 
     #Fetch 5 general questions that apply to everyone
@@ -50,7 +50,7 @@ def get_behavioural_questions(skill_id):
         (skill_id,)
     )
 
-    #Combine both lists — general first then skill-specific
+    #Combinin both general skill-specific questions
     all_questions = list(general_questions) + list(skill_questions)
 
     return {
@@ -61,7 +61,7 @@ def get_behavioural_questions(skill_id):
     }
 
 
-#SUBMIT BEHAVIOURAL ANSWERS — saves learner's answers to learner_profile table
+#saves learner's answers to learner_profile table
 def submit_behavioural_answers(learner_id, attempt_id, answers):
 
     #Save each answer to the learner_profile table
@@ -101,7 +101,7 @@ def submit_behavioural_answers(learner_id, attempt_id, answers):
 #START TEST ATTEMPT
 def start_attempt(learner_id, skill_id, declared_level):
 
-    #Validate declared level — must be one of the four accepted values
+    #Validate declared level so it must be one of the four accepted values
     valid_levels = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
     declared_level = declared_level.upper()
     if declared_level not in valid_levels:

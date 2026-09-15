@@ -1,9 +1,9 @@
 from database import fetch_all, fetch_one, get_connection
 
-#PASS THRESHOLD — learner must score 60% or above to be confirmed at declared level
+#learner must score 60% or above to be confirmed at declared level
 PASS_THRESHOLD = 60
 
-#LEVEL SUGGESTION MAP — if learner fails, suggest the level below
+#If learner fails, suggest the level below
 LEVEL_SUGGESTION = {
     "JUNIOR": "BEGINNER",
     "MID": "JUNIOR",
@@ -138,8 +138,8 @@ def score_attempt(attempt_id):
     #Determine pass or fail based on threshold
     passed = percentage >= PASS_THRESHOLD
 
-    #If passed — confirmed at declared level
-    #If failed — no level assigned, suggest level below
+    #If passed, confirmed at declared level
+    #If failed,  no level assigned, suggest level below
     if passed:
         status = "PASSED"
         confirmed_level = declared_level
