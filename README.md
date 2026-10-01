@@ -101,4 +101,4 @@ Open your browser and go to http://127.0.0.1:8000/docs
 ###
 
 ## Built By
-Joshua Mudana - ML Engineer Intern, Growth Hub/Salesplat
+Joshua Mudana - AI/ML Engineer, GrowthHub/Salesplat
