@@ -1,0 +1,50 @@
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.repositories.attempt_repo import (
+    create_attempt, get_level_id_by_name,
+    get_questions_for_attempt, get_options_for_question
+)
+
+#Validate declared level
+VALID_LEVELS = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
+
+#START A TEST ATTEMPT
+async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declared_level: str):
+
+    #Validate declared level
+    declared_level = declared_level.upper()
+    if declared_level not in VALID_LEVELS:
+        raise ValueError(f"Invalid level: {declared_level}. Must be one of {VALID_LEVELS}")
+
+    #Get level ID from database
+    level_id = await get_level_id_by_name(db, declared_level)
+    if not level_id:
+        raise ValueError(f"Level {declared_level} not found in database")
+
+    #Create the attempt
+    attempt_id = await create_attempt(db, learner_id, skill_id, level_id)
+
+    #Fetch 25 random questions for declared level
+    questions = await get_questions_for_attempt(db, skill_id, declared_level)
+    print(f"Fetched {len(questions)} questions for skill_id={skill_id} at {declared_level} level")
+
+    #Fetch options for each question
+    questions_with_options = []
+    for question in questions:
+        options = await get_options_for_question(db, question.question_id)
+        questions_with_options.append({
+            "question_id": question.question_id,
+            "question_text": question.question_text,
+            "difficulty_level": question.difficulty_level.value,
+            "subskill_id": question.subskill_id,
+            "options": options
+        })
+
+    #Return attempt details and questions
+    return {
+        "attempt_id": attempt_id,
+        "learner_id": learner_id,
+        "skill_id": skill_id,
+        "declared_level": declared_level,
+        "total_questions": len(questions_with_options),
+        "questions": questions_with_options
+    }

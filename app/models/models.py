@@ -14,8 +14,10 @@ class LevelName(str, enum.Enum):
 
 class AttemptStatus(str, enum.Enum):
     IN_PROGRESS = "in_progress"
-    COMPLETED = "COMPLETED"
+    COMPLETED = "completed"
     CANCELLED = "cancelled"
+    PASSED = "passed"
+    FAILED = "failed"
 
 class QuestionType(str, enum.Enum):
     GENERAL = "GENERAL"
@@ -125,7 +127,7 @@ class TestAttempt(Base):
     end_time: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
     overall_percentage: Mapped[float] = mapped_column(Numeric(5, 2), default=0.00)
     assigned_level_id: Mapped[int] = mapped_column(Integer, ForeignKey("proficiency_level.level_id"), nullable=True)
-    attempt_status: Mapped[AttemptStatus] = mapped_column(Enum(AttemptStatus), default=AttemptStatus.IN_PROGRESS)
+    attempt_status: Mapped[AttemptStatus] = mapped_column(Enum(AttemptStatus), default="in_progress")
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now(), onupdate=func.now())
 
