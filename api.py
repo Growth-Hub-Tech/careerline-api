@@ -19,6 +19,10 @@ app = FastAPI(
     version="2.0.0"
 )
 
+#The API router from the v1 module that contains all the endpoints for the application.
+from app.api.v1.router import api_router
+app.include_router(api_router)
+
 #DATA MODELS: This defines what each endpoint expects
 
 #Register Learner
@@ -220,3 +224,9 @@ async def learning_pathway(learner_id: int, skill_id: int, db: AsyncSession = De
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+#confirming if API is running
+@app.get("/healthz")
+async def health_check():
+    return {"status": "healthy", "message": "Tech Assessment API is running"}
