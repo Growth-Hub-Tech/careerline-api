@@ -1,21 +1,23 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
 import pymysql
 import psycopg2
 from psycopg2.extras import execute_values
 
 #MySQL connection (my local device DB)
 mysql_conn = pymysql.connect(
-    host="172.26.160.1",
-    port=3306,
-    user="root",
-    password="#iamExcel191878",
-    database="tech_skill_assessment",
+    host=os.getenv("DB_HOST"),
+    port=int(os.getenv("DB_PORT", "3306")),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
     cursorclass=pymysql.cursors.DictCursor
 )
 
 #PostgreSQL connection with render cloud db
-pg_conn = psycopg2.connect(
-    "postgresql://tech_skill_assessment_user:jANTVKoLab2gPqTZsGtTk8jLKhpPpYO2@dpg-dautj4p7lnhs739teulg-a.frankfurt-postgres.render.com/tech_skill_assessment"
-)
+pg_conn = psycopg2.connect(os.getenv("DATABASE_URL"))
+
 pg_cursor = pg_conn.cursor()
 mysql_cursor = mysql_conn.cursor()
 
