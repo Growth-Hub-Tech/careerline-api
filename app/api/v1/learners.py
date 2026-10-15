@@ -64,7 +64,7 @@ async def get_learner_profile(learner_id: int, db: AsyncSession = Depends(get_db
                 "full_name": learner.full_name,
                 "email": learner.email,
                 "phone_number": learner.phone_number,
-                "learner_status": learner.learner_status.value,
+                "learner_status": learner.learner_status.value.lower(),
                 "registration_date": learner.registration_date
             }
         }

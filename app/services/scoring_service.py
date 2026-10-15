@@ -9,6 +9,7 @@ from app.repositories.recommendation_repo import (
     get_level_name_for_attempt, save_recommendations
 )
 from app.core.config import settings
+from app.models.models import AttemptStatus
 from openai_engine import get_ai_benchmark
 
 #Suggests a level for the learner if they fail the test.
@@ -71,20 +72,20 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
 
     #Determine pass/fail and level
     if passed:
-        status = "passed"
+        status = AttemptStatus.PASSED
         confirmed_level = declared_level
         level_suggestion = None
         from app.repositories.scoring_repo import get_level_from_score
         level_id = await get_level_from_score(db, percentage)
     else:
-        status = "failed"
+        status = AttemptStatus.FAILED
         confirmed_level = None
         level_suggestion = LEVEL_SUGGESTION.get(declared_level, None)
         level_id = None
 
     #Update attempt record
     await update_attempt_score(db, attempt_id, percentage, level_id, status)
-    print(f"Scoring complete: {percentage}%  Status: {status}")
+    print(f"Scoring complete: {percentage}%  Status: {status.value}")
 
     #Save analytics
     await save_difficulty_stats(db, attempt_id, level_stats)
@@ -101,7 +102,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
         "total_possible": settings.QUESTIONS_PER_LEVEL,
         "percentage": percentage,
         "declared_level": declared_level,
-        "status": status,
+        "status": status.value.lower(),  #API keeps returning "passed" / "failed"
         "confirmed_level": confirmed_level,
         "level_suggestion": level_suggestion,
         "level_id": level_id,

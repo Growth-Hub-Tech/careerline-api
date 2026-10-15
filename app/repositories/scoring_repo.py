@@ -3,7 +3,7 @@ from sqlalchemy import select, update
 from app.models.models import (
     LearnerAnswer, Option, Question, TestAttempt,
     ProficiencyLevel, LevelThreshold, LearnerLevel,
-    AttemptDifficultyScore, AttemptSubskillScore
+    AttemptDifficultyScore, AttemptSubskillScore, AttemptStatus
 )
 from app.core.config import settings
 
@@ -54,24 +54,19 @@ async def get_level_from_score(db: AsyncSession, percentage: float):
 
 
 #Update test attempt with final score and status
-async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: str):
-    from sqlalchemy import text
-    print(f"DEBUG: status value being saved = {repr(status.lower())}")
+async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: AttemptStatus):
+    #status must be an AttemptStatus member (PASSED / FAILED), never a raw string
     await db.execute(
-        text("""
-            UPDATE test_attempt 
-            SET overall_percentage = :percentage,
-                assigned_level_id = :level_id,
-                attempt_status = CAST(:status AS attemptstatus)
-            WHERE attempt_id = :attempt_id
-        """),
-        {
-            "percentage": percentage,
-            "level_id": level_id,
-            "status": status.lower(),
-            "attempt_id": attempt_id
-        }
+        update(TestAttempt)
+        .where(TestAttempt.attempt_id == attempt_id)
+        .values(
+            overall_percentage=percentage,
+            assigned_level_id=level_id,
+            attempt_status=AttemptStatus(status),
+        )
     )
+
+
 #Save difficulty level analytics
 async def save_difficulty_stats(db: AsyncSession, attempt_id: int, level_stats: dict):
     #Delete old stats for this attempt first

@@ -7,7 +7,7 @@ from sqlalchemy import select
 from app.core.database import get_db
 from app.services.attempt_service import start_attempt
 from app.services.scoring_service import submit_and_score, generate_recommendations
-from app.models.models import TestAttempt, ProficiencyLevel, Skill
+from app.models.models import TestAttempt, ProficiencyLevel, Skill, AttemptStatus
 
 #Create a router for attempt endpoints
 router = APIRouter(prefix="/attempts", tags=["Attempts"])
@@ -103,7 +103,7 @@ async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
                 "attempt_id": attempt.attempt_id,
                 "learner_id": attempt.learner_id,
                 "skill_id": attempt.skill_id,
-                "attempt_status": attempt.attempt_status.value,
+                "attempt_status": attempt.attempt_status.value.lower(),
                 "overall_percentage": float(attempt.overall_percentage) if attempt.overall_percentage else None,
                 "start_time": attempt.start_time,
                 "end_time": attempt.end_time
@@ -141,7 +141,7 @@ async def get_learner_attempts(
                 {
                     "attempt_id": a.attempt_id,
                     "skill_id": a.skill_id,
-                    "attempt_status": a.attempt_status.value,
+                    "attempt_status": a.attempt_status.value.lower(),
                     "overall_percentage": float(a.overall_percentage) if a.overall_percentage else None,
                     "start_time": a.start_time,
                     "end_time": a.end_time
@@ -165,14 +165,14 @@ async def cancel_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
             raise HTTPException(status_code=404, detail=f"Attempt {attempt_id} not found")
 
         #Check if already completed
-        if attempt.attempt_status.value in ["passed", "failed", "completed"]:
+        if attempt.attempt_status != AttemptStatus.IN_PROGRESS:
             raise HTTPException(
                 status_code=400,
-                detail=f"Cannot cancel attempt that is already {attempt.attempt_status.value}"
+                detail=f"Cannot cancel attempt that is already {attempt.attempt_status.value.lower()}"
             )
 
         #Cancel the attempt
-        attempt.attempt_status = "cancelled"
+        attempt.attempt_status = AttemptStatus.CANCELLED
         return {
             "status": "Success",
             "message": f"Attempt {attempt_id} cancelled successfully"
