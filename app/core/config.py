@@ -8,6 +8,7 @@ def _with_driver(url: str, driver: str) -> str:
 class Settings(BaseSettings):
     #Database
     DATABASE_URL: str
+    SECRET_KEY: str
 
     #OpenAI
     OPENAI_API_KEY: str = ""

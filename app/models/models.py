@@ -52,6 +52,7 @@ class Learner(Base):
     full_name: Mapped[str] = mapped_column(String(100), nullable=False)
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     phone_number: Mapped[str] = mapped_column(String(20), nullable=True)
+    hashed_password: Mapped[str] = mapped_column(String(255), nullable=True)
     registration_date: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     learner_status: Mapped[LearnerStatus] = mapped_column(Enum(LearnerStatus), default=LearnerStatus.ACTIVE)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())

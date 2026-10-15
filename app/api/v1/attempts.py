@@ -1,3 +1,5 @@
+from app.core.auth import get_current_learner
+from app.models.models import TestAttempt, Skill, Learner
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,7 +14,6 @@ router = APIRouter(prefix="/attempts", tags=["Attempts"])
 
 #DATA MODELS
 class StartAttemptRequest(BaseModel):
-    learner_id: int
     skill_id: int
     declared_level: str
 
@@ -21,18 +22,21 @@ class AnswerItem(BaseModel):
     selected_option_id: int
 
 class SubmitRequest(BaseModel):
-    learner_id: int
     attempt_id: int
     answers: list[AnswerItem]
 
 
 #START A TEST ATTEMPT
 @router.post("/start")
-async def start_test_attempt(data: StartAttemptRequest, db: AsyncSession = Depends(get_db)):
+async def start_test_attempt(
+    data: StartAttemptRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         attempt_data = await start_attempt(
             db=db,
-            learner_id=data.learner_id,
+            learner_id=current_learner.learner_id,  #from token
             skill_id=data.skill_id,
             declared_level=data.declared_level
         )
@@ -42,17 +46,20 @@ async def start_test_attempt(data: StartAttemptRequest, db: AsyncSession = Depen
             "declared_level": attempt_data["declared_level"],
             "total_questions": attempt_data["total_questions"],
             "questions": attempt_data["questions"],
-            "message": f"Test attempt started for learner_id={data.learner_id} on skill_id={data.skill_id} at {data.declared_level} level"
+            "message": f"Test attempt started for learner_id={current_learner.learner_id} on skill_id={data.skill_id} at {data.declared_level} level"
         }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
 #SUBMIT ANSWERS AND GET SCORE
 @router.post("/submit")
-async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)):
+async def submit_answers(
+    data: SubmitRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         answers = [
             {"question_id": item.question_id, "selected_option_id": item.selected_option_id}
@@ -61,13 +68,13 @@ async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)
         final_result = await submit_and_score(
             db=db,
             attempt_id=data.attempt_id,
-            learner_id=data.learner_id,
+            learner_id=current_learner.learner_id,  #from token
             answers=answers
         )
         recommendations = await generate_recommendations(
             db=db,
             attempt_id=data.attempt_id,
-            learner_id=data.learner_id
+            learner_id=current_learner.learner_id  #from token
         )
         return {
             "status": "Success",
