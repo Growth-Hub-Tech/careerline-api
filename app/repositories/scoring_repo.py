@@ -121,14 +121,19 @@ async def save_subskill_stats(db: AsyncSession, attempt_id: int, subskill_stats:
 
 #Assign proficiency level to learner
 async def assign_learner_level(db: AsyncSession, learner_id: int, skill_id: int, attempt_id: int, level_id: int):
+    if skill_id is None:
+        raise ValueError("skill_id is required to assign a level")
     #Check if learner already has a level for this skill
+    #(first() instead of scalar_one_or_none(): old data may hold more than one row)
     existing = await db.execute(
-        select(LearnerLevel).where(
+        select(LearnerLevel)
+        .where(
             LearnerLevel.learner_id == learner_id,
             LearnerLevel.skill_id == skill_id
         )
+        .order_by(LearnerLevel.learner_level_id.desc())
     )
-    learner_level = existing.scalar_one_or_none()
+    learner_level = existing.scalars().first()
 
     if learner_level:
         #Update existing level

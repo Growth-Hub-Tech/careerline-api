@@ -10,6 +10,7 @@ from app.repositories.recommendation_repo import (
 )
 from app.core.config import settings
 from app.models.models import AttemptStatus
+from app.repositories.attempt_repo import get_attempt_by_id
 from openai_engine import get_ai_benchmark
 
 #Suggests a level for the learner if they fail the test.
@@ -26,6 +27,11 @@ LEVEL_SUGGESTION = {
 
 #SUBMIT AND SCORE AN ATTEMPT
 async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, answers: list):
+
+    #Load the attempt (needed for its skill and declared level)
+    attempt = await get_attempt_by_id(db, attempt_id)
+    if attempt is None:
+        raise ValueError(f"Attempt {attempt_id} not found")
 
     #Save all answers
     for answer in answers:
@@ -66,17 +72,16 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     passed = percentage >= settings.PASS_THRESHOLD
 
     #Get declared level name
-    from app.repositories.scoring_repo import get_level_from_score
-    from app.repositories.recommendation_repo import get_level_name_for_attempt
     declared_level = await get_level_name_for_attempt(db, attempt_id)
 
     #Determine pass/fail and level
+    #The test was taken AT the declared level, so passing confirms exactly that level.
+    #(Before: the level came from the score thresholds, so a JUNIOR test at 100% was saved as ADVANCED.)
     if passed:
         status = AttemptStatus.PASSED
         confirmed_level = declared_level
         level_suggestion = None
-        from app.repositories.scoring_repo import get_level_from_score
-        level_id = await get_level_from_score(db, percentage)
+        level_id = attempt.declared_level_id
     else:
         status = AttemptStatus.FAILED
         confirmed_level = None
@@ -91,9 +96,9 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     await save_difficulty_stats(db, attempt_id, level_stats)
     await save_subskill_stats(db, attempt_id, subskill_stats)
 
-    #Assign level if passed
+    #Assign level if passed (skill_id was None before, so levels never showed per skill)
     if passed and level_id:
-        await assign_learner_level(db, learner_id, None, attempt_id, level_id)
+        await assign_learner_level(db, learner_id, attempt.skill_id, attempt_id, level_id)
         print(f"Level assigned: {confirmed_level}")
 
     #Return result
