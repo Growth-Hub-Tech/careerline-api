@@ -28,6 +28,25 @@ def fetch_mysql(query):
     mysql_cursor.execute(query)
     return mysql_cursor.fetchall()
 
+#Point every serial/identity sequence at MAX(id) so new rows don't collide.
+#Same logic as scripts/reset_sequences.sql (use that one to fix an already-migrated DB).
+def reset_sequences(cursor):
+    cursor.execute("""
+        SELECT c.table_name, c.column_name,
+               pg_get_serial_sequence(format('%I.%I', c.table_schema, c.table_name), c.column_name)
+        FROM information_schema.columns c
+        JOIN information_schema.tables t
+          ON t.table_schema = c.table_schema AND t.table_name = c.table_name AND t.table_type = 'BASE TABLE'
+        WHERE c.table_schema = 'public'
+          AND pg_get_serial_sequence(format('%I.%I', c.table_schema, c.table_name), c.column_name) IS NOT NULL
+    """)
+    for table, column, seq in cursor.fetchall():
+        cursor.execute(
+            f'SELECT setval(%s, COALESCE((SELECT MAX("{column}") FROM "{table}"), 0) + 1, false)',
+            (seq,)
+        )
+        print(f"  {table}.{column}: next id {cursor.fetchone()[0]}")
+
 try:
     #Migrate proficiency_level (STEP 1)
     print("\nMigrating proficiency_level...")
@@ -178,6 +197,12 @@ try:
             VALUES %s ON CONFLICT (profile_id) DO NOTHING
         """, [(r["profile_id"], r["learner_id"], r["attempt_id"], r["question_id"], r["answer_text"], r["created_at"]) for r in rows])
     print(f"  Migrated {len(rows)} rows")
+
+    #Reset every id counter (sequence) to MAX(id). The rows above were inserted WITH
+    #their old ids, which does not move the sequences, so without this the next
+    #register/start attempt reuses id 1 and fails with "duplicate key" (500).
+    print("Resetting id sequences...")
+    reset_sequences(pg_cursor)
 
     #Commit all changes to PostgreSQL
     pg_conn.commit()

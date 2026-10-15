@@ -8,7 +8,7 @@ from app.services.learner_service import (
     submit_behavioural_answers
 )
 from app.services.attempt_service import start_attempt
-from app.services.scoring_service import submit_and_score, generate_recommendations
+from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.repositories.recommendation_repo import get_learning_pathway
 from app.models.models import Learner, Skill
 from sqlalchemy import select
@@ -188,6 +188,8 @@ async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)
             "recommendations": recommendations,
             "message": f"Answers submitted and scored for attempt_id={data.attempt_id}"
         }
+    except SubmitError as e:
+        raise HTTPException(status_code=e.status_code, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

@@ -1,9 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, update
+from sqlalchemy import select, update, func
 from app.models.models import (
     LearnerAnswer, Option, Question, TestAttempt,
     ProficiencyLevel, LevelThreshold, LearnerLevel,
-    AttemptDifficultyScore, AttemptSubskillScore
+    AttemptDifficultyScore, AttemptSubskillScore, AttemptStatus, Subskill
 )
 from app.core.config import settings
 
@@ -24,6 +24,45 @@ async def save_answer(db: AsyncSession, attempt_id: int, question_id: int, selec
     )
     db.add(answer)
     return is_correct
+
+
+#option_id -> (question_id, is_correct) for the given options
+async def get_options_by_ids(db: AsyncSession, option_ids: list):
+    if not option_ids:
+        return {}
+    result = await db.execute(
+        select(Option.option_id, Option.question_id, Option.is_correct)
+        .where(Option.option_id.in_(set(option_ids)))
+    )
+    return {row.option_id: (row.question_id, bool(row.is_correct)) for row in result.all()}
+
+
+#question_id -> (difficulty level name, subskill_id)
+async def get_question_info(db: AsyncSession, question_ids: list):
+    if not question_ids:
+        return {}
+    result = await db.execute(
+        select(Question.question_id, Question.difficulty_level, Question.subskill_id)
+        .where(Question.question_id.in_(question_ids))
+    )
+    return {row.question_id: (row.difficulty_level.value, row.subskill_id) for row in result.all()}
+
+
+#All question ids an attempt could have been served (its skill at its declared level).
+#Only used for attempts started before attempt_question existed.
+async def get_pool_question_ids(db: AsyncSession, skill_id: int, declared_level_id: int):
+    level = await db.execute(
+        select(ProficiencyLevel.level_name).where(ProficiencyLevel.level_id == declared_level_id)
+    )
+    level_name = level.scalar_one_or_none()
+    if level_name is None:
+        return []
+    result = await db.execute(
+        select(Question.question_id)
+        .join(Subskill, Question.subskill_id == Subskill.subskill_id)
+        .where(Subskill.skill_id == skill_id, Question.difficulty_level == level_name)
+    )
+    return list(result.scalars().all())
 
 
 #Fetch all answers for an attempt
@@ -54,24 +93,20 @@ async def get_level_from_score(db: AsyncSession, percentage: float):
 
 
 #Update test attempt with final score and status
-async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: str):
-    from sqlalchemy import text
-    print(f"DEBUG: status value being saved = {repr(status.lower())}")
+async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: AttemptStatus):
+    #status must be an AttemptStatus member (PASSED / FAILED), never a raw string
     await db.execute(
-        text("""
-            UPDATE test_attempt 
-            SET overall_percentage = :percentage,
-                assigned_level_id = :level_id,
-                attempt_status = CAST(:status AS attemptstatus)
-            WHERE attempt_id = :attempt_id
-        """),
-        {
-            "percentage": percentage,
-            "level_id": level_id,
-            "status": status.lower(),
-            "attempt_id": attempt_id
-        }
+        update(TestAttempt)
+        .where(TestAttempt.attempt_id == attempt_id)
+        .values(
+            overall_percentage=percentage,
+            assigned_level_id=level_id,
+            attempt_status=AttemptStatus(status),
+            end_time=func.now(),
+        )
     )
+
+
 #Save difficulty level analytics
 async def save_difficulty_stats(db: AsyncSession, attempt_id: int, level_stats: dict):
     #Delete old stats for this attempt first
@@ -126,14 +161,19 @@ async def save_subskill_stats(db: AsyncSession, attempt_id: int, subskill_stats:
 
 #Assign proficiency level to learner
 async def assign_learner_level(db: AsyncSession, learner_id: int, skill_id: int, attempt_id: int, level_id: int):
+    if skill_id is None:
+        raise ValueError("skill_id is required to assign a level")
     #Check if learner already has a level for this skill
+    #(first() instead of scalar_one_or_none(): old data may hold more than one row)
     existing = await db.execute(
-        select(LearnerLevel).where(
+        select(LearnerLevel)
+        .where(
             LearnerLevel.learner_id == learner_id,
             LearnerLevel.skill_id == skill_id
         )
+        .order_by(LearnerLevel.learner_level_id.desc())
     )
-    learner_level = existing.scalar_one_or_none()
+    learner_level = existing.scalars().first()
 
     if learner_level:
         #Update existing level

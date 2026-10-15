@@ -12,27 +12,36 @@ class LevelName(str, enum.Enum):
     MID = "MID"
     ADVANCED = "ADVANCED"
 
+#Values are UPPERCASE on purpose: they must be exactly the labels of the Postgres
+#enum types (created by Alembic and filled by migrate_data.py with .upper()).
+#Name == value, and every Enum() column below stores the VALUE (values_callable),
+#so Python and Postgres can never disagree again.
 class AttemptStatus(str, enum.Enum):
-    IN_PROGRESS = "in_progress"
-    COMPLETED = "completed"
-    CANCELLED = "cancelled"
-    PASSED = "passed"
-    FAILED = "failed"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+    PASSED = "PASSED"
+    FAILED = "FAILED"
 
 class QuestionType(str, enum.Enum):
     GENERAL = "GENERAL"
     SKILL_SPECIFIC = "SKILL_SPECIFIC"
 
 class LearnerStatus(str, enum.Enum):
-    ACTIVE = "active"
-    INACTIVE = "inactive"
+    ACTIVE = "ACTIVE"
+    INACTIVE = "INACTIVE"
+
+
+def pg_enum(enum_cls, name):
+    """Postgres enum column that stores the Python enum's VALUE (not its name)."""
+    return Enum(enum_cls, name=name, values_callable=lambda e: [m.value for m in e])
 
 #Creating model for ProficiencyLevel...(MoDel 1)
 class ProficiencyLevel(Base):
     __tablename__ = "proficiency_level"
 
     level_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    level_name: Mapped[LevelName] = mapped_column(Enum(LevelName), nullable=False, unique=True)
+    level_name: Mapped[LevelName] = mapped_column(pg_enum(LevelName, "levelname"), nullable=False, unique=True)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
 
 #Creating model for LevelThreshold....(Model 2)
@@ -54,7 +63,7 @@ class Learner(Base):
     phone_number: Mapped[str] = mapped_column(String(20), nullable=True)
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=True)
     registration_date: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
-    learner_status: Mapped[LearnerStatus] = mapped_column(Enum(LearnerStatus), default=LearnerStatus.ACTIVE)
+    learner_status: Mapped[LearnerStatus] = mapped_column(pg_enum(LearnerStatus, "learnerstatus"), default=LearnerStatus.ACTIVE)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now(), onupdate=func.now())
 
@@ -93,7 +102,7 @@ class Question(Base):
     question_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     subskill_id: Mapped[int] = mapped_column(Integer, ForeignKey("subskills.subskill_id"), nullable=False)
     question_text: Mapped[str] = mapped_column(Text, nullable=False)
-    difficulty_level: Mapped[LevelName] = mapped_column(Enum(LevelName), nullable=False)
+    difficulty_level: Mapped[LevelName] = mapped_column(pg_enum(LevelName, "levelname"), nullable=False)
     weight: Mapped[int] = mapped_column(Integer, default=1)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
 
@@ -128,7 +137,7 @@ class TestAttempt(Base):
     end_time: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
     overall_percentage: Mapped[float] = mapped_column(Numeric(5, 2), default=0.00)
     assigned_level_id: Mapped[int] = mapped_column(Integer, ForeignKey("proficiency_level.level_id"), nullable=True)
-    attempt_status: Mapped[AttemptStatus] = mapped_column(Enum(AttemptStatus), default="in_progress")
+    attempt_status: Mapped[AttemptStatus] = mapped_column(pg_enum(AttemptStatus, "attemptstatus"), default=AttemptStatus.IN_PROGRESS)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now(), onupdate=func.now())
 
@@ -163,7 +172,7 @@ class AttemptDifficultyScore(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     attempt_id: Mapped[int] = mapped_column(Integer, ForeignKey("test_attempt.attempt_id"), nullable=False)
-    difficulty_level: Mapped[LevelName] = mapped_column(Enum(LevelName), nullable=False)
+    difficulty_level: Mapped[LevelName] = mapped_column(pg_enum(LevelName, "levelname"), nullable=False)
     total_questions: Mapped[int] = mapped_column(Integer, nullable=False)
     correct_answers: Mapped[int] = mapped_column(Integer, nullable=False)
     percentage_score: Mapped[float] = mapped_column(Numeric(5, 2), default=0.00)
@@ -202,7 +211,7 @@ class BehaviouralQuestion(Base):
     question_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     skill_id: Mapped[int] = mapped_column(Integer, ForeignKey("skills.skill_id"), nullable=True)
     question_text: Mapped[str] = mapped_column(Text, nullable=False)
-    question_type: Mapped[QuestionType] = mapped_column(Enum(QuestionType), nullable=False)
+    question_type: Mapped[QuestionType] = mapped_column(pg_enum(QuestionType, "questiontype"), nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
 
@@ -217,3 +226,11 @@ class LearnerProfile(Base):
     question_id: Mapped[int] = mapped_column(Integer, ForeignKey("behavioural_questions.question_id"), nullable=False)
     answer_text: Mapped[str] = mapped_column(Text, nullable=False)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
+
+#Which questions were served in an attempt (used to validate the submitted answers)
+class AttemptQuestion(Base):
+    __tablename__ = "attempt_question"
+
+    attempt_id: Mapped[int] = mapped_column(Integer, ForeignKey("test_attempt.attempt_id", ondelete="CASCADE"), primary_key=True)
+    question_id: Mapped[int] = mapped_column(Integer, ForeignKey("questions.question_id"), primary_key=True)
+    position: Mapped[int] = mapped_column(Integer, nullable=False)
