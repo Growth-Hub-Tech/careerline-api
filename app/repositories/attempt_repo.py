@@ -23,9 +23,11 @@ async def get_level_id_by_name(db: AsyncSession, level_name: str):
     level = result.scalar_one_or_none()
     return level.level_id if level else None
 
-#Fetch 25 random questions for a skill and difficulty level
-async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_level: str):
-    #Fetch all questions for this skill and difficulty level
+#Pick the questions for an attempt: seeded by attempt_id, balanced across subskills,
+#and preferring questions this learner has seen least in earlier attempts.
+async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_level: str,
+                                    attempt_id: int, learner_id: int, count: int):
+    #Whole pool for this skill and difficulty level
     result = await db.execute(
         select(Question)
         .join(Subskill, Question.subskill_id == Subskill.subskill_id)
@@ -33,25 +35,58 @@ async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_
             Subskill.skill_id == skill_id,
             Question.difficulty_level == difficulty_level
         )
+        .order_by(Question.question_id)
     )
-    all_questions = result.scalars().all()
+    pool = list(result.scalars().all())
+    if not pool:
+        return []
 
-    #Randomly sample 25 questions — replaces ORDER BY RAND()
-    sample_size = min(25, len(all_questions))
-    selected = random.sample(list(all_questions), sample_size)
+    #How often this learner already got each question (earlier attempts on this skill)
+    seen_result = await db.execute(
+        select(AttemptQuestion.question_id, func.count())
+        .join(TestAttempt, TestAttempt.attempt_id == AttemptQuestion.attempt_id)
+        .where(
+            TestAttempt.learner_id == learner_id,
+            TestAttempt.skill_id == skill_id,
+            TestAttempt.attempt_id != attempt_id
+        )
+        .group_by(AttemptQuestion.question_id)
+    )
+    seen = dict(seen_result.all())
 
+    #Same attempt_id -> same selection (reproducible); new attempt -> new selection
+    rng = random.Random(attempt_id)
+
+    #Group by subskill; inside each group: least-seen first, random among equals
+    groups = {}
+    for q in pool:
+        groups.setdefault(q.subskill_id, []).append(q)
+    for qs in groups.values():
+        qs.sort(key=lambda q: (seen.get(q.question_id, 0), rng.random()))
+
+    #Round-robin over subskills so every subskill is covered evenly
+    subskill_order = list(groups.keys())
+    rng.shuffle(subskill_order)
+    selected = []
+    while len(selected) < min(count, len(pool)):
+        for sid in subskill_order:
+            if groups[sid] and len(selected) < count:
+                selected.append(groups[sid].pop(0))
+
+    rng.shuffle(selected)  #mix subskills in the final order
     return selected
 
 #Fetch options for a question without revealing correct answer
-async def get_options_for_question(db: AsyncSession, question_id: int):
+#(order shuffled per attempt, but stable if the same attempt is loaded again)
+async def get_options_for_question(db: AsyncSession, question_id: int, attempt_id: int = None):
     result = await db.execute(
         select(Option.option_id, Option.option_text)
         .where(Option.question_id == question_id)
+        .order_by(Option.option_id)
     )
     options = result.all()
-    #Shuffle options randomly so correct answer is not always in same position
     options_list = [{"option_id": o.option_id, "option_text": o.option_text} for o in options]
-    random.shuffle(options_list)
+    random.Random(f"{attempt_id}-{question_id}").shuffle(options_list)
     return options_list
 
 #Fetch a test attempt by ID
