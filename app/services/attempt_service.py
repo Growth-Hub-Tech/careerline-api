@@ -1,7 +1,8 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.attempt_repo import (
     create_attempt, get_level_id_by_name,
-    get_questions_for_attempt, get_options_for_question
+    get_questions_for_attempt, get_options_for_question,
+    record_attempt_questions
 )
 
 #Validate declared level
@@ -26,6 +27,9 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
     #Fetch 25 random questions for declared level
     questions = await get_questions_for_attempt(db, skill_id, declared_level)
     print(f"Fetched {len(questions)} questions for skill_id={skill_id} at {declared_level} level")
+
+    #Store the served questions so submit can check the answers against them
+    await record_attempt_questions(db, attempt_id, [q.question_id for q in questions])
 
     #Fetch options for each question
     questions_with_options = []

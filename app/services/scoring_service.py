@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.repositories.scoring_repo import (
-    save_answer, get_answers_for_attempt,
+    save_answer, get_options_by_ids, get_question_info, get_pool_question_ids,
     update_attempt_score, save_difficulty_stats,
     save_subskill_stats, assign_learner_level
 )
@@ -10,7 +10,7 @@ from app.repositories.recommendation_repo import (
 )
 from app.core.config import settings
 from app.models.models import AttemptStatus
-from app.repositories.attempt_repo import get_attempt_by_id
+from app.repositories.attempt_repo import get_attempt_for_update, get_attempt_question_ids
 from openai_engine import get_ai_benchmark
 
 #Suggests a level for the learner if they fail the test.
@@ -25,13 +25,63 @@ LEVEL_SUGGESTION = {
 }
 
 
+#Errors the routes turn into proper HTTP codes instead of a 500
+class SubmitError(Exception):
+    status_code = 400
+
+class AttemptNotFound(SubmitError):
+    status_code = 404
+
+class AttemptNotYours(SubmitError):
+    status_code = 403
+
+class AttemptAlreadySubmitted(SubmitError):
+    status_code = 409
+
+
 #SUBMIT AND SCORE AN ATTEMPT
 async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, answers: list):
 
-    #Load the attempt (needed for its skill and declared level)
-    attempt = await get_attempt_by_id(db, attempt_id)
+    #Load the attempt and lock it (a second submit of the same attempt waits here,
+    #then sees it is no longer IN_PROGRESS and gets 409)
+    attempt = await get_attempt_for_update(db, attempt_id)
     if attempt is None:
-        raise ValueError(f"Attempt {attempt_id} not found")
+        raise AttemptNotFound(f"Attempt {attempt_id} not found")
+    if attempt.learner_id != learner_id:
+        raise AttemptNotYours(f"Attempt {attempt_id} does not belong to learner {learner_id}")
+    if attempt.attempt_status != AttemptStatus.IN_PROGRESS:
+        raise AttemptAlreadySubmitted(
+            f"Attempt {attempt_id} is already {attempt.attempt_status.value.lower()}; start a new attempt to retake"
+        )
+
+    #Which questions were served in this attempt
+    served_ids = await get_attempt_question_ids(db, attempt_id)
+    if not served_ids:
+        #Attempt started before attempt_question existed: allow the attempt's own pool
+        served_ids = await get_pool_question_ids(db, attempt.skill_id, attempt.declared_level_id)
+        total_questions = min(settings.QUESTIONS_PER_LEVEL, len(served_ids))
+    else:
+        total_questions = len(served_ids)
+    served = set(served_ids)
+
+    #Validate: only served questions, one answer per question, option must belong to its question
+    seen = set()
+    for answer in answers:
+        qid = answer["question_id"]
+        if qid not in served:
+            raise SubmitError(f"Question {qid} is not part of attempt {attempt_id}")
+        if qid in seen:
+            raise SubmitError(f"Question {qid} was answered more than once")
+        seen.add(qid)
+
+    option_ids = [a["selected_option_id"] for a in answers]
+    option_map = await get_options_by_ids(db, option_ids)   #option_id -> (question_id, is_correct)
+    for answer in answers:
+        option = option_map.get(answer["selected_option_id"])
+        if option is None or option[0] != answer["question_id"]:
+            raise SubmitError(
+                f"Option {answer['selected_option_id']} does not belong to question {answer['question_id']}"
+            )
 
     #Save all answers
     for answer in answers:
@@ -43,16 +93,16 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
         )
     print(f"All answers saved for attempt_id={attempt_id}")
 
-    #Fetch all answers and calculate score
-    answer_rows = await get_answers_for_attempt(db, attempt_id)
+    #Score ONLY this submission's answers (never re-read old rows)
+    question_info = await get_question_info(db, list(seen))  #question_id -> (difficulty, subskill_id)
 
     correct = 0
     level_stats = {}
     subskill_stats = {}
 
-    for row in answer_rows:
-        level = row.difficulty_level.value
-        subskill = row.subskill_id
+    for answer in answers:
+        level, subskill = question_info[answer["question_id"]]
+        is_correct = option_map[answer["selected_option_id"]][1]
 
         if level not in level_stats:
             level_stats[level] = {"correct": 0, "total": 0}
@@ -62,13 +112,13 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
         level_stats[level]["total"] += 1
         subskill_stats[subskill]["total"] += 1
 
-        if row.is_correct:
+        if is_correct:
             correct += 1
             level_stats[level]["correct"] += 1
             subskill_stats[subskill]["correct"] += 1
 
-    #Calculate percentage out of 25
-    percentage = round((correct / settings.QUESTIONS_PER_LEVEL) * 100, 2)
+    #Percentage out of the questions actually served (unanswered = wrong), capped at 100
+    percentage = round(min(100.0, (correct / total_questions) * 100), 2) if total_questions else 0.0
     passed = percentage >= settings.PASS_THRESHOLD
 
     #Get declared level name
@@ -104,7 +154,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     #Return result
     return {
         "score": correct,
-        "total_possible": settings.QUESTIONS_PER_LEVEL,
+        "total_possible": total_questions,
         "percentage": percentage,
         "declared_level": declared_level,
         "status": status.value.lower(),  #API keeps returning "passed" / "failed"

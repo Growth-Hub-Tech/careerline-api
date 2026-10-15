@@ -6,7 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
 from app.services.attempt_service import start_attempt
-from app.services.scoring_service import submit_and_score, generate_recommendations
+from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.models.models import TestAttempt, ProficiencyLevel, Skill, AttemptStatus
 
 #Create a router for attempt endpoints
@@ -82,6 +82,8 @@ async def submit_answers(
             "recommendations": recommendations,
             "message": f"Answers submitted and scored for attempt_id={data.attempt_id}"
         }
+    except SubmitError as e:
+        raise HTTPException(status_code=e.status_code, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

@@ -226,3 +226,11 @@ class LearnerProfile(Base):
     question_id: Mapped[int] = mapped_column(Integer, ForeignKey("behavioural_questions.question_id"), nullable=False)
     answer_text: Mapped[str] = mapped_column(Text, nullable=False)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
+
+#Which questions were served in an attempt (used to validate the submitted answers)
+class AttemptQuestion(Base):
+    __tablename__ = "attempt_question"
+
+    attempt_id: Mapped[int] = mapped_column(Integer, ForeignKey("test_attempt.attempt_id", ondelete="CASCADE"), primary_key=True)
+    question_id: Mapped[int] = mapped_column(Integer, ForeignKey("questions.question_id"), primary_key=True)
+    position: Mapped[int] = mapped_column(Integer, nullable=False)

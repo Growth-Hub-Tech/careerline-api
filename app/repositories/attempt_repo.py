@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from app.models.models import TestAttempt, ProficiencyLevel, Question, Option, Subskill
+from app.models.models import TestAttempt, ProficiencyLevel, Question, Option, Subskill, AttemptQuestion
 import random
 
 #Create a new test attempt
@@ -58,5 +58,33 @@ async def get_options_for_question(db: AsyncSession, question_id: int):
 async def get_attempt_by_id(db: AsyncSession, attempt_id: int):
     result = await db.execute(
         select(TestAttempt).where(TestAttempt.attempt_id == attempt_id)
+    )
+    return result.scalar_one_or_none()
+
+
+#Remember exactly which questions were served in this attempt (in order)
+async def record_attempt_questions(db: AsyncSession, attempt_id: int, question_ids: list):
+    for position, question_id in enumerate(question_ids, start=1):
+        db.add(AttemptQuestion(attempt_id=attempt_id, question_id=question_id, position=position))
+    await db.flush()
+
+
+#Question ids served in an attempt (empty for attempts started before this table existed)
+async def get_attempt_question_ids(db: AsyncSession, attempt_id: int):
+    result = await db.execute(
+        select(AttemptQuestion.question_id)
+        .where(AttemptQuestion.attempt_id == attempt_id)
+        .order_by(AttemptQuestion.position)
+    )
+    return list(result.scalars().all())
+
+
+#Fetch an attempt and lock its row until the transaction ends,
+#so two submits of the same attempt can't run at the same time
+async def get_attempt_for_update(db: AsyncSession, attempt_id: int):
+    result = await db.execute(
+        select(TestAttempt)
+        .where(TestAttempt.attempt_id == attempt_id)
+        .with_for_update()
     )
     return result.scalar_one_or_none()
