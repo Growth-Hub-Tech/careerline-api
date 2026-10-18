@@ -4,6 +4,7 @@ from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
 from app.core.auth import get_current_learner, require_same_learner
+from app.api.responses import errors
 from app.services.learner_service import (
     get_behavioural_questions,
     submit_behavioural_answers
@@ -64,7 +65,7 @@ class BehaviouralAnswersRequest(BaseModel):
 #Register Learner (retired)
 #It created learners with no password, and those learners can never log in,
 #so every protected route would reject them. Sign-up is POST /api/v1/auth/register.
-@app.post("/api/register", deprecated=True, status_code=410)
+@app.post("/api/register", deprecated=True, status_code=410, responses=errors(410))
 async def learner_register():
     raise HTTPException(
         status_code=410,
@@ -73,7 +74,7 @@ async def learner_register():
 
 
 #Get Behavioural Questions for a specific skill
-@app.get("/api/behavioural-questions/{skill_id}", deprecated=True)
+@app.get("/api/behavioural-questions/{skill_id}", deprecated=True, responses=errors(404))
 async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
     try:
         #Fetch behavioural questions using the learner service
@@ -92,7 +93,7 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 
 
 #Submit Behavioural Answers
-@app.post("/api/behavioural-answers", deprecated=True)
+@app.post("/api/behavioural-answers", deprecated=True, responses=errors(401, 403, 404))
 async def behavioural_answers(
     data: BehaviouralAnswersRequest,
     db: AsyncSession = Depends(get_db),
@@ -131,7 +132,7 @@ async def behavioural_answers(
 
 
 #Start Test Attempt
-@app.post("/api/attempt/start", deprecated=True)
+@app.post("/api/attempt/start", deprecated=True, responses=errors(400, 401, 403))
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db),
@@ -163,7 +164,7 @@ async def start_test_attempt(
 
 
 #Submit Answers and Get Score
-@app.post("/api/attempt/submit", deprecated=True)
+@app.post("/api/attempt/submit", deprecated=True, responses=errors(400, 401, 403, 404, 409))
 async def submit_answers(
     data: SubmitRequest,
     db: AsyncSession = Depends(get_db),
@@ -210,7 +211,7 @@ async def submit_answers(
 
 
 #Get Learning Pathway
-@app.get("/api/learning-pathway/{learner_id}/{skill_id}", deprecated=True)
+@app.get("/api/learning-pathway/{learner_id}/{skill_id}", deprecated=True, responses=errors(401, 403, 404))
 async def learning_pathway(
     learner_id: int,
     skill_id: int,

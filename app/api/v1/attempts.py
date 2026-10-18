@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
+from app.api.responses import errors
 from app.services.attempt_service import start_attempt
 from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.models.models import TestAttempt, ProficiencyLevel, Skill, AttemptStatus
@@ -37,7 +38,7 @@ def score_or_none(attempt):
 
 
 #START A TEST ATTEMPT
-@router.post("/start")
+@router.post("/start", responses=errors(400, 401))
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db),
@@ -64,7 +65,7 @@ async def start_test_attempt(
         raise HTTPException(status_code=500, detail=str(e))
 
 #SUBMIT ANSWERS AND GET SCORE
-@router.post("/submit")
+@router.post("/submit", responses=errors(400, 401, 403, 404, 409))
 async def submit_answers(
     data: SubmitRequest,
     db: AsyncSession = Depends(get_db),
@@ -99,7 +100,7 @@ async def submit_answers(
 
 
 #GET ATTEMPT DETAIL
-@router.get("/{attempt_id}")
+@router.get("/{attempt_id}", responses=errors(401, 403, 404))
 async def get_attempt(
     attempt_id: int,
     db: AsyncSession = Depends(get_db),
@@ -133,7 +134,7 @@ async def get_attempt(
 
 
 #GET ATTEMPT HISTORY FOR A LEARNER
-@router.get("/learner/{learner_id}")
+@router.get("/learner/{learner_id}", responses=errors(401, 403))
 async def get_learner_attempts(
     learner_id: int,
     limit: int = 10,
@@ -173,7 +174,7 @@ async def get_learner_attempts(
 
 
 #CANCEL AN IN-PROGRESS ATTEMPT
-@router.patch("/{attempt_id}/cancel")
+@router.patch("/{attempt_id}/cancel", responses=errors(400, 401, 403, 404))
 async def cancel_attempt(
     attempt_id: int,
     db: AsyncSession = Depends(get_db),

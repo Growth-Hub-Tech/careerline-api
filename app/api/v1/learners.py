@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
+from app.api.responses import errors
 from app.core.auth import get_current_learner, require_same_learner
 from app.services.learner_service import (
     register_learner, get_behavioural_questions,
@@ -50,7 +51,7 @@ async def learner_register(data: RegisterRequest, db: AsyncSession = Depends(get
 
 #GET LEARNER PROFILE
 #Only your own profile: it holds your email and phone number
-@router.get("/{learner_id}")
+@router.get("/{learner_id}", responses=errors(401, 403, 404))
 async def get_learner_profile(
     learner_id: int,
     db: AsyncSession = Depends(get_db),
@@ -82,7 +83,7 @@ async def get_learner_profile(
 
 
 #GET BEHAVIOURAL QUESTIONS FOR A SKILL
-@router.get("/behavioural-questions/{skill_id}")
+@router.get("/behavioural-questions/{skill_id}", responses=errors(404))
 async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
     try:
         questions = await get_behavioural_questions(db=db, skill_id=skill_id)
@@ -100,7 +101,7 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 
 
 #SUBMIT BEHAVIOURAL ANSWERS
-@router.post("/behavioural-answers")
+@router.post("/behavioural-answers", responses=errors(401, 403, 404))
 async def behavioural_answers(
     data: BehaviouralAnswersRequest,
     db: AsyncSession = Depends(get_db),
