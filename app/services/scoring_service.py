@@ -64,6 +64,10 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
         total_questions = len(served_ids)
     served = set(served_ids)
 
+    #An empty submission would score 0% and use up the attempt
+    if not answers:
+        raise SubmitError("No answers submitted")
+
     #Validate: only served questions, one answer per question, option must belong to its question
     seen = set()
     for answer in answers:
