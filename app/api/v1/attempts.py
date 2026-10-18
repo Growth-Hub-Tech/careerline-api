@@ -1,4 +1,4 @@
-from app.core.auth import get_current_learner
+from app.core.auth import get_current_learner, require_same_learner
 from app.models.models import TestAttempt, Skill, Learner
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
@@ -90,7 +90,11 @@ async def submit_answers(
 
 #GET ATTEMPT DETAIL
 @router.get("/{attempt_id}")
-async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
+async def get_attempt(
+    attempt_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         result = await db.execute(
             select(TestAttempt).where(TestAttempt.attempt_id == attempt_id)
@@ -98,6 +102,7 @@ async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
         attempt = result.scalar_one_or_none()
         if not attempt:
             raise HTTPException(status_code=404, detail=f"Attempt {attempt_id} not found")
+        require_same_learner(attempt.learner_id, current_learner)
 
         return {
             "status": "Success",
@@ -123,8 +128,10 @@ async def get_learner_attempts(
     learner_id: int,
     limit: int = 10,
     offset: int = 0,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
 ):
+    require_same_learner(learner_id, current_learner)
     try:
         result = await db.execute(
             select(TestAttempt)

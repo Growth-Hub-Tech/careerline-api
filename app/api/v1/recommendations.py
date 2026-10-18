@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
+from app.core.auth import get_current_learner, require_same_learner
 from app.repositories.recommendation_repo import get_learning_pathway
 from app.models.models import Learner, Skill, LearnerLevel, ProficiencyLevel
 from sqlalchemy import select
@@ -11,7 +12,13 @@ router = APIRouter(prefix="/recommendations", tags=["Recommendations"])
 
 #GET LEARNING PATHWAY FOR A LEARNER AND SKILL
 @router.get("/pathway/{learner_id}/{skill_id}")
-async def learning_pathway(learner_id: int, skill_id: int, db: AsyncSession = Depends(get_db)):
+async def learning_pathway(
+    learner_id: int,
+    skill_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    require_same_learner(learner_id, current_learner)
     try:
         #Fetch learner
         learner_result = await db.execute(
@@ -59,7 +66,12 @@ async def learning_pathway(learner_id: int, skill_id: int, db: AsyncSession = De
 
 #GET CONFIRMED LEVELS FOR A LEARNER ACROSS ALL SKILLS
 @router.get("/levels/{learner_id}")
-async def get_learner_levels(learner_id: int, db: AsyncSession = Depends(get_db)):
+async def get_learner_levels(
+    learner_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    require_same_learner(learner_id, current_learner)
     try:
         result = await db.execute(
             select(

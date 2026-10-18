@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
+from app.core.auth import get_current_learner, require_same_learner
 from app.services.learner_service import (
     register_learner, get_behavioural_questions,
     submit_behavioural_answers
@@ -48,8 +49,14 @@ async def learner_register(data: RegisterRequest, db: AsyncSession = Depends(get
 
 
 #GET LEARNER PROFILE
+#Only your own profile: it holds your email and phone number
 @router.get("/{learner_id}")
-async def get_learner_profile(learner_id: int, db: AsyncSession = Depends(get_db)):
+async def get_learner_profile(
+    learner_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    require_same_learner(learner_id, current_learner)
     try:
         result = await db.execute(
             select(Learner).where(Learner.learner_id == learner_id)
