@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
+from app.api.responses import errors
 from app.models.models import Skill, Subskill
 
 #Create a router for skill endpoints
@@ -46,7 +47,7 @@ async def list_skills(
 
 
 #GET SUBSKILLS FOR A SPECIFIC SKILL
-@router.get("/{skill_id}/subskills")
+@router.get("/{skill_id}/subskills", responses=errors(404))
 async def get_subskills(skill_id: int, db: AsyncSession = Depends(get_db)):
     try:
         #Check skill exists

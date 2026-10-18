@@ -39,3 +39,12 @@ async def get_current_learner(
         raise credentials_exception
 
     return learner
+
+
+#Stops a logged-in learner from reading or changing another learner's data
+def require_same_learner(learner_id: int, current_learner: Learner):
+    if learner_id != current_learner.learner_id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You can only access your own data"
+        )

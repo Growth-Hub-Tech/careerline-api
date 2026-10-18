@@ -1,10 +1,11 @@
-from app.core.auth import get_current_learner
+from app.core.auth import get_current_learner, require_same_learner
 from app.models.models import TestAttempt, Skill, Learner
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
+from app.api.responses import errors
 from app.services.attempt_service import start_attempt
 from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.models.models import TestAttempt, ProficiencyLevel, Skill, AttemptStatus
@@ -26,8 +27,18 @@ class SubmitRequest(BaseModel):
     answers: list[AnswerItem]
 
 
+#Percentage for scored attempts only, so a real 0% shows as 0.
+#(The column defaults to 0 while an attempt is in progress, so those stay null.)
+SCORED_STATUSES = (AttemptStatus.PASSED, AttemptStatus.FAILED, AttemptStatus.COMPLETED)
+
+def score_or_none(attempt):
+    if attempt.attempt_status in SCORED_STATUSES and attempt.overall_percentage is not None:
+        return float(attempt.overall_percentage)
+    return None
+
+
 #START A TEST ATTEMPT
-@router.post("/start")
+@router.post("/start", responses=errors(400, 401))
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db),
@@ -54,7 +65,7 @@ async def start_test_attempt(
         raise HTTPException(status_code=500, detail=str(e))
 
 #SUBMIT ANSWERS AND GET SCORE
-@router.post("/submit")
+@router.post("/submit", responses=errors(400, 401, 403, 404, 409))
 async def submit_answers(
     data: SubmitRequest,
     db: AsyncSession = Depends(get_db),
@@ -89,8 +100,12 @@ async def submit_answers(
 
 
 #GET ATTEMPT DETAIL
-@router.get("/{attempt_id}")
-async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
+@router.get("/{attempt_id}", responses=errors(401, 403, 404))
+async def get_attempt(
+    attempt_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         result = await db.execute(
             select(TestAttempt).where(TestAttempt.attempt_id == attempt_id)
@@ -98,6 +113,7 @@ async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
         attempt = result.scalar_one_or_none()
         if not attempt:
             raise HTTPException(status_code=404, detail=f"Attempt {attempt_id} not found")
+        require_same_learner(attempt.learner_id, current_learner)
 
         return {
             "status": "Success",
@@ -106,7 +122,7 @@ async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
                 "learner_id": attempt.learner_id,
                 "skill_id": attempt.skill_id,
                 "attempt_status": attempt.attempt_status.value.lower(),
-                "overall_percentage": float(attempt.overall_percentage) if attempt.overall_percentage else None,
+                "overall_percentage": score_or_none(attempt),
                 "start_time": attempt.start_time,
                 "end_time": attempt.end_time
             }
@@ -118,13 +134,15 @@ async def get_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
 
 
 #GET ATTEMPT HISTORY FOR A LEARNER
-@router.get("/learner/{learner_id}")
+@router.get("/learner/{learner_id}", responses=errors(401, 403))
 async def get_learner_attempts(
     learner_id: int,
     limit: int = 10,
     offset: int = 0,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
 ):
+    require_same_learner(learner_id, current_learner)
     try:
         result = await db.execute(
             select(TestAttempt)
@@ -144,7 +162,7 @@ async def get_learner_attempts(
                     "attempt_id": a.attempt_id,
                     "skill_id": a.skill_id,
                     "attempt_status": a.attempt_status.value.lower(),
-                    "overall_percentage": float(a.overall_percentage) if a.overall_percentage else None,
+                    "overall_percentage": score_or_none(a),
                     "start_time": a.start_time,
                     "end_time": a.end_time
                 }
@@ -156,8 +174,12 @@ async def get_learner_attempts(
 
 
 #CANCEL AN IN-PROGRESS ATTEMPT
-@router.patch("/{attempt_id}/cancel")
-async def cancel_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
+@router.patch("/{attempt_id}/cancel", responses=errors(400, 401, 403, 404))
+async def cancel_attempt(
+    attempt_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         result = await db.execute(
             select(TestAttempt).where(TestAttempt.attempt_id == attempt_id)
@@ -165,6 +187,10 @@ async def cancel_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
         attempt = result.scalar_one_or_none()
         if not attempt:
             raise HTTPException(status_code=404, detail=f"Attempt {attempt_id} not found")
+
+        #Only the learner who owns the attempt can cancel it
+        if attempt.learner_id != current_learner.learner_id:
+            raise HTTPException(status_code=403, detail=f"Attempt {attempt_id} does not belong to you")
 
         #Check if already completed
         if attempt.attempt_status != AttemptStatus.IN_PROGRESS:

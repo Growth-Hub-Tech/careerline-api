@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
+from app.api.responses import errors
 from app.core.security import hash_password, verify_password, create_access_token
 from app.models.models import Learner
 
@@ -25,7 +26,7 @@ class TokenResponse(BaseModel):
 
 
 #REGISTER A NEW LEARNER WITH PASSWORD
-@router.post("/register")
+@router.post("/register", responses=errors(400))
 async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
     try:
         #Check if email already exists
@@ -65,7 +66,7 @@ async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
 
 
 #LOGIN AND GET TOKEN
-@router.post("/login")
+@router.post("/login", responses=errors(401))
 async def login(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: AsyncSession = Depends(get_db)

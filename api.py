@@ -1,16 +1,18 @@
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel, EmailStr
-from typing import List
+from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
+from app.core.auth import get_current_learner, require_same_learner
+from app.api.responses import errors
 from app.services.learner_service import (
-    register_learner, get_behavioural_questions,
+    get_behavioural_questions,
     submit_behavioural_answers
 )
 from app.services.attempt_service import start_attempt
 from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.repositories.recommendation_repo import get_learning_pathway
-from app.models.models import Learner, Skill
+from app.models.models import Learner, Skill, TestAttempt
 from sqlalchemy import select
 
 app = FastAPI(
@@ -23,17 +25,15 @@ app = FastAPI(
 from app.api.v1.router import api_router
 app.include_router(api_router)
 
-#DATA MODELS: This defines what each endpoint expects
+#LEGACY ROUTES (/api/...): kept only so old clients don't break. Use /api/v1/... instead.
+#They now need a login token (Authorize in /docs) and the learner always comes from the token.
+#learner_id in the body is optional and only checked: a different learner_id gets 403.
 
-#Register Learner
-class RegisterRequest(BaseModel):
-    full_name: str
-    email: str
-    phone: str
+#DATA MODELS: This defines what each endpoint expects
 
 #Start Test Attempt. It allows learners to declares their level before taking the test
 class StartAttemptRequest(BaseModel):
-    learner_id: int
+    learner_id: Optional[int] = None  #Ignored: the learner comes from the token
     skill_id: int
     declared_level: str  #Learner's self-declared level e.g BEGINNER, JUNIOR, MID, ADVANCED
 
@@ -44,7 +44,7 @@ class AnswerItem(BaseModel):
 
 #Submit Answers Request
 class SubmitRequest(BaseModel):
-    learner_id: int
+    learner_id: Optional[int] = None  #Ignored: the learner comes from the token
     attempt_id: int
     answers: List[AnswerItem]
 
@@ -55,35 +55,26 @@ class BehaviouralAnswerItem(BaseModel):
 
 #Behavioural Answers Request
 class BehaviouralAnswersRequest(BaseModel):
-    learner_id: int
+    learner_id: Optional[int] = None  #Ignored: the learner comes from the token
     attempt_id: int
     answers: List[BehaviouralAnswerItem]
 
 
 #ENDPOINTS
 
-#Register Learner
-@app.post("/api/register")
-async def learner_register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
-    try:
-        #Register learner using the learner service
-        learner_id = await register_learner(
-            db=db,
-            full_name=data.full_name,
-            email=data.email,
-            phone=data.phone
-        )
-        return {
-            "status": "Success",
-            "learner_id": learner_id,
-            "message": f"Learner {data.full_name} registered successfully"
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+#Register Learner (retired)
+#It created learners with no password, and those learners can never log in,
+#so every protected route would reject them. Sign-up is POST /api/v1/auth/register.
+@app.post("/api/register", deprecated=True, status_code=410, responses=errors(410))
+async def learner_register():
+    raise HTTPException(
+        status_code=410,
+        detail="This route is retired. Register with POST /api/v1/auth/register (needs a password)."
+    )
 
 
 #Get Behavioural Questions for a specific skill
-@app.get("/api/behavioural-questions/{skill_id}")
+@app.get("/api/behavioural-questions/{skill_id}", deprecated=True, responses=errors(404))
 async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
     try:
         #Fetch behavioural questions using the learner service
@@ -102,8 +93,19 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 
 
 #Submit Behavioural Answers
-@app.post("/api/behavioural-answers")
-async def behavioural_answers(data: BehaviouralAnswersRequest, db: AsyncSession = Depends(get_db)):
+@app.post("/api/behavioural-answers", deprecated=True, responses=errors(401, 403, 404))
+async def behavioural_answers(
+    data: BehaviouralAnswersRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    if data.learner_id is not None:
+        require_same_learner(data.learner_id, current_learner)
+    learner_id = current_learner.learner_id  #from token
+    attempt = await db.get(TestAttempt, data.attempt_id)
+    if attempt is None:
+        raise HTTPException(status_code=404, detail=f"Attempt {data.attempt_id} not found")
+    require_same_learner(attempt.learner_id, current_learner)
     try:
         #Convert list of BehaviouralAnswerItem objects to plain dictionaries
         answers = [
@@ -116,27 +118,34 @@ async def behavioural_answers(data: BehaviouralAnswersRequest, db: AsyncSession 
         #Save answers using the learner service
         result = await submit_behavioural_answers(
             db=db,
-            learner_id=data.learner_id,
+            learner_id=learner_id,
             attempt_id=data.attempt_id,
             answers=answers
         )
         return {
             "status": "Success",
             "result": result,
-            "message": f"Behavioural answers saved for learner_id={data.learner_id}"
+            "message": f"Behavioural answers saved for learner_id={learner_id}"
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 #Start Test Attempt
-@app.post("/api/attempt/start")
-async def start_test_attempt(data: StartAttemptRequest, db: AsyncSession = Depends(get_db)):
+@app.post("/api/attempt/start", deprecated=True, responses=errors(400, 401, 403))
+async def start_test_attempt(
+    data: StartAttemptRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    if data.learner_id is not None:
+        require_same_learner(data.learner_id, current_learner)
+    learner_id = current_learner.learner_id  #from token
     try:
         #Start attempt using the attempt service
         attempt_data = await start_attempt(
             db=db,
-            learner_id=data.learner_id,
+            learner_id=learner_id,
             skill_id=data.skill_id,
             declared_level=data.declared_level
         )
@@ -146,7 +155,7 @@ async def start_test_attempt(data: StartAttemptRequest, db: AsyncSession = Depen
             "declared_level": attempt_data["declared_level"],
             "total_questions": attempt_data["total_questions"],
             "questions": attempt_data["questions"],
-            "message": f"Test attempt started for learner_id={data.learner_id} on skill_id={data.skill_id} at {data.declared_level} level"
+            "message": f"Test attempt started for learner_id={learner_id} on skill_id={data.skill_id} at {data.declared_level} level"
         }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -155,8 +164,15 @@ async def start_test_attempt(data: StartAttemptRequest, db: AsyncSession = Depen
 
 
 #Submit Answers and Get Score
-@app.post("/api/attempt/submit")
-async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)):
+@app.post("/api/attempt/submit", deprecated=True, responses=errors(400, 401, 403, 404, 409))
+async def submit_answers(
+    data: SubmitRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    if data.learner_id is not None:
+        require_same_learner(data.learner_id, current_learner)
+    learner_id = current_learner.learner_id  #from token
     try:
         #Convert list of AnswerItem objects to plain dictionaries
         answers = [
@@ -171,7 +187,7 @@ async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)
         final_result = await submit_and_score(
             db=db,
             attempt_id=data.attempt_id,
-            learner_id=data.learner_id,
+            learner_id=learner_id,
             answers=answers
         )
 
@@ -179,7 +195,7 @@ async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)
         recommendations = await generate_recommendations(
             db=db,
             attempt_id=data.attempt_id,
-            learner_id=data.learner_id
+            learner_id=learner_id
         )
 
         return {
@@ -195,8 +211,14 @@ async def submit_answers(data: SubmitRequest, db: AsyncSession = Depends(get_db)
 
 
 #Get Learning Pathway
-@app.get("/api/learning-pathway/{learner_id}/{skill_id}")
-async def learning_pathway(learner_id: int, skill_id: int, db: AsyncSession = Depends(get_db)):
+@app.get("/api/learning-pathway/{learner_id}/{skill_id}", deprecated=True, responses=errors(401, 403, 404))
+async def learning_pathway(
+    learner_id: int,
+    skill_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    require_same_learner(learner_id, current_learner)
     try:
         #Fetch learning pathway using the recommendation repository
         pathway_rows = await get_learning_pathway(db=db, learner_id=learner_id, skill_id=skill_id)
