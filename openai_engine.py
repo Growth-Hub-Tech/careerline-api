@@ -5,10 +5,23 @@ from dotenv import load_dotenv
 #Load environment variables from .env file
 load_dotenv()
 
-#Initialize the OpenAI client using API key from .env
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
+#The OpenAI client is created on first use, and only when OPENAI_API_KEY is set.
+#(Before, it was created at import time, so the whole API crashed on startup without a key.)
+_client = None
+
+def get_client():
+    global _client
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        return None
+    if _client is None:
+        _client = OpenAI(api_key=api_key)
+    return _client
+
+
+#Plain recommendation used when OpenAI is not set up or the call fails
+def fallback_recommendation(subskill_name, score):
+    return f"Dedicate focused time to {subskill_name}. Significant improvement needed (score: {score}%)"
 
 #The main function to get OpenAI's benchmark for a weak subskill
 def get_ai_benchmark(skill_name, subskill_name, level_name, score):
@@ -24,6 +37,11 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
     Format your response as a simple numbered list. Be concise and specific.
     Do not include any introduction or conclusion, just the numbered list.
     """
+
+    #No key yet: skip OpenAI and use the plain recommendation
+    client = get_client()
+    if client is None:
+        return fallback_recommendation(subskill_name, score)
 
     try:
         #Call the OpenAI API
@@ -54,7 +72,7 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
     except Exception as e:
         #If OpenAI API fails, fall back to generic message
         print(f"[WARN] OpenAI API call failed for {subskill_name}: {e}")
-        return f"Dedicate focused time to {subskill_name}. Significant improvement needed (score: {score}%)"
+        return fallback_recommendation(subskill_name, score)
 
 
 #TEST
