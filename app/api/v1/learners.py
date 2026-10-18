@@ -7,7 +7,7 @@ from app.services.learner_service import (
     register_learner, get_behavioural_questions,
     submit_behavioural_answers
 )
-from app.models.models import Learner
+from app.models.models import Learner, TestAttempt
 from sqlalchemy import select
 
 #Create a router for learner endpoints
@@ -101,7 +101,19 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 
 #SUBMIT BEHAVIOURAL ANSWERS
 @router.post("/behavioural-answers")
-async def behavioural_answers(data: BehaviouralAnswersRequest, db: AsyncSession = Depends(get_db)):
+async def behavioural_answers(
+    data: BehaviouralAnswersRequest,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
+    #learner_id stays in the body for old clients, but it must be you
+    require_same_learner(data.learner_id, current_learner)
+
+    #...and the attempt must be yours too
+    attempt = await db.get(TestAttempt, data.attempt_id)
+    if attempt is None:
+        raise HTTPException(status_code=404, detail=f"Attempt {data.attempt_id} not found")
+    require_same_learner(attempt.learner_id, current_learner)
     try:
         answers = [
             {"question_id": item.question_id, "answer_text": item.answer_text}

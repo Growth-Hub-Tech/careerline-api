@@ -11,7 +11,7 @@ from app.services.learner_service import (
 from app.services.attempt_service import start_attempt
 from app.services.scoring_service import submit_and_score, generate_recommendations, SubmitError
 from app.repositories.recommendation_repo import get_learning_pathway
-from app.models.models import Learner, Skill
+from app.models.models import Learner, Skill, TestAttempt
 from sqlalchemy import select
 
 app = FastAPI(
@@ -101,6 +101,10 @@ async def behavioural_answers(
     if data.learner_id is not None:
         require_same_learner(data.learner_id, current_learner)
     learner_id = current_learner.learner_id  #from token
+    attempt = await db.get(TestAttempt, data.attempt_id)
+    if attempt is None:
+        raise HTTPException(status_code=404, detail=f"Attempt {data.attempt_id} not found")
+    require_same_learner(attempt.learner_id, current_learner)
     try:
         #Convert list of BehaviouralAnswerItem objects to plain dictionaries
         answers = [
