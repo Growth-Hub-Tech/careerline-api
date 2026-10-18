@@ -26,6 +26,16 @@ class SubmitRequest(BaseModel):
     answers: list[AnswerItem]
 
 
+#Percentage for scored attempts only, so a real 0% shows as 0.
+#(The column defaults to 0 while an attempt is in progress, so those stay null.)
+SCORED_STATUSES = (AttemptStatus.PASSED, AttemptStatus.FAILED, AttemptStatus.COMPLETED)
+
+def score_or_none(attempt):
+    if attempt.attempt_status in SCORED_STATUSES and attempt.overall_percentage is not None:
+        return float(attempt.overall_percentage)
+    return None
+
+
 #START A TEST ATTEMPT
 @router.post("/start")
 async def start_test_attempt(
@@ -111,7 +121,7 @@ async def get_attempt(
                 "learner_id": attempt.learner_id,
                 "skill_id": attempt.skill_id,
                 "attempt_status": attempt.attempt_status.value.lower(),
-                "overall_percentage": float(attempt.overall_percentage) if attempt.overall_percentage else None,
+                "overall_percentage": score_or_none(attempt),
                 "start_time": attempt.start_time,
                 "end_time": attempt.end_time
             }
@@ -151,7 +161,7 @@ async def get_learner_attempts(
                     "attempt_id": a.attempt_id,
                     "skill_id": a.skill_id,
                     "attempt_status": a.attempt_status.value.lower(),
-                    "overall_percentage": float(a.overall_percentage) if a.overall_percentage else None,
+                    "overall_percentage": score_or_none(a),
                     "start_time": a.start_time,
                     "end_time": a.end_time
                 }
