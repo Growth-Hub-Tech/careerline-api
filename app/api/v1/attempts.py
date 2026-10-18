@@ -157,7 +157,11 @@ async def get_learner_attempts(
 
 #CANCEL AN IN-PROGRESS ATTEMPT
 @router.patch("/{attempt_id}/cancel")
-async def cancel_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
+async def cancel_attempt(
+    attempt_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_learner: Learner = Depends(get_current_learner)
+):
     try:
         result = await db.execute(
             select(TestAttempt).where(TestAttempt.attempt_id == attempt_id)
@@ -165,6 +169,10 @@ async def cancel_attempt(attempt_id: int, db: AsyncSession = Depends(get_db)):
         attempt = result.scalar_one_or_none()
         if not attempt:
             raise HTTPException(status_code=404, detail=f"Attempt {attempt_id} not found")
+
+        #Only the learner who owns the attempt can cancel it
+        if attempt.learner_id != current_learner.learner_id:
+            raise HTTPException(status_code=403, detail=f"Attempt {attempt_id} does not belong to you")
 
         #Check if already completed
         if attempt.attempt_status != AttemptStatus.IN_PROGRESS:
