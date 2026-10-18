@@ -179,6 +179,7 @@ async def assign_learner_level(db: AsyncSession, learner_id: int, skill_id: int,
         #Update existing level
         learner_level.level_id = level_id
         learner_level.attempt_id = attempt_id
+        learner_level.assigned_at = func.now()  #when this level was (re)confirmed
     else:
         #Create new level record
         learner_level = LearnerLevel(
