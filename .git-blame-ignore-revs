@@ -1,0 +1,3 @@
+# Formatting-only commits, hidden from git blame (git config blame.ignoreRevsFile .git-blame-ignore-revs)
+# style: format the codebase with ruff
+c43106a9e7b390bdc5d9ca8cf95318a04ea8a3c7

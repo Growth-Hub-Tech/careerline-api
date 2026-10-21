@@ -1,13 +1,23 @@
 services:
   - type: web
-    name: tech-assessment-service
-    env: python
+    name: careerline-api
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    # Runs `alembic upgrade head` first; the server never starts if migrations fail
+    startCommand: bash scripts/start.sh
+    healthCheckPath: /healthz
     envVars:
       - key: DATABASE_URL
         sync: false
+      - key: SECRET_KEY
+        sync: false
       - key: OPENAI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
         sync: false
       - key: APP_ENV
         value: production
+      - key: LOG_JSON
+        value: 'true'
+      - key: PYTHON_VERSION
+        value: 3.13.12
