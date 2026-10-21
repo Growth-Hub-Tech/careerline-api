@@ -1,0 +1,166 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [dev, main]
+  push:
+    branches: [dev, main]
+
+# A new push to the same branch cancels the run that is still going
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: '3.13'
+  NODE_VERSION: '22'
+
+jobs:
+  main-guard:
+    name: PRs into main come from dev
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the source branch
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [ "$HEAD_REF" != "dev" ]; then
+            echo "::error::Pull requests into main must come from dev (this one is from '$HEAD_REF')."
+            exit 1
+          fi
+
+  quality:
+    name: Lint, format, types and commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # commitlint reads every commit in the pull request
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements*.txt
+
+      - name: Install Python dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Ruff lint
+        run: ruff check --output-format=github .
+
+      - name: Ruff format
+        run: ruff format --check .
+
+      - name: Mypy
+        run: mypy
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          HUSKY: '0' # git hooks are for local clones, not CI
+
+      - name: Prettier
+        run: npx prettier --check .
+
+      - name: Conventional commit messages
+        if: github.event_name == 'pull_request'
+        run: >-
+          npx commitlint --verbose
+          --from ${{ github.event.pull_request.base.sha }}
+          --to ${{ github.event.pull_request.head.sha }}
+
+  test:
+    name: Migrations, startup and tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: careerline_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d careerline_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/careerline_test
+      SECRET_KEY: ci-only-secret-key-not-used-anywhere-else
+      APP_ENV: test
+      LOG_JSON: 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements*.txt
+
+      - name: Install Python dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Exactly one migration head
+        run: |
+          heads=$(alembic heads | grep -c "(head)")
+          if [ "$heads" -ne 1 ]; then
+            echo "::error::Expected one Alembic head, found $heads. Add a merge migration (alembic merge heads)."
+            alembic heads
+            exit 1
+          fi
+
+      - name: Migrate an empty database to head
+        run: alembic upgrade head
+
+      - name: App starts on the migrated database
+        run: |
+          PORT=8000 WEB_CONCURRENCY=1 bash scripts/start.sh > server.log 2>&1 &
+          server=$!
+          for _ in $(seq 1 30); do
+            if curl -fsS http://localhost:8000/readyz; then
+              kill "$server"
+              exit 0
+            fi
+            sleep 1
+          done
+          cat server.log
+          exit 1
+
+      - name: Tests
+        run: pytest
+
+  audit:
+    name: Dependency audit (report only)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: pip-audit
+        # Report only: some pinned packages (e.g. ecdsa via python-jose) have advisories with no fix yet
+        run: |
+          pip install pip-audit
+          pip-audit -r requirements.txt --desc on || echo "::warning::pip-audit found vulnerable dependencies; see this job's log."
