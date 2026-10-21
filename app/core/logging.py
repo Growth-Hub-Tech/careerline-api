@@ -5,8 +5,8 @@ import structlog
 
 from app.core.config import settings
 
-#Loggers from libraries that should go through the same output as our own logs.
-#uvicorn.access is silenced: the request middleware writes one access line per request instead.
+# Loggers from libraries that should go through the same output as our own logs.
+# uvicorn.access is silenced: the request middleware writes one access line per request instead.
 _LIBRARY_LOGGERS = ("uvicorn", "uvicorn.error", "sqlalchemy", "alembic", "httpx", "openai")
 
 
@@ -15,7 +15,7 @@ def configure_logging(level: str | None = None, json_logs: bool | None = None) -
     json_logs = settings.LOG_JSON if json_logs is None else json_logs
 
     shared_processors: list[structlog.types.Processor] = [
-        structlog.contextvars.merge_contextvars,  #adds request_id bound by the middleware
+        structlog.contextvars.merge_contextvars,  # adds request_id bound by the middleware
         structlog.stdlib.add_logger_name,
         structlog.stdlib.add_log_level,
         structlog.processors.TimeStamper(fmt="iso", utc=True),
@@ -36,7 +36,7 @@ def configure_logging(level: str | None = None, json_logs: bool | None = None) -
         cache_logger_on_first_use=True,
     )
 
-    #Standard-library records (uvicorn, sqlalchemy, alembic...) are rendered by structlog too
+    # Standard-library records (uvicorn, sqlalchemy, alembic...) are rendered by structlog too
     formatter = structlog.stdlib.ProcessorFormatter(
         foreign_pre_chain=shared_processors,
         processors=[structlog.stdlib.ProcessorFormatter.remove_processors_meta, renderer],

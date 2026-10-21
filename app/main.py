@@ -17,15 +17,17 @@ logger = get_logger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    #Never serve requests against an old schema: scripts/start.sh migrates first,
-    #and this stops anyone who starts uvicorn directly on a database that is behind.
+    # Never serve requests against an old schema: scripts/start.sh migrates first,
+    # and this stops anyone who starts uvicorn directly on a database that is behind.
     if settings.CHECK_MIGRATIONS_ON_STARTUP:
         try:
             await assert_database_at_head(engine)
         except Exception:
             logger.exception("startup_aborted")
             raise
-    logger.info("startup", app=settings.APP_NAME, env=settings.APP_ENV, api_prefix=settings.API_PREFIX)
+    logger.info(
+        "startup", app=settings.APP_NAME, env=settings.APP_ENV, api_prefix=settings.API_PREFIX
+    )
     yield
     await engine.dispose()
     logger.info("shutdown")
@@ -41,7 +43,7 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    #Middleware runs outermost-last: CORS -> security headers -> request id / access log / 500s -> gzip
+    # Middleware runs outermost-last: CORS -> security headers -> request id / access log / 500s -> gzip
     app.add_middleware(GZipMiddleware, minimum_size=1000)
     app.add_middleware(RequestContextMiddleware)
     app.add_middleware(SecurityHeadersMiddleware, hsts=settings.is_production)
@@ -56,9 +58,9 @@ def create_app() -> FastAPI:
 
     register_error_handlers(app)
 
-    #Global API prefix: every API route lives under /api/v1 without a v1 folder
+    # Global API prefix: every API route lives under /api/v1 without a v1 folder
     app.include_router(api_router, prefix=settings.API_PREFIX)
-    #Outside the prefix: health checks, and the deprecated /api/* routes (removed on Day 4)
+    # Outside the prefix: health checks, and the deprecated /api/* routes (removed on Day 4)
     app.include_router(health.router)
     app.include_router(legacy.router)
 

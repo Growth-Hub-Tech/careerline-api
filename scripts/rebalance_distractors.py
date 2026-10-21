@@ -12,6 +12,7 @@ Usage (reads DATABASE_URL and OPENAI_API_KEY from .env):
 Use the same rules (DISTRACTOR_RULES below) in any prompt that GENERATES new
 questions, so the bias doesn't come back.
 """
+
 import argparse
 import csv
 import json
@@ -38,12 +39,13 @@ def db_url():
         sys.exit("DATABASE_URL is not set (see .env.example)")
     for prefix in ("postgresql+asyncpg://", "postgres://"):
         if url.startswith(prefix):
-            url = "postgresql://" + url[len(prefix):]
+            url = "postgresql://" + url[len(prefix) :]
     return url
 
 
 def make_client():
     from openai import OpenAI
+
     if not os.getenv("OPENAI_API_KEY"):
         sys.exit("OPENAI_API_KEY is not set (see .env.example)")
     return OpenAI(timeout=60)
@@ -84,9 +86,13 @@ def sql_str(s):
 
 def main():
     load_dotenv()
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument("flagged_csv", help="CSV written by check_option_bias.py --csv")
-    ap.add_argument("--limit", type=int, default=25, help="how many questions to rewrite (worst first)")
+    ap.add_argument(
+        "--limit", type=int, default=25, help="how many questions to rewrite (worst first)"
+    )
     ap.add_argument("--model", default="gpt-4o")
     ap.add_argument("--out-csv", default="rebalanced_review.csv")
     ap.add_argument("--out-sql", default="rebalanced_updates.sql")
@@ -105,7 +111,10 @@ def main():
         row = cur.fetchone()
         if not row:
             continue
-        cur.execute("SELECT option_id, option_text, is_correct FROM options WHERE question_id = %s ORDER BY option_id", (qid,))
+        cur.execute(
+            "SELECT option_id, option_text, is_correct FROM options WHERE question_id = %s ORDER BY option_id",
+            (qid,),
+        )
         opts = cur.fetchall()
         correct = [o for o in opts if o[2]]
         wrong = [o for o in opts if not o[2]]
@@ -115,7 +124,9 @@ def main():
         new_wrong = []
         for _ in range(2):  # one retry if the model ignores the length rule
             try:
-                new_wrong = ask_model(client, row[0], correct[0][1], [w[1] for w in wrong], args.model)
+                new_wrong = ask_model(
+                    client, row[0], correct[0][1], [w[1] for w in wrong], args.model
+                )
             except Exception as e:  # network / JSON problems: skip this question
                 print(f"  question {qid}: model call failed: {e}")
                 new_wrong = []
@@ -125,22 +136,47 @@ def main():
             skipped.append((qid, "model output did not meet the length rules"))
             continue
         for (oid, old_text, _), new_text in zip(wrong, new_wrong, strict=True):
-            review.append({"question_id": qid, "question": row[0], "correct_option": correct[0][1],
-                           "option_id": oid, "old_wrong_option": old_text, "new_wrong_option": new_text})
-            updates.append(f"UPDATE options SET option_text = {sql_str(new_text)} "
-                           f"WHERE option_id = {oid} AND question_id = {qid} AND is_correct = false;")
+            review.append(
+                {
+                    "question_id": qid,
+                    "question": row[0],
+                    "correct_option": correct[0][1],
+                    "option_id": oid,
+                    "old_wrong_option": old_text,
+                    "new_wrong_option": new_text,
+                }
+            )
+            updates.append(
+                f"UPDATE options SET option_text = {sql_str(new_text)} "
+                f"WHERE option_id = {oid} AND question_id = {qid} AND is_correct = false;"
+            )
         print(f"  question {qid}: rewritten")
     conn.close()
 
     with open(args.out_csv, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["question_id", "question", "correct_option", "option_id",
-                                          "old_wrong_option", "new_wrong_option"])
+        w = csv.DictWriter(
+            f,
+            fieldnames=[
+                "question_id",
+                "question",
+                "correct_option",
+                "option_id",
+                "old_wrong_option",
+                "new_wrong_option",
+            ],
+        )
         w.writeheader()
         w.writerows(review)
     with open(args.out_sql, "w", encoding="utf-8") as f:
-        f.write("-- Review rebalanced_review.csv first. Then: psql \"$DATABASE_URL\" -f " + args.out_sql + "\n")
+        f.write(
+            '-- Review rebalanced_review.csv first. Then: psql "$DATABASE_URL" -f '
+            + args.out_sql
+            + "\n"
+        )
         f.write("BEGIN;\n" + "\n".join(updates) + "\nCOMMIT;\n")
-    print(f"\n{len(set(r['question_id'] for r in review))} questions rewritten, {len(skipped)} skipped")
+    print(
+        f"\n{len(set(r['question_id'] for r in review))} questions rewritten, {len(skipped)} skipped"
+    )
     for qid, why in skipped:
         print(f"  skipped {qid}: {why}")
     print(f"Review {args.out_csv}, then apply {args.out_sql}")

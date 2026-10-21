@@ -13,18 +13,15 @@ from app.services.learner_service import (
     submit_behavioural_answers,
 )
 
-#Create a router for learner endpoints
+# Create a router for learner endpoints
 router = APIRouter(prefix="/learners", tags=["Learners"], route_class=EnvelopeRoute)
 
 
-#REGISTER A NEW LEARNER
+# REGISTER A NEW LEARNER
 @router.post("/register")
 async def learner_register(data: LearnerRegisterRequest, db: AsyncSession = Depends(get_db)):
     learner_id = await register_learner(
-        db=db,
-        full_name=data.full_name,
-        email=data.email,
-        phone=data.phone
+        db=db, full_name=data.full_name, email=data.email, phone=data.phone
     )
     return ok(
         {"learner_id": learner_id},
@@ -32,18 +29,16 @@ async def learner_register(data: LearnerRegisterRequest, db: AsyncSession = Depe
     )
 
 
-#GET LEARNER PROFILE
-#Only your own profile: it holds your email and phone number
+# GET LEARNER PROFILE
+# Only your own profile: it holds your email and phone number
 @router.get("/{learner_id}", responses=errors(401, 403, 404))
 async def get_learner_profile(
     learner_id: int,
     db: AsyncSession = Depends(get_db),
-    current_learner: Learner = Depends(get_current_learner)
+    current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
-    result = await db.execute(
-        select(Learner).where(Learner.learner_id == learner_id)
-    )
+    result = await db.execute(select(Learner).where(Learner.learner_id == learner_id))
     learner = result.scalar_one_or_none()
     if not learner:
         raise NotFoundError(f"Learner {learner_id} not found")
@@ -54,12 +49,12 @@ async def get_learner_profile(
             "email": learner.email,
             "phone_number": learner.phone_number,
             "learner_status": learner.learner_status.value.lower(),
-            "registration_date": learner.registration_date
+            "registration_date": learner.registration_date,
         }
     }
 
 
-#GET BEHAVIOURAL QUESTIONS FOR A SKILL
+# GET BEHAVIOURAL QUESTIONS FOR A SKILL
 @router.get("/behavioural-questions/{skill_id}", responses=errors(404))
 async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
     questions = await get_behavioural_questions(db=db, skill_id=skill_id)
@@ -68,30 +63,26 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
     return ok(questions, message=f"Behavioural questions retrieved for skill_id={skill_id}")
 
 
-#SUBMIT BEHAVIOURAL ANSWERS
+# SUBMIT BEHAVIOURAL ANSWERS
 @router.post("/behavioural-answers", responses=errors(401, 403, 404))
 async def behavioural_answers(
     data: BehaviouralAnswersRequest,
     db: AsyncSession = Depends(get_db),
-    current_learner: Learner = Depends(get_current_learner)
+    current_learner: Learner = Depends(get_current_learner),
 ):
-    #learner_id stays in the body for old clients, but it must be you
+    # learner_id stays in the body for old clients, but it must be you
     require_same_learner(data.learner_id, current_learner)
 
-    #...and the attempt must be yours too
+    # ...and the attempt must be yours too
     attempt = await db.get(TestAttempt, data.attempt_id)
     if attempt is None:
         raise NotFoundError(f"Attempt {data.attempt_id} not found")
     require_same_learner(attempt.learner_id, current_learner)
 
     answers = [
-        {"question_id": item.question_id, "answer_text": item.answer_text}
-        for item in data.answers
+        {"question_id": item.question_id, "answer_text": item.answer_text} for item in data.answers
     ]
     result = await submit_behavioural_answers(
-        db=db,
-        learner_id=data.learner_id,
-        attempt_id=data.attempt_id,
-        answers=answers
+        db=db, learner_id=data.learner_id, attempt_id=data.attempt_id, answers=answers
     )
     return ok(result, message=f"Behavioural answers saved for learner_id={data.learner_id}")

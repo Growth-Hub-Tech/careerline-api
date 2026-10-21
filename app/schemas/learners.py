@@ -7,7 +7,7 @@ class LearnerRegisterRequest(BaseModel):
     phone: str
 
 
-#A single behavioural answer submitted by the learner
+# A single behavioural answer submitted by the learner
 class BehaviouralAnswerItem(BaseModel):
     question_id: int
     answer_text: str

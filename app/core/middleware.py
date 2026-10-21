@@ -12,13 +12,13 @@ from app.core.logging import get_logger
 logger = get_logger("app.request")
 
 REQUEST_ID_HEADER = "X-Request-ID"
-#An inbound request id is reused only if it is short and plain, so it can't inject anything into logs
+# An inbound request id is reused only if it is short and plain, so it can't inject anything into logs
 _VALID_REQUEST_ID = re.compile(r"^[A-Za-z0-9._-]{1,128}$")
 
 
-#Gives every request an id (reused from X-Request-ID when valid), binds it to every log line,
-#returns it in the X-Request-ID header, writes one access log line, and turns any unhandled
-#exception into the generic 500 error envelope.
+# Gives every request an id (reused from X-Request-ID when valid), binds it to every log line,
+# returns it in the X-Request-ID header, writes one access log line, and turns any unhandled
+# exception into the generic 500 error envelope.
 class RequestContextMiddleware:
     def __init__(self, app: ASGIApp):
         self.app = app
@@ -54,7 +54,7 @@ class RequestContextMiddleware:
                 response = error_response(request_id, 500, "INTERNAL_ERROR", INTERNAL_ERROR_MESSAGE)
                 await response(scope, receive, send_with_request_id)
             finally:
-                #Path only: query strings can carry tokens or emails
+                # Path only: query strings can carry tokens or emails
                 logger.info(
                     "request",
                     method=scope["method"],
@@ -64,7 +64,7 @@ class RequestContextMiddleware:
                 )
 
 
-#Standard security headers on every response (HSTS only in production, where HTTPS is guaranteed)
+# Standard security headers on every response (HSTS only in production, where HTTPS is guaranteed)
 class SecurityHeadersMiddleware:
     def __init__(self, app: ASGIApp, *, hsts: bool = False):
         self.app = app
@@ -82,7 +82,9 @@ class SecurityHeadersMiddleware:
                 headers.setdefault("X-Frame-Options", "DENY")
                 headers.setdefault("Referrer-Policy", "no-referrer")
                 if self.hsts:
-                    headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+                    headers.setdefault(
+                        "Strict-Transport-Security", "max-age=31536000; includeSubDomains"
+                    )
             await send(message)
 
         await self.app(scope, receive, send_with_headers)

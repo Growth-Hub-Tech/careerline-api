@@ -8,28 +8,29 @@ Revises: a1f3c9d2e801
 Create Date: 2026-10-15
 
 """
+
 from typing import Sequence, Union
 
 import sqlalchemy as sa
 from alembic import op
 
-revision: str = 'b7d24e6f0c13'
-down_revision: Union[str, Sequence[str], None] = 'a1f3c9d2e801'
+revision: str = "b7d24e6f0c13"
+down_revision: Union[str, Sequence[str], None] = "a1f3c9d2e801"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
     op.create_table(
-        'attempt_question',
-        sa.Column('attempt_id', sa.Integer(), nullable=False),
-        sa.Column('question_id', sa.Integer(), nullable=False),
-        sa.Column('position', sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(['attempt_id'], ['test_attempt.attempt_id'], ondelete='CASCADE'),
-        sa.ForeignKeyConstraint(['question_id'], ['questions.question_id']),
-        sa.PrimaryKeyConstraint('attempt_id', 'question_id'),
+        "attempt_question",
+        sa.Column("attempt_id", sa.Integer(), nullable=False),
+        sa.Column("question_id", sa.Integer(), nullable=False),
+        sa.Column("position", sa.Integer(), nullable=False),
+        sa.ForeignKeyConstraint(["attempt_id"], ["test_attempt.attempt_id"], ondelete="CASCADE"),
+        sa.ForeignKeyConstraint(["question_id"], ["questions.question_id"]),
+        sa.PrimaryKeyConstraint("attempt_id", "question_id"),
     )
 
 
 def downgrade() -> None:
-    op.drop_table('attempt_question')
+    op.drop_table("attempt_question")

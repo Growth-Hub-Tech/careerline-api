@@ -13,7 +13,7 @@ logger = get_logger(__name__)
 INTERNAL_ERROR_MESSAGE = "Something went wrong. Please try again later."
 
 
-#Builds the error envelope. Used by every handler below and by the request middleware for 500s.
+# Builds the error envelope. Used by every handler below and by the request middleware for 500s.
 def error_response(
     request_id: str | None,
     status_code: int,
@@ -48,7 +48,7 @@ async def app_error_handler(request: Request, exc: Exception) -> JSONResponse:
     )
 
 
-#HTTPException raised by routes and dependencies, and Starlette's own 404 / 405
+# HTTPException raised by routes and dependencies, and Starlette's own 404 / 405
 async def http_exception_handler(request: Request, exc: Exception) -> JSONResponse:
     assert isinstance(exc, StarletteHTTPException)
     status_code = exc.status_code
@@ -57,7 +57,7 @@ async def http_exception_handler(request: Request, exc: Exception) -> JSONRespon
     else:
         message, details = "Request failed", exc.detail
     if status_code >= 500:
-        #Never send internals to the client
+        # Never send internals to the client
         logger.error("http_error", status=status_code, detail=exc.detail)
         message, details = INTERNAL_ERROR_MESSAGE, None
     return error_response(
@@ -70,7 +70,7 @@ async def http_exception_handler(request: Request, exc: Exception) -> JSONRespon
     )
 
 
-#Body / query / path validation. The submitted value ("input") is dropped so passwords never come back.
+# Body / query / path validation. The submitted value ("input") is dropped so passwords never come back.
 async def validation_exception_handler(request: Request, exc: Exception) -> JSONResponse:
     assert isinstance(exc, RequestValidationError)
     details = [
@@ -86,5 +86,5 @@ def register_error_handlers(app: FastAPI) -> None:
     app.add_exception_handler(AppError, app_error_handler)
     app.add_exception_handler(StarletteHTTPException, http_exception_handler)
     app.add_exception_handler(RequestValidationError, validation_exception_handler)
-    #Unhandled exceptions are caught by RequestContextMiddleware (app/core/middleware.py),
-    #which logs them once with the request id and returns a generic 500.
+    # Unhandled exceptions are caught by RequestContextMiddleware (app/core/middleware.py),
+    # which logs them once with the request id and returns a generic 500.

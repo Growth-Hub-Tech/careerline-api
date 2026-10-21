@@ -8,7 +8,7 @@ class RegisterRequest(BaseModel):
     password: str
 
 
-#OAuth2 token response: kept at the top level (not in the envelope) so /docs "Authorize" and OAuth2 clients work
+# OAuth2 token response: kept at the top level (not in the envelope) so /docs "Authorize" and OAuth2 clients work
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str

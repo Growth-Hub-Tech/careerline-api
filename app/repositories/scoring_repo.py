@@ -16,49 +16,51 @@ from app.models.models import (
 )
 
 
-#Save a single learner answer
+# Save a single learner answer
 async def save_answer(db: AsyncSession, attempt_id: int, question_id: int, selected_option_id: int):
-    #Check if the selected option is correct
+    # Check if the selected option is correct
     option_result = await db.execute(
         select(Option.is_correct).where(Option.option_id == selected_option_id)
     )
     is_correct = option_result.scalar_one_or_none() or False
 
-    #Save the answer
+    # Save the answer
     answer = LearnerAnswer(
         attempt_id=attempt_id,
         question_id=question_id,
         selected_option_id=selected_option_id,
-        is_correct=is_correct
+        is_correct=is_correct,
     )
     db.add(answer)
     return is_correct
 
 
-#option_id -> (question_id, is_correct) for the given options
+# option_id -> (question_id, is_correct) for the given options
 async def get_options_by_ids(db: AsyncSession, option_ids: list):
     if not option_ids:
         return {}
     result = await db.execute(
-        select(Option.option_id, Option.question_id, Option.is_correct)
-        .where(Option.option_id.in_(set(option_ids)))
+        select(Option.option_id, Option.question_id, Option.is_correct).where(
+            Option.option_id.in_(set(option_ids))
+        )
     )
     return {row.option_id: (row.question_id, bool(row.is_correct)) for row in result.all()}
 
 
-#question_id -> (difficulty level name, subskill_id)
+# question_id -> (difficulty level name, subskill_id)
 async def get_question_info(db: AsyncSession, question_ids: list):
     if not question_ids:
         return {}
     result = await db.execute(
-        select(Question.question_id, Question.difficulty_level, Question.subskill_id)
-        .where(Question.question_id.in_(question_ids))
+        select(Question.question_id, Question.difficulty_level, Question.subskill_id).where(
+            Question.question_id.in_(question_ids)
+        )
     )
     return {row.question_id: (row.difficulty_level.value, row.subskill_id) for row in result.all()}
 
 
-#All question ids an attempt could have been served (its skill at its declared level).
-#Only used for attempts started before attempt_question existed.
+# All question ids an attempt could have been served (its skill at its declared level).
+# Only used for attempts started before attempt_question existed.
 async def get_pool_question_ids(db: AsyncSession, skill_id: int, declared_level_id: int):
     level = await db.execute(
         select(ProficiencyLevel.level_name).where(ProficiencyLevel.level_id == declared_level_id)
@@ -74,14 +76,10 @@ async def get_pool_question_ids(db: AsyncSession, skill_id: int, declared_level_
     return list(result.scalars().all())
 
 
-#Fetch all answers for an attempt
+# Fetch all answers for an attempt
 async def get_answers_for_attempt(db: AsyncSession, attempt_id: int):
     result = await db.execute(
-        select(
-            LearnerAnswer.is_correct,
-            Question.difficulty_level,
-            Question.subskill_id
-        )
+        select(LearnerAnswer.is_correct, Question.difficulty_level, Question.subskill_id)
         .join(Option, LearnerAnswer.selected_option_id == Option.option_id)
         .join(Question, LearnerAnswer.question_id == Question.question_id)
         .where(LearnerAnswer.attempt_id == attempt_id)
@@ -89,21 +87,22 @@ async def get_answers_for_attempt(db: AsyncSession, attempt_id: int):
     return result.all()
 
 
-#Get proficiency level from score percentage
+# Get proficiency level from score percentage
 async def get_level_from_score(db: AsyncSession, percentage: float):
     result = await db.execute(
         select(LevelThreshold).where(
-            LevelThreshold.min_score <= percentage,
-            LevelThreshold.max_score >= percentage
+            LevelThreshold.min_score <= percentage, LevelThreshold.max_score >= percentage
         )
     )
     threshold = result.scalar_one_or_none()
     return threshold.level_id if threshold else None
 
 
-#Update test attempt with final score and status
-async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: AttemptStatus):
-    #status must be an AttemptStatus member (PASSED / FAILED), never a raw string
+# Update test attempt with final score and status
+async def update_attempt_score(
+    db: AsyncSession, attempt_id: int, percentage: float, level_id: int, status: AttemptStatus
+):
+    # status must be an AttemptStatus member (PASSED / FAILED), never a raw string
     await db.execute(
         update(TestAttempt)
         .where(TestAttempt.attempt_id == attempt_id)
@@ -116,16 +115,16 @@ async def update_attempt_score(db: AsyncSession, attempt_id: int, percentage: fl
     )
 
 
-#Save difficulty level analytics
+# Save difficulty level analytics
 async def save_difficulty_stats(db: AsyncSession, attempt_id: int, level_stats: dict):
-    #Delete old stats for this attempt first
+    # Delete old stats for this attempt first
     existing = await db.execute(
         select(AttemptDifficultyScore).where(AttemptDifficultyScore.attempt_id == attempt_id)
     )
     for row in existing.scalars().all():
         await db.delete(row)
 
-    #Insert new stats
+    # Insert new stats
     for level, data in level_stats.items():
         total = data["total"]
         correct = data["correct"]
@@ -137,21 +136,21 @@ async def save_difficulty_stats(db: AsyncSession, attempt_id: int, level_stats: 
             difficulty_level=level,
             total_questions=total,
             correct_answers=correct,
-            percentage_score=percentage
+            percentage_score=percentage,
         )
         db.add(stat)
 
 
-#Save subskill analytics
+# Save subskill analytics
 async def save_subskill_stats(db: AsyncSession, attempt_id: int, subskill_stats: dict):
-    #Delete old stats for this attempt first
+    # Delete old stats for this attempt first
     existing = await db.execute(
         select(AttemptSubskillScore).where(AttemptSubskillScore.attempt_id == attempt_id)
     )
     for row in existing.scalars().all():
         await db.delete(row)
 
-    #Insert new stats
+    # Insert new stats
     for subskill_id, data in subskill_stats.items():
         total = data["total"]
         correct = data["correct"]
@@ -163,39 +162,35 @@ async def save_subskill_stats(db: AsyncSession, attempt_id: int, subskill_stats:
             subskill_id=subskill_id,
             total_questions=total,
             correct_answers=correct,
-            percentage_score=percentage
+            percentage_score=percentage,
         )
         db.add(stat)
 
 
-#Assign proficiency level to learner
-async def assign_learner_level(db: AsyncSession, learner_id: int, skill_id: int, attempt_id: int, level_id: int):
+# Assign proficiency level to learner
+async def assign_learner_level(
+    db: AsyncSession, learner_id: int, skill_id: int, attempt_id: int, level_id: int
+):
     if skill_id is None:
         raise ValueError("skill_id is required to assign a level")
-    #Check if learner already has a level for this skill
-    #(first() instead of scalar_one_or_none(): old data may hold more than one row)
+    # Check if learner already has a level for this skill
+    # (first() instead of scalar_one_or_none(): old data may hold more than one row)
     existing = await db.execute(
         select(LearnerLevel)
-        .where(
-            LearnerLevel.learner_id == learner_id,
-            LearnerLevel.skill_id == skill_id
-        )
+        .where(LearnerLevel.learner_id == learner_id, LearnerLevel.skill_id == skill_id)
         .order_by(LearnerLevel.learner_level_id.desc())
     )
     learner_level = existing.scalars().first()
 
     if learner_level:
-        #Update existing level
+        # Update existing level
         learner_level.level_id = level_id
         learner_level.attempt_id = attempt_id
         learner_level.assigned_at = func.now()  # type: ignore[assignment]  #SQL now() runs in the database, which SQLAlchemy allows
     else:
-        #Create new level record
+        # Create new level record
         learner_level = LearnerLevel(
-            learner_id=learner_id,
-            skill_id=skill_id,
-            attempt_id=attempt_id,
-            level_id=level_id
+            learner_id=learner_id, skill_id=skill_id, attempt_id=attempt_id, level_id=level_id
         )
         db.add(learner_level)
 

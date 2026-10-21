@@ -5,7 +5,7 @@ from app.core.config import settings
 from app.core.logging import configure_logging
 from app.models.models import Base
 
-#Any fixed number works: every instance asks for the same lock, so only one migrates at a time
+# Any fixed number works: every instance asks for the same lock, so only one migrates at a time
 MIGRATION_LOCK_ID = 7_241_026
 
 # this is the Alembic Config object, which provides
@@ -13,7 +13,7 @@ MIGRATION_LOCK_ID = 7_241_026
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.sync_database_url.replace("%", "%%"))
 
-#Same log output as the app (JSON on Render), instead of alembic.ini's logging sections
+# Same log output as the app (JSON on Render), instead of alembic.ini's logging sections
 configure_logging()
 
 # add your model's MetaData object here
@@ -47,7 +47,7 @@ def run_migrations_online() -> None:
         context.configure(connection=connection, target_metadata=target_metadata)
 
         with context.begin_transaction():
-            #Held until this transaction ends: a second instance waits here, then finds nothing to do
+            # Held until this transaction ends: a second instance waits here, then finds nothing to do
             connection.execute(text("SELECT pg_advisory_xact_lock(:id)"), {"id": MIGRATION_LOCK_ID})
             context.run_migrations()
 

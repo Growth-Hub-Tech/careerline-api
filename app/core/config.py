@@ -7,38 +7,40 @@ from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 def _with_driver(url: str, driver: str) -> str:
     for prefix in ("postgresql+asyncpg://", "postgresql://", "postgres://"):
         if url.startswith(prefix):
-            return driver + "://" + url[len(prefix):]
+            return driver + "://" + url[len(prefix) :]
     return url
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
 
-    #Database
+    # Database
     DATABASE_URL: str
     SECRET_KEY: str
 
-    #OpenAI
+    # OpenAI
     OPENAI_API_KEY: str = ""
     OPENAI_TIMEOUT_SECONDS: float = 30.0
 
-    #App
+    # App
     APP_NAME: str = "CareerLine API"
     APP_ENV: str = "development"
     APP_PORT: int = 8000
-    API_PREFIX: str = "/api/v1"  #Global prefix for every API route (health and legacy routes sit outside it)
+    API_PREFIX: str = (
+        "/api/v1"  # Global prefix for every API route (health and legacy routes sit outside it)
+    )
 
-    #Logging: JSON lines in production, readable console output in development
+    # Logging: JSON lines in production, readable console output in development
     LOG_LEVEL: str = "INFO"
     LOG_JSON: bool = False
 
-    #Comma-separated list of frontend origins allowed to call the API
+    # Comma-separated list of frontend origins allowed to call the API
     CORS_ORIGINS: Annotated[list[str], NoDecode] = ["http://localhost:5173"]
 
-    #Refuse to start when the database is behind the latest migration
+    # Refuse to start when the database is behind the latest migration
     CHECK_MIGRATIONS_ON_STARTUP: bool = True
 
-    #Assessment config
+    # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60
     QUESTIONS_PER_LEVEL: int = 25
@@ -63,4 +65,4 @@ class Settings(BaseSettings):
         return _with_driver(self.DATABASE_URL, "postgresql")
 
 
-settings = Settings()  #required values (DATABASE_URL, SECRET_KEY) come from the environment
+settings = Settings()  # required values (DATABASE_URL, SECRET_KEY) come from the environment

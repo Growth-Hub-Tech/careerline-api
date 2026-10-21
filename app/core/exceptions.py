@@ -1,5 +1,5 @@
-#Errors the global handler turns into the error envelope with the right status code.
-#Raise these from services and routes instead of HTTPException(500, str(e)).
+# Errors the global handler turns into the error envelope with the right status code.
+# Raise these from services and routes instead of HTTPException(500, str(e)).
 class AppError(Exception):
     status_code = 400
     code = "BAD_REQUEST"
@@ -46,7 +46,7 @@ class ServiceUnavailableError(AppError):
     code = "SERVICE_UNAVAILABLE"
 
 
-#Error code for each HTTP status, used when a plain HTTPException (or Starlette's 404/405) is raised
+# Error code for each HTTP status, used when a plain HTTPException (or Starlette's 404/405) is raised
 STATUS_CODES = {
     400: "BAD_REQUEST",
     401: "UNAUTHORIZED",

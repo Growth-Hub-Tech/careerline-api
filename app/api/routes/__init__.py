@@ -2,11 +2,11 @@ from fastapi import APIRouter
 
 from app.api.routes import attempts, auth, learners, recommendations, skills
 
-#Every API router. app/main.py mounts this under settings.API_PREFIX (/api/v1),
-#so no route or folder repeats the prefix.
+# Every API router. app/main.py mounts this under settings.API_PREFIX (/api/v1),
+# so no route or folder repeats the prefix.
 api_router = APIRouter()
 
-#Include all routers
+# Include all routers
 api_router.include_router(auth.router)
 api_router.include_router(auth.token_router)
 api_router.include_router(learners.router)

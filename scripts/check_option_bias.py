@@ -19,6 +19,7 @@ Usage (reads DATABASE_URL from .env):
 A question is FLAGGED when the correct option is the single longest AND it is
 at least --ratio times (default 1.3) the average distractor length.
 """
+
 import argparse
 import csv
 import os
@@ -36,15 +37,26 @@ def db_url():
         sys.exit("DATABASE_URL is not set (see .env.example)")
     for prefix in ("postgresql+asyncpg://", "postgres://"):
         if url.startswith(prefix):
-            url = "postgresql://" + url[len(prefix):]
+            url = "postgresql://" + url[len(prefix) :]
     return url
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument("--csv", help="write flagged questions to this CSV file")
-    ap.add_argument("--ratio", type=float, default=1.3, help="flag if correct >= ratio x average distractor length")
-    ap.add_argument("--max-share", type=float, help="exit 1 if %% of questions with longest-correct is above this")
+    ap.add_argument(
+        "--ratio",
+        type=float,
+        default=1.3,
+        help="flag if correct >= ratio x average distractor length",
+    )
+    ap.add_argument(
+        "--max-share",
+        type=float,
+        help="exit 1 if %% of questions with longest-correct is above this",
+    )
     args = ap.parse_args()
 
     conn = psycopg2.connect(db_url())
@@ -60,7 +72,9 @@ def main():
     """)
     questions = {}
     for qid, skill, level, qtext, oid, otext, correct in cur.fetchall():
-        q = questions.setdefault(qid, {"skill": skill, "level": level, "text": qtext, "options": []})
+        q = questions.setdefault(
+            qid, {"skill": skill, "level": level, "text": qtext, "options": []}
+        )
         q["options"].append((oid, (otext or "").strip(), bool(correct)))
     conn.close()
 
@@ -90,23 +104,36 @@ def main():
             g[1] += 1
         if is_longest and ratio >= args.ratio:
             flagged_n += 1
-            flagged.append({
-                "question_id": qid, "skill": q["skill"], "level": q["level"],
-                "correct_len": c_len, "longest_wrong_len": max(w_lens),
-                "avg_wrong_len": round(avg_w, 1), "ratio": round(ratio, 2),
-                "question": q["text"], "correct_option": correct[0][1],
-                "wrong_options": " | ".join(o[1] for o in wrong),
-            })
+            flagged.append(
+                {
+                    "question_id": qid,
+                    "skill": q["skill"],
+                    "level": q["level"],
+                    "correct_len": c_len,
+                    "longest_wrong_len": max(w_lens),
+                    "avg_wrong_len": round(avg_w, 1),
+                    "ratio": round(ratio, 2),
+                    "question": q["text"],
+                    "correct_option": correct[0][1],
+                    "wrong_options": " | ".join(o[1] for o in wrong),
+                }
+            )
 
     share = 100 * longest / total if total else 0
     expected = 100 / 4
     print(f"Questions checked: {total}")
-    print(f"Correct option is the single longest: {longest} ({share:.1f}%)  - unbiased would be about {expected:.0f}%")
-    print(f"Correct option is the first stored option (\"A\" before shuffling): {first_correct} "
-          f"({100 * first_correct / total if total else 0:.1f}%)  - the API shuffles options when serving")
+    print(
+        f"Correct option is the single longest: {longest} ({share:.1f}%)  - unbiased would be about {expected:.0f}%"
+    )
+    print(
+        f'Correct option is the first stored option ("A" before shuffling): {first_correct} '
+        f"({100 * first_correct / total if total else 0:.1f}%)  - the API shuffles options when serving"
+    )
     print(f"Flagged (longest AND >= {args.ratio}x average wrong option): {flagged_n}")
     if problems:
-        print(f"Questions with != 1 correct option or no wrong options: {len(problems)} (ids: {[p[0] for p in problems[:20]]})")
+        print(
+            f"Questions with != 1 correct option or no wrong options: {len(problems)} (ids: {[p[0] for p in problems[:20]]})"
+        )
     print("\nWorst skill/level groups (share of questions where the longest option is correct):")
     worst = sorted(by_group.items(), key=lambda kv: kv[1][1] / kv[1][0], reverse=True)[:15]
     for (skill, level), (n, longest) in worst:
@@ -114,8 +141,18 @@ def main():
 
     if args.csv:
         with open(args.csv, "w", newline="", encoding="utf-8") as f:
-            fields = ["question_id", "skill", "level", "correct_len", "longest_wrong_len", "avg_wrong_len",
-                      "ratio", "question", "correct_option", "wrong_options"]
+            fields = [
+                "question_id",
+                "skill",
+                "level",
+                "correct_len",
+                "longest_wrong_len",
+                "avg_wrong_len",
+                "ratio",
+                "question",
+                "correct_option",
+                "wrong_options",
+            ]
             w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader()
             w.writerows(sorted(flagged, key=lambda r: -r["ratio"]))

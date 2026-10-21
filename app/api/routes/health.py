@@ -10,18 +10,21 @@ from app.db.session import engine
 
 logger = get_logger(__name__)
 
-#Mounted outside the /api/v1 prefix so Render and load balancers can call it at a fixed path
+# Mounted outside the /api/v1 prefix so Render and load balancers can call it at a fixed path
 router = APIRouter(tags=["Health"], route_class=EnvelopeRoute)
 
 
-#Liveness: the process is up (no database call, so a slow database never restarts the app)
+# Liveness: the process is up (no database call, so a slow database never restarts the app)
 @router.get("/healthz")
 async def health_check():
     return ok({"status": "healthy"}, message=f"{settings.APP_NAME} is running")
 
 
-#Readiness: the database answers and is at the latest migration
-@router.get("/readyz", responses={503: {"description": "Database unreachable or behind the latest migration"}})
+# Readiness: the database answers and is at the latest migration
+@router.get(
+    "/readyz",
+    responses={503: {"description": "Database unreachable or behind the latest migration"}},
+)
 async def readiness_check():
     try:
         async with engine.connect() as conn:

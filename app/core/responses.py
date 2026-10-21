@@ -10,14 +10,14 @@ from starlette.concurrency import run_in_threadpool
 from starlette.responses import Response
 
 
-#SUCCESS ENVELOPE: every API route's data is returned as {"success": true, "message": ..., "data": ...}
+# SUCCESS ENVELOPE: every API route's data is returned as {"success": true, "message": ..., "data": ...}
 class ApiResponse[T](BaseModel):
     success: Literal[True] = True
     message: str | None = None
     data: T | None = None
 
 
-#ERROR ENVELOPE: every error is returned as {"success": false, "error": {...}}
+# ERROR ENVELOPE: every error is returned as {"success": false, "error": {...}}
 class ErrorDetail(BaseModel):
     code: str
     message: str
@@ -30,29 +30,33 @@ class ErrorResponse(BaseModel):
     error: ErrorDetail
 
 
-#Return this from a route to add a message to the envelope; plain data is wrapped automatically
+# Return this from a route to add a message to the envelope; plain data is wrapped automatically
 def ok(data: Any = None, message: str | None = None) -> ApiResponse[Any]:
     return ApiResponse[Any](data=data, message=message)
 
 
-#Wraps whatever a route returns in ApiResponse and documents ApiResponse[...] in OpenAPI.
-#Set it as route_class on every APIRouter that serves API routes (it is FastAPI's version of an interceptor).
+# Wraps whatever a route returns in ApiResponse and documents ApiResponse[...] in OpenAPI.
+# Set it as route_class on every APIRouter that serves API routes (it is FastAPI's version of an interceptor).
 class EnvelopeRoute(APIRoute):
-    def __init__(self, path: str, endpoint, *, response_model: Any = Default(None), responses=None, **kwargs):
+    def __init__(
+        self, path: str, endpoint, *, response_model: Any = Default(None), responses=None, **kwargs
+    ):
         if not getattr(endpoint, "__enveloped__", False):
             endpoint = _enveloped(endpoint)
 
-        #include_router builds each route again from the first one, so only wrap once
+        # include_router builds each route again from the first one, so only wrap once
         if isinstance(response_model, DefaultPlaceholder) or response_model is None:
             response_model = ApiResponse[Any]
         elif not (inspect.isclass(response_model) and issubclass(response_model, ApiResponse)):
             response_model = ApiResponse[response_model]
 
-        #Validation errors use the error envelope, not FastAPI's default body
+        # Validation errors use the error envelope, not FastAPI's default body
         responses = {422: _error_doc(422), **(responses or {})}
-        super().__init__(path, endpoint, response_model=response_model, responses=responses, **kwargs)
+        super().__init__(
+            path, endpoint, response_model=response_model, responses=responses, **kwargs
+        )
 
-        #A route without parameters or body can never return 422, so don't document one
+        # A route without parameters or body can never return 422, so don't document one
         if not get_flat_params(self.dependant) and self.body_field is None:
             self.responses.pop(422, None)
             self.response_fields.pop(422, None)
@@ -73,8 +77,8 @@ def _enveloped(endpoint):
     return wrapper
 
 
-#Error responses shown in Swagger (/docs).
-#FastAPI only lists 200 and 422 by itself, so the other codes showed as "Undocumented".
+# Error responses shown in Swagger (/docs).
+# FastAPI only lists 200 and 422 by itself, so the other codes showed as "Undocumented".
 ERRORS = {
     400: "Bad request: invalid input (the message says what is wrong)",
     401: "Not logged in: missing, invalid or expired token",
@@ -90,6 +94,6 @@ def _error_doc(code: int) -> dict[str, Any]:
     return {"model": ErrorResponse, "description": ERRORS[code]}
 
 
-#Pick the codes a route can return, e.g. responses=errors(401, 403, 404)
+# Pick the codes a route can return, e.g. responses=errors(401, 403, 404)
 def errors(*codes: int) -> dict[int | str, dict[str, Any]]:
     return {code: _error_doc(code) for code in codes}
