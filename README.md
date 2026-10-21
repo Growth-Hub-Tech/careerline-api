@@ -60,7 +60,7 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
   ```json
   {
     "success": false,
-    "error": { "code": "NOT_FOUND", "message": "Attempt 9 not found", "request_id": "…" }
+    "error": { "code": "not_found", "message": "Attempt 9 not found", "request_id": "…" }
   }
   ```
   Raise `NotFoundError`, `ForbiddenError`, `ConflictError`, etc. from `app/core/exceptions.py`. Unhandled exceptions return a generic 500 and are logged with their traceback; internals are never sent to the client. Validation errors list `details` without echoing the submitted values.

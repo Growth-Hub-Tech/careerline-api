@@ -65,7 +65,7 @@ async def test_unknown_route_returns_the_error_envelope_with_a_request_id(client
     body = response.json()
     assert response.status_code == 404
     assert body["success"] is False
-    assert body["error"]["code"] == "NOT_FOUND"
+    assert body["error"]["code"] == "not_found"
     assert body["error"]["request_id"] == response.headers["X-Request-ID"]
 
 
@@ -77,7 +77,7 @@ async def test_validation_errors_never_echo_submitted_values(client):
 
     body = response.json()
     assert response.status_code == 422
-    assert body["error"]["code"] == "VALIDATION_ERROR"
+    assert body["error"]["code"] == "validation_error"
     assert {tuple(d["loc"]) for d in body["error"]["details"]} == {
         ("body", "full_name"),
         ("body", "phone"),
@@ -93,7 +93,7 @@ async def test_unhandled_errors_return_a_generic_500_without_internals(client):
 
     body = response.json()
     assert response.status_code == 500
-    assert body["error"]["code"] == "INTERNAL_ERROR"
+    assert body["error"]["code"] == "internal_error"
     assert body["error"]["message"] == "Something went wrong. Please try again later."
     assert body["error"]["request_id"] == response.headers["X-Request-ID"]
     assert "hunter2" not in response.text
@@ -104,7 +104,7 @@ async def test_missing_token_gives_401_with_www_authenticate(client):
 
     assert response.status_code == 401
     assert response.headers["WWW-Authenticate"] == "Bearer"
-    assert response.json()["error"]["code"] == "UNAUTHORIZED"
+    assert response.json()["error"]["code"] == "unauthenticated"
 
 
 async def test_a_valid_inbound_request_id_is_reused(client):

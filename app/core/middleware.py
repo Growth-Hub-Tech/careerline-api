@@ -51,7 +51,7 @@ class RequestContextMiddleware:
                 logger.exception("unhandled_error", method=scope["method"], path=scope["path"])
                 if response_started:
                     raise
-                response = error_response(request_id, 500, "INTERNAL_ERROR", INTERNAL_ERROR_MESSAGE)
+                response = error_response(request_id, 500, "internal_error", INTERNAL_ERROR_MESSAGE)
                 await response(scope, receive, send_with_request_id)
             finally:
                 # Path only: query strings can carry tokens or emails

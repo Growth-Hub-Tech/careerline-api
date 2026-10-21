@@ -78,7 +78,7 @@ async def validation_exception_handler(request: Request, exc: Exception) -> JSON
         for error in exc.errors()
     ]
     return error_response(
-        _request_id(request), 422, "VALIDATION_ERROR", "Request validation failed", details
+        _request_id(request), 422, "validation_error", "Request validation failed", details
     )
 
 
