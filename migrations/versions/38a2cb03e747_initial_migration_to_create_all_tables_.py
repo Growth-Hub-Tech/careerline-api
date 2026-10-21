@@ -1,15 +1,14 @@
 """Initial migration to create all tables on the DB
 
 Revision ID: 38a2cb03e747
-Revises: 
+Revises:
 Create Date: 2026-10-01 23:16:40.961667
 
 """
 from typing import Sequence, Union
 
-from alembic import op
 import sqlalchemy as sa
-
+from alembic import op
 
 # revision identifiers, used by Alembic.
 revision: str = '38a2cb03e747'

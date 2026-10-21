@@ -124,7 +124,7 @@ def main():
         if not acceptable(correct[0][1], new_wrong, len(wrong)):
             skipped.append((qid, "model output did not meet the length rules"))
             continue
-        for (oid, old_text, _), new_text in zip(wrong, new_wrong):
+        for (oid, old_text, _), new_text in zip(wrong, new_wrong, strict=True):
             review.append({"question_id": qid, "question": row[0], "correct_option": correct[0][1],
                            "option_id": oid, "old_wrong_option": old_text, "new_wrong_option": new_text})
             updates.append(f"UPDATE options SET option_text = {sql_str(new_text)} "

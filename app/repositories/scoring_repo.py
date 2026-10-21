@@ -1,11 +1,20 @@
+from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, update, func
+
 from app.models.models import (
-    LearnerAnswer, Option, Question, TestAttempt,
-    ProficiencyLevel, LevelThreshold, LearnerLevel,
-    AttemptDifficultyScore, AttemptSubskillScore, AttemptStatus, Subskill
+    AttemptDifficultyScore,
+    AttemptStatus,
+    AttemptSubskillScore,
+    LearnerAnswer,
+    LearnerLevel,
+    LevelThreshold,
+    Option,
+    ProficiencyLevel,
+    Question,
+    Subskill,
+    TestAttempt,
 )
-from app.core.config import settings
+
 
 #Save a single learner answer
 async def save_answer(db: AsyncSession, attempt_id: int, question_id: int, selected_option_id: int):
@@ -179,7 +188,7 @@ async def assign_learner_level(db: AsyncSession, learner_id: int, skill_id: int,
         #Update existing level
         learner_level.level_id = level_id
         learner_level.attempt_id = attempt_id
-        learner_level.assigned_at = func.now()  #when this level was (re)confirmed
+        learner_level.assigned_at = func.now()  # type: ignore[assignment]  #SQL now() runs in the database, which SQLAlchemy allows
     else:
         #Create new level record
         learner_level = LearnerLevel(

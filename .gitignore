@@ -1,15 +1,29 @@
-#An Environment variables and shoudlnt be pushed to GitHub
+# Environment variables: never commit them (only .env.example)
 .env
 .env.*
 !.env.example
 
-#Virtual environment... too large and not necessary. Easy to install by the way
+# Python virtual environment and caches
+.venv/
 venv/
-
-#Python cache files
 __pycache__/
 *.pyc
 *.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-#VSCode settings
+# Node (Husky, commitlint, Prettier)
+node_modules/
+
+# Editors and OS files
 .vscode/
+.idea/
+.DS_Store
+
+# Files written by scripts/check_option_bias.py and scripts/rebalance_distractors.py
+biased.csv
+rebalanced_review.csv
+rebalanced_updates.sql

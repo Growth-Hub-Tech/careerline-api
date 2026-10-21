@@ -1,0 +1,1 @@
+Alembic migrations for careerline-api. Run with `alembic upgrade head` (scripts/start.sh does this before the server starts).

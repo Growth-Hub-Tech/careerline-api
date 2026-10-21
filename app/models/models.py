@@ -1,8 +1,10 @@
-from sqlalchemy import Integer, String, Text, Boolean, DateTime, Numeric, Enum, ForeignKey
+import enum
+
+from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, Numeric, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
-from app.core.database import Base
-import enum
+
+from app.db.base import Base
 
 #Changing the MySQL ENUM types to Python's versions
 
@@ -13,7 +15,7 @@ class LevelName(str, enum.Enum):
     ADVANCED = "ADVANCED"
 
 #Values are UPPERCASE on purpose: they must be exactly the labels of the Postgres
-#enum types (created by Alembic and filled by migrate_data.py with .upper()).
+#enum types (created by Alembic and filled by scripts/migrate_mysql_to_postgres.py with .upper()).
 #Name == value, and every Enum() column below stores the VALUE (values_callable),
 #so Python and Postgres can never disagree again.
 class AttemptStatus(str, enum.Enum):

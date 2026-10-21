@@ -1,6 +1,10 @@
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.core.logging import get_logger
 from app.models.models import Learner
+
+logger = get_logger(__name__)
 
 #Fetch a learner by email
 async def get_learner_by_email(db: AsyncSession, email: str):
@@ -21,7 +25,7 @@ async def create_learner(db: AsyncSession, full_name: str, email: str, phone: st
     #Check if learner already exists
     existing = await get_learner_by_email(db, email)
     if existing:
-        print(f"Learner with email {email} already exists with ID: {existing.learner_id}")
+        logger.info("learner_already_exists", learner_id=existing.learner_id)  #never log the email
         return existing.learner_id
 
     #Create new learner
@@ -33,5 +37,5 @@ async def create_learner(db: AsyncSession, full_name: str, email: str, phone: st
     db.add(new_learner)
     await db.flush()  #Flush to get the auto-generated ID without committing
 
-    print(f"New learner created with ID: {new_learner.learner_id}")
+    logger.info("learner_created", learner_id=new_learner.learner_id)
     return new_learner.learner_id

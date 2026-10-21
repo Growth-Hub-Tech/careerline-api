@@ -1,11 +1,15 @@
-from sqlalchemy.ext.asyncio import AsyncSession
-from app.repositories.learner_repo import create_learner, get_learner_by_id
-from app.models.models import Skill, BehaviouralQuestion
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.core.logging import get_logger
+from app.models.models import BehaviouralQuestion, Skill
+from app.repositories.learner_repo import create_learner
+
+logger = get_logger(__name__)
 
 #REGISTER A NEW LEARNER OR FETCH DETAILS IF ALREADY EXISTS
 async def register_learner(db: AsyncSession, full_name: str, email: str, phone: str):
-    #create_learner handles duplicate check internally 
+    #create_learner handles duplicate check internally
     learner_id = await create_learner(db, full_name, email, phone)
     return learner_id
 
@@ -25,7 +29,7 @@ async def get_behavioural_questions(db: AsyncSession, skill_id: int):
         select(BehaviouralQuestion)
         .where(
             BehaviouralQuestion.question_type == "GENERAL",
-            BehaviouralQuestion.is_active == True
+            BehaviouralQuestion.is_active.is_(True)
         )
         .limit(5)
     )
@@ -37,7 +41,7 @@ async def get_behavioural_questions(db: AsyncSession, skill_id: int):
         .where(
             BehaviouralQuestion.skill_id == skill_id,
             BehaviouralQuestion.question_type == "SKILL_SPECIFIC",
-            BehaviouralQuestion.is_active == True
+            BehaviouralQuestion.is_active.is_(True)
         )
         .limit(5)
     )
@@ -76,7 +80,7 @@ async def submit_behavioural_answers(db: AsyncSession, learner_id: int, attempt_
         db.add(profile)
 
     #await db.commit()
-    print(f"Behavioural answers saved for learner_id={learner_id}")
+    logger.info("behavioural_answers_saved", learner_id=learner_id, attempt_id=attempt_id, count=len(answers))
     return {
         "learner_id": learner_id,
         "attempt_id": attempt_id,

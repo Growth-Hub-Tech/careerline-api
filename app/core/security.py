@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
+
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+
 from app.core.config import settings
 
 #Password hashing context... uses bcrypt algorithm
@@ -42,10 +44,9 @@ def create_access_token(learner_id: int) -> str:
 
 
 #Decode and verify a JWT token to returns learner_id
-def decode_access_token(token: str) -> int:
+def decode_access_token(token: str) -> int | None:
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        learner_id = int(payload.get("sub"))
-        return learner_id
-    except JWTError:
+        return int(payload["sub"])
+    except (JWTError, KeyError, TypeError, ValueError):
         return None

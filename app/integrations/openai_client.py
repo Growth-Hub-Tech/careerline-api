@@ -1,9 +1,9 @@
 from openai import OpenAI
-import os
-from dotenv import load_dotenv
 
-#Load environment variables from .env file
-load_dotenv()
+from app.core.config import settings
+from app.core.logging import get_logger
+
+logger = get_logger(__name__)
 
 #The OpenAI client is created on first use, and only when OPENAI_API_KEY is set.
 #(Before, it was created at import time, so the whole API crashed on startup without a key.)
@@ -11,11 +11,15 @@ _client = None
 
 def get_client():
     global _client
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
+    if not settings.OPENAI_API_KEY:
         return None
     if _client is None:
-        _client = OpenAI(api_key=api_key)
+        #Every outbound call has a timeout, so a slow OpenAI never hangs a request forever
+        _client = OpenAI(
+            api_key=settings.OPENAI_API_KEY,
+            timeout=settings.OPENAI_TIMEOUT_SECONDS,
+            max_retries=2,
+        )
     return _client
 
 
@@ -30,10 +34,10 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
     prompt = f"""
     A learner scored {score}% on {subskill_name} in a {skill_name} assessment.
     Their current level is {level_name}.
-    
-    List the 5 most important {subskill_name} concepts a {level_name} level 
+
+    List the 5 most important {subskill_name} concepts a {level_name} level
     {skill_name} professional must master to improve.
-    
+
     Format your response as a simple numbered list. Be concise and specific.
     Do not include any introduction or conclusion, just the numbered list.
     """
@@ -62,7 +66,7 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
         )
 
         #Extract the text response from OpenAI
-        ai_response = response.choices[0].message.content.strip()
+        ai_response = (response.choices[0].message.content or "").strip()
 
         #Build the final recommendation combining score context and OpenAI advice
         recommendation = f"Score: {score}% — Key concepts to master in {subskill_name}:\n{ai_response}"
@@ -71,18 +75,5 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
 
     except Exception as e:
         #If OpenAI API fails, fall back to generic message
-        print(f"[WARN] OpenAI API call failed for {subskill_name}: {e}")
+        logger.warning("openai_call_failed", subskill=subskill_name, error=type(e).__name__)
         return fallback_recommendation(subskill_name, score)
-
-
-#TEST
-if __name__ == "__main__":
-    result = get_ai_benchmark(
-        skill_name="Frontend Web Development",
-        subskill_name="JavaScript",
-        level_name="JUNIOR",
-        score=35
-    )
-    print("\n===== AI BENCHMARK =====")
-    print(result)
-    print("========================")

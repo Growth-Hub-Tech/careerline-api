@@ -1,11 +1,15 @@
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from app.models.models import (
-    SubskillRecommendation, AttemptSubskillScore,
-    Subskill, TestAttempt, Skill, LearnerLevel,
-    ProficiencyLevel
+    AttemptSubskillScore,
+    ProficiencyLevel,
+    Skill,
+    Subskill,
+    SubskillRecommendation,
+    TestAttempt,
 )
-from app.core.config import settings
+
 
 #Fetch subskill performance for an attempt
 async def get_subskill_scores(db: AsyncSession, attempt_id: int):

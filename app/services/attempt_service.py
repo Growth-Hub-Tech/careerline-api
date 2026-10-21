@@ -1,10 +1,17 @@
 from sqlalchemy.ext.asyncio import AsyncSession
+
 from app.core.config import settings
+from app.core.exceptions import BadRequestError
+from app.core.logging import get_logger
 from app.repositories.attempt_repo import (
-    create_attempt, get_level_id_by_name,
-    get_questions_for_attempt, get_options_for_question,
-    record_attempt_questions
+    create_attempt,
+    get_level_id_by_name,
+    get_options_for_question,
+    get_questions_for_attempt,
+    record_attempt_questions,
 )
+
+logger = get_logger(__name__)
 
 #Validate declared level
 VALID_LEVELS = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
@@ -15,12 +22,12 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
     #Validate declared level
     declared_level = declared_level.upper()
     if declared_level not in VALID_LEVELS:
-        raise ValueError(f"Invalid level: {declared_level}. Must be one of {VALID_LEVELS}")
+        raise BadRequestError(f"Invalid level: {declared_level}. Must be one of {VALID_LEVELS}")
 
     #Get level ID from database
     level_id = await get_level_id_by_name(db, declared_level)
     if not level_id:
-        raise ValueError(f"Level {declared_level} not found in database")
+        raise BadRequestError(f"Level {declared_level} not found in database")
 
     #Create the attempt
     attempt_id = await create_attempt(db, learner_id, skill_id, level_id)
@@ -31,7 +38,7 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
         db, skill_id, declared_level,
         attempt_id=attempt_id, learner_id=learner_id, count=settings.QUESTIONS_PER_LEVEL
     )
-    print(f"Fetched {len(questions)} questions for skill_id={skill_id} at {declared_level} level")
+    logger.info("questions_selected", attempt_id=attempt_id, skill_id=skill_id, level=declared_level, count=len(questions))
 
     #Store the served questions so submit can check the answers against them
     await record_attempt_questions(db, attempt_id, [q.question_id for q in questions])

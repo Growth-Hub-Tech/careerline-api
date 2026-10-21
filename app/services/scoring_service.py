@@ -1,17 +1,29 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.repositories.scoring_repo import (
-    save_answer, get_options_by_ids, get_question_info, get_pool_question_ids,
-    update_attempt_score, save_difficulty_stats,
-    save_subskill_stats, assign_learner_level
-)
-from app.repositories.recommendation_repo import (
-    get_subskill_scores, get_skill_name_for_attempt,
-    get_level_name_for_attempt, save_recommendations
-)
+
 from app.core.config import settings
+from app.core.exceptions import BadRequestError, ConflictError, ForbiddenError, NotFoundError
+from app.core.logging import get_logger
+from app.integrations.openai_client import get_ai_benchmark
 from app.models.models import AttemptStatus
 from app.repositories.attempt_repo import get_attempt_for_update, get_attempt_question_ids
-from openai_engine import get_ai_benchmark
+from app.repositories.recommendation_repo import (
+    get_level_name_for_attempt,
+    get_skill_name_for_attempt,
+    get_subskill_scores,
+    save_recommendations,
+)
+from app.repositories.scoring_repo import (
+    assign_learner_level,
+    get_options_by_ids,
+    get_pool_question_ids,
+    get_question_info,
+    save_answer,
+    save_difficulty_stats,
+    save_subskill_stats,
+    update_attempt_score,
+)
+
+logger = get_logger(__name__)
 
 #Suggests a level for the learner if they fail the test.
 #For example, if a learner declares themselves as "JUNIOR" but fails, we suggest "BEGINNER".
@@ -25,18 +37,18 @@ LEVEL_SUGGESTION = {
 }
 
 
-#Errors the routes turn into proper HTTP codes instead of a 500
-class SubmitError(Exception):
-    status_code = 400
+#Errors the global error handler turns into proper HTTP codes instead of a 500
+class SubmitError(BadRequestError):
+    pass
 
-class AttemptNotFound(SubmitError):
-    status_code = 404
+class AttemptNotFound(NotFoundError):
+    pass
 
-class AttemptNotYours(SubmitError):
-    status_code = 403
+class AttemptNotYours(ForbiddenError):
+    pass
 
-class AttemptAlreadySubmitted(SubmitError):
-    status_code = 409
+class AttemptAlreadySubmitted(ConflictError):
+    pass
 
 
 #SUBMIT AND SCORE AN ATTEMPT
@@ -95,7 +107,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
             answer["question_id"],
             answer["selected_option_id"]
         )
-    print(f"All answers saved for attempt_id={attempt_id}")
+    logger.info("answers_saved", attempt_id=attempt_id, count=len(answers))
 
     #Score ONLY this submission's answers (never re-read old rows)
     question_info = await get_question_info(db, list(seen))  #question_id -> (difficulty, subskill_id)
@@ -144,7 +156,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
 
     #Update attempt record
     await update_attempt_score(db, attempt_id, percentage, level_id, status)
-    print(f"Scoring complete: {percentage}%  Status: {status.value}")
+    logger.info("attempt_scored", attempt_id=attempt_id, percentage=percentage, status=status.value)
 
     #Save analytics
     await save_difficulty_stats(db, attempt_id, level_stats)
@@ -153,7 +165,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     #Assign level if passed (skill_id was None before, so levels never showed per skill)
     if passed and level_id:
         await assign_learner_level(db, learner_id, attempt.skill_id, attempt_id, level_id)
-        print(f"Level assigned: {confirmed_level}")
+        logger.info("level_assigned", attempt_id=attempt_id, level=confirmed_level)
 
     #Return result
     return {
@@ -189,7 +201,7 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
     ]
 
     if not weak_subskills:
-        print("No weak subskills found — learner is strong across all areas")
+        logger.info("no_weak_subskills", attempt_id=attempt_id)
         return {"message": "Great job! No weak areas found.", "recommendations": []}
 
     #Sort by lowest score first. most urgent first
@@ -202,7 +214,7 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
         name = subskill.subskill_name
 
         #Call OpenAI for enriched recommendation
-        print(f"Calling OpenAI for {name} (score: {score}%)...")
+        logger.info("ai_recommendation_requested", attempt_id=attempt_id, subskill=name, score=score)
         action = get_ai_benchmark(skill_name, name, level_name, score)
 
         recommendations.append({
@@ -215,7 +227,7 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
 
     #Save recommendations to database
     await save_recommendations(db, attempt_id, learner_id, recommendations)
-    print(f"{len(recommendations)} recommendations saved for attempt_id={attempt_id}")
+    logger.info("recommendations_saved", attempt_id=attempt_id, count=len(recommendations))
 
     return {
         "total_weak_areas": len(recommendations),

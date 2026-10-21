@@ -109,8 +109,8 @@ def main():
         print(f"Questions with != 1 correct option or no wrong options: {len(problems)} (ids: {[p[0] for p in problems[:20]]})")
     print("\nWorst skill/level groups (share of questions where the longest option is correct):")
     worst = sorted(by_group.items(), key=lambda kv: kv[1][1] / kv[1][0], reverse=True)[:15]
-    for (skill, level), (n, l) in worst:
-        print(f"  {100 * l / n:5.1f}%  {skill} / {level}  ({l}/{n})")
+    for (skill, level), (n, longest) in worst:
+        print(f"  {100 * longest / n:5.1f}%  {skill} / {level}  ({longest}/{n})")
 
     if args.csv:
         with open(args.csv, "w", newline="", encoding="utf-8") as f:

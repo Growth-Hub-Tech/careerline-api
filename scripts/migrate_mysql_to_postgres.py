@@ -1,9 +1,11 @@
 import os
-from dotenv import load_dotenv
-load_dotenv()
-import pymysql
+
 import psycopg2
+import pymysql
+from dotenv import load_dotenv
 from psycopg2.extras import execute_values
+
+load_dotenv()
 
 #MySQL connection (my local device DB)
 mysql_conn = pymysql.connect(

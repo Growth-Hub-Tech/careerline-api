@@ -1,7 +1,19 @@
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
-from app.models.models import TestAttempt, ProficiencyLevel, Question, Option, Subskill, AttemptQuestion
 import random
+
+from sqlalchemy import func, select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.core.logging import get_logger
+from app.models.models import (
+    AttemptQuestion,
+    Option,
+    ProficiencyLevel,
+    Question,
+    Subskill,
+    TestAttempt,
+)
+
+logger = get_logger(__name__)
 
 #Create a new test attempt
 async def create_attempt(db: AsyncSession, learner_id: int, skill_id: int, declared_level_id: int):
@@ -12,7 +24,7 @@ async def create_attempt(db: AsyncSession, learner_id: int, skill_id: int, decla
     )
     db.add(new_attempt)
     await db.flush() #Get the auto-generated attempt_id without committing
-    print(f"New attempt created with ID: {new_attempt.attempt_id}")
+    logger.info("attempt_created", attempt_id=new_attempt.attempt_id, skill_id=skill_id)
     return new_attempt.attempt_id
 
 #Fetch declared level ID from level name
@@ -52,13 +64,13 @@ async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_
         )
         .group_by(AttemptQuestion.question_id)
     )
-    seen = dict(seen_result.all())
+    seen: dict[int, int] = {row[0]: row[1] for row in seen_result.all()}
 
     #Same attempt_id -> same selection (reproducible); new attempt -> new selection
     rng = random.Random(attempt_id)
 
     #Group by subskill; inside each group: least-seen first, random among equals
-    groups = {}
+    groups: dict[int, list[Question]] = {}
     for q in pool:
         groups.setdefault(q.subskill_id, []).append(q)
     for qs in groups.values():
@@ -67,7 +79,7 @@ async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_
     #Round-robin over subskills so every subskill is covered evenly
     subskill_order = list(groups.keys())
     rng.shuffle(subskill_order)
-    selected = []
+    selected: list[Question] = []
     while len(selected) < min(count, len(pool)):
         for sid in subskill_order:
             if groups[sid] and len(selected) < count:
@@ -78,7 +90,7 @@ async def get_questions_for_attempt(db: AsyncSession, skill_id: int, difficulty_
 
 #Fetch options for a question without revealing correct answer
 #(order shuffled per attempt, but stable if the same attempt is loaded again)
-async def get_options_for_question(db: AsyncSession, question_id: int, attempt_id: int = None):
+async def get_options_for_question(db: AsyncSession, question_id: int, attempt_id: int | None = None):
     result = await db.execute(
         select(Option.option_id, Option.option_text)
         .where(Option.question_id == question_id)
