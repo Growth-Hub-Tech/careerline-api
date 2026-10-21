@@ -1,0 +1,22 @@
+{
+  "name": "careerline-api",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Git hooks and formatting tools for careerline-api (the API itself is Python)",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.10"
+  }
+}

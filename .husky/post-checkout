@@ -1,0 +1,14 @@
+# Warn (a checkout can't be undone) when a new branch name doesn't follow type/description.
+# pre-push refuses to push such a branch.
+[ "$3" = "1" ] || exit 0  # file checkout, not a branch switch
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+case "$branch" in
+  HEAD | main | dev) exit 0 ;;
+esac
+
+if ! echo "$branch" | grep -qE '^(feat|fix|docs|style|refactor|perf|test|build|chore|ci|revert)/[A-Za-z0-9._-]+$'; then
+  echo "⚠️  Branch name '$branch' does not follow type/description (e.g. feat/user-login)." >&2
+  echo "   Rename it before pushing: git branch -m feat/your-change" >&2
+fi
+exit 0

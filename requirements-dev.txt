@@ -1,0 +1,6 @@
+# Development and CI tools (runtime dependencies come from requirements.txt)
+-r requirements.txt
+mypy==2.4.0
+pytest==9.1.1
+pytest-asyncio==1.4.0
+ruff==0.17.1
