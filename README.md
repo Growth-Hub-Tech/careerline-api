@@ -27,24 +27,23 @@ app/
   schemas/           Pydantic request/response models
   services/          business logic (attempts, scoring, recommendations)
 migrations/          Alembic environment and versions
-scripts/             start.sh (Render/Docker entry point), data tools, sql/
+scripts/             start.sh (Render entry point), data tools, sql/
 tests/
 ```
 
 ## Setup
 
-You need Python 3.13 and Docker (for a local Postgres), or your own Postgres.
+You need Python 3.13 and a Postgres database.
 
 ```bash
-git clone https://github.com/Growth-Hub-Tech/careerline-api.git
-cd careerline-api
-make install            # .venv with the app and dev tools
-cp .env.example .env    # then set DATABASE_URL and SECRET_KEY
-make db-up              # optional: Postgres 16 in Docker on localhost:5432
-make dev                # migrates, then runs http://localhost:8000 with reload
+git clone https://github.com/Growth-Hub-Tech/tech-assessment-service.git
+cd tech-assessment-service
+python3.13 -m venv .venv && source .venv/bin/activate
+pip install -r requirements-dev.txt
+cp .env.example .env               # then set DATABASE_URL and SECRET_KEY
+alembic upgrade head
+uvicorn app.main:app --reload      # http://localhost:8000
 ```
-
-With the Docker database, use `DATABASE_URL=postgresql://careerline:careerline@localhost:5432/careerline`. `docker compose up` runs the database and the API together.
 
 API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
 
@@ -72,7 +71,7 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
 - `scripts/start.sh` runs `alembic upgrade head` before starting the server. If the migration fails, the server never starts.
 - On startup the app also checks that the database is at the latest migration and refuses to start if it is behind, even when someone runs `uvicorn` directly (`CHECK_MIGRATIONS_ON_STARTUP`).
 - Migrations take a Postgres advisory lock, so two instances starting together never migrate at once.
-- Create one with `make migration m="add x to y"`, review the generated file, and run `make migrate`. CI fails when there is more than one Alembic head.
+- Create one with `alembic revision --autogenerate -m "add x to y"`, review the generated file, and run `alembic upgrade head`. CI fails when there is more than one Alembic head.
 
 ## Logging
 
@@ -80,13 +79,12 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
 
 ## Quality checks
 
-| Command          | What it does                           |
-| ---------------- | -------------------------------------- |
-| `make lint`      | ruff lint                              |
-| `make format`    | ruff fix + format, rewriting files     |
-| `make typecheck` | mypy on `app/`                         |
-| `make test`      | pytest                                 |
-| `make check`     | everything CI checks except migrations |
+```bash
+ruff check .          # lint
+ruff format .         # format
+mypy                  # type-check app/
+pytest                # tests
+```
 
 CI (`.github/workflows/ci.yml`) runs on every pull request into `dev` or `main`:
 

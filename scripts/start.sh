@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Entry point for Render and Docker: migrate the database, then start the API.
+# Entry point for Render: migrate the database, then start the API.
 # If the migration fails the script exits non-zero and the server never starts.
 set -euo pipefail
 

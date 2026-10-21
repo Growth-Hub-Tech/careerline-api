@@ -1,26 +1,29 @@
-# Environment variables: never commit them (only .env.example)
+# Environment variables (only .env.example is committed)
 .env
 .env.*
 !.env.example
 
-# Python virtual environment and caches
+# Virtual environments
 .venv/
 venv/
+.python-version
+
+# Python and tool caches
 __pycache__/
 *.pyc
-*.pyo
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.coverage
-htmlcov/
+
+# Logs
+*.log
 
 # Editors and OS files
 .vscode/
 .idea/
 .DS_Store
 
-# Files written by scripts/check_option_bias.py and scripts/rebalance_distractors.py
+# Output of scripts/check_option_bias.py and scripts/rebalance_distractors.py
 biased.csv
 rebalanced_review.csv
 rebalanced_updates.sql
