@@ -16,7 +16,6 @@ permissions:
 
 env:
   PYTHON_VERSION: '3.13'
-  NODE_VERSION: '22'
 
 jobs:
   main-guard:
@@ -34,13 +33,11 @@ jobs:
           fi
 
   quality:
-    name: Lint, format, types and commits
+    name: Lint, format and types
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # commitlint reads every commit in the pull request
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -60,27 +57,6 @@ jobs:
 
       - name: Mypy
         run: mypy
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: Install Node dependencies
-        run: npm ci
-        env:
-          HUSKY: '0' # git hooks are for local clones, not CI
-
-      - name: Prettier
-        run: npx prettier --check .
-
-      - name: Conventional commit messages
-        if: github.event_name == 'pull_request'
-        run: >-
-          npx commitlint --verbose
-          --from ${{ github.event.pull_request.base.sha }}
-          --to ${{ github.event.pull_request.head.sha }}
 
   test:
     name: Migrations, startup and tests

@@ -8,7 +8,7 @@ The backend for CareerLine AI. It tests learners across tech and revenue skills,
 - **PostgreSQL 16**, **SQLAlchemy 2** (async, asyncpg), **Alembic** migrations
 - **structlog** for logging (JSON in production)
 - **OpenAI** for recommendation wording (optional; a plain fallback is used without a key)
-- Quality gates: **ruff** (lint + format), **mypy**, **pytest**, **Prettier** (Markdown/JSON/YAML), **Husky** + **commitlint**, **GitHub Actions**
+- Quality gates: **ruff** (lint + format), **mypy**, **pytest**, **GitHub Actions**
 
 ## Project layout
 
@@ -33,12 +33,12 @@ tests/
 
 ## Setup
 
-You need Python 3.13, Node 20+ (for the git hooks and Prettier) and Docker (for a local Postgres), or your own Postgres.
+You need Python 3.13 and Docker (for a local Postgres), or your own Postgres.
 
 ```bash
 git clone https://github.com/Growth-Hub-Tech/careerline-api.git
 cd careerline-api
-make install            # .venv, Python + Node dev tools, git hooks
+make install            # .venv with the app and dev tools
 cp .env.example .env    # then set DATABASE_URL and SECRET_KEY
 make db-up              # optional: Postgres 16 in Docker on localhost:5432
 make dev                # migrates, then runs http://localhost:8000 with reload
@@ -83,20 +83,14 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
 | Command          | What it does                           |
 | ---------------- | -------------------------------------- |
 | `make lint`      | ruff lint                              |
-| `make format`    | ruff + Prettier, rewriting files       |
+| `make format`    | ruff fix + format, rewriting files     |
 | `make typecheck` | mypy on `app/`                         |
 | `make test`      | pytest                                 |
 | `make check`     | everything CI checks except migrations |
 
-Git hooks (Husky, installed by `make install` / `npm install`):
-
-- **pre-commit:** refuses commits on `dev` and `main`; lints and formats the staged files; runs mypy.
-- **commit-msg:** commit messages must follow [Conventional Commits](COMMIT_CONVENTION.md).
-- **pre-push:** refuses pushes to `dev` and `main`; branch names must be `type/description` (e.g. `feat/D04-BE-seed-files`); runs the tests.
-
 CI (`.github/workflows/ci.yml`) runs on every pull request into `dev` or `main`:
 
-- lint, format, types, Prettier and commit messages
+- lint, format and types
 - migrating an empty Postgres database to head and starting the app on it
 - the tests
 - a dependency audit (report only)
@@ -107,7 +101,7 @@ A pull request into `main` must come from `dev`.
 
 - `dev` is the default branch. Work happens on `type/description` branches cut from `dev`, and lands in `dev` through a pull request.
 - `main` is production. It only receives pull requests from `dev`.
-- The GitHub organisation is on the Free plan, so GitHub itself can't enforce branch protection on this private repo. The rules above are enforced by the Husky hooks and by CI. Don't bypass them with `--no-verify`.
+- The GitHub organisation is on the Free plan, so GitHub itself can't enforce branch protection on this private repo. CI checks every pull request; nothing technically stops a direct push to `dev` or `main`, so don't.
 
 ## Deployment (Render)
 

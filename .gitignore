@@ -15,9 +15,6 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Node (Husky, commitlint, Prettier)
-node_modules/
-
 # Editors and OS files
 .vscode/
 .idea/

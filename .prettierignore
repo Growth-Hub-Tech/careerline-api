@@ -1,9 +1,0 @@
-# Prettier formats Markdown, JSON and YAML here; Python is formatted by ruff.
-.venv
-venv
-node_modules
-package-lock.json
-.mypy_cache
-.ruff_cache
-.pytest_cache
-htmlcov

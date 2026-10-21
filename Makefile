@@ -4,11 +4,10 @@ BIN := $(VENV)/bin
 
 .PHONY: install dev start migrate migration lint format typecheck test check db-up db-down
 
-install: ## Create the virtualenv, install Python and Node tools, set up the git hooks
+install: ## Create the virtualenv and install the Python dependencies and tools
 	python3.13 -m venv $(VENV) || python3 -m venv $(VENV)
 	$(BIN)/pip install --upgrade pip
 	$(BIN)/pip install -r requirements-dev.txt
-	npm install
 	git config blame.ignoreRevsFile .git-blame-ignore-revs
 
 dev: ## Run the API with auto-reload (migrates first)
@@ -27,10 +26,9 @@ migration: ## Create a migration from model changes: make migration m="add x to 
 lint: ## Lint Python
 	$(BIN)/ruff check .
 
-format: ## Format Python (ruff) and Markdown/JSON/YAML (Prettier)
+format: ## Fix lint issues and format Python with ruff
 	$(BIN)/ruff check --fix .
 	$(BIN)/ruff format .
-	npx prettier --write .
 
 typecheck: ## Type-check the app
 	$(BIN)/mypy
@@ -40,7 +38,6 @@ test: ## Run the tests
 
 check: lint typecheck test ## Everything CI checks, except migrations
 	$(BIN)/ruff format --check .
-	npx prettier --check .
 
 db-up: ## Start a local Postgres in Docker
 	docker compose up -d db
