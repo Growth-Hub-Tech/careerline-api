@@ -165,7 +165,6 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 
 - `scripts/check_option_bias.py`: reports questions whose correct option gives itself away by its length.
 - `scripts/rebalance_distractors.py`: drafts rewritten wrong options for human review. It never writes to the database.
-- `scripts/migrate_mysql_to_postgres.py`: the one-off copy from the old MySQL database.
 - `scripts/sql/`: repair SQL (`reset_sequences.sql`, `fix_learner_levels.sql`) and the old MySQL dump.
   - The dump contains real people's personal details. It is turned into seed files and deleted on Day 4.
 
