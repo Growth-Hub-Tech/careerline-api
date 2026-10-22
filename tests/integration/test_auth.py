@@ -1,10 +1,11 @@
 from datetime import UTC, datetime, timedelta
 
+import pytest
 from jose import jwt
 from sqlalchemy import text
 
 from app.core.config import settings
-from tests.integration.conftest import PASSWORD, login, register
+from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
 
 API = settings.API_PREFIX
 
@@ -106,3 +107,21 @@ async def test_token_signed_with_another_key_is_401(client, learner):
     response = await client.get(f"{API}/learners/{learner['learner_id']}", headers=headers)
 
     assert response.status_code == 401
+
+
+@pytest.mark.parametrize(
+    ("email", "password"),
+    [
+        ("empty@example.com", ""),
+        ("short@example.com", "1234567"),
+        ("not-an-email", "long-enough-password"),
+    ],
+)
+async def test_register_rejects_a_bad_email_or_weak_password(client, db, email, password):
+    response = await register(client, email, password=password)
+
+    assert_error_envelope(response, 422, "validation_error")
+    created = db.execute(
+        text("SELECT count(*) FROM learner WHERE email = :email"), {"email": email}
+    ).scalar_one()
+    assert created == 0

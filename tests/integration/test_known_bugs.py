@@ -15,36 +15,11 @@ import app.services.scoring_service as scoring_service
 from app.core.config import settings
 from tests.integration.conftest import (
     answers_for,
-    assert_error_envelope,
-    register,
     start_attempt,
     submit,
 )
 
 API = settings.API_PREFIX
-
-
-@pytest.mark.xfail(
-    strict=True,
-    reason="Bug: POST /api/v1/auth/register accepts an empty or short password and an email "
-    "that is not an email.",
-)
-@pytest.mark.parametrize(
-    ("email", "password"),
-    [
-        ("empty@example.com", ""),
-        ("short@example.com", "1234567"),
-        ("not-an-email", "long-enough-password"),
-    ],
-)
-async def test_register_rejects_a_bad_email_or_weak_password(client, db, email, password):
-    response = await register(client, email, password=password)
-
-    assert_error_envelope(response, 422, "validation_error")
-    created = db.execute(
-        text("SELECT count(*) FROM learner WHERE email = :email"), {"email": email}
-    ).scalar_one()
-    assert created == 0
 
 
 @pytest.mark.xfail(
