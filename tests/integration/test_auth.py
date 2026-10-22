@@ -125,3 +125,25 @@ async def test_register_rejects_a_bad_email_or_weak_password(client, db, email, 
         text("SELECT count(*) FROM learner WHERE email = :email"), {"email": email}
     ).scalar_one()
     assert created == 0
+
+
+async def test_old_signup_route_does_not_create_passwordless_accounts(client, db):
+    response = await client.post(
+        f"{API}/learners/register",
+        json={"full_name": "No Password", "email": "nopass@example.com", "phone": "1"},
+    )
+
+    created = db.execute(
+        text("SELECT count(*) FROM learner WHERE email = 'nopass@example.com'")
+    ).scalar_one()
+    assert created == 0, f"route answered {response.status_code} and created a learner"
+
+
+async def test_old_signup_route_does_not_reveal_an_existing_learners_id(client, learner):
+    response = await client.post(
+        f"{API}/learners/register",
+        json={"full_name": "Someone Else", "email": learner["email"], "phone": "1"},
+    )
+
+    assert response.status_code != 200
+    assert str(learner["learner_id"]) not in str(response.json().get("data"))
