@@ -20,14 +20,19 @@ app/
     routes/          one module per resource (auth, learners, skills, attempts, recommendations),
                      plus health (/healthz, /readyz)
   core/              config, security, logging, exceptions, error handlers, response envelope, middleware
-  db/                SQLAlchemy base, engine/session, migration check
+  db/                SQLAlchemy base, engine/session, migration check, seed loader (python -m app.db.seed)
   integrations/      external services (OpenAI)
   models/            SQLAlchemy models
   repositories/      database queries
   schemas/           Pydantic request/response models
   services/          business logic (attempts, scoring, recommendations)
-migrations/          Alembic environment and versions
-scripts/             start.sh (Render entry point), data tools, sql/
+  sample/            sample answers for endpoints not built yet (see "Sample API")
+  worker.py          background worker entry point (python -m app.worker)
+migrations/          Alembic environment and the one starting migration
+seeds/               reference data: levels, skills, subskills, questions and options (JSON)
+scripts/             start.sh (Render entry point), export_openapi.py, data tools, sql/
+docs/                api.md (for the frontend), database.md (migrations and seeds)
+openapi.json         the API contract the frontend generates types from
 tests/
 ```
 
@@ -92,6 +97,11 @@ CI and `tests/test_openapi_file.py` fail when the committed file is out of date.
 - On startup the app also checks that the database is at the latest migration and refuses to start if it is behind, even when someone runs `uvicorn` directly (`CHECK_MIGRATIONS_ON_STARTUP`).
 - Migrations take a Postgres advisory lock, so two instances starting together never migrate at once.
 - Create one with `alembic revision --autogenerate -m "add x to y"`, review the generated file, and run `alembic upgrade head`. CI fails when there is more than one Alembic head.
+- Since Day 4 there is a single starting migration; see [docs/database.md](docs/database.md) for what that means for databases created before.
+
+## Seed files
+
+`seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions). `python -m app.db.seed` loads it; running it again changes nothing. The test server loads it on every deploy (`SEED_ON_START=true`). Details: [docs/database.md](docs/database.md).
 
 ## Logging
 
