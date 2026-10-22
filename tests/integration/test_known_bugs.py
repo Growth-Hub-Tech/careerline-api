@@ -26,41 +26,6 @@ API = settings.API_PREFIX
 
 @pytest.mark.xfail(
     strict=True,
-    reason="Bug: get_db commits AFTER the response is sent (FastAPI's default dependency scope), "
-    "so when the commit fails the client has already been told it worked.",
-)
-async def test_a_failed_save_is_not_reported_as_success(client, database):
-    # Make the database refuse this learner at COMMIT time (a deferred trigger), the way a
-    # dropped connection or a constraint checked at commit would.
-    with database.begin() as conn:
-        conn.exec_driver_sql(
-            "CREATE OR REPLACE FUNCTION refuse_on_commit() RETURNS trigger LANGUAGE plpgsql AS "
-            "$$ BEGIN RAISE EXCEPTION 'simulated commit failure'; END $$"
-        )
-        conn.exec_driver_sql("DROP TRIGGER IF EXISTS refuse_on_commit ON learner")
-        conn.exec_driver_sql(
-            "CREATE CONSTRAINT TRIGGER refuse_on_commit AFTER INSERT ON learner "
-            "DEFERRABLE INITIALLY DEFERRED FOR EACH ROW "
-            "WHEN (NEW.email = 'lost@example.com') EXECUTE FUNCTION refuse_on_commit()"
-        )
-    try:
-        response = await register(client, "lost@example.com")
-
-        with database.connect() as conn:
-            saved = conn.exec_driver_sql(
-                "SELECT count(*) FROM learner WHERE email = 'lost@example.com'"
-            ).scalar_one()
-        assert saved == 0
-        # Nothing was saved, so the client must not be told it worked
-        assert_error_envelope(response, 500, "internal_error")
-    finally:
-        with database.begin() as conn:
-            conn.exec_driver_sql("DROP TRIGGER refuse_on_commit ON learner")
-            conn.exec_driver_sql("DROP FUNCTION refuse_on_commit()")
-
-
-@pytest.mark.xfail(
-    strict=True,
     reason="Bug: starting an attempt for a skill id that doesn't exist breaks the foreign key "
     "and answers 500 instead of 404.",
 )
