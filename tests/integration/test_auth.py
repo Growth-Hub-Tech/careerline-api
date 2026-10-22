@@ -127,23 +127,22 @@ async def test_register_rejects_a_bad_email_or_weak_password(client, db, email, 
     assert created == 0
 
 
-async def test_old_signup_route_does_not_create_passwordless_accounts(client, db):
+async def test_the_old_signup_route_is_gone(client, db):
+    # It used to create accounts without a password; sign-up is POST /auth/register only
     response = await client.post(
         f"{API}/learners/register",
-        json={"full_name": "No Password", "email": "nopass@example.com", "phone": "1"},
+        json={
+            "full_name": "No Password",
+            "email": "nopass@example.com",
+            "phone": "1",
+            "password": "correct-horse-battery",
+        },
     )
 
+    # 405: only GET /learners/{learner_id} is left under that path
+    assert response.status_code in (404, 405), response.text
+    assert response.json()["success"] is False
     created = db.execute(
         text("SELECT count(*) FROM learner WHERE email = 'nopass@example.com'")
     ).scalar_one()
-    assert created == 0, f"route answered {response.status_code} and created a learner"
-
-
-async def test_old_signup_route_does_not_reveal_an_existing_learners_id(client, learner):
-    response = await client.post(
-        f"{API}/learners/register",
-        json={"full_name": "Someone Else", "email": learner["email"], "phone": "1"},
-    )
-
-    assert response.status_code != 200
-    assert str(learner["learner_id"]) not in str(response.json().get("data"))
+    assert created == 0
