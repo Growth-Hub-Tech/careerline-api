@@ -162,3 +162,14 @@ async def test_a_failed_save_is_not_reported_as_success(client, database):
         with database.begin() as conn:
             conn.exec_driver_sql("DROP TRIGGER refuse_on_commit ON learner")
             conn.exec_driver_sql("DROP FUNCTION refuse_on_commit()")
+
+
+async def test_start_attempt_for_an_unknown_skill_is_404(client, learner, skill):
+    response = await client.post(
+        f"{API}/attempts/start",
+        headers=learner["headers"],
+        json={"skill_id": skill["skill_id"] + 1000, "declared_level": "JUNIOR"},
+    )
+
+    error = assert_error_envelope(response, 404, "not_found")
+    assert error["message"] == f"Skill {skill['skill_id'] + 1000} not found"

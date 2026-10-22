@@ -26,22 +26,6 @@ API = settings.API_PREFIX
 
 @pytest.mark.xfail(
     strict=True,
-    reason="Bug: starting an attempt for a skill id that doesn't exist breaks the foreign key "
-    "and answers 500 instead of 404.",
-)
-async def test_start_attempt_for_an_unknown_skill_is_404(client, learner, skill):
-    response = await client.post(
-        f"{API}/attempts/start",
-        headers=learner["headers"],
-        json={"skill_id": skill["skill_id"] + 1000, "declared_level": "JUNIOR"},
-    )
-
-    error = assert_error_envelope(response, 404, "not_found")
-    assert error["message"] == f"Skill {skill['skill_id'] + 1000} not found"
-
-
-@pytest.mark.xfail(
-    strict=True,
     reason="Bug: POST /api/v1/auth/register accepts an empty or short password and an email "
     "that is not an email.",
 )
