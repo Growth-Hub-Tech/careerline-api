@@ -12,10 +12,14 @@ from app.sample.routes import (
     assessments,
     beginner_path,
     contact,
+    helpers,
+    invitations,
+    payments,
     profile,
     programmes,
     results,
     roles,
+    subscriptions,
 )
 
 sample_router = APIRouter()
@@ -29,3 +33,9 @@ sample_router.include_router(results.router)
 sample_router.include_router(profile.router)
 sample_router.include_router(beginner_path.router)
 sample_router.include_router(programmes.router)
+
+# Day 3: second half of the API, with flows that work end to end on sample state
+sample_router.include_router(payments.router)
+sample_router.include_router(subscriptions.router)
+sample_router.include_router(invitations.router)
+sample_router.include_router(helpers.router)
