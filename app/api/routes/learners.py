@@ -3,11 +3,9 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_learner, get_db, require_same_learner
-from app.api.routes.auth import register as register_with_password
 from app.core.exceptions import NotFoundError
 from app.core.responses import EnvelopeRoute, errors, ok
 from app.models.models import Learner, TestAttempt
-from app.schemas.auth import RegisterRequest
 from app.schemas.learners import BehaviouralAnswersRequest
 from app.services.learner_service import (
     get_behavioural_questions,
@@ -16,17 +14,6 @@ from app.services.learner_service import (
 
 # Create a router for learner endpoints
 router = APIRouter(prefix="/learners", tags=["Learners"], route_class=EnvelopeRoute)
-
-
-# REGISTER A NEW LEARNER (old route; removed on Day 4, use POST /auth/register)
-# Works exactly like POST /auth/register: a password is required and an email that is already
-# registered gets 400. (Before, it created accounts with no password and answered an existing
-# email with that learner's id.)
-@router.post("/register", responses=errors(400), deprecated=True)
-async def learner_register(
-    data: RegisterRequest, db: AsyncSession = Depends(get_db, scope="function")
-):
-    return await register_with_password(data, db)
 
 
 # GET LEARNER PROFILE

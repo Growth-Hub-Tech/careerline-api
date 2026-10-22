@@ -9000,58 +9000,6 @@
         ]
       }
     },
-    "/api/v1/learners/register": {
-      "post": {
-        "deprecated": true,
-        "operationId": "learner_register_api_v1_learners_register_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Any_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "summary": "Learner Register",
-        "tags": [
-          "Learners"
-        ]
-      }
-    },
     "/api/v1/learners/{learner_id}": {
       "get": {
         "operationId": "get_learner_profile_api_v1_learners__learner_id__get",
