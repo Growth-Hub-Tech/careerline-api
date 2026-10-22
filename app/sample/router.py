@@ -14,9 +14,12 @@ from app.sample.routes import (
     contact,
     helpers,
     invitations,
+    organisations,
     payments,
+    privacy,
     profile,
     programmes,
+    recruiter,
     results,
     roles,
     subscriptions,
@@ -35,7 +38,12 @@ sample_router.include_router(beginner_path.router)
 sample_router.include_router(programmes.router)
 
 # Day 3: second half of the API, with flows that work end to end on sample state
+sample_router.include_router(privacy.router)
 sample_router.include_router(payments.router)
 sample_router.include_router(subscriptions.router)
+sample_router.include_router(recruiter.router)
 sample_router.include_router(invitations.router)
+sample_router.include_router(organisations.audit_router)
+sample_router.include_router(organisations.heatmap_router)
+sample_router.include_router(organisations.targets_router)
 sample_router.include_router(helpers.router)
