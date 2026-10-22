@@ -40,6 +40,13 @@ class Settings(BaseSettings):
     # Refuse to start when the database is behind the latest migration
     CHECK_MIGRATIONS_ON_STARTUP: bool = True
 
+    # Sample API (app/sample): typed sample answers for the endpoints that are not built yet, so
+    # the frontend can build against the real contract. Unset = on everywhere except production.
+    SAMPLE_API_ENABLED: bool | None = None
+    # Where the sample flows (checkout, invitations) keep their state. A file, so every server
+    # worker on one machine sees the same state; it is reset when the machine restarts.
+    SAMPLE_STATE_FILE: str = "/tmp/careerline-sample-state.json"
+
     # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60
@@ -55,6 +62,12 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.APP_ENV == "production"
+
+    @property
+    def sample_api_enabled(self) -> bool:
+        if self.SAMPLE_API_ENABLED is not None:
+            return self.SAMPLE_API_ENABLED
+        return not self.is_production
 
     @property
     def async_database_url(self) -> str:
