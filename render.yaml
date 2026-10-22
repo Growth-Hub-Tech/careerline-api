@@ -1,22 +1,74 @@
+# Render Blueprint for the CareerLine test server: web API + background worker + Postgres 16.
+# Render dashboard: New > Blueprint > pick this repo and branch. Values marked sync: false are
+# asked for once in the dashboard; nothing secret is stored in this file.
+# Real values and the exact steps are in docs/api.md ("Test server").
+
+databases:
+  - name: careerline-test-db
+    databaseName: careerline
+    user: careerline
+    postgresMajorVersion: '16'
+    plan: basic-256mb
+    region: frankfurt
+    ipAllowList: [] # only Render services can connect
+
 services:
   - type: web
     name: careerline-api
     runtime: python
+    region: frankfurt
+    plan: starter
+    branch: dev
     buildCommand: pip install -r requirements.txt
-    # Runs `alembic upgrade head` first; the server never starts if migrations fail
+    # Runs `alembic upgrade head` first; the server never starts if migrations fail, so every
+    # deploy migrates the database before it takes traffic
     startCommand: bash scripts/start.sh
     healthCheckPath: /healthz
     envVars:
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: careerline-test-db
+          property: connectionString
       - key: SECRET_KEY
-        sync: false
+        generateValue: true # Render makes a long random value once and keeps it
+      - key: CORS_ORIGINS
+        sync: false # the website's address(es), comma-separated, e.g. https://careerline-web.onrender.com,http://localhost:5173
+      - key: OPENAI_API_KEY
+        sync: false # optional: without it a plain fallback recommendation is used
+      - key: APP_ENV
+        value: staging
+      - key: SAMPLE_API_ENABLED
+        value: 'true' # sample answers for the endpoints not built yet (off in production)
+      - key: LOG_JSON
+        value: 'true'
+      - key: WEB_CONCURRENCY
+        value: '2'
+      - key: PYTHON_VERSION
+        value: 3.13.12
+
+  - type: worker
+    name: careerline-worker
+    runtime: python
+    region: frankfurt
+    plan: starter
+    branch: dev
+    buildCommand: pip install -r requirements.txt
+    # Placeholder until Day 5 (background jobs): starts, checks the database, logs a heartbeat
+    startCommand: python -m app.worker
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: careerline-test-db
+          property: connectionString
+      - key: SECRET_KEY
+        fromService:
+          type: web
+          name: careerline-api
+          envVarKey: SECRET_KEY
       - key: OPENAI_API_KEY
         sync: false
-      - key: CORS_ORIGINS
-        sync: false
       - key: APP_ENV
-        value: production
+        value: staging
       - key: LOG_JSON
         value: 'true'
       - key: PYTHON_VERSION
