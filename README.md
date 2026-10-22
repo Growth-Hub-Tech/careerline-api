@@ -18,7 +18,7 @@ app/
   api/
     deps.py          shared dependencies: get_db, get_current_learner, require_same_learner
     routes/          one module per resource (auth, learners, skills, attempts, recommendations),
-                     plus health (/healthz, /readyz) and legacy (/api/*, deprecated)
+                     plus health (/healthz, /readyz)
   core/              config, security, logging, exceptions, error handlers, response envelope, middleware
   db/                SQLAlchemy base, engine/session, migration check
   integrations/      external services (OpenAI)
@@ -64,7 +64,6 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
   ```
   Raise `NotFoundError`, `ForbiddenError`, `ConflictError`, etc. from `app/core/exceptions.py`. Unhandled exceptions return a generic 500 and are logged with their traceback; internals are never sent to the client. Validation errors list `details` without echoing the submitted values.
 - **Request ids.** Every response has an `X-Request-ID` header (an incoming one is reused when it is safe). The same id is in every log line and in the error body.
-- **Legacy routes.** The old `/api/*` routes are deprecated, keep their old success bodies and are removed on Day 4.
 
 ## Sample API
 
