@@ -7,4 +7,25 @@ sample route ever has the same method and path as a real one.
 
 from fastapi import APIRouter
 
+from app.sample.routes import (
+    accounts,
+    assessments,
+    beginner_path,
+    contact,
+    profile,
+    programmes,
+    results,
+    roles,
+)
+
 sample_router = APIRouter()
+
+# Day 2: first half of the API
+sample_router.include_router(contact.router)
+sample_router.include_router(accounts.router)
+sample_router.include_router(roles.router)
+sample_router.include_router(assessments.router)
+sample_router.include_router(results.router)
+sample_router.include_router(profile.router)
+sample_router.include_router(beginner_path.router)
+sample_router.include_router(programmes.router)
