@@ -133,3 +133,27 @@ async def test_login_keeps_the_standard_oauth2_token_body():
 
     schema = login["responses"]["200"]["content"]["application/json"]["schema"]
     assert schema == {"$ref": "#/components/schemas/TokenResponse"}
+
+
+LEGACY_ROUTES = [
+    ("POST", "/api/register"),
+    ("GET", "/api/behavioural-questions/1"),
+    ("POST", "/api/behavioural-answers"),
+    ("POST", "/api/attempt/start"),
+    ("POST", "/api/attempt/submit"),
+    ("GET", "/api/learning-pathway/1/1"),
+]
+
+
+async def test_the_old_duplicate_api_routes_are_gone(client):
+    # Each one duplicated a /api/v1 route; nothing in the repo called them
+    for method, path in LEGACY_ROUTES:
+        response = await client.request(method, path)
+        assert response.status_code == 404, (method, path)
+        assert response.json()["error"]["code"] == "not_found"
+
+    paths = app.openapi()["paths"]
+    old = [
+        p for p in paths if p.startswith("/api/") and not p.startswith(settings.API_PREFIX + "/")
+    ]
+    assert old == []
