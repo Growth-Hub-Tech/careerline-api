@@ -19,7 +19,9 @@ router = APIRouter(prefix="/learners", tags=["Learners"], route_class=EnvelopeRo
 
 # REGISTER A NEW LEARNER
 @router.post("/register")
-async def learner_register(data: LearnerRegisterRequest, db: AsyncSession = Depends(get_db)):
+async def learner_register(
+    data: LearnerRegisterRequest, db: AsyncSession = Depends(get_db, scope="function")
+):
     learner_id = await register_learner(
         db=db, full_name=data.full_name, email=data.email, phone=data.phone
     )
@@ -34,7 +36,7 @@ async def learner_register(data: LearnerRegisterRequest, db: AsyncSession = Depe
 @router.get("/{learner_id}", responses=errors(401, 403, 404))
 async def get_learner_profile(
     learner_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
@@ -56,7 +58,9 @@ async def get_learner_profile(
 
 # GET BEHAVIOURAL QUESTIONS FOR A SKILL
 @router.get("/behavioural-questions/{skill_id}", responses=errors(404))
-async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
+async def behavioural_questions(
+    skill_id: int, db: AsyncSession = Depends(get_db, scope="function")
+):
     questions = await get_behavioural_questions(db=db, skill_id=skill_id)
     if not questions:
         raise NotFoundError(f"Skill {skill_id} not found")
@@ -67,7 +71,7 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 @router.post("/behavioural-answers", responses=errors(401, 403, 404))
 async def behavioural_answers(
     data: BehaviouralAnswersRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     # learner_id stays in the body for old clients, but it must be you

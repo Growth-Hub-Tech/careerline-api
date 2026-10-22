@@ -13,7 +13,9 @@ router = APIRouter(prefix="/skills", tags=["Skills"], route_class=EnvelopeRoute)
 
 # LIST ALL SKILLS WITH PAGINATION
 @router.get("/")
-async def list_skills(limit: int = 10, offset: int = 0, db: AsyncSession = Depends(get_db)):
+async def list_skills(
+    limit: int = 10, offset: int = 0, db: AsyncSession = Depends(get_db, scope="function")
+):
     # Fetch skills with pagination
     result = await db.execute(select(Skill).offset(offset).limit(limit))
     skills = result.scalars().all()
@@ -40,7 +42,7 @@ async def list_skills(limit: int = 10, offset: int = 0, db: AsyncSession = Depen
 
 # GET SUBSKILLS FOR A SPECIFIC SKILL
 @router.get("/{skill_id}/subskills", responses=errors(404))
-async def get_subskills(skill_id: int, db: AsyncSession = Depends(get_db)):
+async def get_subskills(skill_id: int, db: AsyncSession = Depends(get_db, scope="function")):
     # Check skill exists
     skill_result = await db.execute(select(Skill).where(Skill.skill_id == skill_id))
     skill = skill_result.scalar_one_or_none()

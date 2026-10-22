@@ -15,7 +15,10 @@ engine = create_async_engine(
 AsyncSessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 
-# One session per request: committed when the route succeeds, rolled back when it raises
+# One session per request: committed when the route succeeds, rolled back when it raises.
+# Routes must use Depends(get_db, scope="function"): the commit then runs BEFORE the response
+# is sent, so a failed commit becomes a 500. With FastAPI's default scope the response is sent
+# first, and a failed commit would still have told the client "success".
 async def get_db():
     async with AsyncSessionLocal() as session:
         try:
