@@ -66,6 +66,27 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
 - **Request ids.** Every response has an `X-Request-ID` header (an incoming one is reused when it is safe). The same id is in every log line and in the error body.
 - **Legacy routes.** The old `/api/*` routes are deprecated, keep their old success bodies and are removed on Day 4.
 
+## Sample API
+
+Endpoints that are not built yet answer with realistic, typed **sample data** (`app/sample/`), on their real `/api/v1` path, in the real envelope, with the real response model (`app/schemas/`). The frontend builds against them now; when a feature is built for real, its route moves to `app/api/routes` with the same path and model, the sample route is deleted, and the frontend changes nothing.
+
+- **Marked.** Every sample response (errors too) has the header `X-Sample-Data: true`, successes have `"message": "Sample data"`, and in `/docs` and `openapi.json` sample operations are tagged `Sample: …` with `x-sample: true`.
+- **Edge cases on demand.** Send `X-Mock-Scenario` to force one: `unauthenticated` (401), `payment_required` (402), `forbidden` (403), `not_found` (404), `conflict` (409), `expired` (410), `validation_error` (422), `rate_limited` (429), `server_error` (500), `unavailable` (503) and `slow` (2 s delay) work on every sample route; `empty`, `pending`, `generating`, … only where the route lists them (`x-sample-scenarios`). An unknown scenario is a 400.
+- **Login.** Protected sample routes need a real token from `POST /api/v1/auth/login`; the token is checked but no account is looked up.
+- **Never in the way.** A sample route can't have the same method and path as a real one (a test checks it), and real routes are mounted first.
+- **On or off.** `SAMPLE_API_ENABLED` (unset = on everywhere except `APP_ENV=production`).
+
+## API description (openapi.json)
+
+`openapi.json` at the repo root is the whole contract, real and sample endpoints, for the frontend to generate TypeScript types from (see `docs/api.md`). After changing any route or response model:
+
+```bash
+python scripts/export_openapi.py          # regenerate, then commit openapi.json
+python scripts/export_openapi.py --check  # what CI runs
+```
+
+CI and `tests/test_openapi_file.py` fail when the committed file is out of date.
+
 ## Database migrations
 
 - `scripts/start.sh` runs `alembic upgrade head` before starting the server. If the migration fails, the server never starts.
@@ -84,11 +105,13 @@ ruff check .          # lint
 ruff format .         # format
 mypy                  # type-check app/
 pytest                # tests
+python scripts/export_openapi.py --check  # openapi.json matches the code
 ```
 
 ### Tests
 
 - `tests/test_app.py`, `tests/test_db_guard.py`: fast unit tests, no database needed.
+- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint), no database needed.
 - `tests/integration/`: the real API on a real Postgres test database (register, login, attempts, scoring, recommendations, ownership, error envelopes). Open bugs are in `tests/integration/test_known_bugs.py`, marked `xfail(strict=True)`: they show as `xfailed` until the bug is fixed, then turn the run red so the marker gets removed.
 
 The integration tests only run when `TEST_DATABASE_URL` is set, and they refuse to start unless it is a local database with `test` in its name (never the one in `.env`). They create the database if it is missing, migrate it to head and empty every table before each test.
@@ -105,7 +128,7 @@ Without `TEST_DATABASE_URL`, `pytest` runs the unit tests and skips the database
 
 CI (`.github/workflows/ci.yml`) runs on every pull request into `dev` or `main`:
 
-- lint, format and types
+- lint, format and types, and that `openapi.json` is up to date
 - migrating an empty Postgres database to head and starting the app on it
 - the tests, including the database integration tests (on their own database in the Postgres service)
 - a secret scan of the current files with gitleaks (not the git history)
