@@ -1,0 +1,2906 @@
+{
+  "skill_id": 7,
+  "skill_name": "API Design & Integration",
+  "questions": [
+    {
+      "question_id": 601,
+      "subskill_id": 34,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does REST stand for in API design?",
+      "options": [
+        {
+          "option_id": 3466,
+          "option_text": "Remote Execution Service Technology",
+          "is_correct": false
+        },
+        {
+          "option_id": 3467,
+          "option_text": "Rapid Enterprise Service Transfer",
+          "is_correct": false
+        },
+        {
+          "option_id": 3468,
+          "option_text": "Representational State Transfer",
+          "is_correct": true
+        },
+        {
+          "option_id": 3469,
+          "option_text": "Request-Response State Technology",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 602,
+      "subskill_id": 34,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which HTTP method is used to retrieve data in a REST API?",
+      "options": [
+        {
+          "option_id": 3470,
+          "option_text": "GET",
+          "is_correct": true
+        },
+        {
+          "option_id": 3471,
+          "option_text": "POST",
+          "is_correct": false
+        },
+        {
+          "option_id": 3472,
+          "option_text": "PUT",
+          "is_correct": false
+        },
+        {
+          "option_id": 3473,
+          "option_text": "DELETE",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 603,
+      "subskill_id": 34,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What format is commonly used for REST API responses?",
+      "options": [
+        {
+          "option_id": 3474,
+          "option_text": "XML only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3475,
+          "option_text": "CSV",
+          "is_correct": false
+        },
+        {
+          "option_id": 3476,
+          "option_text": "HTML",
+          "is_correct": false
+        },
+        {
+          "option_id": 3477,
+          "option_text": "JSON (JavaScript Object Notation)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 604,
+      "subskill_id": 34,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API endpoint?",
+      "options": [
+        {
+          "option_id": 3478,
+          "option_text": "The end of an API lifecycle",
+          "is_correct": false
+        },
+        {
+          "option_id": 3479,
+          "option_text": "A specific URL where an API can be accessed",
+          "is_correct": true
+        },
+        {
+          "option_id": 3480,
+          "option_text": "The final version of an API",
+          "is_correct": false
+        },
+        {
+          "option_id": 3481,
+          "option_text": "The API documentation conclusion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 605,
+      "subskill_id": 34,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between GET and POST methods?",
+      "options": [
+        {
+          "option_id": 3482,
+          "option_text": "GET creates resources, POST retrieves them",
+          "is_correct": false
+        },
+        {
+          "option_id": 3483,
+          "option_text": "GET and POST are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 3484,
+          "option_text": "POST is for retrieving data, GET is for submitting",
+          "is_correct": false
+        },
+        {
+          "option_id": 3485,
+          "option_text": "GET retrieves data, POST submits data to create or update",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 606,
+      "subskill_id": 35,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is GraphQL?",
+      "options": [
+        {
+          "option_id": 3486,
+          "option_text": "A query language for APIs developed by Facebook",
+          "is_correct": true
+        },
+        {
+          "option_id": 3487,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 3488,
+          "option_text": "A graph database",
+          "is_correct": false
+        },
+        {
+          "option_id": 3489,
+          "option_text": "A visualization tool for graphs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 607,
+      "subskill_id": 35,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which company developed GraphQL?",
+      "options": [
+        {
+          "option_id": 3490,
+          "option_text": "Google",
+          "is_correct": false
+        },
+        {
+          "option_id": 3491,
+          "option_text": "Amazon",
+          "is_correct": false
+        },
+        {
+          "option_id": 3492,
+          "option_text": "Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 3493,
+          "option_text": "Facebook (Meta)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 608,
+      "subskill_id": 35,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a query in GraphQL?",
+      "options": [
+        {
+          "option_id": 3494,
+          "option_text": "A request to modify data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3495,
+          "option_text": "A request to read or fetch data",
+          "is_correct": true
+        },
+        {
+          "option_id": 3496,
+          "option_text": "A database search",
+          "is_correct": false
+        },
+        {
+          "option_id": 3497,
+          "option_text": "An API endpoint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 609,
+      "subskill_id": 35,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mutation in GraphQL?",
+      "options": [
+        {
+          "option_id": 3498,
+          "option_text": "A request to read data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3499,
+          "option_text": "A request to delete data only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3500,
+          "option_text": "A request to modify data (create, update, delete)",
+          "is_correct": true
+        },
+        {
+          "option_id": 3501,
+          "option_text": "A database schema change",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 610,
+      "subskill_id": 35,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between REST and GraphQL?",
+      "options": [
+        {
+          "option_id": 3502,
+          "option_text": "REST has multiple endpoints, GraphQL has a single endpoint with flexible queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 3503,
+          "option_text": "GraphQL has multiple endpoints, REST has a single endpoint",
+          "is_correct": false
+        },
+        {
+          "option_id": 3504,
+          "option_text": "REST is newer than GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3505,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 611,
+      "subskill_id": 36,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a webhook?",
+      "options": [
+        {
+          "option_id": 3506,
+          "option_text": "A fishing tool for the web",
+          "is_correct": false
+        },
+        {
+          "option_id": 3507,
+          "option_text": "A type of API key",
+          "is_correct": false
+        },
+        {
+          "option_id": 3508,
+          "option_text": "A web browser extension",
+          "is_correct": false
+        },
+        {
+          "option_id": 3509,
+          "option_text": "An HTTP callback that sends real-time data to other applications",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 612,
+      "subskill_id": 36,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How does a webhook differ from polling?",
+      "options": [
+        {
+          "option_id": 3510,
+          "option_text": "Polling pushes data, webhooks pull data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3511,
+          "option_text": "Webhooks push data when events occur, polling repeatedly checks for updates",
+          "is_correct": true
+        },
+        {
+          "option_id": 3512,
+          "option_text": "Webhooks and polling are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 3513,
+          "option_text": "Polling is faster than webhooks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 613,
+      "subskill_id": 36,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a payload in a webhook?",
+      "options": [
+        {
+          "option_id": 3514,
+          "option_text": "The weight of the webhook",
+          "is_correct": false
+        },
+        {
+          "option_id": 3515,
+          "option_text": "The URL of the webhook",
+          "is_correct": false
+        },
+        {
+          "option_id": 3516,
+          "option_text": "The data sent in the webhook request",
+          "is_correct": true
+        },
+        {
+          "option_id": 3517,
+          "option_text": "The webhook signature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 614,
+      "subskill_id": 36,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a webhook URL?",
+      "options": [
+        {
+          "option_id": 3518,
+          "option_text": "The destination endpoint that receives webhook data",
+          "is_correct": true
+        },
+        {
+          "option_id": 3519,
+          "option_text": "The source of the webhook",
+          "is_correct": false
+        },
+        {
+          "option_id": 3520,
+          "option_text": "A URL for webhook documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3521,
+          "option_text": "A webhook testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 615,
+      "subskill_id": 36,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an example use case for webhooks?",
+      "options": [
+        {
+          "option_id": 3522,
+          "option_text": "Real-time notifications when a payment is received",
+          "is_correct": false
+        },
+        {
+          "option_id": 3523,
+          "option_text": "Triggering a build when code is pushed to GitHub",
+          "is_correct": false
+        },
+        {
+          "option_id": 3524,
+          "option_text": "Updating a CRM when a new user signs up",
+          "is_correct": false
+        },
+        {
+          "option_id": 3525,
+          "option_text": "All of the above are valid use cases",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 616,
+      "subskill_id": 37,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is API documentation?",
+      "options": [
+        {
+          "option_id": 3526,
+          "option_text": "The source code of an API",
+          "is_correct": false
+        },
+        {
+          "option_id": 3527,
+          "option_text": "Technical content describing how to use an API effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 3528,
+          "option_text": "The API database schema",
+          "is_correct": false
+        },
+        {
+          "option_id": 3529,
+          "option_text": "The API pricing information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 617,
+      "subskill_id": 37,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is OpenAPI (formerly Swagger)?",
+      "options": [
+        {
+          "option_id": 3530,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 3531,
+          "option_text": "A database for APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3532,
+          "option_text": "A specification for describing REST APIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 3533,
+          "option_text": "A web server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 618,
+      "subskill_id": 37,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why is API documentation important?",
+      "options": [
+        {
+          "option_id": 3534,
+          "option_text": "It helps developers understand and integrate with the API",
+          "is_correct": true
+        },
+        {
+          "option_id": 3535,
+          "option_text": "It is required by law",
+          "is_correct": false
+        },
+        {
+          "option_id": 3536,
+          "option_text": "It makes the API run faster",
+          "is_correct": false
+        },
+        {
+          "option_id": 3537,
+          "option_text": "It replaces testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 619,
+      "subskill_id": 37,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What information should be included in API documentation?",
+      "options": [
+        {
+          "option_id": 3538,
+          "option_text": "Endpoints and methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 3539,
+          "option_text": "Request and response examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 3540,
+          "option_text": "Authentication requirements",
+          "is_correct": false
+        },
+        {
+          "option_id": 3541,
+          "option_text": "All of the above should be included",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 620,
+      "subskill_id": 37,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API reference?",
+      "options": [
+        {
+          "option_id": 3542,
+          "option_text": "A person who knows the API",
+          "is_correct": false
+        },
+        {
+          "option_id": 3543,
+          "option_text": "A detailed technical description of API endpoints and parameters",
+          "is_correct": true
+        },
+        {
+          "option_id": 3544,
+          "option_text": "A reference book about APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3545,
+          "option_text": "An API testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 621,
+      "subskill_id": 38,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is API versioning?",
+      "options": [
+        {
+          "option_id": 3546,
+          "option_text": "Creating different versions of API documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3547,
+          "option_text": "The API release schedule",
+          "is_correct": false
+        },
+        {
+          "option_id": 3548,
+          "option_text": "The practice of managing changes to an API without breaking clients",
+          "is_correct": true
+        },
+        {
+          "option_id": 3549,
+          "option_text": "Tracking API usage statistics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 622,
+      "subskill_id": 38,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why is API versioning important?",
+      "options": [
+        {
+          "option_id": 3550,
+          "option_text": "To maintain backward compatibility when making changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 3551,
+          "option_text": "To increase API speed",
+          "is_correct": false
+        },
+        {
+          "option_id": 3552,
+          "option_text": "To reduce server costs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3553,
+          "option_text": "To make the API more secure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 623,
+      "subskill_id": 38,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is URI versioning?",
+      "options": [
+        {
+          "option_id": 3554,
+          "option_text": "Including version in HTTP headers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3555,
+          "option_text": "Using query parameters for version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3556,
+          "option_text": "Using media type for version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3557,
+          "option_text": "Including version in the URL path like /api/v1/resource",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 624,
+      "subskill_id": 38,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is header versioning?",
+      "options": [
+        {
+          "option_id": 3558,
+          "option_text": "Including version in the URL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3559,
+          "option_text": "Specifying API version in HTTP headers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3560,
+          "option_text": "Using version in the request body",
+          "is_correct": false
+        },
+        {
+          "option_id": 3561,
+          "option_text": "Version in the response status code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 625,
+      "subskill_id": 38,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is query parameter versioning?",
+      "options": [
+        {
+          "option_id": 3562,
+          "option_text": "Using path parameters for version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3563,
+          "option_text": "Using headers for version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3564,
+          "option_text": "Version in domain name",
+          "is_correct": false
+        },
+        {
+          "option_id": 3565,
+          "option_text": "Including version as a query parameter like ?v=1",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 626,
+      "subskill_id": 34,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the main HTTP methods used in RESTful APIs?",
+      "options": [
+        {
+          "option_id": 3566,
+          "option_text": "CREATE, READ, UPDATE, DELETE",
+          "is_correct": false
+        },
+        {
+          "option_id": 3567,
+          "option_text": "GET, POST, PUT, PATCH, DELETE",
+          "is_correct": true
+        },
+        {
+          "option_id": 3568,
+          "option_text": "SELECT, INSERT, UPDATE, DELETE",
+          "is_correct": false
+        },
+        {
+          "option_id": 3569,
+          "option_text": "FETCH, SEND, MODIFY, REMOVE",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 627,
+      "subskill_id": 34,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is idempotency in REST APIs?",
+      "options": [
+        {
+          "option_id": 3570,
+          "option_text": "Making multiple identical requests that have different effects",
+          "is_correct": false
+        },
+        {
+          "option_id": 3571,
+          "option_text": "A type of encryption for APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3572,
+          "option_text": "The ability to cache responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 3573,
+          "option_text": "Making multiple identical requests that produce the same result",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 628,
+      "subskill_id": 34,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are HTTP status codes and why are they important?",
+      "options": [
+        {
+          "option_id": 3574,
+          "option_text": "Codes that indicate server health",
+          "is_correct": false
+        },
+        {
+          "option_id": 3575,
+          "option_text": "Codes that encrypt API requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 3576,
+          "option_text": "Three-digit codes indicating the outcome of API requests",
+          "is_correct": true
+        },
+        {
+          "option_id": 3577,
+          "option_text": "Codes that authenticate users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 629,
+      "subskill_id": 34,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between PUT and PATCH?",
+      "options": [
+        {
+          "option_id": 3578,
+          "option_text": "PUT replaces the entire resource, PATCH applies partial updates",
+          "is_correct": true
+        },
+        {
+          "option_id": 3579,
+          "option_text": "PATCH replaces the entire resource, PUT applies partial updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 3580,
+          "option_text": "PUT is for creating, PATCH is for deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 3581,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 630,
+      "subskill_id": 34,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is HATEOAS in REST?",
+      "options": [
+        {
+          "option_id": 3582,
+          "option_text": "A security protocol for APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3583,
+          "option_text": "Hypermedia as the Engine of Application State - includes links in responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 3584,
+          "option_text": "A caching mechanism",
+          "is_correct": false
+        },
+        {
+          "option_id": 3585,
+          "option_text": "A type of API key",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 631,
+      "subskill_id": 35,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a schema in GraphQL?",
+      "options": [
+        {
+          "option_id": 3586,
+          "option_text": "A database diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 3587,
+          "option_text": "A GraphQL query",
+          "is_correct": false
+        },
+        {
+          "option_id": 3588,
+          "option_text": "A GraphQL mutation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3589,
+          "option_text": "A definition of types, queries, and mutations available in the API",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 632,
+      "subskill_id": 35,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are resolvers in GraphQL?",
+      "options": [
+        {
+          "option_id": 3590,
+          "option_text": "Tools for debugging GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3591,
+          "option_text": "GraphQL query validators",
+          "is_correct": false
+        },
+        {
+          "option_id": 3592,
+          "option_text": "Functions that fetch data for specific fields in a schema",
+          "is_correct": true
+        },
+        {
+          "option_id": 3593,
+          "option_text": "GraphQL authentication middleware",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 633,
+      "subskill_id": 35,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a query and a mutation?",
+      "options": [
+        {
+          "option_id": 3594,
+          "option_text": "Queries read data, mutations modify data",
+          "is_correct": true
+        },
+        {
+          "option_id": 3595,
+          "option_text": "Mutations read data, queries modify data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3596,
+          "option_text": "Queries are faster than mutations",
+          "is_correct": false
+        },
+        {
+          "option_id": 3597,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 634,
+      "subskill_id": 35,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are GraphQL fragments?",
+      "options": [
+        {
+          "option_id": 3598,
+          "option_text": "Broken parts of a query",
+          "is_correct": false
+        },
+        {
+          "option_id": 3599,
+          "option_text": "Reusable units for selecting fields in queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 3600,
+          "option_text": "GraphQL error messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 3601,
+          "option_text": "Small GraphQL mutations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 635,
+      "subskill_id": 35,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the N+1 problem in GraphQL?",
+      "options": [
+        {
+          "option_id": 3602,
+          "option_text": "Having N+1 queries in a single request",
+          "is_correct": false
+        },
+        {
+          "option_id": 3603,
+          "option_text": "A problem with GraphQL syntax",
+          "is_correct": false
+        },
+        {
+          "option_id": 3604,
+          "option_text": "A security vulnerability",
+          "is_correct": false
+        },
+        {
+          "option_id": 3605,
+          "option_text": "When resolving a query triggers multiple database queries",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 636,
+      "subskill_id": 36,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you secure a webhook?",
+      "options": [
+        {
+          "option_id": 3606,
+          "option_text": "By making it public",
+          "is_correct": false
+        },
+        {
+          "option_id": 3607,
+          "option_text": "By using a shared secret and signature verification",
+          "is_correct": true
+        },
+        {
+          "option_id": 3608,
+          "option_text": "Webhooks cannot be secured",
+          "is_correct": false
+        },
+        {
+          "option_id": 3609,
+          "option_text": "By using HTTP without encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 637,
+      "subskill_id": 36,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is webhook retry mechanism?",
+      "options": [
+        {
+          "option_id": 3610,
+          "option_text": "The system resends failed webhook deliveries",
+          "is_correct": true
+        },
+        {
+          "option_id": 3611,
+          "option_text": "The webhook retries itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 3612,
+          "option_text": "A manual process for resending webhooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3613,
+          "option_text": "The webhook is deleted after failure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 638,
+      "subskill_id": 36,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a webhook signature and how is it used?",
+      "options": [
+        {
+          "option_id": 3614,
+          "option_text": "A digital signature of the webhook creator",
+          "is_correct": false
+        },
+        {
+          "option_id": 3615,
+          "option_text": "A hash of the payload using a secret key to verify authenticity",
+          "is_correct": true
+        },
+        {
+          "option_id": 3616,
+          "option_text": "The webhook URL signature",
+          "is_correct": false
+        },
+        {
+          "option_id": 3617,
+          "option_text": "A signature required to activate webhooks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 639,
+      "subskill_id": 36,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test webhooks locally?",
+      "options": [
+        {
+          "option_id": 3618,
+          "option_text": "By deploying to production",
+          "is_correct": false
+        },
+        {
+          "option_id": 3619,
+          "option_text": "Webhooks cannot be tested locally",
+          "is_correct": false
+        },
+        {
+          "option_id": 3620,
+          "option_text": "By sending requests to localhost",
+          "is_correct": false
+        },
+        {
+          "option_id": 3621,
+          "option_text": "Using tools like ngrok to expose local server to the internet",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 640,
+      "subskill_id": 36,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between webhooks and APIs?",
+      "options": [
+        {
+          "option_id": 3622,
+          "option_text": "Webhooks are pull-based, APIs are push-based",
+          "is_correct": false
+        },
+        {
+          "option_id": 3623,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 3624,
+          "option_text": "APIs are pull-based, webhooks are push-based event notifications",
+          "is_correct": true
+        },
+        {
+          "option_id": 3625,
+          "option_text": "Webhooks are for web browsers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 641,
+      "subskill_id": 37,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Swagger UI and how is it used?",
+      "options": [
+        {
+          "option_id": 3626,
+          "option_text": "An interactive documentation tool for REST APIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 3627,
+          "option_text": "A Swedish API testing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 3628,
+          "option_text": "A code generator only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3629,
+          "option_text": "A database management tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 642,
+      "subskill_id": 37,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the purpose of API documentation tools?",
+      "options": [
+        {
+          "option_id": 3630,
+          "option_text": "To write code faster",
+          "is_correct": false
+        },
+        {
+          "option_id": 3631,
+          "option_text": "To automate the creation and maintenance of API documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 3632,
+          "option_text": "To replace developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3633,
+          "option_text": "To test APIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 643,
+      "subskill_id": 37,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you document authentication requirements in an API?",
+      "options": [
+        {
+          "option_id": 3634,
+          "option_text": "By omitting them from documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3635,
+          "option_text": "By mentioning them only in code comments",
+          "is_correct": false
+        },
+        {
+          "option_id": 3636,
+          "option_text": "By requiring developers to guess",
+          "is_correct": false
+        },
+        {
+          "option_id": 3637,
+          "option_text": "By clearly specifying auth methods, credentials, and examples",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 644,
+      "subskill_id": 37,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are code samples in API documentation?",
+      "options": [
+        {
+          "option_id": 3638,
+          "option_text": "The source code of the API",
+          "is_correct": false
+        },
+        {
+          "option_id": 3639,
+          "option_text": "Code that tests the API",
+          "is_correct": false
+        },
+        {
+          "option_id": 3640,
+          "option_text": "Example code showing how to use the API in different languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 3641,
+          "option_text": "Code for the documentation website",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 645,
+      "subskill_id": 37,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between API documentation and API specification?",
+      "options": [
+        {
+          "option_id": 3642,
+          "option_text": "Specification is technical description, documentation is user-friendly guide",
+          "is_correct": true
+        },
+        {
+          "option_id": 3643,
+          "option_text": "Documentation is technical, specification is user-friendly",
+          "is_correct": false
+        },
+        {
+          "option_id": 3644,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3645,
+          "option_text": "Specification is for machines, documentation is for humans",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 646,
+      "subskill_id": 38,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the strategies for API versioning?",
+      "options": [
+        {
+          "option_id": 3646,
+          "option_text": "Only URI versioning exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 3647,
+          "option_text": "URI, header, query parameter, and media type versioning",
+          "is_correct": true
+        },
+        {
+          "option_id": 3648,
+          "option_text": "Only header versioning exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 3649,
+          "option_text": "Only query parameter versioning exists",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 647,
+      "subskill_id": 38,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between breaking and non-breaking changes?",
+      "options": [
+        {
+          "option_id": 3650,
+          "option_text": "Breaking changes add new features, non-breaking remove features",
+          "is_correct": false
+        },
+        {
+          "option_id": 3651,
+          "option_text": "Breaking changes are faster to implement",
+          "is_correct": false
+        },
+        {
+          "option_id": 3652,
+          "option_text": "There is no difference",
+          "is_correct": false
+        },
+        {
+          "option_id": 3653,
+          "option_text": "Breaking changes require new version, non-breaking can be backward compatible",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 648,
+      "subskill_id": 38,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you deprecate an old API version?",
+      "options": [
+        {
+          "option_id": 3654,
+          "option_text": "Immediately shut it down",
+          "is_correct": false
+        },
+        {
+          "option_id": 3655,
+          "option_text": "Keep it running forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 3656,
+          "option_text": "Communicate timeline, provide migration guides, and phase out gradually",
+          "is_correct": true
+        },
+        {
+          "option_id": 3657,
+          "option_text": "Ignore users of old version",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 649,
+      "subskill_id": 38,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is semantic versioning for APIs?",
+      "options": [
+        {
+          "option_id": 3658,
+          "option_text": "Version format MAJOR.MINOR.PATCH indicating change types",
+          "is_correct": true
+        },
+        {
+          "option_id": 3659,
+          "option_text": "Version numbers based on release date",
+          "is_correct": false
+        },
+        {
+          "option_id": 3660,
+          "option_text": "Random version numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3661,
+          "option_text": "Version numbers based on API size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 650,
+      "subskill_id": 38,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you communicate API version changes to users?",
+      "options": [
+        {
+          "option_id": 3662,
+          "option_text": "Through changelog and documentation updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 3663,
+          "option_text": "Via email notifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 3664,
+          "option_text": "Through API response headers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3665,
+          "option_text": "All of the above communication channels",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 651,
+      "subskill_id": 34,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle pagination in REST APIs?",
+      "options": [
+        {
+          "option_id": 3666,
+          "option_text": "Return all data at once regardless of size",
+          "is_correct": false
+        },
+        {
+          "option_id": 3667,
+          "option_text": "Use random sampling of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3668,
+          "option_text": "Limit and offset parameters or cursor-based pagination",
+          "is_correct": true
+        },
+        {
+          "option_id": 3669,
+          "option_text": "Paginate on client side only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 652,
+      "subskill_id": 34,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are best practices for REST API design?",
+      "options": [
+        {
+          "option_id": 3670,
+          "option_text": "Use nouns for resources, proper HTTP methods, and consistent naming",
+          "is_correct": true
+        },
+        {
+          "option_id": 3671,
+          "option_text": "Use verbs in endpoint names",
+          "is_correct": false
+        },
+        {
+          "option_id": 3672,
+          "option_text": "Use only GET requests for everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 3673,
+          "option_text": "Return all data in a single format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 653,
+      "subskill_id": 34,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement filtering and sorting in REST APIs?",
+      "options": [
+        {
+          "option_id": 3674,
+          "option_text": "Using different endpoints for each filter",
+          "is_correct": false
+        },
+        {
+          "option_id": 3675,
+          "option_text": "Filtering on client side only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3676,
+          "option_text": "Using POST requests for filtering",
+          "is_correct": false
+        },
+        {
+          "option_id": 3677,
+          "option_text": "Using query parameters like ?filter=value and ?sort=field",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 654,
+      "subskill_id": 34,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is content negotiation in REST?",
+      "options": [
+        {
+          "option_id": 3678,
+          "option_text": "Negotiating API pricing between client and server",
+          "is_correct": false
+        },
+        {
+          "option_id": 3679,
+          "option_text": "Client and server agree on response format using Accept headers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3680,
+          "option_text": "A security negotiation protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 3681,
+          "option_text": "Database schema negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 655,
+      "subskill_id": 34,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle errors consistently in REST APIs?",
+      "options": [
+        {
+          "option_id": 3682,
+          "option_text": "Return 200 OK with error message in body",
+          "is_correct": false
+        },
+        {
+          "option_id": 3683,
+          "option_text": "Return different error formats for each endpoint",
+          "is_correct": false
+        },
+        {
+          "option_id": 3684,
+          "option_text": "Use appropriate HTTP status codes with consistent error structure",
+          "is_correct": true
+        },
+        {
+          "option_id": 3685,
+          "option_text": "Ignore errors and return empty responses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 656,
+      "subskill_id": 35,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle authentication in GraphQL?",
+      "options": [
+        {
+          "option_id": 3686,
+          "option_text": "Through headers or context, not in the GraphQL schema",
+          "is_correct": true
+        },
+        {
+          "option_id": 3687,
+          "option_text": "By adding auth fields to every query",
+          "is_correct": false
+        },
+        {
+          "option_id": 3688,
+          "option_text": "Authentication is not needed in GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3689,
+          "option_text": "Through special auth mutations only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 657,
+      "subskill_id": 35,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are GraphQL subscriptions and when would you use them?",
+      "options": [
+        {
+          "option_id": 3690,
+          "option_text": "A way to subscribe to GraphQL updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 3691,
+          "option_text": "Real-time updates via WebSockets",
+          "is_correct": false
+        },
+        {
+          "option_id": 3692,
+          "option_text": "Used for live data like chat or notifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 3693,
+          "option_text": "All of the above describe GraphQL subscriptions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 658,
+      "subskill_id": 35,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement pagination in GraphQL?",
+      "options": [
+        {
+          "option_id": 3694,
+          "option_text": "Using limit and offset parameters",
+          "is_correct": false
+        },
+        {
+          "option_id": 3695,
+          "option_text": "Using cursors and edges with the connection pattern",
+          "is_correct": true
+        },
+        {
+          "option_id": 3696,
+          "option_text": "Pagination is not supported in GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3697,
+          "option_text": "Using page numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 659,
+      "subskill_id": 35,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are directives in GraphQL?",
+      "options": [
+        {
+          "option_id": 3698,
+          "option_text": "Instructions for database queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 3699,
+          "option_text": "GraphQL error handlers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3700,
+          "option_text": "Annotations that modify query execution like @include and @skip",
+          "is_correct": true
+        },
+        {
+          "option_id": 3701,
+          "option_text": "GraphQL authentication tokens",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 660,
+      "subskill_id": 35,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize GraphQL query performance?",
+      "options": [
+        {
+          "option_id": 3702,
+          "option_text": "Use DataLoader for batching, limit query depth, and implement caching",
+          "is_correct": true
+        },
+        {
+          "option_id": 3703,
+          "option_text": "Make all fields required",
+          "is_correct": false
+        },
+        {
+          "option_id": 3704,
+          "option_text": "Remove all resolvers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3705,
+          "option_text": "Use only simple queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 661,
+      "subskill_id": 36,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement idempotency for webhooks?",
+      "options": [
+        {
+          "option_id": 3706,
+          "option_text": "Idempotency is not needed for webhooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3707,
+          "option_text": "By sending duplicate webhooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3708,
+          "option_text": "By ignoring duplicate requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 3709,
+          "option_text": "Using idempotency keys in webhook payloads",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 662,
+      "subskill_id": 36,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a webhook event delivery guarantee?",
+      "options": [
+        {
+          "option_id": 3710,
+          "option_text": "Guarantee that webhooks always deliver instantly",
+          "is_correct": false
+        },
+        {
+          "option_id": 3711,
+          "option_text": "The level of assurance that webhook events will be delivered",
+          "is_correct": true
+        },
+        {
+          "option_id": 3712,
+          "option_text": "A money-back guarantee for webhooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3713,
+          "option_text": "A guarantee that webhooks never fail",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 663,
+      "subskill_id": 36,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle webhook failures and retries?",
+      "options": [
+        {
+          "option_id": 3714,
+          "option_text": "Ignore failed webhooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3715,
+          "option_text": "Delete webhooks after first failure",
+          "is_correct": false
+        },
+        {
+          "option_id": 3716,
+          "option_text": "Implement exponential backoff and dead-letter queues",
+          "is_correct": true
+        },
+        {
+          "option_id": 3717,
+          "option_text": "Retry indefinitely without delay",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 664,
+      "subskill_id": 36,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a webhook consumer and how does it work?",
+      "options": [
+        {
+          "option_id": 3718,
+          "option_text": "An endpoint that receives and processes webhook events",
+          "is_correct": true
+        },
+        {
+          "option_id": 3719,
+          "option_text": "A tool that consumes webhook resources",
+          "is_correct": false
+        },
+        {
+          "option_id": 3720,
+          "option_text": "A webhook testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 3721,
+          "option_text": "A webhook analytics tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 665,
+      "subskill_id": 36,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you monitor webhook deliveries?",
+      "options": [
+        {
+          "option_id": 3722,
+          "option_text": "Using logging and analytics tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 3723,
+          "option_text": "Tracking delivery success rates",
+          "is_correct": false
+        },
+        {
+          "option_id": 3724,
+          "option_text": "Alerting on failures",
+          "is_correct": false
+        },
+        {
+          "option_id": 3725,
+          "option_text": "All of the above monitoring practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 666,
+      "subskill_id": 37,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you generate API documentation from code?",
+      "options": [
+        {
+          "option_id": 3726,
+          "option_text": "By writing documentation manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 3727,
+          "option_text": "Using tools that parse annotations or comments to generate docs",
+          "is_correct": true
+        },
+        {
+          "option_id": 3728,
+          "option_text": "Documentation cannot be generated from code",
+          "is_correct": false
+        },
+        {
+          "option_id": 3729,
+          "option_text": "By hiring technical writers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 667,
+      "subskill_id": 37,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of API documentation in developer experience?",
+      "options": [
+        {
+          "option_id": 3730,
+          "option_text": "It has no role in developer experience",
+          "is_correct": false
+        },
+        {
+          "option_id": 3731,
+          "option_text": "It only matters for external developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3732,
+          "option_text": "It significantly impacts how easily developers can adopt the API",
+          "is_correct": true
+        },
+        {
+          "option_id": 3733,
+          "option_text": "It is only for marketing purposes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 668,
+      "subskill_id": 37,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you document rate limits and quotas?",
+      "options": [
+        {
+          "option_id": 3734,
+          "option_text": "Clearly specify limits, reset periods, and include headers in responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 3735,
+          "option_text": "Keep rate limits secret",
+          "is_correct": false
+        },
+        {
+          "option_id": 3736,
+          "option_text": "Document them only in code comments",
+          "is_correct": false
+        },
+        {
+          "option_id": 3737,
+          "option_text": "Rate limits do not need documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 669,
+      "subskill_id": 37,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are interactive API documentation tools?",
+      "options": [
+        {
+          "option_id": 3738,
+          "option_text": "Tools that allow testing APIs directly from documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3739,
+          "option_text": "Examples include Swagger UI and Postman",
+          "is_correct": false
+        },
+        {
+          "option_id": 3740,
+          "option_text": "They improve developer experience",
+          "is_correct": false
+        },
+        {
+          "option_id": 3741,
+          "option_text": "All of the above describe interactive documentation tools",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 670,
+      "subskill_id": 37,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you keep API documentation synchronized with implementation?",
+      "options": [
+        {
+          "option_id": 3742,
+          "option_text": "Update documentation manually after each change",
+          "is_correct": false
+        },
+        {
+          "option_id": 3743,
+          "option_text": "Generate documentation from code or use contract testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 3744,
+          "option_text": "Documentation and implementation can be out of sync",
+          "is_correct": false
+        },
+        {
+          "option_id": 3745,
+          "option_text": "There is no way to keep them synchronized",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 671,
+      "subskill_id": 38,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the pros and cons of different API versioning strategies?",
+      "options": [
+        {
+          "option_id": 3746,
+          "option_text": "URI versioning is clean but creates many endpoints",
+          "is_correct": false
+        },
+        {
+          "option_id": 3747,
+          "option_text": "Header versioning keeps URLs clean but is less discoverable",
+          "is_correct": false
+        },
+        {
+          "option_id": 3748,
+          "option_text": "Each strategy has trade-offs between simplicity and flexibility",
+          "is_correct": true
+        },
+        {
+          "option_id": 3749,
+          "option_text": "Query parameter versioning is always the best choice",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 672,
+      "subskill_id": 38,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle versioning in microservices?",
+      "options": [
+        {
+          "option_id": 3750,
+          "option_text": "Coordinate versioning across services or use API gateways",
+          "is_correct": true
+        },
+        {
+          "option_id": 3751,
+          "option_text": "Version each service independently without coordination",
+          "is_correct": false
+        },
+        {
+          "option_id": 3752,
+          "option_text": "Never update microservices",
+          "is_correct": false
+        },
+        {
+          "option_id": 3753,
+          "option_text": "Use only one version forever",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 673,
+      "subskill_id": 38,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the impact of API versioning on clients?",
+      "options": [
+        {
+          "option_id": 3754,
+          "option_text": "Clients may need to update their code",
+          "is_correct": false
+        },
+        {
+          "option_id": 3755,
+          "option_text": "Multiple client versions may need support",
+          "is_correct": false
+        },
+        {
+          "option_id": 3756,
+          "option_text": "Poor versioning can break existing integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 3757,
+          "option_text": "All of the above are impacts on clients",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 674,
+      "subskill_id": 38,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage multiple API versions simultaneously?",
+      "options": [
+        {
+          "option_id": 3758,
+          "option_text": "Run only one version at a time",
+          "is_correct": false
+        },
+        {
+          "option_id": 3759,
+          "option_text": "Maintain different endpoints and support them until deprecation",
+          "is_correct": true
+        },
+        {
+          "option_id": 3760,
+          "option_text": "Merge all versions into one",
+          "is_correct": false
+        },
+        {
+          "option_id": 3761,
+          "option_text": "Ignore old versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 675,
+      "subskill_id": 38,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "When should you create a new API version vs extending existing one?",
+      "options": [
+        {
+          "option_id": 3762,
+          "option_text": "For backward-compatible changes, extend; for breaking changes, new version",
+          "is_correct": true
+        },
+        {
+          "option_id": 3763,
+          "option_text": "Always create new version for any change",
+          "is_correct": false
+        },
+        {
+          "option_id": 3764,
+          "option_text": "Never create new versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3765,
+          "option_text": "Always extend existing version",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 676,
+      "subskill_id": 34,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a REST API for high-throughput systems?",
+      "options": [
+        {
+          "option_id": 3766,
+          "option_text": "Use synchronous blocking calls for everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 3767,
+          "option_text": "Implement caching, async processing, and database optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 3768,
+          "option_text": "Make all endpoints return large payloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 3769,
+          "option_text": "Avoid using indexes in databases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 677,
+      "subskill_id": 34,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the considerations for REST API security at scale?",
+      "options": [
+        {
+          "option_id": 3770,
+          "option_text": "Rate limiting and throttling",
+          "is_correct": false
+        },
+        {
+          "option_id": 3771,
+          "option_text": "Authentication and authorization",
+          "is_correct": false
+        },
+        {
+          "option_id": 3772,
+          "option_text": "Input validation and encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 3773,
+          "option_text": "All of the above security considerations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 678,
+      "subskill_id": 34,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement idempotency for financial transactions?",
+      "options": [
+        {
+          "option_id": 3774,
+          "option_text": "Idempotency is not needed for financial transactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3775,
+          "option_text": "Using random transaction IDs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3776,
+          "option_text": "Store idempotency keys with transaction status to prevent duplicates",
+          "is_correct": true
+        },
+        {
+          "option_id": 3777,
+          "option_text": "Process all duplicate requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 679,
+      "subskill_id": 34,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design REST APIs for mobile clients with limited connectivity?",
+      "options": [
+        {
+          "option_id": 3778,
+          "option_text": "Optimize payload size, support offline capabilities, and use compression",
+          "is_correct": true
+        },
+        {
+          "option_id": 3779,
+          "option_text": "Send large JSON responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 3780,
+          "option_text": "Require constant internet connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 3781,
+          "option_text": "Use chatty APIs with many requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 680,
+      "subskill_id": 34,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the trade-offs between REST and GraphQL for complex systems?",
+      "options": [
+        {
+          "option_id": 3782,
+          "option_text": "REST is better for complex queries, GraphQL for simple ones",
+          "is_correct": false
+        },
+        {
+          "option_id": 3783,
+          "option_text": "GraphQL reduces overfetching but adds complexity; REST is simpler but may overfetch",
+          "is_correct": true
+        },
+        {
+          "option_id": 3784,
+          "option_text": "REST and GraphQL have identical trade-offs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3785,
+          "option_text": "GraphQL is always better than REST",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 681,
+      "subskill_id": 35,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a GraphQL federation across multiple services?",
+      "options": [
+        {
+          "option_id": 3786,
+          "option_text": "By creating one monolithic GraphQL server",
+          "is_correct": false
+        },
+        {
+          "option_id": 3787,
+          "option_text": "Federation is not possible in GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3788,
+          "option_text": "By making each service expose its own GraphQL endpoint separately",
+          "is_correct": false
+        },
+        {
+          "option_id": 3789,
+          "option_text": "Using Apollo Federation or schema stitching to combine multiple GraphQL services",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 682,
+      "subskill_id": 35,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the performance considerations for GraphQL resolvers?",
+      "options": [
+        {
+          "option_id": 3790,
+          "option_text": "Resolvers have no performance impact",
+          "is_correct": false
+        },
+        {
+          "option_id": 3791,
+          "option_text": "All resolvers should be synchronous",
+          "is_correct": false
+        },
+        {
+          "option_id": 3792,
+          "option_text": "N+1 problem, batching, and data loader optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 3793,
+          "option_text": "Resolvers always run in parallel automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 683,
+      "subskill_id": 35,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement rate limiting in GraphQL?",
+      "options": [
+        {
+          "option_id": 3794,
+          "option_text": "By analyzing query complexity and limiting based on cost",
+          "is_correct": true
+        },
+        {
+          "option_id": 3795,
+          "option_text": "Rate limiting is not possible in GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3796,
+          "option_text": "By limiting only by IP address",
+          "is_correct": false
+        },
+        {
+          "option_id": 3797,
+          "option_text": "By counting each query as one request regardless of complexity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 684,
+      "subskill_id": 35,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle file uploads in GraphQL?",
+      "options": [
+        {
+          "option_id": 3798,
+          "option_text": "File uploads are not supported in GraphQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3799,
+          "option_text": "Using multipart form data with GraphQL mutations",
+          "is_correct": true
+        },
+        {
+          "option_id": 3800,
+          "option_text": "By encoding files in JSON strings",
+          "is_correct": false
+        },
+        {
+          "option_id": 3801,
+          "option_text": "Using separate REST endpoints for file uploads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 685,
+      "subskill_id": 35,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security best practices for public GraphQL APIs?",
+      "options": [
+        {
+          "option_id": 3802,
+          "option_text": "Query depth limiting and introspection control",
+          "is_correct": false
+        },
+        {
+          "option_id": 3803,
+          "option_text": "Authentication and authorization",
+          "is_correct": false
+        },
+        {
+          "option_id": 3804,
+          "option_text": "Persisted queries and rate limiting",
+          "is_correct": false
+        },
+        {
+          "option_id": 3805,
+          "option_text": "All of the above security practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 686,
+      "subskill_id": 36,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a reliable webhook delivery system at scale?",
+      "options": [
+        {
+          "option_id": 3806,
+          "option_text": "Use synchronous delivery with no retries",
+          "is_correct": false
+        },
+        {
+          "option_id": 3807,
+          "option_text": "Deliver webhooks from the main application thread",
+          "is_correct": false
+        },
+        {
+          "option_id": 3808,
+          "option_text": "Queue-based architecture with retry mechanisms and dead-letter queues",
+          "is_correct": true
+        },
+        {
+          "option_id": 3809,
+          "option_text": "Ignore delivery failures",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 687,
+      "subskill_id": 36,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security implications of webhook implementations?",
+      "options": [
+        {
+          "option_id": 3810,
+          "option_text": "Webhooks can be exploited for SSRF attacks if not properly secured",
+          "is_correct": true
+        },
+        {
+          "option_id": 3811,
+          "option_text": "Webhooks have no security implications",
+          "is_correct": false
+        },
+        {
+          "option_id": 3812,
+          "option_text": "Webhooks are always secure by design",
+          "is_correct": false
+        },
+        {
+          "option_id": 3813,
+          "option_text": "Only HTTPS is needed for webhook security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 688,
+      "subskill_id": 36,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement exactly-once delivery for webhooks?",
+      "options": [
+        {
+          "option_id": 3814,
+          "option_text": "Exactly-once delivery is guaranteed by HTTP",
+          "is_correct": false
+        },
+        {
+          "option_id": 3815,
+          "option_text": "Use idempotency keys and deduplication at the consumer",
+          "is_correct": true
+        },
+        {
+          "option_id": 3816,
+          "option_text": "Exactly-once delivery is impossible",
+          "is_correct": false
+        },
+        {
+          "option_id": 3817,
+          "option_text": "By sending each webhook only once without retries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 689,
+      "subskill_id": 36,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle webhook payload versioning?",
+      "options": [
+        {
+          "option_id": 3818,
+          "option_text": "Never change webhook payloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 3819,
+          "option_text": "Change payloads without notice",
+          "is_correct": false
+        },
+        {
+          "option_id": 3820,
+          "option_text": "Create new webhook endpoints for each version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3821,
+          "option_text": "Include version in payload or header, maintain backward compatibility",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 690,
+      "subskill_id": 36,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the patterns for webhook resilience and circuit breaking?",
+      "options": [
+        {
+          "option_id": 3822,
+          "option_text": "Retry indefinitely regardless of failures",
+          "is_correct": false
+        },
+        {
+          "option_id": 3823,
+          "option_text": "Ignore failing endpoints",
+          "is_correct": false
+        },
+        {
+          "option_id": 3824,
+          "option_text": "Exponential backoff, circuit breakers, and fallback mechanisms",
+          "is_correct": true
+        },
+        {
+          "option_id": 3825,
+          "option_text": "Stop sending webhooks after first failure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 691,
+      "subskill_id": 37,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create API documentation for different audience types?",
+      "options": [
+        {
+          "option_id": 3826,
+          "option_text": "Provide getting started guides, reference docs, and use case tutorials",
+          "is_correct": true
+        },
+        {
+          "option_id": 3827,
+          "option_text": "Create only technical reference documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3828,
+          "option_text": "Documentation should be the same for all audiences",
+          "is_correct": false
+        },
+        {
+          "option_id": 3829,
+          "option_text": "Only provide code samples without explanations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 692,
+      "subskill_id": 37,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of API documentation in API product strategy?",
+      "options": [
+        {
+          "option_id": 3830,
+          "option_text": "It drives adoption and reduces support costs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3831,
+          "option_text": "It differentiates the API from competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 3832,
+          "option_text": "It improves developer experience",
+          "is_correct": false
+        },
+        {
+          "option_id": 3833,
+          "option_text": "All of the above are roles of documentation in API strategy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 693,
+      "subskill_id": 37,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure the effectiveness of API documentation?",
+      "options": [
+        {
+          "option_id": 3834,
+          "option_text": "By counting the number of pages",
+          "is_correct": false
+        },
+        {
+          "option_id": 3835,
+          "option_text": "By asking friends for feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 3836,
+          "option_text": "Track support tickets, time to first API call, and developer feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 3837,
+          "option_text": "Documentation effectiveness cannot be measured",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 694,
+      "subskill_id": 37,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement documentation-driven development?",
+      "options": [
+        {
+          "option_id": 3838,
+          "option_text": "Write code first, then documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3839,
+          "option_text": "Design API documentation first, then implement to match the spec",
+          "is_correct": true
+        },
+        {
+          "option_id": 3840,
+          "option_text": "Documentation is written by technical writers after development",
+          "is_correct": false
+        },
+        {
+          "option_id": 3841,
+          "option_text": "Documentation-driven development is not possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 695,
+      "subskill_id": 37,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for API changelog documentation?",
+      "options": [
+        {
+          "option_id": 3842,
+          "option_text": "Keep it updated, categorize changes, and provide migration guidance",
+          "is_correct": true
+        },
+        {
+          "option_id": 3843,
+          "option_text": "Only document major releases",
+          "is_correct": false
+        },
+        {
+          "option_id": 3844,
+          "option_text": "Never document changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 3845,
+          "option_text": "Changelogs are not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 696,
+      "subskill_id": 38,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a versioning strategy for long-lived APIs?",
+      "options": [
+        {
+          "option_id": 3846,
+          "option_text": "Plan for backward compatibility",
+          "is_correct": false
+        },
+        {
+          "option_id": 3847,
+          "option_text": "Establish clear deprecation policies",
+          "is_correct": false
+        },
+        {
+          "option_id": 3848,
+          "option_text": "Communicate changes well in advance",
+          "is_correct": false
+        },
+        {
+          "option_id": 3849,
+          "option_text": "All of the above are essential for long-lived APIs",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 697,
+      "subskill_id": 38,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the impact of major version changes on API ecosystem?",
+      "options": [
+        {
+          "option_id": 3850,
+          "option_text": "No impact on existing clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 3851,
+          "option_text": "Clients automatically update",
+          "is_correct": false
+        },
+        {
+          "option_id": 3852,
+          "option_text": "Can break existing integrations and require client updates",
+          "is_correct": true
+        },
+        {
+          "option_id": 3853,
+          "option_text": "Major versions are always backward compatible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 698,
+      "subskill_id": 38,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle versioning in API gateways?",
+      "options": [
+        {
+          "option_id": 3854,
+          "option_text": "API gateways cannot handle versioning",
+          "is_correct": false
+        },
+        {
+          "option_id": 3855,
+          "option_text": "Route requests to different services based on version",
+          "is_correct": true
+        },
+        {
+          "option_id": 3856,
+          "option_text": "Versioning happens only in microservices",
+          "is_correct": false
+        },
+        {
+          "option_id": 3857,
+          "option_text": "API gateways ignore API versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 699,
+      "subskill_id": 38,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the strategies for sunsetting deprecated API versions?",
+      "options": [
+        {
+          "option_id": 3858,
+          "option_text": "Communicate timeline, provide migration support, and gradually phase out",
+          "is_correct": true
+        },
+        {
+          "option_id": 3859,
+          "option_text": "Immediately shut down old versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3860,
+          "option_text": "Keep deprecated versions forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 3861,
+          "option_text": "Ignore users of deprecated versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 700,
+      "subskill_id": 38,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you maintain backward compatibility while evolving APIs?",
+      "options": [
+        {
+          "option_id": 3862,
+          "option_text": "Make additive changes only when possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 3863,
+          "option_text": "Use defaults for new parameters",
+          "is_correct": false
+        },
+        {
+          "option_id": 3864,
+          "option_text": "Deprecate carefully with notice",
+          "is_correct": false
+        },
+        {
+          "option_id": 3865,
+          "option_text": "All of the above practices maintain backward compatibility",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

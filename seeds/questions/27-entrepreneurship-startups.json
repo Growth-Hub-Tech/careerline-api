@@ -1,0 +1,2906 @@
+{
+  "skill_id": 27,
+  "skill_name": "Entrepreneurship & Startups",
+  "questions": [
+    {
+      "question_id": 2601,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an MVP in entrepreneurship?",
+      "options": [
+        {
+          "option_id": 12666,
+          "option_text": "A version of a product with just enough features to be usable by early customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 12667,
+          "option_text": "A fully developed product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12668,
+          "option_text": "A prototype with all features",
+          "is_correct": false
+        },
+        {
+          "option_id": 12669,
+          "option_text": "A product with no features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2602,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of an MVP?",
+      "options": [
+        {
+          "option_id": 12670,
+          "option_text": "To test product-market fit with minimal resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 12671,
+          "option_text": "To launch a complete product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12672,
+          "option_text": "To make a profit immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 12673,
+          "option_text": "To replace the final product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2603,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a minimum viable product?",
+      "options": [
+        {
+          "option_id": 12674,
+          "option_text": "A version of a product with just enough features to be usable by early customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 12675,
+          "option_text": "A fully developed product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12676,
+          "option_text": "A prototype with all features",
+          "is_correct": false
+        },
+        {
+          "option_id": 12677,
+          "option_text": "A product with no features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2604,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between an MVP and a prototype?",
+      "options": [
+        {
+          "option_id": 12678,
+          "option_text": "An MVP is a testable product; a prototype is a testable design",
+          "is_correct": true
+        },
+        {
+          "option_id": 12679,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12680,
+          "option_text": "A prototype is a testable product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12681,
+          "option_text": "An MVP is a testable design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2605,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between an MVP and a product?",
+      "options": [
+        {
+          "option_id": 12682,
+          "option_text": "An MVP is a testable product; a product is a finished product",
+          "is_correct": true
+        },
+        {
+          "option_id": 12683,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12684,
+          "option_text": "A product is a testable product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12685,
+          "option_text": "An MVP is a finished product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2606,
+      "subskill_id": 125,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a successful MVP?",
+      "options": [
+        {
+          "option_id": 12686,
+          "option_text": "An MVP that validates the business idea",
+          "is_correct": true
+        },
+        {
+          "option_id": 12687,
+          "option_text": "An MVP that fails to validate the business idea",
+          "is_correct": false
+        },
+        {
+          "option_id": 12688,
+          "option_text": "An MVP that has no users",
+          "is_correct": false
+        },
+        {
+          "option_id": 12689,
+          "option_text": "An MVP that is not tested",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2607,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12690,
+          "option_text": "A strategic management tool for developing new business models",
+          "is_correct": true
+        },
+        {
+          "option_id": 12691,
+          "option_text": "A tool for managing teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 12692,
+          "option_text": "A tool for managing budgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 12693,
+          "option_text": "A tool for managing schedules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2608,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12694,
+          "option_text": "To visualize and validate a business model",
+          "is_correct": true
+        },
+        {
+          "option_id": 12695,
+          "option_text": "To replace a business plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 12696,
+          "option_text": "To create a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12697,
+          "option_text": "To manage a project",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2609,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the key components of the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12698,
+          "option_text": "Value proposition, customer segments, revenue streams, etc.",
+          "is_correct": true
+        },
+        {
+          "option_id": 12699,
+          "option_text": "Only value proposition",
+          "is_correct": false
+        },
+        {
+          "option_id": 12700,
+          "option_text": "Only customer segments",
+          "is_correct": false
+        },
+        {
+          "option_id": 12701,
+          "option_text": "Only revenue streams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2610,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a value proposition?",
+      "options": [
+        {
+          "option_id": 12702,
+          "option_text": "The unique value a product or service provides to customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 12703,
+          "option_text": "The cost of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12704,
+          "option_text": "The revenue from a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12705,
+          "option_text": "The marketing of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2611,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a customer segment?",
+      "options": [
+        {
+          "option_id": 12706,
+          "option_text": "A group of people with similar needs and characteristics",
+          "is_correct": true
+        },
+        {
+          "option_id": 12707,
+          "option_text": "A group of people with different needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 12708,
+          "option_text": "A group of people with no needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 12709,
+          "option_text": "A group of people with all needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2612,
+      "subskill_id": 126,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue stream?",
+      "options": [
+        {
+          "option_id": 12710,
+          "option_text": "A source of income for a business",
+          "is_correct": true
+        },
+        {
+          "option_id": 12711,
+          "option_text": "A source of expense for a business",
+          "is_correct": false
+        },
+        {
+          "option_id": 12712,
+          "option_text": "A source of profit for a business",
+          "is_correct": false
+        },
+        {
+          "option_id": 12713,
+          "option_text": "A source of loss for a business",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2613,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pitch deck?",
+      "options": [
+        {
+          "option_id": 12714,
+          "option_text": "A presentation that summarizes a business for potential investors",
+          "is_correct": true
+        },
+        {
+          "option_id": 12715,
+          "option_text": "A presentation that summarizes a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12716,
+          "option_text": "A presentation that summarizes a team",
+          "is_correct": false
+        },
+        {
+          "option_id": 12717,
+          "option_text": "A presentation that summarizes a market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2614,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a pitch deck?",
+      "options": [
+        {
+          "option_id": 12718,
+          "option_text": "To persuade investors to fund a business",
+          "is_correct": true
+        },
+        {
+          "option_id": 12719,
+          "option_text": "To persuade customers to buy a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12720,
+          "option_text": "To persuade employees to join a team",
+          "is_correct": false
+        },
+        {
+          "option_id": 12721,
+          "option_text": "To persuade partners to collaborate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2615,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the structure of a pitch deck?",
+      "options": [
+        {
+          "option_id": 12722,
+          "option_text": "Problem, solution, market, team, financials",
+          "is_correct": true
+        },
+        {
+          "option_id": 12723,
+          "option_text": "Only problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12724,
+          "option_text": "Only solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12725,
+          "option_text": "Only market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2616,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a problem slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12726,
+          "option_text": "A slide that describes the problem the business solves",
+          "is_correct": true
+        },
+        {
+          "option_id": 12727,
+          "option_text": "A slide that describes the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12728,
+          "option_text": "A slide that describes the market",
+          "is_correct": false
+        },
+        {
+          "option_id": 12729,
+          "option_text": "A slide that describes the team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2617,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a solution slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12730,
+          "option_text": "A slide that describes the solution the business provides",
+          "is_correct": true
+        },
+        {
+          "option_id": 12731,
+          "option_text": "A slide that describes the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12732,
+          "option_text": "A slide that describes the market",
+          "is_correct": false
+        },
+        {
+          "option_id": 12733,
+          "option_text": "A slide that describes the team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2618,
+      "subskill_id": 127,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a market opportunity slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12734,
+          "option_text": "A slide that describes the market opportunity",
+          "is_correct": true
+        },
+        {
+          "option_id": 12735,
+          "option_text": "A slide that describes the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12736,
+          "option_text": "A slide that describes the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12737,
+          "option_text": "A slide that describes the team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2619,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is fundraising in entrepreneurship?",
+      "options": [
+        {
+          "option_id": 12738,
+          "option_text": "The process of raising money for a business",
+          "is_correct": true
+        },
+        {
+          "option_id": 12739,
+          "option_text": "The process of spending money",
+          "is_correct": false
+        },
+        {
+          "option_id": 12740,
+          "option_text": "The process of investing money",
+          "is_correct": false
+        },
+        {
+          "option_id": 12741,
+          "option_text": "The process of saving money",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2620,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of fundraising?",
+      "options": [
+        {
+          "option_id": 12742,
+          "option_text": "To raise money to grow a business",
+          "is_correct": true
+        },
+        {
+          "option_id": 12743,
+          "option_text": "To spend money",
+          "is_correct": false
+        },
+        {
+          "option_id": 12744,
+          "option_text": "To invest money",
+          "is_correct": false
+        },
+        {
+          "option_id": 12745,
+          "option_text": "To save money",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2621,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a seed round?",
+      "options": [
+        {
+          "option_id": 12746,
+          "option_text": "An early stage of funding for a startup",
+          "is_correct": true
+        },
+        {
+          "option_id": 12747,
+          "option_text": "A late stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12748,
+          "option_text": "A growth stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12749,
+          "option_text": "A exit stage of funding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2622,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Series A round?",
+      "options": [
+        {
+          "option_id": 12750,
+          "option_text": "A stage of funding for a startup after seed round",
+          "is_correct": true
+        },
+        {
+          "option_id": 12751,
+          "option_text": "A early stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12752,
+          "option_text": "A growth stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12753,
+          "option_text": "A exit stage of funding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2623,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Series B round?",
+      "options": [
+        {
+          "option_id": 12754,
+          "option_text": "A stage of funding for a startup after Series A",
+          "is_correct": true
+        },
+        {
+          "option_id": 12755,
+          "option_text": "A early stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12756,
+          "option_text": "A growth stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12757,
+          "option_text": "A exit stage of funding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2624,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Series C round?",
+      "options": [
+        {
+          "option_id": 12758,
+          "option_text": "A stage of funding for a startup after Series B",
+          "is_correct": true
+        },
+        {
+          "option_id": 12759,
+          "option_text": "A early stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12760,
+          "option_text": "A growth stage of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12761,
+          "option_text": "A exit stage of funding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2625,
+      "subskill_id": 128,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between equity and debt financing?",
+      "options": [
+        {
+          "option_id": 12762,
+          "option_text": "Equity financing involves selling ownership; debt financing involves borrowing money",
+          "is_correct": true
+        },
+        {
+          "option_id": 12763,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12764,
+          "option_text": "Debt financing involves selling ownership",
+          "is_correct": false
+        },
+        {
+          "option_id": 12765,
+          "option_text": "Equity financing involves borrowing money",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2626,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build an MVP?",
+      "options": [
+        {
+          "option_id": 12766,
+          "option_text": "By identifying core features and building a basic version",
+          "is_correct": true
+        },
+        {
+          "option_id": 12767,
+          "option_text": "By building all features at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 12768,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12769,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2627,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the MVP development process?",
+      "options": [
+        {
+          "option_id": 12770,
+          "option_text": "Idea, concept, prototype, MVP, product",
+          "is_correct": true
+        },
+        {
+          "option_id": 12771,
+          "option_text": "Only idea",
+          "is_correct": false
+        },
+        {
+          "option_id": 12772,
+          "option_text": "Only prototype",
+          "is_correct": false
+        },
+        {
+          "option_id": 12773,
+          "option_text": "Only product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2628,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test an MVP?",
+      "options": [
+        {
+          "option_id": 12774,
+          "option_text": "By getting feedback from early users",
+          "is_correct": true
+        },
+        {
+          "option_id": 12775,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12776,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 12777,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2629,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you iterate on an MVP?",
+      "options": [
+        {
+          "option_id": 12778,
+          "option_text": "By incorporating feedback and making improvements",
+          "is_correct": true
+        },
+        {
+          "option_id": 12779,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 12780,
+          "option_text": "By starting over",
+          "is_correct": false
+        },
+        {
+          "option_id": 12781,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2630,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a successful MVP metric?",
+      "options": [
+        {
+          "option_id": 12782,
+          "option_text": "A metric that indicates the MVP is achieving its goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 12783,
+          "option_text": "A metric that indicates the MVP is failing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12784,
+          "option_text": "A metric that indicates the MVP is not tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 12785,
+          "option_text": "A metric that indicates the MVP is not useful",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2631,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12786,
+          "option_text": "By filling in the nine key components of the canvas",
+          "is_correct": true
+        },
+        {
+          "option_id": 12787,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12788,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 12789,
+          "option_text": "By ignoring components",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2632,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a key resource in the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12790,
+          "option_text": "The resources needed to make the business model work",
+          "is_correct": true
+        },
+        {
+          "option_id": 12791,
+          "option_text": "The resources needed to ignore the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12792,
+          "option_text": "The resources needed to accept the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12793,
+          "option_text": "The resources needed to reject the business model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2633,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a key activity in the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12794,
+          "option_text": "The activities needed to make the business model work",
+          "is_correct": true
+        },
+        {
+          "option_id": 12795,
+          "option_text": "The activities needed to ignore the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12796,
+          "option_text": "The activities needed to accept the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12797,
+          "option_text": "The activities needed to reject the business model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2634,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a key partnership in the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12798,
+          "option_text": "The partnerships needed to make the business model work",
+          "is_correct": true
+        },
+        {
+          "option_id": 12799,
+          "option_text": "The partnerships needed to ignore the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12800,
+          "option_text": "The partnerships needed to accept the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12801,
+          "option_text": "The partnerships needed to reject the business model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2635,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cost structure in the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12802,
+          "option_text": "The costs associated with the business model",
+          "is_correct": true
+        },
+        {
+          "option_id": 12803,
+          "option_text": "The costs associated with ignoring the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12804,
+          "option_text": "The costs associated with accepting the business model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12805,
+          "option_text": "The costs associated with rejecting the business model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2636,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a pitch deck?",
+      "options": [
+        {
+          "option_id": 12806,
+          "option_text": "By following a structured process with clear slides",
+          "is_correct": true
+        },
+        {
+          "option_id": 12807,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12808,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 12809,
+          "option_text": "By ignoring structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2637,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a pitch deck and a business plan?",
+      "options": [
+        {
+          "option_id": 12810,
+          "option_text": "A pitch deck is a short presentation; a business plan is a detailed document",
+          "is_correct": true
+        },
+        {
+          "option_id": 12811,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12812,
+          "option_text": "A business plan is a short presentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12813,
+          "option_text": "A pitch deck is a detailed document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2638,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a traction slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12814,
+          "option_text": "A slide that shows proof of progress",
+          "is_correct": true
+        },
+        {
+          "option_id": 12815,
+          "option_text": "A slide that shows the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12816,
+          "option_text": "A slide that shows the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12817,
+          "option_text": "A slide that shows the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2639,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a team slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12818,
+          "option_text": "A slide that introduces the team",
+          "is_correct": true
+        },
+        {
+          "option_id": 12819,
+          "option_text": "A slide that introduces the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12820,
+          "option_text": "A slide that introduces the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12821,
+          "option_text": "A slide that introduces the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2640,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a financials slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12822,
+          "option_text": "A slide that shows financial projections",
+          "is_correct": true
+        },
+        {
+          "option_id": 12823,
+          "option_text": "A slide that shows the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12824,
+          "option_text": "A slide that shows the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12825,
+          "option_text": "A slide that shows the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2641,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you raise funds?",
+      "options": [
+        {
+          "option_id": 12826,
+          "option_text": "By identifying potential investors and preparing a pitch",
+          "is_correct": true
+        },
+        {
+          "option_id": 12827,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12828,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 12829,
+          "option_text": "By ignoring investors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2642,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a valuation in fundraising?",
+      "options": [
+        {
+          "option_id": 12830,
+          "option_text": "The estimated worth of a company",
+          "is_correct": true
+        },
+        {
+          "option_id": 12831,
+          "option_text": "The cost of a company",
+          "is_correct": false
+        },
+        {
+          "option_id": 12832,
+          "option_text": "The revenue of a company",
+          "is_correct": false
+        },
+        {
+          "option_id": 12833,
+          "option_text": "The profit of a company",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2643,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a term sheet?",
+      "options": [
+        {
+          "option_id": 12834,
+          "option_text": "A document that outlines the terms of an investment",
+          "is_correct": true
+        },
+        {
+          "option_id": 12835,
+          "option_text": "A document that outlines the terms of a loan",
+          "is_correct": false
+        },
+        {
+          "option_id": 12836,
+          "option_text": "A document that outlines the terms of a partnership",
+          "is_correct": false
+        },
+        {
+          "option_id": 12837,
+          "option_text": "A document that outlines the terms of a contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2644,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a due diligence?",
+      "options": [
+        {
+          "option_id": 12838,
+          "option_text": "The process of verifying information before an investment",
+          "is_correct": true
+        },
+        {
+          "option_id": 12839,
+          "option_text": "The process of ignoring information",
+          "is_correct": false
+        },
+        {
+          "option_id": 12840,
+          "option_text": "The process of accepting information",
+          "is_correct": false
+        },
+        {
+          "option_id": 12841,
+          "option_text": "The process of rejecting information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2645,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between angel investors and VCs?",
+      "options": [
+        {
+          "option_id": 12842,
+          "option_text": "Angel investors are wealthy individuals; VCs are professional investment firms",
+          "is_correct": true
+        },
+        {
+          "option_id": 12843,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12844,
+          "option_text": "VCs are wealthy individuals",
+          "is_correct": false
+        },
+        {
+          "option_id": 12845,
+          "option_text": "Angel investors are professional investment firms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2646,
+      "subskill_id": 125,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a product-market fit?",
+      "options": [
+        {
+          "option_id": 12846,
+          "option_text": "The fit between a product and the market",
+          "is_correct": true
+        },
+        {
+          "option_id": 12847,
+          "option_text": "The fit between a product and a team",
+          "is_correct": false
+        },
+        {
+          "option_id": 12848,
+          "option_text": "The fit between a product and a budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 12849,
+          "option_text": "The fit between a product and a schedule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2647,
+      "subskill_id": 126,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a customer relationship in the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12850,
+          "option_text": "The relationship a company has with its customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 12851,
+          "option_text": "The relationship a company has with its employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 12852,
+          "option_text": "The relationship a company has with its investors",
+          "is_correct": false
+        },
+        {
+          "option_id": 12853,
+          "option_text": "The relationship a company has with its partners",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2648,
+      "subskill_id": 127,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the importance of storytelling in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12854,
+          "option_text": "Using stories to engage and persuade the audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 12855,
+          "option_text": "Using facts to engage and persuade the audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 12856,
+          "option_text": "Using data to engage and persuade the audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 12857,
+          "option_text": "Using logic to engage and persuade the audience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2649,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a crowdfunding?",
+      "options": [
+        {
+          "option_id": 12858,
+          "option_text": "Raising money from a large number of people online",
+          "is_correct": true
+        },
+        {
+          "option_id": 12859,
+          "option_text": "Raising money from a small number of people",
+          "is_correct": false
+        },
+        {
+          "option_id": 12860,
+          "option_text": "Raising money from banks",
+          "is_correct": false
+        },
+        {
+          "option_id": 12861,
+          "option_text": "Raising money from venture capital firms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2650,
+      "subskill_id": 128,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a bootstrapping?",
+      "options": [
+        {
+          "option_id": 12862,
+          "option_text": "Starting a business with minimal external funding",
+          "is_correct": true
+        },
+        {
+          "option_id": 12863,
+          "option_text": "Starting a business with a lot of funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12864,
+          "option_text": "Starting a business with no funding",
+          "is_correct": false
+        },
+        {
+          "option_id": 12865,
+          "option_text": "Starting a business with debt funding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2651,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the MVP validation process?",
+      "options": [
+        {
+          "option_id": 12866,
+          "option_text": "The process of validating that the MVP meets market needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 12867,
+          "option_text": "The process of ignoring validation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12868,
+          "option_text": "The process of accepting validation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12869,
+          "option_text": "The process of rejecting validation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2652,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the MVP feedback loop?",
+      "options": [
+        {
+          "option_id": 12870,
+          "option_text": "The process of collecting and incorporating feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 12871,
+          "option_text": "The process of ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 12872,
+          "option_text": "The process of accepting feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 12873,
+          "option_text": "The process of rejecting feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2653,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the MVP scaling process?",
+      "options": [
+        {
+          "option_id": 12874,
+          "option_text": "The process of scaling the MVP into a full product",
+          "is_correct": true
+        },
+        {
+          "option_id": 12875,
+          "option_text": "The process of ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 12876,
+          "option_text": "The process of accepting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 12877,
+          "option_text": "The process of rejecting scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2654,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the MVP pivot process?",
+      "options": [
+        {
+          "option_id": 12878,
+          "option_text": "The process of pivoting the MVP based on feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 12879,
+          "option_text": "The process of ignoring pivoting",
+          "is_correct": false
+        },
+        {
+          "option_id": 12880,
+          "option_text": "The process of accepting pivoting",
+          "is_correct": false
+        },
+        {
+          "option_id": 12881,
+          "option_text": "The process of rejecting pivoting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2655,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the MVP success criteria?",
+      "options": [
+        {
+          "option_id": 12882,
+          "option_text": "The criteria for determining MVP success",
+          "is_correct": true
+        },
+        {
+          "option_id": 12883,
+          "option_text": "The criteria for ignoring MVP success",
+          "is_correct": false
+        },
+        {
+          "option_id": 12884,
+          "option_text": "The criteria for accepting MVP success",
+          "is_correct": false
+        },
+        {
+          "option_id": 12885,
+          "option_text": "The criteria for rejecting MVP success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2656,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you validate a Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12886,
+          "option_text": "By testing the assumptions in the canvas with real data",
+          "is_correct": true
+        },
+        {
+          "option_id": 12887,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12888,
+          "option_text": "By ignoring validation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12889,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2657,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a business model and a business plan?",
+      "options": [
+        {
+          "option_id": 12890,
+          "option_text": "A business model is strategic; a business plan is tactical",
+          "is_correct": true
+        },
+        {
+          "option_id": 12891,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12892,
+          "option_text": "A business plan is strategic",
+          "is_correct": false
+        },
+        {
+          "option_id": 12893,
+          "option_text": "A business model is tactical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2658,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lean canvas?",
+      "options": [
+        {
+          "option_id": 12894,
+          "option_text": "A lean version of the Business Model Canvas",
+          "is_correct": true
+        },
+        {
+          "option_id": 12895,
+          "option_text": "A complex version of the Business Model Canvas",
+          "is_correct": false
+        },
+        {
+          "option_id": 12896,
+          "option_text": "A different tool for business planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 12897,
+          "option_text": "A tool for product development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2659,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a lean canvas and a Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12898,
+          "option_text": "A lean canvas is focused on problem-solution; a Business Model Canvas is focused on business model",
+          "is_correct": true
+        },
+        {
+          "option_id": 12899,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12900,
+          "option_text": "A Business Model Canvas is focused on problem-solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12901,
+          "option_text": "A lean canvas is focused on business model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2660,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you iterate on a Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12902,
+          "option_text": "By testing and updating assumptions based on feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 12903,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 12904,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 12905,
+          "option_text": "By guessing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2661,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you deliver a pitch deck effectively?",
+      "options": [
+        {
+          "option_id": 12906,
+          "option_text": "By practicing the presentation and anticipating questions",
+          "is_correct": true
+        },
+        {
+          "option_id": 12907,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12908,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 12909,
+          "option_text": "By ignoring practice",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2662,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a pitch deck and a presentation?",
+      "options": [
+        {
+          "option_id": 12910,
+          "option_text": "A pitch deck is a visual presentation; a presentation is a broader term",
+          "is_correct": true
+        },
+        {
+          "option_id": 12911,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12912,
+          "option_text": "A presentation is a visual presentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12913,
+          "option_text": "A pitch deck is a broader term",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2663,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a competitive advantage slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12914,
+          "option_text": "A slide that highlights the competitive advantage",
+          "is_correct": true
+        },
+        {
+          "option_id": 12915,
+          "option_text": "A slide that highlights the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12916,
+          "option_text": "A slide that highlights the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12917,
+          "option_text": "A slide that highlights the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2664,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a go-to-market strategy slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12918,
+          "option_text": "A slide that outlines the go-to-market strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 12919,
+          "option_text": "A slide that outlines the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12920,
+          "option_text": "A slide that outlines the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12921,
+          "option_text": "A slide that outlines the team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2665,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a ask slide in a pitch deck?",
+      "options": [
+        {
+          "option_id": 12922,
+          "option_text": "A slide that states the funding ask",
+          "is_correct": true
+        },
+        {
+          "option_id": 12923,
+          "option_text": "A slide that states the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 12924,
+          "option_text": "A slide that states the solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 12925,
+          "option_text": "A slide that states the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2666,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the fundraising process?",
+      "options": [
+        {
+          "option_id": 12926,
+          "option_text": "The series of steps from identifying investors to closing a round",
+          "is_correct": true
+        },
+        {
+          "option_id": 12927,
+          "option_text": "The series of steps from identifying customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 12928,
+          "option_text": "The series of steps from identifying partners",
+          "is_correct": false
+        },
+        {
+          "option_id": 12929,
+          "option_text": "The series of steps from identifying employees",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2667,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fundraising strategy?",
+      "options": [
+        {
+          "option_id": 12930,
+          "option_text": "A plan for how to raise funds",
+          "is_correct": true
+        },
+        {
+          "option_id": 12931,
+          "option_text": "A plan for how to spend funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 12932,
+          "option_text": "A plan for how to invest funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 12933,
+          "option_text": "A plan for how to save funds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2668,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fundraising pitch?",
+      "options": [
+        {
+          "option_id": 12934,
+          "option_text": "The presentation used to raise funds",
+          "is_correct": true
+        },
+        {
+          "option_id": 12935,
+          "option_text": "The presentation used to sell a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12936,
+          "option_text": "The presentation used to hire employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 12937,
+          "option_text": "The presentation used to partner with companies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2669,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fundraising timeline?",
+      "options": [
+        {
+          "option_id": 12938,
+          "option_text": "A schedule for raising funds",
+          "is_correct": true
+        },
+        {
+          "option_id": 12939,
+          "option_text": "A schedule for spending funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 12940,
+          "option_text": "A schedule for investing funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 12941,
+          "option_text": "A schedule for saving funds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2670,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fundraising compliance?",
+      "options": [
+        {
+          "option_id": 12942,
+          "option_text": "The process of ensuring fundraising compliance",
+          "is_correct": true
+        },
+        {
+          "option_id": 12943,
+          "option_text": "The process of ignoring compliance",
+          "is_correct": false
+        },
+        {
+          "option_id": 12944,
+          "option_text": "The process of accepting compliance",
+          "is_correct": false
+        },
+        {
+          "option_id": 12945,
+          "option_text": "The process of rejecting compliance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2671,
+      "subskill_id": 125,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a MVP prototype?",
+      "options": [
+        {
+          "option_id": 12946,
+          "option_text": "A early version of the product that serves as a model for the MVP",
+          "is_correct": true
+        },
+        {
+          "option_id": 12947,
+          "option_text": "A fully developed product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12948,
+          "option_text": "A final version of the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 12949,
+          "option_text": "A product with no features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2672,
+      "subskill_id": 126,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a business model innovation?",
+      "options": [
+        {
+          "option_id": 12950,
+          "option_text": "The process of creating new business models",
+          "is_correct": true
+        },
+        {
+          "option_id": 12951,
+          "option_text": "The process of ignoring business models",
+          "is_correct": false
+        },
+        {
+          "option_id": 12952,
+          "option_text": "The process of copying business models",
+          "is_correct": false
+        },
+        {
+          "option_id": 12953,
+          "option_text": "The process of rejecting business models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2673,
+      "subskill_id": 127,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a pitch deck design?",
+      "options": [
+        {
+          "option_id": 12954,
+          "option_text": "The visual design of a pitch deck",
+          "is_correct": true
+        },
+        {
+          "option_id": 12955,
+          "option_text": "The content of a pitch deck",
+          "is_correct": false
+        },
+        {
+          "option_id": 12956,
+          "option_text": "The structure of a pitch deck",
+          "is_correct": false
+        },
+        {
+          "option_id": 12957,
+          "option_text": "The delivery of a pitch deck",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2674,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a venture capital (VC) firm?",
+      "options": [
+        {
+          "option_id": 12958,
+          "option_text": "A professional investment firm that provides funding to startups",
+          "is_correct": true
+        },
+        {
+          "option_id": 12959,
+          "option_text": "A wealthy individual that provides funding to startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 12960,
+          "option_text": "A bank that provides loans",
+          "is_correct": false
+        },
+        {
+          "option_id": 12961,
+          "option_text": "A government agency that provides grants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2675,
+      "subskill_id": 128,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a private equity (PE) firm?",
+      "options": [
+        {
+          "option_id": 12962,
+          "option_text": "A professional investment firm that provides funding to established companies",
+          "is_correct": true
+        },
+        {
+          "option_id": 12963,
+          "option_text": "A wealthy individual that provides funding to startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 12964,
+          "option_text": "A bank that provides loans",
+          "is_correct": false
+        },
+        {
+          "option_id": 12965,
+          "option_text": "A government agency that provides grants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2676,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the MVP growth strategy?",
+      "options": [
+        {
+          "option_id": 12966,
+          "option_text": "A plan for growing the MVP into a successful product",
+          "is_correct": true
+        },
+        {
+          "option_id": 12967,
+          "option_text": "A plan for ignoring growth",
+          "is_correct": false
+        },
+        {
+          "option_id": 12968,
+          "option_text": "A plan for accepting growth",
+          "is_correct": false
+        },
+        {
+          "option_id": 12969,
+          "option_text": "A plan for rejecting growth",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2677,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the MVP monetization strategy?",
+      "options": [
+        {
+          "option_id": 12970,
+          "option_text": "A plan for monetizing the MVP",
+          "is_correct": true
+        },
+        {
+          "option_id": 12971,
+          "option_text": "A plan for ignoring monetization",
+          "is_correct": false
+        },
+        {
+          "option_id": 12972,
+          "option_text": "A plan for accepting monetization",
+          "is_correct": false
+        },
+        {
+          "option_id": 12973,
+          "option_text": "A plan for rejecting monetization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2678,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the MVP sustainability strategy?",
+      "options": [
+        {
+          "option_id": 12974,
+          "option_text": "A plan for ensuring the MVP is sustainable",
+          "is_correct": true
+        },
+        {
+          "option_id": 12975,
+          "option_text": "A plan for ignoring sustainability",
+          "is_correct": false
+        },
+        {
+          "option_id": 12976,
+          "option_text": "A plan for accepting sustainability",
+          "is_correct": false
+        },
+        {
+          "option_id": 12977,
+          "option_text": "A plan for rejecting sustainability",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2679,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the MVP exit strategy?",
+      "options": [
+        {
+          "option_id": 12978,
+          "option_text": "A plan for exiting the MVP",
+          "is_correct": true
+        },
+        {
+          "option_id": 12979,
+          "option_text": "A plan for ignoring exit",
+          "is_correct": false
+        },
+        {
+          "option_id": 12980,
+          "option_text": "A plan for accepting exit",
+          "is_correct": false
+        },
+        {
+          "option_id": 12981,
+          "option_text": "A plan for rejecting exit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2680,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the MVP competitive strategy?",
+      "options": [
+        {
+          "option_id": 12982,
+          "option_text": "A plan for competing in the market",
+          "is_correct": true
+        },
+        {
+          "option_id": 12983,
+          "option_text": "A plan for ignoring competition",
+          "is_correct": false
+        },
+        {
+          "option_id": 12984,
+          "option_text": "A plan for accepting competition",
+          "is_correct": false
+        },
+        {
+          "option_id": 12985,
+          "option_text": "A plan for rejecting competition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2681,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of the Business Model Canvas?",
+      "options": [
+        {
+          "option_id": 12986,
+          "option_text": "The future evolution of the Business Model Canvas",
+          "is_correct": true
+        },
+        {
+          "option_id": 12987,
+          "option_text": "The future of ignoring business models",
+          "is_correct": false
+        },
+        {
+          "option_id": 12988,
+          "option_text": "The future of accepting business models",
+          "is_correct": false
+        },
+        {
+          "option_id": 12989,
+          "option_text": "The future of rejecting business models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2682,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a digital business model canvas?",
+      "options": [
+        {
+          "option_id": 12990,
+          "option_text": "A Business Model Canvas for digital businesses",
+          "is_correct": true
+        },
+        {
+          "option_id": 12991,
+          "option_text": "A Business Model Canvas for traditional businesses",
+          "is_correct": false
+        },
+        {
+          "option_id": 12992,
+          "option_text": "A Business Model Canvas for startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 12993,
+          "option_text": "A Business Model Canvas for corporations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2683,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sustainable business model canvas?",
+      "options": [
+        {
+          "option_id": 12994,
+          "option_text": "A Business Model Canvas for sustainable businesses",
+          "is_correct": true
+        },
+        {
+          "option_id": 12995,
+          "option_text": "A Business Model Canvas for traditional businesses",
+          "is_correct": false
+        },
+        {
+          "option_id": 12996,
+          "option_text": "A Business Model Canvas for startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 12997,
+          "option_text": "A Business Model Canvas for corporations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2684,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a circular business model canvas?",
+      "options": [
+        {
+          "option_id": 12998,
+          "option_text": "A Business Model Canvas for circular businesses",
+          "is_correct": true
+        },
+        {
+          "option_id": 12999,
+          "option_text": "A Business Model Canvas for traditional businesses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13000,
+          "option_text": "A Business Model Canvas for startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 13001,
+          "option_text": "A Business Model Canvas for corporations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2685,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a platform business model canvas?",
+      "options": [
+        {
+          "option_id": 13002,
+          "option_text": "A Business Model Canvas for platform businesses",
+          "is_correct": true
+        },
+        {
+          "option_id": 13003,
+          "option_text": "A Business Model Canvas for traditional businesses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13004,
+          "option_text": "A Business Model Canvas for startups",
+          "is_correct": false
+        },
+        {
+          "option_id": 13005,
+          "option_text": "A Business Model Canvas for corporations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2686,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a pitch deck for a global audience?",
+      "options": [
+        {
+          "option_id": 13006,
+          "option_text": "By adapting the pitch deck for different cultural contexts",
+          "is_correct": true
+        },
+        {
+          "option_id": 13007,
+          "option_text": "By ignoring cultural contexts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13008,
+          "option_text": "By accepting cultural contexts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13009,
+          "option_text": "By rejecting cultural contexts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2687,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a pitch deck and a one-pager?",
+      "options": [
+        {
+          "option_id": 13010,
+          "option_text": "A pitch deck is detailed; a one-pager is concise",
+          "is_correct": true
+        },
+        {
+          "option_id": 13011,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 13012,
+          "option_text": "A one-pager is detailed",
+          "is_correct": false
+        },
+        {
+          "option_id": 13013,
+          "option_text": "A pitch deck is concise",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2688,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a demo day pitch deck?",
+      "options": [
+        {
+          "option_id": 13014,
+          "option_text": "A pitch deck for a demo day presentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 13015,
+          "option_text": "A pitch deck for a board meeting",
+          "is_correct": false
+        },
+        {
+          "option_id": 13016,
+          "option_text": "A pitch deck for a customer presentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13017,
+          "option_text": "A pitch deck for a team presentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2689,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a virtual pitch deck?",
+      "options": [
+        {
+          "option_id": 13018,
+          "option_text": "A pitch deck presented virtually",
+          "is_correct": true
+        },
+        {
+          "option_id": 13019,
+          "option_text": "A pitch deck presented in person",
+          "is_correct": false
+        },
+        {
+          "option_id": 13020,
+          "option_text": "A pitch deck presented on paper",
+          "is_correct": false
+        },
+        {
+          "option_id": 13021,
+          "option_text": "A pitch deck presented on video",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2690,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a video pitch deck?",
+      "options": [
+        {
+          "option_id": 13022,
+          "option_text": "A pitch deck presented as a video",
+          "is_correct": true
+        },
+        {
+          "option_id": 13023,
+          "option_text": "A pitch deck presented as a slide deck",
+          "is_correct": false
+        },
+        {
+          "option_id": 13024,
+          "option_text": "A pitch deck presented as a document",
+          "is_correct": false
+        },
+        {
+          "option_id": 13025,
+          "option_text": "A pitch deck presented as a website",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2691,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of fundraising?",
+      "options": [
+        {
+          "option_id": 13026,
+          "option_text": "The future of fundraising, which may include new technologies",
+          "is_correct": true
+        },
+        {
+          "option_id": 13027,
+          "option_text": "The future of ignoring fundraising",
+          "is_correct": false
+        },
+        {
+          "option_id": 13028,
+          "option_text": "The future of accepting fundraising",
+          "is_correct": false
+        },
+        {
+          "option_id": 13029,
+          "option_text": "The future of rejecting fundraising",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2692,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a decentralized fundraising?",
+      "options": [
+        {
+          "option_id": 13030,
+          "option_text": "A form of fundraising that uses decentralized technologies",
+          "is_correct": true
+        },
+        {
+          "option_id": 13031,
+          "option_text": "A form of fundraising that uses centralized technologies",
+          "is_correct": false
+        },
+        {
+          "option_id": 13032,
+          "option_text": "A form of fundraising that uses traditional technologies",
+          "is_correct": false
+        },
+        {
+          "option_id": 13033,
+          "option_text": "A form of fundraising that uses no technologies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2693,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a token-based fundraising?",
+      "options": [
+        {
+          "option_id": 13034,
+          "option_text": "A form of fundraising that uses tokens",
+          "is_correct": true
+        },
+        {
+          "option_id": 13035,
+          "option_text": "A form of fundraising that uses shares",
+          "is_correct": false
+        },
+        {
+          "option_id": 13036,
+          "option_text": "A form of fundraising that uses debt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13037,
+          "option_text": "A form of fundraising that uses grants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2694,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a NFT fundraising?",
+      "options": [
+        {
+          "option_id": 13038,
+          "option_text": "A form of fundraising that uses NFTs",
+          "is_correct": true
+        },
+        {
+          "option_id": 13039,
+          "option_text": "A form of fundraising that uses shares",
+          "is_correct": false
+        },
+        {
+          "option_id": 13040,
+          "option_text": "A form of fundraising that uses debt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13041,
+          "option_text": "A form of fundraising that uses grants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2695,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a AI-powered fundraising?",
+      "options": [
+        {
+          "option_id": 13042,
+          "option_text": "A form of fundraising that uses AI",
+          "is_correct": true
+        },
+        {
+          "option_id": 13043,
+          "option_text": "A form of fundraising that uses human decision-making",
+          "is_correct": false
+        },
+        {
+          "option_id": 13044,
+          "option_text": "A form of fundraising that uses traditional methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 13045,
+          "option_text": "A form of fundraising that uses manual processes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2696,
+      "subskill_id": 125,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a MVP in a startup ecosystem?",
+      "options": [
+        {
+          "option_id": 13046,
+          "option_text": "A product that is built in a startup ecosystem to test market fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 13047,
+          "option_text": "A product that is built in a corporation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13048,
+          "option_text": "A product that is built in a government agency",
+          "is_correct": false
+        },
+        {
+          "option_id": 13049,
+          "option_text": "A product that is built in a non-profit organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2697,
+      "subskill_id": 126,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a business model canvas in a startup?",
+      "options": [
+        {
+          "option_id": 13050,
+          "option_text": "A business model canvas used in a startup context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13051,
+          "option_text": "A business model canvas used in a corporation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13052,
+          "option_text": "A business model canvas used in a government agency",
+          "is_correct": false
+        },
+        {
+          "option_id": 13053,
+          "option_text": "A business model canvas used in a non-profit organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2698,
+      "subskill_id": 127,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pitch deck in a startup?",
+      "options": [
+        {
+          "option_id": 13054,
+          "option_text": "A pitch deck used in a startup context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13055,
+          "option_text": "A pitch deck used in a corporation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13056,
+          "option_text": "A pitch deck used in a government agency",
+          "is_correct": false
+        },
+        {
+          "option_id": 13057,
+          "option_text": "A pitch deck used in a non-profit organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2699,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fundraising in a startup?",
+      "options": [
+        {
+          "option_id": 13058,
+          "option_text": "A fundraising activity used in a startup context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13059,
+          "option_text": "A fundraising activity used in a corporation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13060,
+          "option_text": "A fundraising activity used in a government agency",
+          "is_correct": false
+        },
+        {
+          "option_id": 13061,
+          "option_text": "A fundraising activity used in a non-profit organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2700,
+      "subskill_id": 128,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fundraising strategy in a startup?",
+      "options": [
+        {
+          "option_id": 13062,
+          "option_text": "A high-level plan for raising funds in a startup",
+          "is_correct": true
+        },
+        {
+          "option_id": 13063,
+          "option_text": "A high-level plan for spending funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 13064,
+          "option_text": "A high-level plan for investing funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 13065,
+          "option_text": "A high-level plan for saving funds",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2906 @@
+{
+  "skill_id": 34,
+  "skill_name": "Account Management",
+  "questions": [
+    {
+      "question_id": 3301,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is client retention in account management?",
+      "options": [
+        {
+          "option_id": 15466,
+          "option_text": "The process of keeping existing customers engaged and satisfied",
+          "is_correct": true
+        },
+        {
+          "option_id": 15467,
+          "option_text": "The process of acquiring new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15468,
+          "option_text": "The process of ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15469,
+          "option_text": "The process of deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3302,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of client retention?",
+      "options": [
+        {
+          "option_id": 15470,
+          "option_text": "To maintain a stable and growing customer base",
+          "is_correct": true
+        },
+        {
+          "option_id": 15471,
+          "option_text": "To acquire new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15472,
+          "option_text": "To ignore customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15473,
+          "option_text": "To delete customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3303,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a retention strategy?",
+      "options": [
+        {
+          "option_id": 15474,
+          "option_text": "A plan for keeping customers engaged and loyal",
+          "is_correct": true
+        },
+        {
+          "option_id": 15475,
+          "option_text": "A plan for acquiring new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15476,
+          "option_text": "A plan for ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15477,
+          "option_text": "A plan for deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3304,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a customer churn?",
+      "options": [
+        {
+          "option_id": 15478,
+          "option_text": "The rate at which customers stop doing business with a company",
+          "is_correct": true
+        },
+        {
+          "option_id": 15479,
+          "option_text": "The rate at which customers continue doing business",
+          "is_correct": false
+        },
+        {
+          "option_id": 15480,
+          "option_text": "The rate at which customers are acquired",
+          "is_correct": false
+        },
+        {
+          "option_id": 15481,
+          "option_text": "The rate at which customers are ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3305,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a retention rate?",
+      "options": [
+        {
+          "option_id": 15482,
+          "option_text": "The percentage of customers who continue doing business over a period",
+          "is_correct": true
+        },
+        {
+          "option_id": 15483,
+          "option_text": "The percentage of customers who stop doing business",
+          "is_correct": false
+        },
+        {
+          "option_id": 15484,
+          "option_text": "The percentage of customers who are acquired",
+          "is_correct": false
+        },
+        {
+          "option_id": 15485,
+          "option_text": "The percentage of customers who are ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3306,
+      "subskill_id": 154,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a loyalty program?",
+      "options": [
+        {
+          "option_id": 15486,
+          "option_text": "A program that rewards loyal customers for repeat business",
+          "is_correct": true
+        },
+        {
+          "option_id": 15487,
+          "option_text": "A program that acquires new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15488,
+          "option_text": "A program that ignores customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15489,
+          "option_text": "A program that deletes customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3307,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is upselling in account management?",
+      "options": [
+        {
+          "option_id": 15490,
+          "option_text": "Selling a more expensive version of a product to an existing customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 15491,
+          "option_text": "Selling a complementary product to an existing customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15492,
+          "option_text": "Selling to a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15493,
+          "option_text": "Selling a cheaper version of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3308,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is cross-selling in account management?",
+      "options": [
+        {
+          "option_id": 15494,
+          "option_text": "Selling a complementary product to an existing customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 15495,
+          "option_text": "Selling a more expensive version of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 15496,
+          "option_text": "Selling to a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15497,
+          "option_text": "Selling a cheaper version of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3309,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between upselling and cross-selling?",
+      "options": [
+        {
+          "option_id": 15498,
+          "option_text": "Upselling sells a more expensive version; cross-selling sells a complementary product",
+          "is_correct": true
+        },
+        {
+          "option_id": 15499,
+          "option_text": "Cross-selling sells a more expensive version; upselling sells a complementary product",
+          "is_correct": false
+        },
+        {
+          "option_id": 15500,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 15501,
+          "option_text": "Upselling sells to new customers; cross-selling sells to existing customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3310,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a upsell opportunity?",
+      "options": [
+        {
+          "option_id": 15502,
+          "option_text": "An opportunity to sell a more expensive version of a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 15503,
+          "option_text": "An opportunity to sell a complementary product",
+          "is_correct": false
+        },
+        {
+          "option_id": 15504,
+          "option_text": "An opportunity to sell to a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15505,
+          "option_text": "An opportunity to sell a cheaper version of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3311,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cross-sell opportunity?",
+      "options": [
+        {
+          "option_id": 15506,
+          "option_text": "An opportunity to sell a complementary product",
+          "is_correct": true
+        },
+        {
+          "option_id": 15507,
+          "option_text": "An opportunity to sell a more expensive version of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 15508,
+          "option_text": "An opportunity to sell to a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15509,
+          "option_text": "An opportunity to sell a cheaper version of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3312,
+      "subskill_id": 155,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a product recommendation?",
+      "options": [
+        {
+          "option_id": 15510,
+          "option_text": "A suggestion to a customer for a product that meets their needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 15511,
+          "option_text": "A suggestion to a customer for a product that does not meet their needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15512,
+          "option_text": "A suggestion to a customer for a product they cannot use",
+          "is_correct": false
+        },
+        {
+          "option_id": 15513,
+          "option_text": "A suggestion to a customer for a product they already have",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3313,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a renewal strategy in account management?",
+      "options": [
+        {
+          "option_id": 15514,
+          "option_text": "A plan for renewing customer contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 15515,
+          "option_text": "A plan for acquiring new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15516,
+          "option_text": "A plan for ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15517,
+          "option_text": "A plan for deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3314,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a renewal strategy?",
+      "options": [
+        {
+          "option_id": 15518,
+          "option_text": "To ensure customers continue their relationship with the company",
+          "is_correct": true
+        },
+        {
+          "option_id": 15519,
+          "option_text": "To acquire new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15520,
+          "option_text": "To ignore customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15521,
+          "option_text": "To delete customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3315,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a renewal process?",
+      "options": [
+        {
+          "option_id": 15522,
+          "option_text": "The steps involved in renewing a customer contract",
+          "is_correct": true
+        },
+        {
+          "option_id": 15523,
+          "option_text": "The steps involved in acquiring a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15524,
+          "option_text": "The steps involved in ignoring a customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15525,
+          "option_text": "The steps involved in deleting a customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3316,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a renewal rate?",
+      "options": [
+        {
+          "option_id": 15526,
+          "option_text": "The percentage of customers who renew their contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 15527,
+          "option_text": "The percentage of customers who do not renew",
+          "is_correct": false
+        },
+        {
+          "option_id": 15528,
+          "option_text": "The percentage of customers who are acquired",
+          "is_correct": false
+        },
+        {
+          "option_id": 15529,
+          "option_text": "The percentage of customers who are ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3317,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a renewal timeline?",
+      "options": [
+        {
+          "option_id": 15530,
+          "option_text": "The schedule for renewing customer contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 15531,
+          "option_text": "The schedule for acquiring new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15532,
+          "option_text": "The schedule for ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15533,
+          "option_text": "The schedule for deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3318,
+      "subskill_id": 156,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a renewal negotiation?",
+      "options": [
+        {
+          "option_id": 15534,
+          "option_text": "A negotiation with a customer to renew a contract",
+          "is_correct": true
+        },
+        {
+          "option_id": 15535,
+          "option_text": "A negotiation with a new customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15536,
+          "option_text": "A negotiation to ignore a customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15537,
+          "option_text": "A negotiation to delete a customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3319,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is strategic account planning?",
+      "options": [
+        {
+          "option_id": 15538,
+          "option_text": "The process of planning for the long-term success of key accounts",
+          "is_correct": true
+        },
+        {
+          "option_id": 15539,
+          "option_text": "The process of planning for short-term sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 15540,
+          "option_text": "The process of ignoring accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 15541,
+          "option_text": "The process of deleting accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3320,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of strategic account planning?",
+      "options": [
+        {
+          "option_id": 15542,
+          "option_text": "To maximize the value and growth of key accounts",
+          "is_correct": true
+        },
+        {
+          "option_id": 15543,
+          "option_text": "To minimize the value of accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 15544,
+          "option_text": "To ignore accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 15545,
+          "option_text": "To delete accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3321,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a key account?",
+      "options": [
+        {
+          "option_id": 15546,
+          "option_text": "A high-value customer that requires dedicated management",
+          "is_correct": true
+        },
+        {
+          "option_id": 15547,
+          "option_text": "A low-value customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15548,
+          "option_text": "A one-time customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 15549,
+          "option_text": "A customer that does not require management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3322,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a strategic account?",
+      "options": [
+        {
+          "option_id": 15550,
+          "option_text": "A high-value account that requires long-term strategic management",
+          "is_correct": true
+        },
+        {
+          "option_id": 15551,
+          "option_text": "A low-value account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15552,
+          "option_text": "A one-time account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15553,
+          "option_text": "An account that does not require management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3323,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an account plan?",
+      "options": [
+        {
+          "option_id": 15554,
+          "option_text": "A document that outlines the strategy for a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15555,
+          "option_text": "A document that outlines the strategy for all accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 15556,
+          "option_text": "A document that ignores accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 15557,
+          "option_text": "A document that deletes accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3324,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a growth strategy in account planning?",
+      "options": [
+        {
+          "option_id": 15558,
+          "option_text": "A plan for growing a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15559,
+          "option_text": "A plan for shrinking a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15560,
+          "option_text": "A plan for ignoring a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15561,
+          "option_text": "A plan for deleting a specific account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3325,
+      "subskill_id": 157,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a risk assessment in account planning?",
+      "options": [
+        {
+          "option_id": 15562,
+          "option_text": "An assessment of risks associated with a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15563,
+          "option_text": "An assessment of growth opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 15564,
+          "option_text": "An assessment of ignoring risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15565,
+          "option_text": "An assessment of deleting risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3326,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you improve client retention?",
+      "options": [
+        {
+          "option_id": 15566,
+          "option_text": "By providing excellent service, regular communication, and value",
+          "is_correct": true
+        },
+        {
+          "option_id": 15567,
+          "option_text": "By ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15568,
+          "option_text": "By providing poor service",
+          "is_correct": false
+        },
+        {
+          "option_id": 15569,
+          "option_text": "By avoiding communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3327,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a retention framework?",
+      "options": [
+        {
+          "option_id": 15570,
+          "option_text": "A structured approach to retaining customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 15571,
+          "option_text": "A random approach to retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15572,
+          "option_text": "A way to ignore customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15573,
+          "option_text": "A way to delete customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3328,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a retention metric?",
+      "options": [
+        {
+          "option_id": 15574,
+          "option_text": "A measure of retention success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15575,
+          "option_text": "A measure of acquisition success",
+          "is_correct": false
+        },
+        {
+          "option_id": 15576,
+          "option_text": "A measure of ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15577,
+          "option_text": "A measure of deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3329,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a retention program?",
+      "options": [
+        {
+          "option_id": 15578,
+          "option_text": "A program designed to retain customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 15579,
+          "option_text": "A program designed to acquire customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15580,
+          "option_text": "A program designed to ignore customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15581,
+          "option_text": "A program designed to delete customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3330,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure client satisfaction?",
+      "options": [
+        {
+          "option_id": 15582,
+          "option_text": "By tracking satisfaction scores and gathering feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 15583,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 15584,
+          "option_text": "By deleting feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 15585,
+          "option_text": "By hiding feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3331,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you identify upsell opportunities?",
+      "options": [
+        {
+          "option_id": 15586,
+          "option_text": "By analyzing customer needs and purchase history",
+          "is_correct": true
+        },
+        {
+          "option_id": 15587,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15588,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15589,
+          "option_text": "By deleting customer data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3332,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you identify cross-sell opportunities?",
+      "options": [
+        {
+          "option_id": 15590,
+          "option_text": "By analyzing customer needs and purchase history",
+          "is_correct": true
+        },
+        {
+          "option_id": 15591,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15592,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15593,
+          "option_text": "By deleting customer data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3333,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you present upsell offers?",
+      "options": [
+        {
+          "option_id": 15594,
+          "option_text": "By focusing on value and benefits",
+          "is_correct": true
+        },
+        {
+          "option_id": 15595,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15596,
+          "option_text": "By making the offer hard to understand",
+          "is_correct": false
+        },
+        {
+          "option_id": 15597,
+          "option_text": "By hiding the offer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3334,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you present cross-sell offers?",
+      "options": [
+        {
+          "option_id": 15598,
+          "option_text": "By focusing on value and benefits",
+          "is_correct": true
+        },
+        {
+          "option_id": 15599,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15600,
+          "option_text": "By making the offer hard to understand",
+          "is_correct": false
+        },
+        {
+          "option_id": 15601,
+          "option_text": "By hiding the offer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3335,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure upsell and cross-sell success?",
+      "options": [
+        {
+          "option_id": 15602,
+          "option_text": "By tracking conversion rates and revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15603,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15604,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15605,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3336,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you develop a renewal strategy?",
+      "options": [
+        {
+          "option_id": 15606,
+          "option_text": "By understanding customer needs and creating a plan",
+          "is_correct": true
+        },
+        {
+          "option_id": 15607,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15608,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15609,
+          "option_text": "By deleting customer data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3337,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage the renewal process?",
+      "options": [
+        {
+          "option_id": 15610,
+          "option_text": "By tracking contract timelines and communicating with customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 15611,
+          "option_text": "By ignoring timelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 15612,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15613,
+          "option_text": "By deleting customer data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3338,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you negotiate a renewal?",
+      "options": [
+        {
+          "option_id": 15614,
+          "option_text": "By understanding customer needs and finding common ground",
+          "is_correct": true
+        },
+        {
+          "option_id": 15615,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 15616,
+          "option_text": "By being inflexible",
+          "is_correct": false
+        },
+        {
+          "option_id": 15617,
+          "option_text": "By avoiding negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3339,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you improve renewal rates?",
+      "options": [
+        {
+          "option_id": 15618,
+          "option_text": "By providing value and building strong relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 15619,
+          "option_text": "By ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15620,
+          "option_text": "By providing poor service",
+          "is_correct": false
+        },
+        {
+          "option_id": 15621,
+          "option_text": "By avoiding communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3340,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle renewal objections?",
+      "options": [
+        {
+          "option_id": 15622,
+          "option_text": "By listening, acknowledging, and addressing concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 15623,
+          "option_text": "By ignoring concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 15624,
+          "option_text": "By dismissing concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 15625,
+          "option_text": "By avoiding concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3341,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create an account plan?",
+      "options": [
+        {
+          "option_id": 15626,
+          "option_text": "By analyzing the account and defining goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15627,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15628,
+          "option_text": "By ignoring the account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15629,
+          "option_text": "By deleting the account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3342,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a strategic account plan template?",
+      "options": [
+        {
+          "option_id": 15630,
+          "option_text": "A pre-defined structure for creating account plans",
+          "is_correct": true
+        },
+        {
+          "option_id": 15631,
+          "option_text": "A random structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 15632,
+          "option_text": "A way to ignore account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15633,
+          "option_text": "A way to delete account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3343,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a growth plan in account planning?",
+      "options": [
+        {
+          "option_id": 15634,
+          "option_text": "A plan for growing a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15635,
+          "option_text": "A plan for shrinking a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15636,
+          "option_text": "A plan for ignoring a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15637,
+          "option_text": "A plan for deleting a specific account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3344,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a risk plan in account planning?",
+      "options": [
+        {
+          "option_id": 15638,
+          "option_text": "A plan for mitigating risks in a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15639,
+          "option_text": "A plan for creating risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15640,
+          "option_text": "A plan for ignoring risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15641,
+          "option_text": "A plan for deleting risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3345,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder map in account planning?",
+      "options": [
+        {
+          "option_id": 15642,
+          "option_text": "A map of stakeholders in a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15643,
+          "option_text": "A map of competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 15644,
+          "option_text": "A map of ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 15645,
+          "option_text": "A map of deleting stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3346,
+      "subskill_id": 154,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a client retention software?",
+      "options": [
+        {
+          "option_id": 15646,
+          "option_text": "A software tool for managing client retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15647,
+          "option_text": "A software tool for acquiring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15648,
+          "option_text": "A software tool for ignoring customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15649,
+          "option_text": "A software tool for deleting customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3347,
+      "subskill_id": 155,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a upsell metric?",
+      "options": [
+        {
+          "option_id": 15650,
+          "option_text": "A metric for measuring upsell success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15651,
+          "option_text": "A metric for measuring cross-sell success",
+          "is_correct": false
+        },
+        {
+          "option_id": 15652,
+          "option_text": "A metric for measuring retention success",
+          "is_correct": false
+        },
+        {
+          "option_id": 15653,
+          "option_text": "A metric for measuring acquisition success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3348,
+      "subskill_id": 156,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a renewal discount?",
+      "options": [
+        {
+          "option_id": 15654,
+          "option_text": "A discount offered to encourage renewal",
+          "is_correct": true
+        },
+        {
+          "option_id": 15655,
+          "option_text": "A discount offered to acquire new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15656,
+          "option_text": "A discount offered to ignore customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 15657,
+          "option_text": "A discount offered to delete customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3349,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a account plan review?",
+      "options": [
+        {
+          "option_id": 15658,
+          "option_text": "A review of the account plan",
+          "is_correct": true
+        },
+        {
+          "option_id": 15659,
+          "option_text": "A review of the acquisition plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 15660,
+          "option_text": "A review of the retention plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 15661,
+          "option_text": "A review of the deletion plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3350,
+      "subskill_id": 157,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a account plan update?",
+      "options": [
+        {
+          "option_id": 15662,
+          "option_text": "An update to the account plan",
+          "is_correct": true
+        },
+        {
+          "option_id": 15663,
+          "option_text": "An update to the acquisition plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 15664,
+          "option_text": "An update to the retention plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 15665,
+          "option_text": "An update to the deletion plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3351,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a retention strategy?",
+      "options": [
+        {
+          "option_id": 15666,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15667,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15668,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15669,
+          "option_text": "By deleting strategies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3352,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a retention framework model?",
+      "options": [
+        {
+          "option_id": 15670,
+          "option_text": "A structured model for retaining customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 15671,
+          "option_text": "A random model",
+          "is_correct": false
+        },
+        {
+          "option_id": 15672,
+          "option_text": "A way to ignore retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15673,
+          "option_text": "A way to delete retention",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3353,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a retention analytics?",
+      "options": [
+        {
+          "option_id": 15674,
+          "option_text": "The use of analytics to improve retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15675,
+          "option_text": "The use of guessing to improve retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15676,
+          "option_text": "The use of ignoring to improve retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15677,
+          "option_text": "The use of deleting to improve retention",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3354,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a retention optimization?",
+      "options": [
+        {
+          "option_id": 15678,
+          "option_text": "The process of continuously improving retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15679,
+          "option_text": "The process of ignoring retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15680,
+          "option_text": "The process of deleting retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15681,
+          "option_text": "The process of hiding retention",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3355,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale client retention?",
+      "options": [
+        {
+          "option_id": 15682,
+          "option_text": "By using scalable processes and tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15683,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15684,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15685,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3356,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build an upsell strategy?",
+      "options": [
+        {
+          "option_id": 15686,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15687,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15688,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15689,
+          "option_text": "By deleting strategies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3357,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a cross-sell strategy?",
+      "options": [
+        {
+          "option_id": 15690,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15691,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15692,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15693,
+          "option_text": "By deleting strategies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3358,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a upsell framework?",
+      "options": [
+        {
+          "option_id": 15694,
+          "option_text": "A structured approach to upselling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15695,
+          "option_text": "A random approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 15696,
+          "option_text": "A way to ignore upselling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15697,
+          "option_text": "A way to delete upselling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3359,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cross-sell framework?",
+      "options": [
+        {
+          "option_id": 15698,
+          "option_text": "A structured approach to cross-selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15699,
+          "option_text": "A random approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 15700,
+          "option_text": "A way to ignore cross-selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15701,
+          "option_text": "A way to delete cross-selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3360,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a upsell and cross-sell analytics?",
+      "options": [
+        {
+          "option_id": 15702,
+          "option_text": "The use of analytics to improve upselling and cross-selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15703,
+          "option_text": "The use of guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15704,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15705,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3361,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a renewal strategy framework?",
+      "options": [
+        {
+          "option_id": 15706,
+          "option_text": "A structured approach to renewal strategies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15707,
+          "option_text": "A random approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 15708,
+          "option_text": "A way to ignore renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15709,
+          "option_text": "A way to delete renewals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3362,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a renewal analytics?",
+      "options": [
+        {
+          "option_id": 15710,
+          "option_text": "The use of analytics to improve renewals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15711,
+          "option_text": "The use of guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15712,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15713,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3363,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a renewal optimization?",
+      "options": [
+        {
+          "option_id": 15714,
+          "option_text": "The process of continuously improving renewals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15715,
+          "option_text": "The process of ignoring renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15716,
+          "option_text": "The process of deleting renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15717,
+          "option_text": "The process of hiding renewals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3364,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a renewal governance?",
+      "options": [
+        {
+          "option_id": 15718,
+          "option_text": "The framework for managing renewal processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15719,
+          "option_text": "The framework for ignoring renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15720,
+          "option_text": "The framework for deleting renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15721,
+          "option_text": "The framework for hiding renewals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3365,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale renewal strategies?",
+      "options": [
+        {
+          "option_id": 15722,
+          "option_text": "By using scalable processes and tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15723,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15724,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15725,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3366,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a strategic account plan?",
+      "options": [
+        {
+          "option_id": 15726,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 15727,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15728,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15729,
+          "option_text": "By deleting strategies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3367,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a strategic account plan framework?",
+      "options": [
+        {
+          "option_id": 15730,
+          "option_text": "A structured approach to strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15731,
+          "option_text": "A random approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 15732,
+          "option_text": "A way to ignore account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15733,
+          "option_text": "A way to delete account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3368,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a growth strategy in account planning?",
+      "options": [
+        {
+          "option_id": 15734,
+          "option_text": "A plan for growing a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15735,
+          "option_text": "A plan for shrinking a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15736,
+          "option_text": "A plan for ignoring a specific account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15737,
+          "option_text": "A plan for deleting a specific account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3369,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a risk assessment in account planning?",
+      "options": [
+        {
+          "option_id": 15738,
+          "option_text": "An assessment of risks associated with a specific account",
+          "is_correct": true
+        },
+        {
+          "option_id": 15739,
+          "option_text": "An assessment of growth opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 15740,
+          "option_text": "An assessment of ignoring risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15741,
+          "option_text": "An assessment of deleting risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3370,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a governance in account planning?",
+      "options": [
+        {
+          "option_id": 15742,
+          "option_text": "The framework for managing account planning processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15743,
+          "option_text": "The framework for ignoring account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15744,
+          "option_text": "The framework for deleting account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15745,
+          "option_text": "The framework for hiding account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3371,
+      "subskill_id": 154,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a retention automation?",
+      "options": [
+        {
+          "option_id": 15746,
+          "option_text": "The use of automation to improve retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15747,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15748,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15749,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3372,
+      "subskill_id": 155,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a upsell automation?",
+      "options": [
+        {
+          "option_id": 15750,
+          "option_text": "The use of automation to improve upselling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15751,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15752,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15753,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3373,
+      "subskill_id": 156,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a renewal automation?",
+      "options": [
+        {
+          "option_id": 15754,
+          "option_text": "The use of automation to improve renewals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15755,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15756,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15757,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3374,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a strategic account plan software?",
+      "options": [
+        {
+          "option_id": 15758,
+          "option_text": "A software tool for strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15759,
+          "option_text": "A manual account planning process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15760,
+          "option_text": "A way to ignore account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15761,
+          "option_text": "A way to delete account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3375,
+      "subskill_id": 157,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a strategic account plan dashboard?",
+      "options": [
+        {
+          "option_id": 15762,
+          "option_text": "A visual display of strategic account planning metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 15763,
+          "option_text": "A visual display of ignoring account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15764,
+          "option_text": "A visual display of deleting account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15765,
+          "option_text": "A visual display of hiding account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3376,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale client retention?",
+      "options": [
+        {
+          "option_id": 15766,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15767,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15768,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15769,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3377,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a retention ecosystem?",
+      "options": [
+        {
+          "option_id": 15770,
+          "option_text": "The interconnected system of retention tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15771,
+          "option_text": "A single retention tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15772,
+          "option_text": "A manual retention process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15773,
+          "option_text": "A retention reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3378,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is retention AI?",
+      "options": [
+        {
+          "option_id": 15774,
+          "option_text": "The use of artificial intelligence to improve retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15775,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15776,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15777,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3379,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is retention automation?",
+      "options": [
+        {
+          "option_id": 15778,
+          "option_text": "The use of automation to improve retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 15779,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15780,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15781,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3380,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is retention future?",
+      "options": [
+        {
+          "option_id": 15782,
+          "option_text": "The future of retention, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15783,
+          "option_text": "The future of ignoring retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15784,
+          "option_text": "The future of deleting retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15785,
+          "option_text": "The future of hiding retention",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3381,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale upselling and cross-selling?",
+      "options": [
+        {
+          "option_id": 15786,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15787,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15788,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15789,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3382,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a upsell and cross-sell ecosystem?",
+      "options": [
+        {
+          "option_id": 15790,
+          "option_text": "The interconnected system of upsell and cross-sell tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15791,
+          "option_text": "A single upsell tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15792,
+          "option_text": "A manual upsell process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15793,
+          "option_text": "A upsell reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3383,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is upsell and cross-sell AI?",
+      "options": [
+        {
+          "option_id": 15794,
+          "option_text": "The use of artificial intelligence to improve upselling and cross-selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15795,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15796,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15797,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3384,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is upsell and cross-sell automation?",
+      "options": [
+        {
+          "option_id": 15798,
+          "option_text": "The use of automation to improve upselling and cross-selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15799,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15800,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15801,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3385,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is upsell and cross-sell future?",
+      "options": [
+        {
+          "option_id": 15802,
+          "option_text": "The future of upselling and cross-selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 15803,
+          "option_text": "The future of ignoring upselling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15804,
+          "option_text": "The future of deleting upselling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15805,
+          "option_text": "The future of hiding upselling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3386,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale renewal strategies?",
+      "options": [
+        {
+          "option_id": 15806,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15807,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15808,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15809,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3387,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a renewal ecosystem?",
+      "options": [
+        {
+          "option_id": 15810,
+          "option_text": "The interconnected system of renewal tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15811,
+          "option_text": "A single renewal tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15812,
+          "option_text": "A manual renewal process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15813,
+          "option_text": "A renewal reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3388,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is renewal AI?",
+      "options": [
+        {
+          "option_id": 15814,
+          "option_text": "The use of artificial intelligence to improve renewals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15815,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15816,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15817,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3389,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is renewal automation?",
+      "options": [
+        {
+          "option_id": 15818,
+          "option_text": "The use of automation to improve renewals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15819,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15820,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15821,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3390,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is renewal future?",
+      "options": [
+        {
+          "option_id": 15822,
+          "option_text": "The future of renewals, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15823,
+          "option_text": "The future of ignoring renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15824,
+          "option_text": "The future of deleting renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15825,
+          "option_text": "The future of hiding renewals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3391,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale strategic account planning?",
+      "options": [
+        {
+          "option_id": 15826,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15827,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15828,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15829,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3392,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a strategic account planning ecosystem?",
+      "options": [
+        {
+          "option_id": 15830,
+          "option_text": "The interconnected system of strategic account planning tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15831,
+          "option_text": "A single strategic account planning tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15832,
+          "option_text": "A manual strategic account planning process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15833,
+          "option_text": "A strategic account planning reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3393,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is strategic account planning AI?",
+      "options": [
+        {
+          "option_id": 15834,
+          "option_text": "The use of artificial intelligence to improve strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15835,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15836,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15837,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3394,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is strategic account planning automation?",
+      "options": [
+        {
+          "option_id": 15838,
+          "option_text": "The use of automation to improve strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15839,
+          "option_text": "The use of manual processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 15840,
+          "option_text": "The use of ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15841,
+          "option_text": "The use of deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3395,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is strategic account planning future?",
+      "options": [
+        {
+          "option_id": 15842,
+          "option_text": "The future of strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15843,
+          "option_text": "The future of ignoring strategic account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15844,
+          "option_text": "The future of deleting strategic account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15845,
+          "option_text": "The future of hiding strategic account planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3396,
+      "subskill_id": 154,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a retention enterprise strategy?",
+      "options": [
+        {
+          "option_id": 15846,
+          "option_text": "A high-level strategy for retention in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 15847,
+          "option_text": "A high-level strategy for ignoring retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15848,
+          "option_text": "A high-level strategy for deleting retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 15849,
+          "option_text": "A high-level strategy for hiding retention",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3397,
+      "subskill_id": 155,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a upsell enterprise strategy?",
+      "options": [
+        {
+          "option_id": 15850,
+          "option_text": "A high-level strategy for upselling in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 15851,
+          "option_text": "A high-level strategy for ignoring upselling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15852,
+          "option_text": "A high-level strategy for deleting upselling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15853,
+          "option_text": "A high-level strategy for hiding upselling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3398,
+      "subskill_id": 156,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a renewal enterprise strategy?",
+      "options": [
+        {
+          "option_id": 15854,
+          "option_text": "A high-level strategy for renewals in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 15855,
+          "option_text": "A high-level strategy for ignoring renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15856,
+          "option_text": "A high-level strategy for deleting renewals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15857,
+          "option_text": "A high-level strategy for hiding renewals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3399,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a strategic account planning governance?",
+      "options": [
+        {
+          "option_id": 15858,
+          "option_text": "The framework for managing strategic account planning governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 15859,
+          "option_text": "The framework for ignoring strategic account planning governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15860,
+          "option_text": "The framework for deleting strategic account planning governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15861,
+          "option_text": "The framework for hiding strategic account planning governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3400,
+      "subskill_id": 157,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a strategic account planning ROI?",
+      "options": [
+        {
+          "option_id": 15862,
+          "option_text": "The return on investment from strategic account planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 15863,
+          "option_text": "The cost of strategic account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15864,
+          "option_text": "The loss from strategic account planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15865,
+          "option_text": "The waste from strategic account planning",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

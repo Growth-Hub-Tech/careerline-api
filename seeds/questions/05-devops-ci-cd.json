@@ -1,0 +1,2906 @@
+{
+  "skill_id": 5,
+  "skill_name": "DevOps & CI/CD",
+  "questions": [
+    {
+      "question_id": 401,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Docker?",
+      "options": [
+        {
+          "option_id": 2594,
+          "option_text": "A virtual machine platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 2595,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 2596,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 2597,
+          "option_text": "A containerization platform for developing and running applications",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 402,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Docker container?",
+      "options": [
+        {
+          "option_id": 2598,
+          "option_text": "A lightweight, standalone executable package that includes everything needed to run software",
+          "is_correct": true
+        },
+        {
+          "option_id": 2599,
+          "option_text": "A physical shipping container",
+          "is_correct": false
+        },
+        {
+          "option_id": 2600,
+          "option_text": "A virtual machine with an operating system",
+          "is_correct": false
+        },
+        {
+          "option_id": 2601,
+          "option_text": "A type of database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 403,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Docker image?",
+      "options": [
+        {
+          "option_id": 2602,
+          "option_text": "A photograph of a Docker container",
+          "is_correct": false
+        },
+        {
+          "option_id": 2603,
+          "option_text": "A running instance of Docker",
+          "is_correct": false
+        },
+        {
+          "option_id": 2604,
+          "option_text": "A Docker configuration file",
+          "is_correct": false
+        },
+        {
+          "option_id": 2605,
+          "option_text": "A read-only template used to create containers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 404,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a Dockerfile?",
+      "options": [
+        {
+          "option_id": 2606,
+          "option_text": "To run Docker containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2607,
+          "option_text": "To define the steps to build a Docker image",
+          "is_correct": true
+        },
+        {
+          "option_id": 2608,
+          "option_text": "To delete Docker images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2609,
+          "option_text": "To monitor Docker containers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 405,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a Docker image and a container?",
+      "options": [
+        {
+          "option_id": 2610,
+          "option_text": "An image is running, a container is static",
+          "is_correct": false
+        },
+        {
+          "option_id": 2611,
+          "option_text": "They are exactly the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 2612,
+          "option_text": "A container is an image, an image is a container",
+          "is_correct": false
+        },
+        {
+          "option_id": 2613,
+          "option_text": "An image is a template, a container is a running instance of that template",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 406,
+      "subskill_id": 23,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Docker Hub?",
+      "options": [
+        {
+          "option_id": 2614,
+          "option_text": "A cloud-based registry for sharing Docker images",
+          "is_correct": true
+        },
+        {
+          "option_id": 2615,
+          "option_text": "A physical device for connecting containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2616,
+          "option_text": "A Docker training center",
+          "is_correct": false
+        },
+        {
+          "option_id": 2617,
+          "option_text": "A Docker debugging tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 407,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Kubernetes?",
+      "options": [
+        {
+          "option_id": 2618,
+          "option_text": "A programming language for cloud apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 2619,
+          "option_text": "A type of database",
+          "is_correct": false
+        },
+        {
+          "option_id": 2620,
+          "option_text": "A Docker alternative",
+          "is_correct": false
+        },
+        {
+          "option_id": 2621,
+          "option_text": "A container orchestration platform",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 408,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Pod in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2622,
+          "option_text": "A group of Kubernetes clusters",
+          "is_correct": false
+        },
+        {
+          "option_id": 2623,
+          "option_text": "The smallest deployable unit in Kubernetes that can contain one or more containers",
+          "is_correct": true
+        },
+        {
+          "option_id": 2624,
+          "option_text": "A Kubernetes configuration file",
+          "is_correct": false
+        },
+        {
+          "option_id": 2625,
+          "option_text": "A type of storage in Kubernetes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 409,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Node in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2626,
+          "option_text": "A point in a network diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 2627,
+          "option_text": "A Kubernetes user",
+          "is_correct": false
+        },
+        {
+          "option_id": 2628,
+          "option_text": "A Kubernetes object type",
+          "is_correct": false
+        },
+        {
+          "option_id": 2629,
+          "option_text": "A worker machine that runs containerized applications",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 410,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Cluster in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2630,
+          "option_text": "A set of nodes that run containerized applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 2631,
+          "option_text": "A group of Kubernetes developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2632,
+          "option_text": "A single container",
+          "is_correct": false
+        },
+        {
+          "option_id": 2633,
+          "option_text": "A type of service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 411,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Deployment in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2634,
+          "option_text": "A process of installing Kubernetes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2635,
+          "option_text": "A Kubernetes user account",
+          "is_correct": false
+        },
+        {
+          "option_id": 2636,
+          "option_text": "A type of storage volume",
+          "is_correct": false
+        },
+        {
+          "option_id": 2637,
+          "option_text": "A resource that manages replicated pods and supports rolling updates",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 412,
+      "subskill_id": 24,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Service in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2638,
+          "option_text": "A Kubernetes customer support",
+          "is_correct": false
+        },
+        {
+          "option_id": 2639,
+          "option_text": "An abstraction that exposes a set of pods as a network service",
+          "is_correct": true
+        },
+        {
+          "option_id": 2640,
+          "option_text": "A background process",
+          "is_correct": false
+        },
+        {
+          "option_id": 2641,
+          "option_text": "A type of container",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 413,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2642,
+          "option_text": "A GitHub social feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 2643,
+          "option_text": "A GitHub mobile app",
+          "is_correct": false
+        },
+        {
+          "option_id": 2644,
+          "option_text": "A GitHub code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 2645,
+          "option_text": "An automation platform for CI/CD workflows",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 414,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a workflow in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2646,
+          "option_text": "An automated process defined in a YAML file that runs on GitHub",
+          "is_correct": true
+        },
+        {
+          "option_id": 2647,
+          "option_text": "A team meeting schedule",
+          "is_correct": false
+        },
+        {
+          "option_id": 2648,
+          "option_text": "A code review process",
+          "is_correct": false
+        },
+        {
+          "option_id": 2649,
+          "option_text": "A GitHub notification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 415,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a job in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2650,
+          "option_text": "A GitHub job posting",
+          "is_correct": false
+        },
+        {
+          "option_id": 2651,
+          "option_text": "A developer task",
+          "is_correct": false
+        },
+        {
+          "option_id": 2652,
+          "option_text": "A code commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 2653,
+          "option_text": "A set of steps that execute on the same runner",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 416,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a step in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2654,
+          "option_text": "A GitHub career advancement",
+          "is_correct": false
+        },
+        {
+          "option_id": 2655,
+          "option_text": "An individual task that runs commands or actions in a job",
+          "is_correct": true
+        },
+        {
+          "option_id": 2656,
+          "option_text": "A code review step",
+          "is_correct": false
+        },
+        {
+          "option_id": 2657,
+          "option_text": "A deployment stage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 417,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an action in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2658,
+          "option_text": "A legal action against GitHub",
+          "is_correct": false
+        },
+        {
+          "option_id": 2659,
+          "option_text": "A user action like clicking a button",
+          "is_correct": false
+        },
+        {
+          "option_id": 2660,
+          "option_text": "A reusable unit of code for automating tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 2661,
+          "option_text": "A GitHub policy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 418,
+      "subskill_id": 25,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a runner in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2662,
+          "option_text": "A server that executes GitHub Actions workflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 2663,
+          "option_text": "A person who runs GitHub",
+          "is_correct": false
+        },
+        {
+          "option_id": 2664,
+          "option_text": "A GitHub marathon event",
+          "is_correct": false
+        },
+        {
+          "option_id": 2665,
+          "option_text": "A code optimizer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 419,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a deployment pipeline?",
+      "options": [
+        {
+          "option_id": 2666,
+          "option_text": "A physical pipeline for data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2667,
+          "option_text": "A networking cable",
+          "is_correct": false
+        },
+        {
+          "option_id": 2668,
+          "option_text": "A type of database connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 2669,
+          "option_text": "An automated process that moves code from development to production",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 420,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Continuous Integration (CI)?",
+      "options": [
+        {
+          "option_id": 2670,
+          "option_text": "Merging code once a month",
+          "is_correct": false
+        },
+        {
+          "option_id": 2671,
+          "option_text": "Regularly merging code changes into a shared repository",
+          "is_correct": true
+        },
+        {
+          "option_id": 2672,
+          "option_text": "Writing code continuously",
+          "is_correct": false
+        },
+        {
+          "option_id": 2673,
+          "option_text": "A coding marathon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 421,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Continuous Delivery (CD)?",
+      "options": [
+        {
+          "option_id": 2674,
+          "option_text": "Delivering code by hand",
+          "is_correct": false
+        },
+        {
+          "option_id": 2675,
+          "option_text": "A courier service for code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2676,
+          "option_text": "Manual deployment only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2677,
+          "option_text": "Keeping code always ready for deployment to production",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 422,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between Continuous Delivery and Continuous Deployment?",
+      "options": [
+        {
+          "option_id": 2678,
+          "option_text": "Continuous Delivery requires manual approval, Continuous Deployment automates production releases",
+          "is_correct": true
+        },
+        {
+          "option_id": 2679,
+          "option_text": "Continuous Deployment requires manual approval, Continuous Delivery automates everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 2680,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 2681,
+          "option_text": "Continuous Delivery is for frontend, Continuous Deployment is for backend",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 423,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a build stage in a pipeline?",
+      "options": [
+        {
+          "option_id": 2682,
+          "option_text": "A construction phase for buildings",
+          "is_correct": false
+        },
+        {
+          "option_id": 2683,
+          "option_text": "A team building exercise",
+          "is_correct": false
+        },
+        {
+          "option_id": 2684,
+          "option_text": "A stage where code is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 2685,
+          "option_text": "Where source code is compiled and dependencies are installed",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 424,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test stage in a pipeline?",
+      "options": [
+        {
+          "option_id": 2686,
+          "option_text": "A stage where tests are written",
+          "is_correct": false
+        },
+        {
+          "option_id": 2687,
+          "option_text": "Where automated tests are run to validate code changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 2688,
+          "option_text": "A stage for taking exams",
+          "is_correct": false
+        },
+        {
+          "option_id": 2689,
+          "option_text": "A quality assurance meeting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 425,
+      "subskill_id": 26,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a deploy stage in a pipeline?",
+      "options": [
+        {
+          "option_id": 2690,
+          "option_text": "A military operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2691,
+          "option_text": "A stage where code is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 2692,
+          "option_text": "A planning meeting",
+          "is_correct": false
+        },
+        {
+          "option_id": 2693,
+          "option_text": "Where code is released to target environments",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 426,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a Docker image?",
+      "options": [
+        {
+          "option_id": 2694,
+          "option_text": "By downloading from Docker Hub only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2695,
+          "option_text": "Using the docker build command with a Dockerfile",
+          "is_correct": true
+        },
+        {
+          "option_id": 2696,
+          "option_text": "By writing Java code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2697,
+          "option_text": "By installing Docker Desktop",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 427,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between CMD and ENTRYPOINT in Dockerfile?",
+      "options": [
+        {
+          "option_id": 2698,
+          "option_text": "CMD and ENTRYPOINT are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 2699,
+          "option_text": "CMD sets default arguments, ENTRYPOINT defines the executable",
+          "is_correct": false
+        },
+        {
+          "option_id": 2700,
+          "option_text": "ENTRYPOINT sets default arguments, CMD defines the executable",
+          "is_correct": false
+        },
+        {
+          "option_id": 2701,
+          "option_text": "CMD provides defaults that can be overridden, ENTRYPOINT configures a container to run as an executable",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 428,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage data persistence in Docker containers?",
+      "options": [
+        {
+          "option_id": 2702,
+          "option_text": "Data cannot be persisted in Docker",
+          "is_correct": false
+        },
+        {
+          "option_id": 2703,
+          "option_text": "By committing containers to images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2704,
+          "option_text": "Using volumes or bind mounts",
+          "is_correct": true
+        },
+        {
+          "option_id": 2705,
+          "option_text": "By copying data to the host manually",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 429,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are Docker volumes and bind mounts?",
+      "options": [
+        {
+          "option_id": 2706,
+          "option_text": "Mechanisms for persisting and sharing data between containers and host",
+          "is_correct": true
+        },
+        {
+          "option_id": 2707,
+          "option_text": "Types of Docker networks",
+          "is_correct": false
+        },
+        {
+          "option_id": 2708,
+          "option_text": "Docker security features",
+          "is_correct": false
+        },
+        {
+          "option_id": 2709,
+          "option_text": "Docker logging drivers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 430,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you network multiple Docker containers together?",
+      "options": [
+        {
+          "option_id": 2710,
+          "option_text": "Using physical Ethernet cables",
+          "is_correct": false
+        },
+        {
+          "option_id": 2711,
+          "option_text": "Creating a Docker network and attaching containers to it",
+          "is_correct": true
+        },
+        {
+          "option_id": 2712,
+          "option_text": "Containers cannot communicate with each other",
+          "is_correct": false
+        },
+        {
+          "option_id": 2713,
+          "option_text": "By using IP addresses directly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 431,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a Deployment and a StatefulSet?",
+      "options": [
+        {
+          "option_id": 2714,
+          "option_text": "Deployment is for stateless apps, StatefulSet is for stateful apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 2715,
+          "option_text": "StatefulSet provides stable network identities and persistent storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 2716,
+          "option_text": "Deployment manages pods with unordered pods",
+          "is_correct": false
+        },
+        {
+          "option_id": 2717,
+          "option_text": "All of the above statements are correct",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 432,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you expose a Kubernetes application to external traffic?",
+      "options": [
+        {
+          "option_id": 2718,
+          "option_text": "By using a Pod directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 2719,
+          "option_text": "Applications cannot be exposed externally",
+          "is_correct": false
+        },
+        {
+          "option_id": 2720,
+          "option_text": "Using a LoadBalancer or Ingress resource",
+          "is_correct": true
+        },
+        {
+          "option_id": 2721,
+          "option_text": "By editing the node configuration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 433,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are ConfigMaps and Secrets in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2722,
+          "option_text": "Resources for storing configuration data and sensitive information",
+          "is_correct": true
+        },
+        {
+          "option_id": 2723,
+          "option_text": "Types of Kubernetes volumes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2724,
+          "option_text": "Kubernetes security policies",
+          "is_correct": false
+        },
+        {
+          "option_id": 2725,
+          "option_text": "Kubernetes network policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 434,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you perform rolling updates in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2726,
+          "option_text": "By deleting all pods at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 2727,
+          "option_text": "By updating the Deployment with a new image version",
+          "is_correct": true
+        },
+        {
+          "option_id": 2728,
+          "option_text": "By restarting the cluster",
+          "is_correct": false
+        },
+        {
+          "option_id": 2729,
+          "option_text": "Rolling updates are not supported",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 435,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a ReplicaSet and how does it relate to Deployments?",
+      "options": [
+        {
+          "option_id": 2730,
+          "option_text": "A ReplicaSet ensures a specified number of pod replicas are running",
+          "is_correct": false
+        },
+        {
+          "option_id": 2731,
+          "option_text": "Deployments manage ReplicaSets",
+          "is_correct": false
+        },
+        {
+          "option_id": 2732,
+          "option_text": "ReplicaSets are responsible for pod replication",
+          "is_correct": false
+        },
+        {
+          "option_id": 2733,
+          "option_text": "All of the above statements are correct",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 436,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you define environment variables in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2734,
+          "option_text": "In the repository settings only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2735,
+          "option_text": "They cannot be defined",
+          "is_correct": false
+        },
+        {
+          "option_id": 2736,
+          "option_text": "In the workflow YAML file using env keyword",
+          "is_correct": true
+        },
+        {
+          "option_id": 2737,
+          "option_text": "In the README file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 437,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are GitHub Actions secrets and how do you use them?",
+      "options": [
+        {
+          "option_id": 2738,
+          "option_text": "Encrypted variables for sensitive data stored in repository settings",
+          "is_correct": true
+        },
+        {
+          "option_id": 2739,
+          "option_text": "Public information shared with everyone",
+          "is_correct": false
+        },
+        {
+          "option_id": 2740,
+          "option_text": "Passwords written in plain text in workflows",
+          "is_correct": false
+        },
+        {
+          "option_id": 2741,
+          "option_text": "GitHub login credentials",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 438,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you trigger workflows on specific events?",
+      "options": [
+        {
+          "option_id": 2742,
+          "option_text": "By running them manually only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2743,
+          "option_text": "Using the \"on\" keyword in the workflow file",
+          "is_correct": true
+        },
+        {
+          "option_id": 2744,
+          "option_text": "Workflows cannot be triggered",
+          "is_correct": false
+        },
+        {
+          "option_id": 2745,
+          "option_text": "By sending an email to GitHub",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 439,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a matrix strategy in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2746,
+          "option_text": "A way to run jobs across multiple operating systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 2747,
+          "option_text": "A way to test against multiple language versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 2748,
+          "option_text": "A way to run parallel job combinations",
+          "is_correct": false
+        },
+        {
+          "option_id": 2749,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 440,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you cache dependencies in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2750,
+          "option_text": "Dependencies cannot be cached",
+          "is_correct": false
+        },
+        {
+          "option_id": 2751,
+          "option_text": "By downloading them every time",
+          "is_correct": false
+        },
+        {
+          "option_id": 2752,
+          "option_text": "Using the actions/cache action",
+          "is_correct": true
+        },
+        {
+          "option_id": 2753,
+          "option_text": "By storing them in GitHub repository",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 441,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a blue-green deployment strategy?",
+      "options": [
+        {
+          "option_id": 2754,
+          "option_text": "Running two identical environments and switching traffic",
+          "is_correct": true
+        },
+        {
+          "option_id": 2755,
+          "option_text": "Deploying only blue colored apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 2756,
+          "option_text": "A strategy for painting servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2757,
+          "option_text": "Using blue and green colored code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 442,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a canary deployment?",
+      "options": [
+        {
+          "option_id": 2758,
+          "option_text": "Deploying to a bird sanctuary",
+          "is_correct": false
+        },
+        {
+          "option_id": 2759,
+          "option_text": "Rolling out changes to a small subset of users first",
+          "is_correct": true
+        },
+        {
+          "option_id": 2760,
+          "option_text": "Deploying only yellow colored apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 2761,
+          "option_text": "A deployment strategy for canary birds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 443,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is infrastructure as code?",
+      "options": [
+        {
+          "option_id": 2762,
+          "option_text": "Writing infrastructure documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2763,
+          "option_text": "Drawing infrastructure diagrams",
+          "is_correct": false
+        },
+        {
+          "option_id": 2764,
+          "option_text": "Physical infrastructure setup",
+          "is_correct": false
+        },
+        {
+          "option_id": 2765,
+          "option_text": "Managing infrastructure through machine-readable definition files",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 444,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle rollbacks in a deployment pipeline?",
+      "options": [
+        {
+          "option_id": 2766,
+          "option_text": "Rollbacks are not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2767,
+          "option_text": "By deleting the application",
+          "is_correct": false
+        },
+        {
+          "option_id": 2768,
+          "option_text": "Using version control and automated rollback mechanisms",
+          "is_correct": true
+        },
+        {
+          "option_id": 2769,
+          "option_text": "By restarting the server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 445,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are deployment gates and why are they used?",
+      "options": [
+        {
+          "option_id": 2770,
+          "option_text": "Automated checks that must pass before promoting to next stage",
+          "is_correct": true
+        },
+        {
+          "option_id": 2771,
+          "option_text": "Physical gates in data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2772,
+          "option_text": "Security barriers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2773,
+          "option_text": "Network firewalls",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 446,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Docker Compose and when would you use it?",
+      "options": [
+        {
+          "option_id": 2774,
+          "option_text": "A tool for defining and running multi-container Docker applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 2775,
+          "option_text": "Used for local development and testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 2776,
+          "option_text": "Defines services, networks, and volumes in a YAML file",
+          "is_correct": false
+        },
+        {
+          "option_id": 2777,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 447,
+      "subskill_id": 24,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is kubeconfig and how is it used?",
+      "options": [
+        {
+          "option_id": 2778,
+          "option_text": "A Kubernetes configuration file for cluster access",
+          "is_correct": true
+        },
+        {
+          "option_id": 2779,
+          "option_text": "A Kubernetes command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 2780,
+          "option_text": "A Kubernetes dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 2781,
+          "option_text": "A type of Kubernetes pod",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 448,
+      "subskill_id": 25,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a reusable GitHub Action?",
+      "options": [
+        {
+          "option_id": 2782,
+          "option_text": "Actions cannot be reused",
+          "is_correct": false
+        },
+        {
+          "option_id": 2783,
+          "option_text": "By copying and pasting code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2784,
+          "option_text": "By creating a public repository with action metadata files",
+          "is_correct": true
+        },
+        {
+          "option_id": 2785,
+          "option_text": "By sending it to GitHub support",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 449,
+      "subskill_id": 26,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between CI and CD?",
+      "options": [
+        {
+          "option_id": 2786,
+          "option_text": "CI automates code integration and testing, CD automates delivery to environments",
+          "is_correct": true
+        },
+        {
+          "option_id": 2787,
+          "option_text": "CI is for development, CD is for production",
+          "is_correct": false
+        },
+        {
+          "option_id": 2788,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 2789,
+          "option_text": "CI is for frontend, CD is for backend",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 450,
+      "subskill_id": 23,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you debug a Docker container?",
+      "options": [
+        {
+          "option_id": 2790,
+          "option_text": "Using docker logs to view container logs",
+          "is_correct": false
+        },
+        {
+          "option_id": 2791,
+          "option_text": "Using docker exec to access a running container",
+          "is_correct": false
+        },
+        {
+          "option_id": 2792,
+          "option_text": "Using docker inspect to view container details",
+          "is_correct": false
+        },
+        {
+          "option_id": 2793,
+          "option_text": "All of the above methods can be used",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 451,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize Docker image size for production?",
+      "options": [
+        {
+          "option_id": 2794,
+          "option_text": "Using the latest tag for all images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2795,
+          "option_text": "Installing all packages regardless of need",
+          "is_correct": false
+        },
+        {
+          "option_id": 2796,
+          "option_text": "Keeping all layers in the final image",
+          "is_correct": false
+        },
+        {
+          "option_id": 2797,
+          "option_text": "Using alpine-based images and multi-stage builds",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 452,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is multi-stage build in Docker and why use it?",
+      "options": [
+        {
+          "option_id": 2798,
+          "option_text": "A method to create smaller production images by separating build and runtime environments",
+          "is_correct": true
+        },
+        {
+          "option_id": 2799,
+          "option_text": "Building multiple images at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 2800,
+          "option_text": "A way to run multiple Dockerfiles",
+          "is_correct": false
+        },
+        {
+          "option_id": 2801,
+          "option_text": "Building images across multiple servers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 453,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle logging in Docker containers?",
+      "options": [
+        {
+          "option_id": 2802,
+          "option_text": "Writing logs to files inside containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2803,
+          "option_text": "Using console.log statements only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2804,
+          "option_text": "Logging to the host filesystem",
+          "is_correct": false
+        },
+        {
+          "option_id": 2805,
+          "option_text": "Using logging drivers to forward logs to centralized systems",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 454,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between COPY and ADD in Dockerfile?",
+      "options": [
+        {
+          "option_id": 2806,
+          "option_text": "COPY can download URLs, ADD cannot",
+          "is_correct": false
+        },
+        {
+          "option_id": 2807,
+          "option_text": "ADD can extract archives and download URLs, COPY only copies local files",
+          "is_correct": true
+        },
+        {
+          "option_id": 2808,
+          "option_text": "COPY can extract archives, ADD cannot",
+          "is_correct": false
+        },
+        {
+          "option_id": 2809,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 455,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you secure Docker containers?",
+      "options": [
+        {
+          "option_id": 2810,
+          "option_text": "Running containers as root user",
+          "is_correct": false
+        },
+        {
+          "option_id": 2811,
+          "option_text": "Disabling all security features",
+          "is_correct": false
+        },
+        {
+          "option_id": 2812,
+          "option_text": "Using privileged mode for all containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2813,
+          "option_text": "Using read-only root filesystems and dropping unnecessary capabilities",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 456,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Kubernetes handle service discovery?",
+      "options": [
+        {
+          "option_id": 2814,
+          "option_text": "Through environment variables and DNS built into the cluster",
+          "is_correct": true
+        },
+        {
+          "option_id": 2815,
+          "option_text": "By requiring manual IP configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 2816,
+          "option_text": "Through external DNS services only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2817,
+          "option_text": "Service discovery is not supported",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 457,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are Kubernetes operators and when would you use them?",
+      "options": [
+        {
+          "option_id": 2818,
+          "option_text": "Kubernetes administrators",
+          "is_correct": false
+        },
+        {
+          "option_id": 2819,
+          "option_text": "Command line tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 2820,
+          "option_text": "UI plugins",
+          "is_correct": false
+        },
+        {
+          "option_id": 2821,
+          "option_text": "Custom controllers that automate application management tasks",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 458,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement auto-scaling in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2822,
+          "option_text": "By manually adding nodes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2823,
+          "option_text": "Using Horizontal Pod Autoscaler based on metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 2824,
+          "option_text": "Auto-scaling is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2825,
+          "option_text": "By restarting the cluster",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 459,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a DaemonSet and a Deployment?",
+      "options": [
+        {
+          "option_id": 2826,
+          "option_text": "DaemonSet is for stateless apps, Deployment for stateful",
+          "is_correct": false
+        },
+        {
+          "option_id": 2827,
+          "option_text": "Deployment runs on all nodes, DaemonSet runs selected pods",
+          "is_correct": false
+        },
+        {
+          "option_id": 2828,
+          "option_text": "DaemonSet runs on every node, Deployment manages replicated pods",
+          "is_correct": true
+        },
+        {
+          "option_id": 2829,
+          "option_text": "They are identical resources",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 460,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage persistent storage in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2830,
+          "option_text": "Using PersistentVolumes and PersistentVolumeClaims with StorageClasses",
+          "is_correct": true
+        },
+        {
+          "option_id": 2831,
+          "option_text": "Storing data in containers only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2832,
+          "option_text": "Using ConfigMaps for storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 2833,
+          "option_text": "Persistent storage is not available",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 461,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create custom GitHub Actions using Docker?",
+      "options": [
+        {
+          "option_id": 2834,
+          "option_text": "By writing JavaScript only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2835,
+          "option_text": "Actions cannot use Docker",
+          "is_correct": false
+        },
+        {
+          "option_id": 2836,
+          "option_text": "By installing Docker on runners",
+          "is_correct": false
+        },
+        {
+          "option_id": 2837,
+          "option_text": "Creating a Dockerfile and metadata file that defines the action",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 462,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are workflow commands in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2838,
+          "option_text": "Commands to manage GitHub repositories",
+          "is_correct": false
+        },
+        {
+          "option_id": 2839,
+          "option_text": "Special syntax to set outputs, environment variables, and debug messages",
+          "is_correct": true
+        },
+        {
+          "option_id": 2840,
+          "option_text": "Command line tools for workflows",
+          "is_correct": false
+        },
+        {
+          "option_id": 2841,
+          "option_text": "GitHub CLI commands",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 463,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement conditional execution in GitHub Actions?",
+      "options": [
+        {
+          "option_id": 2842,
+          "option_text": "Using if/else statements in YAML",
+          "is_correct": false
+        },
+        {
+          "option_id": 2843,
+          "option_text": "Conditional execution is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2844,
+          "option_text": "By creating separate workflows",
+          "is_correct": false
+        },
+        {
+          "option_id": 2845,
+          "option_text": "Using the \"if\" condition with expression syntax",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 464,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are artifacts in GitHub Actions and how are they used?",
+      "options": [
+        {
+          "option_id": 2846,
+          "option_text": "Files generated during workflow runs that can be saved and shared",
+          "is_correct": true
+        },
+        {
+          "option_id": 2847,
+          "option_text": "GitHub repository settings",
+          "is_correct": false
+        },
+        {
+          "option_id": 2848,
+          "option_text": "Code review comments",
+          "is_correct": false
+        },
+        {
+          "option_id": 2849,
+          "option_text": "Pull request templates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 465,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you secure GitHub Actions workflows?",
+      "options": [
+        {
+          "option_id": 2850,
+          "option_text": "Using secrets for sensitive data",
+          "is_correct": false
+        },
+        {
+          "option_id": 2851,
+          "option_text": "Pin actions to specific commit SHAs",
+          "is_correct": false
+        },
+        {
+          "option_id": 2852,
+          "option_text": "Limit permissions with GITHUB_TOKEN",
+          "is_correct": false
+        },
+        {
+          "option_id": 2853,
+          "option_text": "All of the above security practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 466,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a GitOps workflow and how does it work?",
+      "options": [
+        {
+          "option_id": 2854,
+          "option_text": "A workflow using Git for version control only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2855,
+          "option_text": "Using Git as the single source of truth for declarative infrastructure",
+          "is_correct": true
+        },
+        {
+          "option_id": 2856,
+          "option_text": "Git-based project management",
+          "is_correct": false
+        },
+        {
+          "option_id": 2857,
+          "option_text": "A GitHub feature for operations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 467,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement approval gates in a CI/CD pipeline?",
+      "options": [
+        {
+          "option_id": 2858,
+          "option_text": "Approval gates are not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2859,
+          "option_text": "By sending emails to managers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2860,
+          "option_text": "Using manual intervention steps in pipeline configuration",
+          "is_correct": true
+        },
+        {
+          "option_id": 2861,
+          "option_text": "By waiting for code reviews",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 468,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is infrastructure as code and what tools are used?",
+      "options": [
+        {
+          "option_id": 2862,
+          "option_text": "Managing infrastructure through machine-readable definition files using tools like Terraform",
+          "is_correct": true
+        },
+        {
+          "option_id": 2863,
+          "option_text": "Writing infrastructure documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2864,
+          "option_text": "Drawing network diagrams",
+          "is_correct": false
+        },
+        {
+          "option_id": 2865,
+          "option_text": "Physical hardware configuration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 469,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle database migrations in deployment pipelines?",
+      "options": [
+        {
+          "option_id": 2866,
+          "option_text": "Running migrations manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 2867,
+          "option_text": "Skipping migrations during deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 2868,
+          "option_text": "Using downtime for migrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 2869,
+          "option_text": "Automated migration scripts with backward compatibility",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 470,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are feature flags and how do they relate to deployment?",
+      "options": [
+        {
+          "option_id": 2870,
+          "option_text": "Flags displayed on features page",
+          "is_correct": false
+        },
+        {
+          "option_id": 2871,
+          "option_text": "Configuration toggles that enable or disable features without deployment",
+          "is_correct": true
+        },
+        {
+          "option_id": 2872,
+          "option_text": "GitHub repository flags",
+          "is_correct": false
+        },
+        {
+          "option_id": 2873,
+          "option_text": "Code review indicators",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 471,
+      "subskill_id": 23,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between docker run and docker start?",
+      "options": [
+        {
+          "option_id": 2874,
+          "option_text": "They are the same command",
+          "is_correct": false
+        },
+        {
+          "option_id": 2875,
+          "option_text": "docker run starts stopped containers, docker start creates new ones",
+          "is_correct": false
+        },
+        {
+          "option_id": 2876,
+          "option_text": "docker run creates and starts new containers, docker start restarts stopped containers",
+          "is_correct": true
+        },
+        {
+          "option_id": 2877,
+          "option_text": "docker run is for images, docker start is for containers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 472,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Kubernetes pod networking work?",
+      "options": [
+        {
+          "option_id": 2878,
+          "option_text": "Each pod gets a unique IP address and can communicate with all other pods directly",
+          "is_correct": true
+        },
+        {
+          "option_id": 2879,
+          "option_text": "Pods share IP addresses",
+          "is_correct": false
+        },
+        {
+          "option_id": 2880,
+          "option_text": "Pods cannot communicate with each other",
+          "is_correct": false
+        },
+        {
+          "option_id": 2881,
+          "option_text": "Networking requires manual configuration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 473,
+      "subskill_id": 25,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you reuse workflows across multiple repositories?",
+      "options": [
+        {
+          "option_id": 2882,
+          "option_text": "By copying and pasting workflow files",
+          "is_correct": false
+        },
+        {
+          "option_id": 2883,
+          "option_text": "Workflows cannot be reused",
+          "is_correct": false
+        },
+        {
+          "option_id": 2884,
+          "option_text": "Using GitHub gists",
+          "is_correct": false
+        },
+        {
+          "option_id": 2885,
+          "option_text": "Using reusable workflows with the \"workflow_call\" trigger",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 474,
+      "subskill_id": 26,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a rolling deployment strategy?",
+      "options": [
+        {
+          "option_id": 2886,
+          "option_text": "Deploying all instances at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 2887,
+          "option_text": "Gradually replacing old version instances with new ones",
+          "is_correct": true
+        },
+        {
+          "option_id": 2888,
+          "option_text": "Deploying to a different region",
+          "is_correct": false
+        },
+        {
+          "option_id": 2889,
+          "option_text": "A deployment that rolls back automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 475,
+      "subskill_id": 24,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform zero-downtime deployments in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2890,
+          "option_text": "Using the recreate deployment strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 2891,
+          "option_text": "Zero-downtime is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2892,
+          "option_text": "By stopping all pods first",
+          "is_correct": false
+        },
+        {
+          "option_id": 2893,
+          "option_text": "Using rolling updates with proper health checks and pod disruption budgets",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 476,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a custom Docker storage driver?",
+      "options": [
+        {
+          "option_id": 2966,
+          "option_text": "By modifying the Docker source code only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2967,
+          "option_text": "Implementing the storage driver interface and registering it with Docker",
+          "is_correct": true
+        },
+        {
+          "option_id": 2968,
+          "option_text": "Custom storage drivers are not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2969,
+          "option_text": "By using third-party tools only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 477,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security implications of running privileged containers?",
+      "options": [
+        {
+          "option_id": 2970,
+          "option_text": "Privileged containers have no security risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 2971,
+          "option_text": "They run with fewer privileges than regular containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2972,
+          "option_text": "They are recommended for production",
+          "is_correct": false
+        },
+        {
+          "option_id": 2973,
+          "option_text": "They have root access to the host and can compromise the entire system",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 478,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you debug Docker daemon performance issues?",
+      "options": [
+        {
+          "option_id": 2974,
+          "option_text": "By restarting the daemon repeatedly",
+          "is_correct": false
+        },
+        {
+          "option_id": 2975,
+          "option_text": "Performance issues cannot be debugged",
+          "is_correct": false
+        },
+        {
+          "option_id": 2976,
+          "option_text": "Using docker system events and profiling tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 2977,
+          "option_text": "By reinstalling Docker",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 479,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement Docker image vulnerability scanning in CI/CD?",
+      "options": [
+        {
+          "option_id": 2978,
+          "option_text": "Integrating tools like Trivy or Clair into the pipeline to fail on critical vulnerabilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 2979,
+          "option_text": "Scanning images manually before deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 2980,
+          "option_text": "Vulnerability scanning is not necessary",
+          "is_correct": false
+        },
+        {
+          "option_id": 2981,
+          "option_text": "By using antivirus software",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 480,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does Docker networking work under the hood with network namespaces?",
+      "options": [
+        {
+          "option_id": 2982,
+          "option_text": "Docker uses the host network namespace directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 2983,
+          "option_text": "Each container gets its own network namespace with virtual Ethernet pairs",
+          "is_correct": true
+        },
+        {
+          "option_id": 2984,
+          "option_text": "Network namespaces are not used by Docker",
+          "is_correct": false
+        },
+        {
+          "option_id": 2985,
+          "option_text": "Docker uses physical network interfaces only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 481,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement custom schedulers in Kubernetes?",
+      "options": [
+        {
+          "option_id": 2986,
+          "option_text": "Custom schedulers are not supported",
+          "is_correct": false
+        },
+        {
+          "option_id": 2987,
+          "option_text": "By modifying the default scheduler code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2988,
+          "option_text": "Using third-party tools only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2989,
+          "option_text": "Writing a scheduler that watches pods and assigns nodes using the Kubernetes API",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 482,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the trade-offs between using Ingress controllers vs Service Mesh?",
+      "options": [
+        {
+          "option_id": 2990,
+          "option_text": "Ingress is for security, Service Mesh is for routing",
+          "is_correct": false
+        },
+        {
+          "option_id": 2991,
+          "option_text": "Service Mesh is for security, Ingress is for routing",
+          "is_correct": false
+        },
+        {
+          "option_id": 2992,
+          "option_text": "Service Mesh provides mTLS and observability, Ingress provides basic routing",
+          "is_correct": true
+        },
+        {
+          "option_id": 2993,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 483,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement multi-cluster Kubernetes management?",
+      "options": [
+        {
+          "option_id": 2994,
+          "option_text": "Using tools like Rancher or Kubernetes Federation",
+          "is_correct": true
+        },
+        {
+          "option_id": 2995,
+          "option_text": "Managing each cluster independently with no coordination",
+          "is_correct": false
+        },
+        {
+          "option_id": 2996,
+          "option_text": "Multi-cluster management is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2997,
+          "option_text": "By using kubectl context switching only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 484,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you troubleshoot Kubernetes control plane failures?",
+      "options": [
+        {
+          "option_id": 2998,
+          "option_text": "By reinstalling the entire cluster",
+          "is_correct": false
+        },
+        {
+          "option_id": 2999,
+          "option_text": "Checking API server logs, etcd health, and controller manager status",
+          "is_correct": true
+        },
+        {
+          "option_id": 3000,
+          "option_text": "Control plane failures cannot be fixed",
+          "is_correct": false
+        },
+        {
+          "option_id": 3001,
+          "option_text": "By restarting all nodes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 485,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are Kubernetes admission controllers and how do you create custom ones?",
+      "options": [
+        {
+          "option_id": 3002,
+          "option_text": "Admission controllers are built-in only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3003,
+          "option_text": "They validate API requests after persistence",
+          "is_correct": false
+        },
+        {
+          "option_id": 3004,
+          "option_text": "Custom admission controllers require modifying Kubernetes source",
+          "is_correct": false
+        },
+        {
+          "option_id": 3005,
+          "option_text": "Webhook admission controllers that validate or mutate API requests",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 486,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement self-hosted runners at scale?",
+      "options": [
+        {
+          "option_id": 3006,
+          "option_text": "Using a single powerful runner for all jobs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3007,
+          "option_text": "Self-hosted runners cannot scale",
+          "is_correct": false
+        },
+        {
+          "option_id": 3008,
+          "option_text": "Using auto-scaling groups with ephemeral runners",
+          "is_correct": true
+        },
+        {
+          "option_id": 3009,
+          "option_text": "By installing runners on developer machines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 487,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create composite actions with complex logic?",
+      "options": [
+        {
+          "option_id": 3010,
+          "option_text": "Combining multiple steps and actions in a single action definition",
+          "is_correct": true
+        },
+        {
+          "option_id": 3011,
+          "option_text": "Composite actions cannot have complex logic",
+          "is_correct": false
+        },
+        {
+          "option_id": 3012,
+          "option_text": "By writing JavaScript actions only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3013,
+          "option_text": "Using Docker actions exclusively",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 488,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you migrate from Jenkins to GitHub Actions?",
+      "options": [
+        {
+          "option_id": 3014,
+          "option_text": "By running both systems in parallel forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 3015,
+          "option_text": "Incremental migration of jobs with feature parity testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 3016,
+          "option_text": "Migrating all jobs at once without testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3017,
+          "option_text": "Jenkins cannot be migrated to GitHub Actions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 489,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the limitations of GitHub Actions and how do you work around them?",
+      "options": [
+        {
+          "option_id": 3018,
+          "option_text": "GitHub Actions has no limitations",
+          "is_correct": false
+        },
+        {
+          "option_id": 3019,
+          "option_text": "Limitations cannot be worked around",
+          "is_correct": false
+        },
+        {
+          "option_id": 3020,
+          "option_text": "By using only GitHub-hosted runners",
+          "is_correct": false
+        },
+        {
+          "option_id": 3021,
+          "option_text": "Using self-hosted runners, matrix strategies, and reusable workflows",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 490,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement fine-grained permissions for GitHub Actions?",
+      "options": [
+        {
+          "option_id": 3022,
+          "option_text": "Permissions cannot be customized",
+          "is_correct": false
+        },
+        {
+          "option_id": 3023,
+          "option_text": "By giving all permissions to all workflows",
+          "is_correct": false
+        },
+        {
+          "option_id": 3024,
+          "option_text": "Using environment protection rules and GITHUB_TOKEN permissions",
+          "is_correct": true
+        },
+        {
+          "option_id": 3025,
+          "option_text": "By using GitHub Teams only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 491,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a deployment pipeline for a multi-region application?",
+      "options": [
+        {
+          "option_id": 3026,
+          "option_text": "Progressive deployment across regions with health checks and rollback capability",
+          "is_correct": true
+        },
+        {
+          "option_id": 3027,
+          "option_text": "Deploying to all regions simultaneously",
+          "is_correct": false
+        },
+        {
+          "option_id": 3028,
+          "option_text": "Manual deployment to each region",
+          "is_correct": false
+        },
+        {
+          "option_id": 3029,
+          "option_text": "Using a single region only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 492,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the challenges of implementing CI/CD for legacy applications?",
+      "options": [
+        {
+          "option_id": 3030,
+          "option_text": "Legacy applications have no challenges",
+          "is_correct": false
+        },
+        {
+          "option_id": 3031,
+          "option_text": "By rewriting all legacy applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 3032,
+          "option_text": "CI/CD cannot be implemented for legacy apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 3033,
+          "option_text": "Long build times, dependency management, and testing complexity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 493,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement chaos engineering in deployment pipelines?",
+      "options": [
+        {
+          "option_id": 3034,
+          "option_text": "Chaos engineering is not possible in pipelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 3035,
+          "option_text": "By introducing random failures in production",
+          "is_correct": false
+        },
+        {
+          "option_id": 3036,
+          "option_text": "Injecting failures in staging environments to test resilience",
+          "is_correct": true
+        },
+        {
+          "option_id": 3037,
+          "option_text": "By avoiding all testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 494,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a pipeline for serverless applications?",
+      "options": [
+        {
+          "option_id": 3038,
+          "option_text": "Using traditional deployment strategies",
+          "is_correct": false
+        },
+        {
+          "option_id": 3039,
+          "option_text": "Infrastructure as code with SAM or CloudFormation and integration testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 3040,
+          "option_text": "Serverless apps do not need pipelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 3041,
+          "option_text": "Manual deployment only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 495,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security best practices for CI/CD pipelines?",
+      "options": [
+        {
+          "option_id": 3042,
+          "option_text": "Secret management, minimal permissions, dependency scanning, and signed commits",
+          "is_correct": true
+        },
+        {
+          "option_id": 3043,
+          "option_text": "Storing secrets in code repositories",
+          "is_correct": false
+        },
+        {
+          "option_id": 3044,
+          "option_text": "Using admin privileges for all operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 3045,
+          "option_text": "Disabling all security features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 496,
+      "subskill_id": 24,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does Kubernetes etcd work and how do you back it up?",
+      "options": [
+        {
+          "option_id": 3046,
+          "option_text": "etcd is a database that does not need backups",
+          "is_correct": false
+        },
+        {
+          "option_id": 3047,
+          "option_text": "etcd stores pod logs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3048,
+          "option_text": "etcd cannot be backed up",
+          "is_correct": false
+        },
+        {
+          "option_id": 3049,
+          "option_text": "Distributed key-value store for cluster state with snapshot backups",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 497,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement blue-green deployment with database compatibility?",
+      "options": [
+        {
+          "option_id": 3050,
+          "option_text": "Blue-green deployments cannot work with databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 3051,
+          "option_text": "By using the same database for both environments",
+          "is_correct": false
+        },
+        {
+          "option_id": 3052,
+          "option_text": "Backward-compatible schema changes and data synchronization strategies",
+          "is_correct": true
+        },
+        {
+          "option_id": 3053,
+          "option_text": "By shutting down the database during deployment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 498,
+      "subskill_id": 23,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement Docker Content Trust for image signing?",
+      "options": [
+        {
+          "option_id": 3054,
+          "option_text": "Image signing is not necessary",
+          "is_correct": false
+        },
+        {
+          "option_id": 3055,
+          "option_text": "Enabling DCT and signing images with delegation keys",
+          "is_correct": true
+        },
+        {
+          "option_id": 3056,
+          "option_text": "Docker does not support image signing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3057,
+          "option_text": "By using passwords for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 499,
+      "subskill_id": 25,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you create a GitHub Action that uses third-party APIs?",
+      "options": [
+        {
+          "option_id": 3058,
+          "option_text": "Using secrets for API keys and making HTTP requests in the action code",
+          "is_correct": true
+        },
+        {
+          "option_id": 3059,
+          "option_text": "Third-party APIs cannot be used",
+          "is_correct": false
+        },
+        {
+          "option_id": 3060,
+          "option_text": "By hardcoding API keys in the workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 3061,
+          "option_text": "Using browser automation only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 500,
+      "subskill_id": 26,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure and optimize CI/CD pipeline performance?",
+      "options": [
+        {
+          "option_id": 3062,
+          "option_text": "Pipeline performance cannot be measured",
+          "is_correct": false
+        },
+        {
+          "option_id": 3063,
+          "option_text": "By guessing what is slow",
+          "is_correct": false
+        },
+        {
+          "option_id": 3064,
+          "option_text": "Optimization is not necessary",
+          "is_correct": false
+        },
+        {
+          "option_id": 3065,
+          "option_text": "Track metrics, identify bottlenecks, parallelize jobs, and cache dependencies",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

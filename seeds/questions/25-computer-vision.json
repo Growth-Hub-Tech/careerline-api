@@ -1,0 +1,2906 @@
+{
+  "skill_id": 25,
+  "skill_name": "Computer Vision",
+  "questions": [
+    {
+      "question_id": 2401,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is image classification in computer vision?",
+      "options": [
+        {
+          "option_id": 11866,
+          "option_text": "A process of assigning a category to an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11867,
+          "option_text": "A process of detecting objects in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11868,
+          "option_text": "A process of segmenting an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11869,
+          "option_text": "A process of generating an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2402,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a classifier in image classification?",
+      "options": [
+        {
+          "option_id": 11870,
+          "option_text": "A model that assigns a category to an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11871,
+          "option_text": "A model that detects objects in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11872,
+          "option_text": "A model that segments an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11873,
+          "option_text": "A model that generates an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2403,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a training set in image classification?",
+      "options": [
+        {
+          "option_id": 11874,
+          "option_text": "A dataset used to train an image classifier",
+          "is_correct": true
+        },
+        {
+          "option_id": 11875,
+          "option_text": "A dataset used to test an image classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11876,
+          "option_text": "A dataset used to validate an image classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11877,
+          "option_text": "A dataset used to deploy an image classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2404,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test set in image classification?",
+      "options": [
+        {
+          "option_id": 11878,
+          "option_text": "A dataset used to evaluate an image classifier",
+          "is_correct": true
+        },
+        {
+          "option_id": 11879,
+          "option_text": "A dataset used to train an image classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11880,
+          "option_text": "A dataset used to validate an image classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11881,
+          "option_text": "A dataset used to deploy an image classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2405,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a CNN in image classification?",
+      "options": [
+        {
+          "option_id": 11882,
+          "option_text": "A convolutional neural network used for image classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11883,
+          "option_text": "A recurrent neural network used for image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11884,
+          "option_text": "A transformer used for image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11885,
+          "option_text": "A generative adversarial network used for image classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2406,
+      "subskill_id": 117,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is transfer learning in image classification?",
+      "options": [
+        {
+          "option_id": 11886,
+          "option_text": "Using a pre-trained model on a new image classification task",
+          "is_correct": true
+        },
+        {
+          "option_id": 11887,
+          "option_text": "Training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 11888,
+          "option_text": "Evaluating a model on a new task",
+          "is_correct": false
+        },
+        {
+          "option_id": 11889,
+          "option_text": "Deploying a model on a new task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2407,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is object detection in computer vision?",
+      "options": [
+        {
+          "option_id": 11890,
+          "option_text": "A process of identifying and localizing objects in an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11891,
+          "option_text": "A process of classifying an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11892,
+          "option_text": "A process of segmenting an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11893,
+          "option_text": "A process of generating an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2408,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a bounding box in object detection?",
+      "options": [
+        {
+          "option_id": 11894,
+          "option_text": "A rectangle that surrounds an object in an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11895,
+          "option_text": "A circle that surrounds an object in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11896,
+          "option_text": "A polygon that surrounds an object in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11897,
+          "option_text": "A point that marks an object in an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2409,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a class label in object detection?",
+      "options": [
+        {
+          "option_id": 11898,
+          "option_text": "A category assigned to a detected object",
+          "is_correct": true
+        },
+        {
+          "option_id": 11899,
+          "option_text": "A confidence score assigned to a detected object",
+          "is_correct": false
+        },
+        {
+          "option_id": 11900,
+          "option_text": "A bounding box assigned to a detected object",
+          "is_correct": false
+        },
+        {
+          "option_id": 11901,
+          "option_text": "A feature assigned to a detected object",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2410,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a confidence score in object detection?",
+      "options": [
+        {
+          "option_id": 11902,
+          "option_text": "A value indicating the certainty of a detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 11903,
+          "option_text": "A value indicating the category of a detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 11904,
+          "option_text": "A value indicating the location of a detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 11905,
+          "option_text": "A value indicating the size of a detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2411,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a detection algorithm in object detection?",
+      "options": [
+        {
+          "option_id": 11906,
+          "option_text": "A process that finds objects in an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11907,
+          "option_text": "A process that classifies an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11908,
+          "option_text": "A process that segments an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11909,
+          "option_text": "A process that generates an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2412,
+      "subskill_id": 118,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between classification and detection?",
+      "options": [
+        {
+          "option_id": 11910,
+          "option_text": "Classification assigns a label to the whole image; detection finds and labels objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 11911,
+          "option_text": "Detection assigns a label to the whole image; classification finds and labels objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 11912,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 11913,
+          "option_text": "Classification is for video; detection is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2413,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is OpenCV?",
+      "options": [
+        {
+          "option_id": 11914,
+          "option_text": "An open-source library for computer vision",
+          "is_correct": true
+        },
+        {
+          "option_id": 11915,
+          "option_text": "A programming language for computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 11916,
+          "option_text": "A database for computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 11917,
+          "option_text": "A framework for computer vision",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2414,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pixel in image processing?",
+      "options": [
+        {
+          "option_id": 11918,
+          "option_text": "The smallest unit of an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11919,
+          "option_text": "A block of an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11920,
+          "option_text": "A region of an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11921,
+          "option_text": "An object in an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2415,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an image in OpenCV?",
+      "options": [
+        {
+          "option_id": 11922,
+          "option_text": "A matrix of pixels",
+          "is_correct": true
+        },
+        {
+          "option_id": 11923,
+          "option_text": "A vector of pixels",
+          "is_correct": false
+        },
+        {
+          "option_id": 11924,
+          "option_text": "A scalar of pixels",
+          "is_correct": false
+        },
+        {
+          "option_id": 11925,
+          "option_text": "A tensor of pixels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2416,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a video in OpenCV?",
+      "options": [
+        {
+          "option_id": 11926,
+          "option_text": "A sequence of images",
+          "is_correct": true
+        },
+        {
+          "option_id": 11927,
+          "option_text": "A single image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11928,
+          "option_text": "A group of images",
+          "is_correct": false
+        },
+        {
+          "option_id": 11929,
+          "option_text": "A collection of images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2417,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a filter in OpenCV?",
+      "options": [
+        {
+          "option_id": 11930,
+          "option_text": "A function that transforms an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11931,
+          "option_text": "A function that detects objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 11932,
+          "option_text": "A function that classifies objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 11933,
+          "option_text": "A function that generates objects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2418,
+      "subskill_id": 119,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a feature in OpenCV?",
+      "options": [
+        {
+          "option_id": 11934,
+          "option_text": "A characteristic of an image used for computer vision tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11935,
+          "option_text": "A pixel in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11936,
+          "option_text": "A filter in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 11937,
+          "option_text": "An object in an image",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2419,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is YOLO in computer vision?",
+      "options": [
+        {
+          "option_id": 11938,
+          "option_text": "A real-time object detection algorithm",
+          "is_correct": true
+        },
+        {
+          "option_id": 11939,
+          "option_text": "A real-time image classification algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 11940,
+          "option_text": "A real-time image segmentation algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 11941,
+          "option_text": "A real-time image generation algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2420,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of YOLO?",
+      "options": [
+        {
+          "option_id": 11942,
+          "option_text": "To detect objects in images in real-time",
+          "is_correct": true
+        },
+        {
+          "option_id": 11943,
+          "option_text": "To classify images in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 11944,
+          "option_text": "To segment images in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 11945,
+          "option_text": "To generate images in real-time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2421,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a YOLO model?",
+      "options": [
+        {
+          "option_id": 11946,
+          "option_text": "A model that uses YOLO for object detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 11947,
+          "option_text": "A model that uses YOLO for image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11948,
+          "option_text": "A model that uses YOLO for image segmentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11949,
+          "option_text": "A model that uses YOLO for image generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2422,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a YOLO architecture?",
+      "options": [
+        {
+          "option_id": 11950,
+          "option_text": "The architecture of YOLO, which includes convolutional layers",
+          "is_correct": true
+        },
+        {
+          "option_id": 11951,
+          "option_text": "The architecture of a CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 11952,
+          "option_text": "The architecture of a RNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 11953,
+          "option_text": "The architecture of a transformer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2423,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a YOLO grid?",
+      "options": [
+        {
+          "option_id": 11954,
+          "option_text": "A grid used by YOLO to divide the input image into cells",
+          "is_correct": true
+        },
+        {
+          "option_id": 11955,
+          "option_text": "A grid used by YOLO to divide the output",
+          "is_correct": false
+        },
+        {
+          "option_id": 11956,
+          "option_text": "A grid used by YOLO to divide the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11957,
+          "option_text": "A grid used by YOLO to divide the dataset",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2424,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a YOLO anchor box?",
+      "options": [
+        {
+          "option_id": 11958,
+          "option_text": "A box used by YOLO to predict object locations",
+          "is_correct": true
+        },
+        {
+          "option_id": 11959,
+          "option_text": "A box used by YOLO to classify objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 11960,
+          "option_text": "A box used by YOLO to segment objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 11961,
+          "option_text": "A box used by YOLO to generate objects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2425,
+      "subskill_id": 120,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between YOLO and other detectors?",
+      "options": [
+        {
+          "option_id": 11962,
+          "option_text": "YOLO is a one-stage detector; other detectors like R-CNN are two-stage",
+          "is_correct": true
+        },
+        {
+          "option_id": 11963,
+          "option_text": "YOLO is a two-stage detector; other detectors are one-stage",
+          "is_correct": false
+        },
+        {
+          "option_id": 11964,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 11965,
+          "option_text": "YOLO is for video; other detectors are for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2426,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build an image classifier?",
+      "options": [
+        {
+          "option_id": 11966,
+          "option_text": "By collecting labeled data, extracting features, and training a model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11967,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11968,
+          "option_text": "By copying an existing classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11969,
+          "option_text": "By using a pre-built classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2427,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a feature in image classification?",
+      "options": [
+        {
+          "option_id": 11970,
+          "option_text": "A characteristic of the image used for classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11971,
+          "option_text": "A label in image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11972,
+          "option_text": "A dataset in image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11973,
+          "option_text": "A model in image classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2428,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a label in image classification?",
+      "options": [
+        {
+          "option_id": 11974,
+          "option_text": "A category assigned to an image in classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11975,
+          "option_text": "A feature in image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11976,
+          "option_text": "A dataset in image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11977,
+          "option_text": "A model in image classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2429,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a confusion matrix in image classification?",
+      "options": [
+        {
+          "option_id": 11978,
+          "option_text": "A table used to evaluate classifier performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11979,
+          "option_text": "A table used to train a classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11980,
+          "option_text": "A table used to test a classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11981,
+          "option_text": "A table used to deploy a classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2430,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is accuracy in image classification?",
+      "options": [
+        {
+          "option_id": 11982,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11983,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 11984,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 11985,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2431,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you perform object detection?",
+      "options": [
+        {
+          "option_id": 11986,
+          "option_text": "By using algorithms like R-CNN, YOLO, and SSD",
+          "is_correct": true
+        },
+        {
+          "option_id": 11987,
+          "option_text": "By using algorithms like K-means",
+          "is_correct": false
+        },
+        {
+          "option_id": 11988,
+          "option_text": "By using algorithms like PCA",
+          "is_correct": false
+        },
+        {
+          "option_id": 11989,
+          "option_text": "By using algorithms like SVM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2432,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a region proposal in object detection?",
+      "options": [
+        {
+          "option_id": 11990,
+          "option_text": "A set of candidate object locations in an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 11991,
+          "option_text": "A set of candidate object categories",
+          "is_correct": false
+        },
+        {
+          "option_id": 11992,
+          "option_text": "A set of candidate object features",
+          "is_correct": false
+        },
+        {
+          "option_id": 11993,
+          "option_text": "A set of candidate object labels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2433,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sliding window in object detection?",
+      "options": [
+        {
+          "option_id": 11994,
+          "option_text": "A technique where a window slides across an image to detect objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 11995,
+          "option_text": "A technique where a window is fixed in one position",
+          "is_correct": false
+        },
+        {
+          "option_id": 11996,
+          "option_text": "A technique where a window is randomly placed",
+          "is_correct": false
+        },
+        {
+          "option_id": 11997,
+          "option_text": "A technique where a window is not used",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2434,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is non-maximum suppression (NMS)?",
+      "options": [
+        {
+          "option_id": 11998,
+          "option_text": "A technique to remove duplicate detections",
+          "is_correct": true
+        },
+        {
+          "option_id": 11999,
+          "option_text": "A technique to remove false detections",
+          "is_correct": false
+        },
+        {
+          "option_id": 12000,
+          "option_text": "A technique to remove true detections",
+          "is_correct": false
+        },
+        {
+          "option_id": 12001,
+          "option_text": "A technique to remove all detections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2435,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Intersection over Union (IoU)?",
+      "options": [
+        {
+          "option_id": 12002,
+          "option_text": "A metric that measures the overlap between two bounding boxes",
+          "is_correct": true
+        },
+        {
+          "option_id": 12003,
+          "option_text": "A metric that measures the distance between two bounding boxes",
+          "is_correct": false
+        },
+        {
+          "option_id": 12004,
+          "option_text": "A metric that measures the size of a bounding box",
+          "is_correct": false
+        },
+        {
+          "option_id": 12005,
+          "option_text": "A metric that measures the shape of a bounding box",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2436,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you read an image in OpenCV?",
+      "options": [
+        {
+          "option_id": 12006,
+          "option_text": "By using the cv2.imread function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12007,
+          "option_text": "By using the cv2.imshow function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12008,
+          "option_text": "By using the cv2.resize function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12009,
+          "option_text": "By using the cv2.cvtColor function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2437,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you display an image in OpenCV?",
+      "options": [
+        {
+          "option_id": 12010,
+          "option_text": "By using the cv2.imshow function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12011,
+          "option_text": "By using the cv2.imread function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12012,
+          "option_text": "By using the cv2.resize function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12013,
+          "option_text": "By using the cv2.cvtColor function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2438,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you resize an image in OpenCV?",
+      "options": [
+        {
+          "option_id": 12014,
+          "option_text": "By using the cv2.resize function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12015,
+          "option_text": "By using the cv2.imread function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12016,
+          "option_text": "By using the cv2.imshow function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12017,
+          "option_text": "By using the cv2.cvtColor function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2439,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you convert an image to grayscale in OpenCV?",
+      "options": [
+        {
+          "option_id": 12018,
+          "option_text": "By using the cv2.cvtColor function with cv2.COLOR_BGR2GRAY",
+          "is_correct": true
+        },
+        {
+          "option_id": 12019,
+          "option_text": "By using the cv2.imread function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12020,
+          "option_text": "By using the cv2.imshow function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12021,
+          "option_text": "By using the cv2.resize function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2440,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you apply a filter in OpenCV?",
+      "options": [
+        {
+          "option_id": 12022,
+          "option_text": "By using the cv2.filter2D function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12023,
+          "option_text": "By using the cv2.imread function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12024,
+          "option_text": "By using the cv2.imshow function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12025,
+          "option_text": "By using the cv2.resize function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2441,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use YOLO for object detection?",
+      "options": [
+        {
+          "option_id": 12026,
+          "option_text": "By loading a pre-trained YOLO model and using it for inference",
+          "is_correct": true
+        },
+        {
+          "option_id": 12027,
+          "option_text": "By training a new YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12028,
+          "option_text": "By using a different algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 12029,
+          "option_text": "By using a classification model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2442,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the YOLO architecture?",
+      "options": [
+        {
+          "option_id": 12030,
+          "option_text": "The neural network structure of YOLO",
+          "is_correct": true
+        },
+        {
+          "option_id": 12031,
+          "option_text": "The training process of YOLO",
+          "is_correct": false
+        },
+        {
+          "option_id": 12032,
+          "option_text": "The inference process of YOLO",
+          "is_correct": false
+        },
+        {
+          "option_id": 12033,
+          "option_text": "The evaluation process of YOLO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2443,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the YOLO loss function?",
+      "options": [
+        {
+          "option_id": 12034,
+          "option_text": "The loss function used to train YOLO",
+          "is_correct": true
+        },
+        {
+          "option_id": 12035,
+          "option_text": "The training process of YOLO",
+          "is_correct": false
+        },
+        {
+          "option_id": 12036,
+          "option_text": "The inference process of YOLO",
+          "is_correct": false
+        },
+        {
+          "option_id": 12037,
+          "option_text": "The evaluation process of YOLO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2444,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the YOLO inference?",
+      "options": [
+        {
+          "option_id": 12038,
+          "option_text": "The process of using a trained YOLO model to detect objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 12039,
+          "option_text": "The process of training a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12040,
+          "option_text": "The process of evaluating a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12041,
+          "option_text": "The process of deploying a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2445,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the YOLO training?",
+      "options": [
+        {
+          "option_id": 12042,
+          "option_text": "The process of training a YOLO model on a dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 12043,
+          "option_text": "The process of using a trained YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12044,
+          "option_text": "The process of evaluating a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12045,
+          "option_text": "The process of deploying a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2446,
+      "subskill_id": 117,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pre-trained model in image classification?",
+      "options": [
+        {
+          "option_id": 12046,
+          "option_text": "A pre-trained model that can be used for image classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 12047,
+          "option_text": "A model that is trained from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 12048,
+          "option_text": "A model that is randomly initialized",
+          "is_correct": false
+        },
+        {
+          "option_id": 12049,
+          "option_text": "A model that is not used for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2447,
+      "subskill_id": 118,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a multi-object detection?",
+      "options": [
+        {
+          "option_id": 12050,
+          "option_text": "A process of detecting multiple objects in an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 12051,
+          "option_text": "A process of detecting a single object in an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 12052,
+          "option_text": "A process of classifying multiple objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 12053,
+          "option_text": "A process of segmenting multiple objects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2448,
+      "subskill_id": 119,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a morphological operation in OpenCV?",
+      "options": [
+        {
+          "option_id": 12054,
+          "option_text": "A technique for processing images based on their shape",
+          "is_correct": true
+        },
+        {
+          "option_id": 12055,
+          "option_text": "A technique for processing images based on their color",
+          "is_correct": false
+        },
+        {
+          "option_id": 12056,
+          "option_text": "A technique for processing images based on their texture",
+          "is_correct": false
+        },
+        {
+          "option_id": 12057,
+          "option_text": "A technique for processing images based on their size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2449,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is YOLO's real-time capability?",
+      "options": [
+        {
+          "option_id": 12058,
+          "option_text": "YOLO can process images in real-time",
+          "is_correct": true
+        },
+        {
+          "option_id": 12059,
+          "option_text": "YOLO cannot process images in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 12060,
+          "option_text": "YOLO is slower than other detectors",
+          "is_correct": false
+        },
+        {
+          "option_id": 12061,
+          "option_text": "YOLO is not used for real-time applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2450,
+      "subskill_id": 120,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between YOLOv3 and YOLOv4?",
+      "options": [
+        {
+          "option_id": 12062,
+          "option_text": "YOLOv3 is an earlier version; YOLOv4 is a more advanced version",
+          "is_correct": true
+        },
+        {
+          "option_id": 12063,
+          "option_text": "YOLOv4 is an earlier version; YOLOv3 is a more advanced version",
+          "is_correct": false
+        },
+        {
+          "option_id": 12064,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12065,
+          "option_text": "YOLOv3 is for classification; YOLOv4 is for detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2451,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you evaluate an image classifier?",
+      "options": [
+        {
+          "option_id": 12066,
+          "option_text": "By using metrics like accuracy, precision, recall, and F1-score",
+          "is_correct": true
+        },
+        {
+          "option_id": 12067,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12068,
+          "option_text": "By ignoring evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12069,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2452,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is precision in image classification?",
+      "options": [
+        {
+          "option_id": 12070,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": true
+        },
+        {
+          "option_id": 12071,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 12072,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 12073,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2453,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is recall in image classification?",
+      "options": [
+        {
+          "option_id": 12074,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": true
+        },
+        {
+          "option_id": 12075,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 12076,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 12077,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2454,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is F1-score in image classification?",
+      "options": [
+        {
+          "option_id": 12078,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": true
+        },
+        {
+          "option_id": 12079,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 12080,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 12081,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2455,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the ROC curve in image classification?",
+      "options": [
+        {
+          "option_id": 12082,
+          "option_text": "A curve showing the trade-off between true positive and false positive rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 12083,
+          "option_text": "A curve showing the trade-off between precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 12084,
+          "option_text": "A curve showing the trade-off between accuracy and F1-score",
+          "is_correct": false
+        },
+        {
+          "option_id": 12085,
+          "option_text": "A curve showing the trade-off between bias and variance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2456,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between detection and segmentation?",
+      "options": [
+        {
+          "option_id": 12086,
+          "option_text": "Detection finds objects; segmentation finds pixels belonging to objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 12087,
+          "option_text": "Segmentation finds objects; detection finds pixels",
+          "is_correct": false
+        },
+        {
+          "option_id": 12088,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12089,
+          "option_text": "Detection is for video; segmentation is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2457,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a R-CNN in object detection?",
+      "options": [
+        {
+          "option_id": 12090,
+          "option_text": "A region-based CNN for object detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 12091,
+          "option_text": "A region-based CNN for image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 12092,
+          "option_text": "A region-based CNN for image segmentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12093,
+          "option_text": "A region-based CNN for image generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2458,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Fast R-CNN in object detection?",
+      "options": [
+        {
+          "option_id": 12094,
+          "option_text": "A faster version of R-CNN",
+          "is_correct": true
+        },
+        {
+          "option_id": 12095,
+          "option_text": "A slower version of R-CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 12096,
+          "option_text": "A version of R-CNN for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 12097,
+          "option_text": "A version of R-CNN for segmentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2459,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Faster R-CNN in object detection?",
+      "options": [
+        {
+          "option_id": 12098,
+          "option_text": "An even faster version of R-CNN",
+          "is_correct": true
+        },
+        {
+          "option_id": 12099,
+          "option_text": "A slower version of R-CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 12100,
+          "option_text": "A version of R-CNN for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 12101,
+          "option_text": "A version of R-CNN for segmentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2460,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Mask R-CNN in object detection?",
+      "options": [
+        {
+          "option_id": 12102,
+          "option_text": "A version of R-CNN for instance segmentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 12103,
+          "option_text": "A version of R-CNN for object detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 12104,
+          "option_text": "A version of R-CNN for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 12105,
+          "option_text": "A version of R-CNN for generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2461,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform edge detection in OpenCV?",
+      "options": [
+        {
+          "option_id": 12106,
+          "option_text": "By using the cv2.Canny function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12107,
+          "option_text": "By using the cv2.Sobel function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12108,
+          "option_text": "By using the cv2.Laplacian function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12109,
+          "option_text": "By using the cv2.GaussianBlur function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2462,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform face detection in OpenCV?",
+      "options": [
+        {
+          "option_id": 12110,
+          "option_text": "By using the cv2.CascadeClassifier function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12111,
+          "option_text": "By using the cv2.HOGDescriptor function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12112,
+          "option_text": "By using the cv2.SIFT function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12113,
+          "option_text": "By using the cv2.SURF function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2463,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform feature matching in OpenCV?",
+      "options": [
+        {
+          "option_id": 12114,
+          "option_text": "By using the cv2.SIFT function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12115,
+          "option_text": "By using the cv2.HOGDescriptor function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12116,
+          "option_text": "By using the cv2.CascadeClassifier function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12117,
+          "option_text": "By using the cv2.SURF function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2464,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform object tracking in OpenCV?",
+      "options": [
+        {
+          "option_id": 12118,
+          "option_text": "By using the cv2.Tracker function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12119,
+          "option_text": "By using the cv2.CascadeClassifier function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12120,
+          "option_text": "By using the cv2.SIFT function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12121,
+          "option_text": "By using the cv2.SURF function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2465,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform image segmentation in OpenCV?",
+      "options": [
+        {
+          "option_id": 12122,
+          "option_text": "By using the cv2.watershed function",
+          "is_correct": true
+        },
+        {
+          "option_id": 12123,
+          "option_text": "By using the cv2.Canny function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12124,
+          "option_text": "By using the cv2.Sobel function",
+          "is_correct": false
+        },
+        {
+          "option_id": 12125,
+          "option_text": "By using the cv2.GaussianBlur function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2466,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize YOLO for real-time detection?",
+      "options": [
+        {
+          "option_id": 12126,
+          "option_text": "By using model optimization techniques like quantization and pruning",
+          "is_correct": true
+        },
+        {
+          "option_id": 12127,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 12128,
+          "option_text": "By using a slower model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12129,
+          "option_text": "By using a larger model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2467,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the YOLO training process?",
+      "options": [
+        {
+          "option_id": 12130,
+          "option_text": "The process of training YOLO on a dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 12131,
+          "option_text": "The process of using a trained YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12132,
+          "option_text": "The process of evaluating a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12133,
+          "option_text": "The process of deploying a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2468,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the YOLO inference process?",
+      "options": [
+        {
+          "option_id": 12134,
+          "option_text": "The process of using a trained YOLO model to detect objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 12135,
+          "option_text": "The process of training a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12136,
+          "option_text": "The process of evaluating a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12137,
+          "option_text": "The process of deploying a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2469,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the YOLO evaluation process?",
+      "options": [
+        {
+          "option_id": 12138,
+          "option_text": "The process of evaluating a YOLO model on a dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 12139,
+          "option_text": "The process of training a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12140,
+          "option_text": "The process of using a trained YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12141,
+          "option_text": "The process of deploying a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2470,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the YOLO deployment process?",
+      "options": [
+        {
+          "option_id": 12142,
+          "option_text": "The process of deploying a YOLO model in production",
+          "is_correct": true
+        },
+        {
+          "option_id": 12143,
+          "option_text": "The process of training a YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12144,
+          "option_text": "The process of using a trained YOLO model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12145,
+          "option_text": "The process of evaluating a YOLO model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2471,
+      "subskill_id": 117,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning in image classification?",
+      "options": [
+        {
+          "option_id": 12146,
+          "option_text": "The process of fine-tuning a pre-trained model on a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 12147,
+          "option_text": "The process of training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 12148,
+          "option_text": "The process of evaluating a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12149,
+          "option_text": "The process of deploying a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2472,
+      "subskill_id": 118,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a single-shot detector (SSD)?",
+      "options": [
+        {
+          "option_id": 12150,
+          "option_text": "A single-shot detector that uses a single feed-forward network",
+          "is_correct": true
+        },
+        {
+          "option_id": 12151,
+          "option_text": "A two-stage detector that uses a region proposal network",
+          "is_correct": false
+        },
+        {
+          "option_id": 12152,
+          "option_text": "A detector that uses a sliding window",
+          "is_correct": false
+        },
+        {
+          "option_id": 12153,
+          "option_text": "A detector that uses a classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2473,
+      "subskill_id": 119,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a HOG feature in OpenCV?",
+      "options": [
+        {
+          "option_id": 12154,
+          "option_text": "A feature descriptor used for object detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 12155,
+          "option_text": "A feature descriptor used for image classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 12156,
+          "option_text": "A feature descriptor used for image segmentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 12157,
+          "option_text": "A feature descriptor used for image generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2474,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between YOLOv4 and YOLOv5?",
+      "options": [
+        {
+          "option_id": 12158,
+          "option_text": "YOLOv4 is a more advanced version than YOLOv5",
+          "is_correct": false
+        },
+        {
+          "option_id": 12159,
+          "option_text": "YOLOv5 is a more advanced version than YOLOv4",
+          "is_correct": true
+        },
+        {
+          "option_id": 12160,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12161,
+          "option_text": "YOLOv4 is for classification; YOLOv5 is for detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2475,
+      "subskill_id": 120,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between YOLOv5 and YOLOv7?",
+      "options": [
+        {
+          "option_id": 12162,
+          "option_text": "YOLOv7 is a more advanced version than YOLOv5",
+          "is_correct": true
+        },
+        {
+          "option_id": 12163,
+          "option_text": "YOLOv5 is a more advanced version than YOLOv7",
+          "is_correct": false
+        },
+        {
+          "option_id": 12164,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12165,
+          "option_text": "YOLOv7 is for classification; YOLOv5 is for detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2476,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you deploy an image classifier?",
+      "options": [
+        {
+          "option_id": 12166,
+          "option_text": "By using model serving platforms like TensorFlow Serving or TorchServe",
+          "is_correct": true
+        },
+        {
+          "option_id": 12167,
+          "option_text": "By manually serving the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12168,
+          "option_text": "By ignoring deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 12169,
+          "option_text": "By using a spreadsheet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2477,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you monitor an image classifier?",
+      "options": [
+        {
+          "option_id": 12170,
+          "option_text": "By tracking metrics like accuracy, precision, recall, and F1-score over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 12171,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12172,
+          "option_text": "By ignoring monitoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 12173,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2478,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you update an image classifier?",
+      "options": [
+        {
+          "option_id": 12174,
+          "option_text": "By retraining the model with new data periodically",
+          "is_correct": true
+        },
+        {
+          "option_id": 12175,
+          "option_text": "By ignoring updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 12176,
+          "option_text": "By manually updating the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12177,
+          "option_text": "By using the same model forever",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2479,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a classifier versioning?",
+      "options": [
+        {
+          "option_id": 12178,
+          "option_text": "The practice of versioning classifiers to track changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 12179,
+          "option_text": "The practice of ignoring versioning",
+          "is_correct": false
+        },
+        {
+          "option_id": 12180,
+          "option_text": "The practice of using only one version",
+          "is_correct": false
+        },
+        {
+          "option_id": 12181,
+          "option_text": "The practice of using random versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2480,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a classifier governance?",
+      "options": [
+        {
+          "option_id": 12182,
+          "option_text": "The process of managing classifiers in production",
+          "is_correct": true
+        },
+        {
+          "option_id": 12183,
+          "option_text": "The process of ignoring classifiers",
+          "is_correct": false
+        },
+        {
+          "option_id": 12184,
+          "option_text": "The process of manually managing classifiers",
+          "is_correct": false
+        },
+        {
+          "option_id": 12185,
+          "option_text": "The process of using spreadsheets for classifiers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2481,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between one-stage and two-stage detectors?",
+      "options": [
+        {
+          "option_id": 12186,
+          "option_text": "One-stage detectors predict directly; two-stage detectors use region proposals",
+          "is_correct": true
+        },
+        {
+          "option_id": 12187,
+          "option_text": "Two-stage detectors predict directly; one-stage detectors use region proposals",
+          "is_correct": false
+        },
+        {
+          "option_id": 12188,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12189,
+          "option_text": "One-stage detectors are for video; two-stage detectors are for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2482,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between anchor-based and anchor-free detectors?",
+      "options": [
+        {
+          "option_id": 12190,
+          "option_text": "Anchor-based detectors use predefined boxes; anchor-free detectors do not",
+          "is_correct": true
+        },
+        {
+          "option_id": 12191,
+          "option_text": "Anchor-free detectors use predefined boxes; anchor-based detectors do not",
+          "is_correct": false
+        },
+        {
+          "option_id": 12192,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12193,
+          "option_text": "Anchor-based detectors are for video; anchor-free detectors are for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2483,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between detection and tracking?",
+      "options": [
+        {
+          "option_id": 12194,
+          "option_text": "Detection finds objects in a single frame; tracking follows objects across frames",
+          "is_correct": true
+        },
+        {
+          "option_id": 12195,
+          "option_text": "Tracking finds objects in a single frame; detection follows objects across frames",
+          "is_correct": false
+        },
+        {
+          "option_id": 12196,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12197,
+          "option_text": "Detection is for video; tracking is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2484,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between detection and recognition?",
+      "options": [
+        {
+          "option_id": 12198,
+          "option_text": "Detection finds objects; recognition identifies objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 12199,
+          "option_text": "Recognition finds objects; detection identifies objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 12200,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12201,
+          "option_text": "Detection is for video; recognition is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2485,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between detection and classification?",
+      "options": [
+        {
+          "option_id": 12202,
+          "option_text": "Detection finds objects; classification assigns labels",
+          "is_correct": true
+        },
+        {
+          "option_id": 12203,
+          "option_text": "Classification finds objects; detection assigns labels",
+          "is_correct": false
+        },
+        {
+          "option_id": 12204,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12205,
+          "option_text": "Detection is for video; classification is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2486,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize OpenCV code for performance?",
+      "options": [
+        {
+          "option_id": 12206,
+          "option_text": "By using efficient algorithms and hardware acceleration",
+          "is_correct": true
+        },
+        {
+          "option_id": 12207,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 12208,
+          "option_text": "By using slower algorithms",
+          "is_correct": false
+        },
+        {
+          "option_id": 12209,
+          "option_text": "By using hardware without acceleration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2487,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use OpenCV with CUDA?",
+      "options": [
+        {
+          "option_id": 12210,
+          "option_text": "By using OpenCV with CUDA for GPU acceleration",
+          "is_correct": true
+        },
+        {
+          "option_id": 12211,
+          "option_text": "By using OpenCV without CUDA",
+          "is_correct": false
+        },
+        {
+          "option_id": 12212,
+          "option_text": "By ignoring CUDA",
+          "is_correct": false
+        },
+        {
+          "option_id": 12213,
+          "option_text": "By using a different library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2488,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use OpenCV with deep learning?",
+      "options": [
+        {
+          "option_id": 12214,
+          "option_text": "By integrating OpenCV with deep learning frameworks",
+          "is_correct": true
+        },
+        {
+          "option_id": 12215,
+          "option_text": "By ignoring deep learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 12216,
+          "option_text": "By using only traditional computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 12217,
+          "option_text": "By using a different library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2489,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use OpenCV with TensorFlow?",
+      "options": [
+        {
+          "option_id": 12218,
+          "option_text": "By using OpenCV with TensorFlow for deep learning models",
+          "is_correct": true
+        },
+        {
+          "option_id": 12219,
+          "option_text": "By ignoring TensorFlow",
+          "is_correct": false
+        },
+        {
+          "option_id": 12220,
+          "option_text": "By using only OpenCV",
+          "is_correct": false
+        },
+        {
+          "option_id": 12221,
+          "option_text": "By using a different library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2490,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use OpenCV with PyTorch?",
+      "options": [
+        {
+          "option_id": 12222,
+          "option_text": "By using OpenCV with PyTorch for deep learning models",
+          "is_correct": true
+        },
+        {
+          "option_id": 12223,
+          "option_text": "By ignoring PyTorch",
+          "is_correct": false
+        },
+        {
+          "option_id": 12224,
+          "option_text": "By using only OpenCV",
+          "is_correct": false
+        },
+        {
+          "option_id": 12225,
+          "option_text": "By using a different library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2491,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you train YOLO on a custom dataset?",
+      "options": [
+        {
+          "option_id": 12226,
+          "option_text": "By annotating data, configuring training, and running the training process",
+          "is_correct": true
+        },
+        {
+          "option_id": 12227,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 12228,
+          "option_text": "By using a pre-trained model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12229,
+          "option_text": "By ignoring training",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2492,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you deploy YOLO in production?",
+      "options": [
+        {
+          "option_id": 12230,
+          "option_text": "By using model serving platforms and deploying the trained model",
+          "is_correct": true
+        },
+        {
+          "option_id": 12231,
+          "option_text": "By manually deploying the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12232,
+          "option_text": "By ignoring deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 12233,
+          "option_text": "By using a spreadsheet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2493,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize YOLO for edge devices?",
+      "options": [
+        {
+          "option_id": 12234,
+          "option_text": "By using model optimization techniques like pruning and quantization",
+          "is_correct": true
+        },
+        {
+          "option_id": 12235,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 12236,
+          "option_text": "By using a larger model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12237,
+          "option_text": "By using a slower model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2494,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between YOLOv7 and YOLOv8?",
+      "options": [
+        {
+          "option_id": 12238,
+          "option_text": "YOLOv8 is a more advanced version than YOLOv7",
+          "is_correct": true
+        },
+        {
+          "option_id": 12239,
+          "option_text": "YOLOv7 is a more advanced version than YOLOv8",
+          "is_correct": false
+        },
+        {
+          "option_id": 12240,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12241,
+          "option_text": "YOLOv7 is for classification; YOLOv8 is for detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2495,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between YOLOv8 and YOLOv9?",
+      "options": [
+        {
+          "option_id": 12242,
+          "option_text": "YOLOv9 is a more advanced version than YOLOv8",
+          "is_correct": true
+        },
+        {
+          "option_id": 12243,
+          "option_text": "YOLOv8 is a more advanced version than YOLOv9",
+          "is_correct": false
+        },
+        {
+          "option_id": 12244,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12245,
+          "option_text": "YOLOv9 is for classification; YOLOv8 is for detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2496,
+      "subskill_id": 117,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a classifier in production?",
+      "options": [
+        {
+          "option_id": 12246,
+          "option_text": "A classifier that is used in a production environment",
+          "is_correct": true
+        },
+        {
+          "option_id": 12247,
+          "option_text": "A classifier that is used in a test environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 12248,
+          "option_text": "A classifier that is used in a development environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 12249,
+          "option_text": "A classifier that is used in a research environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2497,
+      "subskill_id": 118,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a transformer-based detector (DETR)?",
+      "options": [
+        {
+          "option_id": 12250,
+          "option_text": "A detector based on transformers, which uses a different architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 12251,
+          "option_text": "A detector based on CNNs",
+          "is_correct": false
+        },
+        {
+          "option_id": 12252,
+          "option_text": "A detector based on RNNs",
+          "is_correct": false
+        },
+        {
+          "option_id": 12253,
+          "option_text": "A detector based on GANs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2498,
+      "subskill_id": 119,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a deep learning model in OpenCV?",
+      "options": [
+        {
+          "option_id": 12254,
+          "option_text": "A deep learning model that can be used in OpenCV",
+          "is_correct": true
+        },
+        {
+          "option_id": 12255,
+          "option_text": "A traditional computer vision model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12256,
+          "option_text": "A machine learning model",
+          "is_correct": false
+        },
+        {
+          "option_id": 12257,
+          "option_text": "A statistical model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2499,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is YOLO's future direction?",
+      "options": [
+        {
+          "option_id": 12258,
+          "option_text": "The future direction of YOLO, which may include more advanced architectures",
+          "is_correct": true
+        },
+        {
+          "option_id": 12259,
+          "option_text": "YOLO will not change",
+          "is_correct": false
+        },
+        {
+          "option_id": 12260,
+          "option_text": "YOLO will become obsolete",
+          "is_correct": false
+        },
+        {
+          "option_id": 12261,
+          "option_text": "YOLO will be replaced by other models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2500,
+      "subskill_id": 120,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between YOLO and DETR?",
+      "options": [
+        {
+          "option_id": 12262,
+          "option_text": "YOLO uses a single-stage detection approach; DETR uses transformer-based detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 12263,
+          "option_text": "DETR uses a single-stage detection approach; YOLO uses transformer-based detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 12264,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 12265,
+          "option_text": "YOLO is for video; DETR is for images",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

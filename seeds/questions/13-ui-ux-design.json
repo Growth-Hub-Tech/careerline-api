@@ -1,0 +1,2906 @@
+{
+  "skill_id": 13,
+  "skill_name": "UI/UX Design",
+  "questions": [
+    {
+      "question_id": 1201,
+      "subskill_id": 60,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Figma?",
+      "options": [
+        {
+          "option_id": 7066,
+          "option_text": "A collaborative interface design tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 7067,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7068,
+          "option_text": "A project management tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7069,
+          "option_text": "A video editing software",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1202,
+      "subskill_id": 60,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a frame in Figma?",
+      "options": [
+        {
+          "option_id": 7070,
+          "option_text": "A style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 7071,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7072,
+          "option_text": "A container for design elements that represents a screen or component",
+          "is_correct": true
+        },
+        {
+          "option_id": 7073,
+          "option_text": "A file organization system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1203,
+      "subskill_id": 60,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a component in Figma?",
+      "options": [
+        {
+          "option_id": 7074,
+          "option_text": "A color scheme",
+          "is_correct": false
+        },
+        {
+          "option_id": 7075,
+          "option_text": "A reusable design element",
+          "is_correct": true
+        },
+        {
+          "option_id": 7076,
+          "option_text": "A font family",
+          "is_correct": false
+        },
+        {
+          "option_id": 7077,
+          "option_text": "A grid system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1204,
+      "subskill_id": 60,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a plugin in Figma?",
+      "options": [
+        {
+          "option_id": 7078,
+          "option_text": "A type of frame",
+          "is_correct": false
+        },
+        {
+          "option_id": 7079,
+          "option_text": "A font style",
+          "is_correct": false
+        },
+        {
+          "option_id": 7080,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7081,
+          "option_text": "An extension that adds functionality to Figma",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1205,
+      "subskill_id": 60,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of Figma's auto-layout feature?",
+      "options": [
+        {
+          "option_id": 7082,
+          "option_text": "To automatically adjust spacing and alignment of elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 7083,
+          "option_text": "To add animations to designs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7084,
+          "option_text": "To export designs as code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7085,
+          "option_text": "To create prototypes automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1206,
+      "subskill_id": 61,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is wireframing in UI/UX design?",
+      "options": [
+        {
+          "option_id": 7086,
+          "option_text": "Creating final visual designs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7087,
+          "option_text": "User testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7088,
+          "option_text": "Creating a low-fidelity layout of a design",
+          "is_correct": true
+        },
+        {
+          "option_id": 7089,
+          "option_text": "Writing code for interfaces",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1207,
+      "subskill_id": 61,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a wireframe?",
+      "options": [
+        {
+          "option_id": 7090,
+          "option_text": "To create the final product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7091,
+          "option_text": "To visualize layout and functionality without visual design",
+          "is_correct": true
+        },
+        {
+          "option_id": 7092,
+          "option_text": "To write code for the interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 7093,
+          "option_text": "To test user behavior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1208,
+      "subskill_id": 61,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between low-fidelity and high-fidelity wireframes?",
+      "options": [
+        {
+          "option_id": 7094,
+          "option_text": "Low-fidelity uses more detail",
+          "is_correct": false
+        },
+        {
+          "option_id": 7095,
+          "option_text": "High-fidelity is less detailed",
+          "is_correct": false
+        },
+        {
+          "option_id": 7096,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7097,
+          "option_text": "Low-fidelity is basic layout; high-fidelity includes more detail and interaction",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1209,
+      "subskill_id": 61,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What tools are commonly used for wireframing?",
+      "options": [
+        {
+          "option_id": 7098,
+          "option_text": "Figma, Sketch, Balsamiq, and Adobe XD",
+          "is_correct": true
+        },
+        {
+          "option_id": 7099,
+          "option_text": "Photoshop and Illustrator",
+          "is_correct": false
+        },
+        {
+          "option_id": 7100,
+          "option_text": "WordPress and Wix",
+          "is_correct": false
+        },
+        {
+          "option_id": 7101,
+          "option_text": "Excel and PowerPoint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1210,
+      "subskill_id": 61,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a wireframe annotation?",
+      "options": [
+        {
+          "option_id": 7102,
+          "option_text": "A design element",
+          "is_correct": false
+        },
+        {
+          "option_id": 7103,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7104,
+          "option_text": "Notes or explanations added to a wireframe to clarify functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 7105,
+          "option_text": "A type of wireframe",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1211,
+      "subskill_id": 62,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user flow in UX design?",
+      "options": [
+        {
+          "option_id": 7106,
+          "option_text": "A flowchart for developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 7107,
+          "option_text": "A diagram showing the path a user takes to complete a task",
+          "is_correct": true
+        },
+        {
+          "option_id": 7108,
+          "option_text": "A visual design of a page",
+          "is_correct": false
+        },
+        {
+          "option_id": 7109,
+          "option_text": "A code structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1212,
+      "subskill_id": 62,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a user flow diagram?",
+      "options": [
+        {
+          "option_id": 7110,
+          "option_text": "To identify the most efficient path for a user to achieve a goal",
+          "is_correct": true
+        },
+        {
+          "option_id": 7111,
+          "option_text": "To design the visual interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 7112,
+          "option_text": "To write code for the application",
+          "is_correct": false
+        },
+        {
+          "option_id": 7113,
+          "option_text": "To test user behavior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1213,
+      "subskill_id": 62,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a task flow?",
+      "options": [
+        {
+          "option_id": 7114,
+          "option_text": "A diagram for user tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7115,
+          "option_text": "A flow for multiple users",
+          "is_correct": false
+        },
+        {
+          "option_id": 7116,
+          "option_text": "A complex user journey",
+          "is_correct": false
+        },
+        {
+          "option_id": 7117,
+          "option_text": "A diagram that focuses on a specific task without branching",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1214,
+      "subskill_id": 62,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a user flow and a task flow?",
+      "options": [
+        {
+          "option_id": 7118,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7119,
+          "option_text": "User flow includes multiple paths; task flow focuses on a single task",
+          "is_correct": true
+        },
+        {
+          "option_id": 7120,
+          "option_text": "Task flow includes multiple paths; user flow focuses on a single task",
+          "is_correct": false
+        },
+        {
+          "option_id": 7121,
+          "option_text": "User flow is for mobile apps only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1215,
+      "subskill_id": 62,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user journey map?",
+      "options": [
+        {
+          "option_id": 7122,
+          "option_text": "A map of user locations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7123,
+          "option_text": "A technical architecture diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 7124,
+          "option_text": "A visual representation of a user's experience across all touchpoints",
+          "is_correct": true
+        },
+        {
+          "option_id": 7125,
+          "option_text": "A code repository",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1216,
+      "subskill_id": 63,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is prototyping in UI/UX design?",
+      "options": [
+        {
+          "option_id": 7126,
+          "option_text": "Creating an early model of a product to test and iterate",
+          "is_correct": true
+        },
+        {
+          "option_id": 7127,
+          "option_text": "Writing code for production",
+          "is_correct": false
+        },
+        {
+          "option_id": 7128,
+          "option_text": "Creating final visual designs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7129,
+          "option_text": "Testing with real users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1217,
+      "subskill_id": 63,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a prototype?",
+      "options": [
+        {
+          "option_id": 7130,
+          "option_text": "To test and validate design concepts before development",
+          "is_correct": false
+        },
+        {
+          "option_id": 7131,
+          "option_text": "To gather feedback from users",
+          "is_correct": false
+        },
+        {
+          "option_id": 7132,
+          "option_text": "To communicate design ideas",
+          "is_correct": false
+        },
+        {
+          "option_id": 7133,
+          "option_text": "All of the above are purposes of a prototype",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1218,
+      "subskill_id": 63,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a wireframe and a prototype?",
+      "options": [
+        {
+          "option_id": 7134,
+          "option_text": "Wireframes are interactive, prototypes are static",
+          "is_correct": false
+        },
+        {
+          "option_id": 7135,
+          "option_text": "Wireframes are static and focus on layout; prototypes are interactive and simulate real use",
+          "is_correct": true
+        },
+        {
+          "option_id": 7136,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7137,
+          "option_text": "Prototypes are only for mobile apps",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1219,
+      "subskill_id": 63,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a clickable prototype?",
+      "options": [
+        {
+          "option_id": 7138,
+          "option_text": "A prototype that can be printed",
+          "is_correct": false
+        },
+        {
+          "option_id": 7139,
+          "option_text": "A prototype with animations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7140,
+          "option_text": "A prototype that allows users to interact by clicking through screens",
+          "is_correct": true
+        },
+        {
+          "option_id": 7141,
+          "option_text": "A prototype that is coded",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1220,
+      "subskill_id": 63,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are common prototyping tools?",
+      "options": [
+        {
+          "option_id": 7142,
+          "option_text": "Figma, Sketch, Adobe XD, and InVision",
+          "is_correct": true
+        },
+        {
+          "option_id": 7143,
+          "option_text": "Photoshop and Illustrator",
+          "is_correct": false
+        },
+        {
+          "option_id": 7144,
+          "option_text": "WordPress and Wix",
+          "is_correct": false
+        },
+        {
+          "option_id": 7145,
+          "option_text": "Excel and PowerPoint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1221,
+      "subskill_id": 64,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is accessibility in UI/UX design?",
+      "options": [
+        {
+          "option_id": 7146,
+          "option_text": "A design technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 7147,
+          "option_text": "A coding standard",
+          "is_correct": false
+        },
+        {
+          "option_id": 7148,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7149,
+          "option_text": "Designing products that are usable by people with diverse abilities",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1222,
+      "subskill_id": 64,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is WCAG?",
+      "options": [
+        {
+          "option_id": 7150,
+          "option_text": "A design tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7151,
+          "option_text": "Web Content Accessibility Guidelines",
+          "is_correct": true
+        },
+        {
+          "option_id": 7152,
+          "option_text": "A coding language",
+          "is_correct": false
+        },
+        {
+          "option_id": 7153,
+          "option_text": "A project management framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1223,
+      "subskill_id": 64,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is color contrast in accessibility?",
+      "options": [
+        {
+          "option_id": 7154,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7155,
+          "option_text": "A design trend",
+          "is_correct": false
+        },
+        {
+          "option_id": 7156,
+          "option_text": "The difference in luminance between text and background to ensure readability",
+          "is_correct": true
+        },
+        {
+          "option_id": 7157,
+          "option_text": "A type of gradient",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1224,
+      "subskill_id": 64,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is alternative text for images?",
+      "options": [
+        {
+          "option_id": 7158,
+          "option_text": "A text description of an image for users who cannot see it",
+          "is_correct": true
+        },
+        {
+          "option_id": 7159,
+          "option_text": "A caption below an image",
+          "is_correct": false
+        },
+        {
+          "option_id": 7160,
+          "option_text": "A tag for images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7161,
+          "option_text": "A code comment for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1225,
+      "subskill_id": 64,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is keyboard navigation in web accessibility?",
+      "options": [
+        {
+          "option_id": 7162,
+          "option_text": "Using a mouse to navigate",
+          "is_correct": false
+        },
+        {
+          "option_id": 7163,
+          "option_text": "Allowing users to navigate a website using only a keyboard",
+          "is_correct": true
+        },
+        {
+          "option_id": 7164,
+          "option_text": "Using voice commands",
+          "is_correct": false
+        },
+        {
+          "option_id": 7165,
+          "option_text": "Using a touch screen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1226,
+      "subskill_id": 60,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a component in Figma?",
+      "options": [
+        {
+          "option_id": 7166,
+          "option_text": "By using the rectangle tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7167,
+          "option_text": "By duplicating an element",
+          "is_correct": false
+        },
+        {
+          "option_id": 7168,
+          "option_text": "By selecting an element and clicking \"Create Component\"",
+          "is_correct": true
+        },
+        {
+          "option_id": 7169,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1227,
+      "subskill_id": 60,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a component and an instance in Figma?",
+      "options": [
+        {
+          "option_id": 7170,
+          "option_text": "A component is the master, an instance is a copy that updates with the master",
+          "is_correct": true
+        },
+        {
+          "option_id": 7171,
+          "option_text": "An instance is the master, a component is a copy",
+          "is_correct": false
+        },
+        {
+          "option_id": 7172,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7173,
+          "option_text": "Components are for design, instances for development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1228,
+      "subskill_id": 60,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use variants in Figma?",
+      "options": [
+        {
+          "option_id": 7174,
+          "option_text": "By changing colors",
+          "is_correct": false
+        },
+        {
+          "option_id": 7175,
+          "option_text": "By duplicating components",
+          "is_correct": false
+        },
+        {
+          "option_id": 7176,
+          "option_text": "By using plugins",
+          "is_correct": false
+        },
+        {
+          "option_id": 7177,
+          "option_text": "By grouping multiple component states into a single component set",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1229,
+      "subskill_id": 60,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between auto-layout and constraints in Figma?",
+      "options": [
+        {
+          "option_id": 7178,
+          "option_text": "They are the same feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 7179,
+          "option_text": "Auto-layout adjusts spacing and positioning; constraints define how elements resize relative to their parent",
+          "is_correct": true
+        },
+        {
+          "option_id": 7180,
+          "option_text": "Constraints adjust spacing; auto-layout defines resizing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7181,
+          "option_text": "Auto-layout is for frames only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1230,
+      "subskill_id": 60,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you share a Figma file with collaborators?",
+      "options": [
+        {
+          "option_id": 7182,
+          "option_text": "By sending a screenshot",
+          "is_correct": false
+        },
+        {
+          "option_id": 7183,
+          "option_text": "By exporting as PDF",
+          "is_correct": false
+        },
+        {
+          "option_id": 7184,
+          "option_text": "By generating a shareable link with edit or view permissions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7185,
+          "option_text": "By copying the file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1231,
+      "subskill_id": 61,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the key elements of a wireframe?",
+      "options": [
+        {
+          "option_id": 7186,
+          "option_text": "Layout, content hierarchy, and functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 7187,
+          "option_text": "Colors, fonts, and images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7188,
+          "option_text": "Animations and transitions",
+          "is_correct": false
+        },
+        {
+          "option_id": 7189,
+          "option_text": "Code structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1232,
+      "subskill_id": 61,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you decide which elements to include in a wireframe?",
+      "options": [
+        {
+          "option_id": 7190,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7191,
+          "option_text": "By copying another design",
+          "is_correct": false
+        },
+        {
+          "option_id": 7192,
+          "option_text": "By including all possible features",
+          "is_correct": false
+        },
+        {
+          "option_id": 7193,
+          "option_text": "By focusing on user needs and core functionality",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1233,
+      "subskill_id": 61,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the role of wireframes in the design process?",
+      "options": [
+        {
+          "option_id": 7194,
+          "option_text": "To create final designs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7195,
+          "option_text": "To establish structure and layout before visual design",
+          "is_correct": true
+        },
+        {
+          "option_id": 7196,
+          "option_text": "To write code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7197,
+          "option_text": "To conduct user testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1234,
+      "subskill_id": 61,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you get feedback on wireframes?",
+      "options": [
+        {
+          "option_id": 7198,
+          "option_text": "By showing them to users only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7199,
+          "option_text": "By testing them with developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 7200,
+          "option_text": "By sharing with stakeholders and conducting usability tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 7201,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1235,
+      "subskill_id": 61,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a wireframe and a mockup?",
+      "options": [
+        {
+          "option_id": 7202,
+          "option_text": "Wireframes are low-fidelity; mockups include visual design details",
+          "is_correct": true
+        },
+        {
+          "option_id": 7203,
+          "option_text": "Mockups are low-fidelity; wireframes include visual design",
+          "is_correct": false
+        },
+        {
+          "option_id": 7204,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7205,
+          "option_text": "Wireframes are interactive; mockups are static",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1236,
+      "subskill_id": 62,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a user flow diagram?",
+      "options": [
+        {
+          "option_id": 7206,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7207,
+          "option_text": "By drawing boxes only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7208,
+          "option_text": "By using a text editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7209,
+          "option_text": "By mapping user actions with shapes and arrows showing decision points",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1237,
+      "subskill_id": 62,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are common symbols used in user flow diagrams?",
+      "options": [
+        {
+          "option_id": 7210,
+          "option_text": "Stars and hearts",
+          "is_correct": false
+        },
+        {
+          "option_id": 7211,
+          "option_text": "Oval (start/end), rectangle (action), diamond (decision)",
+          "is_correct": true
+        },
+        {
+          "option_id": 7212,
+          "option_text": "Circles and lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 7213,
+          "option_text": "Arrows only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1238,
+      "subskill_id": 62,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you identify pain points in a user flow?",
+      "options": [
+        {
+          "option_id": 7214,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7215,
+          "option_text": "By ignoring user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7216,
+          "option_text": "By analyzing user behavior and feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 7217,
+          "option_text": "By copying competitor flows",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1239,
+      "subskill_id": 62,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the relationship between user flows and information architecture?",
+      "options": [
+        {
+          "option_id": 7218,
+          "option_text": "Information architecture organizes content; user flows show how users navigate through it",
+          "is_correct": true
+        },
+        {
+          "option_id": 7219,
+          "option_text": "They are unrelated",
+          "is_correct": false
+        },
+        {
+          "option_id": 7220,
+          "option_text": "User flows organize content; information architecture shows navigation",
+          "is_correct": false
+        },
+        {
+          "option_id": 7221,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1240,
+      "subskill_id": 62,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test a user flow with real users?",
+      "options": [
+        {
+          "option_id": 7222,
+          "option_text": "By asking users to describe their experience",
+          "is_correct": false
+        },
+        {
+          "option_id": 7223,
+          "option_text": "By observing them in a lab",
+          "is_correct": false
+        },
+        {
+          "option_id": 7224,
+          "option_text": "By analyzing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 7225,
+          "option_text": "All of the above are valid methods",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1241,
+      "subskill_id": 63,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between low-fidelity and high-fidelity prototypes?",
+      "options": [
+        {
+          "option_id": 7226,
+          "option_text": "Low-fidelity prototypes include full interactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 7227,
+          "option_text": "Low-fidelity is basic and quick; high-fidelity is detailed and interactive",
+          "is_correct": true
+        },
+        {
+          "option_id": 7228,
+          "option_text": "High-fidelity is less detailed",
+          "is_correct": false
+        },
+        {
+          "option_id": 7229,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1242,
+      "subskill_id": 63,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prototype fidelity continuum?",
+      "options": [
+        {
+          "option_id": 7230,
+          "option_text": "A type of prototype",
+          "is_correct": false
+        },
+        {
+          "option_id": 7231,
+          "option_text": "A design technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 7232,
+          "option_text": "A spectrum from low-fidelity to high-fidelity prototypes",
+          "is_correct": true
+        },
+        {
+          "option_id": 7233,
+          "option_text": "A color palette",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1243,
+      "subskill_id": 63,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test a prototype with users?",
+      "options": [
+        {
+          "option_id": 7234,
+          "option_text": "By conducting usability testing sessions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7235,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7236,
+          "option_text": "By skipping testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7237,
+          "option_text": "By showing it to developers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1244,
+      "subskill_id": 63,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the role of prototyping in agile development?",
+      "options": [
+        {
+          "option_id": 7238,
+          "option_text": "To replace coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 7239,
+          "option_text": "To finalize design",
+          "is_correct": false
+        },
+        {
+          "option_id": 7240,
+          "option_text": "To avoid user testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7241,
+          "option_text": "To validate designs quickly and iterate in short cycles",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1245,
+      "subskill_id": 63,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prototype animation?",
+      "options": [
+        {
+          "option_id": 7242,
+          "option_text": "A static image",
+          "is_correct": false
+        },
+        {
+          "option_id": 7243,
+          "option_text": "Motion or transitions added to a prototype to simulate real behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 7244,
+          "option_text": "A video of the prototype",
+          "is_correct": false
+        },
+        {
+          "option_id": 7245,
+          "option_text": "A prototype of an animation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1246,
+      "subskill_id": 64,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the Web Content Accessibility Guidelines (WCAG) principles?",
+      "options": [
+        {
+          "option_id": 7246,
+          "option_text": "Only one principle exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 7247,
+          "option_text": "They are only for mobile apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 7248,
+          "option_text": "Perceivable, Operable, Understandable, and Robust (POUR)",
+          "is_correct": true
+        },
+        {
+          "option_id": 7249,
+          "option_text": "They are optional guidelines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1247,
+      "subskill_id": 64,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you check color contrast for accessibility?",
+      "options": [
+        {
+          "option_id": 7250,
+          "option_text": "Using color contrast checking tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 7251,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7252,
+          "option_text": "By using only black and white",
+          "is_correct": false
+        },
+        {
+          "option_id": 7253,
+          "option_text": "By ignoring contrast requirements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1248,
+      "subskill_id": 64,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is ARIA and how is it used?",
+      "options": [
+        {
+          "option_id": 7254,
+          "option_text": "A type of code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7255,
+          "option_text": "A design tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7256,
+          "option_text": "A color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7257,
+          "option_text": "Accessible Rich Internet Applications - used to enhance accessibility",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1249,
+      "subskill_id": 64,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are common accessibility issues in web design?",
+      "options": [
+        {
+          "option_id": 7258,
+          "option_text": "No issues exist",
+          "is_correct": false
+        },
+        {
+          "option_id": 7259,
+          "option_text": "Low color contrast, missing alt text, and lack of keyboard navigation",
+          "is_correct": true
+        },
+        {
+          "option_id": 7260,
+          "option_text": "Too many images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7261,
+          "option_text": "Using animations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1250,
+      "subskill_id": 64,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design for screen readers?",
+      "options": [
+        {
+          "option_id": 7262,
+          "option_text": "By using visual only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7263,
+          "option_text": "By adding more images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7264,
+          "option_text": "By providing alternative text and semantic HTML",
+          "is_correct": true
+        },
+        {
+          "option_id": 7265,
+          "option_text": "By using complex layouts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1251,
+      "subskill_id": 60,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a design system in Figma?",
+      "options": [
+        {
+          "option_id": 7266,
+          "option_text": "By creating reusable components, styles, and a shared library",
+          "is_correct": true
+        },
+        {
+          "option_id": 7267,
+          "option_text": "By using a single color palette",
+          "is_correct": false
+        },
+        {
+          "option_id": 7268,
+          "option_text": "By duplicating files",
+          "is_correct": false
+        },
+        {
+          "option_id": 7269,
+          "option_text": "By using plugins only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1252,
+      "subskill_id": 60,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between styles and components in Figma?",
+      "options": [
+        {
+          "option_id": 7270,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7271,
+          "option_text": "Components are for colors, styles are for frames",
+          "is_correct": false
+        },
+        {
+          "option_id": 7272,
+          "option_text": "Styles define visual properties like color and text; components are reusable UI elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 7273,
+          "option_text": "Styles are for prototyping, components are for design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1253,
+      "subskill_id": 60,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage version control in Figma?",
+      "options": [
+        {
+          "option_id": 7274,
+          "option_text": "By using Git",
+          "is_correct": false
+        },
+        {
+          "option_id": 7275,
+          "option_text": "Using Figma's built-in version history feature",
+          "is_correct": true
+        },
+        {
+          "option_id": 7276,
+          "option_text": "By saving files locally",
+          "is_correct": false
+        },
+        {
+          "option_id": 7277,
+          "option_text": "By exporting as PDF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1254,
+      "subskill_id": 60,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of Figma in the design handoff process?",
+      "options": [
+        {
+          "option_id": 7278,
+          "option_text": "To export images only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7279,
+          "option_text": "To create animations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7280,
+          "option_text": "To write code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7281,
+          "option_text": "To provide developers with designs, specs, and assets",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1255,
+      "subskill_id": 60,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create responsive designs in Figma?",
+      "options": [
+        {
+          "option_id": 7282,
+          "option_text": "Using auto-layout, constraints, and frames for different screen sizes",
+          "is_correct": true
+        },
+        {
+          "option_id": 7283,
+          "option_text": "By designing only for desktop",
+          "is_correct": false
+        },
+        {
+          "option_id": 7284,
+          "option_text": "By using plugins",
+          "is_correct": false
+        },
+        {
+          "option_id": 7285,
+          "option_text": "By duplicating frames",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1256,
+      "subskill_id": 61,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prioritize content in a wireframe?",
+      "options": [
+        {
+          "option_id": 7286,
+          "option_text": "By including everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 7287,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7288,
+          "option_text": "By identifying user goals and business priorities",
+          "is_correct": true
+        },
+        {
+          "option_id": 7289,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1257,
+      "subskill_id": 61,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a wireframe and a prototype?",
+      "options": [
+        {
+          "option_id": 7290,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7291,
+          "option_text": "A wireframe is static and focuses on structure; a prototype is interactive and simulates user flow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7292,
+          "option_text": "A prototype is static; a wireframe is interactive",
+          "is_correct": false
+        },
+        {
+          "option_id": 7293,
+          "option_text": "Wireframes are for mobile, prototypes are for web",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1258,
+      "subskill_id": 61,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use wireframes to communicate with stakeholders?",
+      "options": [
+        {
+          "option_id": 7294,
+          "option_text": "By presenting them as final designs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7295,
+          "option_text": "By adding visual polish",
+          "is_correct": false
+        },
+        {
+          "option_id": 7296,
+          "option_text": "By explaining every detail verbally",
+          "is_correct": false
+        },
+        {
+          "option_id": 7297,
+          "option_text": "By sharing them early and focusing on layout and functionality",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1259,
+      "subskill_id": 61,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the common mistakes in wireframing?",
+      "options": [
+        {
+          "option_id": 7298,
+          "option_text": "Adding too much detail too early or skipping user feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 7299,
+          "option_text": "Using too many colors",
+          "is_correct": false
+        },
+        {
+          "option_id": 7300,
+          "option_text": "Adding animations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7301,
+          "option_text": "Creating multiple versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1260,
+      "subskill_id": 61,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a wireframe for a mobile app?",
+      "options": [
+        {
+          "option_id": 7302,
+          "option_text": "By using desktop screen sizes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7303,
+          "option_text": "By avoiding mobile-specific patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 7304,
+          "option_text": "By using mobile-first design, touch-friendly elements, and clear navigation",
+          "is_correct": true
+        },
+        {
+          "option_id": 7305,
+          "option_text": "By copying websites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1261,
+      "subskill_id": 62,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a user flow for conversion?",
+      "options": [
+        {
+          "option_id": 7306,
+          "option_text": "By adding more steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 7307,
+          "option_text": "By removing friction points and simplifying the path to goal",
+          "is_correct": true
+        },
+        {
+          "option_id": 7308,
+          "option_text": "By ignoring user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7309,
+          "option_text": "By adding more options",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1262,
+      "subskill_id": 62,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a user flow and a user journey?",
+      "options": [
+        {
+          "option_id": 7310,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7311,
+          "option_text": "A user flow focuses on emotions; a user journey focuses on steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 7312,
+          "option_text": "A user flow is for multiple users; a user journey is for one",
+          "is_correct": false
+        },
+        {
+          "option_id": 7313,
+          "option_text": "A user flow is task-oriented; a user journey maps the full experience across touchpoints",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1263,
+      "subskill_id": 62,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you map user flows for multiple user personas?",
+      "options": [
+        {
+          "option_id": 7314,
+          "option_text": "Create separate flows for each persona based on their goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 7315,
+          "option_text": "Create one flow for all",
+          "is_correct": false
+        },
+        {
+          "option_id": 7316,
+          "option_text": "Skip user flows",
+          "is_correct": false
+        },
+        {
+          "option_id": 7317,
+          "option_text": "Use only one persona",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1264,
+      "subskill_id": 62,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of user flows in usability testing?",
+      "options": [
+        {
+          "option_id": 7318,
+          "option_text": "To replace testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7319,
+          "option_text": "To write test scripts",
+          "is_correct": false
+        },
+        {
+          "option_id": 7320,
+          "option_text": "To identify critical paths for users to test",
+          "is_correct": true
+        },
+        {
+          "option_id": 7321,
+          "option_text": "To avoid testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1265,
+      "subskill_id": 62,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you identify drop-off points in a user flow?",
+      "options": [
+        {
+          "option_id": 7322,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7323,
+          "option_text": "By analyzing analytics and user behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 7324,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 7325,
+          "option_text": "By adding more pages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1266,
+      "subskill_id": 63,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a high-fidelity prototype?",
+      "options": [
+        {
+          "option_id": 7326,
+          "option_text": "Using only grayscale",
+          "is_correct": false
+        },
+        {
+          "option_id": 7327,
+          "option_text": "Without user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7328,
+          "option_text": "By copying low-fidelity",
+          "is_correct": false
+        },
+        {
+          "option_id": 7329,
+          "option_text": "Using final visual designs with interactive elements",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1267,
+      "subskill_id": 63,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a prototype and a production product?",
+      "options": [
+        {
+          "option_id": 7330,
+          "option_text": "A prototype is a simulation for testing; production is the final live product",
+          "is_correct": true
+        },
+        {
+          "option_id": 7331,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7332,
+          "option_text": "A production product is for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7333,
+          "option_text": "A prototype is always buggy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1268,
+      "subskill_id": 63,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you gather feedback on a prototype?",
+      "options": [
+        {
+          "option_id": 7334,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7335,
+          "option_text": "By ignoring users",
+          "is_correct": false
+        },
+        {
+          "option_id": 7336,
+          "option_text": "By conducting user testing sessions and interviews",
+          "is_correct": true
+        },
+        {
+          "option_id": 7337,
+          "option_text": "By showing only to developers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1269,
+      "subskill_id": 63,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of prototyping in user-centered design?",
+      "options": [
+        {
+          "option_id": 7338,
+          "option_text": "To finalize the product early",
+          "is_correct": false
+        },
+        {
+          "option_id": 7339,
+          "option_text": "To test ideas with users early and iterate",
+          "is_correct": true
+        },
+        {
+          "option_id": 7340,
+          "option_text": "To skip user testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7341,
+          "option_text": "To replace research",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1270,
+      "subskill_id": 63,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test a prototype for usability?",
+      "options": [
+        {
+          "option_id": 7342,
+          "option_text": "By asking users to complete tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7343,
+          "option_text": "By observing behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 7344,
+          "option_text": "By gathering feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7345,
+          "option_text": "All of the above are usability testing methods",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1271,
+      "subskill_id": 64,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you conduct an accessibility audit?",
+      "options": [
+        {
+          "option_id": 7346,
+          "option_text": "Review against WCAG standards using automated tools and manual testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 7347,
+          "option_text": "By ignoring accessibility",
+          "is_correct": false
+        },
+        {
+          "option_id": 7348,
+          "option_text": "By only using automated tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 7349,
+          "option_text": "By testing with one user",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1272,
+      "subskill_id": 64,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the legal implications of accessibility?",
+      "options": [
+        {
+          "option_id": 7350,
+          "option_text": "There are no legal implications",
+          "is_correct": false
+        },
+        {
+          "option_id": 7351,
+          "option_text": "Accessibility is optional",
+          "is_correct": false
+        },
+        {
+          "option_id": 7352,
+          "option_text": "Legal requirements exist in many countries, including ADA and Section 508",
+          "is_correct": true
+        },
+        {
+          "option_id": 7353,
+          "option_text": "Only government sites need accessibility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1273,
+      "subskill_id": 64,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you design accessible forms?",
+      "options": [
+        {
+          "option_id": 7354,
+          "option_text": "By using visual labels only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7355,
+          "option_text": "Use proper labels, clear instructions, and error messages",
+          "is_correct": true
+        },
+        {
+          "option_id": 7356,
+          "option_text": "By avoiding forms",
+          "is_correct": false
+        },
+        {
+          "option_id": 7357,
+          "option_text": "By using complex layouts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1274,
+      "subskill_id": 64,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between WCAG 2.0 and 2.1?",
+      "options": [
+        {
+          "option_id": 7358,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7359,
+          "option_text": "WCAG 2.1 is outdated",
+          "is_correct": false
+        },
+        {
+          "option_id": 7360,
+          "option_text": "WCAG 2.0 includes mobile guidelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 7361,
+          "option_text": "WCAG 2.1 includes additional mobile and cognitive accessibility guidelines",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1275,
+      "subskill_id": 64,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test for accessibility with assistive technologies?",
+      "options": [
+        {
+          "option_id": 7362,
+          "option_text": "Test with screen readers, magnifiers, and voice control",
+          "is_correct": true
+        },
+        {
+          "option_id": 7363,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7364,
+          "option_text": "By skipping testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7365,
+          "option_text": "By only using automated tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1276,
+      "subskill_id": 60,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a multi-brand design system in Figma?",
+      "options": [
+        {
+          "option_id": 7366,
+          "option_text": "By using a single theme",
+          "is_correct": false
+        },
+        {
+          "option_id": 7367,
+          "option_text": "Use nested components, styles, and token-based design for each brand",
+          "is_correct": true
+        },
+        {
+          "option_id": 7368,
+          "option_text": "By duplicating files for each brand",
+          "is_correct": false
+        },
+        {
+          "option_id": 7369,
+          "option_text": "By only using colors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1277,
+      "subskill_id": 60,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate Figma with other tools like GitHub or Jira?",
+      "options": [
+        {
+          "option_id": 7370,
+          "option_text": "By exporting images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7371,
+          "option_text": "By using email",
+          "is_correct": false
+        },
+        {
+          "option_id": 7372,
+          "option_text": "Using plugins or API integrations to sync designs with development tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 7373,
+          "option_text": "By copy-pasting links",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1278,
+      "subskill_id": 60,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create dynamic components with variants?",
+      "options": [
+        {
+          "option_id": 7374,
+          "option_text": "Define multiple states within a single component using properties",
+          "is_correct": true
+        },
+        {
+          "option_id": 7375,
+          "option_text": "Create separate components for each state",
+          "is_correct": false
+        },
+        {
+          "option_id": 7376,
+          "option_text": "By using layers only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7377,
+          "option_text": "By duplicating frames",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1279,
+      "subskill_id": 60,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for organizing Figma files?",
+      "options": [
+        {
+          "option_id": 7378,
+          "option_text": "Using pages, naming conventions, and component libraries",
+          "is_correct": true
+        },
+        {
+          "option_id": 7379,
+          "option_text": "Keeping everything in one frame",
+          "is_correct": false
+        },
+        {
+          "option_id": 7380,
+          "option_text": "Avoiding naming",
+          "is_correct": false
+        },
+        {
+          "option_id": 7381,
+          "option_text": "Random placement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1280,
+      "subskill_id": 60,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use Figma's API for automation?",
+      "options": [
+        {
+          "option_id": 7382,
+          "option_text": "By exporting manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 7383,
+          "option_text": "Use the Figma API to programmatically extract data or generate designs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7384,
+          "option_text": "By using plugins",
+          "is_correct": false
+        },
+        {
+          "option_id": 7385,
+          "option_text": "By taking screenshots",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1281,
+      "subskill_id": 61,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a wireframe for a complex data-heavy application?",
+      "options": [
+        {
+          "option_id": 7386,
+          "option_text": "By skipping wireframes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7387,
+          "option_text": "By only using high-level sketches",
+          "is_correct": false
+        },
+        {
+          "option_id": 7388,
+          "option_text": "Use modular components, clear data hierarchy, and focus on readability",
+          "is_correct": true
+        },
+        {
+          "option_id": 7389,
+          "option_text": "By using as much data as possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1282,
+      "subskill_id": 61,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of wireframing in design thinking?",
+      "options": [
+        {
+          "option_id": 7390,
+          "option_text": "To prototype and test ideas during the \"ideate\" and \"prototype\" phases",
+          "is_correct": true
+        },
+        {
+          "option_id": 7391,
+          "option_text": "To finalize the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7392,
+          "option_text": "To skip testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7393,
+          "option_text": "To code the interface",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1283,
+      "subskill_id": 61,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use wireframes for rapid iteration?",
+      "options": [
+        {
+          "option_id": 7394,
+          "option_text": "By adding as much detail as possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 7395,
+          "option_text": "By skipping feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7396,
+          "option_text": "By finalizing immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 7397,
+          "option_text": "Create low-fidelity wireframes quickly, gather feedback, and repeat",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1284,
+      "subskill_id": 61,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for remote wireframing?",
+      "options": [
+        {
+          "option_id": 7398,
+          "option_text": "Use pen and paper only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7399,
+          "option_text": "Use collaborative tools like Figma, Miro, or Balsamiq",
+          "is_correct": true
+        },
+        {
+          "option_id": 7400,
+          "option_text": "Avoid using tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 7401,
+          "option_text": "Work in isolation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1285,
+      "subskill_id": 61,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you transition from wireframes to high-fidelity designs?",
+      "options": [
+        {
+          "option_id": 7402,
+          "option_text": "By skipping wireframes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7403,
+          "option_text": "By jumping directly to development",
+          "is_correct": false
+        },
+        {
+          "option_id": 7404,
+          "option_text": "Iterate on wireframes, then add visual design elements like colors and typography",
+          "is_correct": true
+        },
+        {
+          "option_id": 7405,
+          "option_text": "By only using prototypes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1286,
+      "subskill_id": 62,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design user flows for complex multi-step processes?",
+      "options": [
+        {
+          "option_id": 7406,
+          "option_text": "Break down the process into smaller tasks and map each step clearly",
+          "is_correct": true
+        },
+        {
+          "option_id": 7407,
+          "option_text": "Create one large diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 7408,
+          "option_text": "Skip the flow",
+          "is_correct": false
+        },
+        {
+          "option_id": 7409,
+          "option_text": "Only use words",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1287,
+      "subskill_id": 62,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of user flows in product strategy?",
+      "options": [
+        {
+          "option_id": 7410,
+          "option_text": "To replace research",
+          "is_correct": false
+        },
+        {
+          "option_id": 7411,
+          "option_text": "To align teams around the user journey and identify opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 7412,
+          "option_text": "To write code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7413,
+          "option_text": "To design interfaces only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1288,
+      "subskill_id": 62,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create adaptive user flows for different user roles?",
+      "options": [
+        {
+          "option_id": 7414,
+          "option_text": "Use one flow for all roles",
+          "is_correct": false
+        },
+        {
+          "option_id": 7415,
+          "option_text": "Ignore roles",
+          "is_correct": false
+        },
+        {
+          "option_id": 7416,
+          "option_text": "Create role-specific flows based on permissions and goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 7417,
+          "option_text": "Copy-paste flows",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1289,
+      "subskill_id": 62,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use data to optimize user flows?",
+      "options": [
+        {
+          "option_id": 7418,
+          "option_text": "Analyze user behavior data to identify drop-off points and iterate",
+          "is_correct": true
+        },
+        {
+          "option_id": 7419,
+          "option_text": "Ignore data",
+          "is_correct": false
+        },
+        {
+          "option_id": 7420,
+          "option_text": "Guess what users want",
+          "is_correct": false
+        },
+        {
+          "option_id": 7421,
+          "option_text": "Add more steps",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1290,
+      "subskill_id": 62,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between linear and non-linear user flows?",
+      "options": [
+        {
+          "option_id": 7422,
+          "option_text": "Linear flows are for mobile; non-linear are for web",
+          "is_correct": false
+        },
+        {
+          "option_id": 7423,
+          "option_text": "Linear flows have multiple paths; non-linear have one",
+          "is_correct": false
+        },
+        {
+          "option_id": 7424,
+          "option_text": "Linear flows follow a single path; non-linear allow branching and multiple paths",
+          "is_correct": true
+        },
+        {
+          "option_id": 7425,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1291,
+      "subskill_id": 63,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create interactive prototypes for user testing?",
+      "options": [
+        {
+          "option_id": 7426,
+          "option_text": "By using static images",
+          "is_correct": false
+        },
+        {
+          "option_id": 7427,
+          "option_text": "Use prototyping tools to create clickable, navigable flows",
+          "is_correct": true
+        },
+        {
+          "option_id": 7428,
+          "option_text": "By coding a full product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7429,
+          "option_text": "By using only animations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1292,
+      "subskill_id": 63,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for remote usability testing?",
+      "options": [
+        {
+          "option_id": 7430,
+          "option_text": "Use video conferencing and screen sharing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7431,
+          "option_text": "Provide clear tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7432,
+          "option_text": "Record sessions for analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 7433,
+          "option_text": "All of the above are best practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1293,
+      "subskill_id": 63,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you present a prototype to stakeholders?",
+      "options": [
+        {
+          "option_id": 7434,
+          "option_text": "Focus on user feedback and explain design decisions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7435,
+          "option_text": "Only show final visuals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7436,
+          "option_text": "Skip the presentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 7437,
+          "option_text": "Avoid explaining details",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1294,
+      "subskill_id": 63,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a prototype and a minimum viable product?",
+      "options": [
+        {
+          "option_id": 7438,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7439,
+          "option_text": "A prototype is for production; MVP is for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7440,
+          "option_text": "A prototype is a simulation; MVP is a usable product with core features",
+          "is_correct": true
+        },
+        {
+          "option_id": 7441,
+          "option_text": "MVP is a type of prototype",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1295,
+      "subskill_id": 63,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate prototyping with agile development?",
+      "options": [
+        {
+          "option_id": 7442,
+          "option_text": "By designing all features upfront",
+          "is_correct": false
+        },
+        {
+          "option_id": 7443,
+          "option_text": "Test and iterate prototypes in each sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 7444,
+          "option_text": "Skip prototyping",
+          "is_correct": false
+        },
+        {
+          "option_id": 7445,
+          "option_text": "Only use wireframes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1296,
+      "subskill_id": 64,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create an inclusive design system?",
+      "options": [
+        {
+          "option_id": 7446,
+          "option_text": "Use accessibility guidelines and test with diverse users",
+          "is_correct": true
+        },
+        {
+          "option_id": 7447,
+          "option_text": "Ignore accessibility",
+          "is_correct": false
+        },
+        {
+          "option_id": 7448,
+          "option_text": "Only focus on colors",
+          "is_correct": false
+        },
+        {
+          "option_id": 7449,
+          "option_text": "Use only visual design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1297,
+      "subskill_id": 64,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the business case for accessibility?",
+      "options": [
+        {
+          "option_id": 7450,
+          "option_text": "Increases user base, improves brand reputation, and reduces legal risk",
+          "is_correct": true
+        },
+        {
+          "option_id": 7451,
+          "option_text": "Accessibility has no business value",
+          "is_correct": false
+        },
+        {
+          "option_id": 7452,
+          "option_text": "Only costs money",
+          "is_correct": false
+        },
+        {
+          "option_id": 7453,
+          "option_text": "Only for compliance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1298,
+      "subskill_id": 64,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you conduct accessibility testing with users?",
+      "options": [
+        {
+          "option_id": 7454,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7455,
+          "option_text": "By only using automated tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 7456,
+          "option_text": "Recruit users with disabilities and test with assistive technologies",
+          "is_correct": true
+        },
+        {
+          "option_id": 7457,
+          "option_text": "By skipping testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1299,
+      "subskill_id": 64,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the emerging trends in accessible design?",
+      "options": [
+        {
+          "option_id": 7458,
+          "option_text": "No new trends",
+          "is_correct": false
+        },
+        {
+          "option_id": 7459,
+          "option_text": "AI-assisted accessibility, voice interfaces, and inclusive design",
+          "is_correct": true
+        },
+        {
+          "option_id": 7460,
+          "option_text": "Only more contrast",
+          "is_correct": false
+        },
+        {
+          "option_id": 7461,
+          "option_text": "Less accessibility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1300,
+      "subskill_id": 64,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you ensure accessibility in a global product?",
+      "options": [
+        {
+          "option_id": 7462,
+          "option_text": "Consider cultural differences",
+          "is_correct": false
+        },
+        {
+          "option_id": 7463,
+          "option_text": "Follow international accessibility standards",
+          "is_correct": false
+        },
+        {
+          "option_id": 7464,
+          "option_text": "Test with diverse users",
+          "is_correct": false
+        },
+        {
+          "option_id": 7465,
+          "option_text": "All of the above are essential",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

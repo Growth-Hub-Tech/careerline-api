@@ -1,0 +1,2906 @@
+{
+  "skill_id": 30,
+  "skill_name": "Prompt Engineering",
+  "questions": [
+    {
+      "question_id": 2901,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is effective prompting?",
+      "options": [
+        {
+          "option_id": 13866,
+          "option_text": "The practice of designing clear and specific prompts for AI models",
+          "is_correct": true
+        },
+        {
+          "option_id": 13867,
+          "option_text": "The practice of ignoring AI models",
+          "is_correct": false
+        },
+        {
+          "option_id": 13868,
+          "option_text": "The practice of deleting AI models",
+          "is_correct": false
+        },
+        {
+          "option_id": 13869,
+          "option_text": "The practice of hiding AI models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2902,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of effective prompting?",
+      "options": [
+        {
+          "option_id": 13870,
+          "option_text": "To get accurate and useful responses from AI models",
+          "is_correct": true
+        },
+        {
+          "option_id": 13871,
+          "option_text": "To get inaccurate and useless responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13872,
+          "option_text": "To ignore AI models",
+          "is_correct": false
+        },
+        {
+          "option_id": 13873,
+          "option_text": "To delete AI models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2903,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a prompt in AI?",
+      "options": [
+        {
+          "option_id": 13874,
+          "option_text": "A question or instruction given to an AI model",
+          "is_correct": true
+        },
+        {
+          "option_id": 13875,
+          "option_text": "A response from an AI model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13876,
+          "option_text": "A training example for an AI model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13877,
+          "option_text": "A parameter of an AI model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2904,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a clear prompt?",
+      "options": [
+        {
+          "option_id": 13878,
+          "option_text": "A prompt that is easy to understand and unambiguous",
+          "is_correct": true
+        },
+        {
+          "option_id": 13879,
+          "option_text": "A prompt that is difficult to understand",
+          "is_correct": false
+        },
+        {
+          "option_id": 13880,
+          "option_text": "A prompt that is ambiguous",
+          "is_correct": false
+        },
+        {
+          "option_id": 13881,
+          "option_text": "A prompt that is ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2905,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a specific prompt?",
+      "options": [
+        {
+          "option_id": 13882,
+          "option_text": "A prompt that is detailed and explicit",
+          "is_correct": true
+        },
+        {
+          "option_id": 13883,
+          "option_text": "A prompt that is vague and general",
+          "is_correct": false
+        },
+        {
+          "option_id": 13884,
+          "option_text": "A prompt that is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 13885,
+          "option_text": "A prompt that is deleted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2906,
+      "subskill_id": 138,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a concise prompt?",
+      "options": [
+        {
+          "option_id": 13886,
+          "option_text": "A prompt that is short and to the point",
+          "is_correct": true
+        },
+        {
+          "option_id": 13887,
+          "option_text": "A prompt that is long and rambling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13888,
+          "option_text": "A prompt that is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 13889,
+          "option_text": "A prompt that is deleted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2907,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 13890,
+          "option_text": "A technique where the model reasons step-by-step",
+          "is_correct": true
+        },
+        {
+          "option_id": 13891,
+          "option_text": "A technique where the model guesses the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 13892,
+          "option_text": "A technique where the model ignores the prompt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13893,
+          "option_text": "A technique where the model deletes the prompt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2908,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 13894,
+          "option_text": "To encourage the model to think logically and systematically",
+          "is_correct": true
+        },
+        {
+          "option_id": 13895,
+          "option_text": "To encourage the model to guess randomly",
+          "is_correct": false
+        },
+        {
+          "option_id": 13896,
+          "option_text": "To encourage the model to ignore the prompt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13897,
+          "option_text": "To encourage the model to delete the prompt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2909,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a step-by-step prompt?",
+      "options": [
+        {
+          "option_id": 13898,
+          "option_text": "A prompt that asks the model to solve a problem step by step",
+          "is_correct": true
+        },
+        {
+          "option_id": 13899,
+          "option_text": "A prompt that asks the model to guess the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 13900,
+          "option_text": "A prompt that asks the model to ignore the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 13901,
+          "option_text": "A prompt that asks the model to delete the problem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2910,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a reasoning prompt?",
+      "options": [
+        {
+          "option_id": 13902,
+          "option_text": "A prompt that asks the model to reason before answering",
+          "is_correct": true
+        },
+        {
+          "option_id": 13903,
+          "option_text": "A prompt that asks the model to guess before answering",
+          "is_correct": false
+        },
+        {
+          "option_id": 13904,
+          "option_text": "A prompt that asks the model to ignore the question",
+          "is_correct": false
+        },
+        {
+          "option_id": 13905,
+          "option_text": "A prompt that asks the model to delete the question",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2911,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a logical prompt?",
+      "options": [
+        {
+          "option_id": 13906,
+          "option_text": "A prompt that asks the model to use logic to solve a problem",
+          "is_correct": true
+        },
+        {
+          "option_id": 13907,
+          "option_text": "A prompt that asks the model to guess the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 13908,
+          "option_text": "A prompt that asks the model to ignore the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 13909,
+          "option_text": "A prompt that asks the model to delete the problem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2912,
+      "subskill_id": 139,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a structured prompt?",
+      "options": [
+        {
+          "option_id": 13910,
+          "option_text": "A prompt that provides a clear structure for the response",
+          "is_correct": true
+        },
+        {
+          "option_id": 13911,
+          "option_text": "A prompt that provides no structure for the response",
+          "is_correct": false
+        },
+        {
+          "option_id": 13912,
+          "option_text": "A prompt that ignores structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 13913,
+          "option_text": "A prompt that deletes structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2913,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is RAG?",
+      "options": [
+        {
+          "option_id": 13914,
+          "option_text": "Retrieval-Augmented Generation - a technique that combines retrieval and generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 13915,
+          "option_text": "A technique that ignores retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 13916,
+          "option_text": "A technique that deletes retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 13917,
+          "option_text": "A technique that hides retrieval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2914,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of RAG?",
+      "options": [
+        {
+          "option_id": 13918,
+          "option_text": "To improve the accuracy and relevance of generated responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 13919,
+          "option_text": "To reduce the accuracy of generated responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13920,
+          "option_text": "To ignore generated responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13921,
+          "option_text": "To delete generated responses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2915,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a retrieval in RAG?",
+      "options": [
+        {
+          "option_id": 13922,
+          "option_text": "The process of finding relevant documents from a knowledge base",
+          "is_correct": true
+        },
+        {
+          "option_id": 13923,
+          "option_text": "The process of ignoring documents",
+          "is_correct": false
+        },
+        {
+          "option_id": 13924,
+          "option_text": "The process of deleting documents",
+          "is_correct": false
+        },
+        {
+          "option_id": 13925,
+          "option_text": "The process of hiding documents",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2916,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a generation in RAG?",
+      "options": [
+        {
+          "option_id": 13926,
+          "option_text": "The process of generating a response based on retrieved documents",
+          "is_correct": true
+        },
+        {
+          "option_id": 13927,
+          "option_text": "The process of ignoring generated responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13928,
+          "option_text": "The process of deleting generated responses",
+          "is_correct": false
+        },
+        {
+          "option_id": 13929,
+          "option_text": "The process of hiding generated responses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2917,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a knowledge base in RAG?",
+      "options": [
+        {
+          "option_id": 13930,
+          "option_text": "A collection of documents used for retrieval in RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 13931,
+          "option_text": "A collection of models used for RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 13932,
+          "option_text": "A collection of prompts used for RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 13933,
+          "option_text": "A collection of datasets used for RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2918,
+      "subskill_id": 140,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a vector database in RAG?",
+      "options": [
+        {
+          "option_id": 13934,
+          "option_text": "A database that stores vectors for efficient retrieval",
+          "is_correct": true
+        },
+        {
+          "option_id": 13935,
+          "option_text": "A database that stores text for retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 13936,
+          "option_text": "A database that stores images for retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 13937,
+          "option_text": "A database that stores audio for retrieval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2919,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is LLM fine-tuning?",
+      "options": [
+        {
+          "option_id": 13938,
+          "option_text": "The process of adapting a pre-trained LLM to a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 13939,
+          "option_text": "The process of training a new LLM from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 13940,
+          "option_text": "The process of ignoring LLMs",
+          "is_correct": false
+        },
+        {
+          "option_id": 13941,
+          "option_text": "The process of deleting LLMs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2920,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of LLM fine-tuning?",
+      "options": [
+        {
+          "option_id": 13942,
+          "option_text": "To improve the performance of an LLM on a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 13943,
+          "option_text": "To reduce the performance of an LLM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13944,
+          "option_text": "To ignore LLM performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13945,
+          "option_text": "To delete LLM performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2921,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pre-trained model in fine-tuning?",
+      "options": [
+        {
+          "option_id": 13946,
+          "option_text": "An LLM that has been trained on a large dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 13947,
+          "option_text": "An LLM that has not been trained",
+          "is_correct": false
+        },
+        {
+          "option_id": 13948,
+          "option_text": "An LLM that is randomly initialized",
+          "is_correct": false
+        },
+        {
+          "option_id": 13949,
+          "option_text": "An LLM that is ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2922,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dataset in fine-tuning?",
+      "options": [
+        {
+          "option_id": 13950,
+          "option_text": "A collection of examples used to fine-tune an LLM",
+          "is_correct": true
+        },
+        {
+          "option_id": 13951,
+          "option_text": "A collection of models used to fine-tune an LLM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13952,
+          "option_text": "A collection of prompts used to fine-tune an LLM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13953,
+          "option_text": "A collection of parameters used to fine-tune an LLM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2923,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a training process in fine-tuning?",
+      "options": [
+        {
+          "option_id": 13954,
+          "option_text": "The process of adjusting weights during fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 13955,
+          "option_text": "The process of ignoring weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 13956,
+          "option_text": "The process of deleting weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 13957,
+          "option_text": "The process of hiding weights",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2924,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a validation process in fine-tuning?",
+      "options": [
+        {
+          "option_id": 13958,
+          "option_text": "The process of evaluating the fine-tuned model on a validation set",
+          "is_correct": true
+        },
+        {
+          "option_id": 13959,
+          "option_text": "The process of ignoring the fine-tuned model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13960,
+          "option_text": "The process of deleting the fine-tuned model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13961,
+          "option_text": "The process of hiding the fine-tuned model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2925,
+      "subskill_id": 141,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test process in fine-tuning?",
+      "options": [
+        {
+          "option_id": 13962,
+          "option_text": "The process of evaluating the fine-tuned model on a test set",
+          "is_correct": true
+        },
+        {
+          "option_id": 13963,
+          "option_text": "The process of ignoring the fine-tuned model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13964,
+          "option_text": "The process of deleting the fine-tuned model",
+          "is_correct": false
+        },
+        {
+          "option_id": 13965,
+          "option_text": "The process of hiding the fine-tuned model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2926,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write effective prompts?",
+      "options": [
+        {
+          "option_id": 13966,
+          "option_text": "By being clear, specific, and providing context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13967,
+          "option_text": "By being vague and ambiguous",
+          "is_correct": false
+        },
+        {
+          "option_id": 13968,
+          "option_text": "By ignoring context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13969,
+          "option_text": "By using complex language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2927,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a good prompt structure?",
+      "options": [
+        {
+          "option_id": 13970,
+          "option_text": "Context, instruction, and examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 13971,
+          "option_text": "Only context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13972,
+          "option_text": "Only instruction",
+          "is_correct": false
+        },
+        {
+          "option_id": 13973,
+          "option_text": "Only examples",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2928,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a bad prompt structure?",
+      "options": [
+        {
+          "option_id": 13974,
+          "option_text": "Vague, unclear, and without context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13975,
+          "option_text": "Clear, specific, and with context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13976,
+          "option_text": "Brief and to the point",
+          "is_correct": false
+        },
+        {
+          "option_id": 13977,
+          "option_text": "Detailed and thorough",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2929,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an iterative prompt?",
+      "options": [
+        {
+          "option_id": 13978,
+          "option_text": "A prompt that is refined through multiple iterations",
+          "is_correct": true
+        },
+        {
+          "option_id": 13979,
+          "option_text": "A prompt that is written once and never changed",
+          "is_correct": false
+        },
+        {
+          "option_id": 13980,
+          "option_text": "A prompt that is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 13981,
+          "option_text": "A prompt that is deleted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2930,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prompt refinement?",
+      "options": [
+        {
+          "option_id": 13982,
+          "option_text": "The process of improving a prompt by testing and revising it",
+          "is_correct": true
+        },
+        {
+          "option_id": 13983,
+          "option_text": "The process of ignoring a prompt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13984,
+          "option_text": "The process of deleting a prompt",
+          "is_correct": false
+        },
+        {
+          "option_id": 13985,
+          "option_text": "The process of hiding a prompt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2931,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 13986,
+          "option_text": "By asking the model to reason step by step",
+          "is_correct": true
+        },
+        {
+          "option_id": 13987,
+          "option_text": "By asking the model to guess the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 13988,
+          "option_text": "By asking the model to ignore the question",
+          "is_correct": false
+        },
+        {
+          "option_id": 13989,
+          "option_text": "By asking the model to delete the question",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2932,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt structure?",
+      "options": [
+        {
+          "option_id": 13990,
+          "option_text": "A prompt that asks the model to solve a problem step by step",
+          "is_correct": true
+        },
+        {
+          "option_id": 13991,
+          "option_text": "A prompt that asks the model to guess the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 13992,
+          "option_text": "A prompt that asks the model to ignore the problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 13993,
+          "option_text": "A prompt that asks the model to delete the problem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2933,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a complex chain-of-thought prompt?",
+      "options": [
+        {
+          "option_id": 13994,
+          "option_text": "A prompt that requires multiple steps of reasoning",
+          "is_correct": true
+        },
+        {
+          "option_id": 13995,
+          "option_text": "A prompt that requires no reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 13996,
+          "option_text": "A prompt that requires guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13997,
+          "option_text": "A prompt that requires ignoring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2934,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a simple chain-of-thought prompt?",
+      "options": [
+        {
+          "option_id": 13998,
+          "option_text": "A prompt that requires a single step of reasoning",
+          "is_correct": true
+        },
+        {
+          "option_id": 13999,
+          "option_text": "A prompt that requires multiple steps of reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14000,
+          "option_text": "A prompt that requires guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14001,
+          "option_text": "A prompt that requires ignoring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2935,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a zero-shot chain-of-thought prompt?",
+      "options": [
+        {
+          "option_id": 14002,
+          "option_text": "A prompt that asks the model to reason step by step without examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 14003,
+          "option_text": "A prompt that asks the model to guess the answer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14004,
+          "option_text": "A prompt that asks the model to ignore the question",
+          "is_correct": false
+        },
+        {
+          "option_id": 14005,
+          "option_text": "A prompt that asks the model to delete the question",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2936,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you implement RAG?",
+      "options": [
+        {
+          "option_id": 14006,
+          "option_text": "By building a retrieval system, indexing documents, and generating responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 14007,
+          "option_text": "By ignoring retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 14008,
+          "option_text": "By deleting retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 14009,
+          "option_text": "By hiding retrieval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2937,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a RAG architecture?",
+      "options": [
+        {
+          "option_id": 14010,
+          "option_text": "The structure of a RAG system, including retrieval and generation components",
+          "is_correct": true
+        },
+        {
+          "option_id": 14011,
+          "option_text": "The structure of a RAG system that ignores retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 14012,
+          "option_text": "The structure of a RAG system that deletes retrieval",
+          "is_correct": false
+        },
+        {
+          "option_id": 14013,
+          "option_text": "The structure of a RAG system that hides retrieval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2938,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a RAG pipeline?",
+      "options": [
+        {
+          "option_id": 14014,
+          "option_text": "The sequence of steps in a RAG system",
+          "is_correct": true
+        },
+        {
+          "option_id": 14015,
+          "option_text": "The sequence of steps that ignores RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14016,
+          "option_text": "The sequence of steps that deletes RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14017,
+          "option_text": "The sequence of steps that hides RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2939,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a RAG evaluation?",
+      "options": [
+        {
+          "option_id": 14018,
+          "option_text": "The process of measuring RAG performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14019,
+          "option_text": "The process of ignoring RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14020,
+          "option_text": "The process of deleting RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14021,
+          "option_text": "The process of hiding RAG performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2940,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a RAG optimization?",
+      "options": [
+        {
+          "option_id": 14022,
+          "option_text": "The process of improving RAG performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14023,
+          "option_text": "The process of ignoring RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14024,
+          "option_text": "The process of deleting RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14025,
+          "option_text": "The process of hiding RAG performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2941,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you fine-tune an LLM?",
+      "options": [
+        {
+          "option_id": 14026,
+          "option_text": "By preparing a dataset, choosing a model, and running the training process",
+          "is_correct": true
+        },
+        {
+          "option_id": 14027,
+          "option_text": "By ignoring the dataset",
+          "is_correct": false
+        },
+        {
+          "option_id": 14028,
+          "option_text": "By deleting the dataset",
+          "is_correct": false
+        },
+        {
+          "option_id": 14029,
+          "option_text": "By hiding the dataset",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2942,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning dataset?",
+      "options": [
+        {
+          "option_id": 14030,
+          "option_text": "A collection of examples used for fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14031,
+          "option_text": "A collection of models used for fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14032,
+          "option_text": "A collection of prompts used for fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14033,
+          "option_text": "A collection of parameters used for fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2943,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning parameter?",
+      "options": [
+        {
+          "option_id": 14034,
+          "option_text": "Hyperparameters like learning rate and batch size",
+          "is_correct": true
+        },
+        {
+          "option_id": 14035,
+          "option_text": "Parameters like model weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 14036,
+          "option_text": "Parameters like model architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 14037,
+          "option_text": "Parameters like model size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2944,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning process?",
+      "options": [
+        {
+          "option_id": 14038,
+          "option_text": "Training the model on the dataset and updating its weights",
+          "is_correct": true
+        },
+        {
+          "option_id": 14039,
+          "option_text": "Ignoring the training process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14040,
+          "option_text": "Deleting the training process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14041,
+          "option_text": "Hiding the training process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2945,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning evaluation?",
+      "options": [
+        {
+          "option_id": 14042,
+          "option_text": "Evaluating the fine-tuned model on a validation or test set",
+          "is_correct": true
+        },
+        {
+          "option_id": 14043,
+          "option_text": "Ignoring the evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14044,
+          "option_text": "Deleting the evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14045,
+          "option_text": "Hiding the evaluation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2946,
+      "subskill_id": 138,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prompt template?",
+      "options": [
+        {
+          "option_id": 14046,
+          "option_text": "A pre-designed format for prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14047,
+          "option_text": "A pre-designed format for models",
+          "is_correct": false
+        },
+        {
+          "option_id": 14048,
+          "option_text": "A pre-designed format for datasets",
+          "is_correct": false
+        },
+        {
+          "option_id": 14049,
+          "option_text": "A pre-designed format for parameters",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2947,
+      "subskill_id": 139,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt example?",
+      "options": [
+        {
+          "option_id": 14050,
+          "option_text": "An example of a prompt that asks the model to reason step by step",
+          "is_correct": true
+        },
+        {
+          "option_id": 14051,
+          "option_text": "An example of a prompt that ignores reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14052,
+          "option_text": "An example of a prompt that deletes reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14053,
+          "option_text": "An example of a prompt that hides reasoning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2948,
+      "subskill_id": 140,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a RAG use case?",
+      "options": [
+        {
+          "option_id": 14054,
+          "option_text": "A practical application of RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 14055,
+          "option_text": "A practical application that ignores RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14056,
+          "option_text": "A practical application that deletes RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14057,
+          "option_text": "A practical application that hides RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2949,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning cost?",
+      "options": [
+        {
+          "option_id": 14058,
+          "option_text": "The cost associated with fine-tuning an LLM",
+          "is_correct": true
+        },
+        {
+          "option_id": 14059,
+          "option_text": "The cost associated with ignoring fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14060,
+          "option_text": "The cost associated with deleting fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14061,
+          "option_text": "The cost associated with hiding fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2950,
+      "subskill_id": 141,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fine-tuning challenge?",
+      "options": [
+        {
+          "option_id": 14062,
+          "option_text": "A challenge encountered during fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14063,
+          "option_text": "A challenge encountered during ignoring fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14064,
+          "option_text": "A challenge encountered during deleting fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14065,
+          "option_text": "A challenge encountered during hiding fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2951,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure prompt effectiveness?",
+      "options": [
+        {
+          "option_id": 14066,
+          "option_text": "By tracking metrics like accuracy, relevance, and user satisfaction",
+          "is_correct": true
+        },
+        {
+          "option_id": 14067,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14068,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 14069,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2952,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you improve prompt effectiveness?",
+      "options": [
+        {
+          "option_id": 14070,
+          "option_text": "By testing different variations and incorporating feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 14071,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 14072,
+          "option_text": "By deleting feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 14073,
+          "option_text": "By hiding feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2953,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt engineering framework?",
+      "options": [
+        {
+          "option_id": 14074,
+          "option_text": "A systematic approach to designing and refining prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14075,
+          "option_text": "A systematic approach to ignoring prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14076,
+          "option_text": "A systematic approach to deleting prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14077,
+          "option_text": "A systematic approach to hiding prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2954,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt engineering pattern?",
+      "options": [
+        {
+          "option_id": 14078,
+          "option_text": "A reusable solution to common prompting problems",
+          "is_correct": true
+        },
+        {
+          "option_id": 14079,
+          "option_text": "A reusable solution to ignoring prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14080,
+          "option_text": "A reusable solution to deleting prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14081,
+          "option_text": "A reusable solution to hiding prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2955,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt engineering technique?",
+      "options": [
+        {
+          "option_id": 14082,
+          "option_text": "A method for improving prompt effectiveness",
+          "is_correct": true
+        },
+        {
+          "option_id": 14083,
+          "option_text": "A method for ignoring prompt effectiveness",
+          "is_correct": false
+        },
+        {
+          "option_id": 14084,
+          "option_text": "A method for deleting prompt effectiveness",
+          "is_correct": false
+        },
+        {
+          "option_id": 14085,
+          "option_text": "A method for hiding prompt effectiveness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2956,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 14086,
+          "option_text": "By testing and refining prompts to improve performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14087,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14088,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14089,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2957,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt optimization?",
+      "options": [
+        {
+          "option_id": 14090,
+          "option_text": "The process of improving the effectiveness of chain-of-thought prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14091,
+          "option_text": "The process of ignoring chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14092,
+          "option_text": "The process of deleting chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14093,
+          "option_text": "The process of hiding chain-of-thought prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2958,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt evaluation?",
+      "options": [
+        {
+          "option_id": 14094,
+          "option_text": "The process of measuring the performance of chain-of-thought prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14095,
+          "option_text": "The process of ignoring chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14096,
+          "option_text": "The process of deleting chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14097,
+          "option_text": "The process of hiding chain-of-thought prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2959,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt refinement?",
+      "options": [
+        {
+          "option_id": 14098,
+          "option_text": "The process of improving chain-of-thought prompts through iteration",
+          "is_correct": true
+        },
+        {
+          "option_id": 14099,
+          "option_text": "The process of ignoring chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14100,
+          "option_text": "The process of deleting chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14101,
+          "option_text": "The process of hiding chain-of-thought prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2960,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt scaling?",
+      "options": [
+        {
+          "option_id": 14102,
+          "option_text": "The process of using chain-of-thought prompts in large-scale applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 14103,
+          "option_text": "The process of ignoring chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14104,
+          "option_text": "The process of deleting chain-of-thought prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14105,
+          "option_text": "The process of hiding chain-of-thought prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2961,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize RAG?",
+      "options": [
+        {
+          "option_id": 14106,
+          "option_text": "By improving retrieval accuracy, generation quality, and latency",
+          "is_correct": true
+        },
+        {
+          "option_id": 14107,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14108,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14109,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2962,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a RAG optimization technique?",
+      "options": [
+        {
+          "option_id": 14110,
+          "option_text": "A method for improving RAG performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14111,
+          "option_text": "A method for ignoring RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14112,
+          "option_text": "A method for deleting RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14113,
+          "option_text": "A method for hiding RAG performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2963,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a RAG evaluation metric?",
+      "options": [
+        {
+          "option_id": 14114,
+          "option_text": "A measure of RAG performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14115,
+          "option_text": "A measure of ignoring RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14116,
+          "option_text": "A measure of deleting RAG performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14117,
+          "option_text": "A measure of hiding RAG performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2964,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a RAG scaling strategy?",
+      "options": [
+        {
+          "option_id": 14118,
+          "option_text": "A plan for scaling RAG to larger datasets and workloads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14119,
+          "option_text": "A plan for ignoring RAG scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14120,
+          "option_text": "A plan for deleting RAG scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14121,
+          "option_text": "A plan for hiding RAG scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2965,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a RAG production deployment?",
+      "options": [
+        {
+          "option_id": 14122,
+          "option_text": "The process of deploying RAG in a production environment",
+          "is_correct": true
+        },
+        {
+          "option_id": 14123,
+          "option_text": "The process of ignoring RAG deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14124,
+          "option_text": "The process of deleting RAG deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14125,
+          "option_text": "The process of hiding RAG deployment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2966,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize LLM fine-tuning?",
+      "options": [
+        {
+          "option_id": 14126,
+          "option_text": "By testing different hyperparameters and techniques",
+          "is_correct": true
+        },
+        {
+          "option_id": 14127,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14128,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14129,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2967,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning optimization technique?",
+      "options": [
+        {
+          "option_id": 14130,
+          "option_text": "A method for improving fine-tuning performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14131,
+          "option_text": "A method for ignoring fine-tuning performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14132,
+          "option_text": "A method for deleting fine-tuning performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14133,
+          "option_text": "A method for hiding fine-tuning performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2968,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning evaluation metric?",
+      "options": [
+        {
+          "option_id": 14134,
+          "option_text": "A measure of fine-tuning performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14135,
+          "option_text": "A measure of ignoring fine-tuning performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14136,
+          "option_text": "A measure of deleting fine-tuning performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14137,
+          "option_text": "A measure of hiding fine-tuning performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2969,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning scaling strategy?",
+      "options": [
+        {
+          "option_id": 14138,
+          "option_text": "A plan for scaling fine-tuning to larger datasets and models",
+          "is_correct": true
+        },
+        {
+          "option_id": 14139,
+          "option_text": "A plan for ignoring fine-tuning scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14140,
+          "option_text": "A plan for deleting fine-tuning scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14141,
+          "option_text": "A plan for hiding fine-tuning scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2970,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning production deployment?",
+      "options": [
+        {
+          "option_id": 14142,
+          "option_text": "The process of deploying fine-tuned models in production",
+          "is_correct": true
+        },
+        {
+          "option_id": 14143,
+          "option_text": "The process of ignoring fine-tuning deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14144,
+          "option_text": "The process of deleting fine-tuning deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14145,
+          "option_text": "The process of hiding fine-tuning deployment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2971,
+      "subskill_id": 138,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt engineering best practice?",
+      "options": [
+        {
+          "option_id": 14146,
+          "option_text": "A proven practice for effective prompt engineering",
+          "is_correct": true
+        },
+        {
+          "option_id": 14147,
+          "option_text": "A proven practice for ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14148,
+          "option_text": "A proven practice for deleting prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14149,
+          "option_text": "A proven practice for hiding prompt engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2972,
+      "subskill_id": 139,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt best practice?",
+      "options": [
+        {
+          "option_id": 14150,
+          "option_text": "A proven practice for effective chain-of-thought prompting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14151,
+          "option_text": "A proven practice for ignoring chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14152,
+          "option_text": "A proven practice for deleting chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14153,
+          "option_text": "A proven practice for hiding chain-of-thought prompting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2973,
+      "subskill_id": 140,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a RAG best practice?",
+      "options": [
+        {
+          "option_id": 14154,
+          "option_text": "A proven practice for effective RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 14155,
+          "option_text": "A proven practice for ignoring RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14156,
+          "option_text": "A proven practice for deleting RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14157,
+          "option_text": "A proven practice for hiding RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2974,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning best practice?",
+      "options": [
+        {
+          "option_id": 14158,
+          "option_text": "A proven practice for effective LLM fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14159,
+          "option_text": "A proven practice for ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14160,
+          "option_text": "A proven practice for deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14161,
+          "option_text": "A proven practice for hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2975,
+      "subskill_id": 141,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a fine-tuning tool?",
+      "options": [
+        {
+          "option_id": 14162,
+          "option_text": "A tool used for LLM fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14163,
+          "option_text": "A tool used for ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14164,
+          "option_text": "A tool used for deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14165,
+          "option_text": "A tool used for hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2976,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale prompt engineering?",
+      "options": [
+        {
+          "option_id": 14166,
+          "option_text": "By using frameworks, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 14167,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14168,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14169,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2977,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate prompt engineering?",
+      "options": [
+        {
+          "option_id": 14170,
+          "option_text": "By using algorithms that generate and test prompts automatically",
+          "is_correct": true
+        },
+        {
+          "option_id": 14171,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14172,
+          "option_text": "By deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14173,
+          "option_text": "By hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2978,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt engineering platform?",
+      "options": [
+        {
+          "option_id": 14174,
+          "option_text": "A platform for prompt engineering at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14175,
+          "option_text": "A platform for ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14176,
+          "option_text": "A platform for deleting prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14177,
+          "option_text": "A platform for hiding prompt engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2979,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt engineering team?",
+      "options": [
+        {
+          "option_id": 14178,
+          "option_text": "A team dedicated to prompt engineering",
+          "is_correct": true
+        },
+        {
+          "option_id": 14179,
+          "option_text": "A team dedicated to ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14180,
+          "option_text": "A team dedicated to deleting prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14181,
+          "option_text": "A team dedicated to hiding prompt engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2980,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt engineering strategy?",
+      "options": [
+        {
+          "option_id": 14182,
+          "option_text": "A high-level plan for prompt engineering",
+          "is_correct": true
+        },
+        {
+          "option_id": 14183,
+          "option_text": "A high-level plan for ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14184,
+          "option_text": "A high-level plan for deleting prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14185,
+          "option_text": "A high-level plan for hiding prompt engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2981,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 14186,
+          "option_text": "By using frameworks, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 14187,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14188,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14189,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2982,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate chain-of-thought prompting?",
+      "options": [
+        {
+          "option_id": 14190,
+          "option_text": "By using algorithms that generate and test chain-of-thought prompts automatically",
+          "is_correct": true
+        },
+        {
+          "option_id": 14191,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14192,
+          "option_text": "By deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14193,
+          "option_text": "By hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2983,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt platform?",
+      "options": [
+        {
+          "option_id": 14194,
+          "option_text": "A platform for chain-of-thought prompting at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14195,
+          "option_text": "A platform for ignoring chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14196,
+          "option_text": "A platform for deleting chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14197,
+          "option_text": "A platform for hiding chain-of-thought prompting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2984,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt team?",
+      "options": [
+        {
+          "option_id": 14198,
+          "option_text": "A team dedicated to chain-of-thought prompting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14199,
+          "option_text": "A team dedicated to ignoring chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14200,
+          "option_text": "A team dedicated to deleting chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14201,
+          "option_text": "A team dedicated to hiding chain-of-thought prompting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2985,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt strategy?",
+      "options": [
+        {
+          "option_id": 14202,
+          "option_text": "A high-level plan for chain-of-thought prompting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14203,
+          "option_text": "A high-level plan for ignoring chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14204,
+          "option_text": "A high-level plan for deleting chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14205,
+          "option_text": "A high-level plan for hiding chain-of-thought prompting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2986,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale RAG?",
+      "options": [
+        {
+          "option_id": 14206,
+          "option_text": "By using frameworks, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 14207,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14208,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14209,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2987,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate RAG?",
+      "options": [
+        {
+          "option_id": 14210,
+          "option_text": "By using algorithms that optimize RAG automatically",
+          "is_correct": true
+        },
+        {
+          "option_id": 14211,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14212,
+          "option_text": "By deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14213,
+          "option_text": "By hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2988,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a RAG platform?",
+      "options": [
+        {
+          "option_id": 14214,
+          "option_text": "A platform for RAG at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14215,
+          "option_text": "A platform for ignoring RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14216,
+          "option_text": "A platform for deleting RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14217,
+          "option_text": "A platform for hiding RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2989,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a RAG team?",
+      "options": [
+        {
+          "option_id": 14218,
+          "option_text": "A team dedicated to RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 14219,
+          "option_text": "A team dedicated to ignoring RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14220,
+          "option_text": "A team dedicated to deleting RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14221,
+          "option_text": "A team dedicated to hiding RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2990,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a RAG strategy?",
+      "options": [
+        {
+          "option_id": 14222,
+          "option_text": "A high-level plan for RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 14223,
+          "option_text": "A high-level plan for ignoring RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14224,
+          "option_text": "A high-level plan for deleting RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14225,
+          "option_text": "A high-level plan for hiding RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2991,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale LLM fine-tuning?",
+      "options": [
+        {
+          "option_id": 14226,
+          "option_text": "By using frameworks, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 14227,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14228,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14229,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2992,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate LLM fine-tuning?",
+      "options": [
+        {
+          "option_id": 14230,
+          "option_text": "By using algorithms that automate fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14231,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14232,
+          "option_text": "By deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14233,
+          "option_text": "By hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2993,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fine-tuning platform?",
+      "options": [
+        {
+          "option_id": 14234,
+          "option_text": "A platform for LLM fine-tuning at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14235,
+          "option_text": "A platform for ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14236,
+          "option_text": "A platform for deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14237,
+          "option_text": "A platform for hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2994,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fine-tuning team?",
+      "options": [
+        {
+          "option_id": 14238,
+          "option_text": "A team dedicated to LLM fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14239,
+          "option_text": "A team dedicated to ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14240,
+          "option_text": "A team dedicated to deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14241,
+          "option_text": "A team dedicated to hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2995,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fine-tuning strategy?",
+      "options": [
+        {
+          "option_id": 14242,
+          "option_text": "A high-level plan for LLM fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14243,
+          "option_text": "A high-level plan for ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14244,
+          "option_text": "A high-level plan for deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14245,
+          "option_text": "A high-level plan for hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2996,
+      "subskill_id": 138,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt engineering future?",
+      "options": [
+        {
+          "option_id": 14246,
+          "option_text": "The future of prompt engineering, which may include new technologies",
+          "is_correct": true
+        },
+        {
+          "option_id": 14247,
+          "option_text": "The future of ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14248,
+          "option_text": "The future of deleting prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14249,
+          "option_text": "The future of hiding prompt engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2997,
+      "subskill_id": 139,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt future?",
+      "options": [
+        {
+          "option_id": 14250,
+          "option_text": "The future of chain-of-thought prompting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14251,
+          "option_text": "The future of ignoring chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14252,
+          "option_text": "The future of deleting chain-of-thought prompting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14253,
+          "option_text": "The future of hiding chain-of-thought prompting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2998,
+      "subskill_id": 140,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a RAG future?",
+      "options": [
+        {
+          "option_id": 14254,
+          "option_text": "The future of RAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 14255,
+          "option_text": "The future of ignoring RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14256,
+          "option_text": "The future of deleting RAG",
+          "is_correct": false
+        },
+        {
+          "option_id": 14257,
+          "option_text": "The future of hiding RAG",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2999,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fine-tuning future?",
+      "options": [
+        {
+          "option_id": 14258,
+          "option_text": "The future of LLM fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 14259,
+          "option_text": "The future of ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14260,
+          "option_text": "The future of deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14261,
+          "option_text": "The future of hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3000,
+      "subskill_id": 141,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a fine-tuning enterprise strategy?",
+      "options": [
+        {
+          "option_id": 14262,
+          "option_text": "A high-level strategy for using LLM fine-tuning in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 14263,
+          "option_text": "A high-level strategy for ignoring LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14264,
+          "option_text": "A high-level strategy for deleting LLM fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 14265,
+          "option_text": "A high-level strategy for hiding LLM fine-tuning",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

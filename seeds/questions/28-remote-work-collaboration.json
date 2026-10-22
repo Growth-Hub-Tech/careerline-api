@@ -1,0 +1,2906 @@
+{
+  "skill_id": 28,
+  "skill_name": "Remote Work & Collaboration",
+  "questions": [
+    {
+      "question_id": 2701,
+      "subskill_id": 129,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is asynchronous communication?",
+      "options": [
+        {
+          "option_id": 13066,
+          "option_text": "A form of communication where messages are sent and received at different times",
+          "is_correct": true
+        },
+        {
+          "option_id": 13067,
+          "option_text": "A form of communication where messages are sent and received in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13068,
+          "option_text": "A form of communication where messages are ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 13069,
+          "option_text": "A form of communication where messages are deleted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2702,
+      "subskill_id": 129,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of async communication?",
+      "options": [
+        {
+          "option_id": 13070,
+          "option_text": "To allow people to communicate without requiring them to be online at the same time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13071,
+          "option_text": "To force people to communicate in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13072,
+          "option_text": "To ignore communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13073,
+          "option_text": "To delete communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2703,
+      "subskill_id": 129,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between async and sync communication?",
+      "options": [
+        {
+          "option_id": 13074,
+          "option_text": "Async communication is at different times; sync communication is in real-time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13075,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 13076,
+          "option_text": "Sync communication is at different times",
+          "is_correct": false
+        },
+        {
+          "option_id": 13077,
+          "option_text": "Async communication is in real-time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2704,
+      "subskill_id": 129,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a tool for async communication?",
+      "options": [
+        {
+          "option_id": 13078,
+          "option_text": "Email, Slack, Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13079,
+          "option_text": "Phone calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13080,
+          "option_text": "Video calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13081,
+          "option_text": "In-person meetings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2705,
+      "subskill_id": 129,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a best practice for async communication?",
+      "options": [
+        {
+          "option_id": 13082,
+          "option_text": "Be clear, concise, and provide context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13083,
+          "option_text": "Be vague and unclear",
+          "is_correct": false
+        },
+        {
+          "option_id": 13084,
+          "option_text": "Ignore context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13085,
+          "option_text": "Use complex language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2706,
+      "subskill_id": 130,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Notion?",
+      "options": [
+        {
+          "option_id": 13086,
+          "option_text": "An all-in-one workspace for notes, tasks, and databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 13087,
+          "option_text": "A coding platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 13088,
+          "option_text": "A video conferencing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 13089,
+          "option_text": "A design tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2707,
+      "subskill_id": 130,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of Notion?",
+      "options": [
+        {
+          "option_id": 13090,
+          "option_text": "To organize and manage information",
+          "is_correct": true
+        },
+        {
+          "option_id": 13091,
+          "option_text": "To ignore information",
+          "is_correct": false
+        },
+        {
+          "option_id": 13092,
+          "option_text": "To delete information",
+          "is_correct": false
+        },
+        {
+          "option_id": 13093,
+          "option_text": "To hide information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2708,
+      "subskill_id": 130,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Notion page?",
+      "options": [
+        {
+          "option_id": 13094,
+          "option_text": "A container for content in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13095,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13096,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13097,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2709,
+      "subskill_id": 130,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Notion database?",
+      "options": [
+        {
+          "option_id": 13098,
+          "option_text": "A collection of data in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13099,
+          "option_text": "A page in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13100,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13101,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2710,
+      "subskill_id": 130,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Notion workspace?",
+      "options": [
+        {
+          "option_id": 13102,
+          "option_text": "A collection of pages and databases in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13103,
+          "option_text": "A page in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13104,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13105,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2711,
+      "subskill_id": 131,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Slack?",
+      "options": [
+        {
+          "option_id": 13106,
+          "option_text": "A messaging platform for teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 13107,
+          "option_text": "A coding platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 13108,
+          "option_text": "A video conferencing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 13109,
+          "option_text": "A design tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2712,
+      "subskill_id": 131,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of Slack?",
+      "options": [
+        {
+          "option_id": 13110,
+          "option_text": "To facilitate team communication and collaboration",
+          "is_correct": true
+        },
+        {
+          "option_id": 13111,
+          "option_text": "To ignore team communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13112,
+          "option_text": "To delete team communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13113,
+          "option_text": "To hide team communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2713,
+      "subskill_id": 131,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Slack channel?",
+      "options": [
+        {
+          "option_id": 13114,
+          "option_text": "A dedicated space for team communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13115,
+          "option_text": "A direct message",
+          "is_correct": false
+        },
+        {
+          "option_id": 13116,
+          "option_text": "A group message",
+          "is_correct": false
+        },
+        {
+          "option_id": 13117,
+          "option_text": "A private message",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2714,
+      "subskill_id": 131,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Slack message?",
+      "options": [
+        {
+          "option_id": 13118,
+          "option_text": "A message sent on Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13119,
+          "option_text": "A channel on Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13120,
+          "option_text": "A workspace on Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13121,
+          "option_text": "A bot on Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2715,
+      "subskill_id": 131,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Slack workspace?",
+      "options": [
+        {
+          "option_id": 13122,
+          "option_text": "A collection of channels and members in Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13123,
+          "option_text": "A channel in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13124,
+          "option_text": "A message in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13125,
+          "option_text": "A bot in Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2716,
+      "subskill_id": 132,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is time management?",
+      "options": [
+        {
+          "option_id": 13126,
+          "option_text": "The process of planning and controlling time spent on activities",
+          "is_correct": true
+        },
+        {
+          "option_id": 13127,
+          "option_text": "The process of ignoring time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13128,
+          "option_text": "The process of wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13129,
+          "option_text": "The process of deleting time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2717,
+      "subskill_id": 132,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of time management?",
+      "options": [
+        {
+          "option_id": 13130,
+          "option_text": "To improve productivity and efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 13131,
+          "option_text": "To reduce productivity",
+          "is_correct": false
+        },
+        {
+          "option_id": 13132,
+          "option_text": "To ignore productivity",
+          "is_correct": false
+        },
+        {
+          "option_id": 13133,
+          "option_text": "To waste time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2718,
+      "subskill_id": 132,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a time management tool?",
+      "options": [
+        {
+          "option_id": 13134,
+          "option_text": "Calendars, to-do lists, and time trackers",
+          "is_correct": true
+        },
+        {
+          "option_id": 13135,
+          "option_text": "Video conferencing tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13136,
+          "option_text": "Design tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13137,
+          "option_text": "Coding platforms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2719,
+      "subskill_id": 132,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a time management technique?",
+      "options": [
+        {
+          "option_id": 13138,
+          "option_text": "Pomodoro Technique, Eisenhower Matrix",
+          "is_correct": true
+        },
+        {
+          "option_id": 13139,
+          "option_text": "Video conferencing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13140,
+          "option_text": "Design thinking",
+          "is_correct": false
+        },
+        {
+          "option_id": 13141,
+          "option_text": "Coding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2720,
+      "subskill_id": 132,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a time management strategy?",
+      "options": [
+        {
+          "option_id": 13142,
+          "option_text": "A plan for managing time effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13143,
+          "option_text": "A plan for ignoring time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13144,
+          "option_text": "A plan for wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13145,
+          "option_text": "A plan for deleting time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2721,
+      "subskill_id": 133,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are collaboration tools?",
+      "options": [
+        {
+          "option_id": 13146,
+          "option_text": "Tools that enable people to work together, often remotely",
+          "is_correct": true
+        },
+        {
+          "option_id": 13147,
+          "option_text": "Tools that prevent people from working together",
+          "is_correct": false
+        },
+        {
+          "option_id": 13148,
+          "option_text": "Tools that ignore collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13149,
+          "option_text": "Tools that delete collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2722,
+      "subskill_id": 133,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of collaboration tools?",
+      "options": [
+        {
+          "option_id": 13150,
+          "option_text": "To facilitate teamwork and collaboration",
+          "is_correct": true
+        },
+        {
+          "option_id": 13151,
+          "option_text": "To prevent teamwork",
+          "is_correct": false
+        },
+        {
+          "option_id": 13152,
+          "option_text": "To ignore teamwork",
+          "is_correct": false
+        },
+        {
+          "option_id": 13153,
+          "option_text": "To delete teamwork",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2723,
+      "subskill_id": 133,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a document collaboration tool?",
+      "options": [
+        {
+          "option_id": 13154,
+          "option_text": "Google Docs",
+          "is_correct": true
+        },
+        {
+          "option_id": 13155,
+          "option_text": "Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13156,
+          "option_text": "Zoom",
+          "is_correct": false
+        },
+        {
+          "option_id": 13157,
+          "option_text": "Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2724,
+      "subskill_id": 133,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a project collaboration tool?",
+      "options": [
+        {
+          "option_id": 13158,
+          "option_text": "Trello, Asana",
+          "is_correct": true
+        },
+        {
+          "option_id": 13159,
+          "option_text": "Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13160,
+          "option_text": "Zoom",
+          "is_correct": false
+        },
+        {
+          "option_id": 13161,
+          "option_text": "Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2725,
+      "subskill_id": 133,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a virtual whiteboard?",
+      "options": [
+        {
+          "option_id": 13162,
+          "option_text": "A digital canvas for brainstorming and planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 13163,
+          "option_text": "A video conferencing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 13164,
+          "option_text": "A messaging platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 13165,
+          "option_text": "A coding platform",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2726,
+      "subskill_id": 129,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use async communication effectively?",
+      "options": [
+        {
+          "option_id": 13166,
+          "option_text": "By being clear, concise, and providing context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13167,
+          "option_text": "By being vague",
+          "is_correct": false
+        },
+        {
+          "option_id": 13168,
+          "option_text": "By ignoring context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13169,
+          "option_text": "By using complex language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2727,
+      "subskill_id": 129,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a async communication strategy?",
+      "options": [
+        {
+          "option_id": 13170,
+          "option_text": "A plan for using async communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13171,
+          "option_text": "A plan for ignoring async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13172,
+          "option_text": "A plan for deleting async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13173,
+          "option_text": "A plan for hiding async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2728,
+      "subskill_id": 129,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a async communication culture?",
+      "options": [
+        {
+          "option_id": 13174,
+          "option_text": "An environment where async communication is valued and practiced",
+          "is_correct": true
+        },
+        {
+          "option_id": 13175,
+          "option_text": "An environment where async communication is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 13176,
+          "option_text": "An environment where async communication is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 13177,
+          "option_text": "An environment where async communication is hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2729,
+      "subskill_id": 129,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a async communication tool?",
+      "options": [
+        {
+          "option_id": 13178,
+          "option_text": "Email, Slack, Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13179,
+          "option_text": "Phone calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13180,
+          "option_text": "Video calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13181,
+          "option_text": "In-person meetings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2730,
+      "subskill_id": 129,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a async communication best practice?",
+      "options": [
+        {
+          "option_id": 13182,
+          "option_text": "Use clear subject lines and provide context",
+          "is_correct": true
+        },
+        {
+          "option_id": 13183,
+          "option_text": "Use vague subject lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 13184,
+          "option_text": "Ignore context",
+          "is_correct": false
+        },
+        {
+          "option_id": 13185,
+          "option_text": "Use complex language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2731,
+      "subskill_id": 130,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use Notion for collaboration?",
+      "options": [
+        {
+          "option_id": 13186,
+          "option_text": "By creating a shared workspace for notes, tasks, and databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 13187,
+          "option_text": "By ignoring collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13188,
+          "option_text": "By deleting collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13189,
+          "option_text": "By hiding collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2732,
+      "subskill_id": 130,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Notion template?",
+      "options": [
+        {
+          "option_id": 13190,
+          "option_text": "A pre-made page or database structure in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13191,
+          "option_text": "A custom page in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13192,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13193,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2733,
+      "subskill_id": 130,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Notion block?",
+      "options": [
+        {
+          "option_id": 13194,
+          "option_text": "A unit of content in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13195,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13196,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13197,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2734,
+      "subskill_id": 130,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Notion database view?",
+      "options": [
+        {
+          "option_id": 13198,
+          "option_text": "A different way to display a database in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13199,
+          "option_text": "A page in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13200,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13201,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2735,
+      "subskill_id": 130,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Notion API?",
+      "options": [
+        {
+          "option_id": 13202,
+          "option_text": "An interface for interacting with Notion programmatically",
+          "is_correct": true
+        },
+        {
+          "option_id": 13203,
+          "option_text": "A page in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13204,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13205,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2736,
+      "subskill_id": 131,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use Slack for collaboration?",
+      "options": [
+        {
+          "option_id": 13206,
+          "option_text": "By creating channels for different topics and teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 13207,
+          "option_text": "By ignoring channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 13208,
+          "option_text": "By deleting channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 13209,
+          "option_text": "By hiding channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2737,
+      "subskill_id": 131,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Slack integration?",
+      "options": [
+        {
+          "option_id": 13210,
+          "option_text": "A connection between Slack and other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13211,
+          "option_text": "A channel in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13212,
+          "option_text": "A message in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13213,
+          "option_text": "A bot in Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2738,
+      "subskill_id": 131,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Slack bot?",
+      "options": [
+        {
+          "option_id": 13214,
+          "option_text": "An automated program that performs tasks in Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13215,
+          "option_text": "A channel in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13216,
+          "option_text": "A message in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13217,
+          "option_text": "A workspace in Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2739,
+      "subskill_id": 131,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Slack notification?",
+      "options": [
+        {
+          "option_id": 13218,
+          "option_text": "An alert sent to a user in Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13219,
+          "option_text": "A channel in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13220,
+          "option_text": "A message in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13221,
+          "option_text": "A bot in Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2740,
+      "subskill_id": 131,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Slack status?",
+      "options": [
+        {
+          "option_id": 13222,
+          "option_text": "A user's current availability indicator in Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13223,
+          "option_text": "A channel in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13224,
+          "option_text": "A message in Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13225,
+          "option_text": "A bot in Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2741,
+      "subskill_id": 132,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage time effectively?",
+      "options": [
+        {
+          "option_id": 13226,
+          "option_text": "By prioritizing tasks and avoiding distractions",
+          "is_correct": true
+        },
+        {
+          "option_id": 13227,
+          "option_text": "By ignoring tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13228,
+          "option_text": "By wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13229,
+          "option_text": "By deleting tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2742,
+      "subskill_id": 132,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a time management framework?",
+      "options": [
+        {
+          "option_id": 13230,
+          "option_text": "A systematic approach to managing time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13231,
+          "option_text": "A plan for ignoring time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13232,
+          "option_text": "A plan for wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13233,
+          "option_text": "A plan for deleting time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2743,
+      "subskill_id": 132,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a time management technique like Pomodoro?",
+      "options": [
+        {
+          "option_id": 13234,
+          "option_text": "A technique that uses a timer to break work into intervals",
+          "is_correct": true
+        },
+        {
+          "option_id": 13235,
+          "option_text": "A technique that ignores time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13236,
+          "option_text": "A technique that wastes time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13237,
+          "option_text": "A technique that deletes time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2744,
+      "subskill_id": 132,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a time management tool like Toggl?",
+      "options": [
+        {
+          "option_id": 13238,
+          "option_text": "A tool for tracking time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13239,
+          "option_text": "A tool for ignoring time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13240,
+          "option_text": "A tool for wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13241,
+          "option_text": "A tool for deleting time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2745,
+      "subskill_id": 132,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a time management strategy like Eisenhower Matrix?",
+      "options": [
+        {
+          "option_id": 13242,
+          "option_text": "A technique that prioritizes tasks based on urgency and importance",
+          "is_correct": true
+        },
+        {
+          "option_id": 13243,
+          "option_text": "A technique that ignores tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13244,
+          "option_text": "A technique that wastes tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13245,
+          "option_text": "A technique that deletes tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2746,
+      "subskill_id": 133,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use collaboration tools effectively?",
+      "options": [
+        {
+          "option_id": 13246,
+          "option_text": "By choosing the right tools and using them well",
+          "is_correct": true
+        },
+        {
+          "option_id": 13247,
+          "option_text": "By ignoring tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13248,
+          "option_text": "By deleting tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13249,
+          "option_text": "By hiding tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2747,
+      "subskill_id": 133,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a video conferencing tool?",
+      "options": [
+        {
+          "option_id": 13250,
+          "option_text": "A tool for video calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 13251,
+          "option_text": "A tool for messaging",
+          "is_correct": false
+        },
+        {
+          "option_id": 13252,
+          "option_text": "A tool for project management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13253,
+          "option_text": "A tool for document collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2748,
+      "subskill_id": 133,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a screen sharing tool?",
+      "options": [
+        {
+          "option_id": 13254,
+          "option_text": "A tool for sharing your screen with others",
+          "is_correct": true
+        },
+        {
+          "option_id": 13255,
+          "option_text": "A tool for messaging",
+          "is_correct": false
+        },
+        {
+          "option_id": 13256,
+          "option_text": "A tool for project management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13257,
+          "option_text": "A tool for document collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2749,
+      "subskill_id": 133,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a file sharing tool?",
+      "options": [
+        {
+          "option_id": 13258,
+          "option_text": "A tool for sharing and storing files",
+          "is_correct": true
+        },
+        {
+          "option_id": 13259,
+          "option_text": "A tool for messaging",
+          "is_correct": false
+        },
+        {
+          "option_id": 13260,
+          "option_text": "A tool for video calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13261,
+          "option_text": "A tool for project management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2750,
+      "subskill_id": 133,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a real-time collaboration tool?",
+      "options": [
+        {
+          "option_id": 13262,
+          "option_text": "A tool that allows multiple people to work on the same document at the same time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13263,
+          "option_text": "A tool that prevents collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13264,
+          "option_text": "A tool that ignores collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13265,
+          "option_text": "A tool that deletes collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2751,
+      "subskill_id": 129,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a async communication culture?",
+      "options": [
+        {
+          "option_id": 13266,
+          "option_text": "By encouraging thoughtful, well-structured communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13267,
+          "option_text": "By ignoring communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13268,
+          "option_text": "By deleting communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13269,
+          "option_text": "By hiding communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2752,
+      "subskill_id": 129,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure async communication effectiveness?",
+      "options": [
+        {
+          "option_id": 13270,
+          "option_text": "By tracking response times and engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 13271,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13272,
+          "option_text": "By ignoring measurement",
+          "is_correct": false
+        },
+        {
+          "option_id": 13273,
+          "option_text": "By deleting measurement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2753,
+      "subskill_id": 129,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you improve async communication?",
+      "options": [
+        {
+          "option_id": 13274,
+          "option_text": "By providing training and setting expectations",
+          "is_correct": true
+        },
+        {
+          "option_id": 13275,
+          "option_text": "By ignoring improvement",
+          "is_correct": false
+        },
+        {
+          "option_id": 13276,
+          "option_text": "By deleting improvement",
+          "is_correct": false
+        },
+        {
+          "option_id": 13277,
+          "option_text": "By hiding improvement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2754,
+      "subskill_id": 129,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a async communication framework?",
+      "options": [
+        {
+          "option_id": 13278,
+          "option_text": "A structured approach to async communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13279,
+          "option_text": "A plan for ignoring async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13280,
+          "option_text": "A plan for deleting async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13281,
+          "option_text": "A plan for hiding async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2755,
+      "subskill_id": 129,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a async communication maturity model?",
+      "options": [
+        {
+          "option_id": 13282,
+          "option_text": "A model for assessing the maturity of async communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13283,
+          "option_text": "A model for ignoring async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13284,
+          "option_text": "A model for deleting async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13285,
+          "option_text": "A model for hiding async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2756,
+      "subskill_id": 130,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a Notion workspace?",
+      "options": [
+        {
+          "option_id": 13286,
+          "option_text": "By creating pages, databases, and templates for different use cases",
+          "is_correct": true
+        },
+        {
+          "option_id": 13287,
+          "option_text": "By ignoring Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13288,
+          "option_text": "By deleting Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13289,
+          "option_text": "By hiding Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2757,
+      "subskill_id": 130,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Notion knowledge base?",
+      "options": [
+        {
+          "option_id": 13290,
+          "option_text": "A centralized repository for information in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13291,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13292,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13293,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2758,
+      "subskill_id": 130,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Notion task manager?",
+      "options": [
+        {
+          "option_id": 13294,
+          "option_text": "A system for tracking tasks in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13295,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13296,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13297,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2759,
+      "subskill_id": 130,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Notion project tracker?",
+      "options": [
+        {
+          "option_id": 13298,
+          "option_text": "A system for tracking projects in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13299,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13300,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13301,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2760,
+      "subskill_id": 130,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Notion team page?",
+      "options": [
+        {
+          "option_id": 13302,
+          "option_text": "A page for a team in Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13303,
+          "option_text": "A database in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13304,
+          "option_text": "A workspace in Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13305,
+          "option_text": "A template in Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2761,
+      "subskill_id": 131,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a Slack workspace?",
+      "options": [
+        {
+          "option_id": 13306,
+          "option_text": "By creating channels, setting up bots, and integrating tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13307,
+          "option_text": "By ignoring Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13308,
+          "option_text": "By deleting Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13309,
+          "option_text": "By hiding Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2762,
+      "subskill_id": 131,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Slack channel strategy?",
+      "options": [
+        {
+          "option_id": 13310,
+          "option_text": "A plan for organizing Slack channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 13311,
+          "option_text": "A plan for ignoring Slack channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 13312,
+          "option_text": "A plan for deleting Slack channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 13313,
+          "option_text": "A plan for hiding Slack channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2763,
+      "subskill_id": 131,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Slack notification strategy?",
+      "options": [
+        {
+          "option_id": 13314,
+          "option_text": "A plan for managing Slack notifications",
+          "is_correct": true
+        },
+        {
+          "option_id": 13315,
+          "option_text": "A plan for ignoring Slack notifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 13316,
+          "option_text": "A plan for deleting Slack notifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 13317,
+          "option_text": "A plan for hiding Slack notifications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2764,
+      "subskill_id": 131,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Slack bot strategy?",
+      "options": [
+        {
+          "option_id": 13318,
+          "option_text": "A plan for using Slack bots",
+          "is_correct": true
+        },
+        {
+          "option_id": 13319,
+          "option_text": "A plan for ignoring Slack bots",
+          "is_correct": false
+        },
+        {
+          "option_id": 13320,
+          "option_text": "A plan for deleting Slack bots",
+          "is_correct": false
+        },
+        {
+          "option_id": 13321,
+          "option_text": "A plan for hiding Slack bots",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2765,
+      "subskill_id": 131,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Slack integration strategy?",
+      "options": [
+        {
+          "option_id": 13322,
+          "option_text": "A plan for integrating Slack with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13323,
+          "option_text": "A plan for ignoring Slack integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13324,
+          "option_text": "A plan for deleting Slack integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13325,
+          "option_text": "A plan for hiding Slack integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2766,
+      "subskill_id": 132,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize time management?",
+      "options": [
+        {
+          "option_id": 13326,
+          "option_text": "By continuously refining processes and habits",
+          "is_correct": true
+        },
+        {
+          "option_id": 13327,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13328,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13329,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2767,
+      "subskill_id": 132,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a time management system?",
+      "options": [
+        {
+          "option_id": 13330,
+          "option_text": "A comprehensive approach to managing time",
+          "is_correct": true
+        },
+        {
+          "option_id": 13331,
+          "option_text": "A plan for ignoring time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13332,
+          "option_text": "A plan for wasting time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13333,
+          "option_text": "A plan for deleting time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2768,
+      "subskill_id": 132,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a time management habit?",
+      "options": [
+        {
+          "option_id": 13334,
+          "option_text": "A consistent behavior that supports time management",
+          "is_correct": true
+        },
+        {
+          "option_id": 13335,
+          "option_text": "A behavior that ignores time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13336,
+          "option_text": "A behavior that wastes time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13337,
+          "option_text": "A behavior that deletes time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2769,
+      "subskill_id": 132,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a time management routine?",
+      "options": [
+        {
+          "option_id": 13338,
+          "option_text": "A consistent schedule that supports time management",
+          "is_correct": true
+        },
+        {
+          "option_id": 13339,
+          "option_text": "A schedule that ignores time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13340,
+          "option_text": "A schedule that wastes time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13341,
+          "option_text": "A schedule that deletes time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2770,
+      "subskill_id": 132,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a time management discipline?",
+      "options": [
+        {
+          "option_id": 13342,
+          "option_text": "The ability to consistently manage time well",
+          "is_correct": true
+        },
+        {
+          "option_id": 13343,
+          "option_text": "The ability to ignore time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13344,
+          "option_text": "The ability to waste time",
+          "is_correct": false
+        },
+        {
+          "option_id": 13345,
+          "option_text": "The ability to delete time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2771,
+      "subskill_id": 133,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you choose the right collaboration tool?",
+      "options": [
+        {
+          "option_id": 13346,
+          "option_text": "By evaluating needs and matching with tool features",
+          "is_correct": true
+        },
+        {
+          "option_id": 13347,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13348,
+          "option_text": "By ignoring needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 13349,
+          "option_text": "By deleting needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2772,
+      "subskill_id": 133,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a collaboration tool integration?",
+      "options": [
+        {
+          "option_id": 13350,
+          "option_text": "The connection between different collaboration tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13351,
+          "option_text": "A tool that prevents collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13352,
+          "option_text": "A tool that ignores collaboration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13353,
+          "option_text": "A tool that deletes collaboration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2773,
+      "subskill_id": 133,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a collaboration tool strategy?",
+      "options": [
+        {
+          "option_id": 13354,
+          "option_text": "A plan for using collaboration tools effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13355,
+          "option_text": "A plan for ignoring collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13356,
+          "option_text": "A plan for deleting collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13357,
+          "option_text": "A plan for hiding collaboration tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2774,
+      "subskill_id": 133,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a collaboration tool adoption?",
+      "options": [
+        {
+          "option_id": 13358,
+          "option_text": "The process of encouraging team members to use collaboration tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13359,
+          "option_text": "The process of ignoring collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13360,
+          "option_text": "The process of deleting collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13361,
+          "option_text": "The process of hiding collaboration tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2775,
+      "subskill_id": 133,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a collaboration tool ROI?",
+      "options": [
+        {
+          "option_id": 13362,
+          "option_text": "The return on investment from using collaboration tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13363,
+          "option_text": "The cost of using collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13364,
+          "option_text": "The loss from using collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13365,
+          "option_text": "The waste from using collaboration tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2776,
+      "subskill_id": 129,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale async communication?",
+      "options": [
+        {
+          "option_id": 13366,
+          "option_text": "By implementing best practices and using appropriate tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13367,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13368,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13369,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2777,
+      "subskill_id": 129,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a async communication ecosystem?",
+      "options": [
+        {
+          "option_id": 13370,
+          "option_text": "A complex system of async communication tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 13371,
+          "option_text": "A plan for ignoring async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13372,
+          "option_text": "A plan for deleting async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13373,
+          "option_text": "A plan for hiding async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2778,
+      "subskill_id": 129,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a async communication platform?",
+      "options": [
+        {
+          "option_id": 13374,
+          "option_text": "A platform that supports async communication at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 13375,
+          "option_text": "A platform that ignores async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13376,
+          "option_text": "A platform that deletes async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13377,
+          "option_text": "A platform that hides async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2779,
+      "subskill_id": 129,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a async communication product?",
+      "options": [
+        {
+          "option_id": 13378,
+          "option_text": "A product that enables async communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 13379,
+          "option_text": "A product that prevents async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13380,
+          "option_text": "A product that ignores async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13381,
+          "option_text": "A product that deletes async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2780,
+      "subskill_id": 129,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a async communication future?",
+      "options": [
+        {
+          "option_id": 13382,
+          "option_text": "The future of async communication, which may include new technologies",
+          "is_correct": true
+        },
+        {
+          "option_id": 13383,
+          "option_text": "The future of ignoring async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13384,
+          "option_text": "The future of deleting async communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 13385,
+          "option_text": "The future of hiding async communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2781,
+      "subskill_id": 130,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale Notion?",
+      "options": [
+        {
+          "option_id": 13386,
+          "option_text": "By using enterprise features and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 13387,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13388,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13389,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2782,
+      "subskill_id": 130,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Notion enterprise strategy?",
+      "options": [
+        {
+          "option_id": 13390,
+          "option_text": "A strategy for using Notion in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 13391,
+          "option_text": "A strategy for ignoring Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13392,
+          "option_text": "A strategy for deleting Notion",
+          "is_correct": false
+        },
+        {
+          "option_id": 13393,
+          "option_text": "A strategy for hiding Notion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2783,
+      "subskill_id": 130,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Notion governance strategy?",
+      "options": [
+        {
+          "option_id": 13394,
+          "option_text": "A strategy for managing Notion governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 13395,
+          "option_text": "A strategy for ignoring Notion governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13396,
+          "option_text": "A strategy for deleting Notion governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13397,
+          "option_text": "A strategy for hiding Notion governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2784,
+      "subskill_id": 130,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Notion security strategy?",
+      "options": [
+        {
+          "option_id": 13398,
+          "option_text": "A strategy for securing Notion",
+          "is_correct": true
+        },
+        {
+          "option_id": 13399,
+          "option_text": "A strategy for ignoring Notion security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13400,
+          "option_text": "A strategy for deleting Notion security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13401,
+          "option_text": "A strategy for hiding Notion security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2785,
+      "subskill_id": 130,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Notion integration strategy?",
+      "options": [
+        {
+          "option_id": 13402,
+          "option_text": "A strategy for integrating Notion with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13403,
+          "option_text": "A strategy for ignoring Notion integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13404,
+          "option_text": "A strategy for deleting Notion integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13405,
+          "option_text": "A strategy for hiding Notion integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2786,
+      "subskill_id": 131,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale Slack?",
+      "options": [
+        {
+          "option_id": 13406,
+          "option_text": "By using enterprise features and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 13407,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13408,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13409,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2787,
+      "subskill_id": 131,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Slack enterprise strategy?",
+      "options": [
+        {
+          "option_id": 13410,
+          "option_text": "A strategy for using Slack in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 13411,
+          "option_text": "A strategy for ignoring Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13412,
+          "option_text": "A strategy for deleting Slack",
+          "is_correct": false
+        },
+        {
+          "option_id": 13413,
+          "option_text": "A strategy for hiding Slack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2788,
+      "subskill_id": 131,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Slack governance strategy?",
+      "options": [
+        {
+          "option_id": 13414,
+          "option_text": "A strategy for managing Slack governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 13415,
+          "option_text": "A strategy for ignoring Slack governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13416,
+          "option_text": "A strategy for deleting Slack governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13417,
+          "option_text": "A strategy for hiding Slack governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2789,
+      "subskill_id": 131,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Slack security strategy?",
+      "options": [
+        {
+          "option_id": 13418,
+          "option_text": "A strategy for securing Slack",
+          "is_correct": true
+        },
+        {
+          "option_id": 13419,
+          "option_text": "A strategy for ignoring Slack security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13420,
+          "option_text": "A strategy for deleting Slack security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13421,
+          "option_text": "A strategy for hiding Slack security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2790,
+      "subskill_id": 131,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Slack integration strategy?",
+      "options": [
+        {
+          "option_id": 13422,
+          "option_text": "A strategy for integrating Slack with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13423,
+          "option_text": "A strategy for ignoring Slack integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13424,
+          "option_text": "A strategy for deleting Slack integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13425,
+          "option_text": "A strategy for hiding Slack integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2791,
+      "subskill_id": 132,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale time management?",
+      "options": [
+        {
+          "option_id": 13426,
+          "option_text": "By implementing best practices and using appropriate tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13427,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13428,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13429,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2792,
+      "subskill_id": 132,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a time management enterprise strategy?",
+      "options": [
+        {
+          "option_id": 13430,
+          "option_text": "A strategy for managing time in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 13431,
+          "option_text": "A strategy for ignoring time management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13432,
+          "option_text": "A strategy for deleting time management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13433,
+          "option_text": "A strategy for hiding time management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2793,
+      "subskill_id": 132,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a time management governance strategy?",
+      "options": [
+        {
+          "option_id": 13434,
+          "option_text": "A strategy for managing time management governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 13435,
+          "option_text": "A strategy for ignoring time management governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13436,
+          "option_text": "A strategy for deleting time management governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13437,
+          "option_text": "A strategy for hiding time management governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2794,
+      "subskill_id": 132,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a time management security strategy?",
+      "options": [
+        {
+          "option_id": 13438,
+          "option_text": "A strategy for securing time management",
+          "is_correct": true
+        },
+        {
+          "option_id": 13439,
+          "option_text": "A strategy for ignoring time management security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13440,
+          "option_text": "A strategy for deleting time management security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13441,
+          "option_text": "A strategy for hiding time management security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2795,
+      "subskill_id": 132,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a time management integration strategy?",
+      "options": [
+        {
+          "option_id": 13442,
+          "option_text": "A strategy for integrating time management with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13443,
+          "option_text": "A strategy for ignoring time management integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13444,
+          "option_text": "A strategy for deleting time management integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13445,
+          "option_text": "A strategy for hiding time management integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2796,
+      "subskill_id": 133,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale collaboration tools?",
+      "options": [
+        {
+          "option_id": 13446,
+          "option_text": "By implementing best practices and using appropriate tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13447,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13448,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13449,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2797,
+      "subskill_id": 133,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a collaboration tool enterprise strategy?",
+      "options": [
+        {
+          "option_id": 13450,
+          "option_text": "A strategy for using collaboration tools in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 13451,
+          "option_text": "A strategy for ignoring collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13452,
+          "option_text": "A strategy for deleting collaboration tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 13453,
+          "option_text": "A strategy for hiding collaboration tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2798,
+      "subskill_id": 133,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a collaboration tool governance strategy?",
+      "options": [
+        {
+          "option_id": 13454,
+          "option_text": "A strategy for managing collaboration tool governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 13455,
+          "option_text": "A strategy for ignoring collaboration tool governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13456,
+          "option_text": "A strategy for deleting collaboration tool governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 13457,
+          "option_text": "A strategy for hiding collaboration tool governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2799,
+      "subskill_id": 133,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a collaboration tool security strategy?",
+      "options": [
+        {
+          "option_id": 13458,
+          "option_text": "A strategy for securing collaboration tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13459,
+          "option_text": "A strategy for ignoring collaboration tool security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13460,
+          "option_text": "A strategy for deleting collaboration tool security",
+          "is_correct": false
+        },
+        {
+          "option_id": 13461,
+          "option_text": "A strategy for hiding collaboration tool security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2800,
+      "subskill_id": 133,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a collaboration tool integration strategy?",
+      "options": [
+        {
+          "option_id": 13462,
+          "option_text": "A strategy for integrating collaboration tools with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13463,
+          "option_text": "A strategy for ignoring collaboration tool integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13464,
+          "option_text": "A strategy for deleting collaboration tool integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 13465,
+          "option_text": "A strategy for hiding collaboration tool integrations",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

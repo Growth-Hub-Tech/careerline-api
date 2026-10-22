@@ -1,0 +1,2906 @@
+{
+  "skill_id": 14,
+  "skill_name": "Product Management",
+  "questions": [
+    {
+      "question_id": 1301,
+      "subskill_id": 65,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does PRD stand for in product management?",
+      "options": [
+        {
+          "option_id": 7466,
+          "option_text": "Product Requirements Document",
+          "is_correct": true
+        },
+        {
+          "option_id": 7467,
+          "option_text": "Product Release Document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7468,
+          "option_text": "Project Requirements Document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7469,
+          "option_text": "Process Requirements Document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1302,
+      "subskill_id": 65,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a Product Requirements Document?",
+      "options": [
+        {
+          "option_id": 7470,
+          "option_text": "To define what the product should do for the development team",
+          "is_correct": true
+        },
+        {
+          "option_id": 7471,
+          "option_text": "To market the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7472,
+          "option_text": "To set pricing strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 7473,
+          "option_text": "To design the user interface",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1303,
+      "subskill_id": 65,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What should be included in a PRD?",
+      "options": [
+        {
+          "option_id": 7474,
+          "option_text": "Features, user stories, and acceptance criteria",
+          "is_correct": true
+        },
+        {
+          "option_id": 7475,
+          "option_text": "Only the budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 7476,
+          "option_text": "Only the timeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 7477,
+          "option_text": "The marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1304,
+      "subskill_id": 65,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Who is the primary audience for a PRD?",
+      "options": [
+        {
+          "option_id": 7478,
+          "option_text": "The development team",
+          "is_correct": true
+        },
+        {
+          "option_id": 7479,
+          "option_text": "The sales team",
+          "is_correct": false
+        },
+        {
+          "option_id": 7480,
+          "option_text": "End users only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7481,
+          "option_text": "Investors only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1305,
+      "subskill_id": 65,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a PRD and an MRD?",
+      "options": [
+        {
+          "option_id": 7482,
+          "option_text": "PRD is for product, MRD is for market",
+          "is_correct": true
+        },
+        {
+          "option_id": 7483,
+          "option_text": "They are the same document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7484,
+          "option_text": "MRD is written after PRD",
+          "is_correct": false
+        },
+        {
+          "option_id": 7485,
+          "option_text": "PRD is written after MRD",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1306,
+      "subskill_id": 66,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a product roadmap?",
+      "options": [
+        {
+          "option_id": 7486,
+          "option_text": "A strategic document outlining product vision and goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 7487,
+          "option_text": "A detailed project schedule",
+          "is_correct": false
+        },
+        {
+          "option_id": 7488,
+          "option_text": "A budget plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 7489,
+          "option_text": "A marketing document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1307,
+      "subskill_id": 66,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a product roadmap?",
+      "options": [
+        {
+          "option_id": 7490,
+          "option_text": "To communicate product direction to stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 7491,
+          "option_text": "To track bugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7492,
+          "option_text": "To manage team performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 7493,
+          "option_text": "To calculate revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1308,
+      "subskill_id": 66,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a timeline in a roadmap?",
+      "options": [
+        {
+          "option_id": 7494,
+          "option_text": "A sequence of events in the roadmap",
+          "is_correct": true
+        },
+        {
+          "option_id": 7495,
+          "option_text": "A design element",
+          "is_correct": false
+        },
+        {
+          "option_id": 7496,
+          "option_text": "A feature description",
+          "is_correct": false
+        },
+        {
+          "option_id": 7497,
+          "option_text": "A budget allocation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1309,
+      "subskill_id": 66,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a theme in a roadmap?",
+      "options": [
+        {
+          "option_id": 7498,
+          "option_text": "A high-level goal or focus area on the roadmap",
+          "is_correct": true
+        },
+        {
+          "option_id": 7499,
+          "option_text": "A user story",
+          "is_correct": false
+        },
+        {
+          "option_id": 7500,
+          "option_text": "A technical specification",
+          "is_correct": false
+        },
+        {
+          "option_id": 7501,
+          "option_text": "A marketing campaign",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1310,
+      "subskill_id": 66,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a roadmap and a project plan?",
+      "options": [
+        {
+          "option_id": 7502,
+          "option_text": "A roadmap is strategic; a project plan is tactical",
+          "is_correct": true
+        },
+        {
+          "option_id": 7503,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7504,
+          "option_text": "A project plan is strategic",
+          "is_correct": false
+        },
+        {
+          "option_id": 7505,
+          "option_text": "A roadmap is for engineering only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1311,
+      "subskill_id": 67,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user story in product management?",
+      "options": [
+        {
+          "option_id": 7506,
+          "option_text": "A description of a feature from an end-user perspective",
+          "is_correct": true
+        },
+        {
+          "option_id": 7507,
+          "option_text": "A technical requirement",
+          "is_correct": false
+        },
+        {
+          "option_id": 7508,
+          "option_text": "A bug report",
+          "is_correct": false
+        },
+        {
+          "option_id": 7509,
+          "option_text": "A test case",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1312,
+      "subskill_id": 67,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the standard format for writing a user story?",
+      "options": [
+        {
+          "option_id": 7510,
+          "option_text": "As a [role], I want [action] so that [benefit]",
+          "is_correct": true
+        },
+        {
+          "option_id": 7511,
+          "option_text": "Given/When/Then",
+          "is_correct": false
+        },
+        {
+          "option_id": 7512,
+          "option_text": "IF/ELSE",
+          "is_correct": false
+        },
+        {
+          "option_id": 7513,
+          "option_text": "For/While/Do",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1313,
+      "subskill_id": 67,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a persona in user stories?",
+      "options": [
+        {
+          "option_id": 7514,
+          "option_text": "A fictional representation of a target user",
+          "is_correct": true
+        },
+        {
+          "option_id": 7515,
+          "option_text": "A real user",
+          "is_correct": false
+        },
+        {
+          "option_id": 7516,
+          "option_text": "A developer role",
+          "is_correct": false
+        },
+        {
+          "option_id": 7517,
+          "option_text": "A stakeholder",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1314,
+      "subskill_id": 67,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a user story and a use case?",
+      "options": [
+        {
+          "option_id": 7518,
+          "option_text": "User stories focus on user needs; use cases focus on system interactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7519,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 7520,
+          "option_text": "Use cases are for users only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7521,
+          "option_text": "User stories are for developers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1315,
+      "subskill_id": 67,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is acceptance criteria in a user story?",
+      "options": [
+        {
+          "option_id": 7522,
+          "option_text": "Conditions that must be met for a user story to be complete",
+          "is_correct": true
+        },
+        {
+          "option_id": 7523,
+          "option_text": "A list of bugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7524,
+          "option_text": "A design specification",
+          "is_correct": false
+        },
+        {
+          "option_id": 7525,
+          "option_text": "A test plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1316,
+      "subskill_id": 68,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does OKR stand for?",
+      "options": [
+        {
+          "option_id": 7526,
+          "option_text": "Objectives and Key Results",
+          "is_correct": true
+        },
+        {
+          "option_id": 7527,
+          "option_text": "Operational Key Results",
+          "is_correct": false
+        },
+        {
+          "option_id": 7528,
+          "option_text": "Organizational Key Resources",
+          "is_correct": false
+        },
+        {
+          "option_id": 7529,
+          "option_text": "Outcome and Key Results",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1317,
+      "subskill_id": 68,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of OKRs?",
+      "options": [
+        {
+          "option_id": 7530,
+          "option_text": "To set measurable goals and track progress",
+          "is_correct": true
+        },
+        {
+          "option_id": 7531,
+          "option_text": "To define the product roadmap",
+          "is_correct": false
+        },
+        {
+          "option_id": 7532,
+          "option_text": "To manage stakeholder expectations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7533,
+          "option_text": "To create user stories",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1318,
+      "subskill_id": 68,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an objective in OKRs?",
+      "options": [
+        {
+          "option_id": 7534,
+          "option_text": "A goal to be achieved",
+          "is_correct": true
+        },
+        {
+          "option_id": 7535,
+          "option_text": "A task to be completed",
+          "is_correct": false
+        },
+        {
+          "option_id": 7536,
+          "option_text": "A metric to be tracked",
+          "is_correct": false
+        },
+        {
+          "option_id": 7537,
+          "option_text": "A budget allocation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1319,
+      "subskill_id": 68,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a key result in OKRs?",
+      "options": [
+        {
+          "option_id": 7538,
+          "option_text": "A measurable outcome that indicates progress toward an objective",
+          "is_correct": true
+        },
+        {
+          "option_id": 7539,
+          "option_text": "A project milestone",
+          "is_correct": false
+        },
+        {
+          "option_id": 7540,
+          "option_text": "A task on a to-do list",
+          "is_correct": false
+        },
+        {
+          "option_id": 7541,
+          "option_text": "A feature description",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1320,
+      "subskill_id": 68,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between an OKR and a KPI?",
+      "options": [
+        {
+          "option_id": 7542,
+          "option_text": "OKRs are about goals; KPIs are about metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 7543,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7544,
+          "option_text": "KPIs are about goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7545,
+          "option_text": "OKRs are metrics only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1321,
+      "subskill_id": 69,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is stakeholder management?",
+      "options": [
+        {
+          "option_id": 7546,
+          "option_text": "The process of identifying and managing stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 7547,
+          "option_text": "Managing a project budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 7548,
+          "option_text": "Building a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7549,
+          "option_text": "Running a marketing campaign",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1322,
+      "subskill_id": 69,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Who are stakeholders in product management?",
+      "options": [
+        {
+          "option_id": 7550,
+          "option_text": "Anyone with an interest in the product",
+          "is_correct": true
+        },
+        {
+          "option_id": 7551,
+          "option_text": "Only the development team",
+          "is_correct": false
+        },
+        {
+          "option_id": 7552,
+          "option_text": "Only the CEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 7553,
+          "option_text": "Only end users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1323,
+      "subskill_id": 69,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a stakeholder register?",
+      "options": [
+        {
+          "option_id": 7554,
+          "option_text": "A document listing stakeholder details and interests",
+          "is_correct": true
+        },
+        {
+          "option_id": 7555,
+          "option_text": "A budget document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7556,
+          "option_text": "A product specification",
+          "is_correct": false
+        },
+        {
+          "option_id": 7557,
+          "option_text": "A roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1324,
+      "subskill_id": 69,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the importance of stakeholder communication?",
+      "options": [
+        {
+          "option_id": 7558,
+          "option_text": "To keep stakeholders informed and aligned",
+          "is_correct": true
+        },
+        {
+          "option_id": 7559,
+          "option_text": "To keep secrets from stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7560,
+          "option_text": "To avoid stakeholder feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7561,
+          "option_text": "To ignore stakeholder concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1325,
+      "subskill_id": 69,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a stakeholder analysis?",
+      "options": [
+        {
+          "option_id": 7562,
+          "option_text": "A process of understanding stakeholder needs and influence",
+          "is_correct": true
+        },
+        {
+          "option_id": 7563,
+          "option_text": "A financial analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 7564,
+          "option_text": "A product design process",
+          "is_correct": false
+        },
+        {
+          "option_id": 7565,
+          "option_text": "A marketing research method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1326,
+      "subskill_id": 65,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write an effective PRD?",
+      "options": [
+        {
+          "option_id": 7566,
+          "option_text": "By clearly defining requirements and using clear language",
+          "is_correct": true
+        },
+        {
+          "option_id": 7567,
+          "option_text": "By writing a long document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7568,
+          "option_text": "By avoiding user input",
+          "is_correct": false
+        },
+        {
+          "option_id": 7569,
+          "option_text": "By skipping stakeholder review",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1327,
+      "subskill_id": 65,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between functional and non-functional requirements?",
+      "options": [
+        {
+          "option_id": 7570,
+          "option_text": "Functional requirements describe what the product does; non-functional describe how it performs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7571,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7572,
+          "option_text": "Non-functional requirements are optional",
+          "is_correct": false
+        },
+        {
+          "option_id": 7573,
+          "option_text": "Functional requirements are about performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1328,
+      "subskill_id": 65,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prioritize requirements in a PRD?",
+      "options": [
+        {
+          "option_id": 7574,
+          "option_text": "Using frameworks like MoSCoW (Must-have, Should-have, Could-have, Won't-have)",
+          "is_correct": true
+        },
+        {
+          "option_id": 7575,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7576,
+          "option_text": "By including everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 7577,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1329,
+      "subskill_id": 65,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the role of a PRD in agile development?",
+      "options": [
+        {
+          "option_id": 7578,
+          "option_text": "It guides development priorities in agile sprints",
+          "is_correct": true
+        },
+        {
+          "option_id": 7579,
+          "option_text": "It replaces the backlog",
+          "is_correct": false
+        },
+        {
+          "option_id": 7580,
+          "option_text": "It is only for documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 7581,
+          "option_text": "It is not used in agile",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1330,
+      "subskill_id": 65,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you validate a PRD with stakeholders?",
+      "options": [
+        {
+          "option_id": 7582,
+          "option_text": "By sharing it with stakeholders and incorporating feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 7583,
+          "option_text": "By keeping it hidden",
+          "is_correct": false
+        },
+        {
+          "option_id": 7584,
+          "option_text": "By assuming it is correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 7585,
+          "option_text": "By avoiding stakeholder input",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1331,
+      "subskill_id": 66,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a product roadmap?",
+      "options": [
+        {
+          "option_id": 7586,
+          "option_text": "By identifying goals, features, and timelines",
+          "is_correct": true
+        },
+        {
+          "option_id": 7587,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7588,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7589,
+          "option_text": "By skipping planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1332,
+      "subskill_id": 66,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a release roadmap?",
+      "options": [
+        {
+          "option_id": 7590,
+          "option_text": "A roadmap focused on planned releases",
+          "is_correct": true
+        },
+        {
+          "option_id": 7591,
+          "option_text": "A roadmap for marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7592,
+          "option_text": "A roadmap for sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 7593,
+          "option_text": "A roadmap for hiring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1333,
+      "subskill_id": 66,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a strategy roadmap?",
+      "options": [
+        {
+          "option_id": 7594,
+          "option_text": "A roadmap focused on long-term strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 7595,
+          "option_text": "A roadmap for a single sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 7596,
+          "option_text": "A roadmap for a single feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 7597,
+          "option_text": "A roadmap for a single team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1334,
+      "subskill_id": 66,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prioritize features on a roadmap?",
+      "options": [
+        {
+          "option_id": 7598,
+          "option_text": "Using techniques like RICE, WSJF, or value vs effort",
+          "is_correct": true
+        },
+        {
+          "option_id": 7599,
+          "option_text": "By asking the CEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 7600,
+          "option_text": "By coin toss",
+          "is_correct": false
+        },
+        {
+          "option_id": 7601,
+          "option_text": "By including everything",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1335,
+      "subskill_id": 66,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a roadmap and a backlog?",
+      "options": [
+        {
+          "option_id": 7602,
+          "option_text": "A roadmap is strategic; a backlog is tactical",
+          "is_correct": true
+        },
+        {
+          "option_id": 7603,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7604,
+          "option_text": "A backlog is strategic",
+          "is_correct": false
+        },
+        {
+          "option_id": 7605,
+          "option_text": "A roadmap is for engineering only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1336,
+      "subskill_id": 67,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write a good user story?",
+      "options": [
+        {
+          "option_id": 7606,
+          "option_text": "By following the INVEST criteria",
+          "is_correct": true
+        },
+        {
+          "option_id": 7607,
+          "option_text": "By making it as long as possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 7608,
+          "option_text": "By avoiding user needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7609,
+          "option_text": "By skipping acceptance criteria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1337,
+      "subskill_id": 67,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the INVEST criteria for user stories?",
+      "options": [
+        {
+          "option_id": 7610,
+          "option_text": "Independent, Negotiable, Valuable, Estimable, Small, Testable",
+          "is_correct": true
+        },
+        {
+          "option_id": 7611,
+          "option_text": "Important, Necessary, Valid, Essential, Specific, Timely",
+          "is_correct": false
+        },
+        {
+          "option_id": 7612,
+          "option_text": "Integrated, Notable, Viable, Efficient, Simple, Tangible",
+          "is_correct": false
+        },
+        {
+          "option_id": 7613,
+          "option_text": "Iterative, Non-negotiable, Valid, Estimable, Specific, Testable",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1338,
+      "subskill_id": 67,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you split large user stories?",
+      "options": [
+        {
+          "option_id": 7614,
+          "option_text": "By breaking them into smaller, independent stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 7615,
+          "option_text": "By combining them into one large story",
+          "is_correct": false
+        },
+        {
+          "option_id": 7616,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7617,
+          "option_text": "By writing them as tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1339,
+      "subskill_id": 67,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a story map in product management?",
+      "options": [
+        {
+          "option_id": 7618,
+          "option_text": "A visual representation of user activities and stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 7619,
+          "option_text": "A technical diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 7620,
+          "option_text": "A budget document",
+          "is_correct": false
+        },
+        {
+          "option_id": 7621,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1340,
+      "subskill_id": 67,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between an epic and a user story?",
+      "options": [
+        {
+          "option_id": 7622,
+          "option_text": "An epic is a large story that can be broken down into smaller user stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 7623,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7624,
+          "option_text": "A user story is larger than an epic",
+          "is_correct": false
+        },
+        {
+          "option_id": 7625,
+          "option_text": "An epic is a task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1341,
+      "subskill_id": 68,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set effective OKRs?",
+      "options": [
+        {
+          "option_id": 7626,
+          "option_text": "By making them specific, measurable, achievable, relevant, and time-bound",
+          "is_correct": true
+        },
+        {
+          "option_id": 7627,
+          "option_text": "By setting vague goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7628,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 7629,
+          "option_text": "By avoiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1342,
+      "subskill_id": 68,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are common mistakes when writing OKRs?",
+      "options": [
+        {
+          "option_id": 7630,
+          "option_text": "Setting too many OKRs or making them unmeasurable",
+          "is_correct": true
+        },
+        {
+          "option_id": 7631,
+          "option_text": "Setting no OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7632,
+          "option_text": "Setting only one OKR",
+          "is_correct": false
+        },
+        {
+          "option_id": 7633,
+          "option_text": "Making OKRs too easy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1343,
+      "subskill_id": 68,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you track OKRs?",
+      "options": [
+        {
+          "option_id": 7634,
+          "option_text": "By measuring progress against key results regularly",
+          "is_correct": true
+        },
+        {
+          "option_id": 7635,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7636,
+          "option_text": "By checking them once a year",
+          "is_correct": false
+        },
+        {
+          "option_id": 7637,
+          "option_text": "By not tracking them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1344,
+      "subskill_id": 68,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between team OKRs and individual OKRs?",
+      "options": [
+        {
+          "option_id": 7638,
+          "option_text": "Team OKRs are shared goals; individual OKRs are personal goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 7639,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7640,
+          "option_text": "Individual OKRs are for team leads only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7641,
+          "option_text": "Team OKRs are optional",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1345,
+      "subskill_id": 68,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you align OKRs across teams?",
+      "options": [
+        {
+          "option_id": 7642,
+          "option_text": "By ensuring team OKRs support company OKRs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7643,
+          "option_text": "By ignoring company OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7644,
+          "option_text": "By setting conflicting goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7645,
+          "option_text": "By copying other teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1346,
+      "subskill_id": 69,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you identify stakeholders?",
+      "options": [
+        {
+          "option_id": 7646,
+          "option_text": "By analyzing project stakeholders and their interests",
+          "is_correct": true
+        },
+        {
+          "option_id": 7647,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7648,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7649,
+          "option_text": "By asking one stakeholder",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1347,
+      "subskill_id": 69,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder communication plan?",
+      "options": [
+        {
+          "option_id": 7650,
+          "option_text": "A plan for communicating with stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 7651,
+          "option_text": "A budget plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 7652,
+          "option_text": "A product plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 7653,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1348,
+      "subskill_id": 69,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage difficult stakeholders?",
+      "options": [
+        {
+          "option_id": 7654,
+          "option_text": "By understanding their concerns and addressing them proactively",
+          "is_correct": true
+        },
+        {
+          "option_id": 7655,
+          "option_text": "By avoiding them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7656,
+          "option_text": "By ignoring their feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7657,
+          "option_text": "By arguing with them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1349,
+      "subskill_id": 69,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is stakeholder engagement?",
+      "options": [
+        {
+          "option_id": 7658,
+          "option_text": "The process of involving stakeholders in product decisions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7659,
+          "option_text": "A hiring process",
+          "is_correct": false
+        },
+        {
+          "option_id": 7660,
+          "option_text": "A budget review",
+          "is_correct": false
+        },
+        {
+          "option_id": 7661,
+          "option_text": "A product launch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1350,
+      "subskill_id": 69,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle conflicting stakeholder interests?",
+      "options": [
+        {
+          "option_id": 7662,
+          "option_text": "By listening to all perspectives and finding common ground",
+          "is_correct": true
+        },
+        {
+          "option_id": 7663,
+          "option_text": "By ignoring conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 7664,
+          "option_text": "By taking sides",
+          "is_correct": false
+        },
+        {
+          "option_id": 7665,
+          "option_text": "By avoiding discussion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1351,
+      "subskill_id": 65,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle changing requirements in a PRD?",
+      "options": [
+        {
+          "option_id": 7666,
+          "option_text": "By version controlling the PRD and managing change requests",
+          "is_correct": true
+        },
+        {
+          "option_id": 7667,
+          "option_text": "By rewriting it entirely",
+          "is_correct": false
+        },
+        {
+          "option_id": 7668,
+          "option_text": "By ignoring changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7669,
+          "option_text": "By deleting old versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1352,
+      "subskill_id": 65,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a PRD and a BRD?",
+      "options": [
+        {
+          "option_id": 7670,
+          "option_text": "PRD defines product requirements; BRD defines business requirements",
+          "is_correct": true
+        },
+        {
+          "option_id": 7671,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7672,
+          "option_text": "BRD is written after PRD",
+          "is_correct": false
+        },
+        {
+          "option_id": 7673,
+          "option_text": "PRD is for business, BRD is for product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1353,
+      "subskill_id": 65,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you align a PRD with business goals?",
+      "options": [
+        {
+          "option_id": 7674,
+          "option_text": "By ensuring requirements support business objectives",
+          "is_correct": true
+        },
+        {
+          "option_id": 7675,
+          "option_text": "By focusing on features only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7676,
+          "option_text": "By ignoring business goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7677,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1354,
+      "subskill_id": 65,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of a PRD in product lifecycle management?",
+      "options": [
+        {
+          "option_id": 7678,
+          "option_text": "It defines the product direction throughout its lifecycle",
+          "is_correct": true
+        },
+        {
+          "option_id": 7679,
+          "option_text": "It is only used for marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7680,
+          "option_text": "It is only used for sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 7681,
+          "option_text": "It is not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1355,
+      "subskill_id": 65,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure the success of a PRD?",
+      "options": [
+        {
+          "option_id": 7682,
+          "option_text": "By tracking whether the product met the requirements",
+          "is_correct": true
+        },
+        {
+          "option_id": 7683,
+          "option_text": "By counting pages",
+          "is_correct": false
+        },
+        {
+          "option_id": 7684,
+          "option_text": "By asking stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7685,
+          "option_text": "By checking word count",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1356,
+      "subskill_id": 66,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you communicate a roadmap to stakeholders?",
+      "options": [
+        {
+          "option_id": 7686,
+          "option_text": "By using clear visuals and focusing on key messages",
+          "is_correct": true
+        },
+        {
+          "option_id": 7687,
+          "option_text": "By adding too many details",
+          "is_correct": false
+        },
+        {
+          "option_id": 7688,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 7689,
+          "option_text": "By hiding information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1357,
+      "subskill_id": 66,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a now-next-later roadmap?",
+      "options": [
+        {
+          "option_id": 7690,
+          "option_text": "A roadmap that shows what is planned now, next, and later",
+          "is_correct": true
+        },
+        {
+          "option_id": 7691,
+          "option_text": "A roadmap for a single sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 7692,
+          "option_text": "A roadmap for one feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 7693,
+          "option_text": "A roadmap for one team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1358,
+      "subskill_id": 66,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle roadmap changes?",
+      "options": [
+        {
+          "option_id": 7694,
+          "option_text": "By communicating changes early and updating the roadmap",
+          "is_correct": true
+        },
+        {
+          "option_id": 7695,
+          "option_text": "By ignoring changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7696,
+          "option_text": "By hiding changes from stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7697,
+          "option_text": "By not updating the roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1359,
+      "subskill_id": 66,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a roadmap and a Gantt chart?",
+      "options": [
+        {
+          "option_id": 7698,
+          "option_text": "A roadmap is strategic; a Gantt chart is tactical",
+          "is_correct": true
+        },
+        {
+          "option_id": 7699,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7700,
+          "option_text": "A Gantt chart is strategic",
+          "is_correct": false
+        },
+        {
+          "option_id": 7701,
+          "option_text": "A roadmap is for engineering only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1360,
+      "subskill_id": 66,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you balance short-term and long-term roadmap goals?",
+      "options": [
+        {
+          "option_id": 7702,
+          "option_text": "By setting priorities and aligning with business goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 7703,
+          "option_text": "By adding everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 7704,
+          "option_text": "By ignoring long-term goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7705,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1361,
+      "subskill_id": 67,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of user stories in agile development?",
+      "options": [
+        {
+          "option_id": 7706,
+          "option_text": "They guide development and ensure alignment with user needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7707,
+          "option_text": "They are only for documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 7708,
+          "option_text": "They are not used in agile",
+          "is_correct": false
+        },
+        {
+          "option_id": 7709,
+          "option_text": "They replace technical specifications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1362,
+      "subskill_id": 67,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you write acceptance criteria for complex features?",
+      "options": [
+        {
+          "option_id": 7710,
+          "option_text": "By using clear, testable conditions for each user story",
+          "is_correct": true
+        },
+        {
+          "option_id": 7711,
+          "option_text": "By skipping acceptance criteria",
+          "is_correct": false
+        },
+        {
+          "option_id": 7712,
+          "option_text": "By making criteria vague",
+          "is_correct": false
+        },
+        {
+          "option_id": 7713,
+          "option_text": "By using only one criterion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1363,
+      "subskill_id": 67,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between user stories and tasks?",
+      "options": [
+        {
+          "option_id": 7714,
+          "option_text": "User stories describe features; tasks describe implementation work",
+          "is_correct": true
+        },
+        {
+          "option_id": 7715,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7716,
+          "option_text": "Tasks describe features",
+          "is_correct": false
+        },
+        {
+          "option_id": 7717,
+          "option_text": "User stories are for developers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1364,
+      "subskill_id": 67,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prioritize user stories in a backlog?",
+      "options": [
+        {
+          "option_id": 7718,
+          "option_text": "Using value-based prioritization methods like MoSCoW or RICE",
+          "is_correct": true
+        },
+        {
+          "option_id": 7719,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7720,
+          "option_text": "By including everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 7721,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1365,
+      "subskill_id": 67,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a user story mapping session?",
+      "options": [
+        {
+          "option_id": 7722,
+          "option_text": "A collaborative workshop to map user stories and identify gaps",
+          "is_correct": true
+        },
+        {
+          "option_id": 7723,
+          "option_text": "A coding session",
+          "is_correct": false
+        },
+        {
+          "option_id": 7724,
+          "option_text": "A marketing meeting",
+          "is_correct": false
+        },
+        {
+          "option_id": 7725,
+          "option_text": "A budget review",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1366,
+      "subskill_id": 68,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you cascade OKRs from company to team level?",
+      "options": [
+        {
+          "option_id": 7726,
+          "option_text": "By mapping each team's OKRs to company OKRs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7727,
+          "option_text": "By ignoring company OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7728,
+          "option_text": "By setting conflicting OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7729,
+          "option_text": "By copying other teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1367,
+      "subskill_id": 68,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are leading and lagging indicators in OKRs?",
+      "options": [
+        {
+          "option_id": 7730,
+          "option_text": "Leading indicators predict future performance; lagging indicators measure past performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 7731,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7732,
+          "option_text": "Lagging indicators predict performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 7733,
+          "option_text": "Leading indicators measure past performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1368,
+      "subskill_id": 68,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you score OKRs?",
+      "options": [
+        {
+          "option_id": 7734,
+          "option_text": "By scoring based on achievement percentage or 0-1 scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 7735,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7736,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7737,
+          "option_text": "By comparing to competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1369,
+      "subskill_id": 68,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between OKRs and KPIs?",
+      "options": [
+        {
+          "option_id": 7738,
+          "option_text": "OKRs are goals; KPIs are metrics to measure performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 7739,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7740,
+          "option_text": "KPIs are goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 7741,
+          "option_text": "OKRs are metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1370,
+      "subskill_id": 68,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you reset OKRs quarterly?",
+      "options": [
+        {
+          "option_id": 7742,
+          "option_text": "By reviewing progress quarterly and adjusting as needed",
+          "is_correct": true
+        },
+        {
+          "option_id": 7743,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7744,
+          "option_text": "By setting new ones annually",
+          "is_correct": false
+        },
+        {
+          "option_id": 7745,
+          "option_text": "By copying previous quarters",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1371,
+      "subskill_id": 69,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build trust with stakeholders?",
+      "options": [
+        {
+          "option_id": 7746,
+          "option_text": "By being transparent and delivering on promises",
+          "is_correct": true
+        },
+        {
+          "option_id": 7747,
+          "option_text": "By avoiding communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 7748,
+          "option_text": "By hiding information",
+          "is_correct": false
+        },
+        {
+          "option_id": 7749,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1372,
+      "subskill_id": 69,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a stakeholder power-interest grid?",
+      "options": [
+        {
+          "option_id": 7750,
+          "option_text": "A tool to classify stakeholders by power and interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 7751,
+          "option_text": "A budgeting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7752,
+          "option_text": "A design tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7753,
+          "option_text": "A marketing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1373,
+      "subskill_id": 69,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage stakeholder expectations?",
+      "options": [
+        {
+          "option_id": 7754,
+          "option_text": "By understanding their needs and managing expectations",
+          "is_correct": true
+        },
+        {
+          "option_id": 7755,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7756,
+          "option_text": "By avoiding feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7757,
+          "option_text": "By keeping secrets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1374,
+      "subskill_id": 69,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of transparency in stakeholder management?",
+      "options": [
+        {
+          "option_id": 7758,
+          "option_text": "It builds trust and reduces surprises",
+          "is_correct": true
+        },
+        {
+          "option_id": 7759,
+          "option_text": "It hides information",
+          "is_correct": false
+        },
+        {
+          "option_id": 7760,
+          "option_text": "It confuses stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7761,
+          "option_text": "It is not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1375,
+      "subskill_id": 69,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle stakeholder feedback?",
+      "options": [
+        {
+          "option_id": 7762,
+          "option_text": "By listening actively and incorporating feedback into decisions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7763,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7764,
+          "option_text": "By arguing with stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7765,
+          "option_text": "By avoiding feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1376,
+      "subskill_id": 65,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale PRD processes across multiple teams?",
+      "options": [
+        {
+          "option_id": 7766,
+          "option_text": "By creating standardized templates and review processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 7767,
+          "option_text": "By having one person write all PRDs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7768,
+          "option_text": "By skipping PRDs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7769,
+          "option_text": "By using one PRD for all teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1377,
+      "subskill_id": 65,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the relationship between PRDs and product strategy?",
+      "options": [
+        {
+          "option_id": 7770,
+          "option_text": "PRDs define product requirements; product strategy defines the vision",
+          "is_correct": true
+        },
+        {
+          "option_id": 7771,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7772,
+          "option_text": "Product strategy defines requirements",
+          "is_correct": false
+        },
+        {
+          "option_id": 7773,
+          "option_text": "PRDs define the vision",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1378,
+      "subskill_id": 65,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle PRD versioning and updates?",
+      "options": [
+        {
+          "option_id": 7774,
+          "option_text": "By using version control and clear change logs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7775,
+          "option_text": "By rewriting them entirely",
+          "is_correct": false
+        },
+        {
+          "option_id": 7776,
+          "option_text": "By ignoring updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 7777,
+          "option_text": "By deleting old versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1379,
+      "subskill_id": 65,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of a PRD in a product-led growth strategy?",
+      "options": [
+        {
+          "option_id": 7778,
+          "option_text": "It drives alignment and clarity for growth-focused products",
+          "is_correct": true
+        },
+        {
+          "option_id": 7779,
+          "option_text": "It is only for early-stage products",
+          "is_correct": false
+        },
+        {
+          "option_id": 7780,
+          "option_text": "It is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 7781,
+          "option_text": "It replaces marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1380,
+      "subskill_id": 65,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you align PRDs with engineering and design?",
+      "options": [
+        {
+          "option_id": 7782,
+          "option_text": "By involving both teams early and maintaining clear communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 7783,
+          "option_text": "By keeping teams separate",
+          "is_correct": false
+        },
+        {
+          "option_id": 7784,
+          "option_text": "By ignoring design",
+          "is_correct": false
+        },
+        {
+          "option_id": 7785,
+          "option_text": "By focusing only on engineering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1381,
+      "subskill_id": 66,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a roadmap for a mature product?",
+      "options": [
+        {
+          "option_id": 7786,
+          "option_text": "By focusing on optimization and innovation",
+          "is_correct": true
+        },
+        {
+          "option_id": 7787,
+          "option_text": "By adding new features without strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 7788,
+          "option_text": "By ignoring market changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7789,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1382,
+      "subskill_id": 66,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a portfolio roadmap?",
+      "options": [
+        {
+          "option_id": 7790,
+          "option_text": "A roadmap that coordinates multiple products or initiatives",
+          "is_correct": true
+        },
+        {
+          "option_id": 7791,
+          "option_text": "A roadmap for one product",
+          "is_correct": false
+        },
+        {
+          "option_id": 7792,
+          "option_text": "A roadmap for one team",
+          "is_correct": false
+        },
+        {
+          "option_id": 7793,
+          "option_text": "A roadmap for one feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1383,
+      "subskill_id": 66,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use roadmaps for strategic planning?",
+      "options": [
+        {
+          "option_id": 7794,
+          "option_text": "To guide long-term business and product direction",
+          "is_correct": true
+        },
+        {
+          "option_id": 7795,
+          "option_text": "To track daily tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7796,
+          "option_text": "To manage budgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 7797,
+          "option_text": "To hire staff",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1384,
+      "subskill_id": 66,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a roadmap and a product vision?",
+      "options": [
+        {
+          "option_id": 7798,
+          "option_text": "A roadmap is tactical; a product vision is strategic",
+          "is_correct": true
+        },
+        {
+          "option_id": 7799,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7800,
+          "option_text": "A product vision is tactical",
+          "is_correct": false
+        },
+        {
+          "option_id": 7801,
+          "option_text": "A roadmap is strategic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1385,
+      "subskill_id": 66,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you adjust a roadmap based on market changes?",
+      "options": [
+        {
+          "option_id": 7802,
+          "option_text": "By monitoring market trends and adapting the roadmap accordingly",
+          "is_correct": true
+        },
+        {
+          "option_id": 7803,
+          "option_text": "By ignoring market changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 7804,
+          "option_text": "By following a fixed plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 7805,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1386,
+      "subskill_id": 67,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you write user stories for a global product?",
+      "options": [
+        {
+          "option_id": 7806,
+          "option_text": "By considering cultural differences and diverse user needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7807,
+          "option_text": "By writing generic stories",
+          "is_correct": false
+        },
+        {
+          "option_id": 7808,
+          "option_text": "By ignoring regional differences",
+          "is_correct": false
+        },
+        {
+          "option_id": 7809,
+          "option_text": "By using only one perspective",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1387,
+      "subskill_id": 67,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of user stories in product discovery?",
+      "options": [
+        {
+          "option_id": 7810,
+          "option_text": "They help test hypotheses and validate ideas",
+          "is_correct": true
+        },
+        {
+          "option_id": 7811,
+          "option_text": "They replace research",
+          "is_correct": false
+        },
+        {
+          "option_id": 7812,
+          "option_text": "They are only for development",
+          "is_correct": false
+        },
+        {
+          "option_id": 7813,
+          "option_text": "They are not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1388,
+      "subskill_id": 67,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle user story dependencies?",
+      "options": [
+        {
+          "option_id": 7814,
+          "option_text": "By mapping dependencies and sequencing work",
+          "is_correct": true
+        },
+        {
+          "option_id": 7815,
+          "option_text": "By ignoring dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 7816,
+          "option_text": "By combining all stories",
+          "is_correct": false
+        },
+        {
+          "option_id": 7817,
+          "option_text": "By skipping planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1389,
+      "subskill_id": 67,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between user stories and job stories?",
+      "options": [
+        {
+          "option_id": 7818,
+          "option_text": "User stories are from the user's perspective; job stories describe tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 7819,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7820,
+          "option_text": "Job stories are from the user's perspective",
+          "is_correct": false
+        },
+        {
+          "option_id": 7821,
+          "option_text": "User stories describe tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1390,
+      "subskill_id": 67,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use user stories for product innovation?",
+      "options": [
+        {
+          "option_id": 7822,
+          "option_text": "By using stories to explore new ideas and gather feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 7823,
+          "option_text": "By writing stories without testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7824,
+          "option_text": "By ignoring user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7825,
+          "option_text": "By skipping discovery",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1391,
+      "subskill_id": 68,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you align OKRs with product vision?",
+      "options": [
+        {
+          "option_id": 7826,
+          "option_text": "By ensuring OKRs support the product vision",
+          "is_correct": true
+        },
+        {
+          "option_id": 7827,
+          "option_text": "By ignoring the vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 7828,
+          "option_text": "By setting unrelated OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7829,
+          "option_text": "By copying company OKRs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1392,
+      "subskill_id": 68,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are stretch goals in OKRs?",
+      "options": [
+        {
+          "option_id": 7830,
+          "option_text": "Ambitious goals that push teams beyond their comfort zone",
+          "is_correct": true
+        },
+        {
+          "option_id": 7831,
+          "option_text": "Easy goals that are always achievable",
+          "is_correct": false
+        },
+        {
+          "option_id": 7832,
+          "option_text": "Goals that are impossible",
+          "is_correct": false
+        },
+        {
+          "option_id": 7833,
+          "option_text": "Goals that are ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1393,
+      "subskill_id": 68,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure the impact of OKRs on product success?",
+      "options": [
+        {
+          "option_id": 7834,
+          "option_text": "By tracking success metrics and product outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 7835,
+          "option_text": "By ignoring OKRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7836,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 7837,
+          "option_text": "By copying previous results",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1394,
+      "subskill_id": 68,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between OKRs and MBOs?",
+      "options": [
+        {
+          "option_id": 7838,
+          "option_text": "OKRs are for goal-setting; MBOs are for management objectives",
+          "is_correct": true
+        },
+        {
+          "option_id": 7839,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7840,
+          "option_text": "MBOs are for goal-setting",
+          "is_correct": false
+        },
+        {
+          "option_id": 7841,
+          "option_text": "OKRs are for management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1395,
+      "subskill_id": 68,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you evolve OKRs over time?",
+      "options": [
+        {
+          "option_id": 7842,
+          "option_text": "By regularly reviewing, adapting, and resetting OKRs",
+          "is_correct": true
+        },
+        {
+          "option_id": 7843,
+          "option_text": "By keeping them static",
+          "is_correct": false
+        },
+        {
+          "option_id": 7844,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7845,
+          "option_text": "By copying from other teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1396,
+      "subskill_id": 69,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you manage stakeholders in a crisis?",
+      "options": [
+        {
+          "option_id": 7846,
+          "option_text": "By staying calm, communicating clearly, and prioritizing",
+          "is_correct": true
+        },
+        {
+          "option_id": 7847,
+          "option_text": "By panicking",
+          "is_correct": false
+        },
+        {
+          "option_id": 7848,
+          "option_text": "By hiding information",
+          "is_correct": false
+        },
+        {
+          "option_id": 7849,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1397,
+      "subskill_id": 69,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of emotional intelligence in stakeholder management?",
+      "options": [
+        {
+          "option_id": 7850,
+          "option_text": "It helps manage relationships and handle difficult situations",
+          "is_correct": true
+        },
+        {
+          "option_id": 7851,
+          "option_text": "It is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 7852,
+          "option_text": "It replaces communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 7853,
+          "option_text": "It is only for managers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1398,
+      "subskill_id": 69,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you influence stakeholders without authority?",
+      "options": [
+        {
+          "option_id": 7854,
+          "option_text": "By building trust, using data, and understanding their motivations",
+          "is_correct": true
+        },
+        {
+          "option_id": 7855,
+          "option_text": "By demanding compliance",
+          "is_correct": false
+        },
+        {
+          "option_id": 7856,
+          "option_text": "By avoiding them",
+          "is_correct": false
+        },
+        {
+          "option_id": 7857,
+          "option_text": "By ignoring their concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1399,
+      "subskill_id": 69,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the ethical considerations in stakeholder management?",
+      "options": [
+        {
+          "option_id": 7858,
+          "option_text": "Transparency, fairness, and balancing competing interests",
+          "is_correct": true
+        },
+        {
+          "option_id": 7859,
+          "option_text": "Ignoring stakeholder needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 7860,
+          "option_text": "Focusing only on profit",
+          "is_correct": false
+        },
+        {
+          "option_id": 7861,
+          "option_text": "Avoiding tough decisions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1400,
+      "subskill_id": 69,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a stakeholder advocacy program?",
+      "options": [
+        {
+          "option_id": 7862,
+          "option_text": "By identifying advocates and empowering them to support the product",
+          "is_correct": true
+        },
+        {
+          "option_id": 7863,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 7864,
+          "option_text": "By avoiding feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 7865,
+          "option_text": "By keeping secrets",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

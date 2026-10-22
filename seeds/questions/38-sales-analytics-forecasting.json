@@ -1,0 +1,2906 @@
+{
+  "skill_id": 38,
+  "skill_name": "Sales Analytics & Forecasting",
+  "questions": [
+    {
+      "question_id": 3701,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is sales data analysis?",
+      "options": [
+        {
+          "option_id": 17066,
+          "option_text": "The process of analyzing sales data to gain insights",
+          "is_correct": true
+        },
+        {
+          "option_id": 17067,
+          "option_text": "The process of ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17068,
+          "option_text": "The process of deleting sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17069,
+          "option_text": "The process of hiding sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3702,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of sales data analysis?",
+      "options": [
+        {
+          "option_id": 17070,
+          "option_text": "To improve sales performance and decision-making",
+          "is_correct": true
+        },
+        {
+          "option_id": 17071,
+          "option_text": "To ignore sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17072,
+          "option_text": "To delete sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17073,
+          "option_text": "To hide sales performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3703,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales metric?",
+      "options": [
+        {
+          "option_id": 17074,
+          "option_text": "A measurable value that tracks sales performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17075,
+          "option_text": "A value that ignores sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17076,
+          "option_text": "A value that deletes sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17077,
+          "option_text": "A value that hides sales performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3704,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales KPI?",
+      "options": [
+        {
+          "option_id": 17078,
+          "option_text": "A key performance indicator used to measure sales success",
+          "is_correct": true
+        },
+        {
+          "option_id": 17079,
+          "option_text": "A key performance indicator used to ignore sales success",
+          "is_correct": false
+        },
+        {
+          "option_id": 17080,
+          "option_text": "A key performance indicator used to delete sales success",
+          "is_correct": false
+        },
+        {
+          "option_id": 17081,
+          "option_text": "A key performance indicator used to hide sales success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3705,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report?",
+      "options": [
+        {
+          "option_id": 17082,
+          "option_text": "A document that displays sales data in a structured format",
+          "is_correct": true
+        },
+        {
+          "option_id": 17083,
+          "option_text": "A document that ignores sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17084,
+          "option_text": "A document that deletes sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17085,
+          "option_text": "A document that hides sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3706,
+      "subskill_id": 170,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales dashboard?",
+      "options": [
+        {
+          "option_id": 17086,
+          "option_text": "A visual display of key sales metrics and data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17087,
+          "option_text": "A visual display of ignored sales metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17088,
+          "option_text": "A visual display of deleted sales metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17089,
+          "option_text": "A visual display of hidden sales metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3707,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is predictive forecasting?",
+      "options": [
+        {
+          "option_id": 17090,
+          "option_text": "A method of predicting future sales based on historical data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17091,
+          "option_text": "A method of guessing future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17092,
+          "option_text": "A method of ignoring future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17093,
+          "option_text": "A method of deleting future sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3708,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of predictive forecasting?",
+      "options": [
+        {
+          "option_id": 17094,
+          "option_text": "To anticipate future sales and plan accordingly",
+          "is_correct": true
+        },
+        {
+          "option_id": 17095,
+          "option_text": "To ignore future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17096,
+          "option_text": "To delete future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17097,
+          "option_text": "To hide future sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3709,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a forecast?",
+      "options": [
+        {
+          "option_id": 17098,
+          "option_text": "A prediction of future sales",
+          "is_correct": true
+        },
+        {
+          "option_id": 17099,
+          "option_text": "A guess of future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17100,
+          "option_text": "A way to ignore future sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 17101,
+          "option_text": "A way to delete future sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3710,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a forecast type?",
+      "options": [
+        {
+          "option_id": 17102,
+          "option_text": "A category of forecast (e.g., best case, worst case)",
+          "is_correct": true
+        },
+        {
+          "option_id": 17103,
+          "option_text": "A category of guess",
+          "is_correct": false
+        },
+        {
+          "option_id": 17104,
+          "option_text": "A category of ignore",
+          "is_correct": false
+        },
+        {
+          "option_id": 17105,
+          "option_text": "A category of delete",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3711,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a forecast model?",
+      "options": [
+        {
+          "option_id": 17106,
+          "option_text": "A structure for creating a forecast",
+          "is_correct": true
+        },
+        {
+          "option_id": 17107,
+          "option_text": "A structure for guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17108,
+          "option_text": "A structure for ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17109,
+          "option_text": "A structure for deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3712,
+      "subskill_id": 171,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a forecast accuracy?",
+      "options": [
+        {
+          "option_id": 17110,
+          "option_text": "A measure of how accurate a forecast is",
+          "is_correct": true
+        },
+        {
+          "option_id": 17111,
+          "option_text": "A measure of how inaccurate a forecast is",
+          "is_correct": false
+        },
+        {
+          "option_id": 17112,
+          "option_text": "A measure of how ignored a forecast is",
+          "is_correct": false
+        },
+        {
+          "option_id": 17113,
+          "option_text": "A measure of how deleted a forecast is",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3713,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is performance tracking in sales?",
+      "options": [
+        {
+          "option_id": 17114,
+          "option_text": "The process of monitoring and measuring sales performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17115,
+          "option_text": "The process of ignoring sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17116,
+          "option_text": "The process of deleting sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17117,
+          "option_text": "The process of hiding sales performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3714,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of performance tracking?",
+      "options": [
+        {
+          "option_id": 17118,
+          "option_text": "To identify areas for improvement and celebrate successes",
+          "is_correct": true
+        },
+        {
+          "option_id": 17119,
+          "option_text": "To ignore areas for improvement",
+          "is_correct": false
+        },
+        {
+          "option_id": 17120,
+          "option_text": "To delete areas for improvement",
+          "is_correct": false
+        },
+        {
+          "option_id": 17121,
+          "option_text": "To hide areas for improvement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3715,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a performance metric?",
+      "options": [
+        {
+          "option_id": 17122,
+          "option_text": "A metric used to measure performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17123,
+          "option_text": "A metric used to ignore performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17124,
+          "option_text": "A metric used to delete performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17125,
+          "option_text": "A metric used to hide performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3716,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a performance KPI?",
+      "options": [
+        {
+          "option_id": 17126,
+          "option_text": "A key performance indicator used to measure performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17127,
+          "option_text": "A key performance indicator used to ignore performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17128,
+          "option_text": "A key performance indicator used to delete performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17129,
+          "option_text": "A key performance indicator used to hide performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3717,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a performance report?",
+      "options": [
+        {
+          "option_id": 17130,
+          "option_text": "A document that displays performance data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17131,
+          "option_text": "A document that ignores performance data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17132,
+          "option_text": "A document that deletes performance data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17133,
+          "option_text": "A document that hides performance data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3718,
+      "subskill_id": 172,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a performance dashboard?",
+      "options": [
+        {
+          "option_id": 17134,
+          "option_text": "A visual display of key performance metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17135,
+          "option_text": "A visual display of ignored performance metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17136,
+          "option_text": "A visual display of deleted performance metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17137,
+          "option_text": "A visual display of hidden performance metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3719,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is sales reporting?",
+      "options": [
+        {
+          "option_id": 17138,
+          "option_text": "The process of creating and distributing sales reports",
+          "is_correct": true
+        },
+        {
+          "option_id": 17139,
+          "option_text": "The process of ignoring sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17140,
+          "option_text": "The process of deleting sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17141,
+          "option_text": "The process of hiding sales reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3720,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of sales reporting?",
+      "options": [
+        {
+          "option_id": 17142,
+          "option_text": "To provide visibility into sales performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17143,
+          "option_text": "To ignore sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17144,
+          "option_text": "To delete sales performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17145,
+          "option_text": "To hide sales performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3721,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report type?",
+      "options": [
+        {
+          "option_id": 17146,
+          "option_text": "A category of sales report",
+          "is_correct": true
+        },
+        {
+          "option_id": 17147,
+          "option_text": "A category of ignored sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 17148,
+          "option_text": "A category of deleted sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 17149,
+          "option_text": "A category of hidden sales report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3722,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report format?",
+      "options": [
+        {
+          "option_id": 17150,
+          "option_text": "A format for presenting sales report data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17151,
+          "option_text": "A format for ignoring sales report data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17152,
+          "option_text": "A format for deleting sales report data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17153,
+          "option_text": "A format for hiding sales report data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3723,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report frequency?",
+      "options": [
+        {
+          "option_id": 17154,
+          "option_text": "How often a sales report is generated",
+          "is_correct": true
+        },
+        {
+          "option_id": 17155,
+          "option_text": "How often a sales report is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 17156,
+          "option_text": "How often a sales report is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 17157,
+          "option_text": "How often a sales report is hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3724,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report audience?",
+      "options": [
+        {
+          "option_id": 17158,
+          "option_text": "Who receives a sales report",
+          "is_correct": true
+        },
+        {
+          "option_id": 17159,
+          "option_text": "Who ignores a sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 17160,
+          "option_text": "Who deletes a sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 17161,
+          "option_text": "Who hides a sales report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3725,
+      "subskill_id": 173,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales report tool?",
+      "options": [
+        {
+          "option_id": 17162,
+          "option_text": "A tool used to create sales reports",
+          "is_correct": true
+        },
+        {
+          "option_id": 17163,
+          "option_text": "A tool used to ignore sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17164,
+          "option_text": "A tool used to delete sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17165,
+          "option_text": "A tool used to hide sales reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3726,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you analyze sales data?",
+      "options": [
+        {
+          "option_id": 17166,
+          "option_text": "By collecting, cleaning, and analyzing sales data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17167,
+          "option_text": "By ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17168,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17169,
+          "option_text": "By deleting sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3727,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales data analysis framework?",
+      "options": [
+        {
+          "option_id": 17170,
+          "option_text": "A structured approach to analyzing sales data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17171,
+          "option_text": "A random approach to analyzing sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17172,
+          "option_text": "A way to ignore sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17173,
+          "option_text": "A way to delete sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3728,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales data analysis tool?",
+      "options": [
+        {
+          "option_id": 17174,
+          "option_text": "A tool for analyzing sales data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17175,
+          "option_text": "A tool for ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17176,
+          "option_text": "A tool for deleting sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17177,
+          "option_text": "A tool for hiding sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3729,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales data analysis metric?",
+      "options": [
+        {
+          "option_id": 17178,
+          "option_text": "A metric for measuring sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17179,
+          "option_text": "A metric for measuring sales data ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17180,
+          "option_text": "A metric for measuring sales data deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17181,
+          "option_text": "A metric for measuring sales data hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3730,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales data analysis best practice?",
+      "options": [
+        {
+          "option_id": 17182,
+          "option_text": "A proven practice for sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17183,
+          "option_text": "A practice for ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17184,
+          "option_text": "A practice for deleting sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17185,
+          "option_text": "A practice for hiding sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3731,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a predictive forecast?",
+      "options": [
+        {
+          "option_id": 17186,
+          "option_text": "By using historical data and statistical models",
+          "is_correct": true
+        },
+        {
+          "option_id": 17187,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17188,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17189,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3732,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting model?",
+      "options": [
+        {
+          "option_id": 17190,
+          "option_text": "A structure for creating a forecast",
+          "is_correct": true
+        },
+        {
+          "option_id": 17191,
+          "option_text": "A structure for guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17192,
+          "option_text": "A structure for ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17193,
+          "option_text": "A structure for deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3733,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting tool?",
+      "options": [
+        {
+          "option_id": 17194,
+          "option_text": "A tool for creating forecasts",
+          "is_correct": true
+        },
+        {
+          "option_id": 17195,
+          "option_text": "A tool for guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17196,
+          "option_text": "A tool for ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17197,
+          "option_text": "A tool for deleting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3734,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting metric?",
+      "options": [
+        {
+          "option_id": 17198,
+          "option_text": "A metric for measuring forecast accuracy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17199,
+          "option_text": "A metric for measuring forecast ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17200,
+          "option_text": "A metric for measuring forecast deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17201,
+          "option_text": "A metric for measuring forecast hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3735,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting best practice?",
+      "options": [
+        {
+          "option_id": 17202,
+          "option_text": "A proven practice for forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17203,
+          "option_text": "A practice for ignoring forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17204,
+          "option_text": "A practice for deleting forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17205,
+          "option_text": "A practice for hiding forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3736,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you track sales performance?",
+      "options": [
+        {
+          "option_id": 17206,
+          "option_text": "By monitoring performance metrics and KPIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 17207,
+          "option_text": "By ignoring performance metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17208,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17209,
+          "option_text": "By deleting performance metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3737,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a performance tracking framework?",
+      "options": [
+        {
+          "option_id": 17210,
+          "option_text": "A structured approach to tracking performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17211,
+          "option_text": "A random approach to tracking performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17212,
+          "option_text": "A way to ignore performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17213,
+          "option_text": "A way to delete performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3738,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a performance tracking tool?",
+      "options": [
+        {
+          "option_id": 17214,
+          "option_text": "A tool for tracking performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17215,
+          "option_text": "A tool for ignoring performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17216,
+          "option_text": "A tool for deleting performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17217,
+          "option_text": "A tool for hiding performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3739,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a performance tracking metric?",
+      "options": [
+        {
+          "option_id": 17218,
+          "option_text": "A metric for measuring performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17219,
+          "option_text": "A metric for measuring performance ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17220,
+          "option_text": "A metric for measuring performance deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17221,
+          "option_text": "A metric for measuring performance hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3740,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a performance tracking best practice?",
+      "options": [
+        {
+          "option_id": 17222,
+          "option_text": "A proven practice for tracking performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17223,
+          "option_text": "A practice for ignoring performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17224,
+          "option_text": "A practice for deleting performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17225,
+          "option_text": "A practice for hiding performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3741,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a sales report?",
+      "options": [
+        {
+          "option_id": 17226,
+          "option_text": "By collecting, organizing, and presenting sales data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17227,
+          "option_text": "By ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17228,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17229,
+          "option_text": "By deleting sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3742,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales reporting framework?",
+      "options": [
+        {
+          "option_id": 17230,
+          "option_text": "A structured approach to sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17231,
+          "option_text": "A random approach to sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17232,
+          "option_text": "A way to ignore sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17233,
+          "option_text": "A way to delete sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3743,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales reporting tool?",
+      "options": [
+        {
+          "option_id": 17234,
+          "option_text": "A tool for creating sales reports",
+          "is_correct": true
+        },
+        {
+          "option_id": 17235,
+          "option_text": "A tool for ignoring sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17236,
+          "option_text": "A tool for deleting sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17237,
+          "option_text": "A tool for hiding sales reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3744,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales reporting metric?",
+      "options": [
+        {
+          "option_id": 17238,
+          "option_text": "A metric for measuring sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17239,
+          "option_text": "A metric for measuring sales reporting ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17240,
+          "option_text": "A metric for measuring sales reporting deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17241,
+          "option_text": "A metric for measuring sales reporting hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3745,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales reporting best practice?",
+      "options": [
+        {
+          "option_id": 17242,
+          "option_text": "A proven practice for sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17243,
+          "option_text": "A practice for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17244,
+          "option_text": "A practice for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17245,
+          "option_text": "A practice for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3746,
+      "subskill_id": 170,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales data visualization?",
+      "options": [
+        {
+          "option_id": 17246,
+          "option_text": "A visual representation of sales data",
+          "is_correct": true
+        },
+        {
+          "option_id": 17247,
+          "option_text": "A visual representation of ignored sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17248,
+          "option_text": "A visual representation of deleted sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 17249,
+          "option_text": "A visual representation of hidden sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3747,
+      "subskill_id": 171,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a leading indicator in forecasting?",
+      "options": [
+        {
+          "option_id": 17250,
+          "option_text": "A metric that predicts future performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17251,
+          "option_text": "A metric that ignores future performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17252,
+          "option_text": "A metric that deletes future performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17253,
+          "option_text": "A metric that hides future performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3748,
+      "subskill_id": 172,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a performance dashboard?",
+      "options": [
+        {
+          "option_id": 17254,
+          "option_text": "A visual display of key performance metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17255,
+          "option_text": "A visual display of ignored performance metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17256,
+          "option_text": "A visual display of deleted performance metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17257,
+          "option_text": "A visual display of hidden performance metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3749,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales report template?",
+      "options": [
+        {
+          "option_id": 17258,
+          "option_text": "A pre-designed format for a sales report",
+          "is_correct": true
+        },
+        {
+          "option_id": 17259,
+          "option_text": "A pre-designed format for ignoring sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17260,
+          "option_text": "A pre-designed format for deleting sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17261,
+          "option_text": "A pre-designed format for hiding sales reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3750,
+      "subskill_id": 173,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales report automation?",
+      "options": [
+        {
+          "option_id": 17262,
+          "option_text": "The use of automation to create sales reports",
+          "is_correct": true
+        },
+        {
+          "option_id": 17263,
+          "option_text": "The use of manual processes to create sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17264,
+          "option_text": "The use of ignoring to create sales reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 17265,
+          "option_text": "The use of deleting to create sales reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3751,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize sales data analysis?",
+      "options": [
+        {
+          "option_id": 17266,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17267,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17268,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17269,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3752,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales data analysis strategy?",
+      "options": [
+        {
+          "option_id": 17270,
+          "option_text": "A plan for optimizing sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17271,
+          "option_text": "A plan for ignoring sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17272,
+          "option_text": "A plan for deleting sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17273,
+          "option_text": "A plan for hiding sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3753,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales data analysis platform?",
+      "options": [
+        {
+          "option_id": 17274,
+          "option_text": "A platform for sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17275,
+          "option_text": "A platform for ignoring sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17276,
+          "option_text": "A platform for deleting sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17277,
+          "option_text": "A platform for hiding sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3754,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales data analysis analytics?",
+      "options": [
+        {
+          "option_id": 17278,
+          "option_text": "The use of analytics to improve sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17279,
+          "option_text": "The use of guessing to improve sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17280,
+          "option_text": "The use of ignoring to improve sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17281,
+          "option_text": "The use of deleting to improve sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3755,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales data analysis automation?",
+      "options": [
+        {
+          "option_id": 17282,
+          "option_text": "The use of automation to improve sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17283,
+          "option_text": "The use of manual processes for sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17284,
+          "option_text": "The use of ignoring for sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17285,
+          "option_text": "The use of deleting for sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3756,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize predictive forecasting?",
+      "options": [
+        {
+          "option_id": 17286,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17287,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17288,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17289,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3757,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting strategy?",
+      "options": [
+        {
+          "option_id": 17290,
+          "option_text": "A plan for optimizing predictive forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17291,
+          "option_text": "A plan for ignoring predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17292,
+          "option_text": "A plan for deleting predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17293,
+          "option_text": "A plan for hiding predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3758,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting platform?",
+      "options": [
+        {
+          "option_id": 17294,
+          "option_text": "A platform for predictive forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17295,
+          "option_text": "A platform for ignoring predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17296,
+          "option_text": "A platform for deleting predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17297,
+          "option_text": "A platform for hiding predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3759,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting analytics?",
+      "options": [
+        {
+          "option_id": 17298,
+          "option_text": "The use of analytics to improve predictive forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17299,
+          "option_text": "The use of guessing to improve predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17300,
+          "option_text": "The use of ignoring to improve predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17301,
+          "option_text": "The use of deleting to improve predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3760,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting automation?",
+      "options": [
+        {
+          "option_id": 17302,
+          "option_text": "The use of automation to improve predictive forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17303,
+          "option_text": "The use of manual processes for predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17304,
+          "option_text": "The use of ignoring for predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17305,
+          "option_text": "The use of deleting for predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3761,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize performance tracking?",
+      "options": [
+        {
+          "option_id": 17306,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17307,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17308,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17309,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3762,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a performance tracking strategy?",
+      "options": [
+        {
+          "option_id": 17310,
+          "option_text": "A plan for optimizing performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17311,
+          "option_text": "A plan for ignoring performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17312,
+          "option_text": "A plan for deleting performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17313,
+          "option_text": "A plan for hiding performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3763,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a performance tracking platform?",
+      "options": [
+        {
+          "option_id": 17314,
+          "option_text": "A platform for performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17315,
+          "option_text": "A platform for ignoring performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17316,
+          "option_text": "A platform for deleting performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17317,
+          "option_text": "A platform for hiding performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3764,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a performance tracking analytics?",
+      "options": [
+        {
+          "option_id": 17318,
+          "option_text": "The use of analytics to improve performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17319,
+          "option_text": "The use of guessing to improve performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17320,
+          "option_text": "The use of ignoring to improve performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17321,
+          "option_text": "The use of deleting to improve performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3765,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a performance tracking automation?",
+      "options": [
+        {
+          "option_id": 17322,
+          "option_text": "The use of automation to improve performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17323,
+          "option_text": "The use of manual processes for performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17324,
+          "option_text": "The use of ignoring for performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17325,
+          "option_text": "The use of deleting for performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3766,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize sales reporting?",
+      "options": [
+        {
+          "option_id": 17326,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17327,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17328,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17329,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3767,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting strategy?",
+      "options": [
+        {
+          "option_id": 17330,
+          "option_text": "A plan for optimizing sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17331,
+          "option_text": "A plan for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17332,
+          "option_text": "A plan for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17333,
+          "option_text": "A plan for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3768,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting platform?",
+      "options": [
+        {
+          "option_id": 17334,
+          "option_text": "A platform for sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17335,
+          "option_text": "A platform for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17336,
+          "option_text": "A platform for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17337,
+          "option_text": "A platform for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3769,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting analytics?",
+      "options": [
+        {
+          "option_id": 17338,
+          "option_text": "The use of analytics to improve sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17339,
+          "option_text": "The use of guessing to improve sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17340,
+          "option_text": "The use of ignoring to improve sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17341,
+          "option_text": "The use of deleting to improve sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3770,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting automation?",
+      "options": [
+        {
+          "option_id": 17342,
+          "option_text": "The use of automation to improve sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17343,
+          "option_text": "The use of manual processes for sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17344,
+          "option_text": "The use of ignoring for sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17345,
+          "option_text": "The use of deleting for sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3771,
+      "subskill_id": 170,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales data analysis dashboard?",
+      "options": [
+        {
+          "option_id": 17346,
+          "option_text": "A visual display of sales data analysis metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17347,
+          "option_text": "A visual display of ignored sales data analysis metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17348,
+          "option_text": "A visual display of deleted sales data analysis metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17349,
+          "option_text": "A visual display of hidden sales data analysis metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3772,
+      "subskill_id": 171,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a forecasting dashboard?",
+      "options": [
+        {
+          "option_id": 17350,
+          "option_text": "A visual display of forecasting metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17351,
+          "option_text": "A visual display of ignored forecasting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17352,
+          "option_text": "A visual display of deleted forecasting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17353,
+          "option_text": "A visual display of hidden forecasting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3773,
+      "subskill_id": 172,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a performance tracking dashboard?",
+      "options": [
+        {
+          "option_id": 17354,
+          "option_text": "A visual display of performance tracking metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17355,
+          "option_text": "A visual display of ignored performance tracking metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17356,
+          "option_text": "A visual display of deleted performance tracking metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17357,
+          "option_text": "A visual display of hidden performance tracking metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3774,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting dashboard?",
+      "options": [
+        {
+          "option_id": 17358,
+          "option_text": "A visual display of sales reporting metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17359,
+          "option_text": "A visual display of ignored sales reporting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17360,
+          "option_text": "A visual display of deleted sales reporting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17361,
+          "option_text": "A visual display of hidden sales reporting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3775,
+      "subskill_id": 173,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales reporting governance?",
+      "options": [
+        {
+          "option_id": 17362,
+          "option_text": "The framework for managing sales reporting processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 17363,
+          "option_text": "The framework for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17364,
+          "option_text": "The framework for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17365,
+          "option_text": "The framework for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3776,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale sales data analysis?",
+      "options": [
+        {
+          "option_id": 17366,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17367,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17368,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17369,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3777,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sales data analysis ecosystem?",
+      "options": [
+        {
+          "option_id": 17370,
+          "option_text": "The interconnected system of sales data analysis tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17371,
+          "option_text": "A single sales data analysis tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17372,
+          "option_text": "A manual sales data analysis process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17373,
+          "option_text": "A sales data analysis reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3778,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales data analysis AI?",
+      "options": [
+        {
+          "option_id": 17374,
+          "option_text": "The use of artificial intelligence to improve sales data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 17375,
+          "option_text": "The use of manual processes for sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17376,
+          "option_text": "The use of ignoring for sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17377,
+          "option_text": "The use of deleting for sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3779,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales data analysis future?",
+      "options": [
+        {
+          "option_id": 17378,
+          "option_text": "The future of sales data analysis, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17379,
+          "option_text": "The future of ignoring sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17380,
+          "option_text": "The future of deleting sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17381,
+          "option_text": "The future of hiding sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3780,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales data analysis governance?",
+      "options": [
+        {
+          "option_id": 17382,
+          "option_text": "The framework for managing sales data analysis processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 17383,
+          "option_text": "The framework for ignoring sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17384,
+          "option_text": "The framework for deleting sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17385,
+          "option_text": "The framework for hiding sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3781,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale predictive forecasting?",
+      "options": [
+        {
+          "option_id": 17386,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17387,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17388,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17389,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3782,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting ecosystem?",
+      "options": [
+        {
+          "option_id": 17390,
+          "option_text": "The interconnected system of predictive forecasting tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17391,
+          "option_text": "A single predictive forecasting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17392,
+          "option_text": "A manual predictive forecasting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17393,
+          "option_text": "A predictive forecasting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3783,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is predictive forecasting AI?",
+      "options": [
+        {
+          "option_id": 17394,
+          "option_text": "The use of artificial intelligence to improve predictive forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17395,
+          "option_text": "The use of manual processes for predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17396,
+          "option_text": "The use of ignoring for predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17397,
+          "option_text": "The use of deleting for predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3784,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is predictive forecasting future?",
+      "options": [
+        {
+          "option_id": 17398,
+          "option_text": "The future of predictive forecasting, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17399,
+          "option_text": "The future of ignoring predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17400,
+          "option_text": "The future of deleting predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17401,
+          "option_text": "The future of hiding predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3785,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is predictive forecasting governance?",
+      "options": [
+        {
+          "option_id": 17402,
+          "option_text": "The framework for managing predictive forecasting processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 17403,
+          "option_text": "The framework for ignoring predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17404,
+          "option_text": "The framework for deleting predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17405,
+          "option_text": "The framework for hiding predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3786,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale performance tracking?",
+      "options": [
+        {
+          "option_id": 17406,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17407,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17408,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17409,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3787,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a performance tracking ecosystem?",
+      "options": [
+        {
+          "option_id": 17410,
+          "option_text": "The interconnected system of performance tracking tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17411,
+          "option_text": "A single performance tracking tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17412,
+          "option_text": "A manual performance tracking process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17413,
+          "option_text": "A performance tracking reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3788,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is performance tracking AI?",
+      "options": [
+        {
+          "option_id": 17414,
+          "option_text": "The use of artificial intelligence to improve performance tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 17415,
+          "option_text": "The use of manual processes for performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17416,
+          "option_text": "The use of ignoring for performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17417,
+          "option_text": "The use of deleting for performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3789,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is performance tracking future?",
+      "options": [
+        {
+          "option_id": 17418,
+          "option_text": "The future of performance tracking, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17419,
+          "option_text": "The future of ignoring performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17420,
+          "option_text": "The future of deleting performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17421,
+          "option_text": "The future of hiding performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3790,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is performance tracking governance?",
+      "options": [
+        {
+          "option_id": 17422,
+          "option_text": "The framework for managing performance tracking processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 17423,
+          "option_text": "The framework for ignoring performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17424,
+          "option_text": "The framework for deleting performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17425,
+          "option_text": "The framework for hiding performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3791,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale sales reporting?",
+      "options": [
+        {
+          "option_id": 17426,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17427,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17428,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17429,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3792,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sales reporting ecosystem?",
+      "options": [
+        {
+          "option_id": 17430,
+          "option_text": "The interconnected system of sales reporting tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17431,
+          "option_text": "A single sales reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17432,
+          "option_text": "A manual sales reporting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17433,
+          "option_text": "A sales reporting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3793,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales reporting AI?",
+      "options": [
+        {
+          "option_id": 17434,
+          "option_text": "The use of artificial intelligence to improve sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17435,
+          "option_text": "The use of manual processes for sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17436,
+          "option_text": "The use of ignoring for sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17437,
+          "option_text": "The use of deleting for sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3794,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales reporting future?",
+      "options": [
+        {
+          "option_id": 17438,
+          "option_text": "The future of sales reporting, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17439,
+          "option_text": "The future of ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17440,
+          "option_text": "The future of deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17441,
+          "option_text": "The future of hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3795,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales reporting governance?",
+      "options": [
+        {
+          "option_id": 17442,
+          "option_text": "The framework for managing sales reporting processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 17443,
+          "option_text": "The framework for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17444,
+          "option_text": "The framework for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17445,
+          "option_text": "The framework for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3796,
+      "subskill_id": 170,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sales data analysis enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17446,
+          "option_text": "A high-level strategy for sales data analysis in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17447,
+          "option_text": "A high-level strategy for ignoring sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17448,
+          "option_text": "A high-level strategy for deleting sales data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 17449,
+          "option_text": "A high-level strategy for hiding sales data analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3797,
+      "subskill_id": 171,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a predictive forecasting enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17450,
+          "option_text": "A high-level strategy for predictive forecasting in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17451,
+          "option_text": "A high-level strategy for ignoring predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17452,
+          "option_text": "A high-level strategy for deleting predictive forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17453,
+          "option_text": "A high-level strategy for hiding predictive forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3798,
+      "subskill_id": 172,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a performance tracking enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17454,
+          "option_text": "A high-level strategy for performance tracking in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17455,
+          "option_text": "A high-level strategy for ignoring performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17456,
+          "option_text": "A high-level strategy for deleting performance tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 17457,
+          "option_text": "A high-level strategy for hiding performance tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3799,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sales reporting enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17458,
+          "option_text": "A high-level strategy for sales reporting in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17459,
+          "option_text": "A high-level strategy for ignoring sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17460,
+          "option_text": "A high-level strategy for deleting sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17461,
+          "option_text": "A high-level strategy for hiding sales reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3800,
+      "subskill_id": 173,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a sales reporting ROI?",
+      "options": [
+        {
+          "option_id": 17462,
+          "option_text": "The return on investment from sales reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17463,
+          "option_text": "The cost of sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17464,
+          "option_text": "The loss from sales reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17465,
+          "option_text": "The waste from sales reporting",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

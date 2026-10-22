@@ -1,0 +1,2906 @@
+{
+  "skill_id": 37,
+  "skill_name": "Negotiation & Closing",
+  "questions": [
+    {
+      "question_id": 3601,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a negotiation framework?",
+      "options": [
+        {
+          "option_id": 16666,
+          "option_text": "A structured approach to conducting negotiations",
+          "is_correct": true
+        },
+        {
+          "option_id": 16667,
+          "option_text": "A random approach to negotiations",
+          "is_correct": false
+        },
+        {
+          "option_id": 16668,
+          "option_text": "A way to ignore negotiations",
+          "is_correct": false
+        },
+        {
+          "option_id": 16669,
+          "option_text": "A way to delete negotiations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3602,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a negotiation framework?",
+      "options": [
+        {
+          "option_id": 16670,
+          "option_text": "To guide the negotiation process and achieve desired outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 16671,
+          "option_text": "To ignore the negotiation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16672,
+          "option_text": "To delete the negotiation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16673,
+          "option_text": "To hide the negotiation process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3603,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a win-win negotiation?",
+      "options": [
+        {
+          "option_id": 16674,
+          "option_text": "A negotiation where both parties benefit",
+          "is_correct": true
+        },
+        {
+          "option_id": 16675,
+          "option_text": "A negotiation where one party loses",
+          "is_correct": false
+        },
+        {
+          "option_id": 16676,
+          "option_text": "A negotiation where both parties lose",
+          "is_correct": false
+        },
+        {
+          "option_id": 16677,
+          "option_text": "A negotiation where only one party benefits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3604,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lose-lose negotiation?",
+      "options": [
+        {
+          "option_id": 16678,
+          "option_text": "A negotiation where both parties lose",
+          "is_correct": true
+        },
+        {
+          "option_id": 16679,
+          "option_text": "A negotiation where both parties benefit",
+          "is_correct": false
+        },
+        {
+          "option_id": 16680,
+          "option_text": "A negotiation where one party wins",
+          "is_correct": false
+        },
+        {
+          "option_id": 16681,
+          "option_text": "A negotiation where only one party benefits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3605,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a BATNA in negotiation?",
+      "options": [
+        {
+          "option_id": 16682,
+          "option_text": "Best Alternative To a Negotiated Agreement",
+          "is_correct": true
+        },
+        {
+          "option_id": 16683,
+          "option_text": "Best Alternative To a Negotiated Action",
+          "is_correct": false
+        },
+        {
+          "option_id": 16684,
+          "option_text": "Best Approach To a Negotiated Agreement",
+          "is_correct": false
+        },
+        {
+          "option_id": 16685,
+          "option_text": "Best Alternative To a Negotiated Approach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3606,
+      "subskill_id": 166,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a ZOPA in negotiation?",
+      "options": [
+        {
+          "option_id": 16686,
+          "option_text": "Zone Of Possible Agreement - the range where a deal is possible",
+          "is_correct": true
+        },
+        {
+          "option_id": 16687,
+          "option_text": "Zone Of Potential Agreement",
+          "is_correct": false
+        },
+        {
+          "option_id": 16688,
+          "option_text": "Zone Of Possible Action",
+          "is_correct": false
+        },
+        {
+          "option_id": 16689,
+          "option_text": "Zone Of Potential Action",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3607,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is objection handling in sales?",
+      "options": [
+        {
+          "option_id": 16690,
+          "option_text": "The process of addressing a prospect's concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 16691,
+          "option_text": "The process of ignoring a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16692,
+          "option_text": "The process of dismissing a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16693,
+          "option_text": "The process of avoiding a prospect's concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3608,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of objection handling?",
+      "options": [
+        {
+          "option_id": 16694,
+          "option_text": "To overcome resistance and move the sale forward",
+          "is_correct": true
+        },
+        {
+          "option_id": 16695,
+          "option_text": "To ignore resistance",
+          "is_correct": false
+        },
+        {
+          "option_id": 16696,
+          "option_text": "To create resistance",
+          "is_correct": false
+        },
+        {
+          "option_id": 16697,
+          "option_text": "To delete resistance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3609,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a common objection in sales?",
+      "options": [
+        {
+          "option_id": 16698,
+          "option_text": "Price, product, timing, or stakeholder concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 16699,
+          "option_text": "Only price concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16700,
+          "option_text": "Only product concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16701,
+          "option_text": "Only timing concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3610,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a price objection?",
+      "options": [
+        {
+          "option_id": 16702,
+          "option_text": "An objection about the product's cost",
+          "is_correct": true
+        },
+        {
+          "option_id": 16703,
+          "option_text": "An objection about the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 16704,
+          "option_text": "An objection about the product's timing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16705,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3611,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a timing objection?",
+      "options": [
+        {
+          "option_id": 16706,
+          "option_text": "An objection about the product's timing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16707,
+          "option_text": "An objection about the product's cost",
+          "is_correct": false
+        },
+        {
+          "option_id": 16708,
+          "option_text": "An objection about the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 16709,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3612,
+      "subskill_id": 167,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a product objection?",
+      "options": [
+        {
+          "option_id": 16710,
+          "option_text": "An objection about the product's features or functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 16711,
+          "option_text": "An objection about the product's cost",
+          "is_correct": false
+        },
+        {
+          "option_id": 16712,
+          "option_text": "An objection about the product's timing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16713,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3613,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is value-based selling?",
+      "options": [
+        {
+          "option_id": 16714,
+          "option_text": "A sales approach that focuses on the value a product provides",
+          "is_correct": true
+        },
+        {
+          "option_id": 16715,
+          "option_text": "A sales approach that focuses on the price",
+          "is_correct": false
+        },
+        {
+          "option_id": 16716,
+          "option_text": "A sales approach that ignores value",
+          "is_correct": false
+        },
+        {
+          "option_id": 16717,
+          "option_text": "A sales approach that focuses on features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3614,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of value-based selling?",
+      "options": [
+        {
+          "option_id": 16718,
+          "option_text": "To demonstrate how the product solves the customer's problem",
+          "is_correct": true
+        },
+        {
+          "option_id": 16719,
+          "option_text": "To ignore the customer's problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 16720,
+          "option_text": "To delete the customer's problem",
+          "is_correct": false
+        },
+        {
+          "option_id": 16721,
+          "option_text": "To hide the customer's problem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3615,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a value proposition?",
+      "options": [
+        {
+          "option_id": 16722,
+          "option_text": "A statement that explains the value of a product or service",
+          "is_correct": true
+        },
+        {
+          "option_id": 16723,
+          "option_text": "A statement that explains the price of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16724,
+          "option_text": "A statement that explains the features of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16725,
+          "option_text": "A statement that explains the competitors of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3616,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a customer value?",
+      "options": [
+        {
+          "option_id": 16726,
+          "option_text": "The benefit a customer receives from a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 16727,
+          "option_text": "The cost of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16728,
+          "option_text": "The features of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16729,
+          "option_text": "The competitors of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3617,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a value statement?",
+      "options": [
+        {
+          "option_id": 16730,
+          "option_text": "A statement that communicates the value of a product to a customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 16731,
+          "option_text": "A statement that communicates the price of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16732,
+          "option_text": "A statement that communicates the features of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16733,
+          "option_text": "A statement that communicates the competitors of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3618,
+      "subskill_id": 168,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a value metric?",
+      "options": [
+        {
+          "option_id": 16734,
+          "option_text": "A metric for measuring the value a product provides",
+          "is_correct": true
+        },
+        {
+          "option_id": 16735,
+          "option_text": "A metric for measuring the price of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16736,
+          "option_text": "A metric for measuring the features of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 16737,
+          "option_text": "A metric for measuring the competitors of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3619,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a closing strategy in sales?",
+      "options": [
+        {
+          "option_id": 16738,
+          "option_text": "A plan for closing a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16739,
+          "option_text": "A plan for ignoring a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16740,
+          "option_text": "A plan for deleting a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16741,
+          "option_text": "A plan for hiding a sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3620,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a closing strategy?",
+      "options": [
+        {
+          "option_id": 16742,
+          "option_text": "To secure the deal and finalize the sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16743,
+          "option_text": "To ignore the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 16744,
+          "option_text": "To delete the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 16745,
+          "option_text": "To hide the deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3621,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an assumptive close?",
+      "options": [
+        {
+          "option_id": 16746,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": true
+        },
+        {
+          "option_id": 16747,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 16748,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        },
+        {
+          "option_id": 16749,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3622,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a summary close?",
+      "options": [
+        {
+          "option_id": 16750,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": true
+        },
+        {
+          "option_id": 16751,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 16752,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        },
+        {
+          "option_id": 16753,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3623,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an urgency close?",
+      "options": [
+        {
+          "option_id": 16754,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": true
+        },
+        {
+          "option_id": 16755,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 16756,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 16757,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3624,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an alternative close?",
+      "options": [
+        {
+          "option_id": 16758,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": true
+        },
+        {
+          "option_id": 16759,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 16760,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 16761,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3625,
+      "subskill_id": 169,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a soft close?",
+      "options": [
+        {
+          "option_id": 16762,
+          "option_text": "A closing technique that is gentle and low-pressure",
+          "is_correct": true
+        },
+        {
+          "option_id": 16763,
+          "option_text": "A closing technique that is aggressive and high-pressure",
+          "is_correct": false
+        },
+        {
+          "option_id": 16764,
+          "option_text": "A closing technique that assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 16765,
+          "option_text": "A closing technique that creates urgency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3626,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you apply a negotiation framework?",
+      "options": [
+        {
+          "option_id": 16766,
+          "option_text": "By following a structured negotiation framework",
+          "is_correct": true
+        },
+        {
+          "option_id": 16767,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16768,
+          "option_text": "By ignoring the framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 16769,
+          "option_text": "By deleting the framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3627,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a negotiation strategy?",
+      "options": [
+        {
+          "option_id": 16770,
+          "option_text": "A plan for achieving negotiation goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 16771,
+          "option_text": "A plan for ignoring negotiation goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16772,
+          "option_text": "A plan for deleting negotiation goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16773,
+          "option_text": "A plan for hiding negotiation goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3628,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a negotiation tactic?",
+      "options": [
+        {
+          "option_id": 16774,
+          "option_text": "A specific action used in negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16775,
+          "option_text": "A specific action used to ignore negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16776,
+          "option_text": "A specific action used to delete negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16777,
+          "option_text": "A specific action used to hide negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3629,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a negotiation style?",
+      "options": [
+        {
+          "option_id": 16778,
+          "option_text": "A characteristic of how someone negotiates",
+          "is_correct": true
+        },
+        {
+          "option_id": 16779,
+          "option_text": "A characteristic of how someone ignores negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16780,
+          "option_text": "A characteristic of how someone deletes negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16781,
+          "option_text": "A characteristic of how someone hides negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3630,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a negotiation outcome?",
+      "options": [
+        {
+          "option_id": 16782,
+          "option_text": "A result of a negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16783,
+          "option_text": "A result of ignoring negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16784,
+          "option_text": "A result of deleting negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16785,
+          "option_text": "A result of hiding negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3631,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle objections?",
+      "options": [
+        {
+          "option_id": 16786,
+          "option_text": "By listening, acknowledging, and addressing concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 16787,
+          "option_text": "By ignoring concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16788,
+          "option_text": "By dismissing concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 16789,
+          "option_text": "By avoiding concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3632,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an objection handling framework?",
+      "options": [
+        {
+          "option_id": 16790,
+          "option_text": "A structured approach to handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 16791,
+          "option_text": "A random approach to handling objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16792,
+          "option_text": "A way to ignore objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16793,
+          "option_text": "A way to delete objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3633,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an objection handling technique?",
+      "options": [
+        {
+          "option_id": 16794,
+          "option_text": "A method for handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 16795,
+          "option_text": "A method for ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16796,
+          "option_text": "A method for deleting objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16797,
+          "option_text": "A method for hiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3634,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an objection handling best practice?",
+      "options": [
+        {
+          "option_id": 16798,
+          "option_text": "A proven practice for handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 16799,
+          "option_text": "A practice for ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16800,
+          "option_text": "A practice for deleting objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16801,
+          "option_text": "A practice for hiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3635,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an objection handling mindset?",
+      "options": [
+        {
+          "option_id": 16802,
+          "option_text": "A positive attitude and a problem-solving approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16803,
+          "option_text": "A negative attitude and a dismissive approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16804,
+          "option_text": "An indifferent attitude and an avoidant approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16805,
+          "option_text": "A hostile attitude and a confrontational approach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3636,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you apply value-based selling?",
+      "options": [
+        {
+          "option_id": 16806,
+          "option_text": "By focusing on the value the product provides",
+          "is_correct": true
+        },
+        {
+          "option_id": 16807,
+          "option_text": "By focusing on the price",
+          "is_correct": false
+        },
+        {
+          "option_id": 16808,
+          "option_text": "By ignoring value",
+          "is_correct": false
+        },
+        {
+          "option_id": 16809,
+          "option_text": "By deleting value",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3637,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a value-based selling framework?",
+      "options": [
+        {
+          "option_id": 16810,
+          "option_text": "A structured approach to value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16811,
+          "option_text": "A random approach to selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16812,
+          "option_text": "A way to ignore value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16813,
+          "option_text": "A way to delete value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3638,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a value-based selling strategy?",
+      "options": [
+        {
+          "option_id": 16814,
+          "option_text": "A plan for value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16815,
+          "option_text": "A plan for ignoring value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16816,
+          "option_text": "A plan for deleting value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16817,
+          "option_text": "A plan for hiding value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3639,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a value-based selling technique?",
+      "options": [
+        {
+          "option_id": 16818,
+          "option_text": "A method for value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16819,
+          "option_text": "A method for ignoring value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16820,
+          "option_text": "A method for deleting value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16821,
+          "option_text": "A method for hiding value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3640,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a value-based selling metric?",
+      "options": [
+        {
+          "option_id": 16822,
+          "option_text": "A metric for measuring value-based selling success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16823,
+          "option_text": "A metric for measuring value-based selling ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16824,
+          "option_text": "A metric for measuring value-based selling deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16825,
+          "option_text": "A metric for measuring value-based selling hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3641,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you develop a closing strategy?",
+      "options": [
+        {
+          "option_id": 16826,
+          "option_text": "By understanding the prospect's needs and creating a plan",
+          "is_correct": true
+        },
+        {
+          "option_id": 16827,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16828,
+          "option_text": "By ignoring the prospect's needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 16829,
+          "option_text": "By deleting the prospect's needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3642,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing framework?",
+      "options": [
+        {
+          "option_id": 16830,
+          "option_text": "A structured approach to closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16831,
+          "option_text": "A random approach to closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16832,
+          "option_text": "A way to ignore closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16833,
+          "option_text": "A way to delete closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3643,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing technique?",
+      "options": [
+        {
+          "option_id": 16834,
+          "option_text": "A method for closing a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16835,
+          "option_text": "A method for ignoring a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16836,
+          "option_text": "A method for deleting a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16837,
+          "option_text": "A method for hiding a sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3644,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing best practice?",
+      "options": [
+        {
+          "option_id": 16838,
+          "option_text": "A proven practice for closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16839,
+          "option_text": "A practice for ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16840,
+          "option_text": "A practice for deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16841,
+          "option_text": "A practice for hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3645,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing mindset?",
+      "options": [
+        {
+          "option_id": 16842,
+          "option_text": "A positive attitude and a problem-solving approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16843,
+          "option_text": "A negative attitude and a dismissive approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16844,
+          "option_text": "An indifferent attitude and an avoidant approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16845,
+          "option_text": "A hostile attitude and a confrontational approach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3646,
+      "subskill_id": 166,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a negotiation preparation?",
+      "options": [
+        {
+          "option_id": 16846,
+          "option_text": "The process of preparing for a negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16847,
+          "option_text": "The process of ignoring a negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16848,
+          "option_text": "The process of deleting a negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16849,
+          "option_text": "The process of hiding a negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3647,
+      "subskill_id": 167,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling script?",
+      "options": [
+        {
+          "option_id": 16850,
+          "option_text": "A script for handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 16851,
+          "option_text": "A script for ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16852,
+          "option_text": "A script for deleting objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 16853,
+          "option_text": "A script for hiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3648,
+      "subskill_id": 168,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a value proposition canvas?",
+      "options": [
+        {
+          "option_id": 16854,
+          "option_text": "A tool for mapping out the value proposition",
+          "is_correct": true
+        },
+        {
+          "option_id": 16855,
+          "option_text": "A tool for ignoring value propositions",
+          "is_correct": false
+        },
+        {
+          "option_id": 16856,
+          "option_text": "A tool for deleting value propositions",
+          "is_correct": false
+        },
+        {
+          "option_id": 16857,
+          "option_text": "A tool for hiding value propositions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3649,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing timeline?",
+      "options": [
+        {
+          "option_id": 16858,
+          "option_text": "A timeline for closing a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16859,
+          "option_text": "A timeline for ignoring a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16860,
+          "option_text": "A timeline for deleting a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16861,
+          "option_text": "A timeline for hiding a sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3650,
+      "subskill_id": 169,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing checklist?",
+      "options": [
+        {
+          "option_id": 16862,
+          "option_text": "A checklist for closing a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16863,
+          "option_text": "A checklist for ignoring a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16864,
+          "option_text": "A checklist for deleting a sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 16865,
+          "option_text": "A checklist for hiding a sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3651,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a negotiation framework?",
+      "options": [
+        {
+          "option_id": 16866,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 16867,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 16868,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16869,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3652,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a negotiation analytics?",
+      "options": [
+        {
+          "option_id": 16870,
+          "option_text": "The use of analytics to improve negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16871,
+          "option_text": "The use of guessing to improve negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16872,
+          "option_text": "The use of ignoring to improve negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16873,
+          "option_text": "The use of deleting to improve negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3653,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a negotiation automation?",
+      "options": [
+        {
+          "option_id": 16874,
+          "option_text": "The use of automation to improve negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16875,
+          "option_text": "The use of manual processes for negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16876,
+          "option_text": "The use of ignoring for negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16877,
+          "option_text": "The use of deleting for negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3654,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a negotiation governance?",
+      "options": [
+        {
+          "option_id": 16878,
+          "option_text": "The framework for managing negotiation processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16879,
+          "option_text": "The framework for ignoring negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16880,
+          "option_text": "The framework for deleting negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16881,
+          "option_text": "The framework for hiding negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3655,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a negotiation maturity model?",
+      "options": [
+        {
+          "option_id": 16882,
+          "option_text": "A model for assessing the maturity of negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16883,
+          "option_text": "A model for ignoring negotiation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16884,
+          "option_text": "A model for deleting negotiation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16885,
+          "option_text": "A model for hiding negotiation maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3656,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize objection handling?",
+      "options": [
+        {
+          "option_id": 16886,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 16887,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 16888,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16889,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3657,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an objection handling analytics?",
+      "options": [
+        {
+          "option_id": 16890,
+          "option_text": "The use of analytics to improve objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16891,
+          "option_text": "The use of guessing to improve objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16892,
+          "option_text": "The use of ignoring to improve objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16893,
+          "option_text": "The use of deleting to improve objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3658,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an objection handling automation?",
+      "options": [
+        {
+          "option_id": 16894,
+          "option_text": "The use of automation to improve objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16895,
+          "option_text": "The use of manual processes for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16896,
+          "option_text": "The use of ignoring for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16897,
+          "option_text": "The use of deleting for objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3659,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an objection handling governance?",
+      "options": [
+        {
+          "option_id": 16898,
+          "option_text": "The framework for managing objection handling processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16899,
+          "option_text": "The framework for ignoring objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16900,
+          "option_text": "The framework for deleting objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16901,
+          "option_text": "The framework for hiding objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3660,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an objection handling maturity model?",
+      "options": [
+        {
+          "option_id": 16902,
+          "option_text": "A model for assessing the maturity of objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16903,
+          "option_text": "A model for ignoring objection handling maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16904,
+          "option_text": "A model for deleting objection handling maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16905,
+          "option_text": "A model for hiding objection handling maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3661,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize value-based selling?",
+      "options": [
+        {
+          "option_id": 16906,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 16907,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 16908,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16909,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3662,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a value-based selling analytics?",
+      "options": [
+        {
+          "option_id": 16910,
+          "option_text": "The use of analytics to improve value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16911,
+          "option_text": "The use of guessing to improve value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16912,
+          "option_text": "The use of ignoring to improve value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16913,
+          "option_text": "The use of deleting to improve value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3663,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a value-based selling automation?",
+      "options": [
+        {
+          "option_id": 16914,
+          "option_text": "The use of automation to improve value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16915,
+          "option_text": "The use of manual processes for value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16916,
+          "option_text": "The use of ignoring for value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16917,
+          "option_text": "The use of deleting for value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3664,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a value-based selling governance?",
+      "options": [
+        {
+          "option_id": 16918,
+          "option_text": "The framework for managing value-based selling processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16919,
+          "option_text": "The framework for ignoring value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16920,
+          "option_text": "The framework for deleting value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16921,
+          "option_text": "The framework for hiding value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3665,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a value-based selling maturity model?",
+      "options": [
+        {
+          "option_id": 16922,
+          "option_text": "A model for assessing the maturity of value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16923,
+          "option_text": "A model for ignoring value-based selling maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16924,
+          "option_text": "A model for deleting value-based selling maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16925,
+          "option_text": "A model for hiding value-based selling maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3666,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize closing strategies?",
+      "options": [
+        {
+          "option_id": 16926,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 16927,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 16928,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16929,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3667,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing analytics?",
+      "options": [
+        {
+          "option_id": 16930,
+          "option_text": "The use of analytics to improve closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16931,
+          "option_text": "The use of guessing to improve closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16932,
+          "option_text": "The use of ignoring to improve closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16933,
+          "option_text": "The use of deleting to improve closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3668,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing automation?",
+      "options": [
+        {
+          "option_id": 16934,
+          "option_text": "The use of automation to improve closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16935,
+          "option_text": "The use of manual processes for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16936,
+          "option_text": "The use of ignoring for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16937,
+          "option_text": "The use of deleting for closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3669,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing governance?",
+      "options": [
+        {
+          "option_id": 16938,
+          "option_text": "The framework for managing closing processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16939,
+          "option_text": "The framework for ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16940,
+          "option_text": "The framework for deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16941,
+          "option_text": "The framework for hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3670,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing maturity model?",
+      "options": [
+        {
+          "option_id": 16942,
+          "option_text": "A model for assessing the maturity of closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 16943,
+          "option_text": "A model for ignoring closing maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16944,
+          "option_text": "A model for deleting closing maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16945,
+          "option_text": "A model for hiding closing maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3671,
+      "subskill_id": 166,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a negotiation dashboard?",
+      "options": [
+        {
+          "option_id": 16946,
+          "option_text": "A visual display of negotiation metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16947,
+          "option_text": "A visual display of ignored negotiation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16948,
+          "option_text": "A visual display of deleted negotiation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16949,
+          "option_text": "A visual display of hidden negotiation metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3672,
+      "subskill_id": 167,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an objection handling dashboard?",
+      "options": [
+        {
+          "option_id": 16950,
+          "option_text": "A visual display of objection handling metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16951,
+          "option_text": "A visual display of ignored objection handling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16952,
+          "option_text": "A visual display of deleted objection handling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16953,
+          "option_text": "A visual display of hidden objection handling metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3673,
+      "subskill_id": 168,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a value-based selling dashboard?",
+      "options": [
+        {
+          "option_id": 16954,
+          "option_text": "A visual display of value-based selling metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16955,
+          "option_text": "A visual display of ignored value-based selling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16956,
+          "option_text": "A visual display of deleted value-based selling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16957,
+          "option_text": "A visual display of hidden value-based selling metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3674,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing dashboard?",
+      "options": [
+        {
+          "option_id": 16958,
+          "option_text": "A visual display of closing metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16959,
+          "option_text": "A visual display of ignored closing metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16960,
+          "option_text": "A visual display of deleted closing metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16961,
+          "option_text": "A visual display of hidden closing metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3675,
+      "subskill_id": 169,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing playbook?",
+      "options": [
+        {
+          "option_id": 16962,
+          "option_text": "A guide for closing deals",
+          "is_correct": true
+        },
+        {
+          "option_id": 16963,
+          "option_text": "A guide for ignoring deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16964,
+          "option_text": "A guide for deleting deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16965,
+          "option_text": "A guide for hiding deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3676,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale negotiation frameworks?",
+      "options": [
+        {
+          "option_id": 16966,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16967,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16968,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16969,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3677,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a negotiation ecosystem?",
+      "options": [
+        {
+          "option_id": 16970,
+          "option_text": "The interconnected system of negotiation tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16971,
+          "option_text": "A single negotiation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16972,
+          "option_text": "A manual negotiation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16973,
+          "option_text": "A negotiation reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3678,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is negotiation AI?",
+      "options": [
+        {
+          "option_id": 16974,
+          "option_text": "The use of artificial intelligence to improve negotiation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16975,
+          "option_text": "The use of manual processes for negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16976,
+          "option_text": "The use of ignoring for negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16977,
+          "option_text": "The use of deleting for negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3679,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is negotiation future?",
+      "options": [
+        {
+          "option_id": 16978,
+          "option_text": "The future of negotiation, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16979,
+          "option_text": "The future of ignoring negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16980,
+          "option_text": "The future of deleting negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16981,
+          "option_text": "The future of hiding negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3680,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is negotiation enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16982,
+          "option_text": "A high-level strategy for negotiation in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16983,
+          "option_text": "A high-level strategy for ignoring negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16984,
+          "option_text": "A high-level strategy for deleting negotiation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16985,
+          "option_text": "A high-level strategy for hiding negotiation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3681,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale objection handling?",
+      "options": [
+        {
+          "option_id": 16986,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16987,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16988,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16989,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3682,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an objection handling ecosystem?",
+      "options": [
+        {
+          "option_id": 16990,
+          "option_text": "The interconnected system of objection handling tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16991,
+          "option_text": "A single objection handling tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16992,
+          "option_text": "A manual objection handling process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16993,
+          "option_text": "An objection handling reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3683,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is objection handling AI?",
+      "options": [
+        {
+          "option_id": 16994,
+          "option_text": "The use of artificial intelligence to improve objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16995,
+          "option_text": "The use of manual processes for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16996,
+          "option_text": "The use of ignoring for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16997,
+          "option_text": "The use of deleting for objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3684,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is objection handling future?",
+      "options": [
+        {
+          "option_id": 16998,
+          "option_text": "The future of objection handling, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16999,
+          "option_text": "The future of ignoring objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17000,
+          "option_text": "The future of deleting objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17001,
+          "option_text": "The future of hiding objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3685,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is objection handling enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17002,
+          "option_text": "A high-level strategy for objection handling in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17003,
+          "option_text": "A high-level strategy for ignoring objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17004,
+          "option_text": "A high-level strategy for deleting objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17005,
+          "option_text": "A high-level strategy for hiding objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3686,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale value-based selling?",
+      "options": [
+        {
+          "option_id": 17006,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17007,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17008,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17009,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3687,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a value-based selling ecosystem?",
+      "options": [
+        {
+          "option_id": 17010,
+          "option_text": "The interconnected system of value-based selling tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17011,
+          "option_text": "A single value-based selling tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17012,
+          "option_text": "A manual value-based selling process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17013,
+          "option_text": "A value-based selling reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3688,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is value-based selling AI?",
+      "options": [
+        {
+          "option_id": 17014,
+          "option_text": "The use of artificial intelligence to improve value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 17015,
+          "option_text": "The use of manual processes for value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17016,
+          "option_text": "The use of ignoring for value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17017,
+          "option_text": "The use of deleting for value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3689,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is value-based selling future?",
+      "options": [
+        {
+          "option_id": 17018,
+          "option_text": "The future of value-based selling, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17019,
+          "option_text": "The future of ignoring value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17020,
+          "option_text": "The future of deleting value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17021,
+          "option_text": "The future of hiding value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3690,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is value-based selling enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17022,
+          "option_text": "A high-level strategy for value-based selling in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17023,
+          "option_text": "A high-level strategy for ignoring value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17024,
+          "option_text": "A high-level strategy for deleting value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17025,
+          "option_text": "A high-level strategy for hiding value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3691,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale closing strategies?",
+      "options": [
+        {
+          "option_id": 17026,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17027,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17028,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17029,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3692,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a closing ecosystem?",
+      "options": [
+        {
+          "option_id": 17030,
+          "option_text": "The interconnected system of closing tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17031,
+          "option_text": "A single closing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17032,
+          "option_text": "A manual closing process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17033,
+          "option_text": "A closing reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3693,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is closing AI?",
+      "options": [
+        {
+          "option_id": 17034,
+          "option_text": "The use of artificial intelligence to improve closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17035,
+          "option_text": "The use of manual processes for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17036,
+          "option_text": "The use of ignoring for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17037,
+          "option_text": "The use of deleting for closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3694,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is closing future?",
+      "options": [
+        {
+          "option_id": 17038,
+          "option_text": "The future of closing, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17039,
+          "option_text": "The future of ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17040,
+          "option_text": "The future of deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17041,
+          "option_text": "The future of hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3695,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is closing enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17042,
+          "option_text": "A high-level strategy for closing in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17043,
+          "option_text": "A high-level strategy for ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17044,
+          "option_text": "A high-level strategy for deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17045,
+          "option_text": "A high-level strategy for hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3696,
+      "subskill_id": 166,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is negotiation governance?",
+      "options": [
+        {
+          "option_id": 17046,
+          "option_text": "The framework for managing negotiation governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17047,
+          "option_text": "The framework for ignoring negotiation governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17048,
+          "option_text": "The framework for deleting negotiation governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17049,
+          "option_text": "The framework for hiding negotiation governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3697,
+      "subskill_id": 167,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is objection handling ROI?",
+      "options": [
+        {
+          "option_id": 17050,
+          "option_text": "The return on investment from objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 17051,
+          "option_text": "The cost of objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17052,
+          "option_text": "The loss from objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17053,
+          "option_text": "The waste from objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3698,
+      "subskill_id": 168,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is value-based selling ROI?",
+      "options": [
+        {
+          "option_id": 17054,
+          "option_text": "The return on investment from value-based selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 17055,
+          "option_text": "The cost of value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17056,
+          "option_text": "The loss from value-based selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17057,
+          "option_text": "The waste from value-based selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3699,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is closing ROI?",
+      "options": [
+        {
+          "option_id": 17058,
+          "option_text": "The return on investment from closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17059,
+          "option_text": "The cost of closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17060,
+          "option_text": "The loss from closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17061,
+          "option_text": "The waste from closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3700,
+      "subskill_id": 169,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is closing ecosystem?",
+      "options": [
+        {
+          "option_id": 17062,
+          "option_text": "The interconnected system of closing tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17063,
+          "option_text": "A single closing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17064,
+          "option_text": "A manual closing process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17065,
+          "option_text": "A closing reporting tool",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

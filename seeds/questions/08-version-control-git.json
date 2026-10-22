@@ -1,0 +1,2906 @@
+{
+  "skill_id": 8,
+  "skill_name": "Version Control (Git)",
+  "questions": [
+    {
+      "question_id": 701,
+      "subskill_id": 39,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a branch in Git?",
+      "options": [
+        {
+          "option_id": 3866,
+          "option_text": "A copy of the entire repository",
+          "is_correct": false
+        },
+        {
+          "option_id": 3867,
+          "option_text": "A tag on a specific commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 3868,
+          "option_text": "A pointer to a specific commit in the commit history",
+          "is_correct": true
+        },
+        {
+          "option_id": 3869,
+          "option_text": "A folder in the repository",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 702,
+      "subskill_id": 39,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What command is used to create a new branch?",
+      "options": [
+        {
+          "option_id": 3870,
+          "option_text": "git branch <branch-name>",
+          "is_correct": true
+        },
+        {
+          "option_id": 3871,
+          "option_text": "git create-branch <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3872,
+          "option_text": "git new <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3873,
+          "option_text": "git checkout <branch-name>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 703,
+      "subskill_id": 39,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do you switch to a different branch?",
+      "options": [
+        {
+          "option_id": 3874,
+          "option_text": "git change <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3875,
+          "option_text": "git move <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3876,
+          "option_text": "git branch <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3877,
+          "option_text": "git checkout <branch-name> or git switch <branch-name>",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 704,
+      "subskill_id": 39,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the default branch in Git called?",
+      "options": [
+        {
+          "option_id": 3878,
+          "option_text": "default",
+          "is_correct": false
+        },
+        {
+          "option_id": 3879,
+          "option_text": "main or master",
+          "is_correct": true
+        },
+        {
+          "option_id": 3880,
+          "option_text": "primary",
+          "is_correct": false
+        },
+        {
+          "option_id": 3881,
+          "option_text": "root",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 705,
+      "subskill_id": 39,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What command lists all branches in a repository?",
+      "options": [
+        {
+          "option_id": 3882,
+          "option_text": "git list-branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 3883,
+          "option_text": "git show-branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 3884,
+          "option_text": "git branch",
+          "is_correct": true
+        },
+        {
+          "option_id": 3885,
+          "option_text": "git branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 706,
+      "subskill_id": 40,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is merging in Git?",
+      "options": [
+        {
+          "option_id": 3886,
+          "option_text": "Combining changes from different branches",
+          "is_correct": true
+        },
+        {
+          "option_id": 3887,
+          "option_text": "Deleting a branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 3888,
+          "option_text": "Creating a new repository",
+          "is_correct": false
+        },
+        {
+          "option_id": 3889,
+          "option_text": "Saving changes to the staging area",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 707,
+      "subskill_id": 40,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What command is used to merge branches?",
+      "options": [
+        {
+          "option_id": 3890,
+          "option_text": "git combine <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3891,
+          "option_text": "git rebase <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3892,
+          "option_text": "git join <branch-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3893,
+          "option_text": "git merge <branch-name>",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 708,
+      "subskill_id": 40,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a fast-forward merge?",
+      "options": [
+        {
+          "option_id": 3894,
+          "option_text": "A merge that creates a new merge commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 3895,
+          "option_text": "A merge where the branch pointer simply moves forward",
+          "is_correct": true
+        },
+        {
+          "option_id": 3896,
+          "option_text": "A merge that is faster than others",
+          "is_correct": false
+        },
+        {
+          "option_id": 3897,
+          "option_text": "A merge that deletes the source branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 709,
+      "subskill_id": 40,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between merge and rebase?",
+      "options": [
+        {
+          "option_id": 3898,
+          "option_text": "Merge and rebase are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 3899,
+          "option_text": "Rebase creates a merge commit, merge rewrites history",
+          "is_correct": false
+        },
+        {
+          "option_id": 3900,
+          "option_text": "Merge preserves history, rebase rewrites history",
+          "is_correct": true
+        },
+        {
+          "option_id": 3901,
+          "option_text": "Merge is for local branches, rebase is for remote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 710,
+      "subskill_id": 40,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does it mean to merge a branch into another?",
+      "options": [
+        {
+          "option_id": 3902,
+          "option_text": "Incorporating changes from one branch into another",
+          "is_correct": true
+        },
+        {
+          "option_id": 3903,
+          "option_text": "Deleting both branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 3904,
+          "option_text": "Creating a new branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 3905,
+          "option_text": "Renaming a branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 711,
+      "subskill_id": 41,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pull request?",
+      "options": [
+        {
+          "option_id": 3906,
+          "option_text": "A request to pull code from a server",
+          "is_correct": false
+        },
+        {
+          "option_id": 3907,
+          "option_text": "A Git command to download changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 3908,
+          "option_text": "A request to delete a branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 3909,
+          "option_text": "A request to merge changes from one branch into another",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 712,
+      "subskill_id": 41,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a pull request?",
+      "options": [
+        {
+          "option_id": 3910,
+          "option_text": "To automatically merge code without review",
+          "is_correct": false
+        },
+        {
+          "option_id": 3911,
+          "option_text": "To review and discuss changes before merging",
+          "is_correct": true
+        },
+        {
+          "option_id": 3912,
+          "option_text": "To delete branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 3913,
+          "option_text": "To create new repositories",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 713,
+      "subskill_id": 41,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Where are pull requests commonly used?",
+      "options": [
+        {
+          "option_id": 3914,
+          "option_text": "Only in local Git repositories",
+          "is_correct": false
+        },
+        {
+          "option_id": 3915,
+          "option_text": "Only in SVN",
+          "is_correct": false
+        },
+        {
+          "option_id": 3916,
+          "option_text": "On platforms like GitHub, GitLab, and Bitbucket",
+          "is_correct": true
+        },
+        {
+          "option_id": 3917,
+          "option_text": "In Microsoft Word",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 714,
+      "subskill_id": 41,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What information is typically included in a pull request?",
+      "options": [
+        {
+          "option_id": 3918,
+          "option_text": "Title, description, commits, and comments",
+          "is_correct": true
+        },
+        {
+          "option_id": 3919,
+          "option_text": "Only the code changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 3920,
+          "option_text": "Only the branch name",
+          "is_correct": false
+        },
+        {
+          "option_id": 3921,
+          "option_text": "Only the author name",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 715,
+      "subskill_id": 41,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a pull request and a merge request?",
+      "options": [
+        {
+          "option_id": 3922,
+          "option_text": "They are completely different",
+          "is_correct": false
+        },
+        {
+          "option_id": 3923,
+          "option_text": "Pull requests are for GitHub, merge requests are for GitLab",
+          "is_correct": true
+        },
+        {
+          "option_id": 3924,
+          "option_text": "Merge requests are for Bitbucket only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3925,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 716,
+      "subskill_id": 42,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a merge conflict in Git?",
+      "options": [
+        {
+          "option_id": 3926,
+          "option_text": "When Git automatically merges changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 3927,
+          "option_text": "When Git cannot automatically resolve differences in code",
+          "is_correct": true
+        },
+        {
+          "option_id": 3928,
+          "option_text": "When a branch is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 3929,
+          "option_text": "When a commit fails",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 717,
+      "subskill_id": 42,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "When do merge conflicts occur?",
+      "options": [
+        {
+          "option_id": 3930,
+          "option_text": "Only when pulling from remote",
+          "is_correct": false
+        },
+        {
+          "option_id": 3931,
+          "option_text": "Only when pushing to remote",
+          "is_correct": false
+        },
+        {
+          "option_id": 3932,
+          "option_text": "When changes are made to the same parts of the same file",
+          "is_correct": true
+        },
+        {
+          "option_id": 3933,
+          "option_text": "When committing changes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 718,
+      "subskill_id": 42,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How does Git indicate a merge conflict?",
+      "options": [
+        {
+          "option_id": 3934,
+          "option_text": "By marking the conflicted areas in files with special markers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3935,
+          "option_text": "By sending an email",
+          "is_correct": false
+        },
+        {
+          "option_id": 3936,
+          "option_text": "By deleting the file",
+          "is_correct": false
+        },
+        {
+          "option_id": 3937,
+          "option_text": "By creating a new branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 719,
+      "subskill_id": 42,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are conflict markers in Git?",
+      "options": [
+        {
+          "option_id": 3938,
+          "option_text": "<<<<<<<, =======, >>>>>>> markers in conflicted files",
+          "is_correct": true
+        },
+        {
+          "option_id": 3939,
+          "option_text": "Red flags in the UI",
+          "is_correct": false
+        },
+        {
+          "option_id": 3940,
+          "option_text": "Error messages in the console",
+          "is_correct": false
+        },
+        {
+          "option_id": 3941,
+          "option_text": "Branch names",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 720,
+      "subskill_id": 42,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the first step in resolving a merge conflict?",
+      "options": [
+        {
+          "option_id": 3942,
+          "option_text": "Delete the file",
+          "is_correct": false
+        },
+        {
+          "option_id": 3943,
+          "option_text": "Identify the conflicted files",
+          "is_correct": true
+        },
+        {
+          "option_id": 3944,
+          "option_text": "Push to remote",
+          "is_correct": false
+        },
+        {
+          "option_id": 3945,
+          "option_text": "Create a new branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 721,
+      "subskill_id": 43,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Git workflow?",
+      "options": [
+        {
+          "option_id": 3946,
+          "option_text": "The speed of Git operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 3947,
+          "option_text": "The Git installation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 3948,
+          "option_text": "A recommended pattern for using Git effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 3949,
+          "option_text": "A Git command",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 722,
+      "subskill_id": 43,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the basic Git workflow with local and remote repositories?",
+      "options": [
+        {
+          "option_id": 3950,
+          "option_text": "Clone, commit, push, pull",
+          "is_correct": true
+        },
+        {
+          "option_id": 3951,
+          "option_text": "Install, configure, run",
+          "is_correct": false
+        },
+        {
+          "option_id": 3952,
+          "option_text": "Create, delete, move",
+          "is_correct": false
+        },
+        {
+          "option_id": 3953,
+          "option_text": "Branch, merge, tag",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 723,
+      "subskill_id": 43,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does git status show?",
+      "options": [
+        {
+          "option_id": 3954,
+          "option_text": "The commit history",
+          "is_correct": false
+        },
+        {
+          "option_id": 3955,
+          "option_text": "The remote repository URL",
+          "is_correct": false
+        },
+        {
+          "option_id": 3956,
+          "option_text": "The Git version",
+          "is_correct": false
+        },
+        {
+          "option_id": 3957,
+          "option_text": "The state of the working directory and staging area",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 724,
+      "subskill_id": 43,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between working directory, staging area, and repository?",
+      "options": [
+        {
+          "option_id": 3958,
+          "option_text": "They are all the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3959,
+          "option_text": "Working directory is where files are edited, staging area prepares commits, repository stores commits",
+          "is_correct": true
+        },
+        {
+          "option_id": 3960,
+          "option_text": "Repository is where files are edited, staging area stores commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 3961,
+          "option_text": "Staging area is where files are edited, repository prepares commits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 725,
+      "subskill_id": 43,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What command is used to save changes to the local repository?",
+      "options": [
+        {
+          "option_id": 3962,
+          "option_text": "git save",
+          "is_correct": false
+        },
+        {
+          "option_id": 3963,
+          "option_text": "git store",
+          "is_correct": false
+        },
+        {
+          "option_id": 3964,
+          "option_text": "git push",
+          "is_correct": false
+        },
+        {
+          "option_id": 3965,
+          "option_text": "git commit",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 726,
+      "subskill_id": 39,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a branch and a tag?",
+      "options": [
+        {
+          "option_id": 3966,
+          "option_text": "Branches are read-only, tags are mutable",
+          "is_correct": false
+        },
+        {
+          "option_id": 3967,
+          "option_text": "Branches move with new commits, tags point to specific commits",
+          "is_correct": true
+        },
+        {
+          "option_id": 3968,
+          "option_text": "Tags are for remote, branches are for local",
+          "is_correct": false
+        },
+        {
+          "option_id": 3969,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 727,
+      "subskill_id": 39,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you delete a branch locally and remotely?",
+      "options": [
+        {
+          "option_id": 3970,
+          "option_text": "git branch -d <branch> locally, git push origin :<branch> remotely",
+          "is_correct": true
+        },
+        {
+          "option_id": 3971,
+          "option_text": "git delete <branch> for both",
+          "is_correct": false
+        },
+        {
+          "option_id": 3972,
+          "option_text": "git remove <branch> for both",
+          "is_correct": false
+        },
+        {
+          "option_id": 3973,
+          "option_text": "git branch -D <branch> only works remotely",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 728,
+      "subskill_id": 39,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a tracking branch?",
+      "options": [
+        {
+          "option_id": 3974,
+          "option_text": "A branch that tracks user activity",
+          "is_correct": false
+        },
+        {
+          "option_id": 3975,
+          "option_text": "A branch that cannot be deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 3976,
+          "option_text": "A local branch that is linked to a remote branch",
+          "is_correct": true
+        },
+        {
+          "option_id": 3977,
+          "option_text": "A branch that tracks issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 729,
+      "subskill_id": 39,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you rename a branch?",
+      "options": [
+        {
+          "option_id": 3978,
+          "option_text": "git branch -m <old-name> <new-name>",
+          "is_correct": true
+        },
+        {
+          "option_id": 3979,
+          "option_text": "git rename <old-name> <new-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3980,
+          "option_text": "git branch --rename <old-name> <new-name>",
+          "is_correct": false
+        },
+        {
+          "option_id": 3981,
+          "option_text": "git mv <old-name> <new-name>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 730,
+      "subskill_id": 39,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between git branch and git checkout -b?",
+      "options": [
+        {
+          "option_id": 3982,
+          "option_text": "git branch creates and switches, git checkout -b only creates",
+          "is_correct": false
+        },
+        {
+          "option_id": 3983,
+          "option_text": "git branch creates a branch, git checkout -b creates and switches to it",
+          "is_correct": true
+        },
+        {
+          "option_id": 3984,
+          "option_text": "They are identical commands",
+          "is_correct": false
+        },
+        {
+          "option_id": 3985,
+          "option_text": "git checkout -b only works on remote branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 731,
+      "subskill_id": 40,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a three-way merge?",
+      "options": [
+        {
+          "option_id": 3986,
+          "option_text": "Merging three branches at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 3987,
+          "option_text": "A merge with three commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 3988,
+          "option_text": "A merge that creates three commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 3989,
+          "option_text": "A merge using two branch tips and their common ancestor",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 732,
+      "subskill_id": 40,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between git merge and git rebase?",
+      "options": [
+        {
+          "option_id": 3990,
+          "option_text": "Merge rewrites history, rebase preserves it",
+          "is_correct": false
+        },
+        {
+          "option_id": 3991,
+          "option_text": "They are the same operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3992,
+          "option_text": "Merge creates a merge commit, rebase replays commits linearly",
+          "is_correct": true
+        },
+        {
+          "option_id": 3993,
+          "option_text": "Rebase is for local, merge is for remote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 733,
+      "subskill_id": 40,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a merge commit?",
+      "options": [
+        {
+          "option_id": 3994,
+          "option_text": "A special commit with two parent commits",
+          "is_correct": true
+        },
+        {
+          "option_id": 3995,
+          "option_text": "A commit that merges two files",
+          "is_correct": false
+        },
+        {
+          "option_id": 3996,
+          "option_text": "A commit that deletes a branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 3997,
+          "option_text": "The first commit in a repository",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 734,
+      "subskill_id": 40,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you abort a merge?",
+      "options": [
+        {
+          "option_id": 3998,
+          "option_text": "git cancel-merge",
+          "is_correct": false
+        },
+        {
+          "option_id": 3999,
+          "option_text": "git merge --abort",
+          "is_correct": true
+        },
+        {
+          "option_id": 4000,
+          "option_text": "git merge --stop",
+          "is_correct": false
+        },
+        {
+          "option_id": 4001,
+          "option_text": "git reset --hard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 735,
+      "subskill_id": 40,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the --no-ff flag in git merge?",
+      "options": [
+        {
+          "option_id": 4002,
+          "option_text": "It forces a fast-forward merge",
+          "is_correct": false
+        },
+        {
+          "option_id": 4003,
+          "option_text": "It prevents merging",
+          "is_correct": false
+        },
+        {
+          "option_id": 4004,
+          "option_text": "It deletes the branch after merge",
+          "is_correct": false
+        },
+        {
+          "option_id": 4005,
+          "option_text": "It creates a merge commit even if fast-forward is possible",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 736,
+      "subskill_id": 41,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the code review process in pull requests?",
+      "options": [
+        {
+          "option_id": 4006,
+          "option_text": "Automated merging without review",
+          "is_correct": false
+        },
+        {
+          "option_id": 4007,
+          "option_text": "Only the author reviews the code",
+          "is_correct": false
+        },
+        {
+          "option_id": 4008,
+          "option_text": "Team members review, comment, and approve changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 4009,
+          "option_text": "Code review happens after merging",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 737,
+      "subskill_id": 41,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you request changes in a pull request?",
+      "options": [
+        {
+          "option_id": 4010,
+          "option_text": "By leaving comments and requesting changes in the review",
+          "is_correct": true
+        },
+        {
+          "option_id": 4011,
+          "option_text": "By deleting the pull request",
+          "is_correct": false
+        },
+        {
+          "option_id": 4012,
+          "option_text": "By creating a new branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4013,
+          "option_text": "By ignoring the pull request",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 738,
+      "subskill_id": 41,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a draft pull request?",
+      "options": [
+        {
+          "option_id": 4014,
+          "option_text": "A pull request that cannot be merged",
+          "is_correct": false
+        },
+        {
+          "option_id": 4015,
+          "option_text": "A pull request marked as work in progress, not ready for review",
+          "is_correct": true
+        },
+        {
+          "option_id": 4016,
+          "option_text": "A pull request that is automatically approved",
+          "is_correct": false
+        },
+        {
+          "option_id": 4017,
+          "option_text": "A pull request with no changes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 739,
+      "subskill_id": 41,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you update a pull request with new commits?",
+      "options": [
+        {
+          "option_id": 4018,
+          "option_text": "Create a new pull request",
+          "is_correct": false
+        },
+        {
+          "option_id": 4019,
+          "option_text": "Delete and recreate the pull request",
+          "is_correct": false
+        },
+        {
+          "option_id": 4020,
+          "option_text": "Ask the maintainer to update it",
+          "is_correct": false
+        },
+        {
+          "option_id": 4021,
+          "option_text": "Push new commits to the same branch, they appear automatically",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 740,
+      "subskill_id": 41,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between forking and branching in pull requests?",
+      "options": [
+        {
+          "option_id": 4022,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4023,
+          "option_text": "Forking creates branches, branching creates forks",
+          "is_correct": false
+        },
+        {
+          "option_id": 4024,
+          "option_text": "Forking copies the entire repository, branching creates pointers within same repo",
+          "is_correct": true
+        },
+        {
+          "option_id": 4025,
+          "option_text": "Branching is only for external contributors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 741,
+      "subskill_id": 42,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you resolve a merge conflict manually?",
+      "options": [
+        {
+          "option_id": 4026,
+          "option_text": "Edit conflicted files, remove markers, then git add and git commit",
+          "is_correct": true
+        },
+        {
+          "option_id": 4027,
+          "option_text": "Delete the file and recreate it",
+          "is_correct": false
+        },
+        {
+          "option_id": 4028,
+          "option_text": "Run git fix-conflict command",
+          "is_correct": false
+        },
+        {
+          "option_id": 4029,
+          "option_text": "Create a new branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 742,
+      "subskill_id": 42,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What tools can help resolve merge conflicts?",
+      "options": [
+        {
+          "option_id": 4030,
+          "option_text": "Only manual editing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4031,
+          "option_text": "git mergetool, IDE integrations, and visual diff tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 4032,
+          "option_text": "Only command line",
+          "is_correct": false
+        },
+        {
+          "option_id": 4033,
+          "option_text": "No tools exist",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 743,
+      "subskill_id": 42,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you abort a merge when conflicts occur?",
+      "options": [
+        {
+          "option_id": 4034,
+          "option_text": "git reset --hard",
+          "is_correct": false
+        },
+        {
+          "option_id": 4035,
+          "option_text": "git merge --abort",
+          "is_correct": true
+        },
+        {
+          "option_id": 4036,
+          "option_text": "git rebase --skip",
+          "is_correct": false
+        },
+        {
+          "option_id": 4037,
+          "option_text": "git checkout --ours",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 744,
+      "subskill_id": 42,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between ours and theirs in conflict resolution?",
+      "options": [
+        {
+          "option_id": 4038,
+          "option_text": "Ours is the incoming branch, theirs is the current branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4039,
+          "option_text": "There is no difference",
+          "is_correct": false
+        },
+        {
+          "option_id": 4040,
+          "option_text": "Ours is current branch, theirs is the branch being merged in",
+          "is_correct": true
+        },
+        {
+          "option_id": 4041,
+          "option_text": "Ours is for files, theirs is for commits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 745,
+      "subskill_id": 42,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you mark a conflict as resolved?",
+      "options": [
+        {
+          "option_id": 4042,
+          "option_text": "After editing, use git add on the file",
+          "is_correct": true
+        },
+        {
+          "option_id": 4043,
+          "option_text": "git resolve <file>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4044,
+          "option_text": "git conflict --done",
+          "is_correct": false
+        },
+        {
+          "option_id": 4045,
+          "option_text": "Delete the file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 746,
+      "subskill_id": 43,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the GitFlow workflow?",
+      "options": [
+        {
+          "option_id": 4046,
+          "option_text": "A workflow with only one branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4047,
+          "option_text": "A branching model with main, develop, feature, release, and hotfix branches",
+          "is_correct": true
+        },
+        {
+          "option_id": 4048,
+          "option_text": "A workflow that uses only tags",
+          "is_correct": false
+        },
+        {
+          "option_id": 4049,
+          "option_text": "A Git command",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 747,
+      "subskill_id": 43,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is trunk-based development?",
+      "options": [
+        {
+          "option_id": 4050,
+          "option_text": "Development on multiple long-lived branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4051,
+          "option_text": "A workflow with no main branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4052,
+          "option_text": "Development on remote branches only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4053,
+          "option_text": "Developers work on short-lived branches and merge frequently to main",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 748,
+      "subskill_id": 43,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the GitHub Flow workflow?",
+      "options": [
+        {
+          "option_id": 4054,
+          "option_text": "A workflow with 10 different branch types",
+          "is_correct": false
+        },
+        {
+          "option_id": 4055,
+          "option_text": "A workflow that requires release branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4056,
+          "option_text": "Simple workflow: main branch and feature branches with pull requests",
+          "is_correct": true
+        },
+        {
+          "option_id": 4057,
+          "option_text": "A workflow with no pull requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 749,
+      "subskill_id": 43,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between centralized and feature branch workflows?",
+      "options": [
+        {
+          "option_id": 4058,
+          "option_text": "Centralized: everyone commits to main; feature branch: changes in isolated branches",
+          "is_correct": true
+        },
+        {
+          "option_id": 4059,
+          "option_text": "Feature branch: everyone commits to main; centralized: isolated branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4060,
+          "option_text": "They are the same workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 4061,
+          "option_text": "Centralized is for open source, feature branch is for private repos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 750,
+      "subskill_id": 43,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fork-based workflow in open source?",
+      "options": [
+        {
+          "option_id": 4062,
+          "option_text": "Contributors commit directly to main repository",
+          "is_correct": false
+        },
+        {
+          "option_id": 4063,
+          "option_text": "No pull requests are used",
+          "is_correct": false
+        },
+        {
+          "option_id": 4064,
+          "option_text": "Only maintainers can fork",
+          "is_correct": false
+        },
+        {
+          "option_id": 4065,
+          "option_text": "Contributors fork repository, make changes, and submit pull requests",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 751,
+      "subskill_id": 39,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a remote-tracking branch?",
+      "options": [
+        {
+          "option_id": 4066,
+          "option_text": "A branch that tracks user activity on remote",
+          "is_correct": false
+        },
+        {
+          "option_id": 4067,
+          "option_text": "A branch that cannot be pushed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4068,
+          "option_text": "A local reference to the state of a remote branch",
+          "is_correct": true
+        },
+        {
+          "option_id": 4069,
+          "option_text": "A branch stored only on remote servers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 752,
+      "subskill_id": 39,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prune stale remote-tracking branches?",
+      "options": [
+        {
+          "option_id": 4070,
+          "option_text": "git remote prune origin or git fetch --prune",
+          "is_correct": true
+        },
+        {
+          "option_id": 4071,
+          "option_text": "git branch --delete-stale",
+          "is_correct": false
+        },
+        {
+          "option_id": 4072,
+          "option_text": "git prune-remote",
+          "is_correct": false
+        },
+        {
+          "option_id": 4073,
+          "option_text": "Stale branches are automatically removed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 753,
+      "subskill_id": 39,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a local branch and a remote branch?",
+      "options": [
+        {
+          "option_id": 4074,
+          "option_text": "Local branches exist only on your machine, remote branches exist on the server",
+          "is_correct": true
+        },
+        {
+          "option_id": 4075,
+          "option_text": "Remote branches exist only on your machine, local branches exist on the server",
+          "is_correct": false
+        },
+        {
+          "option_id": 4076,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 4077,
+          "option_text": "Local branches cannot be pushed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 754,
+      "subskill_id": 39,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you set the upstream branch for a local branch?",
+      "options": [
+        {
+          "option_id": 4078,
+          "option_text": "git upstream <branch>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4079,
+          "option_text": "git branch -u <remote>/<branch> or git push -u <remote> <branch>",
+          "is_correct": true
+        },
+        {
+          "option_id": 4080,
+          "option_text": "git set-upstream <branch>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4081,
+          "option_text": "Upstream is set automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 755,
+      "subskill_id": 39,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is orphan branch and when would you use it?",
+      "options": [
+        {
+          "option_id": 4082,
+          "option_text": "A branch with no commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 4083,
+          "option_text": "A branch that no one uses",
+          "is_correct": false
+        },
+        {
+          "option_id": 4084,
+          "option_text": "A branch with no parent, useful for documentation or gh-pages",
+          "is_correct": true
+        },
+        {
+          "option_id": 4085,
+          "option_text": "A branch that cannot be merged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 756,
+      "subskill_id": 40,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a recursive merge strategy?",
+      "options": [
+        {
+          "option_id": 4086,
+          "option_text": "The default merge strategy for two branches",
+          "is_correct": true
+        },
+        {
+          "option_id": 4087,
+          "option_text": "A strategy that merges recursively through folders",
+          "is_correct": false
+        },
+        {
+          "option_id": 4088,
+          "option_text": "A strategy for merging more than two branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4089,
+          "option_text": "A strategy that never creates conflicts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 757,
+      "subskill_id": 40,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you perform a squash merge?",
+      "options": [
+        {
+          "option_id": 4090,
+          "option_text": "git merge --squash <branch> then git commit",
+          "is_correct": true
+        },
+        {
+          "option_id": 4091,
+          "option_text": "git squash <branch>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4092,
+          "option_text": "git merge --compress <branch>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4093,
+          "option_text": "git merge --flatten <branch>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 758,
+      "subskill_id": 40,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between merge and cherry-pick?",
+      "options": [
+        {
+          "option_id": 4094,
+          "option_text": "Cherry-pick merges entire branches, merge picks specific commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 4095,
+          "option_text": "Merge integrates entire branches, cherry-pick applies specific commits",
+          "is_correct": true
+        },
+        {
+          "option_id": 4096,
+          "option_text": "They are the same operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4097,
+          "option_text": "Cherry-pick is for remote, merge is for local",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 759,
+      "subskill_id": 40,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you merge only specific commits from another branch?",
+      "options": [
+        {
+          "option_id": 4098,
+          "option_text": "git merge --commits <hash>",
+          "is_correct": false
+        },
+        {
+          "option_id": 4099,
+          "option_text": "This is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 4100,
+          "option_text": "Use git cherry-pick <commit-hash> for each commit",
+          "is_correct": true
+        },
+        {
+          "option_id": 4101,
+          "option_text": "git merge --select <hash>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 760,
+      "subskill_id": 40,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is octopus merge in Git?",
+      "options": [
+        {
+          "option_id": 4102,
+          "option_text": "A merge of multiple branches at once",
+          "is_correct": true
+        },
+        {
+          "option_id": 4103,
+          "option_text": "A merge with eight branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4104,
+          "option_text": "A merge strategy for binary files",
+          "is_correct": false
+        },
+        {
+          "option_id": 4105,
+          "option_text": "A merge that creates eight commits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 761,
+      "subskill_id": 41,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you automate checks in pull requests?",
+      "options": [
+        {
+          "option_id": 4106,
+          "option_text": "Using CI/CD tools like GitHub Actions, Jenkins, or GitLab CI",
+          "is_correct": false
+        },
+        {
+          "option_id": 4107,
+          "option_text": "Running tests automatically on PR creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4108,
+          "option_text": "Requiring status checks to pass before merging",
+          "is_correct": false
+        },
+        {
+          "option_id": 4109,
+          "option_text": "All of the above automation methods",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 762,
+      "subskill_id": 41,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are pull request templates and why use them?",
+      "options": [
+        {
+          "option_id": 4110,
+          "option_text": "Templates that automatically create branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4111,
+          "option_text": "Pre-defined formats for PR descriptions to ensure consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 4112,
+          "option_text": "Templates for code in pull requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4113,
+          "option_text": "Templates for commit messages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 763,
+      "subskill_id": 41,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you link issues to pull requests?",
+      "options": [
+        {
+          "option_id": 4114,
+          "option_text": "By mentioning issue numbers in PR description with keywords",
+          "is_correct": true
+        },
+        {
+          "option_id": 4115,
+          "option_text": "Issues cannot be linked to PRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4116,
+          "option_text": "By creating a new issue in the PR",
+          "is_correct": false
+        },
+        {
+          "option_id": 4117,
+          "option_text": "By emailing the issue tracker",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 764,
+      "subskill_id": 41,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between merge commit, squash, and rebase options in PRs?",
+      "options": [
+        {
+          "option_id": 4118,
+          "option_text": "Merge commit preserves all commits, squash combines them, rebase replays linearly",
+          "is_correct": true
+        },
+        {
+          "option_id": 4119,
+          "option_text": "They are all the same merge strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 4120,
+          "option_text": "Squash preserves history, merge commit flattens it",
+          "is_correct": false
+        },
+        {
+          "option_id": 4121,
+          "option_text": "Rebase creates a merge commit, squash preserves commits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 765,
+      "subskill_id": 41,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you protect branches in pull request workflows?",
+      "options": [
+        {
+          "option_id": 4122,
+          "option_text": "Require pull request reviews before merging",
+          "is_correct": false
+        },
+        {
+          "option_id": 4123,
+          "option_text": "Require status checks to pass",
+          "is_correct": false
+        },
+        {
+          "option_id": 4124,
+          "option_text": "Require linear history or signed commits",
+          "is_correct": false
+        },
+        {
+          "option_id": 4125,
+          "option_text": "All of the above branch protection rules",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 766,
+      "subskill_id": 42,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is git rerere and how does it help with conflicts?",
+      "options": [
+        {
+          "option_id": 4126,
+          "option_text": "A tool for deleting conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 4127,
+          "option_text": "Reuse recorded resolution - remembers how you resolved conflicts",
+          "is_correct": true
+        },
+        {
+          "option_id": 4128,
+          "option_text": "A conflict visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 4129,
+          "option_text": "A merge strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 767,
+      "subskill_id": 42,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you resolve conflicts during a rebase?",
+      "options": [
+        {
+          "option_id": 4130,
+          "option_text": "Same as merge conflicts, but with git rebase --continue after resolving",
+          "is_correct": true
+        },
+        {
+          "option_id": 4131,
+          "option_text": "Conflicts cannot occur during rebase",
+          "is_correct": false
+        },
+        {
+          "option_id": 4132,
+          "option_text": "Use git merge --continue instead",
+          "is_correct": false
+        },
+        {
+          "option_id": 4133,
+          "option_text": "Abort and restart the rebase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 768,
+      "subskill_id": 42,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a conflict in binary files and how do you resolve it?",
+      "options": [
+        {
+          "option_id": 4134,
+          "option_text": "Choose one version since automatic merging is not possible",
+          "is_correct": true
+        },
+        {
+          "option_id": 4135,
+          "option_text": "Edit the binary file manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 4136,
+          "option_text": "Binary files never conflict",
+          "is_correct": false
+        },
+        {
+          "option_id": 4137,
+          "option_text": "Use git merge-tool for binaries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 769,
+      "subskill_id": 42,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use git mergetool to resolve conflicts?",
+      "options": [
+        {
+          "option_id": 4138,
+          "option_text": "Configure a tool, then run git mergetool to open it",
+          "is_correct": true
+        },
+        {
+          "option_id": 4139,
+          "option_text": "Mergetool is not used for conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 4140,
+          "option_text": "Git automatically opens mergetool",
+          "is_correct": false
+        },
+        {
+          "option_id": 4141,
+          "option_text": "Mergetool only works for text files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 770,
+      "subskill_id": 42,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between conflict resolution in merge vs rebase?",
+      "options": [
+        {
+          "option_id": 4142,
+          "option_text": "Resolution is completely different",
+          "is_correct": false
+        },
+        {
+          "option_id": 4143,
+          "option_text": "Same process but rebase resolves conflicts one commit at a time",
+          "is_correct": true
+        },
+        {
+          "option_id": 4144,
+          "option_text": "Merge resolves per commit, rebase resolves all at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 4145,
+          "option_text": "Rebase has no conflicts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 771,
+      "subskill_id": 43,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the GitLab Flow workflow?",
+      "options": [
+        {
+          "option_id": 4146,
+          "option_text": "A workflow with only main branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4147,
+          "option_text": "A workflow based on GitFlow",
+          "is_correct": false
+        },
+        {
+          "option_id": 4148,
+          "option_text": "Environment branches and feature branches with issue tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 4149,
+          "option_text": "A workflow without branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 772,
+      "subskill_id": 43,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the advantages of trunk-based development?",
+      "options": [
+        {
+          "option_id": 4150,
+          "option_text": "Fewer merge conflicts, continuous integration, faster deployments",
+          "is_correct": true
+        },
+        {
+          "option_id": 4151,
+          "option_text": "Long-lived branches, complex merges",
+          "is_correct": false
+        },
+        {
+          "option_id": 4152,
+          "option_text": "No need for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4153,
+          "option_text": "Requires release branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 773,
+      "subskill_id": 43,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle hotfixes in GitFlow?",
+      "options": [
+        {
+          "option_id": 4154,
+          "option_text": "Create hotfix branch from main, fix, merge to both main and develop",
+          "is_correct": true
+        },
+        {
+          "option_id": 4155,
+          "option_text": "Fix directly on main",
+          "is_correct": false
+        },
+        {
+          "option_id": 4156,
+          "option_text": "Create feature branch from develop",
+          "is_correct": false
+        },
+        {
+          "option_id": 4157,
+          "option_text": "Hotfixes are not handled in GitFlow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 774,
+      "subskill_id": 43,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the release branch strategy in GitFlow?",
+      "options": [
+        {
+          "option_id": 4158,
+          "option_text": "Release branches are created from main",
+          "is_correct": false
+        },
+        {
+          "option_id": 4159,
+          "option_text": "Create from develop for final testing and bug fixes before release",
+          "is_correct": true
+        },
+        {
+          "option_id": 4160,
+          "option_text": "Release branches are never used",
+          "is_correct": false
+        },
+        {
+          "option_id": 4161,
+          "option_text": "Release branches are merged directly to feature branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 775,
+      "subskill_id": 43,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you choose the right Git workflow for a team?",
+      "options": [
+        {
+          "option_id": 4162,
+          "option_text": "Consider team size, release frequency, and deployment process",
+          "is_correct": true
+        },
+        {
+          "option_id": 4163,
+          "option_text": "Always use GitFlow regardless of team",
+          "is_correct": false
+        },
+        {
+          "option_id": 4164,
+          "option_text": "Always use trunk-based development",
+          "is_correct": false
+        },
+        {
+          "option_id": 4165,
+          "option_text": "The workflow does not matter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 776,
+      "subskill_id": 39,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you recover a deleted branch?",
+      "options": [
+        {
+          "option_id": 4166,
+          "option_text": "Deleted branches cannot be recovered",
+          "is_correct": false
+        },
+        {
+          "option_id": 4167,
+          "option_text": "Use git reflog to find the commit hash and create a new branch",
+          "is_correct": true
+        },
+        {
+          "option_id": 4168,
+          "option_text": "Ask GitHub support to restore it",
+          "is_correct": false
+        },
+        {
+          "option_id": 4169,
+          "option_text": "Reclone the repository",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 777,
+      "subskill_id": 39,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is git reflog and how does it help with branch recovery?",
+      "options": [
+        {
+          "option_id": 4170,
+          "option_text": "A log of all commits in the repository",
+          "is_correct": false
+        },
+        {
+          "option_id": 4171,
+          "option_text": "A log of remote branch changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4172,
+          "option_text": "A tool for deleting branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4173,
+          "option_text": "A log of reference updates, useful for recovering lost commits",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 778,
+      "subskill_id": 39,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you manage branches in a monorepo?",
+      "options": [
+        {
+          "option_id": 4174,
+          "option_text": "Use a single branch for everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 4175,
+          "option_text": "Branches cannot be used in monorepos",
+          "is_correct": false
+        },
+        {
+          "option_id": 4176,
+          "option_text": "Use branch policies and CI to test only changed projects",
+          "is_correct": true
+        },
+        {
+          "option_id": 4177,
+          "option_text": "Create a separate repo for each branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 779,
+      "subskill_id": 39,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between git branch -d and git branch -D?",
+      "options": [
+        {
+          "option_id": 4178,
+          "option_text": "-d deletes if merged, -D forces deletion regardless of merge status",
+          "is_correct": true
+        },
+        {
+          "option_id": 4179,
+          "option_text": "-D deletes if merged, -d forces deletion",
+          "is_correct": false
+        },
+        {
+          "option_id": 4180,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 4181,
+          "option_text": "-d is for local, -D is for remote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 780,
+      "subskill_id": 39,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a branch from a specific commit?",
+      "options": [
+        {
+          "option_id": 4182,
+          "option_text": "git branch <branch-name> without specifying commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 4183,
+          "option_text": "git branch <branch-name> <commit-hash>",
+          "is_correct": true
+        },
+        {
+          "option_id": 4184,
+          "option_text": "git checkout -b <branch-name> without commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 4185,
+          "option_text": "This is not possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 781,
+      "subskill_id": 40,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you undo a merge that has already been pushed?",
+      "options": [
+        {
+          "option_id": 4186,
+          "option_text": "Use git merge --undo",
+          "is_correct": false
+        },
+        {
+          "option_id": 4187,
+          "option_text": "Delete the remote branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4188,
+          "option_text": "Push a revert commit or use git reset with force push (with caution)",
+          "is_correct": true
+        },
+        {
+          "option_id": 4189,
+          "option_text": "Merges cannot be undone after push",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 782,
+      "subskill_id": 40,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the ours merge strategy and when would you use it?",
+      "options": [
+        {
+          "option_id": 4190,
+          "option_text": "A strategy that always takes their changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4191,
+          "option_text": "A strategy that creates a new merge commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 4192,
+          "option_text": "A strategy that resolves conflicts by keeping our version",
+          "is_correct": true
+        },
+        {
+          "option_id": 4193,
+          "option_text": "A strategy for merging three branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 783,
+      "subskill_id": 40,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you merge two unrelated repositories?",
+      "options": [
+        {
+          "option_id": 4194,
+          "option_text": "Use git merge --allow-unrelated-histories",
+          "is_correct": true
+        },
+        {
+          "option_id": 4195,
+          "option_text": "Unrelated repositories cannot be merged",
+          "is_correct": false
+        },
+        {
+          "option_id": 4196,
+          "option_text": "Use git rebase instead",
+          "is_correct": false
+        },
+        {
+          "option_id": 4197,
+          "option_text": "Create a patch and apply it",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 784,
+      "subskill_id": 40,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is subtree merging and how does it differ from submodules?",
+      "options": [
+        {
+          "option_id": 4198,
+          "option_text": "Subtree and submodules are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 4199,
+          "option_text": "Subtree incorporates external repo as subfolder, submodules are references",
+          "is_correct": true
+        },
+        {
+          "option_id": 4200,
+          "option_text": "Submodules merge code, subtree links to external repos",
+          "is_correct": false
+        },
+        {
+          "option_id": 4201,
+          "option_text": "Subtree is for local, submodules are for remote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 785,
+      "subskill_id": 40,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle large-scale merges across many files?",
+      "options": [
+        {
+          "option_id": 4202,
+          "option_text": "Merge everything at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 4203,
+          "option_text": "Use incremental merges and thorough testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 4204,
+          "option_text": "Avoid merging altogether",
+          "is_correct": false
+        },
+        {
+          "option_id": 4205,
+          "option_text": "Use automated merge tools with conflict resolution strategies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 786,
+      "subskill_id": 41,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a multi-stage approval process for PRs?",
+      "options": [
+        {
+          "option_id": 4206,
+          "option_text": "Only one approval is always enough",
+          "is_correct": false
+        },
+        {
+          "option_id": 4207,
+          "option_text": "Approval processes cannot be customized",
+          "is_correct": false
+        },
+        {
+          "option_id": 4208,
+          "option_text": "Use branch protection rules requiring multiple reviewers",
+          "is_correct": true
+        },
+        {
+          "option_id": 4209,
+          "option_text": "Approvals are not needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 787,
+      "subskill_id": 41,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security considerations for pull request workflows?",
+      "options": [
+        {
+          "option_id": 4210,
+          "option_text": "Prevent secrets exposure, require signed commits, limit permissions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4211,
+          "option_text": "No security considerations needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4212,
+          "option_text": "Only private repositories need security",
+          "is_correct": false
+        },
+        {
+          "option_id": 4213,
+          "option_text": "Security is handled automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 788,
+      "subskill_id": 41,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate PR labeling based on changes?",
+      "options": [
+        {
+          "option_id": 4214,
+          "option_text": "Manual labeling only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4215,
+          "option_text": "Use GitHub Actions or CI scripts to analyze changed files",
+          "is_correct": true
+        },
+        {
+          "option_id": 4216,
+          "option_text": "Labels cannot be automated",
+          "is_correct": false
+        },
+        {
+          "option_id": 4217,
+          "option_text": "Ask users to label PRs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 789,
+      "subskill_id": 41,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stack of pull requests and how do you manage them?",
+      "options": [
+        {
+          "option_id": 4218,
+          "option_text": "PRs cannot be stacked",
+          "is_correct": false
+        },
+        {
+          "option_id": 4219,
+          "option_text": "Stacked PRs are managed by creating dependent branches",
+          "is_correct": true
+        },
+        {
+          "option_id": 4220,
+          "option_text": "Use tools like gh stack for managing dependent PRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4221,
+          "option_text": "Merge all PRs at once",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 790,
+      "subskill_id": 41,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle large PRs that are difficult to review?",
+      "options": [
+        {
+          "option_id": 4222,
+          "option_text": "Merge without review",
+          "is_correct": false
+        },
+        {
+          "option_id": 4223,
+          "option_text": "Ignore large PRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4224,
+          "option_text": "Break into smaller PRs, use pair review, or focus on critical files",
+          "is_correct": true
+        },
+        {
+          "option_id": 4225,
+          "option_text": "Ask one person to review everything",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 791,
+      "subskill_id": 42,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you resolve conflicts programmatically in CI/CD?",
+      "options": [
+        {
+          "option_id": 4226,
+          "option_text": "Automated conflict resolution is not recommended",
+          "is_correct": false
+        },
+        {
+          "option_id": 4227,
+          "option_text": "Use git merge --abort in CI",
+          "is_correct": false
+        },
+        {
+          "option_id": 4228,
+          "option_text": "Script conflict resolution with specific strategies for known patterns",
+          "is_correct": true
+        },
+        {
+          "option_id": 4229,
+          "option_text": "Conflicts cannot be resolved in CI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 792,
+      "subskill_id": 42,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the strategies for minimizing merge conflicts in a team?",
+      "options": [
+        {
+          "option_id": 4230,
+          "option_text": "Communicate changes, use smaller PRs, rebase frequently",
+          "is_correct": false
+        },
+        {
+          "option_id": 4231,
+          "option_text": "Follow trunk-based development",
+          "is_correct": false
+        },
+        {
+          "option_id": 4232,
+          "option_text": "Use code ownership patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 4233,
+          "option_text": "All of the above conflict minimization strategies",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 793,
+      "subskill_id": 42,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle conflicts in git hooks?",
+      "options": [
+        {
+          "option_id": 4234,
+          "option_text": "Hooks never cause conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 4235,
+          "option_text": "Delete the hooks",
+          "is_correct": false
+        },
+        {
+          "option_id": 4236,
+          "option_text": "Manually merge hook configurations or use conditional logic",
+          "is_correct": true
+        },
+        {
+          "option_id": 4237,
+          "option_text": "Hooks are automatically merged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 794,
+      "subskill_id": 42,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of git attributes in conflict resolution?",
+      "options": [
+        {
+          "option_id": 4238,
+          "option_text": "Git attributes have no role in conflict resolution",
+          "is_correct": false
+        },
+        {
+          "option_id": 4239,
+          "option_text": "Define custom merge drivers for specific file types",
+          "is_correct": true
+        },
+        {
+          "option_id": 4240,
+          "option_text": "Git attributes cause conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 4241,
+          "option_text": "Attributes automatically resolve conflicts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 795,
+      "subskill_id": 42,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you resolve conflicts when rebasing a long-lived branch?",
+      "options": [
+        {
+          "option_id": 4242,
+          "option_text": "Rebase incrementally or use git rerere to remember resolutions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4243,
+          "option_text": "Avoid rebasing long-lived branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4244,
+          "option_text": "Merge instead of rebase",
+          "is_correct": false
+        },
+        {
+          "option_id": 4245,
+          "option_text": "Delete and recreate the branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 796,
+      "subskill_id": 43,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement GitOps with Git workflows?",
+      "options": [
+        {
+          "option_id": 4246,
+          "option_text": "Use Git as single source of truth for infrastructure",
+          "is_correct": false
+        },
+        {
+          "option_id": 4247,
+          "option_text": "Automate deployments from Git changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4248,
+          "option_text": "Use pull requests for infrastructure changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4249,
+          "option_text": "All of the above GitOps practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 797,
+      "subskill_id": 43,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the OneFlow Git workflow?",
+      "options": [
+        {
+          "option_id": 4250,
+          "option_text": "A workflow with only one branch",
+          "is_correct": false
+        },
+        {
+          "option_id": 4251,
+          "option_text": "A simpler alternative to GitFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 4252,
+          "option_text": "A workflow without branches",
+          "is_correct": false
+        },
+        {
+          "option_id": 4253,
+          "option_text": "A workflow with 10 branch types",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 798,
+      "subskill_id": 43,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale Git workflows for large teams?",
+      "options": [
+        {
+          "option_id": 4254,
+          "option_text": "Use the same workflow as small teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 4255,
+          "option_text": "Implement branch policies, code owners, and automated checks",
+          "is_correct": true
+        },
+        {
+          "option_id": 4256,
+          "option_text": "Avoid using Git for large teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 4257,
+          "option_text": "Use only one branch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 799,
+      "subskill_id": 43,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for managing Git repositories at enterprise scale?",
+      "options": [
+        {
+          "option_id": 4258,
+          "option_text": "Standardized workflows, access controls, and regular maintenance",
+          "is_correct": true
+        },
+        {
+          "option_id": 4259,
+          "option_text": "No standards needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4260,
+          "option_text": "Everyone can do whatever they want",
+          "is_correct": false
+        },
+        {
+          "option_id": 4261,
+          "option_text": "Never clean up old branches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 800,
+      "subskill_id": 43,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate Git workflows with CI/CD pipelines?",
+      "options": [
+        {
+          "option_id": 4262,
+          "option_text": "Run tests on branches and PRs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4263,
+          "option_text": "Deploy from specific branches automatically",
+          "is_correct": false
+        },
+        {
+          "option_id": 4264,
+          "option_text": "Use webhooks to trigger pipelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 4265,
+          "option_text": "All of the above integration methods",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

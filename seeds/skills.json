@@ -1,0 +1,1286 @@
+[
+  {
+    "skill_id": 1,
+    "skill_name": "Frontend Web Development",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: HTML, CSS, JavaScript, React, responsive design, browser APIs",
+    "subskills": [
+      {
+        "subskill_id": 1,
+        "subskill_name": "HTML"
+      },
+      {
+        "subskill_id": 2,
+        "subskill_name": "CSS"
+      },
+      {
+        "subskill_id": 3,
+        "subskill_name": "JavaScript"
+      },
+      {
+        "subskill_id": 4,
+        "subskill_name": "React"
+      },
+      {
+        "subskill_id": 5,
+        "subskill_name": "Responsive Design"
+      },
+      {
+        "subskill_id": 6,
+        "subskill_name": "Browser APIs"
+      }
+    ]
+  },
+  {
+    "skill_id": 2,
+    "skill_name": "Backend Development",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: REST APIs, Node.js/Python/Java, authentication, server logic",
+    "subskills": [
+      {
+        "subskill_id": 7,
+        "subskill_name": "REST APIs"
+      },
+      {
+        "subskill_id": 8,
+        "subskill_name": "Node.js"
+      },
+      {
+        "subskill_id": 9,
+        "subskill_name": "Python"
+      },
+      {
+        "subskill_id": 10,
+        "subskill_name": "Java"
+      },
+      {
+        "subskill_id": 11,
+        "subskill_name": "Authentication"
+      },
+      {
+        "subskill_id": 12,
+        "subskill_name": "Server Logic"
+      }
+    ]
+  },
+  {
+    "skill_id": 3,
+    "skill_name": "Database Management",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: SQL, NoSQL, schema design, indexing, query optimization",
+    "subskills": [
+      {
+        "subskill_id": 13,
+        "subskill_name": "SQL"
+      },
+      {
+        "subskill_id": 14,
+        "subskill_name": "NoSQL"
+      },
+      {
+        "subskill_id": 15,
+        "subskill_name": "Schema Design"
+      },
+      {
+        "subskill_id": 16,
+        "subskill_name": "Indexing"
+      },
+      {
+        "subskill_id": 17,
+        "subskill_name": "Query Optimization"
+      }
+    ]
+  },
+  {
+    "skill_id": 4,
+    "skill_name": "Mobile Development",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: React Native, Flutter, Android/iOS fundamentals, app lifecycle",
+    "subskills": [
+      {
+        "subskill_id": 18,
+        "subskill_name": "React Native"
+      },
+      {
+        "subskill_id": 19,
+        "subskill_name": "Flutter"
+      },
+      {
+        "subskill_id": 20,
+        "subskill_name": "Android Fundamentals"
+      },
+      {
+        "subskill_id": 21,
+        "subskill_name": "iOS Fundamentals"
+      },
+      {
+        "subskill_id": 22,
+        "subskill_name": "App Lifecycle"
+      }
+    ]
+  },
+  {
+    "skill_id": 5,
+    "skill_name": "DevOps & CI/CD",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: Docker, Kubernetes, GitHub Actions, deployment pipelines",
+    "subskills": [
+      {
+        "subskill_id": 23,
+        "subskill_name": "Docker"
+      },
+      {
+        "subskill_id": 24,
+        "subskill_name": "Kubernetes"
+      },
+      {
+        "subskill_id": 25,
+        "subskill_name": "GitHub Actions"
+      },
+      {
+        "subskill_id": 26,
+        "subskill_name": "Deployment Pipelines"
+      }
+    ]
+  },
+  {
+    "skill_id": 6,
+    "skill_name": "Cloud Computing",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: AWS/GCP/Azure services, IAM, storage, compute, networking",
+    "subskills": [
+      {
+        "subskill_id": 27,
+        "subskill_name": "AWS Services"
+      },
+      {
+        "subskill_id": 28,
+        "subskill_name": "GCP Services"
+      },
+      {
+        "subskill_id": 29,
+        "subskill_name": "Azure Services"
+      },
+      {
+        "subskill_id": 30,
+        "subskill_name": "IAM"
+      },
+      {
+        "subskill_id": 31,
+        "subskill_name": "Storage"
+      },
+      {
+        "subskill_id": 32,
+        "subskill_name": "Compute"
+      },
+      {
+        "subskill_id": 33,
+        "subskill_name": "Networking"
+      }
+    ]
+  },
+  {
+    "skill_id": 7,
+    "skill_name": "API Design & Integration",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: REST, GraphQL, Webhooks, API documentation, versioning",
+    "subskills": [
+      {
+        "subskill_id": 34,
+        "subskill_name": "REST"
+      },
+      {
+        "subskill_id": 35,
+        "subskill_name": "GraphQL"
+      },
+      {
+        "subskill_id": 36,
+        "subskill_name": "Webhooks"
+      },
+      {
+        "subskill_id": 37,
+        "subskill_name": "API Documentation"
+      },
+      {
+        "subskill_id": 38,
+        "subskill_name": "API Versioning"
+      }
+    ]
+  },
+  {
+    "skill_id": 8,
+    "skill_name": "Version Control (Git)",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: Branching, merging, pull requests, conflict resolution, Git workflows",
+    "subskills": [
+      {
+        "subskill_id": 39,
+        "subskill_name": "Branching"
+      },
+      {
+        "subskill_id": 40,
+        "subskill_name": "Merging"
+      },
+      {
+        "subskill_id": 41,
+        "subskill_name": "Pull Requests"
+      },
+      {
+        "subskill_id": 42,
+        "subskill_name": "Conflict Resolution"
+      },
+      {
+        "subskill_id": 43,
+        "subskill_name": "Git Workflows"
+      }
+    ]
+  },
+  {
+    "skill_id": 9,
+    "skill_name": "Software Architecture",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: Monolith vs microservices, design patterns, system design",
+    "subskills": [
+      {
+        "subskill_id": 44,
+        "subskill_name": "Monolith Architecture"
+      },
+      {
+        "subskill_id": 45,
+        "subskill_name": "Microservices"
+      },
+      {
+        "subskill_id": 46,
+        "subskill_name": "Design Patterns"
+      },
+      {
+        "subskill_id": 47,
+        "subskill_name": "System Design"
+      }
+    ]
+  },
+  {
+    "skill_id": 10,
+    "skill_name": "Testing & QA",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: Unit testing, integration testing, TDD, test frameworks",
+    "subskills": [
+      {
+        "subskill_id": 48,
+        "subskill_name": "Unit Testing"
+      },
+      {
+        "subskill_id": 49,
+        "subskill_name": "Integration Testing"
+      },
+      {
+        "subskill_id": 50,
+        "subskill_name": "TDD"
+      },
+      {
+        "subskill_id": 51,
+        "subskill_name": "Test Frameworks"
+      }
+    ]
+  },
+  {
+    "skill_id": 11,
+    "skill_name": "Cybersecurity Fundamentals",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: OWASP, encryption, authentication, common vulnerabilities",
+    "subskills": [
+      {
+        "subskill_id": 52,
+        "subskill_name": "OWASP"
+      },
+      {
+        "subskill_id": 53,
+        "subskill_name": "Encryption"
+      },
+      {
+        "subskill_id": 54,
+        "subskill_name": "Authentication"
+      },
+      {
+        "subskill_id": 55,
+        "subskill_name": "Common Vulnerabilities"
+      }
+    ]
+  },
+  {
+    "skill_id": 12,
+    "skill_name": "Blockchain Development",
+    "category": "Engineering and Development",
+    "skill_descr": "Tests expertise in: Smart contracts, Solidity basics, Web3, DeFi concepts",
+    "subskills": [
+      {
+        "subskill_id": 56,
+        "subskill_name": "Smart Contracts"
+      },
+      {
+        "subskill_id": 57,
+        "subskill_name": "Solidity Basics"
+      },
+      {
+        "subskill_id": 58,
+        "subskill_name": "Web3"
+      },
+      {
+        "subskill_id": 59,
+        "subskill_name": "DeFi Concepts"
+      }
+    ]
+  },
+  {
+    "skill_id": 13,
+    "skill_name": "UI/UX Design",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: Figma, wireframing, user flows, prototyping, accessibility",
+    "subskills": [
+      {
+        "subskill_id": 60,
+        "subskill_name": "Figma"
+      },
+      {
+        "subskill_id": 61,
+        "subskill_name": "Wireframing"
+      },
+      {
+        "subskill_id": 62,
+        "subskill_name": "User Flows"
+      },
+      {
+        "subskill_id": 63,
+        "subskill_name": "Prototyping"
+      },
+      {
+        "subskill_id": 64,
+        "subskill_name": "Accessibility"
+      }
+    ]
+  },
+  {
+    "skill_id": 14,
+    "skill_name": "Product Management",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: PRDs, roadmaps, user stories, OKRs, stakeholder management",
+    "subskills": [
+      {
+        "subskill_id": 65,
+        "subskill_name": "PRDs"
+      },
+      {
+        "subskill_id": 66,
+        "subskill_name": "Roadmaps"
+      },
+      {
+        "subskill_id": 67,
+        "subskill_name": "User Stories"
+      },
+      {
+        "subskill_id": 68,
+        "subskill_name": "OKRs"
+      },
+      {
+        "subskill_id": 69,
+        "subskill_name": "Stakeholder Management"
+      }
+    ]
+  },
+  {
+    "skill_id": 15,
+    "skill_name": "No-Code / Low-Code Tools",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: Webflow, Bubble, Zapier, Airtable, automation tools",
+    "subskills": [
+      {
+        "subskill_id": 70,
+        "subskill_name": "Webflow"
+      },
+      {
+        "subskill_id": 71,
+        "subskill_name": "Bubble"
+      },
+      {
+        "subskill_id": 72,
+        "subskill_name": "Zapier"
+      },
+      {
+        "subskill_id": 73,
+        "subskill_name": "Airtable"
+      },
+      {
+        "subskill_id": 74,
+        "subskill_name": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "skill_id": 16,
+    "skill_name": "Technical Writing",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: Documentation, API docs, user manuals, style guides",
+    "subskills": [
+      {
+        "subskill_id": 75,
+        "subskill_name": "Documentation"
+      },
+      {
+        "subskill_id": 76,
+        "subskill_name": "API Docs"
+      },
+      {
+        "subskill_id": 77,
+        "subskill_name": "User Manuals"
+      },
+      {
+        "subskill_id": 78,
+        "subskill_name": "Style Guides"
+      }
+    ]
+  },
+  {
+    "skill_id": 17,
+    "skill_name": "Agile & Scrum",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: Sprint planning, retrospectives, velocity, user stories, Kanban",
+    "subskills": [
+      {
+        "subskill_id": 79,
+        "subskill_name": "Sprint Planning"
+      },
+      {
+        "subskill_id": 80,
+        "subskill_name": "Retrospectives"
+      },
+      {
+        "subskill_id": 81,
+        "subskill_name": "Velocity"
+      },
+      {
+        "subskill_id": 82,
+        "subskill_name": "User Stories"
+      },
+      {
+        "subskill_id": 83,
+        "subskill_name": "Kanban"
+      }
+    ]
+  },
+  {
+    "skill_id": 18,
+    "skill_name": "Digital Marketing & Growth",
+    "category": "Design & Product",
+    "skill_descr": "Tests expertise in: SEO, SEM, analytics, funnels, A/B testing, content strategy",
+    "subskills": [
+      {
+        "subskill_id": 84,
+        "subskill_name": "SEO"
+      },
+      {
+        "subskill_id": 85,
+        "subskill_name": "SEM"
+      },
+      {
+        "subskill_id": 86,
+        "subskill_name": "Analytics"
+      },
+      {
+        "subskill_id": 87,
+        "subskill_name": "Funnels"
+      },
+      {
+        "subskill_id": 88,
+        "subskill_name": "A/B Testing"
+      },
+      {
+        "subskill_id": 89,
+        "subskill_name": "Content Strategy"
+      }
+    ]
+  },
+  {
+    "skill_id": 19,
+    "skill_name": "Data Analysis",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Excel, SQL, Pandas, visualization, statistical reasoning",
+    "subskills": [
+      {
+        "subskill_id": 90,
+        "subskill_name": "Excel"
+      },
+      {
+        "subskill_id": 91,
+        "subskill_name": "SQL"
+      },
+      {
+        "subskill_id": 92,
+        "subskill_name": "Pandas"
+      },
+      {
+        "subskill_id": 93,
+        "subskill_name": "Data Visualization"
+      },
+      {
+        "subskill_id": 94,
+        "subskill_name": "Statistical Reasoning"
+      }
+    ]
+  },
+  {
+    "skill_id": 20,
+    "skill_name": "Machine Learning",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Supervised/unsupervised learning, model evaluation, sklearn",
+    "subskills": [
+      {
+        "subskill_id": 95,
+        "subskill_name": "Supervised Learning"
+      },
+      {
+        "subskill_id": 96,
+        "subskill_name": "Unsupervised Learning"
+      },
+      {
+        "subskill_id": 97,
+        "subskill_name": "Model Evaluation"
+      },
+      {
+        "subskill_id": 98,
+        "subskill_name": "Scikit-learn"
+      }
+    ]
+  },
+  {
+    "skill_id": 21,
+    "skill_name": "Deep Learning & AI",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Neural networks, CNNs, transformers, PyTorch/TensorFlow",
+    "subskills": [
+      {
+        "subskill_id": 99,
+        "subskill_name": "Neural Networks"
+      },
+      {
+        "subskill_id": 100,
+        "subskill_name": "CNNs"
+      },
+      {
+        "subskill_id": 101,
+        "subskill_name": "Transformers"
+      },
+      {
+        "subskill_id": 102,
+        "subskill_name": "PyTorch"
+      },
+      {
+        "subskill_id": 103,
+        "subskill_name": "TensorFlow"
+      }
+    ]
+  },
+  {
+    "skill_id": 22,
+    "skill_name": "Data Engineering",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: ETL pipelines, Airflow, Spark, data warehousing, dbt",
+    "subskills": [
+      {
+        "subskill_id": 104,
+        "subskill_name": "ETL Pipelines"
+      },
+      {
+        "subskill_id": 105,
+        "subskill_name": "Airflow"
+      },
+      {
+        "subskill_id": 106,
+        "subskill_name": "Spark"
+      },
+      {
+        "subskill_id": 107,
+        "subskill_name": "Data Warehousing"
+      },
+      {
+        "subskill_id": 108,
+        "subskill_name": "dbt"
+      }
+    ]
+  },
+  {
+    "skill_id": 23,
+    "skill_name": "Business Intelligence",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Power BI, Tableau, dashboard design, KPI reporting",
+    "subskills": [
+      {
+        "subskill_id": 109,
+        "subskill_name": "Power BI"
+      },
+      {
+        "subskill_id": 110,
+        "subskill_name": "Tableau"
+      },
+      {
+        "subskill_id": 111,
+        "subskill_name": "Dashboard Design"
+      },
+      {
+        "subskill_id": 112,
+        "subskill_name": "KPI Reporting"
+      }
+    ]
+  },
+  {
+    "skill_id": 24,
+    "skill_name": "Natural Language Processing",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Text classification, embeddings, LLMs, prompt engineering",
+    "subskills": [
+      {
+        "subskill_id": 113,
+        "subskill_name": "Text Classification"
+      },
+      {
+        "subskill_id": 114,
+        "subskill_name": "Embeddings"
+      },
+      {
+        "subskill_id": 115,
+        "subskill_name": "LLMs"
+      },
+      {
+        "subskill_id": 116,
+        "subskill_name": "Prompt Engineering"
+      }
+    ]
+  },
+  {
+    "skill_id": 25,
+    "skill_name": "Computer Vision",
+    "category": "Data & AI",
+    "skill_descr": "Tests expertise in: Image classification, object detection, OpenCV, YOLO",
+    "subskills": [
+      {
+        "subskill_id": 117,
+        "subskill_name": "Image Classification"
+      },
+      {
+        "subskill_id": 118,
+        "subskill_name": "Object Detection"
+      },
+      {
+        "subskill_id": 119,
+        "subskill_name": "OpenCV"
+      },
+      {
+        "subskill_id": 120,
+        "subskill_name": "YOLO"
+      }
+    ]
+  },
+  {
+    "skill_id": 26,
+    "skill_name": "Project Management",
+    "category": "Business & Soft Skills",
+    "skill_descr": "Tests expertise in: PMP concepts, Gantt charts, risk management, stakeholders",
+    "subskills": [
+      {
+        "subskill_id": 121,
+        "subskill_name": "PMP Concepts"
+      },
+      {
+        "subskill_id": 122,
+        "subskill_name": "Gantt Charts"
+      },
+      {
+        "subskill_id": 123,
+        "subskill_name": "Risk Management"
+      },
+      {
+        "subskill_id": 124,
+        "subskill_name": "Stakeholders"
+      }
+    ]
+  },
+  {
+    "skill_id": 27,
+    "skill_name": "Entrepreneurship & Startups",
+    "category": "Business & Soft Skills",
+    "skill_descr": "Tests expertise in: MVP, business model canvas, pitch decks, fundraising basics",
+    "subskills": [
+      {
+        "subskill_id": 125,
+        "subskill_name": "MVP"
+      },
+      {
+        "subskill_id": 126,
+        "subskill_name": "Business Model Canvas"
+      },
+      {
+        "subskill_id": 127,
+        "subskill_name": "Pitch Decks"
+      },
+      {
+        "subskill_id": 128,
+        "subskill_name": "Fundraising Basics"
+      }
+    ]
+  },
+  {
+    "skill_id": 28,
+    "skill_name": "Remote Work & Collaboration",
+    "category": "Business & Soft Skills",
+    "skill_descr": "Tests expertise in: Async communication, Notion, Slack, time management, tools",
+    "subskills": [
+      {
+        "subskill_id": 129,
+        "subskill_name": "Async Communication"
+      },
+      {
+        "subskill_id": 130,
+        "subskill_name": "Notion"
+      },
+      {
+        "subskill_id": 131,
+        "subskill_name": "Slack"
+      },
+      {
+        "subskill_id": 132,
+        "subskill_name": "Time Management"
+      },
+      {
+        "subskill_id": 133,
+        "subskill_name": "Collaboration Tools"
+      }
+    ]
+  },
+  {
+    "skill_id": 29,
+    "skill_name": "Tech Sales & Pre-Sales",
+    "category": "Business & Soft Skills",
+    "skill_descr": "Tests expertise in: Discovery calls, demos, objection handling, CRM basics",
+    "subskills": [
+      {
+        "subskill_id": 134,
+        "subskill_name": "Discovery Calls"
+      },
+      {
+        "subskill_id": 135,
+        "subskill_name": "Demos"
+      },
+      {
+        "subskill_id": 136,
+        "subskill_name": "Objection Handling"
+      },
+      {
+        "subskill_id": 137,
+        "subskill_name": "CRM Basics"
+      }
+    ]
+  },
+  {
+    "skill_id": 30,
+    "skill_name": "Prompt Engineering",
+    "category": "Business & Soft Skills",
+    "skill_descr": "Tests expertise in: Effective prompting, chain-of-thought, RAG, LLM fine-tuning",
+    "subskills": [
+      {
+        "subskill_id": 138,
+        "subskill_name": "Effective Prompting"
+      },
+      {
+        "subskill_id": 139,
+        "subskill_name": "Chain-of-Thought"
+      },
+      {
+        "subskill_id": 140,
+        "subskill_name": "RAG"
+      },
+      {
+        "subskill_id": 141,
+        "subskill_name": "LLM Fine-tuning"
+      }
+    ]
+  },
+  {
+    "skill_id": 31,
+    "skill_name": "Sales Fundamentals",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: sales process, prospecting, pipeline management, closing techniques, and customer relationship building.",
+    "subskills": [
+      {
+        "subskill_id": 142,
+        "subskill_name": "Sales Process & Pipeline"
+      },
+      {
+        "subskill_id": 143,
+        "subskill_name": "Prospecting Techniques"
+      },
+      {
+        "subskill_id": 144,
+        "subskill_name": "Lead Qualification"
+      },
+      {
+        "subskill_id": 145,
+        "subskill_name": "Closing Fundamentals"
+      }
+    ]
+  },
+  {
+    "skill_id": 32,
+    "skill_name": "B2B Sales",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: enterprise selling, relationship building, complex deal cycles, and stakeholder management.",
+    "subskills": [
+      {
+        "subskill_id": 146,
+        "subskill_name": "Enterprise Selling"
+      },
+      {
+        "subskill_id": 147,
+        "subskill_name": "Stakeholder Mapping"
+      },
+      {
+        "subskill_id": 148,
+        "subskill_name": "Complex Deal Cycles"
+      },
+      {
+        "subskill_id": 149,
+        "subskill_name": "B2B Relationship Building"
+      }
+    ]
+  },
+  {
+    "skill_id": 33,
+    "skill_name": "CRM & Sales Tools",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: Salesforce, HubSpot, Pipedrive, data hygiene, workflow automation, and reporting.",
+    "subskills": [
+      {
+        "subskill_id": 150,
+        "subskill_name": "Salesforce Basics"
+      },
+      {
+        "subskill_id": 151,
+        "subskill_name": "HubSpot CRM"
+      },
+      {
+        "subskill_id": 152,
+        "subskill_name": "Sales Automation"
+      },
+      {
+        "subskill_id": 153,
+        "subskill_name": "CRM Data Hygiene"
+      }
+    ]
+  },
+  {
+    "skill_id": 34,
+    "skill_name": "Account Management",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: client retention, upselling, cross-selling, renewals, and strategic account planning.",
+    "subskills": [
+      {
+        "subskill_id": 154,
+        "subskill_name": "Client Retention"
+      },
+      {
+        "subskill_id": 155,
+        "subskill_name": "Upselling & Cross-selling"
+      },
+      {
+        "subskill_id": 156,
+        "subskill_name": "Renewal Strategies"
+      },
+      {
+        "subskill_id": 157,
+        "subskill_name": "Strategic Account Planning"
+      }
+    ]
+  },
+  {
+    "skill_id": 35,
+    "skill_name": "Revenue Operations (RevOps)",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: aligning sales, marketing, and finance, data-driven revenue strategy, forecasting, and pipeline optimization.",
+    "subskills": [
+      {
+        "subskill_id": 158,
+        "subskill_name": "Revenue Alignment"
+      },
+      {
+        "subskill_id": 159,
+        "subskill_name": "Pipeline Optimization"
+      },
+      {
+        "subskill_id": 160,
+        "subskill_name": "Forecasting & Analytics"
+      },
+      {
+        "subskill_id": 161,
+        "subskill_name": "Revenue Strategy"
+      }
+    ]
+  },
+  {
+    "skill_id": 36,
+    "skill_name": "Cold Outreach & Prospecting",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: cold email, LinkedIn outreach, social selling, lead generation, and building pipelines.",
+    "subskills": [
+      {
+        "subskill_id": 162,
+        "subskill_name": "Cold Email Outreach"
+      },
+      {
+        "subskill_id": 163,
+        "subskill_name": "LinkedIn Prospecting"
+      },
+      {
+        "subskill_id": 164,
+        "subskill_name": "Social Selling"
+      },
+      {
+        "subskill_id": 165,
+        "subskill_name": "Lead Generation"
+      }
+    ]
+  },
+  {
+    "skill_id": 37,
+    "skill_name": "Negotiation & Closing",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: negotiation frameworks, handling objections, value-based selling, and closing strategies.",
+    "subskills": [
+      {
+        "subskill_id": 166,
+        "subskill_name": "Negotiation Frameworks"
+      },
+      {
+        "subskill_id": 167,
+        "subskill_name": "Objection Handling"
+      },
+      {
+        "subskill_id": 168,
+        "subskill_name": "Value-Based Selling"
+      },
+      {
+        "subskill_id": 169,
+        "subskill_name": "Closing Strategies"
+      }
+    ]
+  },
+  {
+    "skill_id": 38,
+    "skill_name": "Sales Analytics & Forecasting",
+    "category": "Sales & Revenue Operations",
+    "skill_descr": "Tests expertise in: sales data analysis, predictive forecasting, reporting, performance tracking, and using data to drive decisions.",
+    "subskills": [
+      {
+        "subskill_id": 170,
+        "subskill_name": "Sales Data Analysis"
+      },
+      {
+        "subskill_id": 171,
+        "subskill_name": "Predictive Forecasting"
+      },
+      {
+        "subskill_id": 172,
+        "subskill_name": "Performance Tracking"
+      },
+      {
+        "subskill_id": 173,
+        "subskill_name": "Sales Reporting"
+      }
+    ]
+  },
+  {
+    "skill_id": 39,
+    "skill_name": "Digital Marketing",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: online marketing strategies, digital channels, analytics, brand awareness, and lead generation.",
+    "subskills": [
+      {
+        "subskill_id": 174,
+        "subskill_name": "Digital Strategy"
+      },
+      {
+        "subskill_id": 175,
+        "subskill_name": "Online Channels"
+      },
+      {
+        "subskill_id": 176,
+        "subskill_name": "Brand Awareness"
+      },
+      {
+        "subskill_id": 177,
+        "subskill_name": "Lead Generation"
+      }
+    ]
+  },
+  {
+    "skill_id": 40,
+    "skill_name": "Content Marketing",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: content creation, distribution, content strategy, SEO copywriting, and audience engagement.",
+    "subskills": [
+      {
+        "subskill_id": 178,
+        "subskill_name": "Content Creation"
+      },
+      {
+        "subskill_id": 179,
+        "subskill_name": "Content Distribution"
+      },
+      {
+        "subskill_id": 180,
+        "subskill_name": "SEO Copywriting"
+      },
+      {
+        "subskill_id": 181,
+        "subskill_name": "Audience Engagement"
+      }
+    ]
+  },
+  {
+    "skill_id": 41,
+    "skill_name": "Social Media Marketing",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: social strategy, platform management, community engagement, paid social, and content planning.",
+    "subskills": [
+      {
+        "subskill_id": 182,
+        "subskill_name": "Social Strategy"
+      },
+      {
+        "subskill_id": 183,
+        "subskill_name": "Platform Management"
+      },
+      {
+        "subskill_id": 184,
+        "subskill_name": "Community Engagement"
+      },
+      {
+        "subskill_id": 185,
+        "subskill_name": "Paid Social"
+      }
+    ]
+  },
+  {
+    "skill_id": 42,
+    "skill_name": "Email Marketing",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: email campaigns, segmentation, automation, deliverability, analytics, and lead nurturing.",
+    "subskills": [
+      {
+        "subskill_id": 186,
+        "subskill_name": "Email Campaigns"
+      },
+      {
+        "subskill_id": 187,
+        "subskill_name": "Segmentation & Automation"
+      },
+      {
+        "subskill_id": 188,
+        "subskill_name": "Deliverability"
+      },
+      {
+        "subskill_id": 189,
+        "subskill_name": "Lead Nurturing"
+      }
+    ]
+  },
+  {
+    "skill_id": 43,
+    "skill_name": "SEO & SEM",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: search engine optimization, keyword strategy, paid search, Google Ads, and search analytics.",
+    "subskills": [
+      {
+        "subskill_id": 190,
+        "subskill_name": "SEO Strategy"
+      },
+      {
+        "subskill_id": 191,
+        "subskill_name": "Keyword Research"
+      },
+      {
+        "subskill_id": 192,
+        "subskill_name": "Google Ads"
+      },
+      {
+        "subskill_id": 193,
+        "subskill_name": "Search Analytics"
+      }
+    ]
+  },
+  {
+    "skill_id": 44,
+    "skill_name": "Performance Marketing & Paid Ads",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: paid advertising across Google, Meta, LinkedIn, conversion tracking, and ROI optimization.",
+    "subskills": [
+      {
+        "subskill_id": 194,
+        "subskill_name": "Paid Advertising"
+      },
+      {
+        "subskill_id": 195,
+        "subskill_name": "Conversion Tracking"
+      },
+      {
+        "subskill_id": 196,
+        "subskill_name": "ROI Optimization"
+      },
+      {
+        "subskill_id": 197,
+        "subskill_name": "Google & Meta Ads"
+      }
+    ]
+  },
+  {
+    "skill_id": 45,
+    "skill_name": "Growth Hacking",
+    "category": "Marketing & Growth",
+    "skill_descr": "Tests expertise in: rapid experimentation, A/B testing, user acquisition, viral loops, and low-cost growth strategies.",
+    "subskills": [
+      {
+        "subskill_id": 198,
+        "subskill_name": "Rapid Experimentation"
+      },
+      {
+        "subskill_id": 199,
+        "subskill_name": "A/B Testing"
+      },
+      {
+        "subskill_id": 200,
+        "subskill_name": "User Acquisition"
+      },
+      {
+        "subskill_id": 201,
+        "subskill_name": "Viral Growth"
+      }
+    ]
+  },
+  {
+    "skill_id": 46,
+    "skill_name": "Business Development",
+    "category": "Business Development & Strategy",
+    "skill_descr": "Tests expertise in: identifying new markets, partnerships, deal sourcing, strategic alliances, and expansion strategy.",
+    "subskills": [
+      {
+        "subskill_id": 202,
+        "subskill_name": "Market Identification"
+      },
+      {
+        "subskill_id": 203,
+        "subskill_name": "Partnership Development"
+      },
+      {
+        "subskill_id": 204,
+        "subskill_name": "Deal Sourcing"
+      },
+      {
+        "subskill_id": 205,
+        "subskill_name": "Expansion Strategy"
+      }
+    ]
+  },
+  {
+    "skill_id": 47,
+    "skill_name": "Customer Success Management",
+    "category": "Business Development & Strategy",
+    "skill_descr": "Tests expertise in: onboarding, customer retention, health scoring, renewal strategies, and advocacy programs.",
+    "subskills": [
+      {
+        "subskill_id": 206,
+        "subskill_name": "Customer Onboarding"
+      },
+      {
+        "subskill_id": 207,
+        "subskill_name": "Retention Strategies"
+      },
+      {
+        "subskill_id": 208,
+        "subskill_name": "Health Scoring"
+      },
+      {
+        "subskill_id": 209,
+        "subskill_name": "Advocacy Programs"
+      }
+    ]
+  },
+  {
+    "skill_id": 48,
+    "skill_name": "Market Research & Analysis",
+    "category": "Business Development & Strategy",
+    "skill_descr": "Tests expertise in: market sizing, competitor analysis, customer personas, surveys, trend analysis, and TAM/SAM/SOM.",
+    "subskills": [
+      {
+        "subskill_id": 210,
+        "subskill_name": "Market Sizing"
+      },
+      {
+        "subskill_id": 211,
+        "subskill_name": "Competitor Analysis"
+      },
+      {
+        "subskill_id": 212,
+        "subskill_name": "Customer Personas"
+      },
+      {
+        "subskill_id": 213,
+        "subskill_name": "TAM/SAM/SOM"
+      }
+    ]
+  },
+  {
+    "skill_id": 49,
+    "skill_name": "Pricing Strategy",
+    "category": "Business Development & Strategy",
+    "skill_descr": "Tests expertise in: pricing models, value-based pricing, competitive positioning, packaging, and price elasticity.",
+    "subskills": [
+      {
+        "subskill_id": 214,
+        "subskill_name": "Pricing Models"
+      },
+      {
+        "subskill_id": 215,
+        "subskill_name": "Value-Based Pricing"
+      },
+      {
+        "subskill_id": 216,
+        "subskill_name": "Competitive Positioning"
+      },
+      {
+        "subskill_id": 217,
+        "subskill_name": "Packaging Strategy"
+      }
+    ]
+  },
+  {
+    "skill_id": 50,
+    "skill_name": "E-commerce & Retail Sales",
+    "category": "Business Development & Strategy",
+    "skill_descr": "Tests expertise in: online retail, e-commerce platforms, conversion optimization, checkout flow, and retail analytics.",
+    "subskills": [
+      {
+        "subskill_id": 218,
+        "subskill_name": "Online Retail"
+      },
+      {
+        "subskill_id": 219,
+        "subskill_name": "E-commerce Platforms"
+      },
+      {
+        "subskill_id": 220,
+        "subskill_name": "Conversion Optimization"
+      },
+      {
+        "subskill_id": 221,
+        "subskill_name": "Retail Analytics"
+      }
+    ]
+  }
+]

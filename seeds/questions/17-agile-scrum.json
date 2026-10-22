@@ -1,0 +1,2906 @@
+{
+  "skill_id": 17,
+  "skill_name": "Agile & Scrum",
+  "questions": [
+    {
+      "question_id": 1601,
+      "subskill_id": 79,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is sprint planning in Agile?",
+      "options": [
+        {
+          "option_id": 8666,
+          "option_text": "A meeting to plan the work for the upcoming sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 8667,
+          "option_text": "A meeting to review the sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8668,
+          "option_text": "A meeting to reflect on the sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8669,
+          "option_text": "A meeting to plan the next release",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1602,
+      "subskill_id": 79,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of sprint planning?",
+      "options": [
+        {
+          "option_id": 8670,
+          "option_text": "To define what can be delivered in the sprint and how",
+          "is_correct": true
+        },
+        {
+          "option_id": 8671,
+          "option_text": "To review the sprint results",
+          "is_correct": false
+        },
+        {
+          "option_id": 8672,
+          "option_text": "To reflect on team performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 8673,
+          "option_text": "To plan the next product release",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1603,
+      "subskill_id": 79,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Who participates in sprint planning?",
+      "options": [
+        {
+          "option_id": 8674,
+          "option_text": "The Scrum Team: Product Owner, Scrum Master, and Developers",
+          "is_correct": true
+        },
+        {
+          "option_id": 8675,
+          "option_text": "Only the Product Owner",
+          "is_correct": false
+        },
+        {
+          "option_id": 8676,
+          "option_text": "Only the Developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8677,
+          "option_text": "Only the Scrum Master",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1604,
+      "subskill_id": 79,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sprint goal?",
+      "options": [
+        {
+          "option_id": 8678,
+          "option_text": "A short statement of what the sprint aims to achieve",
+          "is_correct": true
+        },
+        {
+          "option_id": 8679,
+          "option_text": "A list of all team tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 8680,
+          "option_text": "A budget for the sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8681,
+          "option_text": "A timeline for the sprint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1605,
+      "subskill_id": 79,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sprint backlog?",
+      "options": [
+        {
+          "option_id": 8682,
+          "option_text": "A list of user stories selected for the sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 8683,
+          "option_text": "A list of all backlog items",
+          "is_correct": false
+        },
+        {
+          "option_id": 8684,
+          "option_text": "A list of bugs to fix",
+          "is_correct": false
+        },
+        {
+          "option_id": 8685,
+          "option_text": "A list of team assignments",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1606,
+      "subskill_id": 80,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sprint retrospective?",
+      "options": [
+        {
+          "option_id": 8686,
+          "option_text": "A meeting where the team reflects on the sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 8687,
+          "option_text": "A meeting to plan the next sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8688,
+          "option_text": "A meeting to review the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 8689,
+          "option_text": "A meeting to plan the release",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1607,
+      "subskill_id": 80,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a retrospective?",
+      "options": [
+        {
+          "option_id": 8690,
+          "option_text": "To improve team processes and performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 8691,
+          "option_text": "To review the product backlog",
+          "is_correct": false
+        },
+        {
+          "option_id": 8692,
+          "option_text": "To plan the next sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8693,
+          "option_text": "To demo the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1608,
+      "subskill_id": 80,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Who participates in a retrospective?",
+      "options": [
+        {
+          "option_id": 8694,
+          "option_text": "The Scrum Team: Product Owner, Scrum Master, and Developers",
+          "is_correct": true
+        },
+        {
+          "option_id": 8695,
+          "option_text": "Only the Product Owner",
+          "is_correct": false
+        },
+        {
+          "option_id": 8696,
+          "option_text": "Only the Developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8697,
+          "option_text": "Only the Scrum Master",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1609,
+      "subskill_id": 80,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the outcome of a retrospective?",
+      "options": [
+        {
+          "option_id": 8698,
+          "option_text": "Actionable improvements for the next sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 8699,
+          "option_text": "A list of completed user stories",
+          "is_correct": false
+        },
+        {
+          "option_id": 8700,
+          "option_text": "A list of bugs to fix",
+          "is_correct": false
+        },
+        {
+          "option_id": 8701,
+          "option_text": "A budget for the sprint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1610,
+      "subskill_id": 80,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the \"Start, Stop, Continue\" framework?",
+      "options": [
+        {
+          "option_id": 8702,
+          "option_text": "A framework where the team identifies what to start, stop, and continue",
+          "is_correct": true
+        },
+        {
+          "option_id": 8703,
+          "option_text": "A framework for planning sprints",
+          "is_correct": false
+        },
+        {
+          "option_id": 8704,
+          "option_text": "A framework for reviewing the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 8705,
+          "option_text": "A framework for estimating tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1611,
+      "subskill_id": 81,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is velocity in Scrum?",
+      "options": [
+        {
+          "option_id": 8706,
+          "option_text": "The amount of work a team can complete in a sprint",
+          "is_correct": true
+        },
+        {
+          "option_id": 8707,
+          "option_text": "The number of team members",
+          "is_correct": false
+        },
+        {
+          "option_id": 8708,
+          "option_text": "The sprint duration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8709,
+          "option_text": "The budget for the sprint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1612,
+      "subskill_id": 81,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How is velocity calculated?",
+      "options": [
+        {
+          "option_id": 8710,
+          "option_text": "By summing the story points of completed user stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 8711,
+          "option_text": "By counting the number of tasks completed",
+          "is_correct": false
+        },
+        {
+          "option_id": 8712,
+          "option_text": "By counting the hours worked",
+          "is_correct": false
+        },
+        {
+          "option_id": 8713,
+          "option_text": "By measuring the budget spent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1613,
+      "subskill_id": 81,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of velocity?",
+      "options": [
+        {
+          "option_id": 8714,
+          "option_text": "To forecast future sprint capacity",
+          "is_correct": true
+        },
+        {
+          "option_id": 8715,
+          "option_text": "To measure team size",
+          "is_correct": false
+        },
+        {
+          "option_id": 8716,
+          "option_text": "To measure budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 8717,
+          "option_text": "To measure product quality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1614,
+      "subskill_id": 81,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a velocity chart?",
+      "options": [
+        {
+          "option_id": 8718,
+          "option_text": "A chart showing the team's velocity over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 8719,
+          "option_text": "A chart showing task completion",
+          "is_correct": false
+        },
+        {
+          "option_id": 8720,
+          "option_text": "A chart showing budget spent",
+          "is_correct": false
+        },
+        {
+          "option_id": 8721,
+          "option_text": "A chart showing team size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1615,
+      "subskill_id": 81,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between velocity and capacity?",
+      "options": [
+        {
+          "option_id": 8722,
+          "option_text": "Velocity measures work completed; capacity measures available team resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 8723,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8724,
+          "option_text": "Capacity measures work completed",
+          "is_correct": false
+        },
+        {
+          "option_id": 8725,
+          "option_text": "Velocity measures available resources",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1616,
+      "subskill_id": 82,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user story in Agile?",
+      "options": [
+        {
+          "option_id": 8726,
+          "option_text": "A description of a feature from an end-user perspective",
+          "is_correct": true
+        },
+        {
+          "option_id": 8727,
+          "option_text": "A technical requirement",
+          "is_correct": false
+        },
+        {
+          "option_id": 8728,
+          "option_text": "A bug report",
+          "is_correct": false
+        },
+        {
+          "option_id": 8729,
+          "option_text": "A test case",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1617,
+      "subskill_id": 82,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the format of a user story?",
+      "options": [
+        {
+          "option_id": 8730,
+          "option_text": "As a [role], I want [action] so that [benefit]",
+          "is_correct": true
+        },
+        {
+          "option_id": 8731,
+          "option_text": "Given/When/Then",
+          "is_correct": false
+        },
+        {
+          "option_id": 8732,
+          "option_text": "IF/ELSE",
+          "is_correct": false
+        },
+        {
+          "option_id": 8733,
+          "option_text": "For/While/Do",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1618,
+      "subskill_id": 82,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a persona in Agile?",
+      "options": [
+        {
+          "option_id": 8734,
+          "option_text": "A fictional representation of a target user",
+          "is_correct": true
+        },
+        {
+          "option_id": 8735,
+          "option_text": "A real user",
+          "is_correct": false
+        },
+        {
+          "option_id": 8736,
+          "option_text": "A team member",
+          "is_correct": false
+        },
+        {
+          "option_id": 8737,
+          "option_text": "A stakeholder",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1619,
+      "subskill_id": 82,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a user story and a task?",
+      "options": [
+        {
+          "option_id": 8738,
+          "option_text": "A user story describes what to build; a task describes how to build it",
+          "is_correct": true
+        },
+        {
+          "option_id": 8739,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8740,
+          "option_text": "A task describes what to build",
+          "is_correct": false
+        },
+        {
+          "option_id": 8741,
+          "option_text": "A user story describes how to build it",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1620,
+      "subskill_id": 82,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the \"INVEST\" criteria for user stories?",
+      "options": [
+        {
+          "option_id": 8742,
+          "option_text": "Independent, Negotiable, Valuable, Estimable, Small, Testable",
+          "is_correct": true
+        },
+        {
+          "option_id": 8743,
+          "option_text": "Important, Necessary, Valid, Essential, Specific, Timely",
+          "is_correct": false
+        },
+        {
+          "option_id": 8744,
+          "option_text": "Integrated, Notable, Viable, Efficient, Simple, Tangible",
+          "is_correct": false
+        },
+        {
+          "option_id": 8745,
+          "option_text": "Iterative, Non-negotiable, Valid, Estimable, Specific, Testable",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1621,
+      "subskill_id": 83,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Kanban?",
+      "options": [
+        {
+          "option_id": 8746,
+          "option_text": "A visual system for managing work",
+          "is_correct": true
+        },
+        {
+          "option_id": 8747,
+          "option_text": "A sprint planning tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 8748,
+          "option_text": "A retrospective technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 8749,
+          "option_text": "A velocity chart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1622,
+      "subskill_id": 83,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Kanban board?",
+      "options": [
+        {
+          "option_id": 8750,
+          "option_text": "A board with columns representing workflow stages",
+          "is_correct": true
+        },
+        {
+          "option_id": 8751,
+          "option_text": "A sprint backlog",
+          "is_correct": false
+        },
+        {
+          "option_id": 8752,
+          "option_text": "A velocity chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 8753,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1623,
+      "subskill_id": 83,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are Kanban columns?",
+      "options": [
+        {
+          "option_id": 8754,
+          "option_text": "Columns like To Do, In Progress, and Done",
+          "is_correct": true
+        },
+        {
+          "option_id": 8755,
+          "option_text": "Columns for team members",
+          "is_correct": false
+        },
+        {
+          "option_id": 8756,
+          "option_text": "Columns for budget items",
+          "is_correct": false
+        },
+        {
+          "option_id": 8757,
+          "option_text": "Columns for meetings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1624,
+      "subskill_id": 83,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Work In Progress (WIP) in Kanban?",
+      "options": [
+        {
+          "option_id": 8758,
+          "option_text": "A limit on how many items can be in progress at once",
+          "is_correct": true
+        },
+        {
+          "option_id": 8759,
+          "option_text": "A limit on team size",
+          "is_correct": false
+        },
+        {
+          "option_id": 8760,
+          "option_text": "A limit on sprint duration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8761,
+          "option_text": "A limit on budget",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1625,
+      "subskill_id": 83,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between Kanban and Scrum?",
+      "options": [
+        {
+          "option_id": 8762,
+          "option_text": "Kanban is continuous flow; Scrum is time-boxed iterations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8763,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8764,
+          "option_text": "Scrum is continuous flow",
+          "is_correct": false
+        },
+        {
+          "option_id": 8765,
+          "option_text": "Kanban is time-boxed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1626,
+      "subskill_id": 79,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you conduct sprint planning?",
+      "options": [
+        {
+          "option_id": 8766,
+          "option_text": "By selecting backlog items and creating a sprint goal",
+          "is_correct": true
+        },
+        {
+          "option_id": 8767,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8768,
+          "option_text": "By reviewing the sprint",
+          "is_correct": false
+        },
+        {
+          "option_id": 8769,
+          "option_text": "By creating a product roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1627,
+      "subskill_id": 79,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you estimate user stories in sprint planning?",
+      "options": [
+        {
+          "option_id": 8770,
+          "option_text": "By using story points or hours to estimate effort",
+          "is_correct": true
+        },
+        {
+          "option_id": 8771,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8772,
+          "option_text": "By copying previous sprints",
+          "is_correct": false
+        },
+        {
+          "option_id": 8773,
+          "option_text": "By using a random number generator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1628,
+      "subskill_id": 79,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is capacity planning in sprint planning?",
+      "options": [
+        {
+          "option_id": 8774,
+          "option_text": "Planning based on team availability and capacity",
+          "is_correct": true
+        },
+        {
+          "option_id": 8775,
+          "option_text": "Planning based on budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 8776,
+          "option_text": "Planning based on product features",
+          "is_correct": false
+        },
+        {
+          "option_id": 8777,
+          "option_text": "Planning based on stakeholder requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1629,
+      "subskill_id": 79,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prioritize backlog items for a sprint?",
+      "options": [
+        {
+          "option_id": 8778,
+          "option_text": "By prioritizing based on value, urgency, and dependencies",
+          "is_correct": true
+        },
+        {
+          "option_id": 8779,
+          "option_text": "By using a random selection",
+          "is_correct": false
+        },
+        {
+          "option_id": 8780,
+          "option_text": "By including all items",
+          "is_correct": false
+        },
+        {
+          "option_id": 8781,
+          "option_text": "By ignoring priorities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1630,
+      "subskill_id": 79,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sprint planning meeting agenda?",
+      "options": [
+        {
+          "option_id": 8782,
+          "option_text": "Review backlog, set sprint goal, select items, create sprint backlog",
+          "is_correct": true
+        },
+        {
+          "option_id": 8783,
+          "option_text": "Write code, test, deploy",
+          "is_correct": false
+        },
+        {
+          "option_id": 8784,
+          "option_text": "Plan release, create roadmap, set budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 8785,
+          "option_text": "Review sprint, hold retrospective, update backlog",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1631,
+      "subskill_id": 80,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you conduct a retrospective?",
+      "options": [
+        {
+          "option_id": 8786,
+          "option_text": "By facilitating a structured discussion about what went well and what can improve",
+          "is_correct": true
+        },
+        {
+          "option_id": 8787,
+          "option_text": "By assigning blame",
+          "is_correct": false
+        },
+        {
+          "option_id": 8788,
+          "option_text": "By ignoring issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 8789,
+          "option_text": "By focusing only on successes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1632,
+      "subskill_id": 80,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are common retrospective formats?",
+      "options": [
+        {
+          "option_id": 8790,
+          "option_text": "Start-Stop-Continue, Mad-Sad-Glad, Sailboat",
+          "is_correct": true
+        },
+        {
+          "option_id": 8791,
+          "option_text": "Only one format exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 8792,
+          "option_text": "Only Start-Stop-Continue",
+          "is_correct": false
+        },
+        {
+          "option_id": 8793,
+          "option_text": "Only Mad-Sad-Glad",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1633,
+      "subskill_id": 80,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the \"Mad, Sad, Glad\" retrospective?",
+      "options": [
+        {
+          "option_id": 8794,
+          "option_text": "A retrospective where team members share what made them mad, sad, or glad",
+          "is_correct": true
+        },
+        {
+          "option_id": 8795,
+          "option_text": "A sprint planning technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 8796,
+          "option_text": "A velocity tracking method",
+          "is_correct": false
+        },
+        {
+          "option_id": 8797,
+          "option_text": "A user story format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1634,
+      "subskill_id": 80,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the \"Sailboat\" retrospective?",
+      "options": [
+        {
+          "option_id": 8798,
+          "option_text": "A retrospective where the team identifies risks, anchors, wind, and sun",
+          "is_correct": true
+        },
+        {
+          "option_id": 8799,
+          "option_text": "A sprint planning technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 8800,
+          "option_text": "A velocity tracking method",
+          "is_correct": false
+        },
+        {
+          "option_id": 8801,
+          "option_text": "A user story format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1635,
+      "subskill_id": 80,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you turn retrospective feedback into action?",
+      "options": [
+        {
+          "option_id": 8802,
+          "option_text": "By creating action items and assigning owners",
+          "is_correct": true
+        },
+        {
+          "option_id": 8803,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 8804,
+          "option_text": "By discussing issues without action",
+          "is_correct": false
+        },
+        {
+          "option_id": 8805,
+          "option_text": "By blaming team members",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1636,
+      "subskill_id": 81,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use velocity for sprint planning?",
+      "options": [
+        {
+          "option_id": 8806,
+          "option_text": "By using historical velocity to forecast capacity",
+          "is_correct": true
+        },
+        {
+          "option_id": 8807,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8808,
+          "option_text": "By using a fixed number",
+          "is_correct": false
+        },
+        {
+          "option_id": 8809,
+          "option_text": "By ignoring velocity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1637,
+      "subskill_id": 81,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What factors affect velocity?",
+      "options": [
+        {
+          "option_id": 8810,
+          "option_text": "Team size, skill level, and external disruptions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8811,
+          "option_text": "Only team size",
+          "is_correct": false
+        },
+        {
+          "option_id": 8812,
+          "option_text": "Only skill level",
+          "is_correct": false
+        },
+        {
+          "option_id": 8813,
+          "option_text": "Only external disruptions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1638,
+      "subskill_id": 81,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you track velocity over time?",
+      "options": [
+        {
+          "option_id": 8814,
+          "option_text": "By maintaining a velocity chart over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 8815,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8816,
+          "option_text": "By ignoring tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 8817,
+          "option_text": "By copying previous sprints",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1639,
+      "subskill_id": 81,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between ideal velocity and actual velocity?",
+      "options": [
+        {
+          "option_id": 8818,
+          "option_text": "Ideal velocity is the target; actual velocity is the real measurement",
+          "is_correct": true
+        },
+        {
+          "option_id": 8819,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8820,
+          "option_text": "Actual velocity is the target",
+          "is_correct": false
+        },
+        {
+          "option_id": 8821,
+          "option_text": "Ideal velocity is the real measurement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1640,
+      "subskill_id": 81,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you improve velocity?",
+      "options": [
+        {
+          "option_id": 8822,
+          "option_text": "By removing bottlenecks and improving team efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 8823,
+          "option_text": "By adding more team members",
+          "is_correct": false
+        },
+        {
+          "option_id": 8824,
+          "option_text": "By extending sprint duration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8825,
+          "option_text": "By reducing scope",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1641,
+      "subskill_id": 82,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write a good user story?",
+      "options": [
+        {
+          "option_id": 8826,
+          "option_text": "By following the INVEST criteria and using clear language",
+          "is_correct": true
+        },
+        {
+          "option_id": 8827,
+          "option_text": "By making them as long as possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 8828,
+          "option_text": "By avoiding user needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8829,
+          "option_text": "By skipping acceptance criteria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1642,
+      "subskill_id": 82,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you split large user stories?",
+      "options": [
+        {
+          "option_id": 8830,
+          "option_text": "By breaking them into smaller, independent stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 8831,
+          "option_text": "By combining them into one large story",
+          "is_correct": false
+        },
+        {
+          "option_id": 8832,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8833,
+          "option_text": "By writing them as tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1643,
+      "subskill_id": 82,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a story map in Agile?",
+      "options": [
+        {
+          "option_id": 8834,
+          "option_text": "A visual representation of user activities and stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 8835,
+          "option_text": "A technical diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 8836,
+          "option_text": "A budget document",
+          "is_correct": false
+        },
+        {
+          "option_id": 8837,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1644,
+      "subskill_id": 82,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a user story and an epic?",
+      "options": [
+        {
+          "option_id": 8838,
+          "option_text": "An epic is a large user story that can be broken down into smaller stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 8839,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8840,
+          "option_text": "A user story is larger than an epic",
+          "is_correct": false
+        },
+        {
+          "option_id": 8841,
+          "option_text": "An epic is a task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1645,
+      "subskill_id": 82,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are acceptance criteria?",
+      "options": [
+        {
+          "option_id": 8842,
+          "option_text": "Conditions that must be met for a user story to be complete",
+          "is_correct": true
+        },
+        {
+          "option_id": 8843,
+          "option_text": "A list of bugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8844,
+          "option_text": "A design specification",
+          "is_correct": false
+        },
+        {
+          "option_id": 8845,
+          "option_text": "A test plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1646,
+      "subskill_id": 83,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you implement Kanban?",
+      "options": [
+        {
+          "option_id": 8846,
+          "option_text": "By setting up a Kanban board and defining workflow stages",
+          "is_correct": true
+        },
+        {
+          "option_id": 8847,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8848,
+          "option_text": "By conducting sprint planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 8849,
+          "option_text": "By holding retrospectives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1647,
+      "subskill_id": 83,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cumulative flow diagram?",
+      "options": [
+        {
+          "option_id": 8850,
+          "option_text": "A chart showing the flow of work over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 8851,
+          "option_text": "A velocity chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 8852,
+          "option_text": "A sprint backlog",
+          "is_correct": false
+        },
+        {
+          "option_id": 8853,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1648,
+      "subskill_id": 83,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set WIP limits?",
+      "options": [
+        {
+          "option_id": 8854,
+          "option_text": "By analyzing team capacity and workflow constraints",
+          "is_correct": true
+        },
+        {
+          "option_id": 8855,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8856,
+          "option_text": "By copying other teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 8857,
+          "option_text": "By ignoring WIP limits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1649,
+      "subskill_id": 83,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead time in Kanban?",
+      "options": [
+        {
+          "option_id": 8858,
+          "option_text": "The time from request to delivery",
+          "is_correct": true
+        },
+        {
+          "option_id": 8859,
+          "option_text": "The time spent on a single task",
+          "is_correct": false
+        },
+        {
+          "option_id": 8860,
+          "option_text": "The sprint duration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8861,
+          "option_text": "The time for retrospective",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1650,
+      "subskill_id": 83,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cycle time in Kanban?",
+      "options": [
+        {
+          "option_id": 8862,
+          "option_text": "The time from start to completion of a work item",
+          "is_correct": true
+        },
+        {
+          "option_id": 8863,
+          "option_text": "The time from request to delivery",
+          "is_correct": false
+        },
+        {
+          "option_id": 8864,
+          "option_text": "The sprint duration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8865,
+          "option_text": "The time for retrospective",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1651,
+      "subskill_id": 79,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle scope changes during a sprint?",
+      "options": [
+        {
+          "option_id": 8866,
+          "option_text": "By assessing impact and managing change requests carefully",
+          "is_correct": true
+        },
+        {
+          "option_id": 8867,
+          "option_text": "By accepting all changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8868,
+          "option_text": "By rejecting all changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8869,
+          "option_text": "By ignoring changes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1652,
+      "subskill_id": 79,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between sprint planning and release planning?",
+      "options": [
+        {
+          "option_id": 8870,
+          "option_text": "Sprint planning is for short-term sprint goals; release planning is for larger releases",
+          "is_correct": true
+        },
+        {
+          "option_id": 8871,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8872,
+          "option_text": "Release planning is for sprints",
+          "is_correct": false
+        },
+        {
+          "option_id": 8873,
+          "option_text": "Sprint planning is for releases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1653,
+      "subskill_id": 79,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you estimate large and complex user stories?",
+      "options": [
+        {
+          "option_id": 8874,
+          "option_text": "By breaking them down into smaller, manageable stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 8875,
+          "option_text": "By estimating them as one large item",
+          "is_correct": false
+        },
+        {
+          "option_id": 8876,
+          "option_text": "By avoiding them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8877,
+          "option_text": "By assigning them to someone else",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1654,
+      "subskill_id": 79,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of the product owner in sprint planning?",
+      "options": [
+        {
+          "option_id": 8878,
+          "option_text": "To ensure the sprint backlog aligns with product vision and stakeholder needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 8879,
+          "option_text": "To write code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8880,
+          "option_text": "To manage the team",
+          "is_correct": false
+        },
+        {
+          "option_id": 8881,
+          "option_text": "To review the sprint",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1655,
+      "subskill_id": 79,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage sprint planning in distributed teams?",
+      "options": [
+        {
+          "option_id": 8882,
+          "option_text": "By using collaboration tools and clear communication",
+          "is_correct": true
+        },
+        {
+          "option_id": 8883,
+          "option_text": "By ignoring remote team members",
+          "is_correct": false
+        },
+        {
+          "option_id": 8884,
+          "option_text": "By using only email",
+          "is_correct": false
+        },
+        {
+          "option_id": 8885,
+          "option_text": "By not planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1656,
+      "subskill_id": 80,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you keep retrospectives engaging?",
+      "options": [
+        {
+          "option_id": 8886,
+          "option_text": "By using different formats and activities to keep the team engaged",
+          "is_correct": true
+        },
+        {
+          "option_id": 8887,
+          "option_text": "By using the same format every time",
+          "is_correct": false
+        },
+        {
+          "option_id": 8888,
+          "option_text": "By skipping retrospectives",
+          "is_correct": false
+        },
+        {
+          "option_id": 8889,
+          "option_text": "By making them longer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1657,
+      "subskill_id": 80,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are anti-patterns in retrospectives?",
+      "options": [
+        {
+          "option_id": 8890,
+          "option_text": "Blaming, not taking action, and holding ineffective meetings",
+          "is_correct": true
+        },
+        {
+          "option_id": 8891,
+          "option_text": "Effective action",
+          "is_correct": false
+        },
+        {
+          "option_id": 8892,
+          "option_text": "Good communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 8893,
+          "option_text": "Clear improvements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1658,
+      "subskill_id": 80,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure retrospective effectiveness?",
+      "options": [
+        {
+          "option_id": 8894,
+          "option_text": "By tracking action items and their outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8895,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8896,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8897,
+          "option_text": "By copying previous retrospectives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1659,
+      "subskill_id": 80,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the \"Five Whys\" technique in retrospectives?",
+      "options": [
+        {
+          "option_id": 8898,
+          "option_text": "A technique to find root causes by asking \"why\" five times",
+          "is_correct": true
+        },
+        {
+          "option_id": 8899,
+          "option_text": "A sprint planning technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 8900,
+          "option_text": "A velocity tracking method",
+          "is_correct": false
+        },
+        {
+          "option_id": 8901,
+          "option_text": "A user story format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1660,
+      "subskill_id": 80,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you follow up on retrospective action items?",
+      "options": [
+        {
+          "option_id": 8902,
+          "option_text": "By reviewing action items in the next retrospective",
+          "is_correct": true
+        },
+        {
+          "option_id": 8903,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8904,
+          "option_text": "By deleting them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8905,
+          "option_text": "By not tracking them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1661,
+      "subskill_id": 81,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you normalize velocity across teams?",
+      "options": [
+        {
+          "option_id": 8906,
+          "option_text": "By using consistent estimation and story point definitions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8907,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8908,
+          "option_text": "By ignoring normalization",
+          "is_correct": false
+        },
+        {
+          "option_id": 8909,
+          "option_text": "By using different estimation methods for each team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1662,
+      "subskill_id": 81,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between velocity and throughput?",
+      "options": [
+        {
+          "option_id": 8910,
+          "option_text": "Velocity measures work completed; throughput measures work delivered",
+          "is_correct": true
+        },
+        {
+          "option_id": 8911,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8912,
+          "option_text": "Throughput measures work completed",
+          "is_correct": false
+        },
+        {
+          "option_id": 8913,
+          "option_text": "Velocity measures work delivered",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1663,
+      "subskill_id": 81,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use velocity for long-term planning?",
+      "options": [
+        {
+          "option_id": 8914,
+          "option_text": "By using average velocity to forecast future capacity",
+          "is_correct": true
+        },
+        {
+          "option_id": 8915,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8916,
+          "option_text": "By ignoring velocity",
+          "is_correct": false
+        },
+        {
+          "option_id": 8917,
+          "option_text": "By using a fixed number",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1664,
+      "subskill_id": 81,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the common pitfalls of using velocity?",
+      "options": [
+        {
+          "option_id": 8918,
+          "option_text": "Comparing velocity across teams and using it as a performance metric",
+          "is_correct": true
+        },
+        {
+          "option_id": 8919,
+          "option_text": "Using velocity for all decisions",
+          "is_correct": false
+        },
+        {
+          "option_id": 8920,
+          "option_text": "Ignoring velocity",
+          "is_correct": false
+        },
+        {
+          "option_id": 8921,
+          "option_text": "Using velocity to measure individual performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1665,
+      "subskill_id": 81,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you communicate velocity to stakeholders?",
+      "options": [
+        {
+          "option_id": 8922,
+          "option_text": "By explaining velocity as a planning tool, not a performance metric",
+          "is_correct": true
+        },
+        {
+          "option_id": 8923,
+          "option_text": "By avoiding stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 8924,
+          "option_text": "By not sharing velocity data",
+          "is_correct": false
+        },
+        {
+          "option_id": 8925,
+          "option_text": "By overpromising",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1666,
+      "subskill_id": 82,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you write user stories for non-functional requirements?",
+      "options": [
+        {
+          "option_id": 8926,
+          "option_text": "By describing them as user stories with acceptance criteria",
+          "is_correct": true
+        },
+        {
+          "option_id": 8927,
+          "option_text": "By writing them as tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 8928,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 8929,
+          "option_text": "By writing them in technical language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1667,
+      "subskill_id": 82,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of user stories in product discovery?",
+      "options": [
+        {
+          "option_id": 8930,
+          "option_text": "They help test hypotheses and validate product ideas",
+          "is_correct": true
+        },
+        {
+          "option_id": 8931,
+          "option_text": "They replace research",
+          "is_correct": false
+        },
+        {
+          "option_id": 8932,
+          "option_text": "They are only for development",
+          "is_correct": false
+        },
+        {
+          "option_id": 8933,
+          "option_text": "They are not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1668,
+      "subskill_id": 82,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prioritize user stories in a backlog?",
+      "options": [
+        {
+          "option_id": 8934,
+          "option_text": "By using value-based prioritization methods like MoSCoW or RICE",
+          "is_correct": true
+        },
+        {
+          "option_id": 8935,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8936,
+          "option_text": "By including everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 8937,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1669,
+      "subskill_id": 82,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a user story and a job story?",
+      "options": [
+        {
+          "option_id": 8938,
+          "option_text": "User stories are from the user's perspective; job stories describe tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 8939,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8940,
+          "option_text": "Job stories are from the user's perspective",
+          "is_correct": false
+        },
+        {
+          "option_id": 8941,
+          "option_text": "User stories describe tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1670,
+      "subskill_id": 82,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle dependencies between user stories?",
+      "options": [
+        {
+          "option_id": 8942,
+          "option_text": "By mapping dependencies and sequencing work",
+          "is_correct": true
+        },
+        {
+          "option_id": 8943,
+          "option_text": "By ignoring dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 8944,
+          "option_text": "By combining all stories",
+          "is_correct": false
+        },
+        {
+          "option_id": 8945,
+          "option_text": "By skipping planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1671,
+      "subskill_id": 83,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement Kanban for software development?",
+      "options": [
+        {
+          "option_id": 8946,
+          "option_text": "By setting up a board, defining workflow, and limiting WIP",
+          "is_correct": true
+        },
+        {
+          "option_id": 8947,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8948,
+          "option_text": "By conducting sprint planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 8949,
+          "option_text": "By holding retrospectives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1672,
+      "subskill_id": 83,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between Kanban and Scrum?",
+      "options": [
+        {
+          "option_id": 8950,
+          "option_text": "Kanban is continuous flow; Scrum is time-boxed iterations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8951,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8952,
+          "option_text": "Scrum is continuous flow",
+          "is_correct": false
+        },
+        {
+          "option_id": 8953,
+          "option_text": "Kanban is time-boxed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1673,
+      "subskill_id": 83,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure Kanban success?",
+      "options": [
+        {
+          "option_id": 8954,
+          "option_text": "By tracking lead time, cycle time, and throughput",
+          "is_correct": true
+        },
+        {
+          "option_id": 8955,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8956,
+          "option_text": "By ignoring measurements",
+          "is_correct": false
+        },
+        {
+          "option_id": 8957,
+          "option_text": "By copying other teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1674,
+      "subskill_id": 83,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of a Kanban board in Agile?",
+      "options": [
+        {
+          "option_id": 8958,
+          "option_text": "It visualizes work and helps manage flow",
+          "is_correct": true
+        },
+        {
+          "option_id": 8959,
+          "option_text": "It replaces the need for a backlog",
+          "is_correct": false
+        },
+        {
+          "option_id": 8960,
+          "option_text": "It is only for project managers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8961,
+          "option_text": "It is not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1675,
+      "subskill_id": 83,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you combine Kanban with Scrum?",
+      "options": [
+        {
+          "option_id": 8962,
+          "option_text": "By using Kanban for flow management and Scrum for planning",
+          "is_correct": true
+        },
+        {
+          "option_id": 8963,
+          "option_text": "By using only one method",
+          "is_correct": false
+        },
+        {
+          "option_id": 8964,
+          "option_text": "By ignoring both",
+          "is_correct": false
+        },
+        {
+          "option_id": 8965,
+          "option_text": "By using them separately",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1676,
+      "subskill_id": 79,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale sprint planning across multiple teams?",
+      "options": [
+        {
+          "option_id": 8966,
+          "option_text": "By using scaled Agile frameworks like SAFe or LeSS",
+          "is_correct": true
+        },
+        {
+          "option_id": 8967,
+          "option_text": "By having each team plan separately",
+          "is_correct": false
+        },
+        {
+          "option_id": 8968,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 8969,
+          "option_text": "By using only one team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1677,
+      "subskill_id": 79,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between sprint planning and PI planning?",
+      "options": [
+        {
+          "option_id": 8970,
+          "option_text": "Sprint planning is for sprints; PI planning is for Program Increments",
+          "is_correct": true
+        },
+        {
+          "option_id": 8971,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8972,
+          "option_text": "PI planning is for sprints",
+          "is_correct": false
+        },
+        {
+          "option_id": 8973,
+          "option_text": "Sprint planning is for Program Increments",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1678,
+      "subskill_id": 79,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle sprint planning in large-scale Agile frameworks?",
+      "options": [
+        {
+          "option_id": 8974,
+          "option_text": "By coordinating dependencies and aligning with program goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 8975,
+          "option_text": "By ignoring dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 8976,
+          "option_text": "By planning in isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8977,
+          "option_text": "By not aligning goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1679,
+      "subskill_id": 79,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of sprint planning in product strategy?",
+      "options": [
+        {
+          "option_id": 8978,
+          "option_text": "It ensures sprint work aligns with overall product strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 8979,
+          "option_text": "It is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 8980,
+          "option_text": "It replaces strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 8981,
+          "option_text": "It is only for project managers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1680,
+      "subskill_id": 79,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize sprint planning for complex projects?",
+      "options": [
+        {
+          "option_id": 8982,
+          "option_text": "By using data, team input, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 8983,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8984,
+          "option_text": "By copying previous sprints",
+          "is_correct": false
+        },
+        {
+          "option_id": 8985,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1681,
+      "subskill_id": 80,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale retrospectives across multiple teams?",
+      "options": [
+        {
+          "option_id": 8986,
+          "option_text": "By holding scaled retrospectives with representatives from each team",
+          "is_correct": true
+        },
+        {
+          "option_id": 8987,
+          "option_text": "By having each team retrospect alone",
+          "is_correct": false
+        },
+        {
+          "option_id": 8988,
+          "option_text": "By skipping retrospectives",
+          "is_correct": false
+        },
+        {
+          "option_id": 8989,
+          "option_text": "By not sharing learnings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1682,
+      "subskill_id": 80,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between team and program retrospectives?",
+      "options": [
+        {
+          "option_id": 8990,
+          "option_text": "Team retrospectives focus on team-level improvements; program retrospectives focus on cross-team improvements",
+          "is_correct": true
+        },
+        {
+          "option_id": 8991,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8992,
+          "option_text": "Program retrospectives are for teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 8993,
+          "option_text": "Team retrospectives are for programs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1683,
+      "subskill_id": 80,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure the ROI of retrospectives?",
+      "options": [
+        {
+          "option_id": 8994,
+          "option_text": "By tracking action items completed and improvements made",
+          "is_correct": true
+        },
+        {
+          "option_id": 8995,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8996,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 8997,
+          "option_text": "By copying previous results",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1684,
+      "subskill_id": 80,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are advanced retrospective techniques?",
+      "options": [
+        {
+          "option_id": 8998,
+          "option_text": "Systems thinking, appreciative inquiry, and futurespective",
+          "is_correct": true
+        },
+        {
+          "option_id": 8999,
+          "option_text": "Only one technique exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 9000,
+          "option_text": "Only appreciative inquiry",
+          "is_correct": false
+        },
+        {
+          "option_id": 9001,
+          "option_text": "Only systems thinking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1685,
+      "subskill_id": 80,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a culture of continuous improvement?",
+      "options": [
+        {
+          "option_id": 9002,
+          "option_text": "By encouraging open communication and acting on feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 9003,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 9004,
+          "option_text": "By blaming team members",
+          "is_correct": false
+        },
+        {
+          "option_id": 9005,
+          "option_text": "By avoiding retrospectives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1686,
+      "subskill_id": 81,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use velocity for portfolio planning?",
+      "options": [
+        {
+          "option_id": 9006,
+          "option_text": "By using velocity to forecast work for multiple teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 9007,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9008,
+          "option_text": "By ignoring velocity",
+          "is_correct": false
+        },
+        {
+          "option_id": 9009,
+          "option_text": "By using a fixed number",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1687,
+      "subskill_id": 81,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between velocity and predictability?",
+      "options": [
+        {
+          "option_id": 9010,
+          "option_text": "Velocity measures work done; predictability measures consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 9011,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9012,
+          "option_text": "Predictability measures work done",
+          "is_correct": false
+        },
+        {
+          "option_id": 9013,
+          "option_text": "Velocity measures consistency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1688,
+      "subskill_id": 81,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you balance velocity and quality?",
+      "options": [
+        {
+          "option_id": 9014,
+          "option_text": "By maintaining quality standards and not sacrificing quality for speed",
+          "is_correct": true
+        },
+        {
+          "option_id": 9015,
+          "option_text": "By ignoring quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 9016,
+          "option_text": "By prioritizing speed over quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 9017,
+          "option_text": "By skipping testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1689,
+      "subskill_id": 81,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use velocity for budgeting and forecasting?",
+      "options": [
+        {
+          "option_id": 9018,
+          "option_text": "By using historical velocity and trend analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 9019,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9020,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9021,
+          "option_text": "By using a fixed budget",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1690,
+      "subskill_id": 81,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the limitations of velocity as a metric?",
+      "options": [
+        {
+          "option_id": 9022,
+          "option_text": "Velocity is a planning metric, not a performance metric",
+          "is_correct": true
+        },
+        {
+          "option_id": 9023,
+          "option_text": "Velocity is always accurate",
+          "is_correct": false
+        },
+        {
+          "option_id": 9024,
+          "option_text": "Velocity measures quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 9025,
+          "option_text": "Velocity is a productivity metric",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1691,
+      "subskill_id": 82,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you write user stories for a global product?",
+      "options": [
+        {
+          "option_id": 9026,
+          "option_text": "By considering cultural differences and diverse user needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 9027,
+          "option_text": "By writing generic stories",
+          "is_correct": false
+        },
+        {
+          "option_id": 9028,
+          "option_text": "By ignoring regional differences",
+          "is_correct": false
+        },
+        {
+          "option_id": 9029,
+          "option_text": "By using only one perspective",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1692,
+      "subskill_id": 82,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of user stories in product-led growth?",
+      "options": [
+        {
+          "option_id": 9030,
+          "option_text": "They help drive product growth by aligning with user needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 9031,
+          "option_text": "They replace strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9032,
+          "option_text": "They are only for development",
+          "is_correct": false
+        },
+        {
+          "option_id": 9033,
+          "option_text": "They are not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1693,
+      "subskill_id": 82,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use user stories for innovation?",
+      "options": [
+        {
+          "option_id": 9034,
+          "option_text": "By using stories to explore new ideas and gather feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 9035,
+          "option_text": "By writing stories without testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9036,
+          "option_text": "By ignoring user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 9037,
+          "option_text": "By skipping discovery",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1694,
+      "subskill_id": 82,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between user stories and outcome-based requirements?",
+      "options": [
+        {
+          "option_id": 9038,
+          "option_text": "User stories focus on user needs; outcome-based requirements focus on business outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 9039,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9040,
+          "option_text": "Outcome-based requirements focus on user needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 9041,
+          "option_text": "User stories focus on business outcomes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1695,
+      "subskill_id": 82,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you evolve user stories over the product lifecycle?",
+      "options": [
+        {
+          "option_id": 9042,
+          "option_text": "By regularly reviewing and updating stories",
+          "is_correct": true
+        },
+        {
+          "option_id": 9043,
+          "option_text": "By ignoring changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 9044,
+          "option_text": "By keeping them static",
+          "is_correct": false
+        },
+        {
+          "option_id": 9045,
+          "option_text": "By deleting them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1696,
+      "subskill_id": 83,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement Kanban at enterprise scale?",
+      "options": [
+        {
+          "option_id": 9046,
+          "option_text": "By using scaled Kanban practices like portfolio Kanban",
+          "is_correct": true
+        },
+        {
+          "option_id": 9047,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 9048,
+          "option_text": "By using only one team",
+          "is_correct": false
+        },
+        {
+          "option_id": 9049,
+          "option_text": "By not adapting Kanban",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1697,
+      "subskill_id": 83,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between Kanban and Lean?",
+      "options": [
+        {
+          "option_id": 9050,
+          "option_text": "Lean is a philosophy; Kanban is a method for implementing Lean",
+          "is_correct": true
+        },
+        {
+          "option_id": 9051,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9052,
+          "option_text": "Kanban is a philosophy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9053,
+          "option_text": "Lean is a method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1698,
+      "subskill_id": 83,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure Kanban maturity?",
+      "options": [
+        {
+          "option_id": 9054,
+          "option_text": "By assessing flow efficiency, lead time, and maturity levels",
+          "is_correct": true
+        },
+        {
+          "option_id": 9055,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9056,
+          "option_text": "By ignoring maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 9057,
+          "option_text": "By copying other teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1699,
+      "subskill_id": 83,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of Kanban in DevOps?",
+      "options": [
+        {
+          "option_id": 9058,
+          "option_text": "It helps manage and improve workflow in DevOps processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 9059,
+          "option_text": "It is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 9060,
+          "option_text": "It replaces DevOps",
+          "is_correct": false
+        },
+        {
+          "option_id": 9061,
+          "option_text": "It is only for development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1700,
+      "subskill_id": 83,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize Kanban for complex workflows?",
+      "options": [
+        {
+          "option_id": 9062,
+          "option_text": "By continuous improvement and adapting Kanban to workflow needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 9063,
+          "option_text": "By keeping it static",
+          "is_correct": false
+        },
+        {
+          "option_id": 9064,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 9065,
+          "option_text": "By not adapting",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

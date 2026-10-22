@@ -1,0 +1,2906 @@
+{
+  "skill_id": 24,
+  "skill_name": "Natural Language Processing",
+  "questions": [
+    {
+      "question_id": 2301,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is text classification in NLP?",
+      "options": [
+        {
+          "option_id": 11466,
+          "option_text": "A process of categorizing text into predefined classes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11467,
+          "option_text": "A process of generating text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11468,
+          "option_text": "A process of translating text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11469,
+          "option_text": "A process of summarizing text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2302,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a text classifier?",
+      "options": [
+        {
+          "option_id": 11470,
+          "option_text": "A model that categorizes text into predefined classes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11471,
+          "option_text": "A model that generates text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11472,
+          "option_text": "A model that translates text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11473,
+          "option_text": "A model that summarizes text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2303,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a training set in text classification?",
+      "options": [
+        {
+          "option_id": 11474,
+          "option_text": "A dataset used to train a text classifier",
+          "is_correct": true
+        },
+        {
+          "option_id": 11475,
+          "option_text": "A dataset used to test a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11476,
+          "option_text": "A dataset used to validate a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11477,
+          "option_text": "A dataset used to deploy a text classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2304,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test set in text classification?",
+      "options": [
+        {
+          "option_id": 11478,
+          "option_text": "A dataset used to evaluate a text classifier",
+          "is_correct": true
+        },
+        {
+          "option_id": 11479,
+          "option_text": "A dataset used to train a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11480,
+          "option_text": "A dataset used to validate a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11481,
+          "option_text": "A dataset used to deploy a text classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2305,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is sentiment analysis?",
+      "options": [
+        {
+          "option_id": 11482,
+          "option_text": "A process of identifying the sentiment or emotion in text",
+          "is_correct": true
+        },
+        {
+          "option_id": 11483,
+          "option_text": "A process of categorizing text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11484,
+          "option_text": "A process of generating text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11485,
+          "option_text": "A process of translating text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2306,
+      "subskill_id": 113,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is spam detection?",
+      "options": [
+        {
+          "option_id": 11486,
+          "option_text": "A process of identifying spam messages",
+          "is_correct": true
+        },
+        {
+          "option_id": 11487,
+          "option_text": "A process of sentiment analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 11488,
+          "option_text": "A process of text generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11489,
+          "option_text": "A process of text translation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2307,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are word embeddings?",
+      "options": [
+        {
+          "option_id": 11490,
+          "option_text": "A way to represent text as numerical vectors",
+          "is_correct": true
+        },
+        {
+          "option_id": 11491,
+          "option_text": "A way to represent text as images",
+          "is_correct": false
+        },
+        {
+          "option_id": 11492,
+          "option_text": "A way to represent text as audio",
+          "is_correct": false
+        },
+        {
+          "option_id": 11493,
+          "option_text": "A way to represent text as video",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2308,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a vector in NLP?",
+      "options": [
+        {
+          "option_id": 11494,
+          "option_text": "A numerical representation of text",
+          "is_correct": true
+        },
+        {
+          "option_id": 11495,
+          "option_text": "A graphical representation of text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11496,
+          "option_text": "An audio representation of text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11497,
+          "option_text": "A video representation of text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2309,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Word2Vec?",
+      "options": [
+        {
+          "option_id": 11498,
+          "option_text": "A popular algorithm for learning word embeddings",
+          "is_correct": true
+        },
+        {
+          "option_id": 11499,
+          "option_text": "A popular algorithm for text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11500,
+          "option_text": "A popular algorithm for text generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11501,
+          "option_text": "A popular algorithm for text translation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2310,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is GloVe?",
+      "options": [
+        {
+          "option_id": 11502,
+          "option_text": "A popular algorithm for learning word embeddings",
+          "is_correct": true
+        },
+        {
+          "option_id": 11503,
+          "option_text": "A popular algorithm for text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11504,
+          "option_text": "A popular algorithm for text generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11505,
+          "option_text": "A popular algorithm for text translation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2311,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dense vector?",
+      "options": [
+        {
+          "option_id": 11506,
+          "option_text": "A vector with many non-zero values",
+          "is_correct": true
+        },
+        {
+          "option_id": 11507,
+          "option_text": "A vector with many zero values",
+          "is_correct": false
+        },
+        {
+          "option_id": 11508,
+          "option_text": "A vector with only one non-zero value",
+          "is_correct": false
+        },
+        {
+          "option_id": 11509,
+          "option_text": "A vector with no values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2312,
+      "subskill_id": 114,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sparse vector?",
+      "options": [
+        {
+          "option_id": 11510,
+          "option_text": "A vector with many zero values",
+          "is_correct": true
+        },
+        {
+          "option_id": 11511,
+          "option_text": "A vector with many non-zero values",
+          "is_correct": false
+        },
+        {
+          "option_id": 11512,
+          "option_text": "A vector with only one non-zero value",
+          "is_correct": false
+        },
+        {
+          "option_id": 11513,
+          "option_text": "A vector with no values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2313,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Large Language Model (LLM)?",
+      "options": [
+        {
+          "option_id": 11514,
+          "option_text": "A large neural network model trained on vast amounts of text",
+          "is_correct": true
+        },
+        {
+          "option_id": 11515,
+          "option_text": "A small neural network model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11516,
+          "option_text": "A traditional machine learning model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11517,
+          "option_text": "A statistical model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2314,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pre-trained model?",
+      "options": [
+        {
+          "option_id": 11518,
+          "option_text": "A model that has been trained on a large dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 11519,
+          "option_text": "A model that has not been trained",
+          "is_correct": false
+        },
+        {
+          "option_id": 11520,
+          "option_text": "A model that is trained from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 11521,
+          "option_text": "A model that is randomly initialized",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2315,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is fine-tuning?",
+      "options": [
+        {
+          "option_id": 11522,
+          "option_text": "The process of adapting a pre-trained model to a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 11523,
+          "option_text": "The process of training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 11524,
+          "option_text": "The process of evaluating a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11525,
+          "option_text": "The process of deploying a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2316,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a transformer?",
+      "options": [
+        {
+          "option_id": 11526,
+          "option_text": "A neural network architecture based on self-attention",
+          "is_correct": true
+        },
+        {
+          "option_id": 11527,
+          "option_text": "A neural network architecture based on RNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 11528,
+          "option_text": "A neural network architecture based on CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 11529,
+          "option_text": "A neural network architecture based on GAN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2317,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is GPT?",
+      "options": [
+        {
+          "option_id": 11530,
+          "option_text": "A transformer-based LLM developed by OpenAI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11531,
+          "option_text": "A transformer-based LLM developed by Google",
+          "is_correct": false
+        },
+        {
+          "option_id": 11532,
+          "option_text": "A transformer-based LLM developed by Meta",
+          "is_correct": false
+        },
+        {
+          "option_id": 11533,
+          "option_text": "A transformer-based LLM developed by Microsoft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2318,
+      "subskill_id": 115,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is BERT?",
+      "options": [
+        {
+          "option_id": 11534,
+          "option_text": "A transformer-based LLM developed by Google",
+          "is_correct": true
+        },
+        {
+          "option_id": 11535,
+          "option_text": "A transformer-based LLM developed by OpenAI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11536,
+          "option_text": "A transformer-based LLM developed by Meta",
+          "is_correct": false
+        },
+        {
+          "option_id": 11537,
+          "option_text": "A transformer-based LLM developed by Microsoft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2319,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is prompt engineering?",
+      "options": [
+        {
+          "option_id": 11538,
+          "option_text": "The process of designing prompts to interact with AI models",
+          "is_correct": true
+        },
+        {
+          "option_id": 11539,
+          "option_text": "The process of training AI models",
+          "is_correct": false
+        },
+        {
+          "option_id": 11540,
+          "option_text": "The process of evaluating AI models",
+          "is_correct": false
+        },
+        {
+          "option_id": 11541,
+          "option_text": "The process of deploying AI models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2320,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a prompt in AI?",
+      "options": [
+        {
+          "option_id": 11542,
+          "option_text": "A question or instruction given to an AI model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11543,
+          "option_text": "A response from an AI model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11544,
+          "option_text": "A training example for an AI model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11545,
+          "option_text": "A parameter of an AI model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2321,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a zero-shot prompt?",
+      "options": [
+        {
+          "option_id": 11546,
+          "option_text": "A prompt that asks the model to perform a task without examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 11547,
+          "option_text": "A prompt that provides examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11548,
+          "option_text": "A prompt that asks for a chain of thought",
+          "is_correct": false
+        },
+        {
+          "option_id": 11549,
+          "option_text": "A prompt that asks for a structured response",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2322,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a few-shot prompt?",
+      "options": [
+        {
+          "option_id": 11550,
+          "option_text": "A prompt that provides a few examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 11551,
+          "option_text": "A prompt that provides no examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11552,
+          "option_text": "A prompt that asks for a chain of thought",
+          "is_correct": false
+        },
+        {
+          "option_id": 11553,
+          "option_text": "A prompt that asks for a structured response",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2323,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought prompt?",
+      "options": [
+        {
+          "option_id": 11554,
+          "option_text": "A prompt that asks the model to think step-by-step",
+          "is_correct": true
+        },
+        {
+          "option_id": 11555,
+          "option_text": "A prompt that asks the model to respond without reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11556,
+          "option_text": "A prompt that provides examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11557,
+          "option_text": "A prompt that asks for a structured response",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2324,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a structured prompt?",
+      "options": [
+        {
+          "option_id": 11558,
+          "option_text": "A prompt that specifies a format for the response",
+          "is_correct": true
+        },
+        {
+          "option_id": 11559,
+          "option_text": "A prompt that asks for a free-form response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11560,
+          "option_text": "A prompt that provides examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11561,
+          "option_text": "A prompt that asks for a chain of thought",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2325,
+      "subskill_id": 116,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a conversational prompt?",
+      "options": [
+        {
+          "option_id": 11562,
+          "option_text": "A prompt that is designed for a conversation",
+          "is_correct": true
+        },
+        {
+          "option_id": 11563,
+          "option_text": "A prompt that is designed for a single response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11564,
+          "option_text": "A prompt that provides examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11565,
+          "option_text": "A prompt that asks for a structured response",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2326,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a text classifier?",
+      "options": [
+        {
+          "option_id": 11566,
+          "option_text": "By collecting labeled data, extracting features, and training a model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11567,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11568,
+          "option_text": "By copying an existing classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11569,
+          "option_text": "By using a pre-built classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2327,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a feature in text classification?",
+      "options": [
+        {
+          "option_id": 11570,
+          "option_text": "A characteristic of the text used for classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11571,
+          "option_text": "A label in text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11572,
+          "option_text": "A dataset in text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11573,
+          "option_text": "A model in text classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2328,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a label in text classification?",
+      "options": [
+        {
+          "option_id": 11574,
+          "option_text": "A category assigned to text in classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11575,
+          "option_text": "A feature in text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11576,
+          "option_text": "A dataset in text classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11577,
+          "option_text": "A model in text classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2329,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a confusion matrix in text classification?",
+      "options": [
+        {
+          "option_id": 11578,
+          "option_text": "A table used to evaluate classifier performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11579,
+          "option_text": "A table used to train a classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11580,
+          "option_text": "A table used to test a classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11581,
+          "option_text": "A table used to deploy a classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2330,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is accuracy in text classification?",
+      "options": [
+        {
+          "option_id": 11582,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11583,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 11584,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 11585,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2331,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create word embeddings?",
+      "options": [
+        {
+          "option_id": 11586,
+          "option_text": "By training a model on a large corpus of text",
+          "is_correct": true
+        },
+        {
+          "option_id": 11587,
+          "option_text": "By manually assigning vectors",
+          "is_correct": false
+        },
+        {
+          "option_id": 11588,
+          "option_text": "By copying existing embeddings",
+          "is_correct": false
+        },
+        {
+          "option_id": 11589,
+          "option_text": "By using random vectors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2332,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between Word2Vec and GloVe?",
+      "options": [
+        {
+          "option_id": 11590,
+          "option_text": "Word2Vec uses continuous bag-of-words and skip-gram; GloVe uses global matrix factorization",
+          "is_correct": true
+        },
+        {
+          "option_id": 11591,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 11592,
+          "option_text": "GloVe uses continuous bag-of-words",
+          "is_correct": false
+        },
+        {
+          "option_id": 11593,
+          "option_text": "Word2Vec uses global matrix factorization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2333,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sentence embedding?",
+      "options": [
+        {
+          "option_id": 11594,
+          "option_text": "A vector representation of a sentence",
+          "is_correct": true
+        },
+        {
+          "option_id": 11595,
+          "option_text": "A vector representation of a word",
+          "is_correct": false
+        },
+        {
+          "option_id": 11596,
+          "option_text": "A vector representation of a document",
+          "is_correct": false
+        },
+        {
+          "option_id": 11597,
+          "option_text": "A vector representation of a character",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2334,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a contextual embedding?",
+      "options": [
+        {
+          "option_id": 11598,
+          "option_text": "An embedding that depends on the context of a word",
+          "is_correct": true
+        },
+        {
+          "option_id": 11599,
+          "option_text": "An embedding that is fixed for each word",
+          "is_correct": false
+        },
+        {
+          "option_id": 11600,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11601,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2335,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the embedding layer in a neural network?",
+      "options": [
+        {
+          "option_id": 11602,
+          "option_text": "A layer that maps discrete tokens to dense vectors",
+          "is_correct": true
+        },
+        {
+          "option_id": 11603,
+          "option_text": "A layer that maps dense vectors to tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 11604,
+          "option_text": "A layer that performs classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11605,
+          "option_text": "A layer that performs regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2336,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you fine-tune an LLM?",
+      "options": [
+        {
+          "option_id": 11606,
+          "option_text": "By training the model on a task-specific dataset",
+          "is_correct": true
+        },
+        {
+          "option_id": 11607,
+          "option_text": "By retraining the model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 11608,
+          "option_text": "By randomly initializing the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11609,
+          "option_text": "By using a pre-built model without fine-tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2337,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a parameter in an LLM?",
+      "options": [
+        {
+          "option_id": 11610,
+          "option_text": "A number that represents the model's internal state",
+          "is_correct": true
+        },
+        {
+          "option_id": 11611,
+          "option_text": "A dataset used for training",
+          "is_correct": false
+        },
+        {
+          "option_id": 11612,
+          "option_text": "A hyperparameter",
+          "is_correct": false
+        },
+        {
+          "option_id": 11613,
+          "option_text": "A metric for evaluation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2338,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is inference in LLMs?",
+      "options": [
+        {
+          "option_id": 11614,
+          "option_text": "The process of using a trained model to make predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11615,
+          "option_text": "The process of training a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11616,
+          "option_text": "The process of fine-tuning a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11617,
+          "option_text": "The process of evaluating a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2339,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is tokenization in LLMs?",
+      "options": [
+        {
+          "option_id": 11618,
+          "option_text": "The process of converting text into tokens",
+          "is_correct": true
+        },
+        {
+          "option_id": 11619,
+          "option_text": "The process of converting tokens into text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11620,
+          "option_text": "The process of converting text into embeddings",
+          "is_correct": false
+        },
+        {
+          "option_id": 11621,
+          "option_text": "The process of converting embeddings into text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2340,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a token in LLMs?",
+      "options": [
+        {
+          "option_id": 11622,
+          "option_text": "A unit of text in an LLM, like a word or subword",
+          "is_correct": true
+        },
+        {
+          "option_id": 11623,
+          "option_text": "A parameter in an LLM",
+          "is_correct": false
+        },
+        {
+          "option_id": 11624,
+          "option_text": "A layer in an LLM",
+          "is_correct": false
+        },
+        {
+          "option_id": 11625,
+          "option_text": "A metric in an LLM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2341,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design effective prompts?",
+      "options": [
+        {
+          "option_id": 11626,
+          "option_text": "By using clear instructions, context, and examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 11627,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11628,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11629,
+          "option_text": "By avoiding context",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2342,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a system prompt?",
+      "options": [
+        {
+          "option_id": 11630,
+          "option_text": "A prompt that sets the context for the AI model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11631,
+          "option_text": "A prompt that asks for a user response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11632,
+          "option_text": "A prompt that gives an instruction",
+          "is_correct": false
+        },
+        {
+          "option_id": 11633,
+          "option_text": "A prompt that assigns a role",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2343,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a user prompt?",
+      "options": [
+        {
+          "option_id": 11634,
+          "option_text": "A prompt that asks for a user response",
+          "is_correct": true
+        },
+        {
+          "option_id": 11635,
+          "option_text": "A prompt that sets the context for the AI model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11636,
+          "option_text": "A prompt that gives an instruction",
+          "is_correct": false
+        },
+        {
+          "option_id": 11637,
+          "option_text": "A prompt that assigns a role",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2344,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an instruction prompt?",
+      "options": [
+        {
+          "option_id": 11638,
+          "option_text": "A prompt that gives a specific instruction to the AI model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11639,
+          "option_text": "A prompt that sets the context",
+          "is_correct": false
+        },
+        {
+          "option_id": 11640,
+          "option_text": "A prompt that asks for a user response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11641,
+          "option_text": "A prompt that assigns a role",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2345,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a role-based prompt?",
+      "options": [
+        {
+          "option_id": 11642,
+          "option_text": "A prompt that assigns a role to the AI model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11643,
+          "option_text": "A prompt that sets the context",
+          "is_correct": false
+        },
+        {
+          "option_id": 11644,
+          "option_text": "A prompt that asks for a user response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11645,
+          "option_text": "A prompt that gives an instruction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2346,
+      "subskill_id": 113,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a text classification dataset?",
+      "options": [
+        {
+          "option_id": 11646,
+          "option_text": "A dataset used to train a text classifier",
+          "is_correct": true
+        },
+        {
+          "option_id": 11647,
+          "option_text": "A dataset used to test a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11648,
+          "option_text": "A dataset used to validate a text classifier",
+          "is_correct": false
+        },
+        {
+          "option_id": 11649,
+          "option_text": "A dataset used to deploy a text classifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2347,
+      "subskill_id": 114,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is FastText?",
+      "options": [
+        {
+          "option_id": 11650,
+          "option_text": "A library for learning word embeddings and text classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 11651,
+          "option_text": "A library for deep learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11652,
+          "option_text": "A library for NLP",
+          "is_correct": false
+        },
+        {
+          "option_id": 11653,
+          "option_text": "A library for computer vision",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2348,
+      "subskill_id": 115,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a hallucination in LLMs?",
+      "options": [
+        {
+          "option_id": 11654,
+          "option_text": "An instance where an LLM generates plausible but incorrect information",
+          "is_correct": true
+        },
+        {
+          "option_id": 11655,
+          "option_text": "An instance where an LLM generates correct information",
+          "is_correct": false
+        },
+        {
+          "option_id": 11656,
+          "option_text": "An instance where an LLM generates no information",
+          "is_correct": false
+        },
+        {
+          "option_id": 11657,
+          "option_text": "An instance where an LLM generates random information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2349,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a multi-shot prompt?",
+      "options": [
+        {
+          "option_id": 11658,
+          "option_text": "A prompt that provides multiple examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 11659,
+          "option_text": "A prompt that provides one example",
+          "is_correct": false
+        },
+        {
+          "option_id": 11660,
+          "option_text": "A prompt that provides no examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11661,
+          "option_text": "A prompt that asks for a chain of thought",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2350,
+      "subskill_id": 116,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a self-consistency prompt?",
+      "options": [
+        {
+          "option_id": 11662,
+          "option_text": "A prompt that asks the model to generate multiple responses and select the most consistent one",
+          "is_correct": true
+        },
+        {
+          "option_id": 11663,
+          "option_text": "A prompt that asks the model to generate a single response",
+          "is_correct": false
+        },
+        {
+          "option_id": 11664,
+          "option_text": "A prompt that asks the model to generate a chain of thought",
+          "is_correct": false
+        },
+        {
+          "option_id": 11665,
+          "option_text": "A prompt that asks the model to generate a structured response",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2351,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you evaluate a text classifier?",
+      "options": [
+        {
+          "option_id": 11666,
+          "option_text": "By using metrics like accuracy, precision, recall, and F1-score",
+          "is_correct": true
+        },
+        {
+          "option_id": 11667,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11668,
+          "option_text": "By ignoring evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11669,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2352,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is precision in text classification?",
+      "options": [
+        {
+          "option_id": 11670,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": true
+        },
+        {
+          "option_id": 11671,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 11672,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 11673,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2353,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is recall in text classification?",
+      "options": [
+        {
+          "option_id": 11674,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": true
+        },
+        {
+          "option_id": 11675,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 11676,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 11677,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2354,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is F1-score in text classification?",
+      "options": [
+        {
+          "option_id": 11678,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": true
+        },
+        {
+          "option_id": 11679,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 11680,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 11681,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2355,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the ROC curve in text classification?",
+      "options": [
+        {
+          "option_id": 11682,
+          "option_text": "A curve showing the trade-off between true positive and false positive rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 11683,
+          "option_text": "A curve showing the trade-off between precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 11684,
+          "option_text": "A curve showing the trade-off between accuracy and F1-score",
+          "is_correct": false
+        },
+        {
+          "option_id": 11685,
+          "option_text": "A curve showing the trade-off between bias and variance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2356,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use embeddings in NLP tasks?",
+      "options": [
+        {
+          "option_id": 11686,
+          "option_text": "By using them as features in downstream NLP tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11687,
+          "option_text": "By ignoring them",
+          "is_correct": false
+        },
+        {
+          "option_id": 11688,
+          "option_text": "By using them as labels",
+          "is_correct": false
+        },
+        {
+          "option_id": 11689,
+          "option_text": "By using them as models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2357,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between word-level and character-level embeddings?",
+      "options": [
+        {
+          "option_id": 11690,
+          "option_text": "Word-level embeddings represent words; character-level embeddings represent characters",
+          "is_correct": true
+        },
+        {
+          "option_id": 11691,
+          "option_text": "Character-level embeddings represent words; word-level embeddings represent characters",
+          "is_correct": false
+        },
+        {
+          "option_id": 11692,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 11693,
+          "option_text": "Word-level embeddings are for English; character-level embeddings are for other languages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2358,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a document embedding?",
+      "options": [
+        {
+          "option_id": 11694,
+          "option_text": "A vector representation of a document",
+          "is_correct": true
+        },
+        {
+          "option_id": 11695,
+          "option_text": "A vector representation of a word",
+          "is_correct": false
+        },
+        {
+          "option_id": 11696,
+          "option_text": "A vector representation of a sentence",
+          "is_correct": false
+        },
+        {
+          "option_id": 11697,
+          "option_text": "A vector representation of a character",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2359,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a transformer-based embedding?",
+      "options": [
+        {
+          "option_id": 11698,
+          "option_text": "An embedding generated by a transformer model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11699,
+          "option_text": "An embedding generated by Word2Vec",
+          "is_correct": false
+        },
+        {
+          "option_id": 11700,
+          "option_text": "An embedding generated by GloVe",
+          "is_correct": false
+        },
+        {
+          "option_id": 11701,
+          "option_text": "An embedding generated by FastText",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2360,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the dimensionality of embeddings?",
+      "options": [
+        {
+          "option_id": 11702,
+          "option_text": "The number of dimensions in an embedding vector",
+          "is_correct": true
+        },
+        {
+          "option_id": 11703,
+          "option_text": "The size of the vocabulary",
+          "is_correct": false
+        },
+        {
+          "option_id": 11704,
+          "option_text": "The number of layers in a neural network",
+          "is_correct": false
+        },
+        {
+          "option_id": 11705,
+          "option_text": "The number of parameters in a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2361,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prompt an LLM effectively?",
+      "options": [
+        {
+          "option_id": 11706,
+          "option_text": "By using clear, structured prompts with context and instructions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11707,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11708,
+          "option_text": "By using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11709,
+          "option_text": "By avoiding context",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2362,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chain-of-thought reasoning in LLMs?",
+      "options": [
+        {
+          "option_id": 11710,
+          "option_text": "A method where the model reasons step-by-step to answer a prompt",
+          "is_correct": true
+        },
+        {
+          "option_id": 11711,
+          "option_text": "A method where the model answers without reasoning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11712,
+          "option_text": "A method where the model uses examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11713,
+          "option_text": "A method where the model uses structured prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2363,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a zero-shot reasoning in LLMs?",
+      "options": [
+        {
+          "option_id": 11714,
+          "option_text": "A method where the model answers without any examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 11715,
+          "option_text": "A method where the model uses examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11716,
+          "option_text": "A method where the model reasons step-by-step",
+          "is_correct": false
+        },
+        {
+          "option_id": 11717,
+          "option_text": "A method where the model uses structured prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2364,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a few-shot reasoning in LLMs?",
+      "options": [
+        {
+          "option_id": 11718,
+          "option_text": "A method where the model uses a few examples to answer",
+          "is_correct": true
+        },
+        {
+          "option_id": 11719,
+          "option_text": "A method where the model answers without examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 11720,
+          "option_text": "A method where the model reasons step-by-step",
+          "is_correct": false
+        },
+        {
+          "option_id": 11721,
+          "option_text": "A method where the model uses structured prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2365,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an instruction-tuned LLM?",
+      "options": [
+        {
+          "option_id": 11722,
+          "option_text": "An LLM that has been fine-tuned to follow instructions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11723,
+          "option_text": "An LLM that has not been fine-tuned",
+          "is_correct": false
+        },
+        {
+          "option_id": 11724,
+          "option_text": "An LLM that is only for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 11725,
+          "option_text": "An LLM that is only for generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2366,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize prompts for LLMs?",
+      "options": [
+        {
+          "option_id": 11726,
+          "option_text": "By using iterative testing and refinement of prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 11727,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11728,
+          "option_text": "By using the same prompt for all tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 11729,
+          "option_text": "By avoiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2367,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is prompt chaining?",
+      "options": [
+        {
+          "option_id": 11730,
+          "option_text": "A technique where multiple prompts are linked together",
+          "is_correct": true
+        },
+        {
+          "option_id": 11731,
+          "option_text": "A technique where a single prompt is used",
+          "is_correct": false
+        },
+        {
+          "option_id": 11732,
+          "option_text": "A technique where prompts are ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 11733,
+          "option_text": "A technique where prompts are random",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2368,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is prompt templating?",
+      "options": [
+        {
+          "option_id": 11734,
+          "option_text": "A technique where prompts are generated from templates",
+          "is_correct": true
+        },
+        {
+          "option_id": 11735,
+          "option_text": "A technique where prompts are manually written",
+          "is_correct": false
+        },
+        {
+          "option_id": 11736,
+          "option_text": "A technique where prompts are ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 11737,
+          "option_text": "A technique where prompts are random",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2369,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a dynamic prompt?",
+      "options": [
+        {
+          "option_id": 11738,
+          "option_text": "A prompt that changes based on the input",
+          "is_correct": true
+        },
+        {
+          "option_id": 11739,
+          "option_text": "A prompt that is static",
+          "is_correct": false
+        },
+        {
+          "option_id": 11740,
+          "option_text": "A prompt that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11741,
+          "option_text": "A prompt that is ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2370,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt injection attack?",
+      "options": [
+        {
+          "option_id": 11742,
+          "option_text": "An attack where an attacker injects malicious prompts to manipulate the model",
+          "is_correct": true
+        },
+        {
+          "option_id": 11743,
+          "option_text": "A technique for optimizing prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11744,
+          "option_text": "A technique for evaluating prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11745,
+          "option_text": "A technique for generating prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2371,
+      "subskill_id": 113,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a multi-label text classification?",
+      "options": [
+        {
+          "option_id": 11746,
+          "option_text": "A classification task where each text can belong to multiple categories",
+          "is_correct": true
+        },
+        {
+          "option_id": 11747,
+          "option_text": "A classification task where each text belongs to one category",
+          "is_correct": false
+        },
+        {
+          "option_id": 11748,
+          "option_text": "A classification task where each text belongs to no category",
+          "is_correct": false
+        },
+        {
+          "option_id": 11749,
+          "option_text": "A classification task where each text belongs to all categories",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2372,
+      "subskill_id": 114,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a multilingual embedding?",
+      "options": [
+        {
+          "option_id": 11750,
+          "option_text": "An embedding that works across multiple languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 11751,
+          "option_text": "An embedding that works in only one language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11752,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11753,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2373,
+      "subskill_id": 115,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a multimodal LLM?",
+      "options": [
+        {
+          "option_id": 11754,
+          "option_text": "An LLM that can process multiple modalities like text and images",
+          "is_correct": true
+        },
+        {
+          "option_id": 11755,
+          "option_text": "An LLM that can process only text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11756,
+          "option_text": "An LLM that can process only images",
+          "is_correct": false
+        },
+        {
+          "option_id": 11757,
+          "option_text": "An LLM that can process only audio",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2374,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt library?",
+      "options": [
+        {
+          "option_id": 11758,
+          "option_text": "A collection of pre-built prompts for common tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11759,
+          "option_text": "A collection of models",
+          "is_correct": false
+        },
+        {
+          "option_id": 11760,
+          "option_text": "A collection of datasets",
+          "is_correct": false
+        },
+        {
+          "option_id": 11761,
+          "option_text": "A collection of evaluation metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2375,
+      "subskill_id": 116,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prompt versioning?",
+      "options": [
+        {
+          "option_id": 11762,
+          "option_text": "The practice of tracking and managing different versions of prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 11763,
+          "option_text": "The practice of ignoring prompt changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 11764,
+          "option_text": "The practice of using only one prompt",
+          "is_correct": false
+        },
+        {
+          "option_id": 11765,
+          "option_text": "The practice of using random prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2376,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you deploy a text classifier?",
+      "options": [
+        {
+          "option_id": 11766,
+          "option_text": "By using model serving platforms like TensorFlow Serving or TorchServe",
+          "is_correct": true
+        },
+        {
+          "option_id": 11767,
+          "option_text": "By manually serving the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11768,
+          "option_text": "By ignoring deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11769,
+          "option_text": "By using a spreadsheet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2377,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you monitor a text classifier?",
+      "options": [
+        {
+          "option_id": 11770,
+          "option_text": "By tracking metrics like accuracy, precision, recall, and F1-score over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 11771,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11772,
+          "option_text": "By ignoring monitoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 11773,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2378,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you update a text classifier?",
+      "options": [
+        {
+          "option_id": 11774,
+          "option_text": "By retraining the model with new data periodically",
+          "is_correct": true
+        },
+        {
+          "option_id": 11775,
+          "option_text": "By ignoring updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 11776,
+          "option_text": "By manually updating the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11777,
+          "option_text": "By using the same model forever",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2379,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a text classifier versioning?",
+      "options": [
+        {
+          "option_id": 11778,
+          "option_text": "The practice of versioning text classifiers to track changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11779,
+          "option_text": "The practice of ignoring versioning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11780,
+          "option_text": "The practice of using only one version",
+          "is_correct": false
+        },
+        {
+          "option_id": 11781,
+          "option_text": "The practice of using random versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2380,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a text classifier governance?",
+      "options": [
+        {
+          "option_id": 11782,
+          "option_text": "The process of managing text classifiers in production",
+          "is_correct": true
+        },
+        {
+          "option_id": 11783,
+          "option_text": "The process of ignoring text classifiers",
+          "is_correct": false
+        },
+        {
+          "option_id": 11784,
+          "option_text": "The process of manually managing text classifiers",
+          "is_correct": false
+        },
+        {
+          "option_id": 11785,
+          "option_text": "The process of using spreadsheets for text classifiers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2381,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you fine-tune embeddings?",
+      "options": [
+        {
+          "option_id": 11786,
+          "option_text": "By training embeddings on task-specific data",
+          "is_correct": true
+        },
+        {
+          "option_id": 11787,
+          "option_text": "By using pre-trained embeddings without fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11788,
+          "option_text": "By ignoring fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11789,
+          "option_text": "By using random embeddings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2382,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a cross-lingual embedding?",
+      "options": [
+        {
+          "option_id": 11790,
+          "option_text": "An embedding that maps words across multiple languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 11791,
+          "option_text": "An embedding that works in only one language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11792,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11793,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2383,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a contextualized embedding?",
+      "options": [
+        {
+          "option_id": 11794,
+          "option_text": "An embedding that changes based on the context of a word",
+          "is_correct": true
+        },
+        {
+          "option_id": 11795,
+          "option_text": "An embedding that is fixed for each word",
+          "is_correct": false
+        },
+        {
+          "option_id": 11796,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11797,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2384,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a knowledge graph embedding?",
+      "options": [
+        {
+          "option_id": 11798,
+          "option_text": "An embedding that incorporates information from a knowledge graph",
+          "is_correct": true
+        },
+        {
+          "option_id": 11799,
+          "option_text": "An embedding that ignores knowledge graphs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11800,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11801,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2385,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a graph-based embedding?",
+      "options": [
+        {
+          "option_id": 11802,
+          "option_text": "An embedding that is generated from a graph structure",
+          "is_correct": true
+        },
+        {
+          "option_id": 11803,
+          "option_text": "An embedding that ignores graph structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 11804,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11805,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2386,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you benchmark LLMs?",
+      "options": [
+        {
+          "option_id": 11806,
+          "option_text": "By using standardized benchmarks like GLUE, SuperGLUE, and MMLU",
+          "is_correct": true
+        },
+        {
+          "option_id": 11807,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11808,
+          "option_text": "By ignoring benchmarking",
+          "is_correct": false
+        },
+        {
+          "option_id": 11809,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2387,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you evaluate LLMs?",
+      "options": [
+        {
+          "option_id": 11810,
+          "option_text": "By using metrics like accuracy, perplexity, and human evaluation",
+          "is_correct": true
+        },
+        {
+          "option_id": 11811,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11812,
+          "option_text": "By ignoring evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11813,
+          "option_text": "By using only accuracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2388,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you align LLMs?",
+      "options": [
+        {
+          "option_id": 11814,
+          "option_text": "By using techniques like reinforcement learning from human feedback (RLHF)",
+          "is_correct": true
+        },
+        {
+          "option_id": 11815,
+          "option_text": "By ignoring alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11816,
+          "option_text": "By using random alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11817,
+          "option_text": "By using manual alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2389,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you mitigate LLM biases?",
+      "options": [
+        {
+          "option_id": 11818,
+          "option_text": "By using debiasing techniques and diverse training data",
+          "is_correct": true
+        },
+        {
+          "option_id": 11819,
+          "option_text": "By ignoring biases",
+          "is_correct": false
+        },
+        {
+          "option_id": 11820,
+          "option_text": "By using biased data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11821,
+          "option_text": "By using random data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2390,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you ensure LLM safety?",
+      "options": [
+        {
+          "option_id": 11822,
+          "option_text": "By using safety filters, content moderation, and alignment techniques",
+          "is_correct": true
+        },
+        {
+          "option_id": 11823,
+          "option_text": "By ignoring safety",
+          "is_correct": false
+        },
+        {
+          "option_id": 11824,
+          "option_text": "By using random safety measures",
+          "is_correct": false
+        },
+        {
+          "option_id": 11825,
+          "option_text": "By using manual safety checks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2391,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate prompt engineering?",
+      "options": [
+        {
+          "option_id": 11826,
+          "option_text": "By using algorithms that search for optimal prompts",
+          "is_correct": true
+        },
+        {
+          "option_id": 11827,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11828,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11829,
+          "option_text": "By using manual optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2392,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt optimization?",
+      "options": [
+        {
+          "option_id": 11830,
+          "option_text": "The process of finding the best prompt for a given task",
+          "is_correct": true
+        },
+        {
+          "option_id": 11831,
+          "option_text": "The process of ignoring prompt optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 11832,
+          "option_text": "The process of using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11833,
+          "option_text": "The process of using manual prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2393,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt evaluation?",
+      "options": [
+        {
+          "option_id": 11834,
+          "option_text": "The process of assessing the performance of a prompt",
+          "is_correct": true
+        },
+        {
+          "option_id": 11835,
+          "option_text": "The process of ignoring prompt evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11836,
+          "option_text": "The process of using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11837,
+          "option_text": "The process of using manual prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2394,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt security?",
+      "options": [
+        {
+          "option_id": 11838,
+          "option_text": "The process of securing prompts against attacks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11839,
+          "option_text": "The process of ignoring prompt security",
+          "is_correct": false
+        },
+        {
+          "option_id": 11840,
+          "option_text": "The process of using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11841,
+          "option_text": "The process of using manual prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2395,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt governance?",
+      "options": [
+        {
+          "option_id": 11842,
+          "option_text": "The process of managing prompts at an organizational level",
+          "is_correct": true
+        },
+        {
+          "option_id": 11843,
+          "option_text": "The process of ignoring prompt governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11844,
+          "option_text": "The process of using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11845,
+          "option_text": "The process of using manual prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2396,
+      "subskill_id": 113,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a text classifier in production?",
+      "options": [
+        {
+          "option_id": 11846,
+          "option_text": "A text classifier that is used in a production environment",
+          "is_correct": true
+        },
+        {
+          "option_id": 11847,
+          "option_text": "A text classifier that is used in a test environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11848,
+          "option_text": "A text classifier that is used in a development environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11849,
+          "option_text": "A text classifier that is used in a research environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2397,
+      "subskill_id": 114,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a zero-shot embedding?",
+      "options": [
+        {
+          "option_id": 11850,
+          "option_text": "An embedding that can be used without any fine-tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 11851,
+          "option_text": "An embedding that requires fine-tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 11852,
+          "option_text": "An embedding that is random",
+          "is_correct": false
+        },
+        {
+          "option_id": 11853,
+          "option_text": "An embedding that is not used in NLP",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2398,
+      "subskill_id": 115,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a foundation model?",
+      "options": [
+        {
+          "option_id": 11854,
+          "option_text": "A large pre-trained model that serves as a base for downstream tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11855,
+          "option_text": "A small model that is trained from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 11856,
+          "option_text": "A model that is not used in NLP",
+          "is_correct": false
+        },
+        {
+          "option_id": 11857,
+          "option_text": "A model that is random",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2399,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt injection mitigation?",
+      "options": [
+        {
+          "option_id": 11858,
+          "option_text": "Techniques to prevent prompt injection attacks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11859,
+          "option_text": "Techniques to ignore prompt attacks",
+          "is_correct": false
+        },
+        {
+          "option_id": 11860,
+          "option_text": "Techniques to randomize prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11861,
+          "option_text": "Techniques to manually check prompts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2400,
+      "subskill_id": 116,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prompt engineering strategy?",
+      "options": [
+        {
+          "option_id": 11862,
+          "option_text": "A high-level plan for using prompt engineering in an organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 11863,
+          "option_text": "A plan for ignoring prompt engineering",
+          "is_correct": false
+        },
+        {
+          "option_id": 11864,
+          "option_text": "A plan for using random prompts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11865,
+          "option_text": "A plan for using manual prompts",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

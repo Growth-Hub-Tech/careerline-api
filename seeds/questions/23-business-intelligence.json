@@ -1,0 +1,2906 @@
+{
+  "skill_id": 23,
+  "skill_name": "Business Intelligence",
+  "questions": [
+    {
+      "question_id": 2201,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Power BI?",
+      "options": [
+        {
+          "option_id": 11066,
+          "option_text": "A business analytics tool from Microsoft for data visualization and reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 11067,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 11068,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11069,
+          "option_text": "A cloud storage service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2202,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Power BI dataset?",
+      "options": [
+        {
+          "option_id": 11070,
+          "option_text": "A collection of data used to create reports and dashboards in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11071,
+          "option_text": "A type of chart in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11072,
+          "option_text": "A Power BI workspace",
+          "is_correct": false
+        },
+        {
+          "option_id": 11073,
+          "option_text": "A Power BI report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2203,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Power BI report?",
+      "options": [
+        {
+          "option_id": 11074,
+          "option_text": "A visual representation of data in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11075,
+          "option_text": "A dataset in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11076,
+          "option_text": "A dashboard in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11077,
+          "option_text": "A workspace in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2204,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Power BI dashboard?",
+      "options": [
+        {
+          "option_id": 11078,
+          "option_text": "A collection of visualizations on a single canvas in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11079,
+          "option_text": "A report in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11080,
+          "option_text": "A dataset in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11081,
+          "option_text": "A workspace in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2205,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Power BI workspace?",
+      "options": [
+        {
+          "option_id": 11082,
+          "option_text": "A container for Power BI items that provides collaboration and sharing",
+          "is_correct": true
+        },
+        {
+          "option_id": 11083,
+          "option_text": "A dataset in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11084,
+          "option_text": "A report in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11085,
+          "option_text": "A dashboard in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2206,
+      "subskill_id": 109,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Power Query in Power BI?",
+      "options": [
+        {
+          "option_id": 11086,
+          "option_text": "A data connectivity and transformation tool in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11087,
+          "option_text": "A visualization tool in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11088,
+          "option_text": "A reporting tool in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11089,
+          "option_text": "A dashboard tool in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2207,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Tableau?",
+      "options": [
+        {
+          "option_id": 11090,
+          "option_text": "A data visualization and analytics tool from Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 11091,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 11092,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11093,
+          "option_text": "A cloud storage service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2208,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Tableau workbook?",
+      "options": [
+        {
+          "option_id": 11094,
+          "option_text": "A file containing one or more worksheets in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11095,
+          "option_text": "A single chart in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11096,
+          "option_text": "A dashboard in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11097,
+          "option_text": "A story in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2209,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Tableau worksheet?",
+      "options": [
+        {
+          "option_id": 11098,
+          "option_text": "A single view of data in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11099,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11100,
+          "option_text": "A dashboard in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11101,
+          "option_text": "A story in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2210,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Tableau dashboard?",
+      "options": [
+        {
+          "option_id": 11102,
+          "option_text": "A collection of worksheets that create a multi-view display in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11103,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11104,
+          "option_text": "A worksheet in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11105,
+          "option_text": "A story in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2211,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Tableau story?",
+      "options": [
+        {
+          "option_id": 11106,
+          "option_text": "A sequence of worksheets that tell a data narrative in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11107,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11108,
+          "option_text": "A worksheet in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11109,
+          "option_text": "A dashboard in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2212,
+      "subskill_id": 110,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Tableau Public?",
+      "options": [
+        {
+          "option_id": 11110,
+          "option_text": "A free version of Tableau for public data sharing",
+          "is_correct": true
+        },
+        {
+          "option_id": 11111,
+          "option_text": "A paid version of Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11112,
+          "option_text": "A Tableau server",
+          "is_correct": false
+        },
+        {
+          "option_id": 11113,
+          "option_text": "A Tableau cloud",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2213,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dashboard in BI?",
+      "options": [
+        {
+          "option_id": 11114,
+          "option_text": "A visual display of key metrics and data points in a BI tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 11115,
+          "option_text": "A report in BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11116,
+          "option_text": "A dataset in BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11117,
+          "option_text": "A data source in BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2214,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a dashboard?",
+      "options": [
+        {
+          "option_id": 11118,
+          "option_text": "To provide an overview of business performance at a glance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11119,
+          "option_text": "To store data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11120,
+          "option_text": "To transform data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11121,
+          "option_text": "To load data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2215,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a KPI dashboard?",
+      "options": [
+        {
+          "option_id": 11122,
+          "option_text": "A dashboard that focuses on key performance indicators",
+          "is_correct": true
+        },
+        {
+          "option_id": 11123,
+          "option_text": "A dashboard that focuses on operational metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 11124,
+          "option_text": "A dashboard that focuses on financial data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11125,
+          "option_text": "A dashboard that focuses on customer data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2216,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a visual dashboard?",
+      "options": [
+        {
+          "option_id": 11126,
+          "option_text": "A dashboard that uses visual elements like charts and graphs",
+          "is_correct": true
+        },
+        {
+          "option_id": 11127,
+          "option_text": "A dashboard that uses only text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11128,
+          "option_text": "A dashboard that uses only numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 11129,
+          "option_text": "A dashboard that uses only tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2217,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a real-time dashboard?",
+      "options": [
+        {
+          "option_id": 11130,
+          "option_text": "A dashboard that updates data in real-time",
+          "is_correct": true
+        },
+        {
+          "option_id": 11131,
+          "option_text": "A dashboard that updates data in batches",
+          "is_correct": false
+        },
+        {
+          "option_id": 11132,
+          "option_text": "A dashboard that updates data once a day",
+          "is_correct": false
+        },
+        {
+          "option_id": 11133,
+          "option_text": "A dashboard that updates data once a week",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2218,
+      "subskill_id": 111,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mobile dashboard?",
+      "options": [
+        {
+          "option_id": 11134,
+          "option_text": "A dashboard designed for viewing on mobile devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 11135,
+          "option_text": "A dashboard designed for viewing on desktops",
+          "is_correct": false
+        },
+        {
+          "option_id": 11136,
+          "option_text": "A dashboard designed for viewing on tablets",
+          "is_correct": false
+        },
+        {
+          "option_id": 11137,
+          "option_text": "A dashboard designed for viewing on TVs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2219,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is KPI reporting?",
+      "options": [
+        {
+          "option_id": 11138,
+          "option_text": "The process of tracking and reporting key performance indicators",
+          "is_correct": true
+        },
+        {
+          "option_id": 11139,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11140,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11141,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2220,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a KPI in business intelligence?",
+      "options": [
+        {
+          "option_id": 11142,
+          "option_text": "A measurable value that demonstrates how effectively a company is achieving key business objectives",
+          "is_correct": true
+        },
+        {
+          "option_id": 11143,
+          "option_text": "A type of chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 11144,
+          "option_text": "A type of report",
+          "is_correct": false
+        },
+        {
+          "option_id": 11145,
+          "option_text": "A type of dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2221,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a leading KPI?",
+      "options": [
+        {
+          "option_id": 11146,
+          "option_text": "A KPI that predicts future performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11147,
+          "option_text": "A KPI that measures past performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11148,
+          "option_text": "A KPI that measures financial performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11149,
+          "option_text": "A KPI that measures operational performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2222,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lagging KPI?",
+      "options": [
+        {
+          "option_id": 11150,
+          "option_text": "A KPI that measures past performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11151,
+          "option_text": "A KPI that predicts future performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11152,
+          "option_text": "A KPI that measures financial performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11153,
+          "option_text": "A KPI that measures operational performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2223,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a financial KPI?",
+      "options": [
+        {
+          "option_id": 11154,
+          "option_text": "A KPI that measures financial performance like revenue or profit",
+          "is_correct": true
+        },
+        {
+          "option_id": 11155,
+          "option_text": "A KPI that measures operational performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11156,
+          "option_text": "A KPI that measures customer satisfaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 11157,
+          "option_text": "A KPI that measures employee engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2224,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an operational KPI?",
+      "options": [
+        {
+          "option_id": 11158,
+          "option_text": "A KPI that measures operational performance like efficiency or productivity",
+          "is_correct": true
+        },
+        {
+          "option_id": 11159,
+          "option_text": "A KPI that measures financial performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11160,
+          "option_text": "A KPI that measures customer satisfaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 11161,
+          "option_text": "A KPI that measures employee engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2225,
+      "subskill_id": 112,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a strategic KPI?",
+      "options": [
+        {
+          "option_id": 11162,
+          "option_text": "A KPI that measures strategic performance like market share or growth",
+          "is_correct": true
+        },
+        {
+          "option_id": 11163,
+          "option_text": "A KPI that measures operational performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11164,
+          "option_text": "A KPI that measures financial performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11165,
+          "option_text": "A KPI that measures customer satisfaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2226,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a report in Power BI?",
+      "options": [
+        {
+          "option_id": 11166,
+          "option_text": "By connecting to data, creating visualizations, and publishing the report",
+          "is_correct": true
+        },
+        {
+          "option_id": 11167,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11168,
+          "option_text": "By using a third-party tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11169,
+          "option_text": "By copying an existing report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2227,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is DAX in Power BI?",
+      "options": [
+        {
+          "option_id": 11170,
+          "option_text": "Data Analysis Expressions - a formula language used in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11171,
+          "option_text": "Data Analytics Experience",
+          "is_correct": false
+        },
+        {
+          "option_id": 11172,
+          "option_text": "Data Automation Extension",
+          "is_correct": false
+        },
+        {
+          "option_id": 11173,
+          "option_text": "Data Application Expression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2228,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a calculated column in Power BI?",
+      "options": [
+        {
+          "option_id": 11174,
+          "option_text": "A column in a Power BI table that is calculated using DAX",
+          "is_correct": true
+        },
+        {
+          "option_id": 11175,
+          "option_text": "A measure in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11176,
+          "option_text": "A visual in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11177,
+          "option_text": "A report in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2229,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a measure in Power BI?",
+      "options": [
+        {
+          "option_id": 11178,
+          "option_text": "A calculation used in Power BI to aggregate data",
+          "is_correct": true
+        },
+        {
+          "option_id": 11179,
+          "option_text": "A calculated column in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11180,
+          "option_text": "A visual in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11181,
+          "option_text": "A report in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2230,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you publish a Power BI report?",
+      "options": [
+        {
+          "option_id": 11182,
+          "option_text": "By using the Publish button in Power BI Desktop",
+          "is_correct": true
+        },
+        {
+          "option_id": 11183,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11184,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 11185,
+          "option_text": "By using a third-party tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2231,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you connect to data in Tableau?",
+      "options": [
+        {
+          "option_id": 11186,
+          "option_text": "By using the Data Source option in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11187,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11188,
+          "option_text": "By using a third-party tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11189,
+          "option_text": "By copying an existing connection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2232,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Tableau data source?",
+      "options": [
+        {
+          "option_id": 11190,
+          "option_text": "A connection to data in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11191,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11192,
+          "option_text": "A worksheet in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11193,
+          "option_text": "A dashboard in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2233,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Tableau calculated field?",
+      "options": [
+        {
+          "option_id": 11194,
+          "option_text": "A field in Tableau that is created using a formula",
+          "is_correct": true
+        },
+        {
+          "option_id": 11195,
+          "option_text": "A data source in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11196,
+          "option_text": "A parameter in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11197,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2234,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Tableau parameter?",
+      "options": [
+        {
+          "option_id": 11198,
+          "option_text": "A placeholder for a value in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11199,
+          "option_text": "A calculated field in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11200,
+          "option_text": "A data source in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11201,
+          "option_text": "A workbook in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2235,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you publish a Tableau dashboard?",
+      "options": [
+        {
+          "option_id": 11202,
+          "option_text": "By using the Publish button in Tableau Desktop",
+          "is_correct": true
+        },
+        {
+          "option_id": 11203,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11204,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 11205,
+          "option_text": "By using a third-party tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2236,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are best practices for dashboard design?",
+      "options": [
+        {
+          "option_id": 11206,
+          "option_text": "Use clear, simple design with appropriate charts and minimal text",
+          "is_correct": true
+        },
+        {
+          "option_id": 11207,
+          "option_text": "Use complex charts with lots of text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11208,
+          "option_text": "Use only tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 11209,
+          "option_text": "Use only charts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2237,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you choose the right chart for a dashboard?",
+      "options": [
+        {
+          "option_id": 11210,
+          "option_text": "By understanding the data and the message you want to convey",
+          "is_correct": true
+        },
+        {
+          "option_id": 11211,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11212,
+          "option_text": "By using the same chart for all data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11213,
+          "option_text": "By copying from others",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2238,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is dashboard layout design?",
+      "options": [
+        {
+          "option_id": 11214,
+          "option_text": "The arrangement of visual elements on a dashboard",
+          "is_correct": true
+        },
+        {
+          "option_id": 11215,
+          "option_text": "The color scheme of a dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 11216,
+          "option_text": "The data used in a dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 11217,
+          "option_text": "The charts used in a dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2239,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is dashboard color theory?",
+      "options": [
+        {
+          "option_id": 11218,
+          "option_text": "The use of color to enhance understanding and aesthetics in dashboards",
+          "is_correct": true
+        },
+        {
+          "option_id": 11219,
+          "option_text": "The layout of a dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 11220,
+          "option_text": "The data used in a dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 11221,
+          "option_text": "The charts used in a dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2240,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you make a dashboard mobile-friendly?",
+      "options": [
+        {
+          "option_id": 11222,
+          "option_text": "By optimizing dashboards for smaller screens and touch interactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 11223,
+          "option_text": "By designing dashboards for desktops only",
+          "is_correct": false
+        },
+        {
+          "option_id": 11224,
+          "option_text": "By using large charts and text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11225,
+          "option_text": "By using complex interactions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2241,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you define a KPI?",
+      "options": [
+        {
+          "option_id": 11226,
+          "option_text": "By identifying the business objective and selecting measurable indicators",
+          "is_correct": true
+        },
+        {
+          "option_id": 11227,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11228,
+          "option_text": "By copying from others",
+          "is_correct": false
+        },
+        {
+          "option_id": 11229,
+          "option_text": "By using all available data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2242,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure a KPI?",
+      "options": [
+        {
+          "option_id": 11230,
+          "option_text": "By using data and metrics to track progress",
+          "is_correct": true
+        },
+        {
+          "option_id": 11231,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11232,
+          "option_text": "By estimating",
+          "is_correct": false
+        },
+        {
+          "option_id": 11233,
+          "option_text": "By ignoring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2243,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a KPI target?",
+      "options": [
+        {
+          "option_id": 11234,
+          "option_text": "A goal value for a KPI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11235,
+          "option_text": "A threshold for a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11236,
+          "option_text": "A trend for a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11237,
+          "option_text": "A score for a KPI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2244,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a KPI threshold?",
+      "options": [
+        {
+          "option_id": 11238,
+          "option_text": "A limit value for a KPI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11239,
+          "option_text": "A target for a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11240,
+          "option_text": "A trend for a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11241,
+          "option_text": "A score for a KPI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2245,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a KPI trend?",
+      "options": [
+        {
+          "option_id": 11242,
+          "option_text": "The direction of change in a KPI over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 11243,
+          "option_text": "The target of a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11244,
+          "option_text": "The threshold of a KPI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11245,
+          "option_text": "The score of a KPI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2246,
+      "subskill_id": 109,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Power BI service?",
+      "options": [
+        {
+          "option_id": 11246,
+          "option_text": "A cloud-based service for Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11247,
+          "option_text": "A desktop application for Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11248,
+          "option_text": "A mobile application for Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11249,
+          "option_text": "A third-party tool for Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2247,
+      "subskill_id": 110,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Tableau Server?",
+      "options": [
+        {
+          "option_id": 11250,
+          "option_text": "A server-based platform for Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11251,
+          "option_text": "A desktop application for Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11252,
+          "option_text": "A cloud-based platform for Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11253,
+          "option_text": "A third-party tool for Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2248,
+      "subskill_id": 111,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a dashboard story?",
+      "options": [
+        {
+          "option_id": 11254,
+          "option_text": "A sequence of visualizations that tell a data narrative",
+          "is_correct": true
+        },
+        {
+          "option_id": 11255,
+          "option_text": "A single chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 11256,
+          "option_text": "A dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 11257,
+          "option_text": "A report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2249,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a balanced scorecard?",
+      "options": [
+        {
+          "option_id": 11258,
+          "option_text": "A strategic management tool that measures performance against strategic goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 11259,
+          "option_text": "A financial reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11260,
+          "option_text": "An operational reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11261,
+          "option_text": "A customer reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2250,
+      "subskill_id": 112,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a KPI scorecard?",
+      "options": [
+        {
+          "option_id": 11262,
+          "option_text": "A visual tool that displays KPI performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11263,
+          "option_text": "A financial reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11264,
+          "option_text": "An operational reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 11265,
+          "option_text": "A customer reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2251,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize Power BI performance?",
+      "options": [
+        {
+          "option_id": 11266,
+          "option_text": "By using best practices like reducing data size and using efficient DAX",
+          "is_correct": true
+        },
+        {
+          "option_id": 11267,
+          "option_text": "By ignoring performance issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 11268,
+          "option_text": "By using only simple reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 11269,
+          "option_text": "By using only small datasets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2252,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Row-Level Security in Power BI?",
+      "options": [
+        {
+          "option_id": 11270,
+          "option_text": "A security feature that restricts data access based on user roles",
+          "is_correct": true
+        },
+        {
+          "option_id": 11271,
+          "option_text": "A performance optimization feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11272,
+          "option_text": "A data transformation feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11273,
+          "option_text": "A visualization feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2253,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Power BI gateway?",
+      "options": [
+        {
+          "option_id": 11274,
+          "option_text": "A component that enables data connectivity between Power BI and on-premises data sources",
+          "is_correct": true
+        },
+        {
+          "option_id": 11275,
+          "option_text": "A security feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11276,
+          "option_text": "A performance optimization feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11277,
+          "option_text": "A visualization feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2254,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Power BI embedded?",
+      "options": [
+        {
+          "option_id": 11278,
+          "option_text": "A feature that allows embedding Power BI reports into applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 11279,
+          "option_text": "A security feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11280,
+          "option_text": "A performance optimization feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11281,
+          "option_text": "A data transformation feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2255,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you automate Power BI reports?",
+      "options": [
+        {
+          "option_id": 11282,
+          "option_text": "By using APIs or scheduled refresh to automate report generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 11283,
+          "option_text": "By manually updating reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 11284,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11285,
+          "option_text": "By using third-party tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2256,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize Tableau performance?",
+      "options": [
+        {
+          "option_id": 11286,
+          "option_text": "By using best practices like reducing data size and optimizing calculations",
+          "is_correct": true
+        },
+        {
+          "option_id": 11287,
+          "option_text": "By ignoring performance issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 11288,
+          "option_text": "By using only simple worksheets",
+          "is_correct": false
+        },
+        {
+          "option_id": 11289,
+          "option_text": "By using only small datasets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2257,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Tableau data blending?",
+      "options": [
+        {
+          "option_id": 11290,
+          "option_text": "A feature that combines data from multiple sources in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11291,
+          "option_text": "A performance optimization feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11292,
+          "option_text": "A security feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11293,
+          "option_text": "A visualization feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2258,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Tableau cross-database join?",
+      "options": [
+        {
+          "option_id": 11294,
+          "option_text": "A feature that allows joining data from different databases in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11295,
+          "option_text": "A performance optimization feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11296,
+          "option_text": "A security feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 11297,
+          "option_text": "A visualization feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2259,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Tableau Tableau Prep?",
+      "options": [
+        {
+          "option_id": 11298,
+          "option_text": "A data preparation tool for Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11299,
+          "option_text": "A visualization tool for Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11300,
+          "option_text": "A reporting tool for Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11301,
+          "option_text": "A dashboard tool for Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2260,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you automate Tableau reports?",
+      "options": [
+        {
+          "option_id": 11302,
+          "option_text": "By using Tableau Server or Tableau Online APIs to schedule tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11303,
+          "option_text": "By manually updating reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 11304,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11305,
+          "option_text": "By using third-party tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2261,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you design a dashboard for executives?",
+      "options": [
+        {
+          "option_id": 11306,
+          "option_text": "By focusing on strategic metrics and high-level insights",
+          "is_correct": true
+        },
+        {
+          "option_id": 11307,
+          "option_text": "By focusing on detailed data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11308,
+          "option_text": "By using complex visualizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 11309,
+          "option_text": "By using large text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2262,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you design a dashboard for analysts?",
+      "options": [
+        {
+          "option_id": 11310,
+          "option_text": "By focusing on detailed data and analytical depth",
+          "is_correct": true
+        },
+        {
+          "option_id": 11311,
+          "option_text": "By focusing on high-level insights",
+          "is_correct": false
+        },
+        {
+          "option_id": 11312,
+          "option_text": "By using simple visualizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 11313,
+          "option_text": "By using small text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2263,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a self-service dashboard?",
+      "options": [
+        {
+          "option_id": 11314,
+          "option_text": "A dashboard that allows users to interact with data and create their own views",
+          "is_correct": true
+        },
+        {
+          "option_id": 11315,
+          "option_text": "A dashboard that is static",
+          "is_correct": false
+        },
+        {
+          "option_id": 11316,
+          "option_text": "A dashboard that is only for executives",
+          "is_correct": false
+        },
+        {
+          "option_id": 11317,
+          "option_text": "A dashboard that is only for analysts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2264,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an interactive dashboard?",
+      "options": [
+        {
+          "option_id": 11318,
+          "option_text": "A dashboard that allows users to filter, drill down, and explore data",
+          "is_correct": true
+        },
+        {
+          "option_id": 11319,
+          "option_text": "A dashboard that is static",
+          "is_correct": false
+        },
+        {
+          "option_id": 11320,
+          "option_text": "A dashboard that is only for executives",
+          "is_correct": false
+        },
+        {
+          "option_id": 11321,
+          "option_text": "A dashboard that is only for analysts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2265,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test a dashboard?",
+      "options": [
+        {
+          "option_id": 11322,
+          "option_text": "By testing with users and gathering feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 11323,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11324,
+          "option_text": "By ignoring testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11325,
+          "option_text": "By using automated tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2266,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you align KPIs with business strategy?",
+      "options": [
+        {
+          "option_id": 11326,
+          "option_text": "By ensuring KPIs are linked to business goals and strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 11327,
+          "option_text": "By ignoring strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 11328,
+          "option_text": "By using random KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11329,
+          "option_text": "By copying from others",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2267,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you select the right KPIs?",
+      "options": [
+        {
+          "option_id": 11330,
+          "option_text": "By understanding business objectives and data availability",
+          "is_correct": true
+        },
+        {
+          "option_id": 11331,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 11332,
+          "option_text": "By using all available KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11333,
+          "option_text": "By copying from others",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2268,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a KPI tree?",
+      "options": [
+        {
+          "option_id": 11334,
+          "option_text": "A hierarchical structure of KPIs that breaks down strategic goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 11335,
+          "option_text": "A list of KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11336,
+          "option_text": "A dashboard of KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11337,
+          "option_text": "A report of KPIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2269,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you visualize KPIs effectively?",
+      "options": [
+        {
+          "option_id": 11338,
+          "option_text": "By using charts, graphs, and color coding to display KPI status",
+          "is_correct": true
+        },
+        {
+          "option_id": 11339,
+          "option_text": "By using only text",
+          "is_correct": false
+        },
+        {
+          "option_id": 11340,
+          "option_text": "By using only numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 11341,
+          "option_text": "By using only tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2270,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a KPI dashboard refresh strategy?",
+      "options": [
+        {
+          "option_id": 11342,
+          "option_text": "A schedule for updating KPI data to ensure timely reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 11343,
+          "option_text": "A security strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 11344,
+          "option_text": "A performance strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 11345,
+          "option_text": "A visualization strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2271,
+      "subskill_id": 109,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Power BI Dataflow?",
+      "options": [
+        {
+          "option_id": 11346,
+          "option_text": "A feature for data transformation and preparation in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11347,
+          "option_text": "A feature for visualization in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11348,
+          "option_text": "A feature for reporting in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11349,
+          "option_text": "A feature for dashboarding in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2272,
+      "subskill_id": 110,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Tableau Cloud?",
+      "options": [
+        {
+          "option_id": 11350,
+          "option_text": "A cloud-hosted version of Tableau Server",
+          "is_correct": true
+        },
+        {
+          "option_id": 11351,
+          "option_text": "A desktop version of Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11352,
+          "option_text": "A free version of Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11353,
+          "option_text": "A public version of Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2273,
+      "subskill_id": 111,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a dashboard style guide?",
+      "options": [
+        {
+          "option_id": 11354,
+          "option_text": "A set of guidelines for dashboard design",
+          "is_correct": true
+        },
+        {
+          "option_id": 11355,
+          "option_text": "A set of guidelines for data collection",
+          "is_correct": false
+        },
+        {
+          "option_id": 11356,
+          "option_text": "A set of guidelines for data transformation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11357,
+          "option_text": "A set of guidelines for data loading",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2274,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a KPI automation?",
+      "options": [
+        {
+          "option_id": 11358,
+          "option_text": "The use of technology to automatically track and report KPIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 11359,
+          "option_text": "The manual tracking of KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11360,
+          "option_text": "The use of spreadsheets for KPI tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 11361,
+          "option_text": "The use of paper for KPI tracking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2275,
+      "subskill_id": 112,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a KPI governance?",
+      "options": [
+        {
+          "option_id": 11362,
+          "option_text": "The process of managing KPI definitions, data, and reporting processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11363,
+          "option_text": "The process of ignoring KPI management",
+          "is_correct": false
+        },
+        {
+          "option_id": 11364,
+          "option_text": "The process of manually tracking KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11365,
+          "option_text": "The process of using spreadsheets for KPIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2276,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI Premium?",
+      "options": [
+        {
+          "option_id": 11366,
+          "option_text": "A premium version of Power BI with advanced features and capacity management",
+          "is_correct": true
+        },
+        {
+          "option_id": 11367,
+          "option_text": "A free version of Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11368,
+          "option_text": "A standard version of Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11369,
+          "option_text": "A mobile version of Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2277,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI Paginated Reports?",
+      "options": [
+        {
+          "option_id": 11370,
+          "option_text": "A type of report in Power BI designed for printing and PDF export",
+          "is_correct": true
+        },
+        {
+          "option_id": 11371,
+          "option_text": "A type of dashboard in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11372,
+          "option_text": "A type of visual in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11373,
+          "option_text": "A type of dataset in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2278,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI Report Builder?",
+      "options": [
+        {
+          "option_id": 11374,
+          "option_text": "A tool for creating paginated reports in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11375,
+          "option_text": "A tool for creating dashboards in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11376,
+          "option_text": "A tool for creating visualizations in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11377,
+          "option_text": "A tool for creating datasets in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2279,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI Mobile?",
+      "options": [
+        {
+          "option_id": 11378,
+          "option_text": "A mobile version of Power BI for viewing reports and dashboards",
+          "is_correct": true
+        },
+        {
+          "option_id": 11379,
+          "option_text": "A desktop version of Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11380,
+          "option_text": "A web version of Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11381,
+          "option_text": "A cloud version of Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2280,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI Goals?",
+      "options": [
+        {
+          "option_id": 11382,
+          "option_text": "A feature for tracking and managing goals in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11383,
+          "option_text": "A feature for creating reports in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11384,
+          "option_text": "A feature for creating dashboards in Power BI",
+          "is_correct": false
+        },
+        {
+          "option_id": 11385,
+          "option_text": "A feature for creating datasets in Power BI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2281,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau Hyper?",
+      "options": [
+        {
+          "option_id": 11386,
+          "option_text": "A high-performance data engine in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11387,
+          "option_text": "A visualization engine in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11388,
+          "option_text": "A reporting engine in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11389,
+          "option_text": "A dashboard engine in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2282,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau VizQL?",
+      "options": [
+        {
+          "option_id": 11390,
+          "option_text": "A visual query language in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11391,
+          "option_text": "A data query language in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11392,
+          "option_text": "A reporting language in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11393,
+          "option_text": "A dashboard language in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2283,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau Extensions API?",
+      "options": [
+        {
+          "option_id": 11394,
+          "option_text": "An API for extending Tableau functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 11395,
+          "option_text": "An API for connecting to data in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11396,
+          "option_text": "An API for publishing reports in Tableau",
+          "is_correct": false
+        },
+        {
+          "option_id": 11397,
+          "option_text": "An API for creating dashboards in Tableau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2284,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau Data Management?",
+      "options": [
+        {
+          "option_id": 11398,
+          "option_text": "A set of features for managing data in Tableau",
+          "is_correct": true
+        },
+        {
+          "option_id": 11399,
+          "option_text": "A set of features for visualizing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11400,
+          "option_text": "A set of features for reporting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11401,
+          "option_text": "A set of features for dashboarding data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2285,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau Bridge?",
+      "options": [
+        {
+          "option_id": 11402,
+          "option_text": "A tool for connecting Tableau to on-premises data sources",
+          "is_correct": true
+        },
+        {
+          "option_id": 11403,
+          "option_text": "A tool for connecting Tableau to cloud data sources",
+          "is_correct": false
+        },
+        {
+          "option_id": 11404,
+          "option_text": "A tool for connecting Tableau to flat files",
+          "is_correct": false
+        },
+        {
+          "option_id": 11405,
+          "option_text": "A tool for connecting Tableau to databases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2286,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard governance strategy?",
+      "options": [
+        {
+          "option_id": 11406,
+          "option_text": "A framework for managing dashboard creation and usage across an organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 11407,
+          "option_text": "A framework for ignoring dashboard management",
+          "is_correct": false
+        },
+        {
+          "option_id": 11408,
+          "option_text": "A framework for manually creating dashboards",
+          "is_correct": false
+        },
+        {
+          "option_id": 11409,
+          "option_text": "A framework for using spreadsheets for dashboards",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2287,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard accessibility design?",
+      "options": [
+        {
+          "option_id": 11410,
+          "option_text": "A set of principles for designing accessible dashboards",
+          "is_correct": true
+        },
+        {
+          "option_id": 11411,
+          "option_text": "A set of principles for designing complex dashboards",
+          "is_correct": false
+        },
+        {
+          "option_id": 11412,
+          "option_text": "A set of principles for designing simple dashboards",
+          "is_correct": false
+        },
+        {
+          "option_id": 11413,
+          "option_text": "A set of principles for designing mobile dashboards",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2288,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard localization strategy?",
+      "options": [
+        {
+          "option_id": 11414,
+          "option_text": "A strategy for adapting dashboards to different languages and cultures",
+          "is_correct": true
+        },
+        {
+          "option_id": 11415,
+          "option_text": "A strategy for ignoring localization",
+          "is_correct": false
+        },
+        {
+          "option_id": 11416,
+          "option_text": "A strategy for using only one language",
+          "is_correct": false
+        },
+        {
+          "option_id": 11417,
+          "option_text": "A strategy for using only one culture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2289,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard performance strategy?",
+      "options": [
+        {
+          "option_id": 11418,
+          "option_text": "A strategy for optimizing dashboard performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11419,
+          "option_text": "A strategy for ignoring performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 11420,
+          "option_text": "A strategy for using only simple dashboards",
+          "is_correct": false
+        },
+        {
+          "option_id": 11421,
+          "option_text": "A strategy for using only small datasets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2290,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard security strategy?",
+      "options": [
+        {
+          "option_id": 11422,
+          "option_text": "A strategy for securing dashboards",
+          "is_correct": true
+        },
+        {
+          "option_id": 11423,
+          "option_text": "A strategy for ignoring security",
+          "is_correct": false
+        },
+        {
+          "option_id": 11424,
+          "option_text": "A strategy for using only open data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11425,
+          "option_text": "A strategy for using only public data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2291,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI reporting maturity model?",
+      "options": [
+        {
+          "option_id": 11426,
+          "option_text": "A model for assessing the maturity of KPI reporting processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11427,
+          "option_text": "A model for assessing the maturity of data collection",
+          "is_correct": false
+        },
+        {
+          "option_id": 11428,
+          "option_text": "A model for assessing the maturity of data transformation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11429,
+          "option_text": "A model for assessing the maturity of data loading",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2292,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI data quality framework?",
+      "options": [
+        {
+          "option_id": 11430,
+          "option_text": "A framework for ensuring KPI data quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 11431,
+          "option_text": "A framework for ignoring KPI data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 11432,
+          "option_text": "A framework for manually checking KPI data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11433,
+          "option_text": "A framework for using estimated KPI data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2293,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI automation strategy?",
+      "options": [
+        {
+          "option_id": 11434,
+          "option_text": "A strategy for automating KPI reporting processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 11435,
+          "option_text": "A strategy for ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11436,
+          "option_text": "A strategy for manually reporting KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11437,
+          "option_text": "A strategy for using spreadsheets for KPI reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2294,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI culture transformation?",
+      "options": [
+        {
+          "option_id": 11438,
+          "option_text": "A process for embedding KPI culture into the organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 11439,
+          "option_text": "A process for ignoring KPI culture",
+          "is_correct": false
+        },
+        {
+          "option_id": 11440,
+          "option_text": "A process for manually tracking KPIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 11441,
+          "option_text": "A process for using spreadsheets for KPIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2295,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI future trends strategy?",
+      "options": [
+        {
+          "option_id": 11442,
+          "option_text": "A strategy for integrating new trends like AI and machine learning into KPI reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 11443,
+          "option_text": "A strategy for ignoring new trends",
+          "is_correct": false
+        },
+        {
+          "option_id": 11444,
+          "option_text": "A strategy for using only traditional KPI methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 11445,
+          "option_text": "A strategy for avoiding innovation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2296,
+      "subskill_id": 109,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI CICD?",
+      "options": [
+        {
+          "option_id": 11446,
+          "option_text": "A set of practices for continuous integration and continuous delivery in Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 11447,
+          "option_text": "A set of practices for manual deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 11448,
+          "option_text": "A set of practices for ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 11449,
+          "option_text": "A set of practices for using spreadsheets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2297,
+      "subskill_id": 110,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Tableau API?",
+      "options": [
+        {
+          "option_id": 11450,
+          "option_text": "An API for integrating Tableau with other applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 11451,
+          "option_text": "An API for ignoring integration",
+          "is_correct": false
+        },
+        {
+          "option_id": 11452,
+          "option_text": "An API for manual integration",
+          "is_correct": false
+        },
+        {
+          "option_id": 11453,
+          "option_text": "An API for using spreadsheets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2298,
+      "subskill_id": 111,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a dashboard storytelling?",
+      "options": [
+        {
+          "option_id": 11454,
+          "option_text": "A technique for using dashboards to tell a compelling data story",
+          "is_correct": true
+        },
+        {
+          "option_id": 11455,
+          "option_text": "A technique for ignoring storytelling",
+          "is_correct": false
+        },
+        {
+          "option_id": 11456,
+          "option_text": "A technique for using only charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 11457,
+          "option_text": "A technique for using only text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2299,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI predictive analytics?",
+      "options": [
+        {
+          "option_id": 11458,
+          "option_text": "The use of predictive analytics in KPI reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 11459,
+          "option_text": "The use of descriptive analytics in KPI reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 11460,
+          "option_text": "The use of diagnostic analytics in KPI reporting",
+          "is_correct": false
+        },
+        {
+          "option_id": 11461,
+          "option_text": "The use of prescriptive analytics in KPI reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2300,
+      "subskill_id": 112,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a KPI benchmarking strategy?",
+      "options": [
+        {
+          "option_id": 11462,
+          "option_text": "A strategy for comparing KPI performance against industry benchmarks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11463,
+          "option_text": "A strategy for ignoring benchmarking",
+          "is_correct": false
+        },
+        {
+          "option_id": 11464,
+          "option_text": "A strategy for using only internal data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11465,
+          "option_text": "A strategy for using only historical data",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

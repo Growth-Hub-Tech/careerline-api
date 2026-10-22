@@ -1,0 +1,2906 @@
+{
+  "skill_id": 6,
+  "skill_name": "Cloud Computing",
+  "questions": [
+    {
+      "question_id": 501,
+      "subskill_id": 27,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is AWS?",
+      "options": [
+        {
+          "option_id": 3066,
+          "option_text": "A type of cloud database",
+          "is_correct": false
+        },
+        {
+          "option_id": 3067,
+          "option_text": "A programming language for cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 3068,
+          "option_text": "A cloud storage service only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3069,
+          "option_text": "Amazon Web Services - a comprehensive cloud computing platform",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 502,
+      "subskill_id": 27,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Amazon EC2?",
+      "options": [
+        {
+          "option_id": 3070,
+          "option_text": "A web service that provides secure, resizable compute capacity in the cloud",
+          "is_correct": true
+        },
+        {
+          "option_id": 3071,
+          "option_text": "A serverless database service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3072,
+          "option_text": "A content delivery network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3073,
+          "option_text": "A load balancing service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 503,
+      "subskill_id": 27,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Amazon S3?",
+      "options": [
+        {
+          "option_id": 3074,
+          "option_text": "A compute service for running containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3075,
+          "option_text": "A virtual private cloud service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3076,
+          "option_text": "A relational database service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3077,
+          "option_text": "Simple Storage Service - object storage with high durability",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 504,
+      "subskill_id": 27,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is AWS Lambda?",
+      "options": [
+        {
+          "option_id": 3078,
+          "option_text": "A physical server in AWS data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3079,
+          "option_text": "A serverless compute service that runs code without provisioning servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3080,
+          "option_text": "A type of EC2 instance",
+          "is_correct": false
+        },
+        {
+          "option_id": 3081,
+          "option_text": "A database service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 505,
+      "subskill_id": 28,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Google Cloud Platform (GCP)?",
+      "options": [
+        {
+          "option_id": 3082,
+          "option_text": "A Google search feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 3083,
+          "option_text": "A Google Maps service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3084,
+          "option_text": "A Google Docs editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 3085,
+          "option_text": "A suite of cloud computing services offered by Google",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 506,
+      "subskill_id": 28,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Google Compute Engine?",
+      "options": [
+        {
+          "option_id": 3086,
+          "option_text": "An IaaS service that provides virtual machines in Google Cloud",
+          "is_correct": true
+        },
+        {
+          "option_id": 3087,
+          "option_text": "A Google search algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 3088,
+          "option_text": "A Google Docs template",
+          "is_correct": false
+        },
+        {
+          "option_id": 3089,
+          "option_text": "A Google Drive storage option",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 507,
+      "subskill_id": 28,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Google Cloud Storage?",
+      "options": [
+        {
+          "option_id": 3090,
+          "option_text": "A virtual machine service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3091,
+          "option_text": "A container orchestration service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3092,
+          "option_text": "A serverless database",
+          "is_correct": false
+        },
+        {
+          "option_id": 3093,
+          "option_text": "A unified object storage service for developers and enterprises",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 508,
+      "subskill_id": 29,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Microsoft Azure?",
+      "options": [
+        {
+          "option_id": 3094,
+          "option_text": "A Microsoft Office product",
+          "is_correct": false
+        },
+        {
+          "option_id": 3095,
+          "option_text": "A cloud computing service created by Microsoft",
+          "is_correct": true
+        },
+        {
+          "option_id": 3096,
+          "option_text": "A Windows operating system",
+          "is_correct": false
+        },
+        {
+          "option_id": 3097,
+          "option_text": "A Microsoft gaming platform",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 509,
+      "subskill_id": 29,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Azure Virtual Machines?",
+      "options": [
+        {
+          "option_id": 3098,
+          "option_text": "A Microsoft Word feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 3099,
+          "option_text": "A type of Azure database",
+          "is_correct": false
+        },
+        {
+          "option_id": 3100,
+          "option_text": "An IaaS service for deploying VMs in Azure",
+          "is_correct": true
+        },
+        {
+          "option_id": 3101,
+          "option_text": "A Microsoft Teams integration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 510,
+      "subskill_id": 29,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Azure Blob Storage?",
+      "options": [
+        {
+          "option_id": 3102,
+          "option_text": "Microsoft object storage solution for the cloud",
+          "is_correct": true
+        },
+        {
+          "option_id": 3103,
+          "option_text": "A type of Azure virtual machine",
+          "is_correct": false
+        },
+        {
+          "option_id": 3104,
+          "option_text": "An Azure networking service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3105,
+          "option_text": "A Microsoft Excel file format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 511,
+      "subskill_id": 30,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is IAM in cloud computing?",
+      "options": [
+        {
+          "option_id": 3106,
+          "option_text": "I Am Me - a user profile service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3107,
+          "option_text": "International Accounting Machine",
+          "is_correct": false
+        },
+        {
+          "option_id": 3108,
+          "option_text": "Integrated Application Manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 3109,
+          "option_text": "Identity and Access Management - controls user access to cloud resources",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 512,
+      "subskill_id": 30,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user in IAM?",
+      "options": [
+        {
+          "option_id": 3110,
+          "option_text": "A person who uses the cloud console",
+          "is_correct": false
+        },
+        {
+          "option_id": 3111,
+          "option_text": "An entity that represents a person or service that can interact with AWS",
+          "is_correct": true
+        },
+        {
+          "option_id": 3112,
+          "option_text": "A computer program",
+          "is_correct": false
+        },
+        {
+          "option_id": 3113,
+          "option_text": "A type of password",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 513,
+      "subskill_id": 30,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a group in IAM?",
+      "options": [
+        {
+          "option_id": 3114,
+          "option_text": "A collection of servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3115,
+          "option_text": "A network of computers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3116,
+          "option_text": "A collection of IAM users with common permissions",
+          "is_correct": true
+        },
+        {
+          "option_id": 3117,
+          "option_text": "A type of security protocol",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 514,
+      "subskill_id": 30,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a role in IAM?",
+      "options": [
+        {
+          "option_id": 3118,
+          "option_text": "An IAM identity with permissions that can be assumed by trusted entities",
+          "is_correct": true
+        },
+        {
+          "option_id": 3119,
+          "option_text": "A job title in a company",
+          "is_correct": false
+        },
+        {
+          "option_id": 3120,
+          "option_text": "A type of encryption key",
+          "is_correct": false
+        },
+        {
+          "option_id": 3121,
+          "option_text": "A user password",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 515,
+      "subskill_id": 31,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is object storage in the cloud?",
+      "options": [
+        {
+          "option_id": 3122,
+          "option_text": "Storage for physical objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 3123,
+          "option_text": "A type of database",
+          "is_correct": false
+        },
+        {
+          "option_id": 3124,
+          "option_text": "In-memory storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3125,
+          "option_text": "Storage that manages data as objects with metadata and identifiers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 516,
+      "subskill_id": 31,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is block storage in the cloud?",
+      "options": [
+        {
+          "option_id": 3126,
+          "option_text": "Storage shaped like blocks",
+          "is_correct": false
+        },
+        {
+          "option_id": 3127,
+          "option_text": "Storage that divides data into fixed-sized blocks with unique addresses",
+          "is_correct": true
+        },
+        {
+          "option_id": 3128,
+          "option_text": "A childrens toy",
+          "is_correct": false
+        },
+        {
+          "option_id": 3129,
+          "option_text": "A type of memory cache",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 517,
+      "subskill_id": 31,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is file storage in the cloud?",
+      "options": [
+        {
+          "option_id": 3130,
+          "option_text": "Storage for computer files only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3131,
+          "option_text": "A filing cabinet in the cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 3132,
+          "option_text": "Storage organized in a hierarchical structure of files and folders",
+          "is_correct": true
+        },
+        {
+          "option_id": 3133,
+          "option_text": "A type of document editor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 518,
+      "subskill_id": 31,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between hot and cold storage?",
+      "options": [
+        {
+          "option_id": 3134,
+          "option_text": "Hot storage is for frequently accessed data, cold storage for rarely accessed data",
+          "is_correct": true
+        },
+        {
+          "option_id": 3135,
+          "option_text": "Cold storage is faster than hot storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3136,
+          "option_text": "Hot storage is cheaper than cold storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3137,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 519,
+      "subskill_id": 32,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is cloud computing?",
+      "options": [
+        {
+          "option_id": 3138,
+          "option_text": "Computing done on weather systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 3139,
+          "option_text": "A type of mobile computing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3140,
+          "option_text": "Local server computing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3141,
+          "option_text": "On-demand delivery of computing resources over the internet",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 520,
+      "subskill_id": 32,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a virtual machine in the cloud?",
+      "options": [
+        {
+          "option_id": 3142,
+          "option_text": "A physical server in a data center",
+          "is_correct": false
+        },
+        {
+          "option_id": 3143,
+          "option_text": "A software emulation of a physical computer that runs an operating system",
+          "is_correct": true
+        },
+        {
+          "option_id": 3144,
+          "option_text": "A virtual reality device",
+          "is_correct": false
+        },
+        {
+          "option_id": 3145,
+          "option_text": "A type of cloud storage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 521,
+      "subskill_id": 32,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is serverless computing?",
+      "options": [
+        {
+          "option_id": 3146,
+          "option_text": "Computing without any servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3147,
+          "option_text": "Computing on desktop computers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3148,
+          "option_text": "A model where cloud provider manages servers and allocates resources on demand",
+          "is_correct": true
+        },
+        {
+          "option_id": 3149,
+          "option_text": "A type of peer-to-peer computing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 522,
+      "subskill_id": 32,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is containerization in cloud computing?",
+      "options": [
+        {
+          "option_id": 3150,
+          "option_text": "Packaging code with dependencies for consistent deployment across environments",
+          "is_correct": true
+        },
+        {
+          "option_id": 3151,
+          "option_text": "Putting servers in shipping containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3152,
+          "option_text": "A method for cooling data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3153,
+          "option_text": "A type of cloud storage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 523,
+      "subskill_id": 33,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Virtual Private Cloud (VPC)?",
+      "options": [
+        {
+          "option_id": 3154,
+          "option_text": "A private social network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3155,
+          "option_text": "A VPN service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3156,
+          "option_text": "A private email system",
+          "is_correct": false
+        },
+        {
+          "option_id": 3157,
+          "option_text": "A logically isolated section of the cloud where you can launch resources",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 524,
+      "subskill_id": 33,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a CDN in cloud computing?",
+      "options": [
+        {
+          "option_id": 3158,
+          "option_text": "Content Development Network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3159,
+          "option_text": "Content Delivery Network - geographically distributed servers for fast content delivery",
+          "is_correct": true
+        },
+        {
+          "option_id": 3160,
+          "option_text": "Cloud Data Network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3161,
+          "option_text": "Computer Distribution Network",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 525,
+      "subskill_id": 33,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a load balancer in the cloud?",
+      "options": [
+        {
+          "option_id": 3162,
+          "option_text": "A device for weighing cloud loads",
+          "is_correct": false
+        },
+        {
+          "option_id": 3163,
+          "option_text": "A tool for balancing cloud budgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 3164,
+          "option_text": "A service that increases cloud capacity",
+          "is_correct": false
+        },
+        {
+          "option_id": 3165,
+          "option_text": "A service that distributes incoming traffic across multiple targets",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 526,
+      "subskill_id": 27,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between EC2 and Lambda?",
+      "options": [
+        {
+          "option_id": 3166,
+          "option_text": "EC2 is serverless, Lambda is IaaS",
+          "is_correct": false
+        },
+        {
+          "option_id": 3167,
+          "option_text": "EC2 is a virtual machine, Lambda is a function as a service",
+          "is_correct": true
+        },
+        {
+          "option_id": 3168,
+          "option_text": "EC2 is for storage, Lambda is for compute",
+          "is_correct": false
+        },
+        {
+          "option_id": 3169,
+          "option_text": "They are exactly the same service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 527,
+      "subskill_id": 27,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Amazon RDS and when would you use it?",
+      "options": [
+        {
+          "option_id": 3170,
+          "option_text": "A NoSQL database service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3171,
+          "option_text": "A content delivery network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3172,
+          "option_text": "A compute optimization service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3173,
+          "option_text": "A managed relational database service for setting up and operating databases",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 528,
+      "subskill_id": 27,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Amazon VPC and why is it important?",
+      "options": [
+        {
+          "option_id": 3174,
+          "option_text": "A virtual programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 3175,
+          "option_text": "A type of EC2 instance",
+          "is_correct": false
+        },
+        {
+          "option_id": 3176,
+          "option_text": "A service that lets you launch AWS resources in a virtual network",
+          "is_correct": true
+        },
+        {
+          "option_id": 3177,
+          "option_text": "A database connection service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 529,
+      "subskill_id": 27,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between S3 and EBS?",
+      "options": [
+        {
+          "option_id": 3178,
+          "option_text": "S3 is object storage, EBS is block storage for EC2 instances",
+          "is_correct": true
+        },
+        {
+          "option_id": 3179,
+          "option_text": "EBS is object storage, S3 is block storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3180,
+          "option_text": "They are both the same type of storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3181,
+          "option_text": "S3 is for backups only, EBS is for databases only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 530,
+      "subskill_id": 28,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Google Kubernetes Engine (GKE)?",
+      "options": [
+        {
+          "option_id": 3182,
+          "option_text": "A Google search engine",
+          "is_correct": false
+        },
+        {
+          "option_id": 3183,
+          "option_text": "A managed Kubernetes service for running containers on GCP",
+          "is_correct": true
+        },
+        {
+          "option_id": 3184,
+          "option_text": "A Google Docs plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 3185,
+          "option_text": "A Google Maps feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 531,
+      "subskill_id": 28,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between Compute Engine and App Engine?",
+      "options": [
+        {
+          "option_id": 3186,
+          "option_text": "Compute Engine is PaaS, App Engine is IaaS",
+          "is_correct": false
+        },
+        {
+          "option_id": 3187,
+          "option_text": "They are the same service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3188,
+          "option_text": "Compute Engine is for databases, App Engine is for compute",
+          "is_correct": false
+        },
+        {
+          "option_id": 3189,
+          "option_text": "Compute Engine is IaaS with VMs, App Engine is PaaS for applications",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 532,
+      "subskill_id": 28,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Google Cloud Functions?",
+      "options": [
+        {
+          "option_id": 3190,
+          "option_text": "A Google Sheets function",
+          "is_correct": false
+        },
+        {
+          "option_id": 3191,
+          "option_text": "A mathematical calculation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 3192,
+          "option_text": "A serverless execution environment for building and connecting cloud services",
+          "is_correct": true
+        },
+        {
+          "option_id": 3193,
+          "option_text": "A Google search feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 533,
+      "subskill_id": 29,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Azure Functions?",
+      "options": [
+        {
+          "option_id": 3194,
+          "option_text": "A serverless compute service that runs event-triggered code",
+          "is_correct": true
+        },
+        {
+          "option_id": 3195,
+          "option_text": "A Microsoft Excel function",
+          "is_correct": false
+        },
+        {
+          "option_id": 3196,
+          "option_text": "A type of Azure VM",
+          "is_correct": false
+        },
+        {
+          "option_id": 3197,
+          "option_text": "A database query tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 534,
+      "subskill_id": 29,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Azure Kubernetes Service (AKS)?",
+      "options": [
+        {
+          "option_id": 3198,
+          "option_text": "A Microsoft Office add-in",
+          "is_correct": false
+        },
+        {
+          "option_id": 3199,
+          "option_text": "A managed Kubernetes container orchestration service",
+          "is_correct": true
+        },
+        {
+          "option_id": 3200,
+          "option_text": "An Azure storage service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3201,
+          "option_text": "A networking service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 535,
+      "subskill_id": 29,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between Azure SQL Database and SQL Server?",
+      "options": [
+        {
+          "option_id": 3202,
+          "option_text": "Azure SQL Database is open source, SQL Server is Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 3203,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 3204,
+          "option_text": "SQL Server is cloud-only, Azure SQL is on-premises",
+          "is_correct": false
+        },
+        {
+          "option_id": 3205,
+          "option_text": "Azure SQL Database is a managed cloud database, SQL Server can be on-premises or in VMs",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 536,
+      "subskill_id": 30,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the principle of least privilege in IAM?",
+      "options": [
+        {
+          "option_id": 3206,
+          "option_text": "Giving all users admin access",
+          "is_correct": false
+        },
+        {
+          "option_id": 3207,
+          "option_text": "Giving users more permissions than needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 3208,
+          "option_text": "Granting only the minimum permissions necessary to perform tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 3209,
+          "option_text": "Restricting all access to resources",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 537,
+      "subskill_id": 30,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do IAM policies work?",
+      "options": [
+        {
+          "option_id": 3210,
+          "option_text": "JSON documents that define permissions and can be attached to IAM identities",
+          "is_correct": true
+        },
+        {
+          "option_id": 3211,
+          "option_text": "Text files stored in S3",
+          "is_correct": false
+        },
+        {
+          "option_id": 3212,
+          "option_text": "Database tables with user permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3213,
+          "option_text": "XML configuration files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 538,
+      "subskill_id": 30,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between authentication and authorization in IAM?",
+      "options": [
+        {
+          "option_id": 3214,
+          "option_text": "Authentication determines access level, authorization verifies identity",
+          "is_correct": false
+        },
+        {
+          "option_id": 3215,
+          "option_text": "Authentication verifies identity, authorization determines access level",
+          "is_correct": true
+        },
+        {
+          "option_id": 3216,
+          "option_text": "They are the same concept",
+          "is_correct": false
+        },
+        {
+          "option_id": 3217,
+          "option_text": "Authentication is for users, authorization is for services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 539,
+      "subskill_id": 30,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are managed policies vs inline policies?",
+      "options": [
+        {
+          "option_id": 3218,
+          "option_text": "Managed policies are created by users, inline are AWS provided",
+          "is_correct": false
+        },
+        {
+          "option_id": 3219,
+          "option_text": "Managed policies cannot be reused, inline policies can",
+          "is_correct": false
+        },
+        {
+          "option_id": 3220,
+          "option_text": "There is no difference",
+          "is_correct": false
+        },
+        {
+          "option_id": 3221,
+          "option_text": "Managed policies are reusable standalone policies, inline policies are embedded in a single entity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 540,
+      "subskill_id": 31,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between object storage and block storage?",
+      "options": [
+        {
+          "option_id": 3222,
+          "option_text": "Object storage is faster than block storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 3223,
+          "option_text": "Block storage is for unstructured data, object storage for structured data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3224,
+          "option_text": "Object storage manages data as objects with metadata, block storage divides data into blocks",
+          "is_correct": true
+        },
+        {
+          "option_id": 3225,
+          "option_text": "They are the same storage type",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 541,
+      "subskill_id": 31,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is storage tiering and why is it used?",
+      "options": [
+        {
+          "option_id": 3226,
+          "option_text": "Moving data between different storage classes based on access frequency to optimize cost",
+          "is_correct": true
+        },
+        {
+          "option_id": 3227,
+          "option_text": "Stacking storage devices physically",
+          "is_correct": false
+        },
+        {
+          "option_id": 3228,
+          "option_text": "A method for backing up data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3229,
+          "option_text": "Organizing storage in layers visually",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 542,
+      "subskill_id": 31,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is data replication in cloud storage?",
+      "options": [
+        {
+          "option_id": 3230,
+          "option_text": "Deleting duplicate data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3231,
+          "option_text": "Copying data across multiple locations for durability and availability",
+          "is_correct": true
+        },
+        {
+          "option_id": 3232,
+          "option_text": "Compressing data to save space",
+          "is_correct": false
+        },
+        {
+          "option_id": 3233,
+          "option_text": "Encrypting data for security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 543,
+      "subskill_id": 31,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between hot, cool, and cold storage tiers?",
+      "options": [
+        {
+          "option_id": 3234,
+          "option_text": "Hot is for archived data, cold is for frequently accessed data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3235,
+          "option_text": "Cool is more expensive than hot",
+          "is_correct": false
+        },
+        {
+          "option_id": 3236,
+          "option_text": "Cold storage has the fastest access times",
+          "is_correct": false
+        },
+        {
+          "option_id": 3237,
+          "option_text": "Hot is for frequent access, cool for infrequent, cold for archival with lower cost",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 544,
+      "subskill_id": 32,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between vertical and horizontal scaling?",
+      "options": [
+        {
+          "option_id": 3238,
+          "option_text": "Vertical scaling adds more servers, horizontal adds more power to existing server",
+          "is_correct": false
+        },
+        {
+          "option_id": 3239,
+          "option_text": "Horizontal scaling is adding resources to one server, vertical is adding more servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3240,
+          "option_text": "Vertical scaling increases power of existing server, horizontal scaling adds more servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3241,
+          "option_text": "They are the same scaling method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 545,
+      "subskill_id": 32,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is auto-scaling in cloud computing?",
+      "options": [
+        {
+          "option_id": 3242,
+          "option_text": "Automatically adjusting compute resources based on demand",
+          "is_correct": true
+        },
+        {
+          "option_id": 3243,
+          "option_text": "Manually resizing instances",
+          "is_correct": false
+        },
+        {
+          "option_id": 3244,
+          "option_text": "A self-driving car feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 3245,
+          "option_text": "Automatic software updates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 546,
+      "subskill_id": 32,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between virtual machines and containers?",
+      "options": [
+        {
+          "option_id": 3246,
+          "option_text": "VMs share host OS kernel, containers have full OS",
+          "is_correct": false
+        },
+        {
+          "option_id": 3247,
+          "option_text": "VMs include full OS with hypervisor, containers share host OS kernel",
+          "is_correct": true
+        },
+        {
+          "option_id": 3248,
+          "option_text": "Containers are slower than VMs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3249,
+          "option_text": "VMs are for development, containers for production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 547,
+      "subskill_id": 32,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a compute instance?",
+      "options": [
+        {
+          "option_id": 3250,
+          "option_text": "An example of calculation",
+          "is_correct": false
+        },
+        {
+          "option_id": 3251,
+          "option_text": "A database instance",
+          "is_correct": false
+        },
+        {
+          "option_id": 3252,
+          "option_text": "A storage unit",
+          "is_correct": false
+        },
+        {
+          "option_id": 3253,
+          "option_text": "A virtual server in the cloud that runs applications",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 548,
+      "subskill_id": 33,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a subnet in cloud networking?",
+      "options": [
+        {
+          "option_id": 3254,
+          "option_text": "A submarine network",
+          "is_correct": false
+        },
+        {
+          "option_id": 3255,
+          "option_text": "A substandard internet connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 3256,
+          "option_text": "A range of IP addresses within a VPC that divides the network",
+          "is_correct": true
+        },
+        {
+          "option_id": 3257,
+          "option_text": "A subscription network",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 549,
+      "subskill_id": 33,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between public and private IP addresses?",
+      "options": [
+        {
+          "option_id": 3258,
+          "option_text": "Public IPs are internet-routable, private IPs are for internal network only",
+          "is_correct": true
+        },
+        {
+          "option_id": 3259,
+          "option_text": "Private IPs are more secure than public IPs",
+          "is_correct": false
+        },
+        {
+          "option_id": 3260,
+          "option_text": "Public IPs are free, private IPs cost money",
+          "is_correct": false
+        },
+        {
+          "option_id": 3261,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 550,
+      "subskill_id": 33,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a security group and how does it work?",
+      "options": [
+        {
+          "option_id": 3262,
+          "option_text": "A group of security guards",
+          "is_correct": false
+        },
+        {
+          "option_id": 3263,
+          "option_text": "A team of cloud security experts",
+          "is_correct": false
+        },
+        {
+          "option_id": 3264,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 3265,
+          "option_text": "A virtual firewall that controls traffic to cloud resources",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 551,
+      "subskill_id": 27,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you design a highly available architecture across multiple AWS regions?",
+      "options": [
+        {
+          "option_id": 3266,
+          "option_text": "Using a single EC2 instance in one region",
+          "is_correct": false
+        },
+        {
+          "option_id": 3267,
+          "option_text": "Deploying only in one availability zone",
+          "is_correct": false
+        },
+        {
+          "option_id": 3268,
+          "option_text": "Using only local infrastructure",
+          "is_correct": false
+        },
+        {
+          "option_id": 3269,
+          "option_text": "Multi-region deployment with Route 53, load balancers, and database replication",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 552,
+      "subskill_id": 27,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is AWS CloudFormation and how does it work?",
+      "options": [
+        {
+          "option_id": 3270,
+          "option_text": "An infrastructure as code service that uses templates to provision AWS resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 3271,
+          "option_text": "A weather forecasting service for data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3272,
+          "option_text": "A formation of clouds in the sky",
+          "is_correct": false
+        },
+        {
+          "option_id": 3273,
+          "option_text": "A machine learning service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 553,
+      "subskill_id": 27,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does AWS auto-scaling work with load balancers?",
+      "options": [
+        {
+          "option_id": 3274,
+          "option_text": "Auto-scaling and load balancers cannot work together",
+          "is_correct": false
+        },
+        {
+          "option_id": 3275,
+          "option_text": "Load balancers replace auto-scaling groups",
+          "is_correct": false
+        },
+        {
+          "option_id": 3276,
+          "option_text": "Auto-scaling groups work independently of load balancers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3277,
+          "option_text": "Auto-scaling adds or removes instances registered with the load balancer based on demand",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 554,
+      "subskill_id": 27,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a security group and a NACL?",
+      "options": [
+        {
+          "option_id": 3278,
+          "option_text": "Security groups are stateless, NACLs are stateful",
+          "is_correct": false
+        },
+        {
+          "option_id": 3279,
+          "option_text": "Security groups are stateful and at instance level, NACLs are stateless at subnet level",
+          "is_correct": true
+        },
+        {
+          "option_id": 3280,
+          "option_text": "NACLs are stateful and at instance level, security groups are stateless at subnet level",
+          "is_correct": false
+        },
+        {
+          "option_id": 3281,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 555,
+      "subskill_id": 28,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Google Cloud Load Balancing work?",
+      "options": [
+        {
+          "option_id": 3282,
+          "option_text": "It routes traffic to a single server only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3283,
+          "option_text": "It requires manual traffic distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 3284,
+          "option_text": "It is a regional or global service that distributes traffic across instances",
+          "is_correct": true
+        },
+        {
+          "option_id": 3285,
+          "option_text": "It only works for HTTP traffic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 556,
+      "subskill_id": 28,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Google Cloud CDN and how does it improve performance?",
+      "options": [
+        {
+          "option_id": 3286,
+          "option_text": "A content delivery network that caches content at edge locations for low latency",
+          "is_correct": true
+        },
+        {
+          "option_id": 3287,
+          "option_text": "A content development network for developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3288,
+          "option_text": "A Google Docs collaboration tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 3289,
+          "option_text": "A data center cooling system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 557,
+      "subskill_id": 28,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement infrastructure as code on GCP?",
+      "options": [
+        {
+          "option_id": 3290,
+          "option_text": "Using the Google Cloud Console only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3291,
+          "option_text": "Manual configuration of each resource",
+          "is_correct": false
+        },
+        {
+          "option_id": 3292,
+          "option_text": "Using SSH to configure servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3293,
+          "option_text": "Using Deployment Manager or Terraform with configuration files",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 558,
+      "subskill_id": 29,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Azure Resource Manager and how does it work?",
+      "options": [
+        {
+          "option_id": 3294,
+          "option_text": "A tool for managing physical resources in data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3295,
+          "option_text": "A management layer that enables creating, updating, and deleting Azure resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 3296,
+          "option_text": "An Azure employee management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 3297,
+          "option_text": "A resource allocation algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 559,
+      "subskill_id": 29,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Azure Traffic Manager differ from Load Balancer?",
+      "options": [
+        {
+          "option_id": 3298,
+          "option_text": "Traffic Manager is for HTTP, Load Balancer is for all protocols",
+          "is_correct": false
+        },
+        {
+          "option_id": 3299,
+          "option_text": "Load Balancer is DNS-based, Traffic Manager is network-based",
+          "is_correct": false
+        },
+        {
+          "option_id": 3300,
+          "option_text": "Traffic Manager is DNS-based traffic distribution, Load Balancer is network-level load balancing",
+          "is_correct": true
+        },
+        {
+          "option_id": 3301,
+          "option_text": "They are identical services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 560,
+      "subskill_id": 29,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Azure Active Directory and how is it used?",
+      "options": [
+        {
+          "option_id": 3302,
+          "option_text": "A cloud-based identity and access management service",
+          "is_correct": true
+        },
+        {
+          "option_id": 3303,
+          "option_text": "A directory of Azure employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 3304,
+          "option_text": "A phonebook for Azure contacts",
+          "is_correct": false
+        },
+        {
+          "option_id": 3305,
+          "option_text": "A file storage service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 561,
+      "subskill_id": 30,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement cross-account access in AWS IAM?",
+      "options": [
+        {
+          "option_id": 3306,
+          "option_text": "Cross-account access is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 3307,
+          "option_text": "By sharing passwords between accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 3308,
+          "option_text": "By creating the same user in both accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 3309,
+          "option_text": "Using IAM roles with trusted relationships between accounts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 562,
+      "subskill_id": 30,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a service role and when would you use it?",
+      "options": [
+        {
+          "option_id": 3310,
+          "option_text": "A role for customer service representatives",
+          "is_correct": false
+        },
+        {
+          "option_id": 3311,
+          "option_text": "An IAM role that grants permissions to an AWS service",
+          "is_correct": true
+        },
+        {
+          "option_id": 3312,
+          "option_text": "A role for service technicians",
+          "is_correct": false
+        },
+        {
+          "option_id": 3313,
+          "option_text": "A type of user account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 563,
+      "subskill_id": 30,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you rotate IAM credentials securely?",
+      "options": [
+        {
+          "option_id": 3314,
+          "option_text": "By deleting old credentials without creating new ones",
+          "is_correct": false
+        },
+        {
+          "option_id": 3315,
+          "option_text": "Credential rotation is not necessary",
+          "is_correct": false
+        },
+        {
+          "option_id": 3316,
+          "option_text": "Create new credentials, update applications, then deactivate old ones",
+          "is_correct": true
+        },
+        {
+          "option_id": 3317,
+          "option_text": "By sharing credentials with all users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 564,
+      "subskill_id": 30,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a role and a policy?",
+      "options": [
+        {
+          "option_id": 3318,
+          "option_text": "A policy defines permissions, a role is an identity that can assume policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 3319,
+          "option_text": "A role defines permissions, a policy is an identity",
+          "is_correct": false
+        },
+        {
+          "option_id": 3320,
+          "option_text": "They are interchangeable terms",
+          "is_correct": false
+        },
+        {
+          "option_id": 3321,
+          "option_text": "Policies are for users, roles are for groups",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 565,
+      "subskill_id": 31,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement data lifecycle policies in cloud storage?",
+      "options": [
+        {
+          "option_id": 3322,
+          "option_text": "By manually moving data between storage tiers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3323,
+          "option_text": "Data lifecycle policies are not supported",
+          "is_correct": false
+        },
+        {
+          "option_id": 3324,
+          "option_text": "By deleting all data after 30 days",
+          "is_correct": false
+        },
+        {
+          "option_id": 3325,
+          "option_text": "Configuring rules to transition data between storage classes and expire objects",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 566,
+      "subskill_id": 31,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is versioning in object storage and why use it?",
+      "options": [
+        {
+          "option_id": 3326,
+          "option_text": "A way to create different versions of software",
+          "is_correct": false
+        },
+        {
+          "option_id": 3327,
+          "option_text": "Preserving multiple variants of an object for protection against accidental deletion",
+          "is_correct": true
+        },
+        {
+          "option_id": 3328,
+          "option_text": "A method for updating objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 3329,
+          "option_text": "Tracking user versions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 567,
+      "subskill_id": 31,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does encryption work for data at rest in cloud storage?",
+      "options": [
+        {
+          "option_id": 3330,
+          "option_text": "Data at rest cannot be encrypted",
+          "is_correct": false
+        },
+        {
+          "option_id": 3331,
+          "option_text": "Encryption happens only during transit",
+          "is_correct": false
+        },
+        {
+          "option_id": 3332,
+          "option_text": "Server-side encryption with provider-managed or customer-managed keys",
+          "is_correct": true
+        },
+        {
+          "option_id": 3333,
+          "option_text": "By storing data in plain text only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 568,
+      "subskill_id": 31,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between regional and multi-regional storage?",
+      "options": [
+        {
+          "option_id": 3334,
+          "option_text": "Regional stores data in one region, multi-regional replicates across multiple regions",
+          "is_correct": true
+        },
+        {
+          "option_id": 3335,
+          "option_text": "Multi-regional stores in one region, regional replicates across regions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3336,
+          "option_text": "They are the same configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 3337,
+          "option_text": "Regional is for archives, multi-regional for active data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 569,
+      "subskill_id": 32,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you choose between VM, container, and serverless for an application?",
+      "options": [
+        {
+          "option_id": 3338,
+          "option_text": "Always use VMs for everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 3339,
+          "option_text": "Serverless is always the best choice",
+          "is_correct": false
+        },
+        {
+          "option_id": 3340,
+          "option_text": "Containers work for all use cases",
+          "is_correct": false
+        },
+        {
+          "option_id": 3341,
+          "option_text": "Based on control needs, performance requirements, and operational overhead preferences",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 570,
+      "subskill_id": 32,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a reserved instance and when would you use it?",
+      "options": [
+        {
+          "option_id": 3342,
+          "option_text": "An instance that is reserved for emergency use only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3343,
+          "option_text": "A commitment to use EC2 instances for cost savings with steady-state workloads",
+          "is_correct": true
+        },
+        {
+          "option_id": 3344,
+          "option_text": "An instance that cannot be used by anyone",
+          "is_correct": false
+        },
+        {
+          "option_id": 3345,
+          "option_text": "A backup instance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 571,
+      "subskill_id": 32,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you monitor compute resources in the cloud?",
+      "options": [
+        {
+          "option_id": 3346,
+          "option_text": "By watching them through a window",
+          "is_correct": false
+        },
+        {
+          "option_id": 3347,
+          "option_text": "Monitoring is not possible in the cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 3348,
+          "option_text": "Using cloud monitoring tools like CloudWatch, Stackdriver, or Azure Monitor",
+          "is_correct": true
+        },
+        {
+          "option_id": 3349,
+          "option_text": "By asking users to report issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 572,
+      "subskill_id": 32,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between spot instances and on-demand instances?",
+      "options": [
+        {
+          "option_id": 3350,
+          "option_text": "Spot instances use spare capacity at lower cost but can be interrupted",
+          "is_correct": true
+        },
+        {
+          "option_id": 3351,
+          "option_text": "On-demand instances are cheaper than spot instances",
+          "is_correct": false
+        },
+        {
+          "option_id": 3352,
+          "option_text": "Spot instances are guaranteed to run indefinitely",
+          "is_correct": false
+        },
+        {
+          "option_id": 3353,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 573,
+      "subskill_id": 33,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you set up a VPN connection to the cloud?",
+      "options": [
+        {
+          "option_id": 3354,
+          "option_text": "Using a public internet connection only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3355,
+          "option_text": "VPN connections cannot be established",
+          "is_correct": false
+        },
+        {
+          "option_id": 3356,
+          "option_text": "By emailing the cloud provider",
+          "is_correct": false
+        },
+        {
+          "option_id": 3357,
+          "option_text": "Using VPN gateway services and customer gateway configurations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 574,
+      "subskill_id": 33,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is VPC peering and how does it work?",
+      "options": [
+        {
+          "option_id": 3358,
+          "option_text": "A connection between a VPC and the internet",
+          "is_correct": false
+        },
+        {
+          "option_id": 3359,
+          "option_text": "A networking connection between two VPCs to route traffic using private IP addresses",
+          "is_correct": true
+        },
+        {
+          "option_id": 3360,
+          "option_text": "A peering service for VPC security",
+          "is_correct": false
+        },
+        {
+          "option_id": 3361,
+          "option_text": "A VPC monitoring tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 575,
+      "subskill_id": 33,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement network ACLs vs security groups?",
+      "options": [
+        {
+          "option_id": 3362,
+          "option_text": "Use only security groups for all protection",
+          "is_correct": false
+        },
+        {
+          "option_id": 3363,
+          "option_text": "Use only NACLs for all protection",
+          "is_correct": false
+        },
+        {
+          "option_id": 3364,
+          "option_text": "They cannot be used together",
+          "is_correct": false
+        },
+        {
+          "option_id": 3365,
+          "option_text": "Security groups at instance level, NACLs at subnet level for defense in depth",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 576,
+      "subskill_id": 27,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a multi-account AWS strategy with governance and security?",
+      "options": [
+        {
+          "option_id": 3366,
+          "option_text": "Using a single account for all workloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 3367,
+          "option_text": "Creating separate accounts for each team with AWS Organizations and SCPs",
+          "is_correct": true
+        },
+        {
+          "option_id": 3368,
+          "option_text": "Sharing one account across all business units",
+          "is_correct": false
+        },
+        {
+          "option_id": 3369,
+          "option_text": "Using root accounts for daily operations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 577,
+      "subskill_id": 27,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is AWS Organizations and how do you implement service control policies?",
+      "options": [
+        {
+          "option_id": 3370,
+          "option_text": "A service for organizing employee teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 3371,
+          "option_text": "A project management tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 3372,
+          "option_text": "A resource tagging service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3373,
+          "option_text": "A service to centrally manage multiple AWS accounts with policy-based controls",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 578,
+      "subskill_id": 27,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement disaster recovery across AWS regions with RTO and RPO requirements?",
+      "options": [
+        {
+          "option_id": 3374,
+          "option_text": "By backing up data to on-premises servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3375,
+          "option_text": "Disaster recovery is not possible across regions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3376,
+          "option_text": "Using a single region with no replication",
+          "is_correct": false
+        },
+        {
+          "option_id": 3377,
+          "option_text": "Multi-region replication with pilot light or warm standby strategies",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 579,
+      "subskill_id": 27,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the trade-offs between using AWS Transit Gateway and VPC peering?",
+      "options": [
+        {
+          "option_id": 3378,
+          "option_text": "Transit Gateway simplifies network management for many VPCs, VPC peering is point-to-point",
+          "is_correct": true
+        },
+        {
+          "option_id": 3379,
+          "option_text": "VPC peering is always better than Transit Gateway",
+          "is_correct": false
+        },
+        {
+          "option_id": 3380,
+          "option_text": "Transit Gateway cannot connect to on-premises",
+          "is_correct": false
+        },
+        {
+          "option_id": 3381,
+          "option_text": "VPC peering supports transitive routing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 580,
+      "subskill_id": 28,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a hybrid cloud architecture with GCP and on-premises?",
+      "options": [
+        {
+          "option_id": 3382,
+          "option_text": "Using only public internet for connectivity",
+          "is_correct": false
+        },
+        {
+          "option_id": 3383,
+          "option_text": "Using Cloud VPN or Dedicated Interconnect for secure connectivity",
+          "is_correct": true
+        },
+        {
+          "option_id": 3384,
+          "option_text": "Hybrid cloud is not supported by GCP",
+          "is_correct": false
+        },
+        {
+          "option_id": 3385,
+          "option_text": "By manually transferring data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 581,
+      "subskill_id": 28,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Google Cloud Armor and how does it protect applications?",
+      "options": [
+        {
+          "option_id": 3386,
+          "option_text": "A physical armor for data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3387,
+          "option_text": "A security guard service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3388,
+          "option_text": "An encryption service",
+          "is_correct": false
+        },
+        {
+          "option_id": 3389,
+          "option_text": "A web application firewall and DDoS protection service",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 582,
+      "subskill_id": 28,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize costs in GCP using committed use discounts and sustained use discounts?",
+      "options": [
+        {
+          "option_id": 3390,
+          "option_text": "By deleting all resources",
+          "is_correct": false
+        },
+        {
+          "option_id": 3391,
+          "option_text": "Cost optimization is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 3392,
+          "option_text": "By using only on-demand pricing",
+          "is_correct": false
+        },
+        {
+          "option_id": 3393,
+          "option_text": "Commit to consistent usage for discounts and benefit from automatic sustained use discounts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 583,
+      "subskill_id": 29,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement Azure Blueprints for governance and compliance?",
+      "options": [
+        {
+          "option_id": 3394,
+          "option_text": "Packages that define a repeatable set of Azure resources for compliance",
+          "is_correct": true
+        },
+        {
+          "option_id": 3395,
+          "option_text": "Architectural drawings of Azure data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3396,
+          "option_text": "Azure employee training materials",
+          "is_correct": false
+        },
+        {
+          "option_id": 3397,
+          "option_text": "Network topology diagrams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 584,
+      "subskill_id": 29,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Azure Arc and how does it enable hybrid management?",
+      "options": [
+        {
+          "option_id": 3398,
+          "option_text": "A gaming console from Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 3399,
+          "option_text": "A tool that extends Azure management to any infrastructure",
+          "is_correct": true
+        },
+        {
+          "option_id": 3400,
+          "option_text": "A networking cable",
+          "is_correct": false
+        },
+        {
+          "option_id": 3401,
+          "option_text": "A data center construction service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 585,
+      "subskill_id": 29,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a migration strategy from on-premises to Azure?",
+      "options": [
+        {
+          "option_id": 3402,
+          "option_text": "Lift and shift everything without assessment",
+          "is_correct": false
+        },
+        {
+          "option_id": 3403,
+          "option_text": "Migrating all applications at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 3404,
+          "option_text": "No migration strategy needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 3405,
+          "option_text": "Assessment, migration planning, pilot migration, and phased execution",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 586,
+      "subskill_id": 30,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement fine-grained access control using attribute-based access control (ABAC)?",
+      "options": [
+        {
+          "option_id": 3406,
+          "option_text": "Using only user groups for permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 3407,
+          "option_text": "Granting all users admin access",
+          "is_correct": false
+        },
+        {
+          "option_id": 3408,
+          "option_text": "Defining permissions based on user attributes like department and project tags",
+          "is_correct": true
+        },
+        {
+          "option_id": 3409,
+          "option_text": "ABAC is not supported in cloud IAM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 587,
+      "subskill_id": 30,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a permission boundary and how does it differ from a policy?",
+      "options": [
+        {
+          "option_id": 3410,
+          "option_text": "A boundary sets maximum permissions a role can have, policies grant specific access",
+          "is_correct": true
+        },
+        {
+          "option_id": 3411,
+          "option_text": "A policy sets maximum permissions, boundaries grant specific access",
+          "is_correct": false
+        },
+        {
+          "option_id": 3412,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 3413,
+          "option_text": "Boundaries are for users, policies are for roles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 588,
+      "subskill_id": 30,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you audit and monitor IAM usage for security compliance?",
+      "options": [
+        {
+          "option_id": 3414,
+          "option_text": "By manually reviewing all users daily",
+          "is_correct": false
+        },
+        {
+          "option_id": 3415,
+          "option_text": "Using CloudTrail, IAM Access Analyzer, and AWS Config for continuous monitoring",
+          "is_correct": true
+        },
+        {
+          "option_id": 3416,
+          "option_text": "IAM usage cannot be audited",
+          "is_correct": false
+        },
+        {
+          "option_id": 3417,
+          "option_text": "By asking users what they access",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 589,
+      "subskill_id": 30,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement federated identity with external identity providers?",
+      "options": [
+        {
+          "option_id": 3418,
+          "option_text": "By creating local users for everyone",
+          "is_correct": false
+        },
+        {
+          "option_id": 3419,
+          "option_text": "Federation is not supported",
+          "is_correct": false
+        },
+        {
+          "option_id": 3420,
+          "option_text": "By sharing passwords with external providers",
+          "is_correct": false
+        },
+        {
+          "option_id": 3421,
+          "option_text": "Using SAML 2.0 or OIDC to establish trust between IdP and cloud provider",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 590,
+      "subskill_id": 31,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a global distributed storage solution with data consistency requirements?",
+      "options": [
+        {
+          "option_id": 3422,
+          "option_text": "Using a single region for all data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3423,
+          "option_text": "Ignoring consistency requirements",
+          "is_correct": false
+        },
+        {
+          "option_id": 3424,
+          "option_text": "Choosing appropriate consistency models and replication strategies",
+          "is_correct": true
+        },
+        {
+          "option_id": 3425,
+          "option_text": "Storing all data in memory only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 591,
+      "subskill_id": 31,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the performance considerations for different storage types in high-throughput applications?",
+      "options": [
+        {
+          "option_id": 3426,
+          "option_text": "IOPS, throughput, latency, and access patterns for each storage type",
+          "is_correct": true
+        },
+        {
+          "option_id": 3427,
+          "option_text": "Storage performance is identical across all types",
+          "is_correct": false
+        },
+        {
+          "option_id": 3428,
+          "option_text": "Only storage capacity matters",
+          "is_correct": false
+        },
+        {
+          "option_id": 3429,
+          "option_text": "Storage location is the only factor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 592,
+      "subskill_id": 31,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement storage encryption with customer-managed keys?",
+      "options": [
+        {
+          "option_id": 3430,
+          "option_text": "Using default cloud provider encryption only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3431,
+          "option_text": "Storing keys in the same location as data",
+          "is_correct": false
+        },
+        {
+          "option_id": 3432,
+          "option_text": "Using KMS with customer-managed keys separate from encrypted data",
+          "is_correct": true
+        },
+        {
+          "option_id": 3433,
+          "option_text": "Encryption cannot be customized",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 593,
+      "subskill_id": 31,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a data archiving strategy for regulatory compliance?",
+      "options": [
+        {
+          "option_id": 3434,
+          "option_text": "Delete all data after one year",
+          "is_correct": false
+        },
+        {
+          "option_id": 3435,
+          "option_text": "Keep all data in hot storage forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 3436,
+          "option_text": "No archiving strategy needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 3437,
+          "option_text": "Lifecycle policies with retention periods and immutable storage options",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 594,
+      "subskill_id": 32,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a high-performance computing cluster in the cloud?",
+      "options": [
+        {
+          "option_id": 3438,
+          "option_text": "Using standard VMs with no optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 3439,
+          "option_text": "HPC is not possible in the cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 3440,
+          "option_text": "Using compute-optimized instances with low-latency networking",
+          "is_correct": true
+        },
+        {
+          "option_id": 3441,
+          "option_text": "By using a single powerful server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 595,
+      "subskill_id": 32,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the considerations for migrating legacy applications to the cloud?",
+      "options": [
+        {
+          "option_id": 3442,
+          "option_text": "Assessing dependencies, refactoring needs, and choosing appropriate migration strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 3443,
+          "option_text": "Lift and shift everything without changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 3444,
+          "option_text": "Legacy apps cannot be migrated",
+          "is_correct": false
+        },
+        {
+          "option_id": 3445,
+          "option_text": "Rewriting all applications from scratch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 596,
+      "subskill_id": 32,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement predictive auto-scaling based on application metrics?",
+      "options": [
+        {
+          "option_id": 3446,
+          "option_text": "By guessing when traffic will increase",
+          "is_correct": false
+        },
+        {
+          "option_id": 3447,
+          "option_text": "Manual scaling only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3448,
+          "option_text": "Using fixed schedules only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3449,
+          "option_text": "Using machine learning to forecast demand and scale proactively",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 597,
+      "subskill_id": 32,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you optimize compute costs for a large-scale data processing workload?",
+      "options": [
+        {
+          "option_id": 3450,
+          "option_text": "Using only on-demand instances",
+          "is_correct": false
+        },
+        {
+          "option_id": 3451,
+          "option_text": "Leaving idle resources running",
+          "is_correct": false
+        },
+        {
+          "option_id": 3452,
+          "option_text": "Spot instances, reserved capacity, and auto-scaling based on workload",
+          "is_correct": true
+        },
+        {
+          "option_id": 3453,
+          "option_text": "Cost optimization is not possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 598,
+      "subskill_id": 33,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a global network architecture with multiple cloud providers?",
+      "options": [
+        {
+          "option_id": 3454,
+          "option_text": "Using a single cloud provider only",
+          "is_correct": false
+        },
+        {
+          "option_id": 3455,
+          "option_text": "Direct connections, VPNs, and global load balancers across providers",
+          "is_correct": true
+        },
+        {
+          "option_id": 3456,
+          "option_text": "Multi-cloud networking is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 3457,
+          "option_text": "By using the public internet only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 599,
+      "subskill_id": 33,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is service mesh and how does it enhance cloud networking?",
+      "options": [
+        {
+          "option_id": 3458,
+          "option_text": "A dedicated infrastructure layer for service-to-service communication with observability",
+          "is_correct": true
+        },
+        {
+          "option_id": 3459,
+          "option_text": "A mesh network of physical cables",
+          "is_correct": false
+        },
+        {
+          "option_id": 3460,
+          "option_text": "A type of load balancer",
+          "is_correct": false
+        },
+        {
+          "option_id": 3461,
+          "option_text": "A network security group",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 600,
+      "subskill_id": 33,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement network segmentation for a multi-tier application?",
+      "options": [
+        {
+          "option_id": 3462,
+          "option_text": "Placing all tiers in the same subnet",
+          "is_correct": false
+        },
+        {
+          "option_id": 3463,
+          "option_text": "Network segmentation is not necessary",
+          "is_correct": false
+        },
+        {
+          "option_id": 3464,
+          "option_text": "Using only security groups",
+          "is_correct": false
+        },
+        {
+          "option_id": 3465,
+          "option_text": "Separate subnets with NACLs and security groups for each application tier",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

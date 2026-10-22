@@ -1,0 +1,2906 @@
+{
+  "skill_id": 2,
+  "skill_name": "Backend Development",
+  "questions": [
+    {
+      "question_id": 101,
+      "subskill_id": 7,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does REST stand for?",
+      "options": [
+        {
+          "option_id": 5466,
+          "option_text": "Representational State Transfer",
+          "is_correct": true
+        },
+        {
+          "option_id": 5467,
+          "option_text": "Remote State Transfer",
+          "is_correct": false
+        },
+        {
+          "option_id": 5468,
+          "option_text": "Representational Service Transfer",
+          "is_correct": false
+        },
+        {
+          "option_id": 5469,
+          "option_text": "RESTful State Transfer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 102,
+      "subskill_id": 7,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which HTTP method is used to retrieve data?",
+      "options": [
+        {
+          "option_id": 5470,
+          "option_text": "POST",
+          "is_correct": false
+        },
+        {
+          "option_id": 5471,
+          "option_text": "GET",
+          "is_correct": true
+        },
+        {
+          "option_id": 5472,
+          "option_text": "PUT",
+          "is_correct": false
+        },
+        {
+          "option_id": 5473,
+          "option_text": "DELETE",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 103,
+      "subskill_id": 7,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What format is commonly used for REST API responses?",
+      "options": [
+        {
+          "option_id": 5474,
+          "option_text": "XML",
+          "is_correct": false
+        },
+        {
+          "option_id": 5475,
+          "option_text": "CSV",
+          "is_correct": false
+        },
+        {
+          "option_id": 5476,
+          "option_text": "JSON",
+          "is_correct": true
+        },
+        {
+          "option_id": 5477,
+          "option_text": "HTML",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 104,
+      "subskill_id": 7,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API endpoint?",
+      "options": [
+        {
+          "option_id": 5478,
+          "option_text": "The server IP address",
+          "is_correct": false
+        },
+        {
+          "option_id": 5479,
+          "option_text": "A specific URL where an API can be accessed",
+          "is_correct": true
+        },
+        {
+          "option_id": 5480,
+          "option_text": "The programming language used",
+          "is_correct": false
+        },
+        {
+          "option_id": 5481,
+          "option_text": "The database connection string",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 105,
+      "subskill_id": 8,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Node.js?",
+      "options": [
+        {
+          "option_id": 5482,
+          "option_text": "A JavaScript framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 5483,
+          "option_text": "A JavaScript runtime built on Chrome V8",
+          "is_correct": true
+        },
+        {
+          "option_id": 5484,
+          "option_text": "A Python library",
+          "is_correct": false
+        },
+        {
+          "option_id": 5485,
+          "option_text": "A database system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 106,
+      "subskill_id": 8,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which command initializes a Node.js project?",
+      "options": [
+        {
+          "option_id": 5486,
+          "option_text": "node init",
+          "is_correct": false
+        },
+        {
+          "option_id": 5487,
+          "option_text": "npm start",
+          "is_correct": false
+        },
+        {
+          "option_id": 5488,
+          "option_text": "npm init",
+          "is_correct": true
+        },
+        {
+          "option_id": 5489,
+          "option_text": "node create",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 107,
+      "subskill_id": 8,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is npm?",
+      "options": [
+        {
+          "option_id": 5490,
+          "option_text": "Node Package Manager",
+          "is_correct": true
+        },
+        {
+          "option_id": 5491,
+          "option_text": "Node Project Manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 5492,
+          "option_text": "New Package Module",
+          "is_correct": false
+        },
+        {
+          "option_id": 5493,
+          "option_text": "Native Package Manager",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 108,
+      "subskill_id": 8,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which module is used to create a server in Node.js?",
+      "options": [
+        {
+          "option_id": 5494,
+          "option_text": "server",
+          "is_correct": false
+        },
+        {
+          "option_id": 5495,
+          "option_text": "http",
+          "is_correct": true
+        },
+        {
+          "option_id": 5496,
+          "option_text": "net",
+          "is_correct": false
+        },
+        {
+          "option_id": 5497,
+          "option_text": "express",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 109,
+      "subskill_id": 9,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do you print in Python?",
+      "options": [
+        {
+          "option_id": 5498,
+          "option_text": "console.log()",
+          "is_correct": false
+        },
+        {
+          "option_id": 5499,
+          "option_text": "System.out.println()",
+          "is_correct": false
+        },
+        {
+          "option_id": 5500,
+          "option_text": "print()",
+          "is_correct": true
+        },
+        {
+          "option_id": 5501,
+          "option_text": "printf()",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 110,
+      "subskill_id": 9,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the correct file extension for Python files?",
+      "options": [
+        {
+          "option_id": 5502,
+          "option_text": ".java",
+          "is_correct": false
+        },
+        {
+          "option_id": 5503,
+          "option_text": ".js",
+          "is_correct": false
+        },
+        {
+          "option_id": 5504,
+          "option_text": ".py",
+          "is_correct": true
+        },
+        {
+          "option_id": 5505,
+          "option_text": ".python",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 111,
+      "subskill_id": 9,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which keyword is used to define a function in Python?",
+      "options": [
+        {
+          "option_id": 5506,
+          "option_text": "function",
+          "is_correct": false
+        },
+        {
+          "option_id": 5507,
+          "option_text": "def",
+          "is_correct": true
+        },
+        {
+          "option_id": 5508,
+          "option_text": "func",
+          "is_correct": false
+        },
+        {
+          "option_id": 5509,
+          "option_text": "define",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 112,
+      "subskill_id": 9,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a popular Python web framework?",
+      "options": [
+        {
+          "option_id": 5510,
+          "option_text": "Express",
+          "is_correct": false
+        },
+        {
+          "option_id": 5511,
+          "option_text": "Django",
+          "is_correct": true
+        },
+        {
+          "option_id": 5512,
+          "option_text": "Spring",
+          "is_correct": false
+        },
+        {
+          "option_id": 5513,
+          "option_text": "Rails",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 113,
+      "subskill_id": 10,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the entry point of a Java program?",
+      "options": [
+        {
+          "option_id": 5514,
+          "option_text": "start()",
+          "is_correct": false
+        },
+        {
+          "option_id": 5515,
+          "option_text": "init()",
+          "is_correct": false
+        },
+        {
+          "option_id": 5516,
+          "option_text": "main() method",
+          "is_correct": true
+        },
+        {
+          "option_id": 5517,
+          "option_text": "run()",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 114,
+      "subskill_id": 10,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which keyword is used to create a class in Java?",
+      "options": [
+        {
+          "option_id": 5518,
+          "option_text": "class",
+          "is_correct": true
+        },
+        {
+          "option_id": 5519,
+          "option_text": "Class",
+          "is_correct": false
+        },
+        {
+          "option_id": 5520,
+          "option_text": "new",
+          "is_correct": false
+        },
+        {
+          "option_id": 5521,
+          "option_text": "object",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 115,
+      "subskill_id": 10,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is JVM?",
+      "options": [
+        {
+          "option_id": 5522,
+          "option_text": "Java Version Manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 5523,
+          "option_text": "Java Virtual Machine",
+          "is_correct": true
+        },
+        {
+          "option_id": 5524,
+          "option_text": "JavaScript Virtual Machine",
+          "is_correct": false
+        },
+        {
+          "option_id": 5525,
+          "option_text": "Java Visual Machine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 116,
+      "subskill_id": 10,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which framework is popular for Java web applications?",
+      "options": [
+        {
+          "option_id": 5526,
+          "option_text": "Flask",
+          "is_correct": false
+        },
+        {
+          "option_id": 5527,
+          "option_text": "Spring Boot",
+          "is_correct": true
+        },
+        {
+          "option_id": 5528,
+          "option_text": "Express",
+          "is_correct": false
+        },
+        {
+          "option_id": 5529,
+          "option_text": "Laravel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 117,
+      "subskill_id": 11,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is authentication?",
+      "options": [
+        {
+          "option_id": 5530,
+          "option_text": "Verifying who a user is",
+          "is_correct": true
+        },
+        {
+          "option_id": 5531,
+          "option_text": "Checking what a user can access",
+          "is_correct": false
+        },
+        {
+          "option_id": 5532,
+          "option_text": "Encrypting user data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5533,
+          "option_text": "Storing user passwords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 118,
+      "subskill_id": 11,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does JWT stand for?",
+      "options": [
+        {
+          "option_id": 5534,
+          "option_text": "Java Web Token",
+          "is_correct": false
+        },
+        {
+          "option_id": 5535,
+          "option_text": "JavaScript Web Token",
+          "is_correct": false
+        },
+        {
+          "option_id": 5536,
+          "option_text": "JSON Web Token",
+          "is_correct": true
+        },
+        {
+          "option_id": 5537,
+          "option_text": "JWT Web Token",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 119,
+      "subskill_id": 11,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between authentication and authorization?",
+      "options": [
+        {
+          "option_id": 5538,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5539,
+          "option_text": "Authentication is who you are, authorization is what you can do",
+          "is_correct": true
+        },
+        {
+          "option_id": 5540,
+          "option_text": "Authorization is who you are, authentication is what you can do",
+          "is_correct": false
+        },
+        {
+          "option_id": 5541,
+          "option_text": "Authentication is for users, authorization is for admins",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 120,
+      "subskill_id": 11,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a password hash?",
+      "options": [
+        {
+          "option_id": 5542,
+          "option_text": "An encrypted password",
+          "is_correct": false
+        },
+        {
+          "option_id": 5543,
+          "option_text": "A one-way transformation of a password",
+          "is_correct": true
+        },
+        {
+          "option_id": 5544,
+          "option_text": "A password stored in plain text",
+          "is_correct": false
+        },
+        {
+          "option_id": 5545,
+          "option_text": "A password reminder",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 121,
+      "subskill_id": 12,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a server?",
+      "options": [
+        {
+          "option_id": 5546,
+          "option_text": "A computer that provides services to clients",
+          "is_correct": true
+        },
+        {
+          "option_id": 5547,
+          "option_text": "A software application only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5548,
+          "option_text": "A network cable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5549,
+          "option_text": "A type of database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 122,
+      "subskill_id": 12,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a client-server architecture?",
+      "options": [
+        {
+          "option_id": 5550,
+          "option_text": "Clients connect to a central server",
+          "is_correct": true
+        },
+        {
+          "option_id": 5551,
+          "option_text": "Clients connect directly to each other",
+          "is_correct": false
+        },
+        {
+          "option_id": 5552,
+          "option_text": "All computers are equal",
+          "is_correct": false
+        },
+        {
+          "option_id": 5553,
+          "option_text": "No servers needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 123,
+      "subskill_id": 12,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is middleware?",
+      "options": [
+        {
+          "option_id": 5554,
+          "option_text": "Hardware between servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 5555,
+          "option_text": "Software that connects different applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 5556,
+          "option_text": "The middle layer of a database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5557,
+          "option_text": "A type of operating system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 124,
+      "subskill_id": 12,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a request-response cycle?",
+      "options": [
+        {
+          "option_id": 5558,
+          "option_text": "Client sends request, server sends response",
+          "is_correct": true
+        },
+        {
+          "option_id": 5559,
+          "option_text": "Server sends request, client sends response",
+          "is_correct": false
+        },
+        {
+          "option_id": 5560,
+          "option_text": "Both send requests simultaneously",
+          "is_correct": false
+        },
+        {
+          "option_id": 5561,
+          "option_text": "No communication occurs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 125,
+      "subskill_id": 7,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between GET and POST?",
+      "options": [
+        {
+          "option_id": 5562,
+          "option_text": "GET retrieves data, POST submits data",
+          "is_correct": true
+        },
+        {
+          "option_id": 5563,
+          "option_text": "POST retrieves data, GET submits data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5564,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5565,
+          "option_text": "GET is faster than POST",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 126,
+      "subskill_id": 7,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain the difference between PUT and PATCH.",
+      "options": [
+        {
+          "option_id": 5566,
+          "option_text": "PUT updates entire resource, PATCH updates partially",
+          "is_correct": true
+        },
+        {
+          "option_id": 5567,
+          "option_text": "PATCH updates entire resource, PUT updates partially",
+          "is_correct": false
+        },
+        {
+          "option_id": 5568,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5569,
+          "option_text": "PUT is for creating, PATCH is for updating",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 127,
+      "subskill_id": 7,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are HTTP status codes? Give examples.",
+      "options": [
+        {
+          "option_id": 5570,
+          "option_text": "Codes that indicate server health",
+          "is_correct": false
+        },
+        {
+          "option_id": 5571,
+          "option_text": "Three-digit codes indicating request outcome",
+          "is_correct": true
+        },
+        {
+          "option_id": 5572,
+          "option_text": "Codes that encrypt data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5573,
+          "option_text": "Browser error messages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 128,
+      "subskill_id": 7,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is idempotency in REST APIs?",
+      "options": [
+        {
+          "option_id": 5574,
+          "option_text": "Multiple identical requests have same effect as single request",
+          "is_correct": true
+        },
+        {
+          "option_id": 5575,
+          "option_text": "Requests that change state",
+          "is_correct": false
+        },
+        {
+          "option_id": 5576,
+          "option_text": "Requests that return different results",
+          "is_correct": false
+        },
+        {
+          "option_id": 5577,
+          "option_text": "Requests that timeout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 129,
+      "subskill_id": 7,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain API versioning strategies.",
+      "options": [
+        {
+          "option_id": 5578,
+          "option_text": "URL path, query parameters, headers",
+          "is_correct": true
+        },
+        {
+          "option_id": 5579,
+          "option_text": "Only URL path",
+          "is_correct": false
+        },
+        {
+          "option_id": 5580,
+          "option_text": "Only headers",
+          "is_correct": false
+        },
+        {
+          "option_id": 5581,
+          "option_text": "Database versioning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 130,
+      "subskill_id": 8,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the event loop in Node.js?",
+      "options": [
+        {
+          "option_id": 5582,
+          "option_text": "A loop that handles asynchronous operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5583,
+          "option_text": "Single-threaded mechanism that processes callbacks",
+          "is_correct": true
+        },
+        {
+          "option_id": 5584,
+          "option_text": "A way to create events",
+          "is_correct": false
+        },
+        {
+          "option_id": 5585,
+          "option_text": "A loop that runs forever",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 131,
+      "subskill_id": 8,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain the difference between require and import.",
+      "options": [
+        {
+          "option_id": 5586,
+          "option_text": "require is CommonJS, import is ES6",
+          "is_correct": true
+        },
+        {
+          "option_id": 5587,
+          "option_text": "import is CommonJS, require is ES6",
+          "is_correct": false
+        },
+        {
+          "option_id": 5588,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 5589,
+          "option_text": "require is for files, import is for modules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 132,
+      "subskill_id": 8,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Express.js?",
+      "options": [
+        {
+          "option_id": 5590,
+          "option_text": "A database library",
+          "is_correct": false
+        },
+        {
+          "option_id": 5591,
+          "option_text": "A testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 5592,
+          "option_text": "A web framework for Node.js",
+          "is_correct": true
+        },
+        {
+          "option_id": 5593,
+          "option_text": "A template engine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 133,
+      "subskill_id": 8,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle errors in Node.js?",
+      "options": [
+        {
+          "option_id": 5594,
+          "option_text": "Try-catch blocks and error-first callbacks",
+          "is_correct": false
+        },
+        {
+          "option_id": 5595,
+          "option_text": "Process-level events and domains",
+          "is_correct": false
+        },
+        {
+          "option_id": 5596,
+          "option_text": "Error-handling middleware and process events",
+          "is_correct": true
+        },
+        {
+          "option_id": 5597,
+          "option_text": "Ignore errors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 134,
+      "subskill_id": 9,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are decorators in Python?",
+      "options": [
+        {
+          "option_id": 5598,
+          "option_text": "Functions that modify other functions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5599,
+          "option_text": "CSS-like styling",
+          "is_correct": false
+        },
+        {
+          "option_id": 5600,
+          "option_text": "HTML templates",
+          "is_correct": false
+        },
+        {
+          "option_id": 5601,
+          "option_text": "Database models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 135,
+      "subskill_id": 9,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain the difference between list and tuple.",
+      "options": [
+        {
+          "option_id": 5602,
+          "option_text": "List is immutable, tuple is mutable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5603,
+          "option_text": "List is mutable, tuple is immutable",
+          "is_correct": true
+        },
+        {
+          "option_id": 5604,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5605,
+          "option_text": "List is faster, tuple is slower",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 136,
+      "subskill_id": 9,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Flask?",
+      "options": [
+        {
+          "option_id": 5606,
+          "option_text": "A micro web framework for Python",
+          "is_correct": true
+        },
+        {
+          "option_id": 5607,
+          "option_text": "A database ORM",
+          "is_correct": false
+        },
+        {
+          "option_id": 5608,
+          "option_text": "A JavaScript library",
+          "is_correct": false
+        },
+        {
+          "option_id": 5609,
+          "option_text": "A testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 137,
+      "subskill_id": 9,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle exceptions in Python?",
+      "options": [
+        {
+          "option_id": 5610,
+          "option_text": "try-except blocks",
+          "is_correct": true
+        },
+        {
+          "option_id": 5611,
+          "option_text": "if-else statements",
+          "is_correct": false
+        },
+        {
+          "option_id": 5612,
+          "option_text": "catch-throw",
+          "is_correct": false
+        },
+        {
+          "option_id": 5613,
+          "option_text": "error handlers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 138,
+      "subskill_id": 10,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between abstract class and interface?",
+      "options": [
+        {
+          "option_id": 5614,
+          "option_text": "Abstract class can have implementation, interface cannot",
+          "is_correct": true
+        },
+        {
+          "option_id": 5615,
+          "option_text": "Interface can have implementation, abstract class cannot",
+          "is_correct": false
+        },
+        {
+          "option_id": 5616,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 5617,
+          "option_text": "Abstract class is faster",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 139,
+      "subskill_id": 10,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain OOP principles in Java.",
+      "options": [
+        {
+          "option_id": 5618,
+          "option_text": "Encapsulation, Inheritance, Polymorphism, Abstraction",
+          "is_correct": true
+        },
+        {
+          "option_id": 5619,
+          "option_text": "Encryption, Integration, Processing, Output",
+          "is_correct": false
+        },
+        {
+          "option_id": 5620,
+          "option_text": "Objects, Operations, Procedures, Protocols",
+          "is_correct": false
+        },
+        {
+          "option_id": 5621,
+          "option_text": "Classes, Methods, Variables, Loops",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 140,
+      "subskill_id": 10,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Spring Boot?",
+      "options": [
+        {
+          "option_id": 5622,
+          "option_text": "A Spring module for rapid application development",
+          "is_correct": true
+        },
+        {
+          "option_id": 5623,
+          "option_text": "A boot loader for Spring",
+          "is_correct": false
+        },
+        {
+          "option_id": 5624,
+          "option_text": "A testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 5625,
+          "option_text": "A database connector",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 141,
+      "subskill_id": 10,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does garbage collection work in Java?",
+      "options": [
+        {
+          "option_id": 5626,
+          "option_text": "Manually deleting objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 5627,
+          "option_text": "Automatically removing unused objects from memory",
+          "is_correct": true
+        },
+        {
+          "option_id": 5628,
+          "option_text": "Collecting code garbage",
+          "is_correct": false
+        },
+        {
+          "option_id": 5629,
+          "option_text": "Cleaning up syntax errors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 142,
+      "subskill_id": 11,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain JWT structure and how it works.",
+      "options": [
+        {
+          "option_id": 5630,
+          "option_text": "Header.Payload.Signature",
+          "is_correct": true
+        },
+        {
+          "option_id": 5631,
+          "option_text": "Payload.Header.Signature",
+          "is_correct": false
+        },
+        {
+          "option_id": 5632,
+          "option_text": "Signature.Header.Payload",
+          "is_correct": false
+        },
+        {
+          "option_id": 5633,
+          "option_text": "Header.Signature.Payload",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 143,
+      "subskill_id": 11,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is OAuth 2.0?",
+      "options": [
+        {
+          "option_id": 5634,
+          "option_text": "An authorization framework",
+          "is_correct": true
+        },
+        {
+          "option_id": 5635,
+          "option_text": "An authentication protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 5636,
+          "option_text": "A password manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 5637,
+          "option_text": "An encryption standard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 144,
+      "subskill_id": 11,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does session-based authentication work?",
+      "options": [
+        {
+          "option_id": 5638,
+          "option_text": "Server creates session, client stores session ID in cookie",
+          "is_correct": true
+        },
+        {
+          "option_id": 5639,
+          "option_text": "Client creates session, server stores ID",
+          "is_correct": false
+        },
+        {
+          "option_id": 5640,
+          "option_text": "No session needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 5641,
+          "option_text": "Session stored in database only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 145,
+      "subskill_id": 11,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is bcrypt and why is it used?",
+      "options": [
+        {
+          "option_id": 5642,
+          "option_text": "A hashing algorithm for passwords",
+          "is_correct": true
+        },
+        {
+          "option_id": 5643,
+          "option_text": "An encryption algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 5644,
+          "option_text": "A compression tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 5645,
+          "option_text": "A database index",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 146,
+      "subskill_id": 12,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is load balancing?",
+      "options": [
+        {
+          "option_id": 5646,
+          "option_text": "Distributing network traffic across multiple servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 5647,
+          "option_text": "Balancing CPU load",
+          "is_correct": false
+        },
+        {
+          "option_id": 5648,
+          "option_text": "Equalizing server temperatures",
+          "is_correct": false
+        },
+        {
+          "option_id": 5649,
+          "option_text": "Database optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 147,
+      "subskill_id": 12,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain caching strategies.",
+      "options": [
+        {
+          "option_id": 5650,
+          "option_text": "Cache-aside, write-through, write-behind",
+          "is_correct": true
+        },
+        {
+          "option_id": 5651,
+          "option_text": "Cache-in, cache-out",
+          "is_correct": false
+        },
+        {
+          "option_id": 5652,
+          "option_text": "Fast-cache, slow-cache",
+          "is_correct": false
+        },
+        {
+          "option_id": 5653,
+          "option_text": "Memory-cache, disk-cache",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 148,
+      "subskill_id": 12,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a reverse proxy?",
+      "options": [
+        {
+          "option_id": 5654,
+          "option_text": "A server that forwards client requests to other servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 5655,
+          "option_text": "A proxy that reverses data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5656,
+          "option_text": "A client-side proxy",
+          "is_correct": false
+        },
+        {
+          "option_id": 5657,
+          "option_text": "A database proxy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 149,
+      "subskill_id": 12,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle concurrency on the server?",
+      "options": [
+        {
+          "option_id": 5658,
+          "option_text": "Using locks, semaphores, and thread pools",
+          "is_correct": true
+        },
+        {
+          "option_id": 5659,
+          "option_text": "Ignoring concurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 5660,
+          "option_text": "Using single thread only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5661,
+          "option_text": "Restarting server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 150,
+      "subskill_id": 8,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are promises and async/await in Node.js?",
+      "options": [
+        {
+          "option_id": 5662,
+          "option_text": "Ways to handle asynchronous operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5663,
+          "option_text": "Promises handle async, async/await is syntactic sugar for promises",
+          "is_correct": true
+        },
+        {
+          "option_id": 5664,
+          "option_text": "They are unrelated",
+          "is_correct": false
+        },
+        {
+          "option_id": 5665,
+          "option_text": "Async/await is older than promises",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 151,
+      "subskill_id": 7,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain HATEOAS in REST and why it matters.",
+      "options": [
+        {
+          "option_id": 5666,
+          "option_text": "Hypermedia as the Engine of Application State - allows API discovery",
+          "is_correct": true
+        },
+        {
+          "option_id": 5667,
+          "option_text": "A security protocol for REST APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 5668,
+          "option_text": "A caching mechanism",
+          "is_correct": false
+        },
+        {
+          "option_id": 5669,
+          "option_text": "An authentication method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 152,
+      "subskill_id": 7,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you design a REST API that handles file uploads?",
+      "options": [
+        {
+          "option_id": 5670,
+          "option_text": "Use base64 encoding in JSON payload",
+          "is_correct": false
+        },
+        {
+          "option_id": 5671,
+          "option_text": "Use multipart/form-data with streaming",
+          "is_correct": true
+        },
+        {
+          "option_id": 5672,
+          "option_text": "Use separate file server with references",
+          "is_correct": false
+        },
+        {
+          "option_id": 5673,
+          "option_text": "Use WebSockets for file transfer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 153,
+      "subskill_id": 7,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the best practices for REST API pagination?",
+      "options": [
+        {
+          "option_id": 5674,
+          "option_text": "Limit/offset, cursor-based, page-based pagination",
+          "is_correct": false
+        },
+        {
+          "option_id": 5675,
+          "option_text": "Return all data at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 5676,
+          "option_text": "Use random sampling",
+          "is_correct": false
+        },
+        {
+          "option_id": 5677,
+          "option_text": "Cursor-based pagination for large datasets",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 154,
+      "subskill_id": 7,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain content negotiation in REST APIs.",
+      "options": [
+        {
+          "option_id": 5678,
+          "option_text": "Client and server agree on data format via Accept headers",
+          "is_correct": true
+        },
+        {
+          "option_id": 5679,
+          "option_text": "Negotiating API pricing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5680,
+          "option_text": "Server decides format without client input",
+          "is_correct": false
+        },
+        {
+          "option_id": 5681,
+          "option_text": "Using query parameters only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 155,
+      "subskill_id": 8,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle CPU-intensive tasks in Node.js?",
+      "options": [
+        {
+          "option_id": 5682,
+          "option_text": "Use worker threads or child processes",
+          "is_correct": false
+        },
+        {
+          "option_id": 5683,
+          "option_text": "Run them in the main event loop",
+          "is_correct": false
+        },
+        {
+          "option_id": 5684,
+          "option_text": "Use setTimeout to delay",
+          "is_correct": false
+        },
+        {
+          "option_id": 5685,
+          "option_text": "Use worker threads to offload CPU tasks",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 156,
+      "subskill_id": 8,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the difference between process.nextTick() and setImmediate().",
+      "options": [
+        {
+          "option_id": 5686,
+          "option_text": "nextTick runs before I/O, setImmediate runs after I/O",
+          "is_correct": false
+        },
+        {
+          "option_id": 5687,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 5688,
+          "option_text": "nextTick executes in same phase, setImmediate in next iteration",
+          "is_correct": true
+        },
+        {
+          "option_id": 5689,
+          "option_text": "setImmediate runs before nextTick",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 157,
+      "subskill_id": 8,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are streams in Node.js and why are they useful?",
+      "options": [
+        {
+          "option_id": 5690,
+          "option_text": "For handling video streaming only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5691,
+          "option_text": "For processing data piece by piece efficiently",
+          "is_correct": false
+        },
+        {
+          "option_id": 5692,
+          "option_text": "For database connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 5693,
+          "option_text": "Allow efficient processing of large data in chunks",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 158,
+      "subskill_id": 8,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement clustering in Node.js for multi-core systems?",
+      "options": [
+        {
+          "option_id": 5694,
+          "option_text": "Use cluster module to fork processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 5695,
+          "option_text": "Use worker_threads module",
+          "is_correct": false
+        },
+        {
+          "option_id": 5696,
+          "option_text": "Run multiple Node instances manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 5697,
+          "option_text": "Use PM2 only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 159,
+      "subskill_id": 9,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the Global Interpreter Lock (GIL) in Python.",
+      "options": [
+        {
+          "option_id": 5698,
+          "option_text": "Allows multiple threads to run simultaneously",
+          "is_correct": false
+        },
+        {
+          "option_id": 5699,
+          "option_text": "Prevents multiple threads from executing Python bytecode at once",
+          "is_correct": true
+        },
+        {
+          "option_id": 5700,
+          "option_text": "A debugging tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 5701,
+          "option_text": "A memory management feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 160,
+      "subskill_id": 9,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are context managers and how do you use them?",
+      "options": [
+        {
+          "option_id": 5702,
+          "option_text": "Using with statement for resource management",
+          "is_correct": false
+        },
+        {
+          "option_id": 5703,
+          "option_text": "Managing application context",
+          "is_correct": false
+        },
+        {
+          "option_id": 5704,
+          "option_text": "Django settings manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 5705,
+          "option_text": "Context managers handle setup/cleanup using with statement",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 161,
+      "subskill_id": 9,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does memory management work in Python?",
+      "options": [
+        {
+          "option_id": 5706,
+          "option_text": "Manual memory allocation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5707,
+          "option_text": "Reference counting and garbage collection",
+          "is_correct": true
+        },
+        {
+          "option_id": 5708,
+          "option_text": "No memory management",
+          "is_correct": false
+        },
+        {
+          "option_id": 5709,
+          "option_text": "Using malloc/free",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 162,
+      "subskill_id": 9,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the difference between deep and shallow copy in Python.",
+      "options": [
+        {
+          "option_id": 5710,
+          "option_text": "Shallow copy copies nested objects, deep copy does not",
+          "is_correct": false
+        },
+        {
+          "option_id": 5711,
+          "option_text": "Deep copy creates new objects for nested structures",
+          "is_correct": false
+        },
+        {
+          "option_id": 5712,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5713,
+          "option_text": "Deep copy recursively copies nested objects, shallow copy does not",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 163,
+      "subskill_id": 10,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are Java streams and how do they differ from collections?",
+      "options": [
+        {
+          "option_id": 5714,
+          "option_text": "Streams store data, collections process data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5715,
+          "option_text": "Streams process data functionally without storing",
+          "is_correct": true
+        },
+        {
+          "option_id": 5716,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 5717,
+          "option_text": "Streams are for I/O only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 164,
+      "subskill_id": 10,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the Java memory model and garbage collection.",
+      "options": [
+        {
+          "option_id": 5718,
+          "option_text": "Heap, stack, method areas with automatic GC",
+          "is_correct": true
+        },
+        {
+          "option_id": 5719,
+          "option_text": "Only stack memory exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 5720,
+          "option_text": "No garbage collection in Java",
+          "is_correct": false
+        },
+        {
+          "option_id": 5721,
+          "option_text": "Manual memory management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 165,
+      "subskill_id": 10,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are lambda expressions and functional interfaces in Java?",
+      "options": [
+        {
+          "option_id": 5722,
+          "option_text": "Object-oriented programming features",
+          "is_correct": false
+        },
+        {
+          "option_id": 5723,
+          "option_text": "Functional programming features for concise code",
+          "is_correct": false
+        },
+        {
+          "option_id": 5724,
+          "option_text": "Database query tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 5725,
+          "option_text": "Lambda expressions enable functional programming with single methods",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 166,
+      "subskill_id": 10,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Spring dependency injection work under the hood?",
+      "options": [
+        {
+          "option_id": 5726,
+          "option_text": "Using reflection and IoC container",
+          "is_correct": true
+        },
+        {
+          "option_id": 5727,
+          "option_text": "Manual object creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5728,
+          "option_text": "Using factory pattern only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5729,
+          "option_text": "No magic, just XML",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 167,
+      "subskill_id": 11,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you implement a secure password reset flow?",
+      "options": [
+        {
+          "option_id": 5730,
+          "option_text": "Send password via email",
+          "is_correct": false
+        },
+        {
+          "option_id": 5731,
+          "option_text": "Time-limited tokens, email verification, secure storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 5732,
+          "option_text": "Reset without verification",
+          "is_correct": false
+        },
+        {
+          "option_id": 5733,
+          "option_text": "Use cryptographically secure tokens with expiration",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 168,
+      "subskill_id": 11,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is OAuth 2.0 PKCE and when should you use it?",
+      "options": [
+        {
+          "option_id": 5734,
+          "option_text": "For mobile and public clients to prevent authorization code interception",
+          "is_correct": true
+        },
+        {
+          "option_id": 5735,
+          "option_text": "For server-to-server communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 5736,
+          "option_text": "A password encryption method",
+          "is_correct": false
+        },
+        {
+          "option_id": 5737,
+          "option_text": "Database encryption standard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 169,
+      "subskill_id": 11,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the difference between JWT and Opaque tokens.",
+      "options": [
+        {
+          "option_id": 5738,
+          "option_text": "JWT contains claims, opaque tokens are references",
+          "is_correct": true
+        },
+        {
+          "option_id": 5739,
+          "option_text": "JWT is opaque, opaque tokens are readable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5740,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5741,
+          "option_text": "Both store user data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 170,
+      "subskill_id": 11,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you protect against CSRF attacks in web applications?",
+      "options": [
+        {
+          "option_id": 5742,
+          "option_text": "Use anti-CSRF tokens, SameSite cookies",
+          "is_correct": true
+        },
+        {
+          "option_id": 5743,
+          "option_text": "Disable all forms",
+          "is_correct": false
+        },
+        {
+          "option_id": 5744,
+          "option_text": "Use GET requests only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5745,
+          "option_text": "No protection needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 171,
+      "subskill_id": 12,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between horizontal and vertical scaling?",
+      "options": [
+        {
+          "option_id": 5746,
+          "option_text": "Horizontal adds more servers, vertical adds more power",
+          "is_correct": true
+        },
+        {
+          "option_id": 5747,
+          "option_text": "Vertical adds more servers, horizontal adds more power",
+          "is_correct": false
+        },
+        {
+          "option_id": 5748,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5749,
+          "option_text": "Both add more storage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 172,
+      "subskill_id": 12,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Explain the Circuit Breaker pattern and its benefits.",
+      "options": [
+        {
+          "option_id": 5750,
+          "option_text": "Prevents cascading failures by stopping requests to failing services",
+          "is_correct": false
+        },
+        {
+          "option_id": 5751,
+          "option_text": "Electrical circuit protection",
+          "is_correct": false
+        },
+        {
+          "option_id": 5752,
+          "option_text": "Database connection pool",
+          "is_correct": false
+        },
+        {
+          "option_id": 5753,
+          "option_text": "Automatically fails fast and recovers when service is healthy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 173,
+      "subskill_id": 12,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you implement rate limiting on a server?",
+      "options": [
+        {
+          "option_id": 5754,
+          "option_text": "Token bucket, leaky bucket, fixed window algorithms",
+          "is_correct": true
+        },
+        {
+          "option_id": 5755,
+          "option_text": "Block all requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5756,
+          "option_text": "Use database only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5757,
+          "option_text": "No implementation needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 174,
+      "subskill_id": 12,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are idempotency keys and why are they important?",
+      "options": [
+        {
+          "option_id": 5758,
+          "option_text": "To prevent duplicate processing of the same request",
+          "is_correct": false
+        },
+        {
+          "option_id": 5759,
+          "option_text": "To encrypt data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5760,
+          "option_text": "To authenticate users",
+          "is_correct": false
+        },
+        {
+          "option_id": 5761,
+          "option_text": "Ensure operations are performed exactly once",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 175,
+      "subskill_id": 8,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you debug memory leaks in Node.js applications?",
+      "options": [
+        {
+          "option_id": 5762,
+          "option_text": "Use heap snapshots and memory profiling tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 5763,
+          "option_text": "Restart the server",
+          "is_correct": false
+        },
+        {
+          "option_id": 5764,
+          "option_text": "Add more RAM",
+          "is_correct": false
+        },
+        {
+          "option_id": 5765,
+          "option_text": "Use Chrome DevTools or clinic.js for memory profiling",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 176,
+      "subskill_id": 7,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a REST API for a banking system with strict idempotency requirements?",
+      "options": [
+        {
+          "option_id": 5766,
+          "option_text": "Use database transactions for all operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5767,
+          "option_text": "Implement idempotency keys stored in Redis with TTL",
+          "is_correct": true
+        },
+        {
+          "option_id": 5768,
+          "option_text": "Rely on client to avoid duplicate requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5769,
+          "option_text": "Use UUID v4 as idempotency key without server validation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 177,
+      "subskill_id": 7,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain how to implement eventual consistency across microservices using REST APIs.",
+      "options": [
+        {
+          "option_id": 5770,
+          "option_text": "Use distributed transactions with two-phase commit",
+          "is_correct": false
+        },
+        {
+          "option_id": 5771,
+          "option_text": "Implement event-driven architecture with outbox pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 5772,
+          "option_text": "Use synchronous calls with retry logic",
+          "is_correct": true
+        },
+        {
+          "option_id": 5773,
+          "option_text": "Ignore consistency issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 178,
+      "subskill_id": 7,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the challenges of versioning REST APIs at scale and how do you address them?",
+      "options": [
+        {
+          "option_id": 5774,
+          "option_text": "Force all clients to upgrade immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 5775,
+          "option_text": "Use URI versioning with deprecation policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 5776,
+          "option_text": "Never change APIs once published",
+          "is_correct": false
+        },
+        {
+          "option_id": 5777,
+          "option_text": "Use query parameters for versioning only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 179,
+      "subskill_id": 7,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design an API gateway architecture that handles routing, rate limiting, and authentication.",
+      "options": [
+        {
+          "option_id": 5778,
+          "option_text": "Handle all logic in each microservice",
+          "is_correct": false
+        },
+        {
+          "option_id": 5779,
+          "option_text": "Use separate gateways for different concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 5780,
+          "option_text": "Implement centralized gateway with plugin architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 5781,
+          "option_text": "Skip rate limiting for internal services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 180,
+      "subskill_id": 8,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you diagnose and fix memory leaks in a production Node.js application?",
+      "options": [
+        {
+          "option_id": 5782,
+          "option_text": "Restart the application daily",
+          "is_correct": false
+        },
+        {
+          "option_id": 5783,
+          "option_text": "Use heap snapshots and compare over time",
+          "is_correct": false
+        },
+        {
+          "option_id": 5784,
+          "option_text": "Monitor with clinic.js or memwatch",
+          "is_correct": true
+        },
+        {
+          "option_id": 5785,
+          "option_text": "Add more RAM to the server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 181,
+      "subskill_id": 8,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a real-time notification system using Node.js that scales to millions of connections.",
+      "options": [
+        {
+          "option_id": 5786,
+          "option_text": "Use single WebSocket server",
+          "is_correct": false
+        },
+        {
+          "option_id": 5787,
+          "option_text": "Implement horizontal scaling with Redis pub/sub",
+          "is_correct": true
+        },
+        {
+          "option_id": 5788,
+          "option_text": "Use polling instead of WebSockets",
+          "is_correct": false
+        },
+        {
+          "option_id": 5789,
+          "option_text": "Use server-sent events only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 182,
+      "subskill_id": 8,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the internals of the V8 engine and how to write highly optimized Node.js code.",
+      "options": [
+        {
+          "option_id": 5790,
+          "option_text": "Use eval() for better performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 5791,
+          "option_text": "Understand hidden classes and inline caching",
+          "is_correct": true
+        },
+        {
+          "option_id": 5792,
+          "option_text": "Avoid using objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 5793,
+          "option_text": "Use strings instead of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 183,
+      "subskill_id": 8,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a microservices architecture with Node.js and handle service discovery?",
+      "options": [
+        {
+          "option_id": 5794,
+          "option_text": "Hardcode service addresses in config files",
+          "is_correct": false
+        },
+        {
+          "option_id": 5795,
+          "option_text": "Use environment variables for all services",
+          "is_correct": false
+        },
+        {
+          "option_id": 5796,
+          "option_text": "Implement service registry with Consul and health checks",
+          "is_correct": true
+        },
+        {
+          "option_id": 5797,
+          "option_text": "Use DNS round-robin only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 184,
+      "subskill_id": 9,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you profile and optimize a slow Python application in production?",
+      "options": [
+        {
+          "option_id": 5798,
+          "option_text": "Add more servers without profiling",
+          "is_correct": false
+        },
+        {
+          "option_id": 5799,
+          "option_text": "Use cProfile and optimize identified bottlenecks",
+          "is_correct": false
+        },
+        {
+          "option_id": 5800,
+          "option_text": "Use py-spy for production profiling with minimal overhead",
+          "is_correct": true
+        },
+        {
+          "option_id": 5801,
+          "option_text": "Rewrite everything in another language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 185,
+      "subskill_id": 9,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a scalable web scraping system with Python that respects robots.txt and handles rate limiting.",
+      "options": [
+        {
+          "option_id": 5802,
+          "option_text": "Scrape as fast as possible to finish quickly",
+          "is_correct": false
+        },
+        {
+          "option_id": 5803,
+          "option_text": "Use distributed queue with backoff and retry",
+          "is_correct": true
+        },
+        {
+          "option_id": 5804,
+          "option_text": "Ignore robots.txt for better results",
+          "is_correct": false
+        },
+        {
+          "option_id": 5805,
+          "option_text": "Use single thread with delays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 186,
+      "subskill_id": 9,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the internals of asyncio and how the event loop works in Python.",
+      "options": [
+        {
+          "option_id": 5806,
+          "option_text": "It uses multiple threads for concurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 5807,
+          "option_text": "Single-threaded with cooperative multitasking",
+          "is_correct": true
+        },
+        {
+          "option_id": 5808,
+          "option_text": "Uses multiprocessing for I/O",
+          "is_correct": false
+        },
+        {
+          "option_id": 5809,
+          "option_text": "It is the same as threading",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 187,
+      "subskill_id": 9,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a custom C extension for Python to improve performance?",
+      "options": [
+        {
+          "option_id": 5810,
+          "option_text": "Use Java instead",
+          "is_correct": false
+        },
+        {
+          "option_id": 5811,
+          "option_text": "Write C code with Python C API",
+          "is_correct": false
+        },
+        {
+          "option_id": 5812,
+          "option_text": "Use Cython for easier integration",
+          "is_correct": true
+        },
+        {
+          "option_id": 5813,
+          "option_text": "Stick to pure Python for simplicity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 188,
+      "subskill_id": 10,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the Java memory model in depth and how to tune garbage collection for low-latency applications.",
+      "options": [
+        {
+          "option_id": 5814,
+          "option_text": "Use default GC settings for all applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 5815,
+          "option_text": "Choose G1GC or ZGC based on heap size and latency requirements",
+          "is_correct": true
+        },
+        {
+          "option_id": 5816,
+          "option_text": "Disable GC for better performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 5817,
+          "option_text": "Increase heap size only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 189,
+      "subskill_id": 10,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a high-throughput, low-latency system using Project Reactor or Spring WebFlux.",
+      "options": [
+        {
+          "option_id": 5818,
+          "option_text": "Use blocking I/O with thread pools",
+          "is_correct": false
+        },
+        {
+          "option_id": 5819,
+          "option_text": "Implement reactive programming with non-blocking backpressure",
+          "is_correct": true
+        },
+        {
+          "option_id": 5820,
+          "option_text": "Use synchronous processing only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5821,
+          "option_text": "Avoid using any framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 190,
+      "subskill_id": 10,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you handle distributed transactions across microservices in Java?",
+      "options": [
+        {
+          "option_id": 5822,
+          "option_text": "Use two-phase commit across all services",
+          "is_correct": false
+        },
+        {
+          "option_id": 5823,
+          "option_text": "Implement Saga pattern with compensation",
+          "is_correct": true
+        },
+        {
+          "option_id": 5824,
+          "option_text": "Use a single monolithic database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5825,
+          "option_text": "Ignore transaction consistency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 191,
+      "subskill_id": 10,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain JVM internals, classloaders, and bytecode manipulation with examples.",
+      "options": [
+        {
+          "option_id": 5826,
+          "option_text": "Classloaders are only for bootstrap classes",
+          "is_correct": false
+        },
+        {
+          "option_id": 5827,
+          "option_text": "Bytecode can be manipulated with ASM or Javassist",
+          "is_correct": true
+        },
+        {
+          "option_id": 5828,
+          "option_text": "JVM internals cannot be modified",
+          "is_correct": false
+        },
+        {
+          "option_id": 5829,
+          "option_text": "Classloaders are deprecated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 192,
+      "subskill_id": 11,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a secure authentication system for a fintech application that handles MFA and biometrics.",
+      "options": [
+        {
+          "option_id": 5830,
+          "option_text": "Store biometric data in plain text",
+          "is_correct": false
+        },
+        {
+          "option_id": 5831,
+          "option_text": "Use WebAuthn with hardware tokens and TOTP as fallback",
+          "is_correct": true
+        },
+        {
+          "option_id": 5832,
+          "option_text": "Password only is sufficient",
+          "is_correct": false
+        },
+        {
+          "option_id": 5833,
+          "option_text": "Use SMS OTP as the only method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 193,
+      "subskill_id": 11,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement zero-knowledge proof authentication without exposing user credentials?",
+      "options": [
+        {
+          "option_id": 5834,
+          "option_text": "Store passwords in plain text for verification",
+          "is_correct": false
+        },
+        {
+          "option_id": 5835,
+          "option_text": "Use SRP (Secure Remote Password) protocol",
+          "is_correct": true
+        },
+        {
+          "option_id": 5836,
+          "option_text": "Send credentials over HTTPS only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5837,
+          "option_text": "Use API keys instead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 194,
+      "subskill_id": 11,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain OAuth 2.0 and OIDC flows in depth, including security considerations and common attacks.",
+      "options": [
+        {
+          "option_id": 5838,
+          "option_text": "Authorization code flow is always secure without PKCE",
+          "is_correct": false
+        },
+        {
+          "option_id": 5839,
+          "option_text": "Implicit flow is recommended for all applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 5840,
+          "option_text": "CSRF protection requires state parameter",
+          "is_correct": false
+        },
+        {
+          "option_id": 5841,
+          "option_text": "All of the above security considerations are important",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 195,
+      "subskill_id": 11,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a secure API key management system that supports rotation and revocation.",
+      "options": [
+        {
+          "option_id": 5842,
+          "option_text": "Store API keys in logs for debugging",
+          "is_correct": false
+        },
+        {
+          "option_id": 5843,
+          "option_text": "Use hashed keys in database with prefix lookup",
+          "is_correct": true
+        },
+        {
+          "option_id": 5844,
+          "option_text": "Never rotate keys to avoid complexity",
+          "is_correct": false
+        },
+        {
+          "option_id": 5845,
+          "option_text": "Send keys via email to developers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 196,
+      "subskill_id": 12,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a globally distributed server architecture with active-active failover and data replication.",
+      "options": [
+        {
+          "option_id": 5846,
+          "option_text": "Single region deployment with backup",
+          "is_correct": false
+        },
+        {
+          "option_id": 5847,
+          "option_text": "Use DNS geo-routing with multi-region databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 5848,
+          "option_text": "Implement CRDTs for conflict resolution",
+          "is_correct": false
+        },
+        {
+          "option_id": 5849,
+          "option_text": "Manual failover is sufficient",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 197,
+      "subskill_id": 12,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a consensus algorithm like Raft or Paxos from scratch?",
+      "options": [
+        {
+          "option_id": 5850,
+          "option_text": "Use existing libraries instead",
+          "is_correct": false
+        },
+        {
+          "option_id": 5851,
+          "option_text": "Implement leader election and log replication",
+          "is_correct": true
+        },
+        {
+          "option_id": 5852,
+          "option_text": "Use single server with replication",
+          "is_correct": false
+        },
+        {
+          "option_id": 5853,
+          "option_text": "Ignore fault tolerance requirements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 198,
+      "subskill_id": 12,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a system for handling millions of WebSocket connections with minimal latency.",
+      "options": [
+        {
+          "option_id": 5854,
+          "option_text": "Use single server with epoll/kqueue",
+          "is_correct": false
+        },
+        {
+          "option_id": 5855,
+          "option_text": "Implement horizontal scaling with Redis pub/sub",
+          "is_correct": false
+        },
+        {
+          "option_id": 5856,
+          "option_text": "Use connection pooling and message batching",
+          "is_correct": false
+        },
+        {
+          "option_id": 5857,
+          "option_text": "Combine all strategies for optimal performance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 199,
+      "subskill_id": 12,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the CAP theorem in depth and design a CP system that prioritizes consistency over availability.",
+      "options": [
+        {
+          "option_id": 5858,
+          "option_text": "Use quorum-based writes with majority consensus",
+          "is_correct": false
+        },
+        {
+          "option_id": 5859,
+          "option_text": "Block reads during network partitions to ensure consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 5860,
+          "option_text": "Allow stale reads for availability",
+          "is_correct": false
+        },
+        {
+          "option_id": 5861,
+          "option_text": "Use eventual consistency for simplicity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 200,
+      "subskill_id": 12,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a fault-tolerant distributed rate limiter that works across multiple data centers.",
+      "options": [
+        {
+          "option_id": 5862,
+          "option_text": "Use local rate limiting only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5863,
+          "option_text": "Centralized Redis with failover",
+          "is_correct": false
+        },
+        {
+          "option_id": 5864,
+          "option_text": "Use CRDTs for distributed counters with synchronization",
+          "is_correct": true
+        },
+        {
+          "option_id": 5865,
+          "option_text": "No rate limiting needed for trusted clients",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

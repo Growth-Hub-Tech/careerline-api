@@ -1,0 +1,2906 @@
+{
+  "skill_id": 21,
+  "skill_name": "Deep Learning & AI",
+  "questions": [
+    {
+      "question_id": 2001,
+      "subskill_id": 99,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a neural network?",
+      "options": [
+        {
+          "option_id": 10266,
+          "option_text": "A computational model inspired by the human brain",
+          "is_correct": true
+        },
+        {
+          "option_id": 10267,
+          "option_text": "A type of machine learning algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 10268,
+          "option_text": "A data structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 10269,
+          "option_text": "A programming language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2002,
+      "subskill_id": 99,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a neuron in a neural network?",
+      "options": [
+        {
+          "option_id": 10270,
+          "option_text": "A basic unit in a neural network that receives inputs and produces outputs",
+          "is_correct": true
+        },
+        {
+          "option_id": 10271,
+          "option_text": "A layer in a neural network",
+          "is_correct": false
+        },
+        {
+          "option_id": 10272,
+          "option_text": "An activation function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10273,
+          "option_text": "A type of loss function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2003,
+      "subskill_id": 99,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a layer in a neural network?",
+      "options": [
+        {
+          "option_id": 10274,
+          "option_text": "A collection of neurons that process data in a neural network",
+          "is_correct": true
+        },
+        {
+          "option_id": 10275,
+          "option_text": "A single neuron",
+          "is_correct": false
+        },
+        {
+          "option_id": 10276,
+          "option_text": "An activation function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10277,
+          "option_text": "A loss function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2004,
+      "subskill_id": 99,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an activation function?",
+      "options": [
+        {
+          "option_id": 10278,
+          "option_text": "A function that introduces non-linearity to a neural network",
+          "is_correct": true
+        },
+        {
+          "option_id": 10279,
+          "option_text": "A function that computes the loss",
+          "is_correct": false
+        },
+        {
+          "option_id": 10280,
+          "option_text": "A function that updates weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 10281,
+          "option_text": "A function that initializes the model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2005,
+      "subskill_id": 99,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is backpropagation in neural networks?",
+      "options": [
+        {
+          "option_id": 10282,
+          "option_text": "An algorithm for training neural networks by propagating errors backward",
+          "is_correct": true
+        },
+        {
+          "option_id": 10283,
+          "option_text": "An algorithm for forward propagation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10284,
+          "option_text": "An algorithm for weight initialization",
+          "is_correct": false
+        },
+        {
+          "option_id": 10285,
+          "option_text": "An algorithm for data preprocessing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2006,
+      "subskill_id": 100,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Convolutional Neural Network (CNN)?",
+      "options": [
+        {
+          "option_id": 10286,
+          "option_text": "A neural network architecture designed for image processing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10287,
+          "option_text": "A neural network designed for text processing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10288,
+          "option_text": "A neural network designed for sequence data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10289,
+          "option_text": "A neural network designed for tabular data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2007,
+      "subskill_id": 100,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a convolution operation?",
+      "options": [
+        {
+          "option_id": 10290,
+          "option_text": "A mathematical operation that slides a filter over an input",
+          "is_correct": true
+        },
+        {
+          "option_id": 10291,
+          "option_text": "A pooling operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10292,
+          "option_text": "A normalization operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10293,
+          "option_text": "A fully connected operation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2008,
+      "subskill_id": 100,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pooling layer in CNNs?",
+      "options": [
+        {
+          "option_id": 10294,
+          "option_text": "A layer that reduces the spatial dimensions of a feature map",
+          "is_correct": true
+        },
+        {
+          "option_id": 10295,
+          "option_text": "A layer that increases the spatial dimensions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10296,
+          "option_text": "A layer that applies activation functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10297,
+          "option_text": "A layer that normalizes data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2009,
+      "subskill_id": 100,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a filter in a CNN?",
+      "options": [
+        {
+          "option_id": 10298,
+          "option_text": "A small matrix used to extract features from input data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10299,
+          "option_text": "A layer in a CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 10300,
+          "option_text": "An activation function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10301,
+          "option_text": "A loss function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2010,
+      "subskill_id": 100,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a CNN?",
+      "options": [
+        {
+          "option_id": 10302,
+          "option_text": "To automatically and adaptively learn spatial hierarchies of features",
+          "is_correct": true
+        },
+        {
+          "option_id": 10303,
+          "option_text": "To process text data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10304,
+          "option_text": "To process time-series data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10305,
+          "option_text": "To process audio data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2011,
+      "subskill_id": 101,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a transformer in AI?",
+      "options": [
+        {
+          "option_id": 10306,
+          "option_text": "A neural network architecture based on self-attention mechanisms",
+          "is_correct": true
+        },
+        {
+          "option_id": 10307,
+          "option_text": "A neural network architecture based on RNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 10308,
+          "option_text": "A neural network architecture based on CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 10309,
+          "option_text": "A neural network architecture based on GAN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2012,
+      "subskill_id": 101,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is self-attention in transformers?",
+      "options": [
+        {
+          "option_id": 10310,
+          "option_text": "A mechanism that allows a model to focus on relevant parts of input",
+          "is_correct": true
+        },
+        {
+          "option_id": 10311,
+          "option_text": "A mechanism that reduces model size",
+          "is_correct": false
+        },
+        {
+          "option_id": 10312,
+          "option_text": "A mechanism that increases model speed",
+          "is_correct": false
+        },
+        {
+          "option_id": 10313,
+          "option_text": "A mechanism that simplifies the model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2013,
+      "subskill_id": 101,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a multi-head attention mechanism?",
+      "options": [
+        {
+          "option_id": 10314,
+          "option_text": "A mechanism that allows the model to attend to multiple positions simultaneously",
+          "is_correct": true
+        },
+        {
+          "option_id": 10315,
+          "option_text": "A mechanism that attends to only one position",
+          "is_correct": false
+        },
+        {
+          "option_id": 10316,
+          "option_text": "A mechanism that reduces the number of parameters",
+          "is_correct": false
+        },
+        {
+          "option_id": 10317,
+          "option_text": "A mechanism that increases the model depth",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2014,
+      "subskill_id": 101,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of transformers?",
+      "options": [
+        {
+          "option_id": 10318,
+          "option_text": "To process sequence data more efficiently than RNNs",
+          "is_correct": true
+        },
+        {
+          "option_id": 10319,
+          "option_text": "To process image data more efficiently than CNNs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10320,
+          "option_text": "To process tabular data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10321,
+          "option_text": "To process graph data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2015,
+      "subskill_id": 101,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a positional encoding?",
+      "options": [
+        {
+          "option_id": 10322,
+          "option_text": "A technique to encode the position of tokens in a sequence",
+          "is_correct": true
+        },
+        {
+          "option_id": 10323,
+          "option_text": "A technique to encode the value of tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 10324,
+          "option_text": "A technique to encode the length of tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 10325,
+          "option_text": "A technique to encode the meaning of tokens",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2016,
+      "subskill_id": 102,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is PyTorch?",
+      "options": [
+        {
+          "option_id": 10326,
+          "option_text": "An open-source deep learning framework from Meta",
+          "is_correct": true
+        },
+        {
+          "option_id": 10327,
+          "option_text": "An open-source deep learning framework from Google",
+          "is_correct": false
+        },
+        {
+          "option_id": 10328,
+          "option_text": "An open-source deep learning framework from Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 10329,
+          "option_text": "An open-source deep learning framework from OpenAI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2017,
+      "subskill_id": 102,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a tensor in PyTorch?",
+      "options": [
+        {
+          "option_id": 10330,
+          "option_text": "A multi-dimensional array used in PyTorch",
+          "is_correct": true
+        },
+        {
+          "option_id": 10331,
+          "option_text": "A single-dimensional array",
+          "is_correct": false
+        },
+        {
+          "option_id": 10332,
+          "option_text": "A matrix only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10333,
+          "option_text": "A vector only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2018,
+      "subskill_id": 102,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a PyTorch model?",
+      "options": [
+        {
+          "option_id": 10334,
+          "option_text": "A class that defines a neural network architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 10335,
+          "option_text": "A class that defines a dataset",
+          "is_correct": false
+        },
+        {
+          "option_id": 10336,
+          "option_text": "A class that defines a data loader",
+          "is_correct": false
+        },
+        {
+          "option_id": 10337,
+          "option_text": "A class that defines a loss function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2019,
+      "subskill_id": 102,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is autograd in PyTorch?",
+      "options": [
+        {
+          "option_id": 10338,
+          "option_text": "An automatic differentiation engine in PyTorch",
+          "is_correct": true
+        },
+        {
+          "option_id": 10339,
+          "option_text": "An automatic data preprocessing engine",
+          "is_correct": false
+        },
+        {
+          "option_id": 10340,
+          "option_text": "An automatic model deployment engine",
+          "is_correct": false
+        },
+        {
+          "option_id": 10341,
+          "option_text": "An automatic hyperparameter tuning engine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2020,
+      "subskill_id": 102,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the nn.Module in PyTorch?",
+      "options": [
+        {
+          "option_id": 10342,
+          "option_text": "A base class for all neural network modules in PyTorch",
+          "is_correct": true
+        },
+        {
+          "option_id": 10343,
+          "option_text": "A class for defining loss functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10344,
+          "option_text": "A class for defining optimizers",
+          "is_correct": false
+        },
+        {
+          "option_id": 10345,
+          "option_text": "A class for defining data loaders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2021,
+      "subskill_id": 103,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is TensorFlow?",
+      "options": [
+        {
+          "option_id": 10346,
+          "option_text": "An open-source deep learning framework from Google",
+          "is_correct": true
+        },
+        {
+          "option_id": 10347,
+          "option_text": "An open-source deep learning framework from Meta",
+          "is_correct": false
+        },
+        {
+          "option_id": 10348,
+          "option_text": "An open-source deep learning framework from Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 10349,
+          "option_text": "An open-source deep learning framework from OpenAI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2022,
+      "subskill_id": 103,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a tensor in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10350,
+          "option_text": "A multi-dimensional array used in TensorFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10351,
+          "option_text": "A single-dimensional array",
+          "is_correct": false
+        },
+        {
+          "option_id": 10352,
+          "option_text": "A matrix only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10353,
+          "option_text": "A vector only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2023,
+      "subskill_id": 103,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a TensorFlow model?",
+      "options": [
+        {
+          "option_id": 10354,
+          "option_text": "A class that defines a neural network architecture in TensorFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10355,
+          "option_text": "A class that defines a dataset",
+          "is_correct": false
+        },
+        {
+          "option_id": 10356,
+          "option_text": "A class that defines a data loader",
+          "is_correct": false
+        },
+        {
+          "option_id": 10357,
+          "option_text": "A class that defines a loss function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2024,
+      "subskill_id": 103,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Keras in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10358,
+          "option_text": "A high-level API for building neural networks in TensorFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10359,
+          "option_text": "A low-level API for building neural networks",
+          "is_correct": false
+        },
+        {
+          "option_id": 10360,
+          "option_text": "A data preprocessing API",
+          "is_correct": false
+        },
+        {
+          "option_id": 10361,
+          "option_text": "A model deployment API",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2025,
+      "subskill_id": 103,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of TensorFlow?",
+      "options": [
+        {
+          "option_id": 10362,
+          "option_text": "To build and train deep learning models at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 10363,
+          "option_text": "To visualize data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10364,
+          "option_text": "To process text only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10365,
+          "option_text": "To analyze images only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2026,
+      "subskill_id": 99,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a shallow and deep neural network?",
+      "options": [
+        {
+          "option_id": 10366,
+          "option_text": "A shallow network has few layers; a deep network has many layers",
+          "is_correct": true
+        },
+        {
+          "option_id": 10367,
+          "option_text": "A deep network has few layers; a shallow network has many layers",
+          "is_correct": false
+        },
+        {
+          "option_id": 10368,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10369,
+          "option_text": "Shallow networks are for image data; deep networks are for text data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2027,
+      "subskill_id": 99,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is gradient descent in neural networks?",
+      "options": [
+        {
+          "option_id": 10370,
+          "option_text": "An optimization algorithm for minimizing the loss function",
+          "is_correct": true
+        },
+        {
+          "option_id": 10371,
+          "option_text": "An algorithm for initializing weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 10372,
+          "option_text": "An algorithm for data preprocessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10373,
+          "option_text": "An algorithm for model evaluation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2028,
+      "subskill_id": 99,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the vanishing gradient problem?",
+      "options": [
+        {
+          "option_id": 10374,
+          "option_text": "A problem where gradients become very small, preventing learning",
+          "is_correct": true
+        },
+        {
+          "option_id": 10375,
+          "option_text": "A problem where gradients become very large",
+          "is_correct": false
+        },
+        {
+          "option_id": 10376,
+          "option_text": "A problem where gradients are ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 10377,
+          "option_text": "A problem where gradients are constant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2029,
+      "subskill_id": 99,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is dropout in neural networks?",
+      "options": [
+        {
+          "option_id": 10378,
+          "option_text": "A regularization technique that randomly drops neurons during training",
+          "is_correct": true
+        },
+        {
+          "option_id": 10379,
+          "option_text": "A regularization technique that adds noise to inputs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10380,
+          "option_text": "A regularization technique that adds penalty to weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 10381,
+          "option_text": "A regularization technique that reduces the number of layers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2030,
+      "subskill_id": 99,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a loss function in neural networks?",
+      "options": [
+        {
+          "option_id": 10382,
+          "option_text": "A function that measures how well the model is performing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10383,
+          "option_text": "A function that updates the weights",
+          "is_correct": false
+        },
+        {
+          "option_id": 10384,
+          "option_text": "A function that initializes the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10385,
+          "option_text": "A function that preprocesses data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2031,
+      "subskill_id": 100,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between convolution and pooling?",
+      "options": [
+        {
+          "option_id": 10386,
+          "option_text": "Convolution extracts features; pooling reduces dimensions",
+          "is_correct": true
+        },
+        {
+          "option_id": 10387,
+          "option_text": "Pooling extracts features; convolution reduces dimensions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10388,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10389,
+          "option_text": "Convolution is for image data; pooling is for text data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2032,
+      "subskill_id": 100,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stride in CNN?",
+      "options": [
+        {
+          "option_id": 10390,
+          "option_text": "The step size for sliding the filter over input",
+          "is_correct": true
+        },
+        {
+          "option_id": 10391,
+          "option_text": "The size of the filter",
+          "is_correct": false
+        },
+        {
+          "option_id": 10392,
+          "option_text": "The amount of padding added to input",
+          "is_correct": false
+        },
+        {
+          "option_id": 10393,
+          "option_text": "The depth of the network",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2033,
+      "subskill_id": 100,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is padding in CNN?",
+      "options": [
+        {
+          "option_id": 10394,
+          "option_text": "Adding zeros to the borders of the input",
+          "is_correct": true
+        },
+        {
+          "option_id": 10395,
+          "option_text": "Adding ones to the borders of the input",
+          "is_correct": false
+        },
+        {
+          "option_id": 10396,
+          "option_text": "Adding random values to the borders of the input",
+          "is_correct": false
+        },
+        {
+          "option_id": 10397,
+          "option_text": "Adding the same values to the borders of the input",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2034,
+      "subskill_id": 100,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a feature map in CNN?",
+      "options": [
+        {
+          "option_id": 10398,
+          "option_text": "The output of a convolution or pooling operation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10399,
+          "option_text": "The input to a convolution or pooling operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10400,
+          "option_text": "The filter used in a convolution operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10401,
+          "option_text": "The stride used in a convolution operation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2035,
+      "subskill_id": 100,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is transfer learning in CNNs?",
+      "options": [
+        {
+          "option_id": 10402,
+          "option_text": "Using a pre-trained model on a new task",
+          "is_correct": true
+        },
+        {
+          "option_id": 10403,
+          "option_text": "Training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10404,
+          "option_text": "Evaluating a model on a new task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10405,
+          "option_text": "Deploying a model on a new task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2036,
+      "subskill_id": 101,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between transformer and RNN?",
+      "options": [
+        {
+          "option_id": 10406,
+          "option_text": "Transformers process all positions in parallel; RNNs process sequentially",
+          "is_correct": true
+        },
+        {
+          "option_id": 10407,
+          "option_text": "RNNs process all positions in parallel; transformers process sequentially",
+          "is_correct": false
+        },
+        {
+          "option_id": 10408,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10409,
+          "option_text": "Transformers are for text; RNNs are for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2037,
+      "subskill_id": 101,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a transformer encoder?",
+      "options": [
+        {
+          "option_id": 10410,
+          "option_text": "The part of the transformer that processes input sequences",
+          "is_correct": true
+        },
+        {
+          "option_id": 10411,
+          "option_text": "The part of the transformer that generates output sequences",
+          "is_correct": false
+        },
+        {
+          "option_id": 10412,
+          "option_text": "The part of the transformer that applies activation functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10413,
+          "option_text": "The part of the transformer that normalizes data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2038,
+      "subskill_id": 101,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a transformer decoder?",
+      "options": [
+        {
+          "option_id": 10414,
+          "option_text": "The part of the transformer that generates output sequences",
+          "is_correct": true
+        },
+        {
+          "option_id": 10415,
+          "option_text": "The part of the transformer that processes input sequences",
+          "is_correct": false
+        },
+        {
+          "option_id": 10416,
+          "option_text": "The part of the transformer that applies activation functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10417,
+          "option_text": "The part of the transformer that normalizes data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2039,
+      "subskill_id": 101,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pre-trained transformer model?",
+      "options": [
+        {
+          "option_id": 10418,
+          "option_text": "A transformer model that has been trained on a large corpus",
+          "is_correct": true
+        },
+        {
+          "option_id": 10419,
+          "option_text": "A transformer model that has not been trained",
+          "is_correct": false
+        },
+        {
+          "option_id": 10420,
+          "option_text": "A transformer model that is only for image data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10421,
+          "option_text": "A transformer model that is only for text data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2040,
+      "subskill_id": 101,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is fine-tuning in transformers?",
+      "options": [
+        {
+          "option_id": 10422,
+          "option_text": "The process of adapting a pre-trained model to a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 10423,
+          "option_text": "The process of training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10424,
+          "option_text": "The process of evaluating a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10425,
+          "option_text": "The process of deploying a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2041,
+      "subskill_id": 102,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a neural network in PyTorch?",
+      "options": [
+        {
+          "option_id": 10426,
+          "option_text": "By defining a class that inherits from nn.Module",
+          "is_correct": true
+        },
+        {
+          "option_id": 10427,
+          "option_text": "By defining a class that inherits from nn.Linear",
+          "is_correct": false
+        },
+        {
+          "option_id": 10428,
+          "option_text": "By defining a class that inherits from nn.Sequential",
+          "is_correct": false
+        },
+        {
+          "option_id": 10429,
+          "option_text": "By defining a class that inherits from nn.Dropout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2042,
+      "subskill_id": 102,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you train a model in PyTorch?",
+      "options": [
+        {
+          "option_id": 10430,
+          "option_text": "By defining a training loop that updates the weights",
+          "is_correct": true
+        },
+        {
+          "option_id": 10431,
+          "option_text": "By defining a training loop that preprocesses data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10432,
+          "option_text": "By defining a training loop that evaluates the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10433,
+          "option_text": "By defining a training loop that deploys the model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2043,
+      "subskill_id": 102,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you define a loss function in PyTorch?",
+      "options": [
+        {
+          "option_id": 10434,
+          "option_text": "By using a loss function like torch.nn.CrossEntropyLoss",
+          "is_correct": true
+        },
+        {
+          "option_id": 10435,
+          "option_text": "By using a loss function like torch.nn.MSELoss",
+          "is_correct": false
+        },
+        {
+          "option_id": 10436,
+          "option_text": "By using a loss function like torch.nn.L1Loss",
+          "is_correct": false
+        },
+        {
+          "option_id": 10437,
+          "option_text": "By using a loss function like torch.nn.BCELoss",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2044,
+      "subskill_id": 102,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the DataLoader in PyTorch?",
+      "options": [
+        {
+          "option_id": 10438,
+          "option_text": "A class that loads and baches data for training",
+          "is_correct": true
+        },
+        {
+          "option_id": 10439,
+          "option_text": "A class that defines the model architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 10440,
+          "option_text": "A class that defines the loss function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10441,
+          "option_text": "A class that defines the optimizer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2045,
+      "subskill_id": 102,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you save and load a model in PyTorch?",
+      "options": [
+        {
+          "option_id": 10442,
+          "option_text": "By using torch.save to save and torch.load to load",
+          "is_correct": true
+        },
+        {
+          "option_id": 10443,
+          "option_text": "By using pickle to save and load",
+          "is_correct": false
+        },
+        {
+          "option_id": 10444,
+          "option_text": "By using json to save and load",
+          "is_correct": false
+        },
+        {
+          "option_id": 10445,
+          "option_text": "By using csv to save and load",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2046,
+      "subskill_id": 103,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a neural network in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10446,
+          "option_text": "By defining a class that inherits from tf.keras.Model",
+          "is_correct": true
+        },
+        {
+          "option_id": 10447,
+          "option_text": "By defining a class that inherits from tf.Module",
+          "is_correct": false
+        },
+        {
+          "option_id": 10448,
+          "option_text": "By defining a class that inherits from tf.Layer",
+          "is_correct": false
+        },
+        {
+          "option_id": 10449,
+          "option_text": "By defining a class that inherits from tf.Function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2047,
+      "subskill_id": 103,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you train a model in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10450,
+          "option_text": "By using the fit method to train the model",
+          "is_correct": true
+        },
+        {
+          "option_id": 10451,
+          "option_text": "By using the predict method to train the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10452,
+          "option_text": "By using the evaluate method to train the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10453,
+          "option_text": "By using the compile method to train the model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2048,
+      "subskill_id": 103,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Sequential API in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10454,
+          "option_text": "An API that allows you to stack layers sequentially",
+          "is_correct": true
+        },
+        {
+          "option_id": 10455,
+          "option_text": "An API that allows you to build complex models with multiple inputs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10456,
+          "option_text": "An API that allows you to train models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10457,
+          "option_text": "An API that allows you to evaluate models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2049,
+      "subskill_id": 103,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Functional API in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10458,
+          "option_text": "An API that allows you to build complex models with multiple inputs",
+          "is_correct": true
+        },
+        {
+          "option_id": 10459,
+          "option_text": "An API that allows you to stack layers sequentially",
+          "is_correct": false
+        },
+        {
+          "option_id": 10460,
+          "option_text": "An API that allows you to train models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10461,
+          "option_text": "An API that allows you to evaluate models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2050,
+      "subskill_id": 103,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you save and load a model in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10462,
+          "option_text": "By using model.save to save and tf.keras.models.load_model to load",
+          "is_correct": true
+        },
+        {
+          "option_id": 10463,
+          "option_text": "By using pickle to save and load",
+          "is_correct": false
+        },
+        {
+          "option_id": 10464,
+          "option_text": "By using json to save and load",
+          "is_correct": false
+        },
+        {
+          "option_id": 10465,
+          "option_text": "By using csv to save and load",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2051,
+      "subskill_id": 99,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a recurrent neural network (RNN)?",
+      "options": [
+        {
+          "option_id": 10466,
+          "option_text": "A neural network that processes sequences with recurrent connections",
+          "is_correct": true
+        },
+        {
+          "option_id": 10467,
+          "option_text": "A neural network that processes images with convolutional connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10468,
+          "option_text": "A neural network that processes text with attention connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10469,
+          "option_text": "A neural network that processes tabular data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2052,
+      "subskill_id": 99,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a long short-term memory (LSTM) network?",
+      "options": [
+        {
+          "option_id": 10470,
+          "option_text": "A type of RNN that can learn long-term dependencies",
+          "is_correct": true
+        },
+        {
+          "option_id": 10471,
+          "option_text": "A type of CNN that can learn spatial hierarchies",
+          "is_correct": false
+        },
+        {
+          "option_id": 10472,
+          "option_text": "A type of transformer that can learn attention",
+          "is_correct": false
+        },
+        {
+          "option_id": 10473,
+          "option_text": "A type of GAN that can generate images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2053,
+      "subskill_id": 99,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Gated Recurrent Unit (GRU)?",
+      "options": [
+        {
+          "option_id": 10474,
+          "option_text": "A type of RNN that uses gated recurrent units",
+          "is_correct": true
+        },
+        {
+          "option_id": 10475,
+          "option_text": "A type of CNN that uses gated recurrent units",
+          "is_correct": false
+        },
+        {
+          "option_id": 10476,
+          "option_text": "A type of transformer that uses gated recurrent units",
+          "is_correct": false
+        },
+        {
+          "option_id": 10477,
+          "option_text": "A type of GAN that uses gated recurrent units",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2054,
+      "subskill_id": 99,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between RNN and CNN?",
+      "options": [
+        {
+          "option_id": 10478,
+          "option_text": "RNNs process sequences; CNNs process images",
+          "is_correct": true
+        },
+        {
+          "option_id": 10479,
+          "option_text": "CNNs process sequences; RNNs process images",
+          "is_correct": false
+        },
+        {
+          "option_id": 10480,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10481,
+          "option_text": "RNNs are for classification; CNNs are for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2055,
+      "subskill_id": 99,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is attention mechanism in neural networks?",
+      "options": [
+        {
+          "option_id": 10482,
+          "option_text": "A mechanism that allows the model to focus on relevant parts of input",
+          "is_correct": true
+        },
+        {
+          "option_id": 10483,
+          "option_text": "A mechanism that reduces model size",
+          "is_correct": false
+        },
+        {
+          "option_id": 10484,
+          "option_text": "A mechanism that increases model speed",
+          "is_correct": false
+        },
+        {
+          "option_id": 10485,
+          "option_text": "A mechanism that simplifies the model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2056,
+      "subskill_id": 100,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a ResNet in CNNs?",
+      "options": [
+        {
+          "option_id": 10486,
+          "option_text": "A CNN architecture with residual connections",
+          "is_correct": true
+        },
+        {
+          "option_id": 10487,
+          "option_text": "A CNN architecture without residual connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10488,
+          "option_text": "A CNN architecture with attention connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10489,
+          "option_text": "A CNN architecture with recurrent connections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2057,
+      "subskill_id": 100,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a DenseNet in CNNs?",
+      "options": [
+        {
+          "option_id": 10490,
+          "option_text": "A CNN architecture with dense connections between layers",
+          "is_correct": true
+        },
+        {
+          "option_id": 10491,
+          "option_text": "A CNN architecture with residual connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10492,
+          "option_text": "A CNN architecture with attention connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 10493,
+          "option_text": "A CNN architecture with recurrent connections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2058,
+      "subskill_id": 100,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a MobileNet in CNNs?",
+      "options": [
+        {
+          "option_id": 10494,
+          "option_text": "A CNN architecture designed for mobile and embedded devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 10495,
+          "option_text": "A CNN architecture designed for desktop devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 10496,
+          "option_text": "A CNN architecture designed for cloud devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 10497,
+          "option_text": "A CNN architecture designed for server devices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2059,
+      "subskill_id": 100,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an EfficientNet in CNNs?",
+      "options": [
+        {
+          "option_id": 10498,
+          "option_text": "A CNN architecture that balances efficiency and performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10499,
+          "option_text": "A CNN architecture that only focuses on efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 10500,
+          "option_text": "A CNN architecture that only focuses on performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10501,
+          "option_text": "A CNN architecture that is outdated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2060,
+      "subskill_id": 100,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between LeNet and AlexNet?",
+      "options": [
+        {
+          "option_id": 10502,
+          "option_text": "LeNet is a simple architecture; AlexNet is a deeper and more complex architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 10503,
+          "option_text": "AlexNet is a simple architecture; LeNet is a deeper and more complex architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 10504,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10505,
+          "option_text": "LeNet is for text; AlexNet is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2061,
+      "subskill_id": 101,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is BERT in transformers?",
+      "options": [
+        {
+          "option_id": 10506,
+          "option_text": "A transformer model designed for natural language understanding",
+          "is_correct": true
+        },
+        {
+          "option_id": 10507,
+          "option_text": "A transformer model designed for computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 10508,
+          "option_text": "A transformer model designed for speech recognition",
+          "is_correct": false
+        },
+        {
+          "option_id": 10509,
+          "option_text": "A transformer model designed for reinforcement learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2062,
+      "subskill_id": 101,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is GPT in transformers?",
+      "options": [
+        {
+          "option_id": 10510,
+          "option_text": "A transformer model designed for natural language generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10511,
+          "option_text": "A transformer model designed for natural language understanding",
+          "is_correct": false
+        },
+        {
+          "option_id": 10512,
+          "option_text": "A transformer model designed for computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 10513,
+          "option_text": "A transformer model designed for speech recognition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2063,
+      "subskill_id": 101,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a T5 model in transformers?",
+      "options": [
+        {
+          "option_id": 10514,
+          "option_text": "A transformer model designed for natural language processing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10515,
+          "option_text": "A transformer model designed for computer vision",
+          "is_correct": false
+        },
+        {
+          "option_id": 10516,
+          "option_text": "A transformer model designed for speech recognition",
+          "is_correct": false
+        },
+        {
+          "option_id": 10517,
+          "option_text": "A transformer model designed for reinforcement learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2064,
+      "subskill_id": 101,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between encoder-only and decoder-only transformers?",
+      "options": [
+        {
+          "option_id": 10518,
+          "option_text": "Encoder-only transformers process input; decoder-only transformers generate output",
+          "is_correct": true
+        },
+        {
+          "option_id": 10519,
+          "option_text": "Decoder-only transformers process input; encoder-only transformers generate output",
+          "is_correct": false
+        },
+        {
+          "option_id": 10520,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10521,
+          "option_text": "Encoder-only transformers are for text; decoder-only transformers are for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2065,
+      "subskill_id": 101,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a transformer in computer vision (ViT)?",
+      "options": [
+        {
+          "option_id": 10522,
+          "option_text": "A transformer applied to image patches",
+          "is_correct": true
+        },
+        {
+          "option_id": 10523,
+          "option_text": "A transformer applied to text tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 10524,
+          "option_text": "A transformer applied to audio signals",
+          "is_correct": false
+        },
+        {
+          "option_id": 10525,
+          "option_text": "A transformer applied to tabular data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2066,
+      "subskill_id": 102,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the torch.nn.functional module?",
+      "options": [
+        {
+          "option_id": 10526,
+          "option_text": "A module that contains functions for neural network operations",
+          "is_correct": true
+        },
+        {
+          "option_id": 10527,
+          "option_text": "A module that contains functions for data preprocessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10528,
+          "option_text": "A module that contains functions for model evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10529,
+          "option_text": "A module that contains functions for model deployment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2067,
+      "subskill_id": 102,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between torch.save and torch.load?",
+      "options": [
+        {
+          "option_id": 10530,
+          "option_text": "torch.save saves the model; torch.load loads the model",
+          "is_correct": true
+        },
+        {
+          "option_id": 10531,
+          "option_text": "torch.load saves the model; torch.save loads the model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10532,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10533,
+          "option_text": "torch.save is for saving data; torch.load is for loading data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2068,
+      "subskill_id": 102,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the DataParallel in PyTorch?",
+      "options": [
+        {
+          "option_id": 10534,
+          "option_text": "A class that parallelizes training across multiple GPUs",
+          "is_correct": true
+        },
+        {
+          "option_id": 10535,
+          "option_text": "A class that parallelizes training across multiple CPUs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10536,
+          "option_text": "A class that parallelizes training across multiple nodes",
+          "is_correct": false
+        },
+        {
+          "option_id": 10537,
+          "option_text": "A class that parallelizes training across multiple machines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2069,
+      "subskill_id": 102,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the DistributedDataParallel in PyTorch?",
+      "options": [
+        {
+          "option_id": 10538,
+          "option_text": "A class that parallelizes distributed training across multiple nodes",
+          "is_correct": true
+        },
+        {
+          "option_id": 10539,
+          "option_text": "A class that parallelizes training across multiple GPUs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10540,
+          "option_text": "A class that parallelizes training across multiple CPUs",
+          "is_correct": false
+        },
+        {
+          "option_id": 10541,
+          "option_text": "A class that parallelizes training across multiple machines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2070,
+      "subskill_id": 102,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the torchvision library?",
+      "options": [
+        {
+          "option_id": 10542,
+          "option_text": "A library for computer vision tasks in PyTorch",
+          "is_correct": true
+        },
+        {
+          "option_id": 10543,
+          "option_text": "A library for natural language processing tasks in PyTorch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10544,
+          "option_text": "A library for speech recognition tasks in PyTorch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10545,
+          "option_text": "A library for reinforcement learning tasks in PyTorch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2071,
+      "subskill_id": 103,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the tf.data API in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10546,
+          "option_text": "An API for building high-performance input pipelines",
+          "is_correct": true
+        },
+        {
+          "option_id": 10547,
+          "option_text": "An API for building models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10548,
+          "option_text": "An API for training models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10549,
+          "option_text": "An API for evaluating models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2072,
+      "subskill_id": 103,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the tf.keras.callbacks module?",
+      "options": [
+        {
+          "option_id": 10550,
+          "option_text": "A module for callbacks in Keras",
+          "is_correct": true
+        },
+        {
+          "option_id": 10551,
+          "option_text": "A module for models in Keras",
+          "is_correct": false
+        },
+        {
+          "option_id": 10552,
+          "option_text": "A module for layers in Keras",
+          "is_correct": false
+        },
+        {
+          "option_id": 10553,
+          "option_text": "A module for optimizers in Keras",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2073,
+      "subskill_id": 103,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the TensorBoard in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10554,
+          "option_text": "A visualization tool for monitoring model training",
+          "is_correct": true
+        },
+        {
+          "option_id": 10555,
+          "option_text": "A tool for building models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10556,
+          "option_text": "A tool for training models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10557,
+          "option_text": "A tool for evaluating models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2074,
+      "subskill_id": 103,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the tf.GradientTape in TensorFlow?",
+      "options": [
+        {
+          "option_id": 10558,
+          "option_text": "A class for automatic differentiation in TensorFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10559,
+          "option_text": "A class for building models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10560,
+          "option_text": "A class for training models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10561,
+          "option_text": "A class for evaluating models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2075,
+      "subskill_id": 103,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the TensorFlow Hub?",
+      "options": [
+        {
+          "option_id": 10562,
+          "option_text": "A repository of pre-trained models in TensorFlow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10563,
+          "option_text": "A repository of datasets in TensorFlow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10564,
+          "option_text": "A repository of tools in TensorFlow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10565,
+          "option_text": "A repository of documentation in TensorFlow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2076,
+      "subskill_id": 99,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a generative adversarial network (GAN)?",
+      "options": [
+        {
+          "option_id": 10566,
+          "option_text": "A model that generates new data instances by using a generator and a discriminator",
+          "is_correct": true
+        },
+        {
+          "option_id": 10567,
+          "option_text": "A model that classifies data using a single network",
+          "is_correct": false
+        },
+        {
+          "option_id": 10568,
+          "option_text": "A model that clusters data using a single network",
+          "is_correct": false
+        },
+        {
+          "option_id": 10569,
+          "option_text": "A model that reduces dimensionality using a single network",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2077,
+      "subskill_id": 99,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a variational autoencoder (VAE)?",
+      "options": [
+        {
+          "option_id": 10570,
+          "option_text": "A model that learns a latent representation and generates new data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10571,
+          "option_text": "A model that classifies data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10572,
+          "option_text": "A model that clusters data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10573,
+          "option_text": "A model that reduces dimensionality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2078,
+      "subskill_id": 99,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a VAE and a standard autoencoder?",
+      "options": [
+        {
+          "option_id": 10574,
+          "option_text": "VAE produces smooth latent spaces; standard autoencoders do not",
+          "is_correct": true
+        },
+        {
+          "option_id": 10575,
+          "option_text": "Standard autoencoders produce smooth latent spaces; VAE does not",
+          "is_correct": false
+        },
+        {
+          "option_id": 10576,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10577,
+          "option_text": "VAE is for images; standard autoencoders are for text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2079,
+      "subskill_id": 99,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of self-supervised learning in neural networks?",
+      "options": [
+        {
+          "option_id": 10578,
+          "option_text": "A method where models learn from unlabeled data to improve performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10579,
+          "option_text": "A method where models learn from labeled data only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10580,
+          "option_text": "A method where models learn from reinforcement",
+          "is_correct": false
+        },
+        {
+          "option_id": 10581,
+          "option_text": "A method where models learn from no data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2080,
+      "subskill_id": 99,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a neural architecture search (NAS)?",
+      "options": [
+        {
+          "option_id": 10582,
+          "option_text": "An automated method for designing neural network architectures",
+          "is_correct": true
+        },
+        {
+          "option_id": 10583,
+          "option_text": "A manual method for designing neural network architectures",
+          "is_correct": false
+        },
+        {
+          "option_id": 10584,
+          "option_text": "A method for training neural network architectures",
+          "is_correct": false
+        },
+        {
+          "option_id": 10585,
+          "option_text": "A method for evaluating neural network architectures",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2081,
+      "subskill_id": 100,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between 1D, 2D, and 3D CNNs?",
+      "options": [
+        {
+          "option_id": 10586,
+          "option_text": "1D CNNs are for sequences; 2D CNNs are for images; 3D CNNs are for volumes",
+          "is_correct": true
+        },
+        {
+          "option_id": 10587,
+          "option_text": "1D CNNs are for images; 2D CNNs are for sequences; 3D CNNs are for volumes",
+          "is_correct": false
+        },
+        {
+          "option_id": 10588,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10589,
+          "option_text": "1D CNNs are for text; 2D CNNs are for audio; 3D CNNs are for video",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2082,
+      "subskill_id": 100,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of depthwise separable convolution?",
+      "options": [
+        {
+          "option_id": 10590,
+          "option_text": "A technique that reduces the number of parameters in a convolution operation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10591,
+          "option_text": "A technique that increases the number of parameters in a convolution operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10592,
+          "option_text": "A technique that reduces the depth of a CNN",
+          "is_correct": false
+        },
+        {
+          "option_id": 10593,
+          "option_text": "A technique that increases the depth of a CNN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2083,
+      "subskill_id": 100,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of a CNN in object detection?",
+      "options": [
+        {
+          "option_id": 10594,
+          "option_text": "To identify and locate objects within an image",
+          "is_correct": true
+        },
+        {
+          "option_id": 10595,
+          "option_text": "To classify images only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10596,
+          "option_text": "To segment images only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10597,
+          "option_text": "To generate images only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2084,
+      "subskill_id": 100,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between YOLO and Faster R-CNN?",
+      "options": [
+        {
+          "option_id": 10598,
+          "option_text": "YOLO is a one-stage detector; Faster R-CNN is a two-stage detector",
+          "is_correct": true
+        },
+        {
+          "option_id": 10599,
+          "option_text": "Faster R-CNN is a one-stage detector; YOLO is a two-stage detector",
+          "is_correct": false
+        },
+        {
+          "option_id": 10600,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10601,
+          "option_text": "YOLO is for segmentation; Faster R-CNN is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2085,
+      "subskill_id": 100,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of a CNN in medical imaging?",
+      "options": [
+        {
+          "option_id": 10602,
+          "option_text": "To analyze medical images like X-rays and MRIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 10603,
+          "option_text": "To analyze text data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10604,
+          "option_text": "To analyze audio data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10605,
+          "option_text": "To analyze tabular data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2086,
+      "subskill_id": 101,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between BERT and GPT?",
+      "options": [
+        {
+          "option_id": 10606,
+          "option_text": "BERT is designed for understanding; GPT is designed for generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10607,
+          "option_text": "GPT is designed for understanding; BERT is designed for generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10608,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10609,
+          "option_text": "BERT is for images; GPT is for text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2087,
+      "subskill_id": 101,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of fine-tuning a transformer model?",
+      "options": [
+        {
+          "option_id": 10610,
+          "option_text": "The process of adapting a pre-trained model to a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 10611,
+          "option_text": "The process of training a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10612,
+          "option_text": "The process of evaluating a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10613,
+          "option_text": "The process of deploying a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2088,
+      "subskill_id": 101,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between encoder and decoder in transformers?",
+      "options": [
+        {
+          "option_id": 10614,
+          "option_text": "Encoder processes input; decoder generates output",
+          "is_correct": true
+        },
+        {
+          "option_id": 10615,
+          "option_text": "Decoder processes input; encoder generates output",
+          "is_correct": false
+        },
+        {
+          "option_id": 10616,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10617,
+          "option_text": "Encoder is for text; decoder is for images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2089,
+      "subskill_id": 101,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of multi-modal transformers?",
+      "options": [
+        {
+          "option_id": 10618,
+          "option_text": "Models that handle multiple modalities like text and images",
+          "is_correct": true
+        },
+        {
+          "option_id": 10619,
+          "option_text": "Models that handle only one modality",
+          "is_correct": false
+        },
+        {
+          "option_id": 10620,
+          "option_text": "Models that handle only text",
+          "is_correct": false
+        },
+        {
+          "option_id": 10621,
+          "option_text": "Models that handle only images",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2090,
+      "subskill_id": 101,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of transformer models?",
+      "options": [
+        {
+          "option_id": 10622,
+          "option_text": "More efficient, more powerful, and more versatile models",
+          "is_correct": true
+        },
+        {
+          "option_id": 10623,
+          "option_text": "Less efficient, less powerful, and less versatile models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10624,
+          "option_text": "No change in model capabilities",
+          "is_correct": false
+        },
+        {
+          "option_id": 10625,
+          "option_text": "Transformers will become obsolete",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2091,
+      "subskill_id": 102,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the torch.jit module in PyTorch?",
+      "options": [
+        {
+          "option_id": 10626,
+          "option_text": "A module for converting PyTorch models to TorchScript",
+          "is_correct": true
+        },
+        {
+          "option_id": 10627,
+          "option_text": "A module for converting PyTorch models to ONNX",
+          "is_correct": false
+        },
+        {
+          "option_id": 10628,
+          "option_text": "A module for converting PyTorch models to TensorFlow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10629,
+          "option_text": "A module for converting PyTorch models to Caffe",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2092,
+      "subskill_id": 102,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the torch.fx module in PyTorch?",
+      "options": [
+        {
+          "option_id": 10630,
+          "option_text": "A module for symbolic tracing and transformation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10631,
+          "option_text": "A module for data preprocessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10632,
+          "option_text": "A module for model training",
+          "is_correct": false
+        },
+        {
+          "option_id": 10633,
+          "option_text": "A module for model evaluation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2093,
+      "subskill_id": 102,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of PyTorch Lightning?",
+      "options": [
+        {
+          "option_id": 10634,
+          "option_text": "A wrapper for PyTorch that simplifies training",
+          "is_correct": true
+        },
+        {
+          "option_id": 10635,
+          "option_text": "A wrapper for TensorFlow that simplifies training",
+          "is_correct": false
+        },
+        {
+          "option_id": 10636,
+          "option_text": "A wrapper for JAX that simplifies training",
+          "is_correct": false
+        },
+        {
+          "option_id": 10637,
+          "option_text": "A wrapper for Caffe that simplifies training",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2094,
+      "subskill_id": 102,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of PyTorch Profiler?",
+      "options": [
+        {
+          "option_id": 10638,
+          "option_text": "A tool for profiling PyTorch models",
+          "is_correct": true
+        },
+        {
+          "option_id": 10639,
+          "option_text": "A tool for training PyTorch models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10640,
+          "option_text": "A tool for evaluating PyTorch models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10641,
+          "option_text": "A tool for deploying PyTorch models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2095,
+      "subskill_id": 102,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of distributed training in PyTorch?",
+      "options": [
+        {
+          "option_id": 10642,
+          "option_text": "A technique for training models on multiple machines",
+          "is_correct": true
+        },
+        {
+          "option_id": 10643,
+          "option_text": "A technique for training models on a single machine",
+          "is_correct": false
+        },
+        {
+          "option_id": 10644,
+          "option_text": "A technique for training models on a single GPU",
+          "is_correct": false
+        },
+        {
+          "option_id": 10645,
+          "option_text": "A technique for training models on a single CPU",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2096,
+      "subskill_id": 103,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of TensorFlow Lite?",
+      "options": [
+        {
+          "option_id": 10646,
+          "option_text": "A lightweight version of TensorFlow for mobile and embedded devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 10647,
+          "option_text": "A heavyweight version of TensorFlow for cloud devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 10648,
+          "option_text": "A version of TensorFlow for desktop devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 10649,
+          "option_text": "A version of TensorFlow for server devices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2097,
+      "subskill_id": 103,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of TensorFlow Serving?",
+      "options": [
+        {
+          "option_id": 10650,
+          "option_text": "A system for serving TensorFlow models in production",
+          "is_correct": true
+        },
+        {
+          "option_id": 10651,
+          "option_text": "A system for training TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10652,
+          "option_text": "A system for evaluating TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10653,
+          "option_text": "A system for deploying TensorFlow models to mobile",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2098,
+      "subskill_id": 103,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of TensorFlow.js?",
+      "options": [
+        {
+          "option_id": 10654,
+          "option_text": "A JavaScript library for running TensorFlow models in the browser",
+          "is_correct": true
+        },
+        {
+          "option_id": 10655,
+          "option_text": "A Python library for running TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10656,
+          "option_text": "A Java library for running TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10657,
+          "option_text": "A C++ library for running TensorFlow models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2099,
+      "subskill_id": 103,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of TFX (TensorFlow Extended)?",
+      "options": [
+        {
+          "option_id": 10658,
+          "option_text": "An end-to-end platform for deploying production ML pipelines",
+          "is_correct": true
+        },
+        {
+          "option_id": 10659,
+          "option_text": "A library for building models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10660,
+          "option_text": "A library for training models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10661,
+          "option_text": "A library for evaluating models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2100,
+      "subskill_id": 103,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of TensorFlow with TPU?",
+      "options": [
+        {
+          "option_id": 10662,
+          "option_text": "A hardware accelerator for training TensorFlow models",
+          "is_correct": true
+        },
+        {
+          "option_id": 10663,
+          "option_text": "A software accelerator for training TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10664,
+          "option_text": "A framework for training TensorFlow models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10665,
+          "option_text": "A library for training TensorFlow models",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2906 @@
+{
+  "skill_id": 15,
+  "skill_name": "No-Code / Low-Code Tools",
+  "questions": [
+    {
+      "question_id": 1401,
+      "subskill_id": 70,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Webflow?",
+      "options": [
+        {
+          "option_id": 7866,
+          "option_text": "A no-code platform for building websites visually",
+          "is_correct": true
+        },
+        {
+          "option_id": 7867,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7868,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 7869,
+          "option_text": "A graphic design tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1402,
+      "subskill_id": 70,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Webflow CMS?",
+      "options": [
+        {
+          "option_id": 7870,
+          "option_text": "Webflow Content Management System",
+          "is_correct": true
+        },
+        {
+          "option_id": 7871,
+          "option_text": "Webflow Customer Management System",
+          "is_correct": false
+        },
+        {
+          "option_id": 7872,
+          "option_text": "Webflow Code Management System",
+          "is_correct": false
+        },
+        {
+          "option_id": 7873,
+          "option_text": "Webflow Component Management System",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1403,
+      "subskill_id": 70,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Webflow template?",
+      "options": [
+        {
+          "option_id": 7874,
+          "option_text": "A pre-designed website layout for Webflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7875,
+          "option_text": "A coding standard",
+          "is_correct": false
+        },
+        {
+          "option_id": 7876,
+          "option_text": "A hosting provider",
+          "is_correct": false
+        },
+        {
+          "option_id": 7877,
+          "option_text": "A domain registrar",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1404,
+      "subskill_id": 70,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Webflow Designer?",
+      "options": [
+        {
+          "option_id": 7878,
+          "option_text": "The visual interface for building websites in Webflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7879,
+          "option_text": "The code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7880,
+          "option_text": "The CMS dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 7881,
+          "option_text": "The hosting settings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1405,
+      "subskill_id": 70,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Webflow interaction?",
+      "options": [
+        {
+          "option_id": 7882,
+          "option_text": "An animation or interaction built visually in Webflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7883,
+          "option_text": "A coding script",
+          "is_correct": false
+        },
+        {
+          "option_id": 7884,
+          "option_text": "A plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7885,
+          "option_text": "A database query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1406,
+      "subskill_id": 71,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Bubble?",
+      "options": [
+        {
+          "option_id": 7886,
+          "option_text": "A no-code platform for building web applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 7887,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7888,
+          "option_text": "A database system",
+          "is_correct": false
+        },
+        {
+          "option_id": 7889,
+          "option_text": "A hosting service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1407,
+      "subskill_id": 71,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Bubble app?",
+      "options": [
+        {
+          "option_id": 7890,
+          "option_text": "An application built with Bubble",
+          "is_correct": true
+        },
+        {
+          "option_id": 7891,
+          "option_text": "A plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7892,
+          "option_text": "A template",
+          "is_correct": false
+        },
+        {
+          "option_id": 7893,
+          "option_text": "A database table",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1408,
+      "subskill_id": 71,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Bubble editor?",
+      "options": [
+        {
+          "option_id": 7894,
+          "option_text": "The visual interface for building Bubble apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 7895,
+          "option_text": "The code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7896,
+          "option_text": "The database manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 7897,
+          "option_text": "The hosting dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1409,
+      "subskill_id": 71,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Bubble plugin?",
+      "options": [
+        {
+          "option_id": 7898,
+          "option_text": "An add-on that extends Bubble's functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 7899,
+          "option_text": "A built-in feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 7900,
+          "option_text": "A template",
+          "is_correct": false
+        },
+        {
+          "option_id": 7901,
+          "option_text": "A database table",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1410,
+      "subskill_id": 71,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Bubble workflow?",
+      "options": [
+        {
+          "option_id": 7902,
+          "option_text": "A sequence of actions triggered by an event in Bubble",
+          "is_correct": true
+        },
+        {
+          "option_id": 7903,
+          "option_text": "A code function",
+          "is_correct": false
+        },
+        {
+          "option_id": 7904,
+          "option_text": "A plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7905,
+          "option_text": "A template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1411,
+      "subskill_id": 72,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Zapier?",
+      "options": [
+        {
+          "option_id": 7906,
+          "option_text": "An automation platform that connects apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 7907,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7908,
+          "option_text": "A database system",
+          "is_correct": false
+        },
+        {
+          "option_id": 7909,
+          "option_text": "A hosting service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1412,
+      "subskill_id": 72,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Zap in Zapier?",
+      "options": [
+        {
+          "option_id": 7910,
+          "option_text": "An automated workflow that connects two or more apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 7911,
+          "option_text": "A code script",
+          "is_correct": false
+        },
+        {
+          "option_id": 7912,
+          "option_text": "A plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7913,
+          "option_text": "A template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1413,
+      "subskill_id": 72,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a trigger in Zapier?",
+      "options": [
+        {
+          "option_id": 7914,
+          "option_text": "An event that starts a Zap",
+          "is_correct": true
+        },
+        {
+          "option_id": 7915,
+          "option_text": "An action that follows a trigger",
+          "is_correct": false
+        },
+        {
+          "option_id": 7916,
+          "option_text": "A code function",
+          "is_correct": false
+        },
+        {
+          "option_id": 7917,
+          "option_text": "A database query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1414,
+      "subskill_id": 72,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an action in Zapier?",
+      "options": [
+        {
+          "option_id": 7918,
+          "option_text": "A task performed after a trigger in a Zap",
+          "is_correct": true
+        },
+        {
+          "option_id": 7919,
+          "option_text": "An event that starts a Zap",
+          "is_correct": false
+        },
+        {
+          "option_id": 7920,
+          "option_text": "A code function",
+          "is_correct": false
+        },
+        {
+          "option_id": 7921,
+          "option_text": "A database query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1415,
+      "subskill_id": 72,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Zapier integration?",
+      "options": [
+        {
+          "option_id": 7922,
+          "option_text": "A connection between Zapier and another app",
+          "is_correct": true
+        },
+        {
+          "option_id": 7923,
+          "option_text": "A code script",
+          "is_correct": false
+        },
+        {
+          "option_id": 7924,
+          "option_text": "A plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7925,
+          "option_text": "A template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1416,
+      "subskill_id": 73,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Airtable?",
+      "options": [
+        {
+          "option_id": 7926,
+          "option_text": "A spreadsheet-database hybrid platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 7927,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7928,
+          "option_text": "A graphic design tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 7929,
+          "option_text": "A hosting service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1417,
+      "subskill_id": 73,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Airtable base?",
+      "options": [
+        {
+          "option_id": 7930,
+          "option_text": "A workspace that contains tables and data in Airtable",
+          "is_correct": true
+        },
+        {
+          "option_id": 7931,
+          "option_text": "A single table",
+          "is_correct": false
+        },
+        {
+          "option_id": 7932,
+          "option_text": "A view",
+          "is_correct": false
+        },
+        {
+          "option_id": 7933,
+          "option_text": "A field",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1418,
+      "subskill_id": 73,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Airtable table?",
+      "options": [
+        {
+          "option_id": 7934,
+          "option_text": "A collection of records in an Airtable base",
+          "is_correct": true
+        },
+        {
+          "option_id": 7935,
+          "option_text": "The entire workspace",
+          "is_correct": false
+        },
+        {
+          "option_id": 7936,
+          "option_text": "A view",
+          "is_correct": false
+        },
+        {
+          "option_id": 7937,
+          "option_text": "A field",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1419,
+      "subskill_id": 73,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Airtable view?",
+      "options": [
+        {
+          "option_id": 7938,
+          "option_text": "A customized way to display data in Airtable",
+          "is_correct": true
+        },
+        {
+          "option_id": 7939,
+          "option_text": "A table",
+          "is_correct": false
+        },
+        {
+          "option_id": 7940,
+          "option_text": "A field",
+          "is_correct": false
+        },
+        {
+          "option_id": 7941,
+          "option_text": "A record",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1420,
+      "subskill_id": 73,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Airtable field?",
+      "options": [
+        {
+          "option_id": 7942,
+          "option_text": "A column in an Airtable table",
+          "is_correct": true
+        },
+        {
+          "option_id": 7943,
+          "option_text": "A row in an Airtable table",
+          "is_correct": false
+        },
+        {
+          "option_id": 7944,
+          "option_text": "A view",
+          "is_correct": false
+        },
+        {
+          "option_id": 7945,
+          "option_text": "A base",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1421,
+      "subskill_id": 74,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a no-code automation tool?",
+      "options": [
+        {
+          "option_id": 7946,
+          "option_text": "A tool that automates tasks without code",
+          "is_correct": true
+        },
+        {
+          "option_id": 7947,
+          "option_text": "A code editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7948,
+          "option_text": "A database system",
+          "is_correct": false
+        },
+        {
+          "option_id": 7949,
+          "option_text": "A hosting service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1422,
+      "subskill_id": 74,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of automation tools?",
+      "options": [
+        {
+          "option_id": 7950,
+          "option_text": "To save time and reduce errors by automating repetitive tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 7951,
+          "option_text": "To write code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7952,
+          "option_text": "To design websites",
+          "is_correct": false
+        },
+        {
+          "option_id": 7953,
+          "option_text": "To manage databases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1423,
+      "subskill_id": 74,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a workflow in automation?",
+      "options": [
+        {
+          "option_id": 7954,
+          "option_text": "A sequence of automated steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 7955,
+          "option_text": "A code script",
+          "is_correct": false
+        },
+        {
+          "option_id": 7956,
+          "option_text": "A database query",
+          "is_correct": false
+        },
+        {
+          "option_id": 7957,
+          "option_text": "A design element",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1424,
+      "subskill_id": 74,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a trigger in automation?",
+      "options": [
+        {
+          "option_id": 7958,
+          "option_text": "An event that starts an automated workflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7959,
+          "option_text": "An action in a workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 7960,
+          "option_text": "A code function",
+          "is_correct": false
+        },
+        {
+          "option_id": 7961,
+          "option_text": "A database query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1425,
+      "subskill_id": 74,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an action in automation?",
+      "options": [
+        {
+          "option_id": 7962,
+          "option_text": "A task performed in an automated workflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 7963,
+          "option_text": "An event that starts a workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 7964,
+          "option_text": "A code function",
+          "is_correct": false
+        },
+        {
+          "option_id": 7965,
+          "option_text": "A database query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1426,
+      "subskill_id": 70,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a website with Webflow?",
+      "options": [
+        {
+          "option_id": 7966,
+          "option_text": "By choosing a template or starting from scratch and using the Designer",
+          "is_correct": true
+        },
+        {
+          "option_id": 7967,
+          "option_text": "By writing HTML code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7968,
+          "option_text": "By using a WordPress plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7969,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1427,
+      "subskill_id": 70,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use the Webflow CMS?",
+      "options": [
+        {
+          "option_id": 7970,
+          "option_text": "By creating collections and adding fields to manage dynamic content",
+          "is_correct": true
+        },
+        {
+          "option_id": 7971,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7972,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7973,
+          "option_text": "By hosting a database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1428,
+      "subskill_id": 70,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you customize a Webflow template?",
+      "options": [
+        {
+          "option_id": 7974,
+          "option_text": "By using the Webflow Designer to modify styles and layouts",
+          "is_correct": true
+        },
+        {
+          "option_id": 7975,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7976,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 7977,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1429,
+      "subskill_id": 70,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you publish a Webflow site?",
+      "options": [
+        {
+          "option_id": 7978,
+          "option_text": "By connecting a custom domain and clicking publish",
+          "is_correct": true
+        },
+        {
+          "option_id": 7979,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7980,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7981,
+          "option_text": "By hosting on a server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1430,
+      "subskill_id": 70,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you add animations in Webflow?",
+      "options": [
+        {
+          "option_id": 7982,
+          "option_text": "By using Webflow's interactions panel to create animations",
+          "is_correct": true
+        },
+        {
+          "option_id": 7983,
+          "option_text": "By writing JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 7984,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7985,
+          "option_text": "By adding CSS code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1431,
+      "subskill_id": 71,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a web app with Bubble?",
+      "options": [
+        {
+          "option_id": 7986,
+          "option_text": "By choosing a template and using the Bubble editor to customize it",
+          "is_correct": true
+        },
+        {
+          "option_id": 7987,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 7988,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7989,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1432,
+      "subskill_id": 71,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design a user interface in Bubble?",
+      "options": [
+        {
+          "option_id": 7990,
+          "option_text": "By dragging and dropping elements onto the page",
+          "is_correct": true
+        },
+        {
+          "option_id": 7991,
+          "option_text": "By writing HTML",
+          "is_correct": false
+        },
+        {
+          "option_id": 7992,
+          "option_text": "By using a template",
+          "is_correct": false
+        },
+        {
+          "option_id": 7993,
+          "option_text": "By hiring a designer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1433,
+      "subskill_id": 71,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set up a database in Bubble?",
+      "options": [
+        {
+          "option_id": 7994,
+          "option_text": "By creating data types and adding fields",
+          "is_correct": true
+        },
+        {
+          "option_id": 7995,
+          "option_text": "By writing SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 7996,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7997,
+          "option_text": "By hosting a database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1434,
+      "subskill_id": 71,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you implement user authentication in Bubble?",
+      "options": [
+        {
+          "option_id": 7998,
+          "option_text": "By using Bubble's built-in authentication system",
+          "is_correct": true
+        },
+        {
+          "option_id": 7999,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8000,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8001,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1435,
+      "subskill_id": 71,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you deploy a Bubble app?",
+      "options": [
+        {
+          "option_id": 8002,
+          "option_text": "By clicking the deploy button in the Bubble editor",
+          "is_correct": true
+        },
+        {
+          "option_id": 8003,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8004,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8005,
+          "option_text": "By hosting on a server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1436,
+      "subskill_id": 72,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a Zap?",
+      "options": [
+        {
+          "option_id": 8006,
+          "option_text": "By choosing a trigger and an action in the Zapier editor",
+          "is_correct": true
+        },
+        {
+          "option_id": 8007,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8008,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8009,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1437,
+      "subskill_id": 72,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set up a trigger in Zapier?",
+      "options": [
+        {
+          "option_id": 8010,
+          "option_text": "By selecting an app and choosing a trigger event",
+          "is_correct": true
+        },
+        {
+          "option_id": 8011,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8012,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8013,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1438,
+      "subskill_id": 72,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set up an action in Zapier?",
+      "options": [
+        {
+          "option_id": 8014,
+          "option_text": "By selecting an app and choosing an action event",
+          "is_correct": true
+        },
+        {
+          "option_id": 8015,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8016,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8017,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1439,
+      "subskill_id": 72,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test a Zap?",
+      "options": [
+        {
+          "option_id": 8018,
+          "option_text": "By running a test in the Zapier editor to verify the workflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 8019,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8020,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8021,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1440,
+      "subskill_id": 72,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you activate a Zap?",
+      "options": [
+        {
+          "option_id": 8022,
+          "option_text": "By turning on the Zap to start running automatically",
+          "is_correct": true
+        },
+        {
+          "option_id": 8023,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8024,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8025,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1441,
+      "subskill_id": 73,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create an Airtable base?",
+      "options": [
+        {
+          "option_id": 8026,
+          "option_text": "By creating a new base in Airtable",
+          "is_correct": true
+        },
+        {
+          "option_id": 8027,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8028,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8029,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1442,
+      "subskill_id": 73,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create tables in Airtable?",
+      "options": [
+        {
+          "option_id": 8030,
+          "option_text": "By adding tables and fields to organize data",
+          "is_correct": true
+        },
+        {
+          "option_id": 8031,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8032,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8033,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1443,
+      "subskill_id": 73,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create relationships between Airtable tables?",
+      "options": [
+        {
+          "option_id": 8034,
+          "option_text": "By linking fields between tables using the \"Link to another record\" field type",
+          "is_correct": true
+        },
+        {
+          "option_id": 8035,
+          "option_text": "By writing SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 8036,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8037,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1444,
+      "subskill_id": 73,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create views in Airtable?",
+      "options": [
+        {
+          "option_id": 8038,
+          "option_text": "By using the view options in Airtable to customize data display",
+          "is_correct": true
+        },
+        {
+          "option_id": 8039,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8040,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8041,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1445,
+      "subskill_id": 73,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you import data into Airtable?",
+      "options": [
+        {
+          "option_id": 8042,
+          "option_text": "By importing CSV files or connecting to other apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 8043,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8044,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8045,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1446,
+      "subskill_id": 74,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you choose the right automation tool?",
+      "options": [
+        {
+          "option_id": 8046,
+          "option_text": "By evaluating factors like complexity, integrations, and cost",
+          "is_correct": true
+        },
+        {
+          "option_id": 8047,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8048,
+          "option_text": "By choosing the most popular tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 8049,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1447,
+      "subskill_id": 74,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design an automation workflow?",
+      "options": [
+        {
+          "option_id": 8050,
+          "option_text": "By mapping out the steps and desired outcomes before building",
+          "is_correct": true
+        },
+        {
+          "option_id": 8051,
+          "option_text": "By building it without planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 8052,
+          "option_text": "By copying another workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 8053,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1448,
+      "subskill_id": 74,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you integrate multiple automation tools?",
+      "options": [
+        {
+          "option_id": 8054,
+          "option_text": "By using platforms like Zapier or Make to connect multiple tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8055,
+          "option_text": "By writing code for each integration",
+          "is_correct": false
+        },
+        {
+          "option_id": 8056,
+          "option_text": "By using a single tool for everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 8057,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1449,
+      "subskill_id": 74,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you schedule automations?",
+      "options": [
+        {
+          "option_id": 8058,
+          "option_text": "By using scheduling features in automation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8059,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8060,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8061,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1450,
+      "subskill_id": 74,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you monitor automation performance?",
+      "options": [
+        {
+          "option_id": 8062,
+          "option_text": "By using logging and reporting features in automation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8063,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8064,
+          "option_text": "By checking manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 8065,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1451,
+      "subskill_id": 70,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a blog with Webflow?",
+      "options": [
+        {
+          "option_id": 8066,
+          "option_text": "By creating CMS collections for blog posts and using dynamic pages",
+          "is_correct": true
+        },
+        {
+          "option_id": 8067,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8068,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8069,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1452,
+      "subskill_id": 70,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a Webflow site for SEO?",
+      "options": [
+        {
+          "option_id": 8070,
+          "option_text": "By using Webflow's SEO settings and optimizing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 8071,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8072,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8073,
+          "option_text": "By hiring an SEO expert",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1453,
+      "subskill_id": 70,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you integrate Webflow with third-party tools?",
+      "options": [
+        {
+          "option_id": 8074,
+          "option_text": "By using Webflow's native integrations or custom code",
+          "is_correct": true
+        },
+        {
+          "option_id": 8075,
+          "option_text": "By writing code for each tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 8076,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8077,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1454,
+      "subskill_id": 70,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage Webflow hosting?",
+      "options": [
+        {
+          "option_id": 8078,
+          "option_text": "By using Webflow's hosting dashboard and configuration settings",
+          "is_correct": true
+        },
+        {
+          "option_id": 8079,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8080,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8081,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1455,
+      "subskill_id": 70,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you custom code in Webflow?",
+      "options": [
+        {
+          "option_id": 8082,
+          "option_text": "By using Webflow's custom code feature to add HTML, CSS, or JavaScript",
+          "is_correct": true
+        },
+        {
+          "option_id": 8083,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8084,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8085,
+          "option_text": "By rewriting the template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1456,
+      "subskill_id": 71,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a marketplace with Bubble?",
+      "options": [
+        {
+          "option_id": 8086,
+          "option_text": "By creating a marketplace app with listings and transactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8087,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8088,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8089,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1457,
+      "subskill_id": 71,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement payment processing in Bubble?",
+      "options": [
+        {
+          "option_id": 8090,
+          "option_text": "By using Bubble's payment plugins or Stripe integration",
+          "is_correct": true
+        },
+        {
+          "option_id": 8091,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8092,
+          "option_text": "By using a template",
+          "is_correct": false
+        },
+        {
+          "option_id": 8093,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1458,
+      "subskill_id": 71,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle complex workflows in Bubble?",
+      "options": [
+        {
+          "option_id": 8094,
+          "option_text": "By using Bubble's workflow editor to create complex logic",
+          "is_correct": true
+        },
+        {
+          "option_id": 8095,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8096,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8097,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1459,
+      "subskill_id": 71,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use Bubble plugins for advanced features?",
+      "options": [
+        {
+          "option_id": 8098,
+          "option_text": "By searching and installing plugins from Bubble's marketplace",
+          "is_correct": true
+        },
+        {
+          "option_id": 8099,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8100,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8101,
+          "option_text": "By using a template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1460,
+      "subskill_id": 71,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you secure a Bubble app?",
+      "options": [
+        {
+          "option_id": 8102,
+          "option_text": "By using Bubble's privacy rules and built-in security features",
+          "is_correct": true
+        },
+        {
+          "option_id": 8103,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8104,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8105,
+          "option_text": "By hiring a security expert",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1461,
+      "subskill_id": 72,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create multi-step Zaps?",
+      "options": [
+        {
+          "option_id": 8106,
+          "option_text": "By chaining multiple actions in a single Zap",
+          "is_correct": true
+        },
+        {
+          "option_id": 8107,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8108,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8109,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1462,
+      "subskill_id": 72,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle errors in Zapier?",
+      "options": [
+        {
+          "option_id": 8110,
+          "option_text": "By using Zapier's error handling and monitoring tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8111,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8112,
+          "option_text": "By ignoring errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 8113,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1463,
+      "subskill_id": 72,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use Zapier filters and paths?",
+      "options": [
+        {
+          "option_id": 8114,
+          "option_text": "By using filters to add conditions and paths for branching logic",
+          "is_correct": true
+        },
+        {
+          "option_id": 8115,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8116,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8117,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1464,
+      "subskill_id": 72,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you integrate Zapier with custom APIs?",
+      "options": [
+        {
+          "option_id": 8118,
+          "option_text": "By using Zapier's webhook integration to connect to custom APIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 8119,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8120,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8121,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1465,
+      "subskill_id": 72,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage Zapier usage and limits?",
+      "options": [
+        {
+          "option_id": 8122,
+          "option_text": "By monitoring task counts and optimizing Zaps to stay within limits",
+          "is_correct": true
+        },
+        {
+          "option_id": 8123,
+          "option_text": "By ignoring limits",
+          "is_correct": false
+        },
+        {
+          "option_id": 8124,
+          "option_text": "By upgrading to unlimited plans",
+          "is_correct": false
+        },
+        {
+          "option_id": 8125,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1466,
+      "subskill_id": 73,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a relational database in Airtable?",
+      "options": [
+        {
+          "option_id": 8126,
+          "option_text": "By linking tables using linked record fields",
+          "is_correct": true
+        },
+        {
+          "option_id": 8127,
+          "option_text": "By writing SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 8128,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8129,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1467,
+      "subskill_id": 73,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use formulas in Airtable?",
+      "options": [
+        {
+          "option_id": 8130,
+          "option_text": "By using Airtable's formula field type to create calculations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8131,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8132,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8133,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1468,
+      "subskill_id": 73,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create dashboards in Airtable?",
+      "options": [
+        {
+          "option_id": 8134,
+          "option_text": "By creating interfaces or using Airtable's built-in dashboard features",
+          "is_correct": true
+        },
+        {
+          "option_id": 8135,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8136,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8137,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1469,
+      "subskill_id": 73,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you automate Airtable with integrations?",
+      "options": [
+        {
+          "option_id": 8138,
+          "option_text": "By using Airtable's automations or connecting to Zapier/Make",
+          "is_correct": true
+        },
+        {
+          "option_id": 8139,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8140,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8141,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1470,
+      "subskill_id": 73,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage Airtable permissions?",
+      "options": [
+        {
+          "option_id": 8142,
+          "option_text": "By setting field-level permissions and sharing settings",
+          "is_correct": true
+        },
+        {
+          "option_id": 8143,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8144,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8145,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1471,
+      "subskill_id": 74,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build complex automation workflows?",
+      "options": [
+        {
+          "option_id": 8146,
+          "option_text": "By mapping out all steps and using advanced logic in tools like Make",
+          "is_correct": true
+        },
+        {
+          "option_id": 8147,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8148,
+          "option_text": "By using a single tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 8149,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1472,
+      "subskill_id": 74,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle conditional logic in automations?",
+      "options": [
+        {
+          "option_id": 8150,
+          "option_text": "By using conditions and branching within automation workflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 8151,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8152,
+          "option_text": "By ignoring logic",
+          "is_correct": false
+        },
+        {
+          "option_id": 8153,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1473,
+      "subskill_id": 74,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you integrate automation tools with APIs?",
+      "options": [
+        {
+          "option_id": 8154,
+          "option_text": "By using API integration features in automation platforms",
+          "is_correct": true
+        },
+        {
+          "option_id": 8155,
+          "option_text": "By writing code for each API",
+          "is_correct": false
+        },
+        {
+          "option_id": 8156,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8157,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1474,
+      "subskill_id": 74,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you ensure data quality in automations?",
+      "options": [
+        {
+          "option_id": 8158,
+          "option_text": "By validating inputs and using error handling in workflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 8159,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8160,
+          "option_text": "By ignoring data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 8161,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1475,
+      "subskill_id": 74,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you troubleshoot automation failures?",
+      "options": [
+        {
+          "option_id": 8162,
+          "option_text": "By using logging, monitoring, and testing to identify failures",
+          "is_correct": true
+        },
+        {
+          "option_id": 8163,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8164,
+          "option_text": "By ignoring failures",
+          "is_correct": false
+        },
+        {
+          "option_id": 8165,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1476,
+      "subskill_id": 70,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a multi-language Webflow site?",
+      "options": [
+        {
+          "option_id": 8166,
+          "option_text": "By using Webflow's multi-language feature or third-party solutions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8167,
+          "option_text": "By writing code for each language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8168,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8169,
+          "option_text": "By hiring a translator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1477,
+      "subskill_id": 70,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a Webflow membership site?",
+      "options": [
+        {
+          "option_id": 8170,
+          "option_text": "By using Webflow's membership feature or integrating with a third-party tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 8171,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8172,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8173,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1478,
+      "subskill_id": 70,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize Webflow performance?",
+      "options": [
+        {
+          "option_id": 8174,
+          "option_text": "By optimizing images, using Webflow's CDN, and minimizing custom code",
+          "is_correct": true
+        },
+        {
+          "option_id": 8175,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8176,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8177,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1479,
+      "subskill_id": 70,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you migrate a website to Webflow?",
+      "options": [
+        {
+          "option_id": 8178,
+          "option_text": "By exporting content and recreating the site structure in Webflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 8179,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8180,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8181,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1480,
+      "subskill_id": 70,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build custom Webflow interactions?",
+      "options": [
+        {
+          "option_id": 8182,
+          "option_text": "By using Webflow's interactions panel and custom code for advanced animations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8183,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8184,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8185,
+          "option_text": "By rewriting the template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1481,
+      "subskill_id": 71,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale a Bubble app?",
+      "options": [
+        {
+          "option_id": 8186,
+          "option_text": "By optimizing workflows, using external databases, and leveraging Bubble's performance tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8187,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8188,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8189,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1482,
+      "subskill_id": 71,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate Bubble with external APIs?",
+      "options": [
+        {
+          "option_id": 8190,
+          "option_text": "By using Bubble's API connector to connect to external services",
+          "is_correct": true
+        },
+        {
+          "option_id": 8191,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8192,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8193,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1483,
+      "subskill_id": 71,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a SaaS product with Bubble?",
+      "options": [
+        {
+          "option_id": 8194,
+          "option_text": "By building a multi-tenant application with Bubble's user and data management",
+          "is_correct": true
+        },
+        {
+          "option_id": 8195,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8196,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8197,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1484,
+      "subskill_id": 71,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle data migration in Bubble?",
+      "options": [
+        {
+          "option_id": 8198,
+          "option_text": "By exporting and importing data using Bubble's data migration tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8199,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8200,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8201,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1485,
+      "subskill_id": 71,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize Bubble app performance?",
+      "options": [
+        {
+          "option_id": 8202,
+          "option_text": "By monitoring performance and using Bubble's optimization best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 8203,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8204,
+          "option_text": "By ignoring performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 8205,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1486,
+      "subskill_id": 72,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create custom Zapier integrations?",
+      "options": [
+        {
+          "option_id": 8206,
+          "option_text": "By building a custom integration using Zapier's developer platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 8207,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8208,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8209,
+          "option_text": "By writing code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1487,
+      "subskill_id": 72,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle large-scale automations in Zapier?",
+      "options": [
+        {
+          "option_id": 8210,
+          "option_text": "By using enterprise features like multi-step Zaps and error handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 8211,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8212,
+          "option_text": "By ignoring scale",
+          "is_correct": false
+        },
+        {
+          "option_id": 8213,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1488,
+      "subskill_id": 72,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement error handling in Zapier?",
+      "options": [
+        {
+          "option_id": 8214,
+          "option_text": "By using Zapier's error handling tools and custom error responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 8215,
+          "option_text": "By ignoring errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 8216,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8217,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1489,
+      "subskill_id": 72,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a Zapier app?",
+      "options": [
+        {
+          "option_id": 8218,
+          "option_text": "By building a private app using Zapier's developer platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 8219,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8220,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8221,
+          "option_text": "By writing code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1490,
+      "subskill_id": 72,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use Zapier for enterprise automation?",
+      "options": [
+        {
+          "option_id": 8222,
+          "option_text": "By using Zapier's enterprise features like advanced admin controls",
+          "is_correct": true
+        },
+        {
+          "option_id": 8223,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8224,
+          "option_text": "By ignoring enterprise needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8225,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1491,
+      "subskill_id": 73,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a complex Airtable app?",
+      "options": [
+        {
+          "option_id": 8226,
+          "option_text": "By building an app with scripts and automations in Airtable",
+          "is_correct": true
+        },
+        {
+          "option_id": 8227,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8228,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8229,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1492,
+      "subskill_id": 73,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement Airtable scripting?",
+      "options": [
+        {
+          "option_id": 8230,
+          "option_text": "By writing and running scripts in Airtable's scripting app",
+          "is_correct": true
+        },
+        {
+          "option_id": 8231,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8232,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8233,
+          "option_text": "By using a template",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1493,
+      "subskill_id": 73,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use Airtable with external databases?",
+      "options": [
+        {
+          "option_id": 8234,
+          "option_text": "By connecting Airtable to external databases via integrations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8235,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8236,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8237,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1494,
+      "subskill_id": 73,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize Airtable performance?",
+      "options": [
+        {
+          "option_id": 8238,
+          "option_text": "By optimizing tables, views, and using Airtable's best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 8239,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8240,
+          "option_text": "By ignoring performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 8241,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1495,
+      "subskill_id": 73,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you manage Airtable at enterprise scale?",
+      "options": [
+        {
+          "option_id": 8242,
+          "option_text": "By using Airtable's enterprise features and admin controls",
+          "is_correct": true
+        },
+        {
+          "option_id": 8243,
+          "option_text": "By ignoring scale",
+          "is_correct": false
+        },
+        {
+          "option_id": 8244,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8245,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1496,
+      "subskill_id": 74,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a no-code automation strategy?",
+      "options": [
+        {
+          "option_id": 8246,
+          "option_text": "By identifying business goals and mapping processes before building",
+          "is_correct": true
+        },
+        {
+          "option_id": 8247,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8248,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 8249,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1497,
+      "subskill_id": 74,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you orchestrate complex workflows across platforms?",
+      "options": [
+        {
+          "option_id": 8250,
+          "option_text": "By using middleware platforms like Make or Zapier to orchestrate workflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 8251,
+          "option_text": "By writing code",
+          "is_correct": false
+        },
+        {
+          "option_id": 8252,
+          "option_text": "By using a single tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 8253,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1498,
+      "subskill_id": 74,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement security in no-code automations?",
+      "options": [
+        {
+          "option_id": 8254,
+          "option_text": "By using secure APIs, access controls, and encryption in automations",
+          "is_correct": true
+        },
+        {
+          "option_id": 8255,
+          "option_text": "By ignoring security",
+          "is_correct": false
+        },
+        {
+          "option_id": 8256,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8257,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1499,
+      "subskill_id": 74,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure automation ROI?",
+      "options": [
+        {
+          "option_id": 8258,
+          "option_text": "By tracking time saved and errors reduced compared to manual processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8259,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8260,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 8261,
+          "option_text": "By hiring a consultant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1500,
+      "subskill_id": 74,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a custom automation platform?",
+      "options": [
+        {
+          "option_id": 8262,
+          "option_text": "By building a custom orchestration layer using tools like Node-RED or n8n",
+          "is_correct": true
+        },
+        {
+          "option_id": 8263,
+          "option_text": "By using a plugin",
+          "is_correct": false
+        },
+        {
+          "option_id": 8264,
+          "option_text": "By hiring a developer",
+          "is_correct": false
+        },
+        {
+          "option_id": 8265,
+          "option_text": "By writing code",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

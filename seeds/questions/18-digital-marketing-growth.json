@@ -1,0 +1,2906 @@
+{
+  "skill_id": 18,
+  "skill_name": "Digital Marketing & Growth",
+  "questions": [
+    {
+      "question_id": 1701,
+      "subskill_id": 84,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SEO?",
+      "options": [
+        {
+          "option_id": 9066,
+          "option_text": "Search Engine Optimization - improving website visibility in search engines",
+          "is_correct": true
+        },
+        {
+          "option_id": 9067,
+          "option_text": "Search Engine Marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9068,
+          "option_text": "Social Engagement Optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9069,
+          "option_text": "Site Evaluation Operation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1702,
+      "subskill_id": 84,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of SEO?",
+      "options": [
+        {
+          "option_id": 9070,
+          "option_text": "To increase organic traffic and visibility",
+          "is_correct": true
+        },
+        {
+          "option_id": 9071,
+          "option_text": "To increase paid traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9072,
+          "option_text": "To improve social media presence",
+          "is_correct": false
+        },
+        {
+          "option_id": 9073,
+          "option_text": "To reduce website loading time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1703,
+      "subskill_id": 84,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are keywords in SEO?",
+      "options": [
+        {
+          "option_id": 9074,
+          "option_text": "Words and phrases people use to search for information online",
+          "is_correct": true
+        },
+        {
+          "option_id": 9075,
+          "option_text": "Website design elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 9076,
+          "option_text": "Social media posts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9077,
+          "option_text": "Ad copy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1704,
+      "subskill_id": 84,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is on-page SEO?",
+      "options": [
+        {
+          "option_id": 9078,
+          "option_text": "Optimizing content and HTML on the website",
+          "is_correct": true
+        },
+        {
+          "option_id": 9079,
+          "option_text": "Optimizing backlinks from other sites",
+          "is_correct": false
+        },
+        {
+          "option_id": 9080,
+          "option_text": "Optimizing social media profiles",
+          "is_correct": false
+        },
+        {
+          "option_id": 9081,
+          "option_text": "Optimizing paid ad campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1705,
+      "subskill_id": 85,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SEM?",
+      "options": [
+        {
+          "option_id": 9082,
+          "option_text": "Search Engine Marketing - promoting websites through paid advertising",
+          "is_correct": true
+        },
+        {
+          "option_id": 9083,
+          "option_text": "Search Engine Optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9084,
+          "option_text": "Social Engagement Marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9085,
+          "option_text": "Site Evaluation Management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1706,
+      "subskill_id": 85,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between SEO and SEM?",
+      "options": [
+        {
+          "option_id": 9086,
+          "option_text": "SEO focuses on organic traffic; SEM includes paid advertising",
+          "is_correct": true
+        },
+        {
+          "option_id": 9087,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9088,
+          "option_text": "SEM focuses on organic traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9089,
+          "option_text": "SEO includes paid advertising",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1707,
+      "subskill_id": 85,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a paid search ad?",
+      "options": [
+        {
+          "option_id": 9090,
+          "option_text": "An advertisement that appears on search engine results pages",
+          "is_correct": true
+        },
+        {
+          "option_id": 9091,
+          "option_text": "A social media ad",
+          "is_correct": false
+        },
+        {
+          "option_id": 9092,
+          "option_text": "A display ad",
+          "is_correct": false
+        },
+        {
+          "option_id": 9093,
+          "option_text": "A video ad",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1708,
+      "subskill_id": 85,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Google Ads?",
+      "options": [
+        {
+          "option_id": 9094,
+          "option_text": "Google's advertising platform for paid search ads",
+          "is_correct": true
+        },
+        {
+          "option_id": 9095,
+          "option_text": "Google Analytics",
+          "is_correct": false
+        },
+        {
+          "option_id": 9096,
+          "option_text": "Google Search Console",
+          "is_correct": false
+        },
+        {
+          "option_id": 9097,
+          "option_text": "Google Trends",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1709,
+      "subskill_id": 86,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is web analytics?",
+      "options": [
+        {
+          "option_id": 9098,
+          "option_text": "The measurement and analysis of website data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9099,
+          "option_text": "The collection of customer feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 9100,
+          "option_text": "The design of website layouts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9101,
+          "option_text": "The creation of content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1710,
+      "subskill_id": 86,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Google Analytics?",
+      "options": [
+        {
+          "option_id": 9102,
+          "option_text": "A tool for tracking and analyzing website traffic",
+          "is_correct": true
+        },
+        {
+          "option_id": 9103,
+          "option_text": "A tool for running paid ads",
+          "is_correct": false
+        },
+        {
+          "option_id": 9104,
+          "option_text": "A tool for managing social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 9105,
+          "option_text": "A tool for designing websites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1711,
+      "subskill_id": 86,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a metric in analytics?",
+      "options": [
+        {
+          "option_id": 9106,
+          "option_text": "A quantitative measurement in analytics",
+          "is_correct": true
+        },
+        {
+          "option_id": 9107,
+          "option_text": "A qualitative measurement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9108,
+          "option_text": "A type of content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9109,
+          "option_text": "A design element",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1712,
+      "subskill_id": 86,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dimension in analytics?",
+      "options": [
+        {
+          "option_id": 9110,
+          "option_text": "A qualitative attribute in analytics",
+          "is_correct": true
+        },
+        {
+          "option_id": 9111,
+          "option_text": "A quantitative measurement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9112,
+          "option_text": "A type of content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9113,
+          "option_text": "A design element",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1713,
+      "subskill_id": 87,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a marketing funnel?",
+      "options": [
+        {
+          "option_id": 9114,
+          "option_text": "A model showing the customer journey from awareness to conversion",
+          "is_correct": true
+        },
+        {
+          "option_id": 9115,
+          "option_text": "A sales script",
+          "is_correct": false
+        },
+        {
+          "option_id": 9116,
+          "option_text": "A content calendar",
+          "is_correct": false
+        },
+        {
+          "option_id": 9117,
+          "option_text": "A pricing model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1714,
+      "subskill_id": 87,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the stages of a marketing funnel?",
+      "options": [
+        {
+          "option_id": 9118,
+          "option_text": "Awareness, Interest, Decision, Action",
+          "is_correct": true
+        },
+        {
+          "option_id": 9119,
+          "option_text": "Awareness, Consideration, Conversion, Retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 9120,
+          "option_text": "Interest, Research, Purchase, Advocacy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9121,
+          "option_text": "Discovery, Evaluation, Purchase, Loyalty",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1715,
+      "subskill_id": 87,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the top of the funnel (TOFU)?",
+      "options": [
+        {
+          "option_id": 9122,
+          "option_text": "The stage where potential customers first become aware of a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 9123,
+          "option_text": "The stage where customers make a purchase",
+          "is_correct": false
+        },
+        {
+          "option_id": 9124,
+          "option_text": "The stage where customers evaluate the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 9125,
+          "option_text": "The stage where customers recommend the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1716,
+      "subskill_id": 87,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the bottom of the funnel (BOFU)?",
+      "options": [
+        {
+          "option_id": 9126,
+          "option_text": "The stage where customers are ready to make a purchase",
+          "is_correct": true
+        },
+        {
+          "option_id": 9127,
+          "option_text": "The stage where customers first become aware",
+          "is_correct": false
+        },
+        {
+          "option_id": 9128,
+          "option_text": "The stage where customers evaluate the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 9129,
+          "option_text": "The stage where customers discover the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1717,
+      "subskill_id": 88,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is A/B testing?",
+      "options": [
+        {
+          "option_id": 9130,
+          "option_text": "An experiment comparing two versions to see which performs better",
+          "is_correct": true
+        },
+        {
+          "option_id": 9131,
+          "option_text": "A type of market research",
+          "is_correct": false
+        },
+        {
+          "option_id": 9132,
+          "option_text": "A type of content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9133,
+          "option_text": "A type of social media strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1718,
+      "subskill_id": 88,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of A/B testing?",
+      "options": [
+        {
+          "option_id": 9134,
+          "option_text": "To determine which version of a variable yields better results",
+          "is_correct": true
+        },
+        {
+          "option_id": 9135,
+          "option_text": "To increase website traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9136,
+          "option_text": "To improve social media engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9137,
+          "option_text": "To reduce costs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1719,
+      "subskill_id": 88,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a control group in A/B testing?",
+      "options": [
+        {
+          "option_id": 9138,
+          "option_text": "The original version being tested against a variant",
+          "is_correct": true
+        },
+        {
+          "option_id": 9139,
+          "option_text": "The version that is being changed",
+          "is_correct": false
+        },
+        {
+          "option_id": 9140,
+          "option_text": "The version that is always best",
+          "is_correct": false
+        },
+        {
+          "option_id": 9141,
+          "option_text": "The version that is used for final implementation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1720,
+      "subskill_id": 88,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a variant in A/B testing?",
+      "options": [
+        {
+          "option_id": 9142,
+          "option_text": "The modified version being tested against the control",
+          "is_correct": true
+        },
+        {
+          "option_id": 9143,
+          "option_text": "The original version",
+          "is_correct": false
+        },
+        {
+          "option_id": 9144,
+          "option_text": "The version that is always best",
+          "is_correct": false
+        },
+        {
+          "option_id": 9145,
+          "option_text": "The version that is used for final implementation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1721,
+      "subskill_id": 89,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is content strategy?",
+      "options": [
+        {
+          "option_id": 9146,
+          "option_text": "A plan for creating and managing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 9147,
+          "option_text": "A plan for running ads",
+          "is_correct": false
+        },
+        {
+          "option_id": 9148,
+          "option_text": "A plan for social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 9149,
+          "option_text": "A plan for website design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1722,
+      "subskill_id": 89,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of content strategy?",
+      "options": [
+        {
+          "option_id": 9150,
+          "option_text": "To attract and engage a target audience through valuable content",
+          "is_correct": true
+        },
+        {
+          "option_id": 9151,
+          "option_text": "To increase sales directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 9152,
+          "option_text": "To reduce costs",
+          "is_correct": false
+        },
+        {
+          "option_id": 9153,
+          "option_text": "To improve website design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1723,
+      "subskill_id": 89,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content audit?",
+      "options": [
+        {
+          "option_id": 9154,
+          "option_text": "A review of all existing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 9155,
+          "option_text": "A review of website design",
+          "is_correct": false
+        },
+        {
+          "option_id": 9156,
+          "option_text": "A review of social media profiles",
+          "is_correct": false
+        },
+        {
+          "option_id": 9157,
+          "option_text": "A review of ad campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1724,
+      "subskill_id": 89,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content calendar?",
+      "options": [
+        {
+          "option_id": 9158,
+          "option_text": "A schedule for publishing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 9159,
+          "option_text": "A budget for content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9160,
+          "option_text": "A list of content topics",
+          "is_correct": false
+        },
+        {
+          "option_id": 9161,
+          "option_text": "A design for content layout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1725,
+      "subskill_id": 89,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content pillar?",
+      "options": [
+        {
+          "option_id": 9162,
+          "option_text": "A comprehensive piece of content on a specific topic",
+          "is_correct": true
+        },
+        {
+          "option_id": 9163,
+          "option_text": "A short blog post",
+          "is_correct": false
+        },
+        {
+          "option_id": 9164,
+          "option_text": "A social media update",
+          "is_correct": false
+        },
+        {
+          "option_id": 9165,
+          "option_text": "A video ad",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1726,
+      "subskill_id": 84,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you conduct keyword research?",
+      "options": [
+        {
+          "option_id": 9166,
+          "option_text": "By using tools like Google Keyword Planner and analyzing search volume",
+          "is_correct": true
+        },
+        {
+          "option_id": 9167,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9168,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9169,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1727,
+      "subskill_id": 84,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is off-page SEO?",
+      "options": [
+        {
+          "option_id": 9170,
+          "option_text": "SEO activities outside the website like link building",
+          "is_correct": true
+        },
+        {
+          "option_id": 9171,
+          "option_text": "SEO activities on the website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9172,
+          "option_text": "SEO activities on social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 9173,
+          "option_text": "SEO activities on paid ads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1728,
+      "subskill_id": 84,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is technical SEO?",
+      "options": [
+        {
+          "option_id": 9174,
+          "option_text": "Optimizing website technical aspects like speed and mobile-friendliness",
+          "is_correct": true
+        },
+        {
+          "option_id": 9175,
+          "option_text": "Optimizing content on the website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9176,
+          "option_text": "Optimizing backlinks",
+          "is_correct": false
+        },
+        {
+          "option_id": 9177,
+          "option_text": "Optimizing social media profiles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1729,
+      "subskill_id": 84,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is link building in SEO?",
+      "options": [
+        {
+          "option_id": 9178,
+          "option_text": "The process of acquiring backlinks from other websites",
+          "is_correct": true
+        },
+        {
+          "option_id": 9179,
+          "option_text": "The process of creating content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9180,
+          "option_text": "The process of optimizing website speed",
+          "is_correct": false
+        },
+        {
+          "option_id": 9181,
+          "option_text": "The process of improving mobile responsiveness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1730,
+      "subskill_id": 85,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you set up a Google Ads campaign?",
+      "options": [
+        {
+          "option_id": 9182,
+          "option_text": "By choosing campaign goals, setting budget, and creating ads",
+          "is_correct": true
+        },
+        {
+          "option_id": 9183,
+          "option_text": "By writing blog posts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9184,
+          "option_text": "By optimizing website content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9185,
+          "option_text": "By building backlinks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1731,
+      "subskill_id": 85,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a keyword match type in SEM?",
+      "options": [
+        {
+          "option_id": 9186,
+          "option_text": "A setting that determines how closely a keyword matches a search query",
+          "is_correct": true
+        },
+        {
+          "option_id": 9187,
+          "option_text": "A type of ad format",
+          "is_correct": false
+        },
+        {
+          "option_id": 9188,
+          "option_text": "A type of landing page",
+          "is_correct": false
+        },
+        {
+          "option_id": 9189,
+          "option_text": "A type of bid strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1732,
+      "subskill_id": 85,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Quality Score in Google Ads?",
+      "options": [
+        {
+          "option_id": 9190,
+          "option_text": "A metric that measures the relevance and quality of ads and keywords",
+          "is_correct": true
+        },
+        {
+          "option_id": 9191,
+          "option_text": "A metric that measures ad spend",
+          "is_correct": false
+        },
+        {
+          "option_id": 9192,
+          "option_text": "A metric that measures click-through rate",
+          "is_correct": false
+        },
+        {
+          "option_id": 9193,
+          "option_text": "A metric that measures conversion rate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1733,
+      "subskill_id": 85,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a landing page in SEM?",
+      "options": [
+        {
+          "option_id": 9194,
+          "option_text": "The page where users land after clicking an ad",
+          "is_correct": true
+        },
+        {
+          "option_id": 9195,
+          "option_text": "A type of ad format",
+          "is_correct": false
+        },
+        {
+          "option_id": 9196,
+          "option_text": "A keyword match type",
+          "is_correct": false
+        },
+        {
+          "option_id": 9197,
+          "option_text": "A bid strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1734,
+      "subskill_id": 86,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you track conversions in Google Analytics?",
+      "options": [
+        {
+          "option_id": 9198,
+          "option_text": "By setting up goals and events in Google Analytics",
+          "is_correct": true
+        },
+        {
+          "option_id": 9199,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9200,
+          "option_text": "By using social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 9201,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1735,
+      "subskill_id": 86,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a conversion rate?",
+      "options": [
+        {
+          "option_id": 9202,
+          "option_text": "The percentage of users who complete a desired action",
+          "is_correct": true
+        },
+        {
+          "option_id": 9203,
+          "option_text": "The number of visitors to a website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9204,
+          "option_text": "The number of page views",
+          "is_correct": false
+        },
+        {
+          "option_id": 9205,
+          "option_text": "The time spent on a page",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1736,
+      "subskill_id": 86,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is bounce rate in analytics?",
+      "options": [
+        {
+          "option_id": 9206,
+          "option_text": "The percentage of visitors who leave after viewing one page",
+          "is_correct": true
+        },
+        {
+          "option_id": 9207,
+          "option_text": "The number of visitors to a website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9208,
+          "option_text": "The number of page views",
+          "is_correct": false
+        },
+        {
+          "option_id": 9209,
+          "option_text": "The time spent on a page",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1737,
+      "subskill_id": 86,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a session in Google Analytics?",
+      "options": [
+        {
+          "option_id": 9210,
+          "option_text": "A group of interactions a user has on a website within a given time frame",
+          "is_correct": true
+        },
+        {
+          "option_id": 9211,
+          "option_text": "A single page view",
+          "is_correct": false
+        },
+        {
+          "option_id": 9212,
+          "option_text": "A conversion",
+          "is_correct": false
+        },
+        {
+          "option_id": 9213,
+          "option_text": "A click",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1738,
+      "subskill_id": 87,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a marketing funnel?",
+      "options": [
+        {
+          "option_id": 9214,
+          "option_text": "By mapping out stages and identifying conversion points",
+          "is_correct": true
+        },
+        {
+          "option_id": 9215,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9216,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9217,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1739,
+      "subskill_id": 87,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead magnet?",
+      "options": [
+        {
+          "option_id": 9218,
+          "option_text": "An incentive offered to capture leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 9219,
+          "option_text": "A type of ad format",
+          "is_correct": false
+        },
+        {
+          "option_id": 9220,
+          "option_text": "A type of landing page",
+          "is_correct": false
+        },
+        {
+          "option_id": 9221,
+          "option_text": "A type of bid strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1740,
+      "subskill_id": 87,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a nurture campaign?",
+      "options": [
+        {
+          "option_id": 9222,
+          "option_text": "A series of follow-up messages to move leads through the funnel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9223,
+          "option_text": "A type of ad format",
+          "is_correct": false
+        },
+        {
+          "option_id": 9224,
+          "option_text": "A type of landing page",
+          "is_correct": false
+        },
+        {
+          "option_id": 9225,
+          "option_text": "A type of bid strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1741,
+      "subskill_id": 87,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales conversion in a funnel?",
+      "options": [
+        {
+          "option_id": 9226,
+          "option_text": "The point in the funnel where a lead becomes a customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 9227,
+          "option_text": "The point where a lead first discovers the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 9228,
+          "option_text": "The point where a lead evaluates the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 9229,
+          "option_text": "The point where a lead leaves the funnel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1742,
+      "subskill_id": 88,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design an A/B test?",
+      "options": [
+        {
+          "option_id": 9230,
+          "option_text": "By defining the hypothesis and choosing the variable to test",
+          "is_correct": true
+        },
+        {
+          "option_id": 9231,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9232,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9233,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1743,
+      "subskill_id": 88,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is statistical significance in A/B testing?",
+      "options": [
+        {
+          "option_id": 9234,
+          "option_text": "A measure that indicates whether the results are likely due to chance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9235,
+          "option_text": "A measure that indicates the cost of the test",
+          "is_correct": false
+        },
+        {
+          "option_id": 9236,
+          "option_text": "A measure that indicates the sample size",
+          "is_correct": false
+        },
+        {
+          "option_id": 9237,
+          "option_text": "A measure that indicates the duration of the test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1744,
+      "subskill_id": 88,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sample size in A/B testing?",
+      "options": [
+        {
+          "option_id": 9238,
+          "option_text": "The number of users needed to achieve statistically significant results",
+          "is_correct": true
+        },
+        {
+          "option_id": 9239,
+          "option_text": "The cost of the test",
+          "is_correct": false
+        },
+        {
+          "option_id": 9240,
+          "option_text": "The duration of the test",
+          "is_correct": false
+        },
+        {
+          "option_id": 9241,
+          "option_text": "The number of variants in the test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1745,
+      "subskill_id": 88,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure A/B test results?",
+      "options": [
+        {
+          "option_id": 9242,
+          "option_text": "By analyzing the data and comparing the performance of each variant",
+          "is_correct": true
+        },
+        {
+          "option_id": 9243,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9244,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9245,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1746,
+      "subskill_id": 89,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a content strategy?",
+      "options": [
+        {
+          "option_id": 9246,
+          "option_text": "By conducting a content audit and aligning content with business goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 9247,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9248,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9249,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1747,
+      "subskill_id": 89,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content gap analysis?",
+      "options": [
+        {
+          "option_id": 9250,
+          "option_text": "An analysis of content gaps in the current content strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 9251,
+          "option_text": "A review of website design",
+          "is_correct": false
+        },
+        {
+          "option_id": 9252,
+          "option_text": "A review of social media profiles",
+          "is_correct": false
+        },
+        {
+          "option_id": 9253,
+          "option_text": "A review of ad campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1748,
+      "subskill_id": 89,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content distribution strategy?",
+      "options": [
+        {
+          "option_id": 9254,
+          "option_text": "A plan for distributing content across channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 9255,
+          "option_text": "A plan for creating content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9256,
+          "option_text": "A plan for measuring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9257,
+          "option_text": "A plan for designing content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1749,
+      "subskill_id": 89,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is content repurposing?",
+      "options": [
+        {
+          "option_id": 9258,
+          "option_text": "Adapting existing content for different formats or channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 9259,
+          "option_text": "Creating new content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9260,
+          "option_text": "Deleting old content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9261,
+          "option_text": "Updating content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1750,
+      "subskill_id": 89,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure content ROI?",
+      "options": [
+        {
+          "option_id": 9262,
+          "option_text": "By tracking metrics like traffic, engagement, and conversions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9263,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9264,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9265,
+          "option_text": "By using social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1751,
+      "subskill_id": 84,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize for featured snippets?",
+      "options": [
+        {
+          "option_id": 9266,
+          "option_text": "By providing clear answers to common questions and using structured data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9267,
+          "option_text": "By writing longer content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9268,
+          "option_text": "By avoiding keywords",
+          "is_correct": false
+        },
+        {
+          "option_id": 9269,
+          "option_text": "By using complex language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1752,
+      "subskill_id": 84,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a backlink profile?",
+      "options": [
+        {
+          "option_id": 9270,
+          "option_text": "The collection and quality of backlinks to a website",
+          "is_correct": true
+        },
+        {
+          "option_id": 9271,
+          "option_text": "The number of pages on a website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9272,
+          "option_text": "The speed of a website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9273,
+          "option_text": "The design of a website",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1753,
+      "subskill_id": 84,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is core web vitals in SEO?",
+      "options": [
+        {
+          "option_id": 9274,
+          "option_text": "A set of metrics for loading performance, interactivity, and visual stability",
+          "is_correct": true
+        },
+        {
+          "option_id": 9275,
+          "option_text": "A set of metrics for social media performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 9276,
+          "option_text": "A set of metrics for email marketing performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 9277,
+          "option_text": "A set of metrics for ad performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1754,
+      "subskill_id": 84,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a crawl budget in SEO?",
+      "options": [
+        {
+          "option_id": 9278,
+          "option_text": "The number of pages search engines crawl on a website",
+          "is_correct": true
+        },
+        {
+          "option_id": 9279,
+          "option_text": "The budget for SEO activities",
+          "is_correct": false
+        },
+        {
+          "option_id": 9280,
+          "option_text": "The time spent on SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 9281,
+          "option_text": "The number of keywords targeted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1755,
+      "subskill_id": 85,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize Google Ads campaigns?",
+      "options": [
+        {
+          "option_id": 9282,
+          "option_text": "By analyzing performance and making data-driven adjustments",
+          "is_correct": true
+        },
+        {
+          "option_id": 9283,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9284,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9285,
+          "option_text": "By ignoring performance data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1756,
+      "subskill_id": 85,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Google Ads Quality Score?",
+      "options": [
+        {
+          "option_id": 9286,
+          "option_text": "A metric that measures ad quality and relevance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9287,
+          "option_text": "A metric that measures ad spend",
+          "is_correct": false
+        },
+        {
+          "option_id": 9288,
+          "option_text": "A metric that measures click-through rate",
+          "is_correct": false
+        },
+        {
+          "option_id": 9289,
+          "option_text": "A metric that measures conversion rate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1757,
+      "subskill_id": 85,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Smart Bidding in Google Ads?",
+      "options": [
+        {
+          "option_id": 9290,
+          "option_text": "A Google Ads bidding strategy using machine learning to optimize conversions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9291,
+          "option_text": "A manual bidding strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9292,
+          "option_text": "A fixed bid strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9293,
+          "option_text": "A budget-based strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1758,
+      "subskill_id": 85,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Google Ads campaign structure?",
+      "options": [
+        {
+          "option_id": 9294,
+          "option_text": "Campaigns, ad groups, ads, and keywords",
+          "is_correct": true
+        },
+        {
+          "option_id": 9295,
+          "option_text": "Only campaigns and ads",
+          "is_correct": false
+        },
+        {
+          "option_id": 9296,
+          "option_text": "Only ad groups and keywords",
+          "is_correct": false
+        },
+        {
+          "option_id": 9297,
+          "option_text": "Only ads and keywords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1759,
+      "subskill_id": 86,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is attribution modeling in analytics?",
+      "options": [
+        {
+          "option_id": 9298,
+          "option_text": "A model that assigns credit to different touchpoints in the customer journey",
+          "is_correct": true
+        },
+        {
+          "option_id": 9299,
+          "option_text": "A model for setting ad budgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 9300,
+          "option_text": "A model for measuring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 9301,
+          "option_text": "A model for forecasting sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1760,
+      "subskill_id": 86,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is customer lifetime value (LTV)?",
+      "options": [
+        {
+          "option_id": 9302,
+          "option_text": "The total revenue a customer generates over their lifetime",
+          "is_correct": true
+        },
+        {
+          "option_id": 9303,
+          "option_text": "The cost of acquiring a customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 9304,
+          "option_text": "The profit from a single purchase",
+          "is_correct": false
+        },
+        {
+          "option_id": 9305,
+          "option_text": "The number of purchases a customer makes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1761,
+      "subskill_id": 86,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a retention rate in analytics?",
+      "options": [
+        {
+          "option_id": 9306,
+          "option_text": "The percentage of customers who continue to use a product over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 9307,
+          "option_text": "The number of new customers acquired",
+          "is_correct": false
+        },
+        {
+          "option_id": 9308,
+          "option_text": "The revenue from new customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9309,
+          "option_text": "The cost of retaining customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1762,
+      "subskill_id": 86,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is cohort analysis?",
+      "options": [
+        {
+          "option_id": 9310,
+          "option_text": "Analyzing groups of users based on shared characteristics over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 9311,
+          "option_text": "Analyzing individual user behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 9312,
+          "option_text": "Analyzing website traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9313,
+          "option_text": "Analyzing social media engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1763,
+      "subskill_id": 87,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a marketing funnel?",
+      "options": [
+        {
+          "option_id": 9314,
+          "option_text": "By identifying and removing friction points and improving conversion",
+          "is_correct": true
+        },
+        {
+          "option_id": 9315,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9316,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9317,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1764,
+      "subskill_id": 87,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a funnel drop-off?",
+      "options": [
+        {
+          "option_id": 9318,
+          "option_text": "The point where users leave the funnel without converting",
+          "is_correct": true
+        },
+        {
+          "option_id": 9319,
+          "option_text": "The point where users enter the funnel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9320,
+          "option_text": "The point where users complete a purchase",
+          "is_correct": false
+        },
+        {
+          "option_id": 9321,
+          "option_text": "The point where users recommend the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1765,
+      "subskill_id": 87,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a multi-channel funnel?",
+      "options": [
+        {
+          "option_id": 9322,
+          "option_text": "A funnel that tracks interactions across multiple channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 9323,
+          "option_text": "A single-channel funnel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9324,
+          "option_text": "A funnel for email marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9325,
+          "option_text": "A funnel for social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1766,
+      "subskill_id": 87,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure funnel effectiveness?",
+      "options": [
+        {
+          "option_id": 9326,
+          "option_text": "By tracking conversion rates and analyzing user behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 9327,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9328,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9329,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1767,
+      "subskill_id": 88,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a multivariate test?",
+      "options": [
+        {
+          "option_id": 9330,
+          "option_text": "A test with multiple variables to determine the best combination",
+          "is_correct": true
+        },
+        {
+          "option_id": 9331,
+          "option_text": "A test with one variable",
+          "is_correct": false
+        },
+        {
+          "option_id": 9332,
+          "option_text": "A test with two variables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9333,
+          "option_text": "A test with no variables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1768,
+      "subskill_id": 88,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you avoid A/B testing pitfalls?",
+      "options": [
+        {
+          "option_id": 9334,
+          "option_text": "By ensuring proper sample size and statistical validity",
+          "is_correct": true
+        },
+        {
+          "option_id": 9335,
+          "option_text": "By ignoring sample size",
+          "is_correct": false
+        },
+        {
+          "option_id": 9336,
+          "option_text": "By running tests for too long",
+          "is_correct": false
+        },
+        {
+          "option_id": 9337,
+          "option_text": "By not analyzing results",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1769,
+      "subskill_id": 88,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a false positive in A/B testing?",
+      "options": [
+        {
+          "option_id": 9338,
+          "option_text": "A result that indicates a difference when there is none (Type I error)",
+          "is_correct": true
+        },
+        {
+          "option_id": 9339,
+          "option_text": "A result that indicates no difference when there is one",
+          "is_correct": false
+        },
+        {
+          "option_id": 9340,
+          "option_text": "A result that is statistically significant",
+          "is_correct": false
+        },
+        {
+          "option_id": 9341,
+          "option_text": "A result that is not statistically significant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1770,
+      "subskill_id": 88,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a false negative in A/B testing?",
+      "options": [
+        {
+          "option_id": 9342,
+          "option_text": "A result that indicates no difference when there is one (Type II error)",
+          "is_correct": true
+        },
+        {
+          "option_id": 9343,
+          "option_text": "A result that indicates a difference when there is none",
+          "is_correct": false
+        },
+        {
+          "option_id": 9344,
+          "option_text": "A result that is statistically significant",
+          "is_correct": false
+        },
+        {
+          "option_id": 9345,
+          "option_text": "A result that is not statistically significant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1771,
+      "subskill_id": 89,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a content strategy for SEO?",
+      "options": [
+        {
+          "option_id": 9346,
+          "option_text": "By developing a content plan that targets SEO goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 9347,
+          "option_text": "By writing content randomly",
+          "is_correct": false
+        },
+        {
+          "option_id": 9348,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9349,
+          "option_text": "By ignoring SEO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1772,
+      "subskill_id": 89,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content lifecycle?",
+      "options": [
+        {
+          "option_id": 9350,
+          "option_text": "The stages a piece of content goes through from creation to retirement",
+          "is_correct": true
+        },
+        {
+          "option_id": 9351,
+          "option_text": "The lifecycle of a product",
+          "is_correct": false
+        },
+        {
+          "option_id": 9352,
+          "option_text": "The lifecycle of a customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 9353,
+          "option_text": "The lifecycle of a campaign",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1773,
+      "subskill_id": 89,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you repurpose content effectively?",
+      "options": [
+        {
+          "option_id": 9354,
+          "option_text": "By adapting existing content for different formats and channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 9355,
+          "option_text": "By creating new content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9356,
+          "option_text": "By deleting old content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9357,
+          "option_text": "By ignoring content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1774,
+      "subskill_id": 89,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content gap in SEO?",
+      "options": [
+        {
+          "option_id": 9358,
+          "option_text": "A missing topic or keyword that competitors rank for",
+          "is_correct": true
+        },
+        {
+          "option_id": 9359,
+          "option_text": "A missing design element",
+          "is_correct": false
+        },
+        {
+          "option_id": 9360,
+          "option_text": "A missing social media channel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9361,
+          "option_text": "A missing ad format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1775,
+      "subskill_id": 89,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you align content with the buyer journey?",
+      "options": [
+        {
+          "option_id": 9362,
+          "option_text": "By creating content that addresses each stage of the buyer journey",
+          "is_correct": true
+        },
+        {
+          "option_id": 9363,
+          "option_text": "By creating generic content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9364,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9365,
+          "option_text": "By ignoring the buyer journey",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1776,
+      "subskill_id": 84,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you recover from a Google penalty?",
+      "options": [
+        {
+          "option_id": 9366,
+          "option_text": "By identifying the cause and submitting a reconsideration request",
+          "is_correct": true
+        },
+        {
+          "option_id": 9367,
+          "option_text": "By ignoring the penalty",
+          "is_correct": false
+        },
+        {
+          "option_id": 9368,
+          "option_text": "By starting a new website",
+          "is_correct": false
+        },
+        {
+          "option_id": 9369,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1777,
+      "subskill_id": 84,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a local SEO strategy?",
+      "options": [
+        {
+          "option_id": 9370,
+          "option_text": "A strategy to optimize for local search results",
+          "is_correct": true
+        },
+        {
+          "option_id": 9371,
+          "option_text": "A strategy to optimize for national search results",
+          "is_correct": false
+        },
+        {
+          "option_id": 9372,
+          "option_text": "A strategy to optimize for international search results",
+          "is_correct": false
+        },
+        {
+          "option_id": 9373,
+          "option_text": "A strategy to optimize for social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1778,
+      "subskill_id": 84,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is international SEO?",
+      "options": [
+        {
+          "option_id": 9374,
+          "option_text": "A strategy to optimize for search in different countries and languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 9375,
+          "option_text": "A strategy to optimize for local search",
+          "is_correct": false
+        },
+        {
+          "option_id": 9376,
+          "option_text": "A strategy to optimize for national search",
+          "is_correct": false
+        },
+        {
+          "option_id": 9377,
+          "option_text": "A strategy to optimize for social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1779,
+      "subskill_id": 84,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of AI in SEO?",
+      "options": [
+        {
+          "option_id": 9378,
+          "option_text": "AI is used for content creation, analysis, and personalization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9379,
+          "option_text": "AI has no role in SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 9380,
+          "option_text": "AI replaces SEO entirely",
+          "is_correct": false
+        },
+        {
+          "option_id": 9381,
+          "option_text": "AI is only used for paid search",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1780,
+      "subskill_id": 85,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a high-performing SEM campaign?",
+      "options": [
+        {
+          "option_id": 9382,
+          "option_text": "By conducting market research, keyword analysis, and competitive analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 9383,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9384,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9385,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1781,
+      "subskill_id": 85,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a competitive SEM analysis?",
+      "options": [
+        {
+          "option_id": 9386,
+          "option_text": "Analyzing competitor SEM strategies to identify opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 9387,
+          "option_text": "Analyzing website traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9388,
+          "option_text": "Analyzing social media engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9389,
+          "option_text": "Analyzing content performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1782,
+      "subskill_id": 85,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a SEM strategy for e-commerce?",
+      "options": [
+        {
+          "option_id": 9390,
+          "option_text": "A SEM strategy specifically for e-commerce websites",
+          "is_correct": true
+        },
+        {
+          "option_id": 9391,
+          "option_text": "A SEM strategy for B2B websites",
+          "is_correct": false
+        },
+        {
+          "option_id": 9392,
+          "option_text": "A SEM strategy for non-profit websites",
+          "is_correct": false
+        },
+        {
+          "option_id": 9393,
+          "option_text": "A SEM strategy for government websites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1783,
+      "subskill_id": 85,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of SEM?",
+      "options": [
+        {
+          "option_id": 9394,
+          "option_text": "Increased use of AI, automation, and personalization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9395,
+          "option_text": "Decreased use of AI",
+          "is_correct": false
+        },
+        {
+          "option_id": 9396,
+          "option_text": "Less focus on data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9397,
+          "option_text": "More manual processes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1784,
+      "subskill_id": 86,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is predictive analytics in marketing?",
+      "options": [
+        {
+          "option_id": 9398,
+          "option_text": "Using data and machine learning to predict future trends and behaviors",
+          "is_correct": true
+        },
+        {
+          "option_id": 9399,
+          "option_text": "Using past data to describe trends",
+          "is_correct": false
+        },
+        {
+          "option_id": 9400,
+          "option_text": "Using data to explain trends",
+          "is_correct": false
+        },
+        {
+          "option_id": 9401,
+          "option_text": "Using data to measure trends",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1785,
+      "subskill_id": 86,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use machine learning in analytics?",
+      "options": [
+        {
+          "option_id": 9402,
+          "option_text": "To improve customer segmentation, targeting, and personalization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9403,
+          "option_text": "To reduce costs",
+          "is_correct": false
+        },
+        {
+          "option_id": 9404,
+          "option_text": "To increase website traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 9405,
+          "option_text": "To improve website design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1786,
+      "subskill_id": 86,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data-driven marketing strategy?",
+      "options": [
+        {
+          "option_id": 9406,
+          "option_text": "A strategy that uses data to inform all marketing decisions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9407,
+          "option_text": "A strategy that ignores data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9408,
+          "option_text": "A strategy that only uses social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 9409,
+          "option_text": "A strategy that only uses email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1787,
+      "subskill_id": 86,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a marketing attribution model?",
+      "options": [
+        {
+          "option_id": 9410,
+          "option_text": "A model that assigns credit to different marketing touchpoints",
+          "is_correct": true
+        },
+        {
+          "option_id": 9411,
+          "option_text": "A model for setting ad budgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 9412,
+          "option_text": "A model for measuring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 9413,
+          "option_text": "A model for forecasting sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1788,
+      "subskill_id": 87,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a growth funnel?",
+      "options": [
+        {
+          "option_id": 9414,
+          "option_text": "A funnel focused on user acquisition and retention",
+          "is_correct": true
+        },
+        {
+          "option_id": 9415,
+          "option_text": "A funnel focused on lead generation only",
+          "is_correct": false
+        },
+        {
+          "option_id": 9416,
+          "option_text": "A funnel focused on sales only",
+          "is_correct": false
+        },
+        {
+          "option_id": 9417,
+          "option_text": "A funnel focused on awareness only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1789,
+      "subskill_id": 87,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is funnel optimization in growth marketing?",
+      "options": [
+        {
+          "option_id": 9418,
+          "option_text": "A continuous process of testing and improving each stage of the funnel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9419,
+          "option_text": "A one-time process",
+          "is_correct": false
+        },
+        {
+          "option_id": 9420,
+          "option_text": "A process that ignores data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9421,
+          "option_text": "A process that only focuses on the top of the funnel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1790,
+      "subskill_id": 87,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a reverse funnel?",
+      "options": [
+        {
+          "option_id": 9422,
+          "option_text": "A funnel where customers bring in other customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 9423,
+          "option_text": "A funnel that goes from conversion to awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 9424,
+          "option_text": "A funnel that only focuses on retention",
+          "is_correct": false
+        },
+        {
+          "option_id": 9425,
+          "option_text": "A funnel that ignores acquisition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1791,
+      "subskill_id": 87,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use AI to optimize funnels?",
+      "options": [
+        {
+          "option_id": 9426,
+          "option_text": "AI can personalize experiences and predict user behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 9427,
+          "option_text": "AI has no role in funnel optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9428,
+          "option_text": "AI replaces all human decisions",
+          "is_correct": false
+        },
+        {
+          "option_id": 9429,
+          "option_text": "AI is only used for content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1792,
+      "subskill_id": 88,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale A/B testing?",
+      "options": [
+        {
+          "option_id": 9430,
+          "option_text": "By building a robust testing program and prioritizing high-impact tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 9431,
+          "option_text": "By running tests randomly",
+          "is_correct": false
+        },
+        {
+          "option_id": 9432,
+          "option_text": "By ignoring test results",
+          "is_correct": false
+        },
+        {
+          "option_id": 9433,
+          "option_text": "By running one test at a time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1793,
+      "subskill_id": 88,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a Bayesian approach to A/B testing?",
+      "options": [
+        {
+          "option_id": 9434,
+          "option_text": "A method that uses prior knowledge to update probability",
+          "is_correct": true
+        },
+        {
+          "option_id": 9435,
+          "option_text": "A method that uses only sample data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9436,
+          "option_text": "A method that ignores prior knowledge",
+          "is_correct": false
+        },
+        {
+          "option_id": 9437,
+          "option_text": "A method that is not used in A/B testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1794,
+      "subskill_id": 88,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is multi-armed bandit testing?",
+      "options": [
+        {
+          "option_id": 9438,
+          "option_text": "A testing method that automatically allocates traffic to better-performing variants",
+          "is_correct": true
+        },
+        {
+          "option_id": 9439,
+          "option_text": "A testing method that uses equal traffic allocation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9440,
+          "option_text": "A testing method that uses manual allocation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9441,
+          "option_text": "A testing method that ignores performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1795,
+      "subskill_id": 88,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate A/B testing with personalization?",
+      "options": [
+        {
+          "option_id": 9442,
+          "option_text": "By using test results to deliver personalized experiences to different segments",
+          "is_correct": true
+        },
+        {
+          "option_id": 9443,
+          "option_text": "By ignoring test results",
+          "is_correct": false
+        },
+        {
+          "option_id": 9444,
+          "option_text": "By applying the same experience to all users",
+          "is_correct": false
+        },
+        {
+          "option_id": 9445,
+          "option_text": "By using only one version",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1796,
+      "subskill_id": 89,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a content strategy for a global brand?",
+      "options": [
+        {
+          "option_id": 9446,
+          "option_text": "By understanding diverse cultural, linguistic, and regional needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 9447,
+          "option_text": "By creating generic content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9448,
+          "option_text": "By ignoring cultural differences",
+          "is_correct": false
+        },
+        {
+          "option_id": 9449,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1797,
+      "subskill_id": 89,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content governance strategy?",
+      "options": [
+        {
+          "option_id": 9450,
+          "option_text": "A framework for managing and controlling content across the organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9451,
+          "option_text": "A framework for creating content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9452,
+          "option_text": "A framework for distributing content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9453,
+          "option_text": "A framework for measuring content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1798,
+      "subskill_id": 89,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use AI in content strategy?",
+      "options": [
+        {
+          "option_id": 9454,
+          "option_text": "AI is used for content generation, personalization, and optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9455,
+          "option_text": "AI has no role in content strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9456,
+          "option_text": "AI replaces content strategists",
+          "is_correct": false
+        },
+        {
+          "option_id": 9457,
+          "option_text": "AI is only used for content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1799,
+      "subskill_id": 89,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content marketing framework?",
+      "options": [
+        {
+          "option_id": 9458,
+          "option_text": "A systematic approach to planning, creating, and distributing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 9459,
+          "option_text": "A random approach to content",
+          "is_correct": false
+        },
+        {
+          "option_id": 9460,
+          "option_text": "A copy of competitors' strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 9461,
+          "option_text": "An approach that ignores the audience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1800,
+      "subskill_id": 89,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure content marketing ROI?",
+      "options": [
+        {
+          "option_id": 9462,
+          "option_text": "By tracking revenue, leads, and engagement metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 9463,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9464,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 9465,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

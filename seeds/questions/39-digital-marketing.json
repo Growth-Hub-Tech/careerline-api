@@ -1,0 +1,2906 @@
+{
+  "skill_id": 39,
+  "skill_name": "Digital Marketing",
+  "questions": [
+    {
+      "question_id": 3801,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy?",
+      "options": [
+        {
+          "option_id": 17466,
+          "option_text": "A plan for achieving marketing goals using digital channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17467,
+          "option_text": "A plan for ignoring marketing goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 17468,
+          "option_text": "A plan for deleting marketing goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 17469,
+          "option_text": "A plan for hiding marketing goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3802,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a digital marketing strategy?",
+      "options": [
+        {
+          "option_id": 17470,
+          "option_text": "To guide marketing efforts and achieve business objectives",
+          "is_correct": true
+        },
+        {
+          "option_id": 17471,
+          "option_text": "To ignore marketing efforts",
+          "is_correct": false
+        },
+        {
+          "option_id": 17472,
+          "option_text": "To delete marketing efforts",
+          "is_correct": false
+        },
+        {
+          "option_id": 17473,
+          "option_text": "To hide marketing efforts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3803,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a digital marketing plan?",
+      "options": [
+        {
+          "option_id": 17474,
+          "option_text": "A document that outlines the digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17475,
+          "option_text": "A document that ignores the strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 17476,
+          "option_text": "A document that deletes the strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 17477,
+          "option_text": "A document that hides the strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3804,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a digital marketing goal?",
+      "options": [
+        {
+          "option_id": 17478,
+          "option_text": "A specific target for marketing efforts",
+          "is_correct": true
+        },
+        {
+          "option_id": 17479,
+          "option_text": "A specific target for ignoring marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17480,
+          "option_text": "A specific target for deleting marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17481,
+          "option_text": "A specific target for hiding marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3805,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a digital marketing objective?",
+      "options": [
+        {
+          "option_id": 17482,
+          "option_text": "A specific outcome to be achieved by marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17483,
+          "option_text": "A specific outcome to be ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 17484,
+          "option_text": "A specific outcome to be deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 17485,
+          "option_text": "A specific outcome to be hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3806,
+      "subskill_id": 174,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a digital marketing KPI?",
+      "options": [
+        {
+          "option_id": 17486,
+          "option_text": "A key performance indicator used to measure marketing success",
+          "is_correct": true
+        },
+        {
+          "option_id": 17487,
+          "option_text": "A key performance indicator used to ignore marketing success",
+          "is_correct": false
+        },
+        {
+          "option_id": 17488,
+          "option_text": "A key performance indicator used to delete marketing success",
+          "is_correct": false
+        },
+        {
+          "option_id": 17489,
+          "option_text": "A key performance indicator used to hide marketing success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3807,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are online channels in digital marketing?",
+      "options": [
+        {
+          "option_id": 17490,
+          "option_text": "The various online platforms used for marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17491,
+          "option_text": "The various online platforms used for ignoring marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17492,
+          "option_text": "The various online platforms used for deleting marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17493,
+          "option_text": "The various online platforms used for hiding marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3808,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a website in digital marketing?",
+      "options": [
+        {
+          "option_id": 17494,
+          "option_text": "A website is a digital hub for marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17495,
+          "option_text": "A website is a digital hub for ignoring marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17496,
+          "option_text": "A website is a digital hub for deleting marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17497,
+          "option_text": "A website is a digital hub for hiding marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3809,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a search engine in digital marketing?",
+      "options": [
+        {
+          "option_id": 17498,
+          "option_text": "A search engine helps users find information online",
+          "is_correct": true
+        },
+        {
+          "option_id": 17499,
+          "option_text": "A search engine helps users ignore information",
+          "is_correct": false
+        },
+        {
+          "option_id": 17500,
+          "option_text": "A search engine helps users delete information",
+          "is_correct": false
+        },
+        {
+          "option_id": 17501,
+          "option_text": "A search engine helps users hide information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3810,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is social media in digital marketing?",
+      "options": [
+        {
+          "option_id": 17502,
+          "option_text": "Social media platforms enable engagement and brand building",
+          "is_correct": true
+        },
+        {
+          "option_id": 17503,
+          "option_text": "Social media platforms enable ignoring engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 17504,
+          "option_text": "Social media platforms enable deleting engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 17505,
+          "option_text": "Social media platforms enable hiding engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3811,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is email in digital marketing?",
+      "options": [
+        {
+          "option_id": 17506,
+          "option_text": "Email is a direct communication channel for marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17507,
+          "option_text": "Email is a direct communication channel for ignoring marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17508,
+          "option_text": "Email is a direct communication channel for deleting marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17509,
+          "option_text": "Email is a direct communication channel for hiding marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3812,
+      "subskill_id": 175,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mobile app in digital marketing?",
+      "options": [
+        {
+          "option_id": 17510,
+          "option_text": "A mobile app is a channel for engaging mobile users",
+          "is_correct": true
+        },
+        {
+          "option_id": 17511,
+          "option_text": "A mobile app is a channel for ignoring mobile users",
+          "is_correct": false
+        },
+        {
+          "option_id": 17512,
+          "option_text": "A mobile app is a channel for deleting mobile users",
+          "is_correct": false
+        },
+        {
+          "option_id": 17513,
+          "option_text": "A mobile app is a channel for hiding mobile users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3813,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is brand awareness in digital marketing?",
+      "options": [
+        {
+          "option_id": 17514,
+          "option_text": "The extent to which consumers recognize a brand",
+          "is_correct": true
+        },
+        {
+          "option_id": 17515,
+          "option_text": "The extent to which consumers ignore a brand",
+          "is_correct": false
+        },
+        {
+          "option_id": 17516,
+          "option_text": "The extent to which consumers delete a brand",
+          "is_correct": false
+        },
+        {
+          "option_id": 17517,
+          "option_text": "The extent to which consumers hide a brand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3814,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of brand awareness?",
+      "options": [
+        {
+          "option_id": 17518,
+          "option_text": "To increase brand recognition and recall",
+          "is_correct": true
+        },
+        {
+          "option_id": 17519,
+          "option_text": "To decrease brand recognition",
+          "is_correct": false
+        },
+        {
+          "option_id": 17520,
+          "option_text": "To ignore brand recognition",
+          "is_correct": false
+        },
+        {
+          "option_id": 17521,
+          "option_text": "To delete brand recognition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3815,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a brand awareness campaign?",
+      "options": [
+        {
+          "option_id": 17522,
+          "option_text": "A marketing campaign focused on increasing brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17523,
+          "option_text": "A marketing campaign focused on ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17524,
+          "option_text": "A marketing campaign focused on deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17525,
+          "option_text": "A marketing campaign focused on hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3816,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a brand awareness metric?",
+      "options": [
+        {
+          "option_id": 17526,
+          "option_text": "A metric for measuring brand awareness (e.g., reach, impressions)",
+          "is_correct": true
+        },
+        {
+          "option_id": 17527,
+          "option_text": "A metric for measuring ignored brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17528,
+          "option_text": "A metric for measuring deleted brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17529,
+          "option_text": "A metric for measuring hidden brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3817,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a brand awareness strategy?",
+      "options": [
+        {
+          "option_id": 17530,
+          "option_text": "A plan for increasing brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17531,
+          "option_text": "A plan for decreasing brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17532,
+          "option_text": "A plan for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17533,
+          "option_text": "A plan for deleting brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3818,
+      "subskill_id": 176,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a brand awareness tool?",
+      "options": [
+        {
+          "option_id": 17534,
+          "option_text": "A tool for measuring brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17535,
+          "option_text": "A tool for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17536,
+          "option_text": "A tool for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17537,
+          "option_text": "A tool for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3819,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is lead generation in digital marketing?",
+      "options": [
+        {
+          "option_id": 17538,
+          "option_text": "The process of identifying and attracting potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 17539,
+          "option_text": "The process of ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17540,
+          "option_text": "The process of deleting potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17541,
+          "option_text": "The process of hiding potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3820,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of lead generation?",
+      "options": [
+        {
+          "option_id": 17542,
+          "option_text": "To build a pipeline of potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 17543,
+          "option_text": "To ignore potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17544,
+          "option_text": "To delete potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17545,
+          "option_text": "To hide potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3821,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation strategy?",
+      "options": [
+        {
+          "option_id": 17546,
+          "option_text": "A plan for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 17547,
+          "option_text": "A plan for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17548,
+          "option_text": "A plan for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17549,
+          "option_text": "A plan for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3822,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation tool?",
+      "options": [
+        {
+          "option_id": 17550,
+          "option_text": "A tool for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 17551,
+          "option_text": "A tool for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17552,
+          "option_text": "A tool for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17553,
+          "option_text": "A tool for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3823,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation campaign?",
+      "options": [
+        {
+          "option_id": 17554,
+          "option_text": "A campaign for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 17555,
+          "option_text": "A campaign for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17556,
+          "option_text": "A campaign for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17557,
+          "option_text": "A campaign for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3824,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation funnel?",
+      "options": [
+        {
+          "option_id": 17558,
+          "option_text": "A visual representation of the lead generation process",
+          "is_correct": true
+        },
+        {
+          "option_id": 17559,
+          "option_text": "A visual representation of the ignoring process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17560,
+          "option_text": "A visual representation of the deleting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17561,
+          "option_text": "A visual representation of the hiding process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3825,
+      "subskill_id": 177,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation metric?",
+      "options": [
+        {
+          "option_id": 17562,
+          "option_text": "A metric for measuring lead generation success",
+          "is_correct": true
+        },
+        {
+          "option_id": 17563,
+          "option_text": "A metric for measuring lead generation ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17564,
+          "option_text": "A metric for measuring lead generation deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17565,
+          "option_text": "A metric for measuring lead generation hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3826,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a digital marketing strategy?",
+      "options": [
+        {
+          "option_id": 17566,
+          "option_text": "By defining goals, target audience, and tactics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17567,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17568,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 17569,
+          "option_text": "By deleting goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3827,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy framework?",
+      "options": [
+        {
+          "option_id": 17570,
+          "option_text": "A structured approach to digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17571,
+          "option_text": "A random approach to digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17572,
+          "option_text": "A way to ignore digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17573,
+          "option_text": "A way to delete digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3828,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy tool?",
+      "options": [
+        {
+          "option_id": 17574,
+          "option_text": "A tool for digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17575,
+          "option_text": "A tool for ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17576,
+          "option_text": "A tool for deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17577,
+          "option_text": "A tool for hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3829,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy metric?",
+      "options": [
+        {
+          "option_id": 17578,
+          "option_text": "A metric for measuring digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17579,
+          "option_text": "A metric for measuring digital marketing ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17580,
+          "option_text": "A metric for measuring digital marketing deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17581,
+          "option_text": "A metric for measuring digital marketing hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3830,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy best practice?",
+      "options": [
+        {
+          "option_id": 17582,
+          "option_text": "A proven practice for digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17583,
+          "option_text": "A practice for ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17584,
+          "option_text": "A practice for deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17585,
+          "option_text": "A practice for hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3831,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you choose online channels?",
+      "options": [
+        {
+          "option_id": 17586,
+          "option_text": "By evaluating channel performance and audience fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 17587,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17588,
+          "option_text": "By ignoring channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17589,
+          "option_text": "By deleting channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3832,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a channel strategy?",
+      "options": [
+        {
+          "option_id": 17590,
+          "option_text": "A plan for using specific channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17591,
+          "option_text": "A plan for ignoring specific channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17592,
+          "option_text": "A plan for deleting specific channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17593,
+          "option_text": "A plan for hiding specific channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3833,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a channel mix?",
+      "options": [
+        {
+          "option_id": 17594,
+          "option_text": "The combination of channels used for marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 17595,
+          "option_text": "The combination of channels used for ignoring marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17596,
+          "option_text": "The combination of channels used for deleting marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17597,
+          "option_text": "The combination of channels used for hiding marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3834,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a channel optimization?",
+      "options": [
+        {
+          "option_id": 17598,
+          "option_text": "The process of improving channel performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17599,
+          "option_text": "The process of ignoring channel performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17600,
+          "option_text": "The process of deleting channel performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17601,
+          "option_text": "The process of hiding channel performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3835,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a channel metric?",
+      "options": [
+        {
+          "option_id": 17602,
+          "option_text": "A metric for measuring channel performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17603,
+          "option_text": "A metric for measuring channel ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17604,
+          "option_text": "A metric for measuring channel deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17605,
+          "option_text": "A metric for measuring channel hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3836,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build brand awareness?",
+      "options": [
+        {
+          "option_id": 17606,
+          "option_text": "By creating awareness through content and engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17607,
+          "option_text": "By ignoring awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17608,
+          "option_text": "By deleting awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17609,
+          "option_text": "By hiding awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3837,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a brand awareness framework?",
+      "options": [
+        {
+          "option_id": 17610,
+          "option_text": "A structured approach to brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17611,
+          "option_text": "A random approach to brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17612,
+          "option_text": "A way to ignore brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17613,
+          "option_text": "A way to delete brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3838,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a brand awareness metric?",
+      "options": [
+        {
+          "option_id": 17614,
+          "option_text": "A metric for measuring brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17615,
+          "option_text": "A metric for measuring brand awareness ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17616,
+          "option_text": "A metric for measuring brand awareness deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17617,
+          "option_text": "A metric for measuring brand awareness hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3839,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a brand awareness tool?",
+      "options": [
+        {
+          "option_id": 17618,
+          "option_text": "A tool for measuring brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17619,
+          "option_text": "A tool for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17620,
+          "option_text": "A tool for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17621,
+          "option_text": "A tool for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3840,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a brand awareness best practice?",
+      "options": [
+        {
+          "option_id": 17622,
+          "option_text": "A proven practice for brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17623,
+          "option_text": "A practice for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17624,
+          "option_text": "A practice for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17625,
+          "option_text": "A practice for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3841,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you generate leads?",
+      "options": [
+        {
+          "option_id": 17626,
+          "option_text": "By identifying potential customers and reaching out to them",
+          "is_correct": true
+        },
+        {
+          "option_id": 17627,
+          "option_text": "By ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17628,
+          "option_text": "By deleting potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 17629,
+          "option_text": "By hiding potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3842,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation framework?",
+      "options": [
+        {
+          "option_id": 17630,
+          "option_text": "A structured approach to lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17631,
+          "option_text": "A random approach to lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17632,
+          "option_text": "A way to ignore lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17633,
+          "option_text": "A way to delete lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3843,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation metric?",
+      "options": [
+        {
+          "option_id": 17634,
+          "option_text": "A metric for measuring lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17635,
+          "option_text": "A metric for measuring lead generation ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17636,
+          "option_text": "A metric for measuring lead generation deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17637,
+          "option_text": "A metric for measuring lead generation hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3844,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation tool?",
+      "options": [
+        {
+          "option_id": 17638,
+          "option_text": "A tool for lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17639,
+          "option_text": "A tool for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17640,
+          "option_text": "A tool for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17641,
+          "option_text": "A tool for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3845,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation best practice?",
+      "options": [
+        {
+          "option_id": 17642,
+          "option_text": "A proven practice for lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17643,
+          "option_text": "A practice for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17644,
+          "option_text": "A practice for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17645,
+          "option_text": "A practice for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3846,
+      "subskill_id": 174,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy roadmap?",
+      "options": [
+        {
+          "option_id": 17646,
+          "option_text": "A roadmap for digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17647,
+          "option_text": "A roadmap for ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17648,
+          "option_text": "A roadmap for deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17649,
+          "option_text": "A roadmap for hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3847,
+      "subskill_id": 175,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an omnichannel strategy?",
+      "options": [
+        {
+          "option_id": 17650,
+          "option_text": "A strategy that integrates multiple channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17651,
+          "option_text": "A strategy that ignores multiple channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17652,
+          "option_text": "A strategy that deletes multiple channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17653,
+          "option_text": "A strategy that hides multiple channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3848,
+      "subskill_id": 176,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a brand awareness campaign?",
+      "options": [
+        {
+          "option_id": 17654,
+          "option_text": "A campaign for building brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17655,
+          "option_text": "A campaign for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17656,
+          "option_text": "A campaign for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17657,
+          "option_text": "A campaign for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3849,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation campaign?",
+      "options": [
+        {
+          "option_id": 17658,
+          "option_text": "A campaign for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 17659,
+          "option_text": "A campaign for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17660,
+          "option_text": "A campaign for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17661,
+          "option_text": "A campaign for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3850,
+      "subskill_id": 177,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation qualification?",
+      "options": [
+        {
+          "option_id": 17662,
+          "option_text": "The process of qualifying leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 17663,
+          "option_text": "The process of ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17664,
+          "option_text": "The process of deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 17665,
+          "option_text": "The process of hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3851,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a digital marketing strategy?",
+      "options": [
+        {
+          "option_id": 17666,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17667,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17668,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17669,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3852,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy analytics?",
+      "options": [
+        {
+          "option_id": 17670,
+          "option_text": "The use of analytics to improve digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17671,
+          "option_text": "The use of guessing to improve digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17672,
+          "option_text": "The use of ignoring to improve digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17673,
+          "option_text": "The use of deleting to improve digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3853,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy automation?",
+      "options": [
+        {
+          "option_id": 17674,
+          "option_text": "The use of automation to improve digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17675,
+          "option_text": "The use of manual processes for digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17676,
+          "option_text": "The use of ignoring for digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17677,
+          "option_text": "The use of deleting for digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3854,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy governance?",
+      "options": [
+        {
+          "option_id": 17678,
+          "option_text": "The framework for managing digital marketing strategy processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 17679,
+          "option_text": "The framework for ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17680,
+          "option_text": "The framework for deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17681,
+          "option_text": "The framework for hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3855,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy maturity model?",
+      "options": [
+        {
+          "option_id": 17682,
+          "option_text": "A model for assessing the maturity of digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17683,
+          "option_text": "A model for ignoring digital marketing maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17684,
+          "option_text": "A model for deleting digital marketing maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17685,
+          "option_text": "A model for hiding digital marketing maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3856,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize online channels?",
+      "options": [
+        {
+          "option_id": 17686,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17687,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17688,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17689,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3857,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a channel analytics?",
+      "options": [
+        {
+          "option_id": 17690,
+          "option_text": "The use of analytics to improve online channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17691,
+          "option_text": "The use of guessing to improve online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17692,
+          "option_text": "The use of ignoring to improve online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17693,
+          "option_text": "The use of deleting to improve online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3858,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a channel automation?",
+      "options": [
+        {
+          "option_id": 17694,
+          "option_text": "The use of automation to improve online channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17695,
+          "option_text": "The use of manual processes for online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17696,
+          "option_text": "The use of ignoring for online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17697,
+          "option_text": "The use of deleting for online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3859,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a channel governance?",
+      "options": [
+        {
+          "option_id": 17698,
+          "option_text": "The framework for managing online channels processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 17699,
+          "option_text": "The framework for ignoring online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17700,
+          "option_text": "The framework for deleting online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17701,
+          "option_text": "The framework for hiding online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3860,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a channel maturity model?",
+      "options": [
+        {
+          "option_id": 17702,
+          "option_text": "A model for assessing the maturity of online channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17703,
+          "option_text": "A model for ignoring online channels maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17704,
+          "option_text": "A model for deleting online channels maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17705,
+          "option_text": "A model for hiding online channels maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3861,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize brand awareness?",
+      "options": [
+        {
+          "option_id": 17706,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17707,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17708,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17709,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3862,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand awareness analytics?",
+      "options": [
+        {
+          "option_id": 17710,
+          "option_text": "The use of analytics to improve brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17711,
+          "option_text": "The use of guessing to improve brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17712,
+          "option_text": "The use of ignoring to improve brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17713,
+          "option_text": "The use of deleting to improve brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3863,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand awareness automation?",
+      "options": [
+        {
+          "option_id": 17714,
+          "option_text": "The use of automation to improve brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17715,
+          "option_text": "The use of manual processes for brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17716,
+          "option_text": "The use of ignoring for brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17717,
+          "option_text": "The use of deleting for brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3864,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand awareness governance?",
+      "options": [
+        {
+          "option_id": 17718,
+          "option_text": "The framework for managing brand awareness processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 17719,
+          "option_text": "The framework for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17720,
+          "option_text": "The framework for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17721,
+          "option_text": "The framework for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3865,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand awareness maturity model?",
+      "options": [
+        {
+          "option_id": 17722,
+          "option_text": "A model for assessing the maturity of brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17723,
+          "option_text": "A model for ignoring brand awareness maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17724,
+          "option_text": "A model for deleting brand awareness maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17725,
+          "option_text": "A model for hiding brand awareness maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3866,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize lead generation?",
+      "options": [
+        {
+          "option_id": 17726,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 17727,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 17728,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17729,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3867,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation analytics?",
+      "options": [
+        {
+          "option_id": 17730,
+          "option_text": "The use of analytics to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17731,
+          "option_text": "The use of guessing to improve lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17732,
+          "option_text": "The use of ignoring to improve lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17733,
+          "option_text": "The use of deleting to improve lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3868,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation automation?",
+      "options": [
+        {
+          "option_id": 17734,
+          "option_text": "The use of automation to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17735,
+          "option_text": "The use of manual processes for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17736,
+          "option_text": "The use of ignoring for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17737,
+          "option_text": "The use of deleting for lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3869,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation governance?",
+      "options": [
+        {
+          "option_id": 17738,
+          "option_text": "The framework for managing lead generation processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 17739,
+          "option_text": "The framework for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17740,
+          "option_text": "The framework for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17741,
+          "option_text": "The framework for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3870,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation maturity model?",
+      "options": [
+        {
+          "option_id": 17742,
+          "option_text": "A model for assessing the maturity of lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17743,
+          "option_text": "A model for ignoring lead generation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17744,
+          "option_text": "A model for deleting lead generation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 17745,
+          "option_text": "A model for hiding lead generation maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3871,
+      "subskill_id": 174,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy dashboard?",
+      "options": [
+        {
+          "option_id": 17746,
+          "option_text": "A visual display of digital marketing strategy metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17747,
+          "option_text": "A visual display of ignored digital marketing strategy metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17748,
+          "option_text": "A visual display of deleted digital marketing strategy metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17749,
+          "option_text": "A visual display of hidden digital marketing strategy metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3872,
+      "subskill_id": 175,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a channel dashboard?",
+      "options": [
+        {
+          "option_id": 17750,
+          "option_text": "A visual display of online channels metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17751,
+          "option_text": "A visual display of ignored online channels metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17752,
+          "option_text": "A visual display of deleted online channels metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17753,
+          "option_text": "A visual display of hidden online channels metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3873,
+      "subskill_id": 176,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand awareness dashboard?",
+      "options": [
+        {
+          "option_id": 17754,
+          "option_text": "A visual display of brand awareness metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17755,
+          "option_text": "A visual display of ignored brand awareness metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17756,
+          "option_text": "A visual display of deleted brand awareness metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17757,
+          "option_text": "A visual display of hidden brand awareness metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3874,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation dashboard?",
+      "options": [
+        {
+          "option_id": 17758,
+          "option_text": "A visual display of lead generation metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 17759,
+          "option_text": "A visual display of ignored lead generation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17760,
+          "option_text": "A visual display of deleted lead generation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17761,
+          "option_text": "A visual display of hidden lead generation metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3875,
+      "subskill_id": 177,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation playbook?",
+      "options": [
+        {
+          "option_id": 17762,
+          "option_text": "A guide for lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17763,
+          "option_text": "A guide for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17764,
+          "option_text": "A guide for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17765,
+          "option_text": "A guide for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3876,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale a digital marketing strategy?",
+      "options": [
+        {
+          "option_id": 17766,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17767,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17768,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17769,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3877,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a digital marketing strategy ecosystem?",
+      "options": [
+        {
+          "option_id": 17770,
+          "option_text": "The interconnected system of digital marketing strategy tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 17771,
+          "option_text": "A single digital marketing strategy tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17772,
+          "option_text": "A manual digital marketing strategy process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17773,
+          "option_text": "A digital marketing strategy reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3878,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is digital marketing strategy AI?",
+      "options": [
+        {
+          "option_id": 17774,
+          "option_text": "The use of artificial intelligence to improve digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17775,
+          "option_text": "The use of manual processes for digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17776,
+          "option_text": "The use of ignoring for digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17777,
+          "option_text": "The use of deleting for digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3879,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is digital marketing strategy future?",
+      "options": [
+        {
+          "option_id": 17778,
+          "option_text": "The future of digital marketing strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 17779,
+          "option_text": "The future of ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17780,
+          "option_text": "The future of deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17781,
+          "option_text": "The future of hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3880,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is digital marketing strategy enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17782,
+          "option_text": "A high-level strategy for digital marketing in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17783,
+          "option_text": "A high-level strategy for ignoring digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17784,
+          "option_text": "A high-level strategy for deleting digital marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17785,
+          "option_text": "A high-level strategy for hiding digital marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3881,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale online channels?",
+      "options": [
+        {
+          "option_id": 17786,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17787,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17788,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17789,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3882,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an online channels ecosystem?",
+      "options": [
+        {
+          "option_id": 17790,
+          "option_text": "The interconnected system of online channels tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 17791,
+          "option_text": "A single online channels tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17792,
+          "option_text": "A manual online channels process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17793,
+          "option_text": "An online channels reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3883,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is online channels AI?",
+      "options": [
+        {
+          "option_id": 17794,
+          "option_text": "The use of artificial intelligence to improve online channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17795,
+          "option_text": "The use of manual processes for online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17796,
+          "option_text": "The use of ignoring for online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17797,
+          "option_text": "The use of deleting for online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3884,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is online channels future?",
+      "options": [
+        {
+          "option_id": 17798,
+          "option_text": "The future of online channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17799,
+          "option_text": "The future of ignoring online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17800,
+          "option_text": "The future of deleting online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17801,
+          "option_text": "The future of hiding online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3885,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is online channels enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17802,
+          "option_text": "A high-level strategy for online channels in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17803,
+          "option_text": "A high-level strategy for ignoring online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17804,
+          "option_text": "A high-level strategy for deleting online channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17805,
+          "option_text": "A high-level strategy for hiding online channels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3886,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale brand awareness?",
+      "options": [
+        {
+          "option_id": 17806,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17807,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17808,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17809,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3887,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a brand awareness ecosystem?",
+      "options": [
+        {
+          "option_id": 17810,
+          "option_text": "The interconnected system of brand awareness tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 17811,
+          "option_text": "A single brand awareness tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17812,
+          "option_text": "A manual brand awareness process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17813,
+          "option_text": "A brand awareness reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3888,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is brand awareness AI?",
+      "options": [
+        {
+          "option_id": 17814,
+          "option_text": "The use of artificial intelligence to improve brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17815,
+          "option_text": "The use of manual processes for brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17816,
+          "option_text": "The use of ignoring for brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17817,
+          "option_text": "The use of deleting for brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3889,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is brand awareness future?",
+      "options": [
+        {
+          "option_id": 17818,
+          "option_text": "The future of brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17819,
+          "option_text": "The future of ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17820,
+          "option_text": "The future of deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17821,
+          "option_text": "The future of hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3890,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is brand awareness enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17822,
+          "option_text": "A high-level strategy for brand awareness in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17823,
+          "option_text": "A high-level strategy for ignoring brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17824,
+          "option_text": "A high-level strategy for deleting brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17825,
+          "option_text": "A high-level strategy for hiding brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3891,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale lead generation?",
+      "options": [
+        {
+          "option_id": 17826,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17827,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17828,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 17829,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3892,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead generation ecosystem?",
+      "options": [
+        {
+          "option_id": 17830,
+          "option_text": "The interconnected system of lead generation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 17831,
+          "option_text": "A single lead generation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17832,
+          "option_text": "A manual lead generation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17833,
+          "option_text": "A lead generation reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3893,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation AI?",
+      "options": [
+        {
+          "option_id": 17834,
+          "option_text": "The use of artificial intelligence to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17835,
+          "option_text": "The use of manual processes for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17836,
+          "option_text": "The use of ignoring for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17837,
+          "option_text": "The use of deleting for lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3894,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation future?",
+      "options": [
+        {
+          "option_id": 17838,
+          "option_text": "The future of lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17839,
+          "option_text": "The future of ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17840,
+          "option_text": "The future of deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17841,
+          "option_text": "The future of hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3895,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation enterprise strategy?",
+      "options": [
+        {
+          "option_id": 17842,
+          "option_text": "A high-level strategy for lead generation in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 17843,
+          "option_text": "A high-level strategy for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17844,
+          "option_text": "A high-level strategy for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17845,
+          "option_text": "A high-level strategy for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3896,
+      "subskill_id": 174,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is digital marketing strategy governance?",
+      "options": [
+        {
+          "option_id": 17846,
+          "option_text": "The framework for managing digital marketing strategy governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17847,
+          "option_text": "The framework for ignoring digital marketing strategy governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17848,
+          "option_text": "The framework for deleting digital marketing strategy governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17849,
+          "option_text": "The framework for hiding digital marketing strategy governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3897,
+      "subskill_id": 175,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is online channels governance?",
+      "options": [
+        {
+          "option_id": 17850,
+          "option_text": "The framework for managing online channels governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 17851,
+          "option_text": "The framework for ignoring online channels governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17852,
+          "option_text": "The framework for deleting online channels governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 17853,
+          "option_text": "The framework for hiding online channels governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3898,
+      "subskill_id": 176,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is brand awareness ROI?",
+      "options": [
+        {
+          "option_id": 17854,
+          "option_text": "The return on investment from brand awareness",
+          "is_correct": true
+        },
+        {
+          "option_id": 17855,
+          "option_text": "The cost of brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17856,
+          "option_text": "The loss from brand awareness",
+          "is_correct": false
+        },
+        {
+          "option_id": 17857,
+          "option_text": "The waste from brand awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3899,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation ROI?",
+      "options": [
+        {
+          "option_id": 17858,
+          "option_text": "The return on investment from lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17859,
+          "option_text": "The cost of lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17860,
+          "option_text": "The loss from lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17861,
+          "option_text": "The waste from lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3900,
+      "subskill_id": 177,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation ecosystem?",
+      "options": [
+        {
+          "option_id": 17862,
+          "option_text": "The interconnected system of lead generation tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 17863,
+          "option_text": "A single lead generation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 17864,
+          "option_text": "A manual lead generation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 17865,
+          "option_text": "A lead generation reporting tool",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}
