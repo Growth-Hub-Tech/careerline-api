@@ -26,7 +26,7 @@ def score_or_none(attempt):
 
 
 # START A TEST ATTEMPT
-@router.post("/start", responses=errors(400, 401))
+@router.post("/start", responses=errors(400, 401, 404))
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db, scope="function"),
