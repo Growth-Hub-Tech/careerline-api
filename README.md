@@ -111,7 +111,8 @@ python scripts/export_openapi.py --check  # openapi.json matches the code
 ### Tests
 
 - `tests/test_app.py`, `tests/test_db_guard.py`: fast unit tests, no database needed.
-- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint), no database needed.
+- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint, the checkout and invitation flows), no database needed.
+- `tests/test_worker_and_cors.py`, `tests/test_render_blueprint.py`: the worker, CORS and `render.yaml`.
 - `tests/integration/`: the real API on a real Postgres test database (register, login, attempts, scoring, recommendations, ownership, error envelopes). Open bugs are in `tests/integration/test_known_bugs.py`, marked `xfail(strict=True)`: they show as `xfailed` until the bug is fixed, then turn the run red so the marker gets removed.
 
 The integration tests only run when `TEST_DATABASE_URL` is set, and they refuse to start unless it is a local database with `test` in its name (never the one in `.env`). They create the database if it is missing, migrate it to head and empty every table before each test.
@@ -144,7 +145,11 @@ A pull request into `main` must come from `dev`.
 
 ## Deployment (Render)
 
-`render.yaml` defines the web service: `pip install -r requirements.txt`, then `bash scripts/start.sh`, with a health check on `/healthz`. Set `DATABASE_URL`, `SECRET_KEY`, `OPENAI_API_KEY` and `CORS_ORIGINS` in the Render dashboard.
+`render.yaml` is a Render Blueprint for the test server: the web service (`pip install -r requirements.txt`, then `bash scripts/start.sh`, which migrates before starting, health check on `/healthz`), a background worker (`python -m app.worker`, a placeholder until Day 5) and a Postgres 16 database. Render generates `SECRET_KEY`; set `CORS_ORIGINS` (the website's address) and optionally `OPENAI_API_KEY` in the dashboard. See [docs/api.md](docs/api.md#test-server-render).
+
+## API docs for the frontend
+
+[docs/api.md](docs/api.md): base URLs, login, envelopes and error codes, sample data and `X-Mock-Scenario`, generating TypeScript types from `openapi.json`, and how API changes are announced (changelog, `api-change` label).
 
 ## Environment variables
 
