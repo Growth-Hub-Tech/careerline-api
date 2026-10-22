@@ -86,11 +86,29 @@ mypy                  # type-check app/
 pytest                # tests
 ```
 
+### Tests
+
+- `tests/test_app.py`, `tests/test_db_guard.py`: fast unit tests, no database needed.
+- `tests/integration/`: the real API on a real Postgres test database (register, login, attempts, scoring, recommendations, ownership, error envelopes). Open bugs are in `tests/integration/test_known_bugs.py`, marked `xfail(strict=True)`: they show as `xfailed` until the bug is fixed, then turn the run red so the marker gets removed.
+
+The integration tests only run when `TEST_DATABASE_URL` is set, and they refuse to start unless it is a local database with `test` in its name (never the one in `.env`). They create the database if it is missing, migrate it to head and empty every table before each test.
+
+```bash
+# Postgres in Docker (or use any local Postgres user that can create databases)
+docker run -d --name careerline-test-db -e POSTGRES_PASSWORD=postgres -p 5433:5432 postgres:16
+
+export TEST_DATABASE_URL=postgresql://postgres:postgres@localhost:5433/careerline_test
+pytest
+```
+
+Without `TEST_DATABASE_URL`, `pytest` runs the unit tests and skips the database ones. In CI a missing `TEST_DATABASE_URL` is an error.
+
 CI (`.github/workflows/ci.yml`) runs on every pull request into `dev` or `main`:
 
 - lint, format and types
 - migrating an empty Postgres database to head and starting the app on it
-- the tests
+- the tests, including the database integration tests (on their own database in the Postgres service)
+- a secret scan of the current files with gitleaks (not the git history)
 - a dependency audit (report only)
 
 A pull request into `main` must come from `dev`.
