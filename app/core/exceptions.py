@@ -23,6 +23,11 @@ class UnauthorizedError(AppError):
     code = "unauthenticated"
 
 
+class PaymentRequiredError(AppError):
+    status_code = 402
+    code = "payment_required"
+
+
 class ForbiddenError(AppError):
     status_code = 403
     code = "forbidden"
@@ -43,6 +48,16 @@ class GoneError(AppError):
     code = "gone"
 
 
+class ExpiredError(AppError):
+    status_code = 410
+    code = "expired"
+
+
+class RateLimitedError(AppError):
+    status_code = 429
+    code = "rate_limited"
+
+
 class ServiceUnavailableError(AppError):
     status_code = 503
     code = "service_unavailable"
@@ -52,6 +67,7 @@ class ServiceUnavailableError(AppError):
 STATUS_CODES = {
     400: "bad_request",
     401: "unauthenticated",
+    402: "payment_required",
     403: "forbidden",
     404: "not_found",
     405: "method_not_allowed",
