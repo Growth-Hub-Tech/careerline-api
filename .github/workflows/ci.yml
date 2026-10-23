@@ -58,6 +58,9 @@ jobs:
       - name: Mypy
         run: mypy
 
+      - name: openapi.json is up to date
+        run: python scripts/export_openapi.py --check
+
   test:
     name: Migrations, startup and tests
     runs-on: ubuntu-latest

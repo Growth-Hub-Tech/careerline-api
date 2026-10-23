@@ -82,11 +82,15 @@ def _enveloped(endpoint):
 ERRORS = {
     400: "Bad request: invalid input (the message says what is wrong)",
     401: "Not logged in: missing, invalid or expired token",
-    403: "Not allowed: this belongs to another learner",
+    402: "Payment required: not enough credits or no active subscription",
+    403: "Not allowed: e.g. this belongs to another person",
     404: "Not found",
-    409: "Conflict: this attempt was already submitted",
-    410: "Gone: this old route is retired (see the message for the new one)",
+    409: "Conflict: e.g. this attempt was already submitted",
+    410: "Gone or expired: this old route is retired, or the link/offer has expired (see the message)",
     422: "Validation error: the request body or parameters are invalid (see details)",
+    429: "Too many requests: slow down and retry after the Retry-After seconds",
+    500: "Server error: something went wrong on our side",
+    503: "Service unavailable: try again shortly",
 }
 
 
