@@ -26,10 +26,10 @@ def score_or_none(attempt):
 
 
 # START A TEST ATTEMPT
-@router.post("/start", responses=errors(400, 401))
+@router.post("/start", responses=errors(400, 401, 404))
 async def start_test_attempt(
     data: StartAttemptRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     attempt_data = await start_attempt(
@@ -53,7 +53,7 @@ async def start_test_attempt(
 @router.post("/submit", responses=errors(400, 401, 403, 404, 409))
 async def submit_answers(
     data: SubmitRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     answers = [
@@ -81,7 +81,7 @@ async def submit_answers(
 @router.get("/{attempt_id}", responses=errors(401, 403, 404))
 async def get_attempt(
     attempt_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     result = await db.execute(select(TestAttempt).where(TestAttempt.attempt_id == attempt_id))
@@ -109,7 +109,7 @@ async def get_learner_attempts(
     learner_id: int,
     limit: int = 10,
     offset: int = 0,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
@@ -143,7 +143,7 @@ async def get_learner_attempts(
 @router.patch("/{attempt_id}/cancel", responses=errors(400, 401, 403, 404))
 async def cancel_attempt(
     attempt_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     result = await db.execute(select(TestAttempt).where(TestAttempt.attempt_id == attempt_id))

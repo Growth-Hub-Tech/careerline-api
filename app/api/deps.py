@@ -18,7 +18,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/login
 
 # Dependency that extracts and verifies the current learner from token
 async def get_current_learner(
-    token: str = Depends(oauth2_scheme), db: AsyncSession = Depends(get_db)
+    token: str = Depends(oauth2_scheme), db: AsyncSession = Depends(get_db, scope="function")
 ) -> Learner:
 
     # Create a 401 error to raise if anything is wrong

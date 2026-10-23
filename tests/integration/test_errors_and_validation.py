@@ -1,6 +1,12 @@
 import app.api.routes.attempts as attempts_routes
 from app.core.config import settings
-from tests.integration.conftest import answers_for, assert_error_envelope, start_attempt, submit
+from tests.integration.conftest import (
+    answers_for,
+    assert_error_envelope,
+    register,
+    start_attempt,
+    submit,
+)
 
 API = settings.API_PREFIX
 
@@ -126,3 +132,44 @@ async def test_unexpected_crash_is_a_generic_500_without_internals(
     assert error["message"] == "Something went wrong. Please try again later."
     assert "secret_module" not in response.text
     assert "SELECT" not in response.text
+
+
+async def test_a_failed_save_is_not_reported_as_success(client, database):
+    # Make the database refuse this learner at COMMIT time (a deferred trigger), the way a
+    # dropped connection or a constraint checked at commit would.
+    with database.begin() as conn:
+        conn.exec_driver_sql(
+            "CREATE OR REPLACE FUNCTION refuse_on_commit() RETURNS trigger LANGUAGE plpgsql AS "
+            "$$ BEGIN RAISE EXCEPTION 'simulated commit failure'; END $$"
+        )
+        conn.exec_driver_sql("DROP TRIGGER IF EXISTS refuse_on_commit ON learner")
+        conn.exec_driver_sql(
+            "CREATE CONSTRAINT TRIGGER refuse_on_commit AFTER INSERT ON learner "
+            "DEFERRABLE INITIALLY DEFERRED FOR EACH ROW "
+            "WHEN (NEW.email = 'lost@example.com') EXECUTE FUNCTION refuse_on_commit()"
+        )
+    try:
+        response = await register(client, "lost@example.com")
+
+        with database.connect() as conn:
+            saved = conn.exec_driver_sql(
+                "SELECT count(*) FROM learner WHERE email = 'lost@example.com'"
+            ).scalar_one()
+        assert saved == 0
+        # Nothing was saved, so the client must not be told it worked
+        assert_error_envelope(response, 500, "internal_error")
+    finally:
+        with database.begin() as conn:
+            conn.exec_driver_sql("DROP TRIGGER refuse_on_commit ON learner")
+            conn.exec_driver_sql("DROP FUNCTION refuse_on_commit()")
+
+
+async def test_start_attempt_for_an_unknown_skill_is_404(client, learner, skill):
+    response = await client.post(
+        f"{API}/attempts/start",
+        headers=learner["headers"],
+        json={"skill_id": skill["skill_id"] + 1000, "declared_level": "JUNIOR"},
+    )
+
+    error = assert_error_envelope(response, 404, "not_found")
+    assert error["message"] == f"Skill {skill['skill_id'] + 1000} not found"

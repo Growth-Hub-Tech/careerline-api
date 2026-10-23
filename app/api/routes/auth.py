@@ -19,7 +19,7 @@ token_router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 # REGISTER A NEW LEARNER WITH PASSWORD
 @router.post("/register", responses=errors(400))
-async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
+async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db, scope="function")):
     # Check if email already exists
     existing = await db.execute(select(Learner).where(Learner.email == data.email))
     if existing.scalar_one_or_none():
@@ -51,7 +51,8 @@ async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
 # LOGIN AND GET TOKEN
 @token_router.post("/login", response_model=TokenResponse, responses=errors(401, 422))
 async def login(
-    form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_db)
+    form_data: OAuth2PasswordRequestForm = Depends(),
+    db: AsyncSession = Depends(get_db, scope="function"),
 ):
     # Find learner by email
     result = await db.execute(select(Learner).where(Learner.email == form_data.username))

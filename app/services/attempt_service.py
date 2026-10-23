@@ -1,8 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
-from app.core.exceptions import BadRequestError
+from app.core.exceptions import BadRequestError, NotFoundError
 from app.core.logging import get_logger
+from app.models.models import Skill
 from app.repositories.attempt_repo import (
     create_attempt,
     get_level_id_by_name,
@@ -29,6 +30,10 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
     level_id = await get_level_id_by_name(db, declared_level)
     if not level_id:
         raise BadRequestError(f"Level {declared_level} not found in database")
+
+    # Unknown skill: a clean 404 (before, the insert broke the foreign key and gave a 500)
+    if await db.get(Skill, skill_id) is None:
+        raise NotFoundError(f"Skill {skill_id} not found")
 
     # Create the attempt
     attempt_id = await create_attempt(db, learner_id, skill_id, level_id)

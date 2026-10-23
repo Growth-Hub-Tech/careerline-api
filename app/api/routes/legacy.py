@@ -59,7 +59,9 @@ async def learner_register():
 
 # Get Behavioural Questions for a specific skill
 @router.get("/behavioural-questions/{skill_id}", responses=errors(404, 422))
-async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db)):
+async def behavioural_questions(
+    skill_id: int, db: AsyncSession = Depends(get_db, scope="function")
+):
     # Fetch behavioural questions using the learner service
     questions = await get_behavioural_questions(db=db, skill_id=skill_id)
     if not questions:
@@ -75,7 +77,7 @@ async def behavioural_questions(skill_id: int, db: AsyncSession = Depends(get_db
 @router.post("/behavioural-answers", responses=errors(401, 403, 404, 422))
 async def behavioural_answers(
     data: LegacyBehaviouralAnswersRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     if data.learner_id is not None:
@@ -105,7 +107,7 @@ async def behavioural_answers(
 @router.post("/attempt/start", responses=errors(400, 401, 403, 422))
 async def start_test_attempt(
     data: LegacyStartAttemptRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     if data.learner_id is not None:
@@ -130,7 +132,7 @@ async def start_test_attempt(
 @router.post("/attempt/submit", responses=errors(400, 401, 403, 404, 409, 422))
 async def submit_answers(
     data: LegacySubmitRequest,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     if data.learner_id is not None:
@@ -166,7 +168,7 @@ async def submit_answers(
 async def learning_pathway(
     learner_id: int,
     skill_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)

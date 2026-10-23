@@ -17,7 +17,7 @@ router = APIRouter(prefix="/recommendations", tags=["Recommendations"], route_cl
 async def learning_pathway(
     learner_id: int,
     skill_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
@@ -63,7 +63,7 @@ async def learning_pathway(
 @router.get("/levels/{learner_id}", responses=errors(401, 403))
 async def get_learner_levels(
     learner_id: int,
-    db: AsyncSession = Depends(get_db),
+    db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
