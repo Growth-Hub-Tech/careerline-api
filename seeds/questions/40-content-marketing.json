@@ -1,0 +1,2906 @@
+{
+  "skill_id": 40,
+  "skill_name": "Content Marketing",
+  "questions": [
+    {
+      "question_id": 3901,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is content creation in marketing?",
+      "options": [
+        {
+          "option_id": 17866,
+          "option_text": "The process of producing valuable content to attract an audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 17867,
+          "option_text": "The process of ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17868,
+          "option_text": "The process of deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17869,
+          "option_text": "The process of hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3902,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of content creation?",
+      "options": [
+        {
+          "option_id": 17870,
+          "option_text": "To attract, engage, and retain a target audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 17871,
+          "option_text": "To ignore the target audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 17872,
+          "option_text": "To delete the target audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 17873,
+          "option_text": "To hide the target audience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3903,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content type?",
+      "options": [
+        {
+          "option_id": 17874,
+          "option_text": "A category of content (e.g., blog post, video, infographic)",
+          "is_correct": true
+        },
+        {
+          "option_id": 17875,
+          "option_text": "A category of ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17876,
+          "option_text": "A category of deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17877,
+          "option_text": "A category of hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3904,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content format?",
+      "options": [
+        {
+          "option_id": 17878,
+          "option_text": "The way content is presented (e.g., text, audio, video)",
+          "is_correct": true
+        },
+        {
+          "option_id": 17879,
+          "option_text": "The way content is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 17880,
+          "option_text": "The way content is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 17881,
+          "option_text": "The way content is hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3905,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content pillar?",
+      "options": [
+        {
+          "option_id": 17882,
+          "option_text": "A core piece of content that serves as the foundation for other content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17883,
+          "option_text": "A piece of content that is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 17884,
+          "option_text": "A piece of content that is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 17885,
+          "option_text": "A piece of content that is hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3906,
+      "subskill_id": 178,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a content topic?",
+      "options": [
+        {
+          "option_id": 17886,
+          "option_text": "A subject for content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17887,
+          "option_text": "A subject for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17888,
+          "option_text": "A subject for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17889,
+          "option_text": "A subject for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3907,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is content distribution in marketing?",
+      "options": [
+        {
+          "option_id": 17890,
+          "option_text": "The process of sharing content across various channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 17891,
+          "option_text": "The process of ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17892,
+          "option_text": "The process of deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17893,
+          "option_text": "The process of hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3908,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of content distribution?",
+      "options": [
+        {
+          "option_id": 17894,
+          "option_text": "To maximize the reach and impact of content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17895,
+          "option_text": "To minimize the reach of content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17896,
+          "option_text": "To ignore the reach of content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17897,
+          "option_text": "To delete the reach of content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3909,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a distribution channel?",
+      "options": [
+        {
+          "option_id": 17898,
+          "option_text": "A channel used to distribute content (e.g., social media, email)",
+          "is_correct": true
+        },
+        {
+          "option_id": 17899,
+          "option_text": "A channel used to ignore content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17900,
+          "option_text": "A channel used to delete content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17901,
+          "option_text": "A channel used to hide content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3910,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a distribution strategy?",
+      "options": [
+        {
+          "option_id": 17902,
+          "option_text": "A plan for distributing content effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 17903,
+          "option_text": "A plan for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17904,
+          "option_text": "A plan for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17905,
+          "option_text": "A plan for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3911,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a distribution metric?",
+      "options": [
+        {
+          "option_id": 17906,
+          "option_text": "A metric for measuring content distribution success",
+          "is_correct": true
+        },
+        {
+          "option_id": 17907,
+          "option_text": "A metric for measuring content distribution ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17908,
+          "option_text": "A metric for measuring content distribution deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17909,
+          "option_text": "A metric for measuring content distribution hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3912,
+      "subskill_id": 179,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a distribution tool?",
+      "options": [
+        {
+          "option_id": 17910,
+          "option_text": "A tool for distributing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17911,
+          "option_text": "A tool for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17912,
+          "option_text": "A tool for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17913,
+          "option_text": "A tool for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3913,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SEO copywriting?",
+      "options": [
+        {
+          "option_id": 17914,
+          "option_text": "The practice of writing content that is optimized for search engines",
+          "is_correct": true
+        },
+        {
+          "option_id": 17915,
+          "option_text": "The practice of writing content that ignores search engines",
+          "is_correct": false
+        },
+        {
+          "option_id": 17916,
+          "option_text": "The practice of writing content that deletes search engines",
+          "is_correct": false
+        },
+        {
+          "option_id": 17917,
+          "option_text": "The practice of writing content that hides search engines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3914,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of SEO copywriting?",
+      "options": [
+        {
+          "option_id": 17918,
+          "option_text": "To improve search engine rankings and attract organic traffic",
+          "is_correct": true
+        },
+        {
+          "option_id": 17919,
+          "option_text": "To decrease search engine rankings",
+          "is_correct": false
+        },
+        {
+          "option_id": 17920,
+          "option_text": "To ignore search engine rankings",
+          "is_correct": false
+        },
+        {
+          "option_id": 17921,
+          "option_text": "To delete search engine rankings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3915,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a keyword in SEO copywriting?",
+      "options": [
+        {
+          "option_id": 17922,
+          "option_text": "A word or phrase used in SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 17923,
+          "option_text": "A word or phrase used to ignore SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 17924,
+          "option_text": "A word or phrase used to delete SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 17925,
+          "option_text": "A word or phrase used to hide SEO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3916,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a meta description?",
+      "options": [
+        {
+          "option_id": 17926,
+          "option_text": "A brief description of a page that appears in search results",
+          "is_correct": true
+        },
+        {
+          "option_id": 17927,
+          "option_text": "A description of ignoring a page",
+          "is_correct": false
+        },
+        {
+          "option_id": 17928,
+          "option_text": "A description of deleting a page",
+          "is_correct": false
+        },
+        {
+          "option_id": 17929,
+          "option_text": "A description of hiding a page",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3917,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a headline in SEO copywriting?",
+      "options": [
+        {
+          "option_id": 17930,
+          "option_text": "The title of a piece of content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17931,
+          "option_text": "The title of ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17932,
+          "option_text": "The title of deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17933,
+          "option_text": "The title of hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3918,
+      "subskill_id": 180,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a call to action (CTA) in SEO copywriting?",
+      "options": [
+        {
+          "option_id": 17934,
+          "option_text": "A clear instruction for the reader to take action",
+          "is_correct": true
+        },
+        {
+          "option_id": 17935,
+          "option_text": "A clear instruction to ignore the content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17936,
+          "option_text": "A clear instruction to delete the content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17937,
+          "option_text": "A clear instruction to hide the content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3919,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is audience engagement in content marketing?",
+      "options": [
+        {
+          "option_id": 17938,
+          "option_text": "The interaction between a brand and its audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 17939,
+          "option_text": "The lack of interaction between a brand and its audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 17940,
+          "option_text": "The deletion of interaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 17941,
+          "option_text": "The hiding of interaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3920,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of audience engagement?",
+      "options": [
+        {
+          "option_id": 17942,
+          "option_text": "To build relationships and foster loyalty",
+          "is_correct": true
+        },
+        {
+          "option_id": 17943,
+          "option_text": "To ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 17944,
+          "option_text": "To delete relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 17945,
+          "option_text": "To hide relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3921,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a comment in audience engagement?",
+      "options": [
+        {
+          "option_id": 17946,
+          "option_text": "A comment left by a user on content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17947,
+          "option_text": "A comment that ignores content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17948,
+          "option_text": "A comment that deletes content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17949,
+          "option_text": "A comment that hides content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3922,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a share in audience engagement?",
+      "options": [
+        {
+          "option_id": 17950,
+          "option_text": "A user sharing content with their network",
+          "is_correct": true
+        },
+        {
+          "option_id": 17951,
+          "option_text": "A user ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17952,
+          "option_text": "A user deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17953,
+          "option_text": "A user hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3923,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a like in audience engagement?",
+      "options": [
+        {
+          "option_id": 17954,
+          "option_text": "A user liking content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17955,
+          "option_text": "A user ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17956,
+          "option_text": "A user deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17957,
+          "option_text": "A user hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3924,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mention in audience engagement?",
+      "options": [
+        {
+          "option_id": 17958,
+          "option_text": "A user mentioning a brand in their content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17959,
+          "option_text": "A user ignoring a brand",
+          "is_correct": false
+        },
+        {
+          "option_id": 17960,
+          "option_text": "A user deleting a brand",
+          "is_correct": false
+        },
+        {
+          "option_id": 17961,
+          "option_text": "A user hiding a brand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3925,
+      "subskill_id": 181,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a review in audience engagement?",
+      "options": [
+        {
+          "option_id": 17962,
+          "option_text": "A user leaving a review of a product or service",
+          "is_correct": true
+        },
+        {
+          "option_id": 17963,
+          "option_text": "A user ignoring a review",
+          "is_correct": false
+        },
+        {
+          "option_id": 17964,
+          "option_text": "A user deleting a review",
+          "is_correct": false
+        },
+        {
+          "option_id": 17965,
+          "option_text": "A user hiding a review",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3926,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create content?",
+      "options": [
+        {
+          "option_id": 17966,
+          "option_text": "By researching topics, writing, and editing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17967,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17968,
+          "option_text": "By ignoring topics",
+          "is_correct": false
+        },
+        {
+          "option_id": 17969,
+          "option_text": "By deleting content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3927,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content creation strategy?",
+      "options": [
+        {
+          "option_id": 17970,
+          "option_text": "A plan for creating content effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 17971,
+          "option_text": "A plan for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17972,
+          "option_text": "A plan for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17973,
+          "option_text": "A plan for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3928,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content creation tool?",
+      "options": [
+        {
+          "option_id": 17974,
+          "option_text": "A tool for creating content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17975,
+          "option_text": "A tool for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17976,
+          "option_text": "A tool for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17977,
+          "option_text": "A tool for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3929,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content creation metric?",
+      "options": [
+        {
+          "option_id": 17978,
+          "option_text": "A metric for measuring content creation success",
+          "is_correct": true
+        },
+        {
+          "option_id": 17979,
+          "option_text": "A metric for measuring content creation ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 17980,
+          "option_text": "A metric for measuring content creation deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 17981,
+          "option_text": "A metric for measuring content creation hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3930,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content creation best practice?",
+      "options": [
+        {
+          "option_id": 17982,
+          "option_text": "A proven practice for content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 17983,
+          "option_text": "A practice for ignoring content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17984,
+          "option_text": "A practice for deleting content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 17985,
+          "option_text": "A practice for hiding content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3931,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you distribute content?",
+      "options": [
+        {
+          "option_id": 17986,
+          "option_text": "By choosing the right channels and sharing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17987,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 17988,
+          "option_text": "By ignoring channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 17989,
+          "option_text": "By deleting content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3932,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content distribution strategy?",
+      "options": [
+        {
+          "option_id": 17990,
+          "option_text": "A plan for distributing content effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 17991,
+          "option_text": "A plan for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17992,
+          "option_text": "A plan for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17993,
+          "option_text": "A plan for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3933,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content distribution tool?",
+      "options": [
+        {
+          "option_id": 17994,
+          "option_text": "A tool for distributing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 17995,
+          "option_text": "A tool for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17996,
+          "option_text": "A tool for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 17997,
+          "option_text": "A tool for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3934,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content distribution metric?",
+      "options": [
+        {
+          "option_id": 17998,
+          "option_text": "A metric for measuring content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 17999,
+          "option_text": "A metric for measuring content distribution ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 18000,
+          "option_text": "A metric for measuring content distribution deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18001,
+          "option_text": "A metric for measuring content distribution hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3935,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content distribution best practice?",
+      "options": [
+        {
+          "option_id": 18002,
+          "option_text": "A proven practice for content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18003,
+          "option_text": "A practice for ignoring content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18004,
+          "option_text": "A practice for deleting content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18005,
+          "option_text": "A practice for hiding content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3936,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write SEO copy?",
+      "options": [
+        {
+          "option_id": 18006,
+          "option_text": "By researching keywords, writing, and optimizing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 18007,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 18008,
+          "option_text": "By ignoring keywords",
+          "is_correct": false
+        },
+        {
+          "option_id": 18009,
+          "option_text": "By deleting content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3937,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting strategy?",
+      "options": [
+        {
+          "option_id": 18010,
+          "option_text": "A plan for writing SEO copy",
+          "is_correct": true
+        },
+        {
+          "option_id": 18011,
+          "option_text": "A plan for ignoring SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 18012,
+          "option_text": "A plan for deleting SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 18013,
+          "option_text": "A plan for hiding SEO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3938,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting tool?",
+      "options": [
+        {
+          "option_id": 18014,
+          "option_text": "A tool for SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18015,
+          "option_text": "A tool for ignoring SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 18016,
+          "option_text": "A tool for deleting SEO",
+          "is_correct": false
+        },
+        {
+          "option_id": 18017,
+          "option_text": "A tool for hiding SEO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3939,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting metric?",
+      "options": [
+        {
+          "option_id": 18018,
+          "option_text": "A metric for measuring SEO copywriting success",
+          "is_correct": true
+        },
+        {
+          "option_id": 18019,
+          "option_text": "A metric for measuring SEO copywriting ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 18020,
+          "option_text": "A metric for measuring SEO copywriting deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18021,
+          "option_text": "A metric for measuring SEO copywriting hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3940,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting best practice?",
+      "options": [
+        {
+          "option_id": 18022,
+          "option_text": "A proven practice for SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18023,
+          "option_text": "A practice for ignoring SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18024,
+          "option_text": "A practice for deleting SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18025,
+          "option_text": "A practice for hiding SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3941,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you engage an audience?",
+      "options": [
+        {
+          "option_id": 18026,
+          "option_text": "By responding to comments, asking questions, and creating interactive content",
+          "is_correct": true
+        },
+        {
+          "option_id": 18027,
+          "option_text": "By ignoring comments",
+          "is_correct": false
+        },
+        {
+          "option_id": 18028,
+          "option_text": "By deleting comments",
+          "is_correct": false
+        },
+        {
+          "option_id": 18029,
+          "option_text": "By hiding comments",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3942,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an audience engagement strategy?",
+      "options": [
+        {
+          "option_id": 18030,
+          "option_text": "A plan for engaging an audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 18031,
+          "option_text": "A plan for ignoring an audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 18032,
+          "option_text": "A plan for deleting an audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 18033,
+          "option_text": "A plan for hiding an audience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3943,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an audience engagement tool?",
+      "options": [
+        {
+          "option_id": 18034,
+          "option_text": "A tool for audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18035,
+          "option_text": "A tool for ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18036,
+          "option_text": "A tool for deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18037,
+          "option_text": "A tool for hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3944,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an audience engagement metric?",
+      "options": [
+        {
+          "option_id": 18038,
+          "option_text": "A metric for measuring audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18039,
+          "option_text": "A metric for measuring audience engagement ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 18040,
+          "option_text": "A metric for measuring audience engagement deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18041,
+          "option_text": "A metric for measuring audience engagement hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3945,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an audience engagement best practice?",
+      "options": [
+        {
+          "option_id": 18042,
+          "option_text": "A proven practice for audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18043,
+          "option_text": "A practice for ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18044,
+          "option_text": "A practice for deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18045,
+          "option_text": "A practice for hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3946,
+      "subskill_id": 178,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content calendar?",
+      "options": [
+        {
+          "option_id": 18046,
+          "option_text": "A schedule for content creation and publication",
+          "is_correct": true
+        },
+        {
+          "option_id": 18047,
+          "option_text": "A schedule for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 18048,
+          "option_text": "A schedule for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 18049,
+          "option_text": "A schedule for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3947,
+      "subskill_id": 179,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a distribution platform?",
+      "options": [
+        {
+          "option_id": 18050,
+          "option_text": "A platform for distributing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 18051,
+          "option_text": "A platform for ignoring content",
+          "is_correct": false
+        },
+        {
+          "option_id": 18052,
+          "option_text": "A platform for deleting content",
+          "is_correct": false
+        },
+        {
+          "option_id": 18053,
+          "option_text": "A platform for hiding content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3948,
+      "subskill_id": 180,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a keyword research tool?",
+      "options": [
+        {
+          "option_id": 18054,
+          "option_text": "A tool for keyword research",
+          "is_correct": true
+        },
+        {
+          "option_id": 18055,
+          "option_text": "A tool for ignoring keywords",
+          "is_correct": false
+        },
+        {
+          "option_id": 18056,
+          "option_text": "A tool for deleting keywords",
+          "is_correct": false
+        },
+        {
+          "option_id": 18057,
+          "option_text": "A tool for hiding keywords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3949,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an engagement strategy?",
+      "options": [
+        {
+          "option_id": 18058,
+          "option_text": "A plan for engaging an audience",
+          "is_correct": true
+        },
+        {
+          "option_id": 18059,
+          "option_text": "A plan for ignoring an audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 18060,
+          "option_text": "A plan for deleting an audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 18061,
+          "option_text": "A plan for hiding an audience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3950,
+      "subskill_id": 181,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an engagement metric?",
+      "options": [
+        {
+          "option_id": 18062,
+          "option_text": "A metric for measuring engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18063,
+          "option_text": "A metric for measuring engagement ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 18064,
+          "option_text": "A metric for measuring engagement deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18065,
+          "option_text": "A metric for measuring engagement hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3951,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize content creation?",
+      "options": [
+        {
+          "option_id": 18066,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18067,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 18068,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 18069,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3952,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content creation analytics?",
+      "options": [
+        {
+          "option_id": 18070,
+          "option_text": "The use of analytics to improve content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 18071,
+          "option_text": "The use of guessing to improve content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18072,
+          "option_text": "The use of ignoring to improve content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18073,
+          "option_text": "The use of deleting to improve content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3953,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content creation automation?",
+      "options": [
+        {
+          "option_id": 18074,
+          "option_text": "The use of automation to improve content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 18075,
+          "option_text": "The use of manual processes for content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18076,
+          "option_text": "The use of ignoring for content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18077,
+          "option_text": "The use of deleting for content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3954,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content creation governance?",
+      "options": [
+        {
+          "option_id": 18078,
+          "option_text": "The framework for managing content creation processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 18079,
+          "option_text": "The framework for ignoring content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18080,
+          "option_text": "The framework for deleting content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18081,
+          "option_text": "The framework for hiding content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3955,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content creation maturity model?",
+      "options": [
+        {
+          "option_id": 18082,
+          "option_text": "A model for assessing the maturity of content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 18083,
+          "option_text": "A model for ignoring content creation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18084,
+          "option_text": "A model for deleting content creation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18085,
+          "option_text": "A model for hiding content creation maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3956,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize content distribution?",
+      "options": [
+        {
+          "option_id": 18086,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18087,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 18088,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 18089,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3957,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content distribution analytics?",
+      "options": [
+        {
+          "option_id": 18090,
+          "option_text": "The use of analytics to improve content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18091,
+          "option_text": "The use of guessing to improve content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18092,
+          "option_text": "The use of ignoring to improve content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18093,
+          "option_text": "The use of deleting to improve content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3958,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content distribution automation?",
+      "options": [
+        {
+          "option_id": 18094,
+          "option_text": "The use of automation to improve content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18095,
+          "option_text": "The use of manual processes for content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18096,
+          "option_text": "The use of ignoring for content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18097,
+          "option_text": "The use of deleting for content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3959,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content distribution governance?",
+      "options": [
+        {
+          "option_id": 18098,
+          "option_text": "The framework for managing content distribution processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 18099,
+          "option_text": "The framework for ignoring content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18100,
+          "option_text": "The framework for deleting content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18101,
+          "option_text": "The framework for hiding content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3960,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content distribution maturity model?",
+      "options": [
+        {
+          "option_id": 18102,
+          "option_text": "A model for assessing the maturity of content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18103,
+          "option_text": "A model for ignoring content distribution maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18104,
+          "option_text": "A model for deleting content distribution maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18105,
+          "option_text": "A model for hiding content distribution maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3961,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize SEO copywriting?",
+      "options": [
+        {
+          "option_id": 18106,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18107,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 18108,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 18109,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3962,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting analytics?",
+      "options": [
+        {
+          "option_id": 18110,
+          "option_text": "The use of analytics to improve SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18111,
+          "option_text": "The use of guessing to improve SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18112,
+          "option_text": "The use of ignoring to improve SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18113,
+          "option_text": "The use of deleting to improve SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3963,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting automation?",
+      "options": [
+        {
+          "option_id": 18114,
+          "option_text": "The use of automation to improve SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18115,
+          "option_text": "The use of manual processes for SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18116,
+          "option_text": "The use of ignoring for SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18117,
+          "option_text": "The use of deleting for SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3964,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting governance?",
+      "options": [
+        {
+          "option_id": 18118,
+          "option_text": "The framework for managing SEO copywriting processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 18119,
+          "option_text": "The framework for ignoring SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18120,
+          "option_text": "The framework for deleting SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18121,
+          "option_text": "The framework for hiding SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3965,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting maturity model?",
+      "options": [
+        {
+          "option_id": 18122,
+          "option_text": "A model for assessing the maturity of SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18123,
+          "option_text": "A model for ignoring SEO copywriting maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18124,
+          "option_text": "A model for deleting SEO copywriting maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18125,
+          "option_text": "A model for hiding SEO copywriting maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3966,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize audience engagement?",
+      "options": [
+        {
+          "option_id": 18126,
+          "option_text": "By using data analysis, feedback, and continuous improvement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18127,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 18128,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 18129,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3967,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement analytics?",
+      "options": [
+        {
+          "option_id": 18130,
+          "option_text": "The use of analytics to improve audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18131,
+          "option_text": "The use of guessing to improve audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18132,
+          "option_text": "The use of ignoring to improve audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18133,
+          "option_text": "The use of deleting to improve audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3968,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement automation?",
+      "options": [
+        {
+          "option_id": 18134,
+          "option_text": "The use of automation to improve audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18135,
+          "option_text": "The use of manual processes for audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18136,
+          "option_text": "The use of ignoring for audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18137,
+          "option_text": "The use of deleting for audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3969,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement governance?",
+      "options": [
+        {
+          "option_id": 18138,
+          "option_text": "The framework for managing audience engagement processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 18139,
+          "option_text": "The framework for ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18140,
+          "option_text": "The framework for deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18141,
+          "option_text": "The framework for hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3970,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement maturity model?",
+      "options": [
+        {
+          "option_id": 18142,
+          "option_text": "A model for assessing the maturity of audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18143,
+          "option_text": "A model for ignoring audience engagement maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18144,
+          "option_text": "A model for deleting audience engagement maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 18145,
+          "option_text": "A model for hiding audience engagement maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3971,
+      "subskill_id": 178,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content creation dashboard?",
+      "options": [
+        {
+          "option_id": 18146,
+          "option_text": "A visual display of content creation metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 18147,
+          "option_text": "A visual display of ignored content creation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18148,
+          "option_text": "A visual display of deleted content creation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18149,
+          "option_text": "A visual display of hidden content creation metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3972,
+      "subskill_id": 179,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a content distribution dashboard?",
+      "options": [
+        {
+          "option_id": 18150,
+          "option_text": "A visual display of content distribution metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 18151,
+          "option_text": "A visual display of ignored content distribution metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18152,
+          "option_text": "A visual display of deleted content distribution metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18153,
+          "option_text": "A visual display of hidden content distribution metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3973,
+      "subskill_id": 180,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting dashboard?",
+      "options": [
+        {
+          "option_id": 18154,
+          "option_text": "A visual display of SEO copywriting metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 18155,
+          "option_text": "A visual display of ignored SEO copywriting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18156,
+          "option_text": "A visual display of deleted SEO copywriting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18157,
+          "option_text": "A visual display of hidden SEO copywriting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3974,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement dashboard?",
+      "options": [
+        {
+          "option_id": 18158,
+          "option_text": "A visual display of audience engagement metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 18159,
+          "option_text": "A visual display of ignored audience engagement metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18160,
+          "option_text": "A visual display of deleted audience engagement metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 18161,
+          "option_text": "A visual display of hidden audience engagement metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3975,
+      "subskill_id": 181,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an audience engagement playbook?",
+      "options": [
+        {
+          "option_id": 18162,
+          "option_text": "A guide for audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18163,
+          "option_text": "A guide for ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18164,
+          "option_text": "A guide for deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18165,
+          "option_text": "A guide for hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3976,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale content creation?",
+      "options": [
+        {
+          "option_id": 18166,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 18167,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18168,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18169,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3977,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content creation ecosystem?",
+      "options": [
+        {
+          "option_id": 18170,
+          "option_text": "The interconnected system of content creation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 18171,
+          "option_text": "A single content creation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 18172,
+          "option_text": "A manual content creation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 18173,
+          "option_text": "A content creation reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3978,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content creation AI?",
+      "options": [
+        {
+          "option_id": 18174,
+          "option_text": "The use of artificial intelligence to improve content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 18175,
+          "option_text": "The use of manual processes for content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18176,
+          "option_text": "The use of ignoring for content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18177,
+          "option_text": "The use of deleting for content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3979,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content creation future?",
+      "options": [
+        {
+          "option_id": 18178,
+          "option_text": "The future of content creation",
+          "is_correct": true
+        },
+        {
+          "option_id": 18179,
+          "option_text": "The future of ignoring content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18180,
+          "option_text": "The future of deleting content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18181,
+          "option_text": "The future of hiding content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3980,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content creation enterprise strategy?",
+      "options": [
+        {
+          "option_id": 18182,
+          "option_text": "A high-level strategy for content creation in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 18183,
+          "option_text": "A high-level strategy for ignoring content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18184,
+          "option_text": "A high-level strategy for deleting content creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 18185,
+          "option_text": "A high-level strategy for hiding content creation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3981,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale content distribution?",
+      "options": [
+        {
+          "option_id": 18186,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 18187,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18188,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18189,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3982,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content distribution ecosystem?",
+      "options": [
+        {
+          "option_id": 18190,
+          "option_text": "The interconnected system of content distribution tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 18191,
+          "option_text": "A single content distribution tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 18192,
+          "option_text": "A manual content distribution process",
+          "is_correct": false
+        },
+        {
+          "option_id": 18193,
+          "option_text": "A content distribution reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3983,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content distribution AI?",
+      "options": [
+        {
+          "option_id": 18194,
+          "option_text": "The use of artificial intelligence to improve content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18195,
+          "option_text": "The use of manual processes for content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18196,
+          "option_text": "The use of ignoring for content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18197,
+          "option_text": "The use of deleting for content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3984,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content distribution future?",
+      "options": [
+        {
+          "option_id": 18198,
+          "option_text": "The future of content distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 18199,
+          "option_text": "The future of ignoring content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18200,
+          "option_text": "The future of deleting content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18201,
+          "option_text": "The future of hiding content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3985,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is content distribution enterprise strategy?",
+      "options": [
+        {
+          "option_id": 18202,
+          "option_text": "A high-level strategy for content distribution in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 18203,
+          "option_text": "A high-level strategy for ignoring content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18204,
+          "option_text": "A high-level strategy for deleting content distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 18205,
+          "option_text": "A high-level strategy for hiding content distribution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3986,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale SEO copywriting?",
+      "options": [
+        {
+          "option_id": 18206,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 18207,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18208,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18209,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3987,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting ecosystem?",
+      "options": [
+        {
+          "option_id": 18210,
+          "option_text": "The interconnected system of SEO copywriting tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 18211,
+          "option_text": "A single SEO copywriting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 18212,
+          "option_text": "A manual SEO copywriting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 18213,
+          "option_text": "An SEO copywriting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3988,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is SEO copywriting AI?",
+      "options": [
+        {
+          "option_id": 18214,
+          "option_text": "The use of artificial intelligence to improve SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18215,
+          "option_text": "The use of manual processes for SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18216,
+          "option_text": "The use of ignoring for SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18217,
+          "option_text": "The use of deleting for SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3989,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is SEO copywriting future?",
+      "options": [
+        {
+          "option_id": 18218,
+          "option_text": "The future of SEO copywriting",
+          "is_correct": true
+        },
+        {
+          "option_id": 18219,
+          "option_text": "The future of ignoring SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18220,
+          "option_text": "The future of deleting SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18221,
+          "option_text": "The future of hiding SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3990,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is SEO copywriting enterprise strategy?",
+      "options": [
+        {
+          "option_id": 18222,
+          "option_text": "A high-level strategy for SEO copywriting in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 18223,
+          "option_text": "A high-level strategy for ignoring SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18224,
+          "option_text": "A high-level strategy for deleting SEO copywriting",
+          "is_correct": false
+        },
+        {
+          "option_id": 18225,
+          "option_text": "A high-level strategy for hiding SEO copywriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3991,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale audience engagement?",
+      "options": [
+        {
+          "option_id": 18226,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 18227,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18228,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 18229,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3992,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an audience engagement ecosystem?",
+      "options": [
+        {
+          "option_id": 18230,
+          "option_text": "The interconnected system of audience engagement tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 18231,
+          "option_text": "A single audience engagement tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 18232,
+          "option_text": "A manual audience engagement process",
+          "is_correct": false
+        },
+        {
+          "option_id": 18233,
+          "option_text": "An audience engagement reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3993,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is audience engagement AI?",
+      "options": [
+        {
+          "option_id": 18234,
+          "option_text": "The use of artificial intelligence to improve audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18235,
+          "option_text": "The use of manual processes for audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18236,
+          "option_text": "The use of ignoring for audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18237,
+          "option_text": "The use of deleting for audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3994,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is audience engagement future?",
+      "options": [
+        {
+          "option_id": 18238,
+          "option_text": "The future of audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18239,
+          "option_text": "The future of ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18240,
+          "option_text": "The future of deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18241,
+          "option_text": "The future of hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3995,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is audience engagement enterprise strategy?",
+      "options": [
+        {
+          "option_id": 18242,
+          "option_text": "A high-level strategy for audience engagement in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 18243,
+          "option_text": "A high-level strategy for ignoring audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18244,
+          "option_text": "A high-level strategy for deleting audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18245,
+          "option_text": "A high-level strategy for hiding audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3996,
+      "subskill_id": 178,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content creation governance?",
+      "options": [
+        {
+          "option_id": 18246,
+          "option_text": "The framework for managing content creation governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 18247,
+          "option_text": "The framework for ignoring content creation governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18248,
+          "option_text": "The framework for deleting content creation governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18249,
+          "option_text": "The framework for hiding content creation governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3997,
+      "subskill_id": 179,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a content distribution governance?",
+      "options": [
+        {
+          "option_id": 18250,
+          "option_text": "The framework for managing content distribution governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 18251,
+          "option_text": "The framework for ignoring content distribution governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18252,
+          "option_text": "The framework for deleting content distribution governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18253,
+          "option_text": "The framework for hiding content distribution governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3998,
+      "subskill_id": 180,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an SEO copywriting governance?",
+      "options": [
+        {
+          "option_id": 18254,
+          "option_text": "The framework for managing SEO copywriting governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 18255,
+          "option_text": "The framework for ignoring SEO copywriting governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18256,
+          "option_text": "The framework for deleting SEO copywriting governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 18257,
+          "option_text": "The framework for hiding SEO copywriting governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3999,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an audience engagement ROI?",
+      "options": [
+        {
+          "option_id": 18258,
+          "option_text": "The return on investment from audience engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 18259,
+          "option_text": "The cost of audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18260,
+          "option_text": "The loss from audience engagement",
+          "is_correct": false
+        },
+        {
+          "option_id": 18261,
+          "option_text": "The waste from audience engagement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 4000,
+      "subskill_id": 181,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an audience engagement ecosystem?",
+      "options": [
+        {
+          "option_id": 18262,
+          "option_text": "The interconnected system of audience engagement tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 18263,
+          "option_text": "A single audience engagement tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 18264,
+          "option_text": "A manual audience engagement process",
+          "is_correct": false
+        },
+        {
+          "option_id": 18265,
+          "option_text": "An audience engagement reporting tool",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

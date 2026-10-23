@@ -1,0 +1,2906 @@
+{
+  "skill_id": 22,
+  "skill_name": "Data Engineering",
+  "questions": [
+    {
+      "question_id": 2101,
+      "subskill_id": 104,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10666,
+          "option_text": "A data pipeline that extracts, transforms, and loads data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10667,
+          "option_text": "A data pipeline that only extracts data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10668,
+          "option_text": "A data pipeline that only transforms data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10669,
+          "option_text": "A data pipeline that only loads data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2102,
+      "subskill_id": 104,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does ETL stand for?",
+      "options": [
+        {
+          "option_id": 10670,
+          "option_text": "Extract, Transform, Load",
+          "is_correct": true
+        },
+        {
+          "option_id": 10671,
+          "option_text": "Extract, Load, Transform",
+          "is_correct": false
+        },
+        {
+          "option_id": 10672,
+          "option_text": "Transform, Extract, Load",
+          "is_correct": false
+        },
+        {
+          "option_id": 10673,
+          "option_text": "Load, Extract, Transform",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2103,
+      "subskill_id": 104,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the extract phase in ETL?",
+      "options": [
+        {
+          "option_id": 10674,
+          "option_text": "The process of collecting data from various sources",
+          "is_correct": true
+        },
+        {
+          "option_id": 10675,
+          "option_text": "The process of converting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10676,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10677,
+          "option_text": "The process of validating data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2104,
+      "subskill_id": 104,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the transform phase in ETL?",
+      "options": [
+        {
+          "option_id": 10678,
+          "option_text": "The process of converting data into a suitable format",
+          "is_correct": true
+        },
+        {
+          "option_id": 10679,
+          "option_text": "The process of collecting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10680,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10681,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2105,
+      "subskill_id": 104,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the load phase in ETL?",
+      "options": [
+        {
+          "option_id": 10682,
+          "option_text": "The process of loading data into a destination system",
+          "is_correct": true
+        },
+        {
+          "option_id": 10683,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10684,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10685,
+          "option_text": "The process of validating data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2106,
+      "subskill_id": 105,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Apache Airflow?",
+      "options": [
+        {
+          "option_id": 10686,
+          "option_text": "An open-source platform for programmatically authoring, scheduling, and monitoring workflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 10687,
+          "option_text": "A data warehouse platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 10688,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 10689,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2107,
+      "subskill_id": 105,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a DAG in Airflow?",
+      "options": [
+        {
+          "option_id": 10690,
+          "option_text": "A Directed Acyclic Graph representing a workflow in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10691,
+          "option_text": "A data structure in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10692,
+          "option_text": "A type of operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10693,
+          "option_text": "A type of sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2108,
+      "subskill_id": 105,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a task in Airflow?",
+      "options": [
+        {
+          "option_id": 10694,
+          "option_text": "A unit of work in an Airflow DAG",
+          "is_correct": true
+        },
+        {
+          "option_id": 10695,
+          "option_text": "A DAG in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10696,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10697,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2109,
+      "subskill_id": 105,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an operator in Airflow?",
+      "options": [
+        {
+          "option_id": 10698,
+          "option_text": "A class that defines a specific type of task in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10699,
+          "option_text": "A DAG in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10700,
+          "option_text": "A task in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10701,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2110,
+      "subskill_id": 105,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Airflow scheduler?",
+      "options": [
+        {
+          "option_id": 10702,
+          "option_text": "The component that manages task execution in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10703,
+          "option_text": "The web server in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10704,
+          "option_text": "The metadata database in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10705,
+          "option_text": "The worker in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2111,
+      "subskill_id": 106,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Apache Spark?",
+      "options": [
+        {
+          "option_id": 10706,
+          "option_text": "An open-source unified analytics engine for large-scale data processing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10707,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10708,
+          "option_text": "A data warehouse platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 10709,
+          "option_text": "A database management system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2112,
+      "subskill_id": 106,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Spark cluster?",
+      "options": [
+        {
+          "option_id": 10710,
+          "option_text": "A group of nodes working together to run Spark applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 10711,
+          "option_text": "A single node running Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10712,
+          "option_text": "A data warehouse cluster",
+          "is_correct": false
+        },
+        {
+          "option_id": 10713,
+          "option_text": "A database cluster",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2113,
+      "subskill_id": 106,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Spark application?",
+      "options": [
+        {
+          "option_id": 10714,
+          "option_text": "A program that runs on a Spark cluster",
+          "is_correct": true
+        },
+        {
+          "option_id": 10715,
+          "option_text": "A task in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10716,
+          "option_text": "A stage in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10717,
+          "option_text": "A job in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2114,
+      "subskill_id": 106,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Spark job?",
+      "options": [
+        {
+          "option_id": 10718,
+          "option_text": "A unit of work in a Spark application",
+          "is_correct": true
+        },
+        {
+          "option_id": 10719,
+          "option_text": "A stage in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10720,
+          "option_text": "A task in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10721,
+          "option_text": "A partition in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2115,
+      "subskill_id": 106,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Spark stage?",
+      "options": [
+        {
+          "option_id": 10722,
+          "option_text": "A phase in a Spark job that consists of multiple tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 10723,
+          "option_text": "A job in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10724,
+          "option_text": "A task in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10725,
+          "option_text": "A partition in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2116,
+      "subskill_id": 107,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a data warehouse?",
+      "options": [
+        {
+          "option_id": 10726,
+          "option_text": "A system that stores and analyzes large volumes of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10727,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 10728,
+          "option_text": "A data lake",
+          "is_correct": false
+        },
+        {
+          "option_id": 10729,
+          "option_text": "A data mart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2117,
+      "subskill_id": 107,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a data warehouse?",
+      "options": [
+        {
+          "option_id": 10730,
+          "option_text": "To support business intelligence and analytics",
+          "is_correct": true
+        },
+        {
+          "option_id": 10731,
+          "option_text": "To store transactional data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10732,
+          "option_text": "To support real-time applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 10733,
+          "option_text": "To store raw data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2118,
+      "subskill_id": 107,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is ETL in data warehousing?",
+      "options": [
+        {
+          "option_id": 10734,
+          "option_text": "The process of extracting, transforming, and loading data in a data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10735,
+          "option_text": "The process of analyzing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10736,
+          "option_text": "The process of visualizing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10737,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2119,
+      "subskill_id": 107,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a fact table in a data warehouse?",
+      "options": [
+        {
+          "option_id": 10738,
+          "option_text": "A table that stores quantitative data in a data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10739,
+          "option_text": "A table that stores descriptive data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10740,
+          "option_text": "A table that stores date and time data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10741,
+          "option_text": "A table that stores aggregated data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2120,
+      "subskill_id": 107,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dimension table in a data warehouse?",
+      "options": [
+        {
+          "option_id": 10742,
+          "option_text": "A table that stores descriptive data in a data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10743,
+          "option_text": "A table that stores quantitative data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10744,
+          "option_text": "A table that stores date and time data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10745,
+          "option_text": "A table that stores aggregated data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2121,
+      "subskill_id": 108,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is dbt?",
+      "options": [
+        {
+          "option_id": 10746,
+          "option_text": "A tool for transforming data in the data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10747,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10748,
+          "option_text": "A data extraction tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10749,
+          "option_text": "A data loading tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2122,
+      "subskill_id": 108,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dbt model?",
+      "options": [
+        {
+          "option_id": 10750,
+          "option_text": "A SQL SELECT statement that represents a transformation in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10751,
+          "option_text": "A table in a data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 10752,
+          "option_text": "A view in a data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 10753,
+          "option_text": "A stored procedure in a data warehouse",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2123,
+      "subskill_id": 108,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is dbt Cloud?",
+      "options": [
+        {
+          "option_id": 10754,
+          "option_text": "A cloud-based platform for dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10755,
+          "option_text": "An open-source version of dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10756,
+          "option_text": "A dbt package",
+          "is_correct": false
+        },
+        {
+          "option_id": 10757,
+          "option_text": "A dbt macro",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2124,
+      "subskill_id": 108,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is dbt Core?",
+      "options": [
+        {
+          "option_id": 10758,
+          "option_text": "An open-source version of dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10759,
+          "option_text": "A cloud-based platform for dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10760,
+          "option_text": "A dbt package",
+          "is_correct": false
+        },
+        {
+          "option_id": 10761,
+          "option_text": "A dbt macro",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2125,
+      "subskill_id": 108,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a dbt project?",
+      "options": [
+        {
+          "option_id": 10762,
+          "option_text": "A collection of dbt models, tests, and macros",
+          "is_correct": true
+        },
+        {
+          "option_id": 10763,
+          "option_text": "A dbt Cloud project",
+          "is_correct": false
+        },
+        {
+          "option_id": 10764,
+          "option_text": "A dbt Core project",
+          "is_correct": false
+        },
+        {
+          "option_id": 10765,
+          "option_text": "A dbt package",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2126,
+      "subskill_id": 104,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you design an ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10766,
+          "option_text": "By identifying data sources, transformations, and destinations",
+          "is_correct": true
+        },
+        {
+          "option_id": 10767,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10768,
+          "option_text": "By copying an existing pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 10769,
+          "option_text": "By using only one tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2127,
+      "subskill_id": 104,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between ETL and ELT?",
+      "options": [
+        {
+          "option_id": 10770,
+          "option_text": "ETL transforms before loading; ELT loads before transforming",
+          "is_correct": true
+        },
+        {
+          "option_id": 10771,
+          "option_text": "ELT transforms before loading; ETL loads before transforming",
+          "is_correct": false
+        },
+        {
+          "option_id": 10772,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10773,
+          "option_text": "ETL is for on-premises; ELT is for the cloud",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2128,
+      "subskill_id": 104,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is data extraction in ETL?",
+      "options": [
+        {
+          "option_id": 10774,
+          "option_text": "The process of collecting data from sources",
+          "is_correct": true
+        },
+        {
+          "option_id": 10775,
+          "option_text": "The process of converting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10776,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10777,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2129,
+      "subskill_id": 104,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is data transformation in ETL?",
+      "options": [
+        {
+          "option_id": 10778,
+          "option_text": "The process of converting data into a suitable format",
+          "is_correct": true
+        },
+        {
+          "option_id": 10779,
+          "option_text": "The process of collecting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10780,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10781,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2130,
+      "subskill_id": 104,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is data loading in ETL?",
+      "options": [
+        {
+          "option_id": 10782,
+          "option_text": "The process of loading data into a destination system",
+          "is_correct": true
+        },
+        {
+          "option_id": 10783,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10784,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10785,
+          "option_text": "The process of storing data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2131,
+      "subskill_id": 105,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a DAG in Airflow?",
+      "options": [
+        {
+          "option_id": 10786,
+          "option_text": "By defining a Python file with DAG and tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 10787,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10788,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10789,
+          "option_text": "By using a configuration file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2132,
+      "subskill_id": 105,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Airflow web server?",
+      "options": [
+        {
+          "option_id": 10790,
+          "option_text": "The component that provides a user interface for Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10791,
+          "option_text": "The scheduler in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10792,
+          "option_text": "The metadata database in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10793,
+          "option_text": "The worker in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2133,
+      "subskill_id": 105,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Airflow metadata database?",
+      "options": [
+        {
+          "option_id": 10794,
+          "option_text": "The component that stores Airflow data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10795,
+          "option_text": "The web server in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10796,
+          "option_text": "The scheduler in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10797,
+          "option_text": "The worker in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2134,
+      "subskill_id": 105,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sensor in Airflow?",
+      "options": [
+        {
+          "option_id": 10798,
+          "option_text": "A type of operator that waits for an external condition",
+          "is_correct": true
+        },
+        {
+          "option_id": 10799,
+          "option_text": "A type of operator that executes a task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10800,
+          "option_text": "A type of operator that loads data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10801,
+          "option_text": "A type of operator that transforms data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2135,
+      "subskill_id": 105,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a hook in Airflow?",
+      "options": [
+        {
+          "option_id": 10802,
+          "option_text": "A connector to external systems in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10803,
+          "option_text": "A task in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10804,
+          "option_text": "A DAG in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10805,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2136,
+      "subskill_id": 106,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Spark DataFrame?",
+      "options": [
+        {
+          "option_id": 10806,
+          "option_text": "A distributed collection of data organized into named columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 10807,
+          "option_text": "A database table",
+          "is_correct": false
+        },
+        {
+          "option_id": 10808,
+          "option_text": "A CSV file",
+          "is_correct": false
+        },
+        {
+          "option_id": 10809,
+          "option_text": "A JSON file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2137,
+      "subskill_id": 106,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Spark SQL?",
+      "options": [
+        {
+          "option_id": 10810,
+          "option_text": "A module for querying data using SQL in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 10811,
+          "option_text": "A module for streaming data in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10812,
+          "option_text": "A module for machine learning in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10813,
+          "option_text": "A module for graph processing in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2138,
+      "subskill_id": 106,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Spark Streaming?",
+      "options": [
+        {
+          "option_id": 10814,
+          "option_text": "A module for processing real-time data streams in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 10815,
+          "option_text": "A module for querying data in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10816,
+          "option_text": "A module for machine learning in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10817,
+          "option_text": "A module for graph processing in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2139,
+      "subskill_id": 106,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is MLlib in Spark?",
+      "options": [
+        {
+          "option_id": 10818,
+          "option_text": "A module for machine learning in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 10819,
+          "option_text": "A module for querying data in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10820,
+          "option_text": "A module for streaming data in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10821,
+          "option_text": "A module for graph processing in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2140,
+      "subskill_id": 106,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is GraphX in Spark?",
+      "options": [
+        {
+          "option_id": 10822,
+          "option_text": "A module for graph processing in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 10823,
+          "option_text": "A module for machine learning in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10824,
+          "option_text": "A module for streaming data in Spark",
+          "is_correct": false
+        },
+        {
+          "option_id": 10825,
+          "option_text": "A module for querying data in Spark",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2141,
+      "subskill_id": 107,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a star schema in data warehousing?",
+      "options": [
+        {
+          "option_id": 10826,
+          "option_text": "A schema with a central fact table and associated dimension tables",
+          "is_correct": true
+        },
+        {
+          "option_id": 10827,
+          "option_text": "A schema with multiple fact tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 10828,
+          "option_text": "A schema with no fact tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 10829,
+          "option_text": "A schema with only dimension tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2142,
+      "subskill_id": 107,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a snowflake schema in data warehousing?",
+      "options": [
+        {
+          "option_id": 10830,
+          "option_text": "A schema with normalized dimension tables",
+          "is_correct": true
+        },
+        {
+          "option_id": 10831,
+          "option_text": "A schema with denormalized dimension tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 10832,
+          "option_text": "A schema with no dimension tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 10833,
+          "option_text": "A schema with no fact tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2143,
+      "subskill_id": 107,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a data mart?",
+      "options": [
+        {
+          "option_id": 10834,
+          "option_text": "A subset of a data warehouse for a specific business area",
+          "is_correct": true
+        },
+        {
+          "option_id": 10835,
+          "option_text": "A full data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 10836,
+          "option_text": "A data lake",
+          "is_correct": false
+        },
+        {
+          "option_id": 10837,
+          "option_text": "A database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2144,
+      "subskill_id": 107,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an OLAP cube?",
+      "options": [
+        {
+          "option_id": 10838,
+          "option_text": "A multi-dimensional data structure for online analytical processing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10839,
+          "option_text": "A two-dimensional table",
+          "is_correct": false
+        },
+        {
+          "option_id": 10840,
+          "option_text": "A one-dimensional table",
+          "is_correct": false
+        },
+        {
+          "option_id": 10841,
+          "option_text": "A data warehouse schema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2145,
+      "subskill_id": 107,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a data lake?",
+      "options": [
+        {
+          "option_id": 10842,
+          "option_text": "A storage repository that holds raw data in its native format",
+          "is_correct": true
+        },
+        {
+          "option_id": 10843,
+          "option_text": "A data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 10844,
+          "option_text": "A data mart",
+          "is_correct": false
+        },
+        {
+          "option_id": 10845,
+          "option_text": "A database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2146,
+      "subskill_id": 108,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you install dbt?",
+      "options": [
+        {
+          "option_id": 10846,
+          "option_text": "By using pip install dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10847,
+          "option_text": "By using conda install dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10848,
+          "option_text": "By using apt-get install dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10849,
+          "option_text": "By using yum install dbt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2147,
+      "subskill_id": 108,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a dbt source?",
+      "options": [
+        {
+          "option_id": 10850,
+          "option_text": "A reference to a raw table in a dbt model",
+          "is_correct": true
+        },
+        {
+          "option_id": 10851,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10852,
+          "option_text": "A dbt test",
+          "is_correct": false
+        },
+        {
+          "option_id": 10853,
+          "option_text": "A dbt macro",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2148,
+      "subskill_id": 108,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a dbt test?",
+      "options": [
+        {
+          "option_id": 10854,
+          "option_text": "A way to validate data in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10855,
+          "option_text": "A way to transform data in dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10856,
+          "option_text": "A way to document data in dbt",
+          "is_correct": false
+        },
+        {
+          "option_id": 10857,
+          "option_text": "A way to deploy data in dbt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2149,
+      "subskill_id": 108,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a dbt macro?",
+      "options": [
+        {
+          "option_id": 10858,
+          "option_text": "A reusable piece of SQL in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10859,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10860,
+          "option_text": "A dbt test",
+          "is_correct": false
+        },
+        {
+          "option_id": 10861,
+          "option_text": "A dbt source",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2150,
+      "subskill_id": 108,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a dbt package?",
+      "options": [
+        {
+          "option_id": 10862,
+          "option_text": "A set of reusable dbt models and macros",
+          "is_correct": true
+        },
+        {
+          "option_id": 10863,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10864,
+          "option_text": "A dbt test",
+          "is_correct": false
+        },
+        {
+          "option_id": 10865,
+          "option_text": "A dbt source",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2151,
+      "subskill_id": 104,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is incremental loading in ETL?",
+      "options": [
+        {
+          "option_id": 10866,
+          "option_text": "Loading only new or changed data since the last load",
+          "is_correct": true
+        },
+        {
+          "option_id": 10867,
+          "option_text": "Loading all data every time",
+          "is_correct": false
+        },
+        {
+          "option_id": 10868,
+          "option_text": "Loading data in batches",
+          "is_correct": false
+        },
+        {
+          "option_id": 10869,
+          "option_text": "Loading data in real-time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2152,
+      "subskill_id": 104,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is CDC (Change Data Capture) in ETL?",
+      "options": [
+        {
+          "option_id": 10870,
+          "option_text": "A method of capturing changes in a data source",
+          "is_correct": true
+        },
+        {
+          "option_id": 10871,
+          "option_text": "A method of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10872,
+          "option_text": "A method of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10873,
+          "option_text": "A method of extracting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2153,
+      "subskill_id": 104,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is data quality in ETL?",
+      "options": [
+        {
+          "option_id": 10874,
+          "option_text": "The process of ensuring data accuracy and consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 10875,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10876,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10877,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2154,
+      "subskill_id": 104,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data pipeline orchestration?",
+      "options": [
+        {
+          "option_id": 10878,
+          "option_text": "The process of managing and scheduling data pipeline tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 10879,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10880,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10881,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2155,
+      "subskill_id": 104,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data pipeline monitoring?",
+      "options": [
+        {
+          "option_id": 10882,
+          "option_text": "The process of tracking and observing data pipeline performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10883,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10884,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10885,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2156,
+      "subskill_id": 105,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you schedule a DAG in Airflow?",
+      "options": [
+        {
+          "option_id": 10886,
+          "option_text": "By defining a schedule in the DAG file",
+          "is_correct": true
+        },
+        {
+          "option_id": 10887,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10888,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10889,
+          "option_text": "By using a configuration file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2157,
+      "subskill_id": 105,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a task dependency in Airflow?",
+      "options": [
+        {
+          "option_id": 10890,
+          "option_text": "The relationship between tasks that determines the order of execution",
+          "is_correct": true
+        },
+        {
+          "option_id": 10891,
+          "option_text": "The DAG in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10892,
+          "option_text": "The operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10893,
+          "option_text": "The sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2158,
+      "subskill_id": 105,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a task retry in Airflow?",
+      "options": [
+        {
+          "option_id": 10894,
+          "option_text": "The number of times a task should be retried on failure",
+          "is_correct": true
+        },
+        {
+          "option_id": 10895,
+          "option_text": "The timeout of a task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10896,
+          "option_text": "The schedule of a task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10897,
+          "option_text": "The SLA of a task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2159,
+      "subskill_id": 105,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a task timeout in Airflow?",
+      "options": [
+        {
+          "option_id": 10898,
+          "option_text": "The maximum time allowed for a task to complete",
+          "is_correct": true
+        },
+        {
+          "option_id": 10899,
+          "option_text": "The retry count of a task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10900,
+          "option_text": "The schedule of a task",
+          "is_correct": false
+        },
+        {
+          "option_id": 10901,
+          "option_text": "The SLA of a task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2160,
+      "subskill_id": 105,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a SLA in Airflow?",
+      "options": [
+        {
+          "option_id": 10902,
+          "option_text": "A Service Level Agreement for a task in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10903,
+          "option_text": "A task in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10904,
+          "option_text": "A DAG in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10905,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2161,
+      "subskill_id": 106,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Spark partition?",
+      "options": [
+        {
+          "option_id": 10906,
+          "option_text": "A logical division of data that allows parallel processing",
+          "is_correct": true
+        },
+        {
+          "option_id": 10907,
+          "option_text": "A Spark executor",
+          "is_correct": false
+        },
+        {
+          "option_id": 10908,
+          "option_text": "A Spark driver",
+          "is_correct": false
+        },
+        {
+          "option_id": 10909,
+          "option_text": "A Spark worker",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2162,
+      "subskill_id": 106,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Spark executor?",
+      "options": [
+        {
+          "option_id": 10910,
+          "option_text": "A process that runs tasks on a Spark cluster",
+          "is_correct": true
+        },
+        {
+          "option_id": 10911,
+          "option_text": "A Spark driver",
+          "is_correct": false
+        },
+        {
+          "option_id": 10912,
+          "option_text": "A Spark worker",
+          "is_correct": false
+        },
+        {
+          "option_id": 10913,
+          "option_text": "A Spark task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2163,
+      "subskill_id": 106,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Spark driver?",
+      "options": [
+        {
+          "option_id": 10914,
+          "option_text": "A process that runs the main() function in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 10915,
+          "option_text": "A Spark executor",
+          "is_correct": false
+        },
+        {
+          "option_id": 10916,
+          "option_text": "A Spark worker",
+          "is_correct": false
+        },
+        {
+          "option_id": 10917,
+          "option_text": "A Spark task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2164,
+      "subskill_id": 106,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Spark worker?",
+      "options": [
+        {
+          "option_id": 10918,
+          "option_text": "A node that runs Spark executors",
+          "is_correct": true
+        },
+        {
+          "option_id": 10919,
+          "option_text": "A Spark driver",
+          "is_correct": false
+        },
+        {
+          "option_id": 10920,
+          "option_text": "A Spark executor",
+          "is_correct": false
+        },
+        {
+          "option_id": 10921,
+          "option_text": "A Spark task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2165,
+      "subskill_id": 106,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a Spark task?",
+      "options": [
+        {
+          "option_id": 10922,
+          "option_text": "A unit of work sent to a Spark executor",
+          "is_correct": true
+        },
+        {
+          "option_id": 10923,
+          "option_text": "A Spark partition",
+          "is_correct": false
+        },
+        {
+          "option_id": 10924,
+          "option_text": "A Spark executor",
+          "is_correct": false
+        },
+        {
+          "option_id": 10925,
+          "option_text": "A Spark driver",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2166,
+      "subskill_id": 107,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data warehouse architecture?",
+      "options": [
+        {
+          "option_id": 10926,
+          "option_text": "A framework for organizing data flows",
+          "is_correct": true
+        },
+        {
+          "option_id": 10927,
+          "option_text": "A data warehouse tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10928,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10929,
+          "option_text": "A data extraction tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2167,
+      "subskill_id": 107,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data warehouse modeling?",
+      "options": [
+        {
+          "option_id": 10930,
+          "option_text": "The process of designing data warehouse tables",
+          "is_correct": true
+        },
+        {
+          "option_id": 10931,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10932,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10933,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2168,
+      "subskill_id": 107,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data warehouse design?",
+      "options": [
+        {
+          "option_id": 10934,
+          "option_text": "The process of planning a data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10935,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10936,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10937,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2169,
+      "subskill_id": 107,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data warehouse optimization?",
+      "options": [
+        {
+          "option_id": 10938,
+          "option_text": "The process of improving data warehouse performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10939,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10940,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10941,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2170,
+      "subskill_id": 107,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data warehouse migration?",
+      "options": [
+        {
+          "option_id": 10942,
+          "option_text": "The process of moving data to a new data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 10943,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10944,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10945,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2171,
+      "subskill_id": 108,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize dbt models?",
+      "options": [
+        {
+          "option_id": 10946,
+          "option_text": "By using efficient SQL and materialization strategies",
+          "is_correct": true
+        },
+        {
+          "option_id": 10947,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10948,
+          "option_text": "By copying from others",
+          "is_correct": false
+        },
+        {
+          "option_id": 10949,
+          "option_text": "By ignoring performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2172,
+      "subskill_id": 108,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test dbt models?",
+      "options": [
+        {
+          "option_id": 10950,
+          "option_text": "By writing and running tests in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10951,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10952,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10953,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2173,
+      "subskill_id": 108,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you document dbt models?",
+      "options": [
+        {
+          "option_id": 10954,
+          "option_text": "By using the documentation feature in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 10955,
+          "option_text": "By writing a README file",
+          "is_correct": false
+        },
+        {
+          "option_id": 10956,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10957,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2174,
+      "subskill_id": 108,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you deploy dbt models?",
+      "options": [
+        {
+          "option_id": 10958,
+          "option_text": "By using dbt Cloud or dbt Core to run models",
+          "is_correct": true
+        },
+        {
+          "option_id": 10959,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10960,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10961,
+          "option_text": "By using a configuration file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2175,
+      "subskill_id": 108,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you monitor dbt models?",
+      "options": [
+        {
+          "option_id": 10962,
+          "option_text": "By using dbt Cloud's monitoring features",
+          "is_correct": true
+        },
+        {
+          "option_id": 10963,
+          "option_text": "By using a web interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 10964,
+          "option_text": "By using a command-line tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 10965,
+          "option_text": "By using a configuration file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2176,
+      "subskill_id": 104,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a streaming ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10966,
+          "option_text": "A pipeline that processes data in near-real-time",
+          "is_correct": true
+        },
+        {
+          "option_id": 10967,
+          "option_text": "A pipeline that processes data in batches",
+          "is_correct": false
+        },
+        {
+          "option_id": 10968,
+          "option_text": "A pipeline that processes data in one go",
+          "is_correct": false
+        },
+        {
+          "option_id": 10969,
+          "option_text": "A pipeline that processes data in a single batch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2177,
+      "subskill_id": 104,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a batch ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10970,
+          "option_text": "A pipeline that processes data in batches at scheduled times",
+          "is_correct": true
+        },
+        {
+          "option_id": 10971,
+          "option_text": "A pipeline that processes data in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 10972,
+          "option_text": "A pipeline that processes data continuously",
+          "is_correct": false
+        },
+        {
+          "option_id": 10973,
+          "option_text": "A pipeline that processes data in one go",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2178,
+      "subskill_id": 104,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a hybrid ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10974,
+          "option_text": "A pipeline that combines batch and streaming capabilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 10975,
+          "option_text": "A pipeline that processes data in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 10976,
+          "option_text": "A pipeline that processes data in batches",
+          "is_correct": false
+        },
+        {
+          "option_id": 10977,
+          "option_text": "A pipeline that processes data in one go",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2179,
+      "subskill_id": 104,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a real-time ETL pipeline?",
+      "options": [
+        {
+          "option_id": 10978,
+          "option_text": "A pipeline that processes data as soon as it is generated",
+          "is_correct": true
+        },
+        {
+          "option_id": 10979,
+          "option_text": "A pipeline that processes data in batches",
+          "is_correct": false
+        },
+        {
+          "option_id": 10980,
+          "option_text": "A pipeline that processes data at scheduled times",
+          "is_correct": false
+        },
+        {
+          "option_id": 10981,
+          "option_text": "A pipeline that processes data in one go",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2180,
+      "subskill_id": 104,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data pipeline in the cloud?",
+      "options": [
+        {
+          "option_id": 10982,
+          "option_text": "A data pipeline deployed and run on cloud infrastructure",
+          "is_correct": true
+        },
+        {
+          "option_id": 10983,
+          "option_text": "A data pipeline deployed on-premises",
+          "is_correct": false
+        },
+        {
+          "option_id": 10984,
+          "option_text": "A data pipeline deployed in a hybrid environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 10985,
+          "option_text": "A data pipeline deployed on a local machine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2181,
+      "subskill_id": 105,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a custom operator in Airflow?",
+      "options": [
+        {
+          "option_id": 10986,
+          "option_text": "An operator that can be defined and used in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10987,
+          "option_text": "A built-in operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10988,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10989,
+          "option_text": "A hook in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2182,
+      "subskill_id": 105,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a custom sensor in Airflow?",
+      "options": [
+        {
+          "option_id": 10990,
+          "option_text": "A sensor that can be defined and used in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10991,
+          "option_text": "A built-in sensor in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10992,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10993,
+          "option_text": "A hook in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2183,
+      "subskill_id": 105,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a custom hook in Airflow?",
+      "options": [
+        {
+          "option_id": 10994,
+          "option_text": "A hook that can be defined and used in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10995,
+          "option_text": "A built-in hook in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10996,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 10997,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2184,
+      "subskill_id": 105,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a custom executor in Airflow?",
+      "options": [
+        {
+          "option_id": 10998,
+          "option_text": "An executor that can be defined and used in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 10999,
+          "option_text": "A built-in executor in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 11000,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 11001,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2185,
+      "subskill_id": 105,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a custom plugin in Airflow?",
+      "options": [
+        {
+          "option_id": 11002,
+          "option_text": "A plugin that can be defined and used in Airflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 11003,
+          "option_text": "A built-in plugin in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 11004,
+          "option_text": "An operator in Airflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 11005,
+          "option_text": "A sensor in Airflow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2186,
+      "subskill_id": 106,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Spark tuning?",
+      "options": [
+        {
+          "option_id": 11006,
+          "option_text": "The process of adjusting Spark configurations for better performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11007,
+          "option_text": "The process of writing Spark code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11008,
+          "option_text": "The process of deploying Spark applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 11009,
+          "option_text": "The process of monitoring Spark applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2187,
+      "subskill_id": 106,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Spark optimization?",
+      "options": [
+        {
+          "option_id": 11010,
+          "option_text": "The process of improving Spark code for better performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11011,
+          "option_text": "The process of writing Spark code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11012,
+          "option_text": "The process of deploying Spark applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 11013,
+          "option_text": "The process of monitoring Spark applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2188,
+      "subskill_id": 106,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Spark performance tuning?",
+      "options": [
+        {
+          "option_id": 11014,
+          "option_text": "The process of tuning Spark for better performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11015,
+          "option_text": "The process of writing Spark code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11016,
+          "option_text": "The process of deploying Spark applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 11017,
+          "option_text": "The process of monitoring Spark applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2189,
+      "subskill_id": 106,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Spark resource management?",
+      "options": [
+        {
+          "option_id": 11018,
+          "option_text": "The process of managing resources in Spark",
+          "is_correct": true
+        },
+        {
+          "option_id": 11019,
+          "option_text": "The process of writing Spark code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11020,
+          "option_text": "The process of deploying Spark applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 11021,
+          "option_text": "The process of monitoring Spark applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2190,
+      "subskill_id": 106,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Spark cluster management?",
+      "options": [
+        {
+          "option_id": 11022,
+          "option_text": "The process of managing a Spark cluster",
+          "is_correct": true
+        },
+        {
+          "option_id": 11023,
+          "option_text": "The process of writing Spark code",
+          "is_correct": false
+        },
+        {
+          "option_id": 11024,
+          "option_text": "The process of deploying Spark applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 11025,
+          "option_text": "The process of monitoring Spark applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2191,
+      "subskill_id": 107,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a cloud data warehouse?",
+      "options": [
+        {
+          "option_id": 11026,
+          "option_text": "A data warehouse hosted in the cloud",
+          "is_correct": true
+        },
+        {
+          "option_id": 11027,
+          "option_text": "An on-premises data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 11028,
+          "option_text": "A data lake",
+          "is_correct": false
+        },
+        {
+          "option_id": 11029,
+          "option_text": "A data mart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2192,
+      "subskill_id": 107,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a modern data warehouse?",
+      "options": [
+        {
+          "option_id": 11030,
+          "option_text": "A data warehouse that includes cloud-native features",
+          "is_correct": true
+        },
+        {
+          "option_id": 11031,
+          "option_text": "A traditional data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 11032,
+          "option_text": "A data lake",
+          "is_correct": false
+        },
+        {
+          "option_id": 11033,
+          "option_text": "A data mart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2193,
+      "subskill_id": 107,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data warehouse automation?",
+      "options": [
+        {
+          "option_id": 11034,
+          "option_text": "The process of automating data warehouse tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 11035,
+          "option_text": "The process of manually managing a data warehouse",
+          "is_correct": false
+        },
+        {
+          "option_id": 11036,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11037,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2194,
+      "subskill_id": 107,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data warehouse governance?",
+      "options": [
+        {
+          "option_id": 11038,
+          "option_text": "The process of managing data warehouse policies and compliance",
+          "is_correct": true
+        },
+        {
+          "option_id": 11039,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11040,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11041,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2195,
+      "subskill_id": 107,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data warehouse security?",
+      "options": [
+        {
+          "option_id": 11042,
+          "option_text": "The process of securing a data warehouse",
+          "is_correct": true
+        },
+        {
+          "option_id": 11043,
+          "option_text": "The process of loading data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11044,
+          "option_text": "The process of extracting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 11045,
+          "option_text": "The process of transforming data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2196,
+      "subskill_id": 108,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is dbt Analytics Engineering?",
+      "options": [
+        {
+          "option_id": 11046,
+          "option_text": "A set of best practices for analytics engineering with dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 11047,
+          "option_text": "A dbt package",
+          "is_correct": false
+        },
+        {
+          "option_id": 11048,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11049,
+          "option_text": "A dbt test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2197,
+      "subskill_id": 108,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is dbt Mesh?",
+      "options": [
+        {
+          "option_id": 11050,
+          "option_text": "A framework for managing dbt projects at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 11051,
+          "option_text": "A dbt package",
+          "is_correct": false
+        },
+        {
+          "option_id": 11052,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11053,
+          "option_text": "A dbt test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2198,
+      "subskill_id": 108,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is dbt Semantic Layer?",
+      "options": [
+        {
+          "option_id": 11054,
+          "option_text": "A feature for defining and using metrics in dbt",
+          "is_correct": true
+        },
+        {
+          "option_id": 11055,
+          "option_text": "A dbt package",
+          "is_correct": false
+        },
+        {
+          "option_id": 11056,
+          "option_text": "A dbt model",
+          "is_correct": false
+        },
+        {
+          "option_id": 11057,
+          "option_text": "A dbt test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2199,
+      "subskill_id": 108,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is dbt on Snowflake?",
+      "options": [
+        {
+          "option_id": 11058,
+          "option_text": "A dbt implementation on Snowflake",
+          "is_correct": true
+        },
+        {
+          "option_id": 11059,
+          "option_text": "A dbt implementation on BigQuery",
+          "is_correct": false
+        },
+        {
+          "option_id": 11060,
+          "option_text": "A dbt implementation on Redshift",
+          "is_correct": false
+        },
+        {
+          "option_id": 11061,
+          "option_text": "A dbt implementation on Databricks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2200,
+      "subskill_id": 108,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is dbt on BigQuery?",
+      "options": [
+        {
+          "option_id": 11062,
+          "option_text": "A dbt implementation on BigQuery",
+          "is_correct": true
+        },
+        {
+          "option_id": 11063,
+          "option_text": "A dbt implementation on Snowflake",
+          "is_correct": false
+        },
+        {
+          "option_id": 11064,
+          "option_text": "A dbt implementation on Redshift",
+          "is_correct": false
+        },
+        {
+          "option_id": 11065,
+          "option_text": "A dbt implementation on Databricks",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

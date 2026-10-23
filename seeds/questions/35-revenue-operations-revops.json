@@ -1,0 +1,2906 @@
+{
+  "skill_id": 35,
+  "skill_name": "Revenue Operations (RevOps)",
+  "questions": [
+    {
+      "question_id": 3401,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is revenue alignment in RevOps?",
+      "options": [
+        {
+          "option_id": 15866,
+          "option_text": "The process of ensuring all revenue-generating teams are aligned toward common goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15867,
+          "option_text": "The process of ignoring revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15868,
+          "option_text": "The process of deleting revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15869,
+          "option_text": "The process of hiding revenue teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3402,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of revenue alignment?",
+      "options": [
+        {
+          "option_id": 15870,
+          "option_text": "To improve efficiency, reduce friction, and drive revenue growth",
+          "is_correct": true
+        },
+        {
+          "option_id": 15871,
+          "option_text": "To reduce revenue growth",
+          "is_correct": false
+        },
+        {
+          "option_id": 15872,
+          "option_text": "To ignore revenue goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15873,
+          "option_text": "To delete revenue goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3403,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue team?",
+      "options": [
+        {
+          "option_id": 15874,
+          "option_text": "A group of individuals responsible for generating revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15875,
+          "option_text": "A group of individuals responsible for ignoring revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15876,
+          "option_text": "A group of individuals responsible for deleting revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15877,
+          "option_text": "A group of individuals responsible for hiding revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3404,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue goal?",
+      "options": [
+        {
+          "option_id": 15878,
+          "option_text": "A target for revenue generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15879,
+          "option_text": "A target for revenue reduction",
+          "is_correct": false
+        },
+        {
+          "option_id": 15880,
+          "option_text": "A target for revenue ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15881,
+          "option_text": "A target for revenue deletion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3405,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue strategy?",
+      "options": [
+        {
+          "option_id": 15882,
+          "option_text": "A plan for achieving revenue goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15883,
+          "option_text": "A plan for ignoring revenue goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15884,
+          "option_text": "A plan for deleting revenue goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15885,
+          "option_text": "A plan for hiding revenue goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3406,
+      "subskill_id": 158,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue process?",
+      "options": [
+        {
+          "option_id": 15886,
+          "option_text": "A set of steps for generating revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15887,
+          "option_text": "A set of steps for ignoring revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15888,
+          "option_text": "A set of steps for deleting revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15889,
+          "option_text": "A set of steps for hiding revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3407,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is pipeline optimization in RevOps?",
+      "options": [
+        {
+          "option_id": 15890,
+          "option_text": "The process of improving the efficiency and effectiveness of the sales pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 15891,
+          "option_text": "The process of ignoring the sales pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15892,
+          "option_text": "The process of deleting the sales pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15893,
+          "option_text": "The process of hiding the sales pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3408,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of pipeline optimization?",
+      "options": [
+        {
+          "option_id": 15894,
+          "option_text": "To increase conversion rates, accelerate deals, and maximize revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15895,
+          "option_text": "To decrease conversion rates",
+          "is_correct": false
+        },
+        {
+          "option_id": 15896,
+          "option_text": "To ignore pipeline efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 15897,
+          "option_text": "To delete pipeline data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3409,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales pipeline?",
+      "options": [
+        {
+          "option_id": 15898,
+          "option_text": "A visual representation of the stages a lead goes through to become a customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 15899,
+          "option_text": "A visual representation of ignored leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 15900,
+          "option_text": "A visual representation of deleted leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 15901,
+          "option_text": "A visual representation of hidden leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3410,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pipeline stage?",
+      "options": [
+        {
+          "option_id": 15902,
+          "option_text": "A phase in the sales pipeline that a deal progresses through",
+          "is_correct": true
+        },
+        {
+          "option_id": 15903,
+          "option_text": "A phase in ignoring deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15904,
+          "option_text": "A phase in deleting deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15905,
+          "option_text": "A phase in hiding deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3411,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pipeline velocity?",
+      "options": [
+        {
+          "option_id": 15906,
+          "option_text": "The speed at which deals move through the pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 15907,
+          "option_text": "The value of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15908,
+          "option_text": "The number of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15909,
+          "option_text": "The age of deals in the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3412,
+      "subskill_id": 159,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pipeline coverage?",
+      "options": [
+        {
+          "option_id": 15910,
+          "option_text": "The ratio of pipeline value to sales quota",
+          "is_correct": true
+        },
+        {
+          "option_id": 15911,
+          "option_text": "The number of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15912,
+          "option_text": "The speed of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15913,
+          "option_text": "The age of deals in the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3413,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is forecasting in RevOps?",
+      "options": [
+        {
+          "option_id": 15914,
+          "option_text": "The process of predicting future revenue based on historical data and trends",
+          "is_correct": true
+        },
+        {
+          "option_id": 15915,
+          "option_text": "The process of guessing future revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15916,
+          "option_text": "The process of ignoring future revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15917,
+          "option_text": "The process of deleting future revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3414,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of forecasting?",
+      "options": [
+        {
+          "option_id": 15918,
+          "option_text": "To provide insights for planning and decision-making",
+          "is_correct": true
+        },
+        {
+          "option_id": 15919,
+          "option_text": "To ignore planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15920,
+          "option_text": "To delete planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 15921,
+          "option_text": "To hide planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3415,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a forecast type?",
+      "options": [
+        {
+          "option_id": 15922,
+          "option_text": "A type of forecast (e.g., best case, worst case, most likely)",
+          "is_correct": true
+        },
+        {
+          "option_id": 15923,
+          "option_text": "A type of guess",
+          "is_correct": false
+        },
+        {
+          "option_id": 15924,
+          "option_text": "A type of ignore",
+          "is_correct": false
+        },
+        {
+          "option_id": 15925,
+          "option_text": "A type of delete",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3416,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an analytics tool?",
+      "options": [
+        {
+          "option_id": 15926,
+          "option_text": "A tool used to analyze revenue data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15927,
+          "option_text": "A tool used to ignore revenue data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15928,
+          "option_text": "A tool used to delete revenue data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15929,
+          "option_text": "A tool used to hide revenue data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3417,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue analytics?",
+      "options": [
+        {
+          "option_id": 15930,
+          "option_text": "The analysis of revenue data to gain insights",
+          "is_correct": true
+        },
+        {
+          "option_id": 15931,
+          "option_text": "The analysis of ignored revenue data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15932,
+          "option_text": "The analysis of deleted revenue data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15933,
+          "option_text": "The analysis of hidden revenue data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3418,
+      "subskill_id": 160,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue dashboard?",
+      "options": [
+        {
+          "option_id": 15934,
+          "option_text": "A visual display of key revenue metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 15935,
+          "option_text": "A visual display of ignored revenue metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15936,
+          "option_text": "A visual display of deleted revenue metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15937,
+          "option_text": "A visual display of hidden revenue metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3419,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue strategy in RevOps?",
+      "options": [
+        {
+          "option_id": 15938,
+          "option_text": "A high-level plan for achieving revenue goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15939,
+          "option_text": "A high-level plan for ignoring revenue goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15940,
+          "option_text": "A high-level plan for deleting revenue goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15941,
+          "option_text": "A high-level plan for hiding revenue goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3420,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a revenue strategy?",
+      "options": [
+        {
+          "option_id": 15942,
+          "option_text": "To provide direction and focus for revenue generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15943,
+          "option_text": "To provide confusion",
+          "is_correct": false
+        },
+        {
+          "option_id": 15944,
+          "option_text": "To provide distraction",
+          "is_correct": false
+        },
+        {
+          "option_id": 15945,
+          "option_text": "To provide irrelevance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3421,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue model?",
+      "options": [
+        {
+          "option_id": 15946,
+          "option_text": "A structure for how a company generates revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15947,
+          "option_text": "A structure for ignoring revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15948,
+          "option_text": "A structure for deleting revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15949,
+          "option_text": "A structure for hiding revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3422,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue stream?",
+      "options": [
+        {
+          "option_id": 15950,
+          "option_text": "A source of revenue for a company",
+          "is_correct": true
+        },
+        {
+          "option_id": 15951,
+          "option_text": "A source of ignoring revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15952,
+          "option_text": "A source of deleting revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15953,
+          "option_text": "A source of hiding revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3423,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue driver?",
+      "options": [
+        {
+          "option_id": 15954,
+          "option_text": "A factor that influences revenue generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15955,
+          "option_text": "A factor that ignores revenue generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15956,
+          "option_text": "A factor that deletes revenue generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15957,
+          "option_text": "A factor that hides revenue generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3424,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue lever?",
+      "options": [
+        {
+          "option_id": 15958,
+          "option_text": "A factor that can be adjusted to increase revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 15959,
+          "option_text": "A factor that ignores revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15960,
+          "option_text": "A factor that deletes revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 15961,
+          "option_text": "A factor that hides revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3425,
+      "subskill_id": 161,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a revenue plan?",
+      "options": [
+        {
+          "option_id": 15962,
+          "option_text": "A plan for achieving revenue targets",
+          "is_correct": true
+        },
+        {
+          "option_id": 15963,
+          "option_text": "A plan for ignoring revenue targets",
+          "is_correct": false
+        },
+        {
+          "option_id": 15964,
+          "option_text": "A plan for deleting revenue targets",
+          "is_correct": false
+        },
+        {
+          "option_id": 15965,
+          "option_text": "A plan for hiding revenue targets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3426,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you achieve revenue alignment?",
+      "options": [
+        {
+          "option_id": 15966,
+          "option_text": "By defining common goals, processes, and metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 15967,
+          "option_text": "By ignoring common goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15968,
+          "option_text": "By deleting common goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15969,
+          "option_text": "By hiding common goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3427,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue alignment framework?",
+      "options": [
+        {
+          "option_id": 15970,
+          "option_text": "A structured approach to aligning revenue teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 15971,
+          "option_text": "A random approach to revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 15972,
+          "option_text": "A way to ignore revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 15973,
+          "option_text": "A way to delete revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3428,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue alignment process?",
+      "options": [
+        {
+          "option_id": 15974,
+          "option_text": "A set of steps for aligning revenue teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 15975,
+          "option_text": "A set of steps for ignoring revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15976,
+          "option_text": "A set of steps for deleting revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15977,
+          "option_text": "A set of steps for hiding revenue teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3429,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue alignment tool?",
+      "options": [
+        {
+          "option_id": 15978,
+          "option_text": "A tool for aligning revenue teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 15979,
+          "option_text": "A tool for ignoring revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15980,
+          "option_text": "A tool for deleting revenue teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 15981,
+          "option_text": "A tool for hiding revenue teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3430,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue alignment metric?",
+      "options": [
+        {
+          "option_id": 15982,
+          "option_text": "A metric for measuring revenue alignment",
+          "is_correct": true
+        },
+        {
+          "option_id": 15983,
+          "option_text": "A metric for measuring revenue ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 15984,
+          "option_text": "A metric for measuring revenue deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 15985,
+          "option_text": "A metric for measuring revenue hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3431,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you optimize a sales pipeline?",
+      "options": [
+        {
+          "option_id": 15986,
+          "option_text": "By analyzing the pipeline and identifying bottlenecks",
+          "is_correct": true
+        },
+        {
+          "option_id": 15987,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15988,
+          "option_text": "By ignoring the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15989,
+          "option_text": "By deleting the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3432,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization strategy?",
+      "options": [
+        {
+          "option_id": 15990,
+          "option_text": "A plan for improving pipeline efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 15991,
+          "option_text": "A plan for ignoring pipeline efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 15992,
+          "option_text": "A plan for deleting pipeline efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 15993,
+          "option_text": "A plan for hiding pipeline efficiency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3433,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization tool?",
+      "options": [
+        {
+          "option_id": 15994,
+          "option_text": "A tool for optimizing the pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 15995,
+          "option_text": "A tool for ignoring the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15996,
+          "option_text": "A tool for deleting the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15997,
+          "option_text": "A tool for hiding the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3434,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization metric?",
+      "options": [
+        {
+          "option_id": 15998,
+          "option_text": "A metric for measuring pipeline optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 15999,
+          "option_text": "A metric for measuring pipeline ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16000,
+          "option_text": "A metric for measuring pipeline deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16001,
+          "option_text": "A metric for measuring pipeline hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3435,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure pipeline health?",
+      "options": [
+        {
+          "option_id": 16002,
+          "option_text": "By tracking conversion rates, velocity, and coverage",
+          "is_correct": true
+        },
+        {
+          "option_id": 16003,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16004,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16005,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3436,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a forecast?",
+      "options": [
+        {
+          "option_id": 16006,
+          "option_text": "By analyzing historical data and current trends",
+          "is_correct": true
+        },
+        {
+          "option_id": 16007,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16008,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 16009,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3437,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting model?",
+      "options": [
+        {
+          "option_id": 16010,
+          "option_text": "A structured approach to forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16011,
+          "option_text": "A random approach to forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16012,
+          "option_text": "A way to ignore forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16013,
+          "option_text": "A way to delete forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3438,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting tool?",
+      "options": [
+        {
+          "option_id": 16014,
+          "option_text": "A tool for creating forecasts",
+          "is_correct": true
+        },
+        {
+          "option_id": 16015,
+          "option_text": "A tool for ignoring forecasts",
+          "is_correct": false
+        },
+        {
+          "option_id": 16016,
+          "option_text": "A tool for deleting forecasts",
+          "is_correct": false
+        },
+        {
+          "option_id": 16017,
+          "option_text": "A tool for hiding forecasts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3439,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a forecasting metric?",
+      "options": [
+        {
+          "option_id": 16018,
+          "option_text": "A metric for measuring forecast accuracy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16019,
+          "option_text": "A metric for measuring forecast ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16020,
+          "option_text": "A metric for measuring forecast deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16021,
+          "option_text": "A metric for measuring forecast hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3440,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure forecast accuracy?",
+      "options": [
+        {
+          "option_id": 16022,
+          "option_text": "By comparing forecasted to actual results",
+          "is_correct": true
+        },
+        {
+          "option_id": 16023,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16024,
+          "option_text": "By ignoring results",
+          "is_correct": false
+        },
+        {
+          "option_id": 16025,
+          "option_text": "By deleting results",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3441,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a revenue strategy?",
+      "options": [
+        {
+          "option_id": 16026,
+          "option_text": "By analyzing the market and defining goals",
+          "is_correct": true
+        },
+        {
+          "option_id": 16027,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16028,
+          "option_text": "By ignoring the market",
+          "is_correct": false
+        },
+        {
+          "option_id": 16029,
+          "option_text": "By deleting the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3442,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue strategy framework?",
+      "options": [
+        {
+          "option_id": 16030,
+          "option_text": "A structured approach to revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16031,
+          "option_text": "A random approach to revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16032,
+          "option_text": "A way to ignore revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16033,
+          "option_text": "A way to delete revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3443,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue strategy process?",
+      "options": [
+        {
+          "option_id": 16034,
+          "option_text": "A set of steps for creating a revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16035,
+          "option_text": "A set of steps for ignoring revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16036,
+          "option_text": "A set of steps for deleting revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16037,
+          "option_text": "A set of steps for hiding revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3444,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue strategy tool?",
+      "options": [
+        {
+          "option_id": 16038,
+          "option_text": "A tool for creating a revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16039,
+          "option_text": "A tool for ignoring revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16040,
+          "option_text": "A tool for deleting revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16041,
+          "option_text": "A tool for hiding revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3445,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue strategy metric?",
+      "options": [
+        {
+          "option_id": 16042,
+          "option_text": "A metric for measuring revenue strategy success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16043,
+          "option_text": "A metric for measuring revenue strategy ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16044,
+          "option_text": "A metric for measuring revenue strategy deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16045,
+          "option_text": "A metric for measuring revenue strategy hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3446,
+      "subskill_id": 158,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue team structure?",
+      "options": [
+        {
+          "option_id": 16046,
+          "option_text": "The structure of a revenue team",
+          "is_correct": true
+        },
+        {
+          "option_id": 16047,
+          "option_text": "The structure of an ignored revenue team",
+          "is_correct": false
+        },
+        {
+          "option_id": 16048,
+          "option_text": "The structure of a deleted revenue team",
+          "is_correct": false
+        },
+        {
+          "option_id": 16049,
+          "option_text": "The structure of a hidden revenue team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3447,
+      "subskill_id": 159,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pipeline conversion rate?",
+      "options": [
+        {
+          "option_id": 16050,
+          "option_text": "The percentage of deals that move from one stage to the next",
+          "is_correct": true
+        },
+        {
+          "option_id": 16051,
+          "option_text": "The percentage of deals that are ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 16052,
+          "option_text": "The percentage of deals that are deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 16053,
+          "option_text": "The percentage of deals that are hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3448,
+      "subskill_id": 160,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a leading indicator in forecasting?",
+      "options": [
+        {
+          "option_id": 16054,
+          "option_text": "A metric that predicts future revenue performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 16055,
+          "option_text": "A metric that ignores future revenue performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 16056,
+          "option_text": "A metric that deletes future revenue performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 16057,
+          "option_text": "A metric that hides future revenue performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3449,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue growth strategy?",
+      "options": [
+        {
+          "option_id": 16058,
+          "option_text": "A plan for increasing revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 16059,
+          "option_text": "A plan for decreasing revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 16060,
+          "option_text": "A plan for ignoring revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 16061,
+          "option_text": "A plan for deleting revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3450,
+      "subskill_id": 161,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a revenue diversification strategy?",
+      "options": [
+        {
+          "option_id": 16062,
+          "option_text": "A plan for diversifying revenue sources",
+          "is_correct": true
+        },
+        {
+          "option_id": 16063,
+          "option_text": "A plan for focusing on a single revenue source",
+          "is_correct": false
+        },
+        {
+          "option_id": 16064,
+          "option_text": "A plan for ignoring revenue diversification",
+          "is_correct": false
+        },
+        {
+          "option_id": 16065,
+          "option_text": "A plan for deleting revenue diversification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3451,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale revenue alignment?",
+      "options": [
+        {
+          "option_id": 16066,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16067,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16068,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16069,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3452,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a revenue alignment ecosystem?",
+      "options": [
+        {
+          "option_id": 16070,
+          "option_text": "The interconnected system of revenue alignment tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16071,
+          "option_text": "A single revenue alignment tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16072,
+          "option_text": "A manual revenue alignment process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16073,
+          "option_text": "A revenue alignment reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3453,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue alignment automation?",
+      "options": [
+        {
+          "option_id": 16074,
+          "option_text": "The use of automation to improve revenue alignment",
+          "is_correct": true
+        },
+        {
+          "option_id": 16075,
+          "option_text": "The use of manual processes for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16076,
+          "option_text": "The use of ignoring for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16077,
+          "option_text": "The use of deleting for revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3454,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue alignment analytics?",
+      "options": [
+        {
+          "option_id": 16078,
+          "option_text": "The use of analytics to improve revenue alignment",
+          "is_correct": true
+        },
+        {
+          "option_id": 16079,
+          "option_text": "The use of guessing for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16080,
+          "option_text": "The use of ignoring for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16081,
+          "option_text": "The use of deleting for revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3455,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue alignment governance?",
+      "options": [
+        {
+          "option_id": 16082,
+          "option_text": "The framework for managing revenue alignment processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16083,
+          "option_text": "The framework for ignoring revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16084,
+          "option_text": "The framework for deleting revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16085,
+          "option_text": "The framework for hiding revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3456,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale pipeline optimization?",
+      "options": [
+        {
+          "option_id": 16086,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16087,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16088,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16089,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3457,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization ecosystem?",
+      "options": [
+        {
+          "option_id": 16090,
+          "option_text": "The interconnected system of pipeline optimization tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16091,
+          "option_text": "A single pipeline optimization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16092,
+          "option_text": "A manual pipeline optimization process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16093,
+          "option_text": "A pipeline optimization reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3458,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline optimization automation?",
+      "options": [
+        {
+          "option_id": 16094,
+          "option_text": "The use of automation to improve pipeline optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16095,
+          "option_text": "The use of manual processes for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16096,
+          "option_text": "The use of ignoring for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16097,
+          "option_text": "The use of deleting for pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3459,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline optimization analytics?",
+      "options": [
+        {
+          "option_id": 16098,
+          "option_text": "The use of analytics to improve pipeline optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16099,
+          "option_text": "The use of guessing for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16100,
+          "option_text": "The use of ignoring for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16101,
+          "option_text": "The use of deleting for pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3460,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline optimization governance?",
+      "options": [
+        {
+          "option_id": 16102,
+          "option_text": "The framework for managing pipeline optimization processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16103,
+          "option_text": "The framework for ignoring pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16104,
+          "option_text": "The framework for deleting pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16105,
+          "option_text": "The framework for hiding pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3461,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale forecasting?",
+      "options": [
+        {
+          "option_id": 16106,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16107,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16108,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16109,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3462,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a forecasting ecosystem?",
+      "options": [
+        {
+          "option_id": 16110,
+          "option_text": "The interconnected system of forecasting tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16111,
+          "option_text": "A single forecasting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16112,
+          "option_text": "A manual forecasting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16113,
+          "option_text": "A forecasting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3463,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is forecasting automation?",
+      "options": [
+        {
+          "option_id": 16114,
+          "option_text": "The use of automation to improve forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16115,
+          "option_text": "The use of manual processes for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16116,
+          "option_text": "The use of ignoring for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16117,
+          "option_text": "The use of deleting for forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3464,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is forecasting analytics?",
+      "options": [
+        {
+          "option_id": 16118,
+          "option_text": "The use of analytics to improve forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16119,
+          "option_text": "The use of guessing for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16120,
+          "option_text": "The use of ignoring for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16121,
+          "option_text": "The use of deleting for forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3465,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is forecasting governance?",
+      "options": [
+        {
+          "option_id": 16122,
+          "option_text": "The framework for managing forecasting processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16123,
+          "option_text": "The framework for ignoring forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16124,
+          "option_text": "The framework for deleting forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16125,
+          "option_text": "The framework for hiding forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3466,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale a revenue strategy?",
+      "options": [
+        {
+          "option_id": 16126,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16127,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16128,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16129,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3467,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a revenue strategy ecosystem?",
+      "options": [
+        {
+          "option_id": 16130,
+          "option_text": "The interconnected system of revenue strategy tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16131,
+          "option_text": "A single revenue strategy tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16132,
+          "option_text": "A manual revenue strategy process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16133,
+          "option_text": "A revenue strategy reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3468,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue strategy automation?",
+      "options": [
+        {
+          "option_id": 16134,
+          "option_text": "The use of automation to improve revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16135,
+          "option_text": "The use of manual processes for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16136,
+          "option_text": "The use of ignoring for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16137,
+          "option_text": "The use of deleting for revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3469,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue strategy analytics?",
+      "options": [
+        {
+          "option_id": 16138,
+          "option_text": "The use of analytics to improve revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16139,
+          "option_text": "The use of guessing for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16140,
+          "option_text": "The use of ignoring for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16141,
+          "option_text": "The use of deleting for revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3470,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is revenue strategy governance?",
+      "options": [
+        {
+          "option_id": 16142,
+          "option_text": "The framework for managing revenue strategy processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16143,
+          "option_text": "The framework for ignoring revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16144,
+          "option_text": "The framework for deleting revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16145,
+          "option_text": "The framework for hiding revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3471,
+      "subskill_id": 158,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a revenue alignment dashboard?",
+      "options": [
+        {
+          "option_id": 16146,
+          "option_text": "A visual display of revenue alignment metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16147,
+          "option_text": "A visual display of ignored revenue alignment metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16148,
+          "option_text": "A visual display of deleted revenue alignment metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16149,
+          "option_text": "A visual display of hidden revenue alignment metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3472,
+      "subskill_id": 159,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization dashboard?",
+      "options": [
+        {
+          "option_id": 16150,
+          "option_text": "A visual display of pipeline optimization metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16151,
+          "option_text": "A visual display of ignored pipeline optimization metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16152,
+          "option_text": "A visual display of deleted pipeline optimization metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16153,
+          "option_text": "A visual display of hidden pipeline optimization metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3473,
+      "subskill_id": 160,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a forecasting dashboard?",
+      "options": [
+        {
+          "option_id": 16154,
+          "option_text": "A visual display of forecasting metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16155,
+          "option_text": "A visual display of ignored forecasting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16156,
+          "option_text": "A visual display of deleted forecasting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16157,
+          "option_text": "A visual display of hidden forecasting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3474,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a revenue strategy dashboard?",
+      "options": [
+        {
+          "option_id": 16158,
+          "option_text": "A visual display of revenue strategy metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16159,
+          "option_text": "A visual display of ignored revenue strategy metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16160,
+          "option_text": "A visual display of deleted revenue strategy metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16161,
+          "option_text": "A visual display of hidden revenue strategy metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3475,
+      "subskill_id": 161,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a revenue strategy maturity model?",
+      "options": [
+        {
+          "option_id": 16162,
+          "option_text": "A model for assessing the maturity of revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16163,
+          "option_text": "A model for ignoring revenue strategy maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16164,
+          "option_text": "A model for deleting revenue strategy maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16165,
+          "option_text": "A model for hiding revenue strategy maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3476,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a revenue alignment strategy?",
+      "options": [
+        {
+          "option_id": 16166,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16167,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16168,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16169,
+          "option_text": "By deleting goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3477,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue alignment future?",
+      "options": [
+        {
+          "option_id": 16170,
+          "option_text": "The future of revenue alignment, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16171,
+          "option_text": "The future of ignoring revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16172,
+          "option_text": "The future of deleting revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16173,
+          "option_text": "The future of hiding revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3478,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is revenue alignment AI?",
+      "options": [
+        {
+          "option_id": 16174,
+          "option_text": "The use of artificial intelligence to improve revenue alignment",
+          "is_correct": true
+        },
+        {
+          "option_id": 16175,
+          "option_text": "The use of manual processes for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16176,
+          "option_text": "The use of ignoring for revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16177,
+          "option_text": "The use of deleting for revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3479,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is revenue alignment platform?",
+      "options": [
+        {
+          "option_id": 16178,
+          "option_text": "A platform for managing revenue alignment at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16179,
+          "option_text": "A manual revenue alignment process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16180,
+          "option_text": "A single revenue alignment tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16181,
+          "option_text": "A revenue alignment reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3480,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is revenue alignment ROI?",
+      "options": [
+        {
+          "option_id": 16182,
+          "option_text": "The return on investment from revenue alignment",
+          "is_correct": true
+        },
+        {
+          "option_id": 16183,
+          "option_text": "The cost of revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16184,
+          "option_text": "The loss from revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16185,
+          "option_text": "The waste from revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3481,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a pipeline optimization strategy?",
+      "options": [
+        {
+          "option_id": 16186,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16187,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16188,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16189,
+          "option_text": "By deleting goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3482,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization future?",
+      "options": [
+        {
+          "option_id": 16190,
+          "option_text": "The future of pipeline optimization, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16191,
+          "option_text": "The future of ignoring pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16192,
+          "option_text": "The future of deleting pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16193,
+          "option_text": "The future of hiding pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3483,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is pipeline optimization AI?",
+      "options": [
+        {
+          "option_id": 16194,
+          "option_text": "The use of artificial intelligence to improve pipeline optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16195,
+          "option_text": "The use of manual processes for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16196,
+          "option_text": "The use of ignoring for pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16197,
+          "option_text": "The use of deleting for pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3484,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization platform?",
+      "options": [
+        {
+          "option_id": 16198,
+          "option_text": "A platform for managing pipeline optimization at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16199,
+          "option_text": "A manual pipeline optimization process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16200,
+          "option_text": "A single pipeline optimization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16201,
+          "option_text": "A pipeline optimization reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3485,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is pipeline optimization ROI?",
+      "options": [
+        {
+          "option_id": 16202,
+          "option_text": "The return on investment from pipeline optimization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16203,
+          "option_text": "The cost of pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16204,
+          "option_text": "The loss from pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16205,
+          "option_text": "The waste from pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3486,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a forecasting strategy?",
+      "options": [
+        {
+          "option_id": 16206,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16207,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16208,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16209,
+          "option_text": "By deleting goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3487,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a forecasting future?",
+      "options": [
+        {
+          "option_id": 16210,
+          "option_text": "The future of forecasting, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16211,
+          "option_text": "The future of ignoring forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16212,
+          "option_text": "The future of deleting forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16213,
+          "option_text": "The future of hiding forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3488,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is forecasting AI?",
+      "options": [
+        {
+          "option_id": 16214,
+          "option_text": "The use of artificial intelligence to improve forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16215,
+          "option_text": "The use of manual processes for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16216,
+          "option_text": "The use of ignoring for forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16217,
+          "option_text": "The use of deleting for forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3489,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a forecasting platform?",
+      "options": [
+        {
+          "option_id": 16218,
+          "option_text": "A platform for managing forecasting at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16219,
+          "option_text": "A manual forecasting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16220,
+          "option_text": "A single forecasting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16221,
+          "option_text": "A forecasting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3490,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is forecasting ROI?",
+      "options": [
+        {
+          "option_id": 16222,
+          "option_text": "The return on investment from forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16223,
+          "option_text": "The cost of forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16224,
+          "option_text": "The loss from forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16225,
+          "option_text": "The waste from forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3491,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a revenue strategy framework?",
+      "options": [
+        {
+          "option_id": 16226,
+          "option_text": "By defining goals, strategies, and measuring success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16227,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16228,
+          "option_text": "By ignoring goals",
+          "is_correct": false
+        },
+        {
+          "option_id": 16229,
+          "option_text": "By deleting goals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3492,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue strategy future?",
+      "options": [
+        {
+          "option_id": 16230,
+          "option_text": "The future of revenue strategy, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16231,
+          "option_text": "The future of ignoring revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16232,
+          "option_text": "The future of deleting revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16233,
+          "option_text": "The future of hiding revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3493,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is revenue strategy AI?",
+      "options": [
+        {
+          "option_id": 16234,
+          "option_text": "The use of artificial intelligence to improve revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16235,
+          "option_text": "The use of manual processes for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16236,
+          "option_text": "The use of ignoring for revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16237,
+          "option_text": "The use of deleting for revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3494,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue strategy platform?",
+      "options": [
+        {
+          "option_id": 16238,
+          "option_text": "A platform for managing revenue strategy at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 16239,
+          "option_text": "A manual revenue strategy process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16240,
+          "option_text": "A single revenue strategy tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16241,
+          "option_text": "A revenue strategy reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3495,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is revenue strategy ROI?",
+      "options": [
+        {
+          "option_id": 16242,
+          "option_text": "The return on investment from revenue strategy",
+          "is_correct": true
+        },
+        {
+          "option_id": 16243,
+          "option_text": "The cost of revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16244,
+          "option_text": "The loss from revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16245,
+          "option_text": "The waste from revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3496,
+      "subskill_id": 158,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue alignment enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16246,
+          "option_text": "A high-level strategy for revenue alignment in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16247,
+          "option_text": "A high-level strategy for ignoring revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16248,
+          "option_text": "A high-level strategy for deleting revenue alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 16249,
+          "option_text": "A high-level strategy for hiding revenue alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3497,
+      "subskill_id": 159,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16250,
+          "option_text": "A high-level strategy for pipeline optimization in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16251,
+          "option_text": "A high-level strategy for ignoring pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16252,
+          "option_text": "A high-level strategy for deleting pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16253,
+          "option_text": "A high-level strategy for hiding pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3498,
+      "subskill_id": 160,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a forecasting enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16254,
+          "option_text": "A high-level strategy for forecasting in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16255,
+          "option_text": "A high-level strategy for ignoring forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16256,
+          "option_text": "A high-level strategy for deleting forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16257,
+          "option_text": "A high-level strategy for hiding forecasting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3499,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue strategy enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16258,
+          "option_text": "A high-level strategy for revenue strategy in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16259,
+          "option_text": "A high-level strategy for ignoring revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16260,
+          "option_text": "A high-level strategy for deleting revenue strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 16261,
+          "option_text": "A high-level strategy for hiding revenue strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3500,
+      "subskill_id": 161,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a revenue strategy ecosystem?",
+      "options": [
+        {
+          "option_id": 16262,
+          "option_text": "The interconnected system of revenue strategy tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16263,
+          "option_text": "A single revenue strategy tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16264,
+          "option_text": "A manual revenue strategy process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16265,
+          "option_text": "A revenue strategy reporting tool",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

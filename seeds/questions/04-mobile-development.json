@@ -1,0 +1,2906 @@
+{
+  "skill_id": 4,
+  "skill_name": "Mobile Development",
+  "questions": [
+    {
+      "question_id": 301,
+      "subskill_id": 18,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is React Native?",
+      "options": [
+        {
+          "option_id": 2114,
+          "option_text": "A framework for building native mobile apps using JavaScript",
+          "is_correct": true
+        },
+        {
+          "option_id": 2115,
+          "option_text": "A programming language for web development",
+          "is_correct": false
+        },
+        {
+          "option_id": 2116,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 2117,
+          "option_text": "An operating system for mobile devices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 302,
+      "subskill_id": 18,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which company developed React Native?",
+      "options": [
+        {
+          "option_id": 2118,
+          "option_text": "Google",
+          "is_correct": false
+        },
+        {
+          "option_id": 2119,
+          "option_text": "Apple",
+          "is_correct": false
+        },
+        {
+          "option_id": 2120,
+          "option_text": "Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 2121,
+          "option_text": "Facebook",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 303,
+      "subskill_id": 18,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What programming language is primarily used with React Native?",
+      "options": [
+        {
+          "option_id": 2122,
+          "option_text": "Java",
+          "is_correct": false
+        },
+        {
+          "option_id": 2123,
+          "option_text": "Swift",
+          "is_correct": false
+        },
+        {
+          "option_id": 2124,
+          "option_text": "Kotlin",
+          "is_correct": false
+        },
+        {
+          "option_id": 2125,
+          "option_text": "JavaScript",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 304,
+      "subskill_id": 18,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between React and React Native?",
+      "options": [
+        {
+          "option_id": 2126,
+          "option_text": "React is for web, React Native is for mobile",
+          "is_correct": false
+        },
+        {
+          "option_id": 2127,
+          "option_text": "React Native is for web, React is for mobile",
+          "is_correct": true
+        },
+        {
+          "option_id": 2128,
+          "option_text": "They are the same framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 2129,
+          "option_text": "React is newer than React Native",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 305,
+      "subskill_id": 18,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a component in React Native?",
+      "options": [
+        {
+          "option_id": 2130,
+          "option_text": "A reusable piece of the user interface",
+          "is_correct": true
+        },
+        {
+          "option_id": 2131,
+          "option_text": "A type of database",
+          "is_correct": false
+        },
+        {
+          "option_id": 2132,
+          "option_text": "A network request",
+          "is_correct": false
+        },
+        {
+          "option_id": 2133,
+          "option_text": "A background service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 306,
+      "subskill_id": 19,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Flutter?",
+      "options": [
+        {
+          "option_id": 2134,
+          "option_text": "A UI toolkit from Google for building compiled applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 2135,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 2136,
+          "option_text": "A database system",
+          "is_correct": false
+        },
+        {
+          "option_id": 2137,
+          "option_text": "An Apple framework",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 307,
+      "subskill_id": 19,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which programming language does Flutter use?",
+      "options": [
+        {
+          "option_id": 2138,
+          "option_text": "Java",
+          "is_correct": false
+        },
+        {
+          "option_id": 2139,
+          "option_text": "Kotlin",
+          "is_correct": true
+        },
+        {
+          "option_id": 2140,
+          "option_text": "JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 2141,
+          "option_text": "Dart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 308,
+      "subskill_id": 19,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a widget in Flutter?",
+      "options": [
+        {
+          "option_id": 2142,
+          "option_text": "A building block for the user interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 2143,
+          "option_text": "A type of database",
+          "is_correct": false
+        },
+        {
+          "option_id": 2144,
+          "option_text": "A network connection",
+          "is_correct": true
+        },
+        {
+          "option_id": 2145,
+          "option_text": "A background process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 309,
+      "subskill_id": 19,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between Stateless and Stateful widgets?",
+      "options": [
+        {
+          "option_id": 2146,
+          "option_text": "Stateless widgets cannot change, Stateful widgets can change",
+          "is_correct": true
+        },
+        {
+          "option_id": 2147,
+          "option_text": "Stateful widgets cannot change, Stateless widgets can change",
+          "is_correct": false
+        },
+        {
+          "option_id": 2148,
+          "option_text": "They are identical in functionality",
+          "is_correct": false
+        },
+        {
+          "option_id": 2149,
+          "option_text": "Stateless is for Android, Stateful is for iOS",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 310,
+      "subskill_id": 19,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is hot reload in Flutter?",
+      "options": [
+        {
+          "option_id": 2150,
+          "option_text": "A feature that injects code changes without restarting",
+          "is_correct": false
+        },
+        {
+          "option_id": 2151,
+          "option_text": "Rebooting the device",
+          "is_correct": true
+        },
+        {
+          "option_id": 2152,
+          "option_text": "Reinstalling the application",
+          "is_correct": false
+        },
+        {
+          "option_id": 2153,
+          "option_text": "A battery optimization feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 311,
+      "subskill_id": 20,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Android Studio?",
+      "options": [
+        {
+          "option_id": 2154,
+          "option_text": "The official IDE for Android development",
+          "is_correct": false
+        },
+        {
+          "option_id": 2155,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 2156,
+          "option_text": "A device emulator only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2157,
+          "option_text": "A cloud service from Google",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 312,
+      "subskill_id": 20,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which programming languages are primarily used for Android development?",
+      "options": [
+        {
+          "option_id": 2158,
+          "option_text": "Swift and Objective-C",
+          "is_correct": false
+        },
+        {
+          "option_id": 2159,
+          "option_text": "Python and Ruby",
+          "is_correct": false
+        },
+        {
+          "option_id": 2160,
+          "option_text": "C# and .NET",
+          "is_correct": true
+        },
+        {
+          "option_id": 2161,
+          "option_text": "Java and Kotlin",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 313,
+      "subskill_id": 20,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Activity in Android?",
+      "options": [
+        {
+          "option_id": 2162,
+          "option_text": "A single screen with a user interface",
+          "is_correct": true
+        },
+        {
+          "option_id": 2163,
+          "option_text": "A background service",
+          "is_correct": false
+        },
+        {
+          "option_id": 2164,
+          "option_text": "A database operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2165,
+          "option_text": "A network request handler",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 314,
+      "subskill_id": 20,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Intent in Android?",
+      "options": [
+        {
+          "option_id": 2166,
+          "option_text": "A messaging object for component communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 2167,
+          "option_text": "A user interface element",
+          "is_correct": false
+        },
+        {
+          "option_id": 2168,
+          "option_text": "A background thread",
+          "is_correct": false
+        },
+        {
+          "option_id": 2169,
+          "option_text": "A type of database query",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 315,
+      "subskill_id": 20,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the AndroidManifest.xml file?",
+      "options": [
+        {
+          "option_id": 2170,
+          "option_text": "A configuration file with app permissions and components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2171,
+          "option_text": "A layout file for the user interface",
+          "is_correct": true
+        },
+        {
+          "option_id": 2172,
+          "option_text": "A resource file for images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2173,
+          "option_text": "A compiled code file",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 316,
+      "subskill_id": 21,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Xcode?",
+      "options": [
+        {
+          "option_id": 2174,
+          "option_text": "The official IDE for iOS and macOS development",
+          "is_correct": false
+        },
+        {
+          "option_id": 2175,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 2176,
+          "option_text": "A database management tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 2177,
+          "option_text": "A Google product for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 317,
+      "subskill_id": 21,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which programming languages are primarily used for iOS development?",
+      "options": [
+        {
+          "option_id": 2178,
+          "option_text": "Java and Kotlin",
+          "is_correct": true
+        },
+        {
+          "option_id": 2179,
+          "option_text": "Python and Ruby",
+          "is_correct": false
+        },
+        {
+          "option_id": 2180,
+          "option_text": "JavaScript and TypeScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 2181,
+          "option_text": "Swift and Objective-C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 318,
+      "subskill_id": 21,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a ViewController in iOS?",
+      "options": [
+        {
+          "option_id": 2182,
+          "option_text": "An object that manages a screen of content",
+          "is_correct": false
+        },
+        {
+          "option_id": 2183,
+          "option_text": "A background service",
+          "is_correct": false
+        },
+        {
+          "option_id": 2184,
+          "option_text": "A network controller",
+          "is_correct": false
+        },
+        {
+          "option_id": 2185,
+          "option_text": "A database handler",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 319,
+      "subskill_id": 21,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Storyboard in iOS?",
+      "options": [
+        {
+          "option_id": 2186,
+          "option_text": "A visual representation of the user interface flow",
+          "is_correct": false
+        },
+        {
+          "option_id": 2187,
+          "option_text": "A debugging tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 2188,
+          "option_text": "A testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 2189,
+          "option_text": "A data storage system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 320,
+      "subskill_id": 21,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an IBOutlet?",
+      "options": [
+        {
+          "option_id": 2190,
+          "option_text": "A connection between code and user interface elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 2191,
+          "option_text": "A network output connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 2192,
+          "option_text": "A database export function",
+          "is_correct": true
+        },
+        {
+          "option_id": 2193,
+          "option_text": "A debugging output tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 321,
+      "subskill_id": 22,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the app lifecycle?",
+      "options": [
+        {
+          "option_id": 2194,
+          "option_text": "The series of states an application goes through",
+          "is_correct": true
+        },
+        {
+          "option_id": 2195,
+          "option_text": "The version history of an application",
+          "is_correct": false
+        },
+        {
+          "option_id": 2196,
+          "option_text": "The development process of an application",
+          "is_correct": false
+        },
+        {
+          "option_id": 2197,
+          "option_text": "The market presence of an application",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 322,
+      "subskill_id": 22,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does \"onCreate\" mean in Android?",
+      "options": [
+        {
+          "option_id": 2198,
+          "option_text": "A method called when an activity is first created",
+          "is_correct": false
+        },
+        {
+          "option_id": 2199,
+          "option_text": "A method called when an app is destroyed",
+          "is_correct": true
+        },
+        {
+          "option_id": 2200,
+          "option_text": "A method called on screen rotation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2201,
+          "option_text": "A method called when app goes to background",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 323,
+      "subskill_id": 22,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is \"viewDidLoad\" in iOS?",
+      "options": [
+        {
+          "option_id": 2202,
+          "option_text": "A method called after the view is loaded into memory",
+          "is_correct": false
+        },
+        {
+          "option_id": 2203,
+          "option_text": "A method called when the view is about to appear",
+          "is_correct": false
+        },
+        {
+          "option_id": 2204,
+          "option_text": "A method called when the view disappears",
+          "is_correct": true
+        },
+        {
+          "option_id": 2205,
+          "option_text": "A method called when app terminates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 324,
+      "subskill_id": 22,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between foreground and background state?",
+      "options": [
+        {
+          "option_id": 2206,
+          "option_text": "Foreground is visible to user, background is not visible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2207,
+          "option_text": "Background is visible, foreground is not visible",
+          "is_correct": false
+        },
+        {
+          "option_id": 2208,
+          "option_text": "Both states are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 2209,
+          "option_text": "Foreground runs code, background does nothing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 325,
+      "subskill_id": 22,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What happens when an app is terminated?",
+      "options": [
+        {
+          "option_id": 2210,
+          "option_text": "The app is removed from memory",
+          "is_correct": true
+        },
+        {
+          "option_id": 2211,
+          "option_text": "The app continues running in background",
+          "is_correct": false
+        },
+        {
+          "option_id": 2212,
+          "option_text": "The app is deleted from the device",
+          "is_correct": false
+        },
+        {
+          "option_id": 2213,
+          "option_text": "The app saves all data automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 326,
+      "subskill_id": 18,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does the bridge work in React Native?",
+      "options": [
+        {
+          "option_id": 2214,
+          "option_text": "Connects JavaScript code to native components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2215,
+          "option_text": "A physical connection between devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 2216,
+          "option_text": "A network bridge for API calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 2217,
+          "option_text": "A debugging tool for performance monitoring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 327,
+      "subskill_id": 18,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which navigation library is commonly used with React Native?",
+      "options": [
+        {
+          "option_id": 2218,
+          "option_text": "React Router",
+          "is_correct": false
+        },
+        {
+          "option_id": 2219,
+          "option_text": "Native Navigation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2220,
+          "option_text": "Stack Navigator",
+          "is_correct": false
+        },
+        {
+          "option_id": 2221,
+          "option_text": "React Navigation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 328,
+      "subskill_id": 18,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle state management in React Native?",
+      "options": [
+        {
+          "option_id": 2222,
+          "option_text": "Using hooks like useState and useContext",
+          "is_correct": false
+        },
+        {
+          "option_id": 2223,
+          "option_text": "Using Redux or MobX",
+          "is_correct": false
+        },
+        {
+          "option_id": 2224,
+          "option_text": "Using component state only",
+          "is_correct": true
+        },
+        {
+          "option_id": 2225,
+          "option_text": "Using local storage only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 329,
+      "subskill_id": 18,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are native modules in React Native?",
+      "options": [
+        {
+          "option_id": 2226,
+          "option_text": "Platform-specific code written in native languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 2227,
+          "option_text": "JavaScript libraries for UI components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2228,
+          "option_text": "CSS modules for styling",
+          "is_correct": false
+        },
+        {
+          "option_id": 2229,
+          "option_text": "Database modules for storage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 330,
+      "subskill_id": 18,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you style components in React Native?",
+      "options": [
+        {
+          "option_id": 2230,
+          "option_text": "Using CSS files",
+          "is_correct": false
+        },
+        {
+          "option_id": 2231,
+          "option_text": "Using HTML tags",
+          "is_correct": false
+        },
+        {
+          "option_id": 2232,
+          "option_text": "Using XML markup",
+          "is_correct": false
+        },
+        {
+          "option_id": 2233,
+          "option_text": "Using JavaScript objects with StyleSheet",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 331,
+      "subskill_id": 19,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the widget tree in Flutter?",
+      "options": [
+        {
+          "option_id": 2234,
+          "option_text": "A physical representation of widgets",
+          "is_correct": false
+        },
+        {
+          "option_id": 2235,
+          "option_text": "A hierarchy of all widgets in the app",
+          "is_correct": true
+        },
+        {
+          "option_id": 2236,
+          "option_text": "A debugging visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 2237,
+          "option_text": "A widget storage system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 332,
+      "subskill_id": 19,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does state management work in Flutter?",
+      "options": [
+        {
+          "option_id": 2238,
+          "option_text": "Only setState is available",
+          "is_correct": false
+        },
+        {
+          "option_id": 2239,
+          "option_text": "State cannot be managed in Flutter",
+          "is_correct": false
+        },
+        {
+          "option_id": 2240,
+          "option_text": "Through database connections only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2241,
+          "option_text": "Through various patterns like Provider and Bloc",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 333,
+      "subskill_id": 19,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between setState and Provider?",
+      "options": [
+        {
+          "option_id": 2242,
+          "option_text": "setState is local, Provider is for global state",
+          "is_correct": true
+        },
+        {
+          "option_id": 2243,
+          "option_text": "Provider is local, setState is global",
+          "is_correct": false
+        },
+        {
+          "option_id": 2244,
+          "option_text": "They are identical in functionality",
+          "is_correct": false
+        },
+        {
+          "option_id": 2245,
+          "option_text": "setState is deprecated in Flutter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 334,
+      "subskill_id": 19,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does Flutter render widgets?",
+      "options": [
+        {
+          "option_id": 2246,
+          "option_text": "Using WebView technology",
+          "is_correct": false
+        },
+        {
+          "option_id": 2247,
+          "option_text": "Using native OEM components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2248,
+          "option_text": "Using HTML and CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 2249,
+          "option_text": "Using Skia graphics engine",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 335,
+      "subskill_id": 19,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle navigation in Flutter?",
+      "options": [
+        {
+          "option_id": 2250,
+          "option_text": "Using window.location",
+          "is_correct": false
+        },
+        {
+          "option_id": 2251,
+          "option_text": "Using Navigator.push() and Navigator.pop()",
+          "is_correct": true
+        },
+        {
+          "option_id": 2252,
+          "option_text": "Using Intent objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 2253,
+          "option_text": "Using segues and storyboards",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 336,
+      "subskill_id": 20,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain the Android activity lifecycle.",
+      "options": [
+        {
+          "option_id": 2254,
+          "option_text": "init, load, appear, disappear, terminate",
+          "is_correct": false
+        },
+        {
+          "option_id": 2255,
+          "option_text": "start, run, pause, stop, destroy",
+          "is_correct": false
+        },
+        {
+          "option_id": 2256,
+          "option_text": "begin, middle, end, restart",
+          "is_correct": false
+        },
+        {
+          "option_id": 2257,
+          "option_text": "onCreate, onStart, onResume, onPause, onStop, onDestroy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 337,
+      "subskill_id": 20,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Fragment in Android?",
+      "options": [
+        {
+          "option_id": 2258,
+          "option_text": "A reusable portion of UI in an Activity",
+          "is_correct": true
+        },
+        {
+          "option_id": 2259,
+          "option_text": "A broken piece of application code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2260,
+          "option_text": "A background service component",
+          "is_correct": false
+        },
+        {
+          "option_id": 2261,
+          "option_text": "A database table representation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 338,
+      "subskill_id": 20,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle configuration changes in Android?",
+      "options": [
+        {
+          "option_id": 2262,
+          "option_text": "By restarting the application",
+          "is_correct": false
+        },
+        {
+          "option_id": 2263,
+          "option_text": "By ignoring all configuration changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2264,
+          "option_text": "By using static variables",
+          "is_correct": false
+        },
+        {
+          "option_id": 2265,
+          "option_text": "Using ViewModel and onSaveInstanceState",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 339,
+      "subskill_id": 20,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is RecyclerView and how does it work?",
+      "options": [
+        {
+          "option_id": 2266,
+          "option_text": "A tool for recycling old devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 2267,
+          "option_text": "A memory cleaning utility",
+          "is_correct": false
+        },
+        {
+          "option_id": 2268,
+          "option_text": "A data recovery tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 2269,
+          "option_text": "Efficiently displays large datasets by recycling views",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 340,
+      "subskill_id": 20,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are services in Android?",
+      "options": [
+        {
+          "option_id": 2270,
+          "option_text": "UI components for user interaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 2271,
+          "option_text": "Web service clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 2272,
+          "option_text": "Database query services",
+          "is_correct": false
+        },
+        {
+          "option_id": 2273,
+          "option_text": "Components for long-running background operations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 341,
+      "subskill_id": 21,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Explain the iOS app lifecycle.",
+      "options": [
+        {
+          "option_id": 2274,
+          "option_text": "Not running, inactive, active, background, suspended",
+          "is_correct": true
+        },
+        {
+          "option_id": 2275,
+          "option_text": "start, run, pause, stop, destroy",
+          "is_correct": false
+        },
+        {
+          "option_id": 2276,
+          "option_text": "create, display, hide, terminate",
+          "is_correct": false
+        },
+        {
+          "option_id": 2277,
+          "option_text": "load, appear, disappear, unload",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 342,
+      "subskill_id": 21,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Auto Layout in iOS?",
+      "options": [
+        {
+          "option_id": 2278,
+          "option_text": "Automatic code generation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 2279,
+          "option_text": "A self-driving car feature",
+          "is_correct": false
+        },
+        {
+          "option_id": 2280,
+          "option_text": "A layout that designs itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 2281,
+          "option_text": "A constraint-based layout system",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 343,
+      "subskill_id": 21,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage memory in iOS?",
+      "options": [
+        {
+          "option_id": 2282,
+          "option_text": "Manual memory management with malloc and free",
+          "is_correct": false
+        },
+        {
+          "option_id": 2283,
+          "option_text": "Garbage collection similar to Java",
+          "is_correct": false
+        },
+        {
+          "option_id": 2284,
+          "option_text": "No memory management needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 2285,
+          "option_text": "Using Automatic Reference Counting (ARC)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 344,
+      "subskill_id": 21,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are delegates in iOS?",
+      "options": [
+        {
+          "option_id": 2286,
+          "option_text": "Representatives from Apple company",
+          "is_correct": false
+        },
+        {
+          "option_id": 2287,
+          "option_text": "Code reviewers in development team",
+          "is_correct": false
+        },
+        {
+          "option_id": 2288,
+          "option_text": "Background threads for processing",
+          "is_correct": false
+        },
+        {
+          "option_id": 2289,
+          "option_text": "A design pattern for object communication",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 345,
+      "subskill_id": 21,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Core Data?",
+      "options": [
+        {
+          "option_id": 2290,
+          "option_text": "A framework for data persistence",
+          "is_correct": true
+        },
+        {
+          "option_id": 2291,
+          "option_text": "The central processing unit",
+          "is_correct": false
+        },
+        {
+          "option_id": 2292,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 2293,
+          "option_text": "A data visualization library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 346,
+      "subskill_id": 22,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Compare Android and iOS lifecycle methods.",
+      "options": [
+        {
+          "option_id": 2294,
+          "option_text": "They are completely different with no similarities",
+          "is_correct": false
+        },
+        {
+          "option_id": 2295,
+          "option_text": "Android has no lifecycle methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 2296,
+          "option_text": "iOS has no lifecycle methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 2297,
+          "option_text": "Android onCreate ≈ iOS viewDidLoad",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 347,
+      "subskill_id": 22,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you save state when app goes to background?",
+      "options": [
+        {
+          "option_id": 2298,
+          "option_text": "State saves automatically without code",
+          "is_correct": false
+        },
+        {
+          "option_id": 2299,
+          "option_text": "State cannot be saved once app goes to background",
+          "is_correct": false
+        },
+        {
+          "option_id": 2300,
+          "option_text": "Using local database only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2301,
+          "option_text": "Using onSaveInstanceState or encodeRestorableState",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 348,
+      "subskill_id": 22,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do push notifications work?",
+      "options": [
+        {
+          "option_id": 2302,
+          "option_text": "App constantly checks for new messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 2303,
+          "option_text": "SMS messages sent to device",
+          "is_correct": false
+        },
+        {
+          "option_id": 2304,
+          "option_text": "Email alerts triggered by server",
+          "is_correct": false
+        },
+        {
+          "option_id": 2305,
+          "option_text": "Server sends to platform which delivers to device",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 349,
+      "subskill_id": 22,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are background execution limits on mobile?",
+      "options": [
+        {
+          "option_id": 2306,
+          "option_text": "Apps have limited time for background tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 2307,
+          "option_text": "Apps can run indefinitely in background",
+          "is_correct": false
+        },
+        {
+          "option_id": 2308,
+          "option_text": "No limits exist on modern devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 2309,
+          "option_text": "Only iOS has background execution limits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 350,
+      "subskill_id": 22,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle deep linking?",
+      "options": [
+        {
+          "option_id": 2310,
+          "option_text": "Creating links to deep ocean content",
+          "is_correct": false
+        },
+        {
+          "option_id": 2311,
+          "option_text": "Linking databases together",
+          "is_correct": false
+        },
+        {
+          "option_id": 2312,
+          "option_text": "Establishing network connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 2313,
+          "option_text": "Using URL schemes and universal links",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 351,
+      "subskill_id": 18,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you optimize performance in a React Native application?",
+      "options": [
+        {
+          "option_id": 2314,
+          "option_text": "Use inline styles for all components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2315,
+          "option_text": "Avoid using PureComponent",
+          "is_correct": false
+        },
+        {
+          "option_id": 2316,
+          "option_text": "Use large images without optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 2317,
+          "option_text": "Implement memoization and use Hermes engine",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 352,
+      "subskill_id": 18,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Hermes engine and why would you use it?",
+      "options": [
+        {
+          "option_id": 2318,
+          "option_text": "A JavaScript engine optimized for React Native",
+          "is_correct": true
+        },
+        {
+          "option_id": 2319,
+          "option_text": "A Greek mythology reference in coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 2320,
+          "option_text": "A navigation library for React Native",
+          "is_correct": false
+        },
+        {
+          "option_id": 2321,
+          "option_text": "A state management tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 353,
+      "subskill_id": 18,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create and use native modules in React Native?",
+      "options": [
+        {
+          "option_id": 2322,
+          "option_text": "Write JavaScript code only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2323,
+          "option_text": "Use third-party libraries exclusively",
+          "is_correct": false
+        },
+        {
+          "option_id": 2324,
+          "option_text": "Create CSS modules",
+          "is_correct": false
+        },
+        {
+          "option_id": 2325,
+          "option_text": "Write platform-specific native code and bridge it to JavaScript",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 354,
+      "subskill_id": 18,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is CodePush and how does it work?",
+      "options": [
+        {
+          "option_id": 2326,
+          "option_text": "A tool for pushing code to GitHub",
+          "is_correct": false
+        },
+        {
+          "option_id": 2327,
+          "option_text": "A service for pushing OTA updates to React Native apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 2328,
+          "option_text": "A debugging tool for React Native",
+          "is_correct": false
+        },
+        {
+          "option_id": 2329,
+          "option_text": "A code compilation service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 355,
+      "subskill_id": 18,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle offline storage in React Native?",
+      "options": [
+        {
+          "option_id": 2330,
+          "option_text": "Using AsyncStorage, SQLite, or Realm",
+          "is_correct": true
+        },
+        {
+          "option_id": 2331,
+          "option_text": "Only using Redux store",
+          "is_correct": false
+        },
+        {
+          "option_id": 2332,
+          "option_text": "Cannot store data offline",
+          "is_correct": false
+        },
+        {
+          "option_id": 2333,
+          "option_text": "Using browser localStorage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 356,
+      "subskill_id": 19,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Flutter achieve 60fps performance?",
+      "options": [
+        {
+          "option_id": 2334,
+          "option_text": "Using WebView for rendering",
+          "is_correct": false
+        },
+        {
+          "option_id": 2335,
+          "option_text": "Through JavaScript bridge",
+          "is_correct": false
+        },
+        {
+          "option_id": 2336,
+          "option_text": "By using native components only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2337,
+          "option_text": "Using Skia graphics engine and direct compilation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 357,
+      "subskill_id": 19,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the BLoC pattern in Flutter and when should you use it?",
+      "options": [
+        {
+          "option_id": 2338,
+          "option_text": "Business Logic Component pattern for state management",
+          "is_correct": true
+        },
+        {
+          "option_id": 2339,
+          "option_text": "A blocking call pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 2340,
+          "option_text": "A Bluetooth connection pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 2341,
+          "option_text": "A build configuration pattern",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 358,
+      "subskill_id": 19,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create custom painters in Flutter?",
+      "options": [
+        {
+          "option_id": 2342,
+          "option_text": "By using CSS styles",
+          "is_correct": false
+        },
+        {
+          "option_id": 2343,
+          "option_text": "By extending CustomPainter class and overriding paint method",
+          "is_correct": true
+        },
+        {
+          "option_id": 2344,
+          "option_text": "By using XML layouts",
+          "is_correct": false
+        },
+        {
+          "option_id": 2345,
+          "option_text": "By importing image files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 359,
+      "subskill_id": 19,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are Isolates in Flutter and when would you use them?",
+      "options": [
+        {
+          "option_id": 2346,
+          "option_text": "UI components for isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2347,
+          "option_text": "Database isolation levels",
+          "is_correct": false
+        },
+        {
+          "option_id": 2348,
+          "option_text": "Network isolation tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 2349,
+          "option_text": "Separate threads for CPU-intensive tasks",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 360,
+      "subskill_id": 19,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement platform channels in Flutter?",
+      "options": [
+        {
+          "option_id": 2350,
+          "option_text": "Using REST APIs only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2351,
+          "option_text": "Through WebSocket connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 2352,
+          "option_text": "Using shared preferences",
+          "is_correct": false
+        },
+        {
+          "option_id": 2353,
+          "option_text": "MethodChannel for communicating with native code",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 361,
+      "subskill_id": 20,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are Android Architecture Components?",
+      "options": [
+        {
+          "option_id": 2354,
+          "option_text": "A collection of libraries for robust app architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 2355,
+          "option_text": "Physical components of Android devices",
+          "is_correct": false
+        },
+        {
+          "option_id": 2356,
+          "option_text": "UI design templates",
+          "is_correct": false
+        },
+        {
+          "option_id": 2357,
+          "option_text": "Android studio plugins",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 362,
+      "subskill_id": 20,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Room database work and how is it different from SQLite?",
+      "options": [
+        {
+          "option_id": 2358,
+          "option_text": "Room is a NoSQL database",
+          "is_correct": false
+        },
+        {
+          "option_id": 2359,
+          "option_text": "Room is an abstraction layer over SQLite",
+          "is_correct": true
+        },
+        {
+          "option_id": 2360,
+          "option_text": "Room is faster than SQLite",
+          "is_correct": false
+        },
+        {
+          "option_id": 2361,
+          "option_text": "Room is cloud-based",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 363,
+      "subskill_id": 20,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is WorkManager and when should you use it?",
+      "options": [
+        {
+          "option_id": 2362,
+          "option_text": "A tool for managing employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 2363,
+          "option_text": "A UI layout manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 2364,
+          "option_text": "A task scheduler for background work",
+          "is_correct": true
+        },
+        {
+          "option_id": 2365,
+          "option_text": "A dependency injection framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 364,
+      "subskill_id": 20,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do Kotlin coroutines work on Android?",
+      "options": [
+        {
+          "option_id": 2366,
+          "option_text": "Using threads exclusively",
+          "is_correct": false
+        },
+        {
+          "option_id": 2367,
+          "option_text": "Through AsyncTask",
+          "is_correct": false
+        },
+        {
+          "option_id": 2368,
+          "option_text": "Using RxJava",
+          "is_correct": false
+        },
+        {
+          "option_id": 2369,
+          "option_text": "Lightweight concurrency with suspend functions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 365,
+      "subskill_id": 20,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is dependency injection and how is it implemented with Dagger or Hilt?",
+      "options": [
+        {
+          "option_id": 2370,
+          "option_text": "A pattern where objects receive dependencies from external source",
+          "is_correct": true
+        },
+        {
+          "option_id": 2371,
+          "option_text": "Injecting code into running apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 2372,
+          "option_text": "Database injection attacks",
+          "is_correct": false
+        },
+        {
+          "option_id": 2373,
+          "option_text": "UI component injection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 366,
+      "subskill_id": 21,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between SwiftUI and UIKit?",
+      "options": [
+        {
+          "option_id": 2374,
+          "option_text": "SwiftUI is for Android",
+          "is_correct": false
+        },
+        {
+          "option_id": 2375,
+          "option_text": "SwiftUI is declarative, UIKit is imperative",
+          "is_correct": true
+        },
+        {
+          "option_id": 2376,
+          "option_text": "UIKit is newer than SwiftUI",
+          "is_correct": false
+        },
+        {
+          "option_id": 2377,
+          "option_text": "They are identical frameworks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 367,
+      "subskill_id": 21,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does the Combine framework work?",
+      "options": [
+        {
+          "option_id": 2378,
+          "option_text": "Merging multiple frameworks",
+          "is_correct": false
+        },
+        {
+          "option_id": 2379,
+          "option_text": "Combining UI elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 2380,
+          "option_text": "A reactive programming framework for handling events",
+          "is_correct": true
+        },
+        {
+          "option_id": 2381,
+          "option_text": "A data compression tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 368,
+      "subskill_id": 21,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Grand Central Dispatch and how do you use it?",
+      "options": [
+        {
+          "option_id": 2382,
+          "option_text": "A central communication hub",
+          "is_correct": false
+        },
+        {
+          "option_id": 2383,
+          "option_text": "A network dispatcher",
+          "is_correct": false
+        },
+        {
+          "option_id": 2384,
+          "option_text": "A conference organization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 2385,
+          "option_text": "Apple concurrency framework for task management",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 369,
+      "subskill_id": 21,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Core Data stack work?",
+      "options": [
+        {
+          "option_id": 2386,
+          "option_text": "Managed Object Context, Persistent Store Coordinator, Managed Object Model",
+          "is_correct": true
+        },
+        {
+          "option_id": 2387,
+          "option_text": "Core, Data, Stack layers",
+          "is_correct": false
+        },
+        {
+          "option_id": 2388,
+          "option_text": "Storage, Memory, Cache components",
+          "is_correct": false
+        },
+        {
+          "option_id": 2389,
+          "option_text": "Fetch, Save, Delete operations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 370,
+      "subskill_id": 21,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement dependency injection in iOS?",
+      "options": [
+        {
+          "option_id": 2390,
+          "option_text": "Through storyboards only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2391,
+          "option_text": "Using constructor or property injection",
+          "is_correct": true
+        },
+        {
+          "option_id": 2392,
+          "option_text": "Using UserDefaults",
+          "is_correct": false
+        },
+        {
+          "option_id": 2393,
+          "option_text": "Through AppDelegate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 371,
+      "subskill_id": 22,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you implement state restoration in a mobile app?",
+      "options": [
+        {
+          "option_id": 2394,
+          "option_text": "Using shared preferences only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2395,
+          "option_text": "Through manual recreation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2396,
+          "option_text": "Cannot restore state",
+          "is_correct": false
+        },
+        {
+          "option_id": 2397,
+          "option_text": "Save state before destruction and restore on recreation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 372,
+      "subskill_id": 22,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle background downloads in iOS and Android?",
+      "options": [
+        {
+          "option_id": 2398,
+          "option_text": "Using foreground services only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2399,
+          "option_text": "Through main thread downloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 2400,
+          "option_text": "Using AsyncTask only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2401,
+          "option_text": "DownloadManager on Android, URLSession background tasks on iOS",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 373,
+      "subskill_id": 22,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is app thinning and what are its benefits?",
+      "options": [
+        {
+          "option_id": 2402,
+          "option_text": "Optimizing app size for different devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 2403,
+          "option_text": "Making apps thinner physically",
+          "is_correct": false
+        },
+        {
+          "option_id": 2404,
+          "option_text": "Reducing code quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 2405,
+          "option_text": "Removing features from apps",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 374,
+      "subskill_id": 22,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do silent push notifications work?",
+      "options": [
+        {
+          "option_id": 2406,
+          "option_text": "Notifications without any payload",
+          "is_correct": false
+        },
+        {
+          "option_id": 2407,
+          "option_text": "Notifications that wake app without user alert",
+          "is_correct": true
+        },
+        {
+          "option_id": 2408,
+          "option_text": "Deleted notifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 2409,
+          "option_text": "Notifications that play sound only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 375,
+      "subskill_id": 22,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are app extensions and give examples of when to use them?",
+      "options": [
+        {
+          "option_id": 2410,
+          "option_text": "Plugins for IDEs",
+          "is_correct": false
+        },
+        {
+          "option_id": 2411,
+          "option_text": "External hardware extensions",
+          "is_correct": false
+        },
+        {
+          "option_id": 2412,
+          "option_text": "Database extensions",
+          "is_correct": false
+        },
+        {
+          "option_id": 2413,
+          "option_text": "Widgets, share extensions, custom keyboards",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 376,
+      "subskill_id": 18,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you reduce React Native bundle size for production?",
+      "options": [
+        {
+          "option_id": 2494,
+          "option_text": "Use Hermes engine and enable tree shaking",
+          "is_correct": true
+        },
+        {
+          "option_id": 2495,
+          "option_text": "Add more dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 2496,
+          "option_text": "Include all assets in bundle",
+          "is_correct": false
+        },
+        {
+          "option_id": 2497,
+          "option_text": "Disable minification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 377,
+      "subskill_id": 18,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement custom transitions and animations in React Native?",
+      "options": [
+        {
+          "option_id": 2498,
+          "option_text": "Using CSS animations only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2499,
+          "option_text": "Through HTML5 canvas",
+          "is_correct": false
+        },
+        {
+          "option_id": 2500,
+          "option_text": "Using GIF images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2501,
+          "option_text": "Using LayoutAnimation or Animated API with native driver",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 378,
+      "subskill_id": 18,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the new React Native architecture with Fabric and TurboModules.",
+      "options": [
+        {
+          "option_id": 2502,
+          "option_text": "New UI components for fabric design",
+          "is_correct": false
+        },
+        {
+          "option_id": 2503,
+          "option_text": "A clothing line from Meta",
+          "is_correct": false
+        },
+        {
+          "option_id": 2504,
+          "option_text": "JavaScript engine optimizations only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2505,
+          "option_text": "Synchronous native module loading and new rendering system",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 379,
+      "subskill_id": 18,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you debug native modules and memory leaks in React Native?",
+      "options": [
+        {
+          "option_id": 2506,
+          "option_text": "Using Chrome DevTools for JavaScript and Xcode/Android Studio for native",
+          "is_correct": true
+        },
+        {
+          "option_id": 2507,
+          "option_text": "Using console.log only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2508,
+          "option_text": "Through remote debugging only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2509,
+          "option_text": "Memory leaks cannot be debugged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 380,
+      "subskill_id": 18,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a custom crash reporting system for React Native?",
+      "options": [
+        {
+          "option_id": 2510,
+          "option_text": "Using try-catch blocks everywhere",
+          "is_correct": false
+        },
+        {
+          "option_id": 2511,
+          "option_text": "By relying on app store reviews",
+          "is_correct": false
+        },
+        {
+          "option_id": 2512,
+          "option_text": "By ignoring crashes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2513,
+          "option_text": "Native crash handlers with JavaScript stack trace symbolication",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 381,
+      "subskill_id": 19,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain how Flutter renders widgets internally and the role of the rendering tree.",
+      "options": [
+        {
+          "option_id": 2514,
+          "option_text": "Widgets render directly to screen",
+          "is_correct": false
+        },
+        {
+          "option_id": 2515,
+          "option_text": "Using WebView for rendering",
+          "is_correct": false
+        },
+        {
+          "option_id": 2516,
+          "option_text": "Through HTML and CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 2517,
+          "option_text": "Widget tree → Element tree → Render tree → Layer tree",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 382,
+      "subskill_id": 19,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement custom routing with deep linking in Flutter?",
+      "options": [
+        {
+          "option_id": 2518,
+          "option_text": "Using HTML anchor tags",
+          "is_correct": false
+        },
+        {
+          "option_id": 2519,
+          "option_text": "Through URL launcher only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2520,
+          "option_text": "Using Navigator with onGenerateRoute and URI handlers",
+          "is_correct": true
+        },
+        {
+          "option_id": 2521,
+          "option_text": "Deep linking not supported in Flutter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 383,
+      "subskill_id": 19,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the performance implications of using different state management solutions?",
+      "options": [
+        {
+          "option_id": 2522,
+          "option_text": "setState causes rebuilds, BLoC and Provider optimize rebuild scope",
+          "is_correct": true
+        },
+        {
+          "option_id": 2523,
+          "option_text": "All solutions have identical performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 2524,
+          "option_text": "State management does not affect performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 2525,
+          "option_text": "Redux is always fastest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 384,
+      "subskill_id": 19,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create platform-specific UI components in Flutter?",
+      "options": [
+        {
+          "option_id": 2526,
+          "option_text": "Using conditional statements with Platform.isIOS",
+          "is_correct": true
+        },
+        {
+          "option_id": 2527,
+          "option_text": "Through separate codebases",
+          "is_correct": false
+        },
+        {
+          "option_id": 2528,
+          "option_text": "Using CSS media queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 2529,
+          "option_text": "Platform-specific components not possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 385,
+      "subskill_id": 19,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a custom font rendering engine in Flutter?",
+      "options": [
+        {
+          "option_id": 2530,
+          "option_text": "Using system fonts only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2531,
+          "option_text": "Through Google Fonts package",
+          "is_correct": false
+        },
+        {
+          "option_id": 2532,
+          "option_text": "By converting fonts to images",
+          "is_correct": false
+        },
+        {
+          "option_id": 2533,
+          "option_text": "Custom paragraph builder and text painting with Canvas",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 386,
+      "subskill_id": 20,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you optimize battery consumption in an Android app?",
+      "options": [
+        {
+          "option_id": 2534,
+          "option_text": "Using constant GPS updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 2535,
+          "option_text": "Keeping wake locks active",
+          "is_correct": false
+        },
+        {
+          "option_id": 2536,
+          "option_text": "Running all tasks in foreground",
+          "is_correct": false
+        },
+        {
+          "option_id": 2537,
+          "option_text": "Batching network requests and using Doze mode effectively",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 387,
+      "subskill_id": 20,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain the Android permission system evolution and best practices.",
+      "options": [
+        {
+          "option_id": 2538,
+          "option_text": "Runtime permissions since Android 6.0, permission groups, and scoped storage",
+          "is_correct": true
+        },
+        {
+          "option_id": 2539,
+          "option_text": "Permissions only at install time",
+          "is_correct": false
+        },
+        {
+          "option_id": 2540,
+          "option_text": "All apps have all permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 2541,
+          "option_text": "Permissions not needed for Android",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 388,
+      "subskill_id": 20,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement seamless updates using Play Core Library?",
+      "options": [
+        {
+          "option_id": 2542,
+          "option_text": "Through manual APK downloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 2543,
+          "option_text": "By directing users to Play Store",
+          "is_correct": false
+        },
+        {
+          "option_id": 2544,
+          "option_text": "Using webview updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 2545,
+          "option_text": "In-app updates with flexible and immediate flows",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 389,
+      "subskill_id": 20,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the differences between ART and Dalvik virtual machines?",
+      "options": [
+        {
+          "option_id": 2546,
+          "option_text": "Dalvik is newer than ART",
+          "is_correct": false
+        },
+        {
+          "option_id": 2547,
+          "option_text": "ART uses JIT only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2548,
+          "option_text": "Dalvik uses AOT compilation",
+          "is_correct": false
+        },
+        {
+          "option_id": 2549,
+          "option_text": "ART uses AOT compilation, improved GC, and better performance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 390,
+      "subskill_id": 20,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement custom accessibility services in Android?",
+      "options": [
+        {
+          "option_id": 2550,
+          "option_text": "Accessibility not supported in Android",
+          "is_correct": false
+        },
+        {
+          "option_id": 2551,
+          "option_text": "Using CSS media queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 2552,
+          "option_text": "Through standard views only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2553,
+          "option_text": "Extending AccessibilityService and handling accessibility events",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 391,
+      "subskill_id": 21,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain Swift concurrency with async/await and actors.",
+      "options": [
+        {
+          "option_id": 2554,
+          "option_text": "Structured concurrency with data race protection",
+          "is_correct": true
+        },
+        {
+          "option_id": 2555,
+          "option_text": "Using threads directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 2556,
+          "option_text": "Through Grand Central Dispatch only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2557,
+          "option_text": "Async/await not available in Swift",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 392,
+      "subskill_id": 21,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement custom view transitions in iOS?",
+      "options": [
+        {
+          "option_id": 2558,
+          "option_text": "Using UIView animations with transition methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 2559,
+          "option_text": "Through UIViewControllerAnimatedTransitioning protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 2560,
+          "option_text": "Using interactive pop gestures",
+          "is_correct": false
+        },
+        {
+          "option_id": 2561,
+          "option_text": "All of the above approaches can be used",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 393,
+      "subskill_id": 21,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Swift Package Plugin and how would you create one?",
+      "options": [
+        {
+          "option_id": 2562,
+          "option_text": "A plugin for Xcode themes",
+          "is_correct": false
+        },
+        {
+          "option_id": 2563,
+          "option_text": "A third-party dependency manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 2564,
+          "option_text": "A build tool extension for Swift packages",
+          "is_correct": true
+        },
+        {
+          "option_id": 2565,
+          "option_text": "A plugin for Swift syntax highlighting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 394,
+      "subskill_id": 21,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement App Clips and what are the limitations?",
+      "options": [
+        {
+          "option_id": 2566,
+          "option_text": "App Clips are full applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 2567,
+          "option_text": "App Clips cannot use certain frameworks",
+          "is_correct": false
+        },
+        {
+          "option_id": 2568,
+          "option_text": "App Clips have no limitations",
+          "is_correct": false
+        },
+        {
+          "option_id": 2569,
+          "option_text": "Lightweight app under 10MB with limited capabilities",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 395,
+      "subskill_id": 21,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Explain how SwiftUI diffing and rendering works internally.",
+      "options": [
+        {
+          "option_id": 2570,
+          "option_text": "Identity-based diffing with dependency tracking",
+          "is_correct": true
+        },
+        {
+          "option_id": 2571,
+          "option_text": "Complete redraw on every change",
+          "is_correct": false
+        },
+        {
+          "option_id": 2572,
+          "option_text": "Through UIKit bridge only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2573,
+          "option_text": "Rendering not optimized",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 396,
+      "subskill_id": 22,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a widget extension on both iOS and Android?",
+      "options": [
+        {
+          "option_id": 2574,
+          "option_text": "Using platform-specific code with Flutter",
+          "is_correct": false
+        },
+        {
+          "option_id": 2575,
+          "option_text": "Through native development only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2576,
+          "option_text": "Using web technologies",
+          "is_correct": false
+        },
+        {
+          "option_id": 2577,
+          "option_text": "Platform channels for native widget implementations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 397,
+      "subskill_id": 22,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the challenges of implementing multi-platform background sync?",
+      "options": [
+        {
+          "option_id": 2578,
+          "option_text": "Different OS limitations, battery optimization, network conditions",
+          "is_correct": true
+        },
+        {
+          "option_id": 2579,
+          "option_text": "No challenges exist",
+          "is_correct": false
+        },
+        {
+          "option_id": 2580,
+          "option_text": "Same on all platforms",
+          "is_correct": false
+        },
+        {
+          "option_id": 2581,
+          "option_text": "Only network issues matter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 398,
+      "subskill_id": 22,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle memory warnings and app termination strategically?",
+      "options": [
+        {
+          "option_id": 2582,
+          "option_text": "Ignore memory warnings",
+          "is_correct": false
+        },
+        {
+          "option_id": 2583,
+          "option_text": "Release caches and save state on memory pressure",
+          "is_correct": true
+        },
+        {
+          "option_id": 2584,
+          "option_text": "Allocate more memory",
+          "is_correct": false
+        },
+        {
+          "option_id": 2585,
+          "option_text": "Restart the app",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 399,
+      "subskill_id": 22,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Design a strategy for offline-first mobile application architecture.",
+      "options": [
+        {
+          "option_id": 2586,
+          "option_text": "Local database with sync engine and conflict resolution",
+          "is_correct": true
+        },
+        {
+          "option_id": 2587,
+          "option_text": "Online-only approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 2588,
+          "option_text": "No local storage needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 2589,
+          "option_text": "Simple file storage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 400,
+      "subskill_id": 22,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement predictive back gestures in modern Android?",
+      "options": [
+        {
+          "option_id": 2590,
+          "option_text": "Not possible in Android",
+          "is_correct": false
+        },
+        {
+          "option_id": 2591,
+          "option_text": "Through hardware back button only",
+          "is_correct": false
+        },
+        {
+          "option_id": 2592,
+          "option_text": "Using custom gesture detectors",
+          "is_correct": false
+        },
+        {
+          "option_id": 2593,
+          "option_text": "Using OnBackInvokedCallback and predictive back animations",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

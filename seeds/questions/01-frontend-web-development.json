@@ -1,0 +1,2906 @@
+{
+  "skill_id": 1,
+  "skill_name": "Frontend Web Development",
+  "questions": [
+    {
+      "question_id": 1,
+      "subskill_id": 1,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does HTML stand for?",
+      "options": [
+        {
+          "option_id": 1,
+          "option_text": "Hyper Text Markup Language",
+          "is_correct": true
+        },
+        {
+          "option_id": 2,
+          "option_text": "High Tech Modern Language",
+          "is_correct": false
+        },
+        {
+          "option_id": 3,
+          "option_text": "Hyper Transfer Markup Language",
+          "is_correct": false
+        },
+        {
+          "option_id": 4,
+          "option_text": "Home Tool Markup Language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "subskill_id": 1,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which tag is used for the largest heading in HTML?",
+      "options": [
+        {
+          "option_id": 5,
+          "option_text": "<h6>",
+          "is_correct": false
+        },
+        {
+          "option_id": 6,
+          "option_text": "<heading>",
+          "is_correct": false
+        },
+        {
+          "option_id": 7,
+          "option_text": "<h1>",
+          "is_correct": true
+        },
+        {
+          "option_id": 8,
+          "option_text": "<head>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "subskill_id": 1,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the correct HTML tag for inserting a line break?",
+      "options": [
+        {
+          "option_id": 9,
+          "option_text": "<break>",
+          "is_correct": false
+        },
+        {
+          "option_id": 10,
+          "option_text": "<br>",
+          "is_correct": true
+        },
+        {
+          "option_id": 11,
+          "option_text": "<hr>",
+          "is_correct": false
+        },
+        {
+          "option_id": 12,
+          "option_text": "<lb>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "subskill_id": 1,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which attribute is used to specify a unique identifier for an HTML element?",
+      "options": [
+        {
+          "option_id": 13,
+          "option_text": "name",
+          "is_correct": false
+        },
+        {
+          "option_id": 14,
+          "option_text": "id",
+          "is_correct": true
+        },
+        {
+          "option_id": 15,
+          "option_text": "key",
+          "is_correct": false
+        },
+        {
+          "option_id": 16,
+          "option_text": "class",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "subskill_id": 2,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does CSS stand for?",
+      "options": [
+        {
+          "option_id": 17,
+          "option_text": "Computer Style Sheets",
+          "is_correct": false
+        },
+        {
+          "option_id": 18,
+          "option_text": "Creative Style System",
+          "is_correct": false
+        },
+        {
+          "option_id": 19,
+          "option_text": "Cascading Style Sheets",
+          "is_correct": true
+        },
+        {
+          "option_id": 20,
+          "option_text": "Coded Style Sheets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "subskill_id": 2,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which property is used to change the text color in CSS?",
+      "options": [
+        {
+          "option_id": 21,
+          "option_text": "text-color",
+          "is_correct": false
+        },
+        {
+          "option_id": 22,
+          "option_text": "color",
+          "is_correct": true
+        },
+        {
+          "option_id": 23,
+          "option_text": "font-color",
+          "is_correct": false
+        },
+        {
+          "option_id": 24,
+          "option_text": "background-color",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "subskill_id": 2,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do you select an element with id \"header\" in CSS?",
+      "options": [
+        {
+          "option_id": 25,
+          "option_text": ".header",
+          "is_correct": false
+        },
+        {
+          "option_id": 26,
+          "option_text": "header",
+          "is_correct": false
+        },
+        {
+          "option_id": 27,
+          "option_text": "#header",
+          "is_correct": true
+        },
+        {
+          "option_id": 28,
+          "option_text": "*header",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "subskill_id": 2,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which CSS property controls the text size?",
+      "options": [
+        {
+          "option_id": 29,
+          "option_text": "size",
+          "is_correct": false
+        },
+        {
+          "option_id": 30,
+          "option_text": "font-style",
+          "is_correct": false
+        },
+        {
+          "option_id": 31,
+          "option_text": "text-size",
+          "is_correct": false
+        },
+        {
+          "option_id": 32,
+          "option_text": "font-size",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "subskill_id": 3,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which keyword is used to declare a variable in JavaScript?",
+      "options": [
+        {
+          "option_id": 33,
+          "option_text": "variable",
+          "is_correct": false
+        },
+        {
+          "option_id": 34,
+          "option_text": "let",
+          "is_correct": true
+        },
+        {
+          "option_id": 35,
+          "option_text": "const",
+          "is_correct": false
+        },
+        {
+          "option_id": 36,
+          "option_text": "var",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "subskill_id": 3,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What will console.log(typeof 42) output?",
+      "options": [
+        {
+          "option_id": 37,
+          "option_text": "string",
+          "is_correct": false
+        },
+        {
+          "option_id": 38,
+          "option_text": "integer",
+          "is_correct": false
+        },
+        {
+          "option_id": 39,
+          "option_text": "float",
+          "is_correct": false
+        },
+        {
+          "option_id": 40,
+          "option_text": "number",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "subskill_id": 3,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which method adds an element to the end of an array?",
+      "options": [
+        {
+          "option_id": 41,
+          "option_text": "pop()",
+          "is_correct": false
+        },
+        {
+          "option_id": 42,
+          "option_text": "unshift()",
+          "is_correct": false
+        },
+        {
+          "option_id": 43,
+          "option_text": "shift()",
+          "is_correct": false
+        },
+        {
+          "option_id": 44,
+          "option_text": "push()",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "subskill_id": 3,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does DOM stand for?",
+      "options": [
+        {
+          "option_id": 45,
+          "option_text": "Data Object Model",
+          "is_correct": false
+        },
+        {
+          "option_id": 46,
+          "option_text": "Dynamic Object Management",
+          "is_correct": false
+        },
+        {
+          "option_id": 47,
+          "option_text": "Document Oriented Model",
+          "is_correct": false
+        },
+        {
+          "option_id": 48,
+          "option_text": "Document Object Model",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "subskill_id": 4,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "React is a library developed by which company?",
+      "options": [
+        {
+          "option_id": 49,
+          "option_text": "Google",
+          "is_correct": false
+        },
+        {
+          "option_id": 50,
+          "option_text": "Microsoft",
+          "is_correct": false
+        },
+        {
+          "option_id": 51,
+          "option_text": "Facebook (Meta)",
+          "is_correct": true
+        },
+        {
+          "option_id": 52,
+          "option_text": "Amazon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "subskill_id": 4,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the name of the syntax used in React to write HTML-like code?",
+      "options": [
+        {
+          "option_id": 53,
+          "option_text": "ReactML",
+          "is_correct": false
+        },
+        {
+          "option_id": 54,
+          "option_text": "XML",
+          "is_correct": false
+        },
+        {
+          "option_id": 55,
+          "option_text": "HTMLX",
+          "is_correct": false
+        },
+        {
+          "option_id": 56,
+          "option_text": "JSX",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "subskill_id": 4,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the virtual DOM?",
+      "options": [
+        {
+          "option_id": 57,
+          "option_text": "A database for web apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 58,
+          "option_text": "A browser extension",
+          "is_correct": false
+        },
+        {
+          "option_id": 59,
+          "option_text": "A lightweight copy of the actual DOM",
+          "is_correct": true
+        },
+        {
+          "option_id": 60,
+          "option_text": "A virtual reality interface",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 16,
+      "subskill_id": 4,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does JSX stand for?",
+      "options": [
+        {
+          "option_id": 61,
+          "option_text": "JSON XML",
+          "is_correct": false
+        },
+        {
+          "option_id": 62,
+          "option_text": "JavaScript XHR",
+          "is_correct": false
+        },
+        {
+          "option_id": 63,
+          "option_text": "Java Syntax Extension",
+          "is_correct": false
+        },
+        {
+          "option_id": 64,
+          "option_text": "JavaScript XML",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 17,
+      "subskill_id": 5,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What CSS feature allows you to apply styles based on screen size?",
+      "options": [
+        {
+          "option_id": 65,
+          "option_text": "Grid",
+          "is_correct": false
+        },
+        {
+          "option_id": 66,
+          "option_text": "Animations",
+          "is_correct": false
+        },
+        {
+          "option_id": 67,
+          "option_text": "Flexbox",
+          "is_correct": false
+        },
+        {
+          "option_id": 68,
+          "option_text": "Media queries",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 18,
+      "subskill_id": 5,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which meta tag is essential for responsive web design?",
+      "options": [
+        {
+          "option_id": 69,
+          "option_text": "<meta charset=\"UTF-8\">",
+          "is_correct": false
+        },
+        {
+          "option_id": 70,
+          "option_text": "<meta http-equiv=\"refresh\">",
+          "is_correct": false
+        },
+        {
+          "option_id": 71,
+          "option_text": "<meta name=\"viewport\">",
+          "is_correct": true
+        },
+        {
+          "option_id": 72,
+          "option_text": "<meta name=\"description\">",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 19,
+      "subskill_id": 5,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What unit is relative to the viewport width?",
+      "options": [
+        {
+          "option_id": 73,
+          "option_text": "px",
+          "is_correct": false
+        },
+        {
+          "option_id": 74,
+          "option_text": "em",
+          "is_correct": false
+        },
+        {
+          "option_id": 75,
+          "option_text": "vw",
+          "is_correct": true
+        },
+        {
+          "option_id": 76,
+          "option_text": "rem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 20,
+      "subskill_id": 5,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which CSS property makes an image responsive by scaling with its container?",
+      "options": [
+        {
+          "option_id": 77,
+          "option_text": "width: 100px",
+          "is_correct": false
+        },
+        {
+          "option_id": 78,
+          "option_text": "max-width: 100%",
+          "is_correct": true
+        },
+        {
+          "option_id": 79,
+          "option_text": "display: block",
+          "is_correct": false
+        },
+        {
+          "option_id": 80,
+          "option_text": "height: auto",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 21,
+      "subskill_id": 6,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What API is used to get the user's current location in the browser?",
+      "options": [
+        {
+          "option_id": 81,
+          "option_text": "GPS API",
+          "is_correct": false
+        },
+        {
+          "option_id": 82,
+          "option_text": "Maps API",
+          "is_correct": false
+        },
+        {
+          "option_id": 83,
+          "option_text": "Geolocation API",
+          "is_correct": true
+        },
+        {
+          "option_id": 84,
+          "option_text": "Location API",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 22,
+      "subskill_id": 6,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which method stores data in the browser with no expiration time?",
+      "options": [
+        {
+          "option_id": 85,
+          "option_text": "sessionStorage.setItem()",
+          "is_correct": false
+        },
+        {
+          "option_id": 86,
+          "option_text": "cache.put()",
+          "is_correct": false
+        },
+        {
+          "option_id": 87,
+          "option_text": "cookie.set()",
+          "is_correct": false
+        },
+        {
+          "option_id": 88,
+          "option_text": "localStorage.setItem()",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 23,
+      "subskill_id": 6,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does the fetch() function return?",
+      "options": [
+        {
+          "option_id": 89,
+          "option_text": "JSON data",
+          "is_correct": false
+        },
+        {
+          "option_id": 90,
+          "option_text": "An HTTP request",
+          "is_correct": false
+        },
+        {
+          "option_id": 91,
+          "option_text": "A Response object",
+          "is_correct": false
+        },
+        {
+          "option_id": 92,
+          "option_text": "A Promise",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 24,
+      "subskill_id": 6,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which API allows you to draw graphics on a canvas?",
+      "options": [
+        {
+          "option_id": 93,
+          "option_text": "SVG API",
+          "is_correct": false
+        },
+        {
+          "option_id": 94,
+          "option_text": "Drawing API",
+          "is_correct": false
+        },
+        {
+          "option_id": 95,
+          "option_text": "Canvas API",
+          "is_correct": true
+        },
+        {
+          "option_id": 96,
+          "option_text": "WebGL API",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 25,
+      "subskill_id": 1,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which HTML tag is used to create a hyperlink?",
+      "options": [
+        {
+          "option_id": 97,
+          "option_text": "<nav>",
+          "is_correct": false
+        },
+        {
+          "option_id": 98,
+          "option_text": "<link>",
+          "is_correct": false
+        },
+        {
+          "option_id": 99,
+          "option_text": "<a>",
+          "is_correct": true
+        },
+        {
+          "option_id": 100,
+          "option_text": "<href>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 26,
+      "subskill_id": 1,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between div and span elements?",
+      "options": [
+        {
+          "option_id": 101,
+          "option_text": "div is block-level, span is inline",
+          "is_correct": true
+        },
+        {
+          "option_id": 102,
+          "option_text": "div is for images, span is for text",
+          "is_correct": false
+        },
+        {
+          "option_id": 103,
+          "option_text": "div is inline, span is block-level",
+          "is_correct": false
+        },
+        {
+          "option_id": 104,
+          "option_text": "They are interchangeable",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 27,
+      "subskill_id": 1,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which HTML5 tag is used for navigation links?",
+      "options": [
+        {
+          "option_id": 105,
+          "option_text": "<nav>",
+          "is_correct": true
+        },
+        {
+          "option_id": 106,
+          "option_text": "<menu>",
+          "is_correct": false
+        },
+        {
+          "option_id": 107,
+          "option_text": "<navigation>",
+          "is_correct": false
+        },
+        {
+          "option_id": 108,
+          "option_text": "<links>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 28,
+      "subskill_id": 1,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the purpose of the alt attribute in images?",
+      "options": [
+        {
+          "option_id": 109,
+          "option_text": "Provides alternative text for screen readers",
+          "is_correct": false
+        },
+        {
+          "option_id": 110,
+          "option_text": "Specifies image width",
+          "is_correct": false
+        },
+        {
+          "option_id": 111,
+          "option_text": "Adds a tooltip on hover",
+          "is_correct": false
+        },
+        {
+          "option_id": 112,
+          "option_text": "Provides fallback text if image fails to load",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 29,
+      "subskill_id": 1,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between class and id selectors?",
+      "options": [
+        {
+          "option_id": 113,
+          "option_text": "id must be unique, class can be reused",
+          "is_correct": true
+        },
+        {
+          "option_id": 114,
+          "option_text": "class must be unique, id can be reused",
+          "is_correct": false
+        },
+        {
+          "option_id": 115,
+          "option_text": "id is for CSS only, class is for JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 116,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 30,
+      "subskill_id": 2,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between margin and padding?",
+      "options": [
+        {
+          "option_id": 117,
+          "option_text": "Margin is outside the border, padding is inside",
+          "is_correct": true
+        },
+        {
+          "option_id": 118,
+          "option_text": "Padding is outside the border, margin is inside",
+          "is_correct": false
+        },
+        {
+          "option_id": 119,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 120,
+          "option_text": "Margin affects width, padding affects height",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 31,
+      "subskill_id": 2,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which CSS property would you use to make a layout flexible?",
+      "options": [
+        {
+          "option_id": 121,
+          "option_text": "display: grid",
+          "is_correct": false
+        },
+        {
+          "option_id": 122,
+          "option_text": "position: absolute",
+          "is_correct": false
+        },
+        {
+          "option_id": 123,
+          "option_text": "display: flex",
+          "is_correct": true
+        },
+        {
+          "option_id": 124,
+          "option_text": "float: left",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 32,
+      "subskill_id": 2,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between display: none and visibility: hidden?",
+      "options": [
+        {
+          "option_id": 125,
+          "option_text": "display: none removes element, visibility: hidden hides but occupies space",
+          "is_correct": true
+        },
+        {
+          "option_id": 126,
+          "option_text": "visibility: hidden removes element, display: none hides but occupies space",
+          "is_correct": false
+        },
+        {
+          "option_id": 127,
+          "option_text": "They do the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 128,
+          "option_text": "display: none works only on divs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 33,
+      "subskill_id": 2,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you center a div horizontally?",
+      "options": [
+        {
+          "option_id": 129,
+          "option_text": "margin: 0 auto",
+          "is_correct": true
+        },
+        {
+          "option_id": 130,
+          "option_text": "text-align: center",
+          "is_correct": false
+        },
+        {
+          "option_id": 131,
+          "option_text": "align: center",
+          "is_correct": false
+        },
+        {
+          "option_id": 132,
+          "option_text": "position: center",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 34,
+      "subskill_id": 3,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between let and var?",
+      "options": [
+        {
+          "option_id": 133,
+          "option_text": "let has block scope, var has function scope",
+          "is_correct": true
+        },
+        {
+          "option_id": 134,
+          "option_text": "var has block scope, let has function scope",
+          "is_correct": false
+        },
+        {
+          "option_id": 135,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 136,
+          "option_text": "let is for constants, var is for variables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 35,
+      "subskill_id": 3,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a callback function?",
+      "options": [
+        {
+          "option_id": 137,
+          "option_text": "A function passed as an argument to another function",
+          "is_correct": true
+        },
+        {
+          "option_id": 138,
+          "option_text": "A function that calls itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 139,
+          "option_text": "A function that returns another function",
+          "is_correct": false
+        },
+        {
+          "option_id": 140,
+          "option_text": "A function that runs after a timeout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 36,
+      "subskill_id": 3,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between == and ===?",
+      "options": [
+        {
+          "option_id": 141,
+          "option_text": "== compares value, === compares value and type",
+          "is_correct": true
+        },
+        {
+          "option_id": 142,
+          "option_text": "=== compares value, == compares value and type",
+          "is_correct": false
+        },
+        {
+          "option_id": 143,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 144,
+          "option_text": "== is for numbers, === is for strings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 37,
+      "subskill_id": 3,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which method is used to parse JSON in JavaScript?",
+      "options": [
+        {
+          "option_id": 145,
+          "option_text": "JSON.stringify()",
+          "is_correct": false
+        },
+        {
+          "option_id": 146,
+          "option_text": "JSON.parse()",
+          "is_correct": true
+        },
+        {
+          "option_id": 147,
+          "option_text": "JSON.toObject()",
+          "is_correct": false
+        },
+        {
+          "option_id": 148,
+          "option_text": "JSON.decode()",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 38,
+      "subskill_id": 4,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between props and state?",
+      "options": [
+        {
+          "option_id": 149,
+          "option_text": "props are passed in, state is internal",
+          "is_correct": true
+        },
+        {
+          "option_id": 150,
+          "option_text": "state are passed in, props is internal",
+          "is_correct": false
+        },
+        {
+          "option_id": 151,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 152,
+          "option_text": "props can change, state cannot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 39,
+      "subskill_id": 4,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which hook is used for side effects in React?",
+      "options": [
+        {
+          "option_id": 153,
+          "option_text": "useState",
+          "is_correct": false
+        },
+        {
+          "option_id": 154,
+          "option_text": "useContext",
+          "is_correct": false
+        },
+        {
+          "option_id": 155,
+          "option_text": "useEffect",
+          "is_correct": true
+        },
+        {
+          "option_id": 156,
+          "option_text": "useReducer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 40,
+      "subskill_id": 4,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the purpose of keys in React lists?",
+      "options": [
+        {
+          "option_id": 157,
+          "option_text": "To uniquely identify list items for efficient updates",
+          "is_correct": true
+        },
+        {
+          "option_id": 158,
+          "option_text": "To style list items",
+          "is_correct": false
+        },
+        {
+          "option_id": 159,
+          "option_text": "To order list items",
+          "is_correct": false
+        },
+        {
+          "option_id": 160,
+          "option_text": "To filter list items",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 41,
+      "subskill_id": 4,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you pass data from parent to child component?",
+      "options": [
+        {
+          "option_id": 161,
+          "option_text": "Using props",
+          "is_correct": true
+        },
+        {
+          "option_id": 162,
+          "option_text": "Using state",
+          "is_correct": false
+        },
+        {
+          "option_id": 163,
+          "option_text": "Using context",
+          "is_correct": false
+        },
+        {
+          "option_id": 164,
+          "option_text": "Using refs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 42,
+      "subskill_id": 5,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the mobile-first approach?",
+      "options": [
+        {
+          "option_id": 165,
+          "option_text": "Design for mobile first, then scale up",
+          "is_correct": true
+        },
+        {
+          "option_id": 166,
+          "option_text": "Design for desktop first, then scale down",
+          "is_correct": false
+        },
+        {
+          "option_id": 167,
+          "option_text": "Design only for mobile",
+          "is_correct": false
+        },
+        {
+          "option_id": 168,
+          "option_text": "Design only for desktop",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 43,
+      "subskill_id": 5,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which CSS unit is best for responsive typography?",
+      "options": [
+        {
+          "option_id": 169,
+          "option_text": "px",
+          "is_correct": false
+        },
+        {
+          "option_id": 170,
+          "option_text": "rem",
+          "is_correct": true
+        },
+        {
+          "option_id": 171,
+          "option_text": "cm",
+          "is_correct": false
+        },
+        {
+          "option_id": 172,
+          "option_text": "pt",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 44,
+      "subskill_id": 5,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a fluid layout?",
+      "options": [
+        {
+          "option_id": 173,
+          "option_text": "A layout that uses percentage-based widths",
+          "is_correct": true
+        },
+        {
+          "option_id": 174,
+          "option_text": "A layout that uses fixed widths",
+          "is_correct": false
+        },
+        {
+          "option_id": 175,
+          "option_text": "A layout with animations",
+          "is_correct": false
+        },
+        {
+          "option_id": 176,
+          "option_text": "A layout with water effects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 45,
+      "subskill_id": 5,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you hide an element on mobile devices only?",
+      "options": [
+        {
+          "option_id": 177,
+          "option_text": "Use media queries with display: none",
+          "is_correct": true
+        },
+        {
+          "option_id": 178,
+          "option_text": "Use JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 179,
+          "option_text": "Use visibility: hidden",
+          "is_correct": false
+        },
+        {
+          "option_id": 180,
+          "option_text": "Use opacity: 0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 46,
+      "subskill_id": 6,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between localStorage and sessionStorage?",
+      "options": [
+        {
+          "option_id": 181,
+          "option_text": "localStorage persists, sessionStorage clears when tab closes",
+          "is_correct": true
+        },
+        {
+          "option_id": 182,
+          "option_text": "sessionStorage persists, localStorage clears when tab closes",
+          "is_correct": false
+        },
+        {
+          "option_id": 183,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 184,
+          "option_text": "localStorage is for strings, sessionStorage is for objects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 47,
+      "subskill_id": 6,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle errors with fetch API?",
+      "options": [
+        {
+          "option_id": 185,
+          "option_text": "Using .catch() or try/catch with async/await",
+          "is_correct": true
+        },
+        {
+          "option_id": 186,
+          "option_text": "Using .error()",
+          "is_correct": false
+        },
+        {
+          "option_id": 187,
+          "option_text": "Using .fail()",
+          "is_correct": false
+        },
+        {
+          "option_id": 188,
+          "option_text": "Errors are automatic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 48,
+      "subskill_id": 6,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the purpose of the history API?",
+      "options": [
+        {
+          "option_id": 189,
+          "option_text": "To manipulate browser session history",
+          "is_correct": true
+        },
+        {
+          "option_id": 190,
+          "option_text": "To track user history on server",
+          "is_correct": false
+        },
+        {
+          "option_id": 191,
+          "option_text": "To store browser bookmarks",
+          "is_correct": false
+        },
+        {
+          "option_id": 192,
+          "option_text": "To cache web pages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 49,
+      "subskill_id": 6,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which API is used for real-time communication?",
+      "options": [
+        {
+          "option_id": 193,
+          "option_text": "REST API",
+          "is_correct": false
+        },
+        {
+          "option_id": 194,
+          "option_text": "SOAP API",
+          "is_correct": false
+        },
+        {
+          "option_id": 195,
+          "option_text": "WebSocket API",
+          "is_correct": true
+        },
+        {
+          "option_id": 196,
+          "option_text": "GraphQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 50,
+      "subskill_id": 2,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the purpose of z-index in CSS?",
+      "options": [
+        {
+          "option_id": 197,
+          "option_text": "Controls stack order of overlapping elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 198,
+          "option_text": "Controls zoom level",
+          "is_correct": false
+        },
+        {
+          "option_id": 199,
+          "option_text": "Controls z-axis rotation",
+          "is_correct": false
+        },
+        {
+          "option_id": 200,
+          "option_text": "Controls grid layout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 51,
+      "subskill_id": 1,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is semantic HTML and why is it important?",
+      "options": [
+        {
+          "option_id": 5366,
+          "option_text": "HTML that uses meaningful tags for accessibility and SEO",
+          "is_correct": true
+        },
+        {
+          "option_id": 5367,
+          "option_text": "HTML with lots of divs and spans",
+          "is_correct": false
+        },
+        {
+          "option_id": 5368,
+          "option_text": "HTML that validates without errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 5369,
+          "option_text": "HTML that uses JavaScript for interactivity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 52,
+      "subskill_id": 1,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Which HTML5 element is used for side content?",
+      "options": [
+        {
+          "option_id": 5370,
+          "option_text": "<main>",
+          "is_correct": false
+        },
+        {
+          "option_id": 5371,
+          "option_text": "<section>",
+          "is_correct": false
+        },
+        {
+          "option_id": 5372,
+          "option_text": "<aside>",
+          "is_correct": true
+        },
+        {
+          "option_id": 5373,
+          "option_text": "<sidebar>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 53,
+      "subskill_id": 1,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the purpose of the data-* attributes?",
+      "options": [
+        {
+          "option_id": 5374,
+          "option_text": "To store custom data in HTML elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 5375,
+          "option_text": "To create data visualizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5376,
+          "option_text": "To link to external data files",
+          "is_correct": false
+        },
+        {
+          "option_id": 5377,
+          "option_text": "To validate form data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 54,
+      "subskill_id": 1,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize HTML for screen readers?",
+      "options": [
+        {
+          "option_id": 5378,
+          "option_text": "Use ARIA roles and semantic HTML",
+          "is_correct": false
+        },
+        {
+          "option_id": 5379,
+          "option_text": "Use lots of images with alt text",
+          "is_correct": false
+        },
+        {
+          "option_id": 5380,
+          "option_text": "Use proper heading hierarchy and landmarks",
+          "is_correct": true
+        },
+        {
+          "option_id": 5381,
+          "option_text": "Use JavaScript for accessibility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 55,
+      "subskill_id": 2,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How is CSS specificity calculated?",
+      "options": [
+        {
+          "option_id": 5382,
+          "option_text": "By counting inline styles, IDs, classes, and elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 5383,
+          "option_text": "By the order of declaration in the stylesheet",
+          "is_correct": false
+        },
+        {
+          "option_id": 5384,
+          "option_text": "By the number of selectors used",
+          "is_correct": false
+        },
+        {
+          "option_id": 5385,
+          "option_text": "Inline > ID > Class > Element",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 56,
+      "subskill_id": 2,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are CSS custom properties (variables)?",
+      "options": [
+        {
+          "option_id": 5386,
+          "option_text": "Properties that start with -- and can be reused",
+          "is_correct": true
+        },
+        {
+          "option_id": 5387,
+          "option_text": "SASS variables compiled to CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 5388,
+          "option_text": "JavaScript variables in CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 5389,
+          "option_text": "System colors only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 57,
+      "subskill_id": 2,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does flexbox differ from grid?",
+      "options": [
+        {
+          "option_id": 5390,
+          "option_text": "Flexbox is 1D, Grid is 2D",
+          "is_correct": true
+        },
+        {
+          "option_id": 5391,
+          "option_text": "Flexbox is 2D, Grid is 1D",
+          "is_correct": false
+        },
+        {
+          "option_id": 5392,
+          "option_text": "Flexbox is older, Grid is newer",
+          "is_correct": false
+        },
+        {
+          "option_id": 5393,
+          "option_text": "They are the same with different syntax",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 58,
+      "subskill_id": 2,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the purpose of CSS preprocessors?",
+      "options": [
+        {
+          "option_id": 5394,
+          "option_text": "To add programming features to CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 5395,
+          "option_text": "To minify CSS files",
+          "is_correct": false
+        },
+        {
+          "option_id": 5396,
+          "option_text": "To add variables, nesting, and mixins",
+          "is_correct": true
+        },
+        {
+          "option_id": 5397,
+          "option_text": "To convert CSS to JavaScript",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 59,
+      "subskill_id": 3,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closure in JavaScript?",
+      "options": [
+        {
+          "option_id": 5398,
+          "option_text": "A function that closes the browser window",
+          "is_correct": false
+        },
+        {
+          "option_id": 5399,
+          "option_text": "A function with access to outer scope after outer function returns",
+          "is_correct": true
+        },
+        {
+          "option_id": 5400,
+          "option_text": "A way to close database connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 5401,
+          "option_text": "An error handling technique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 60,
+      "subskill_id": 3,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is event delegation?",
+      "options": [
+        {
+          "option_id": 5402,
+          "option_text": "Attaching events to each child element",
+          "is_correct": false
+        },
+        {
+          "option_id": 5403,
+          "option_text": "Using a single parent listener for multiple children",
+          "is_correct": true
+        },
+        {
+          "option_id": 5404,
+          "option_text": "Delegating events to another function",
+          "is_correct": false
+        },
+        {
+          "option_id": 5405,
+          "option_text": "Removing event listeners after use",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 61,
+      "subskill_id": 3,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between deep and shallow copy?",
+      "options": [
+        {
+          "option_id": 5406,
+          "option_text": "Shallow copy copies nested objects, deep copy does not",
+          "is_correct": false
+        },
+        {
+          "option_id": 5407,
+          "option_text": "Deep copy duplicates nested objects, shallow copy shares references",
+          "is_correct": true
+        },
+        {
+          "option_id": 5408,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5409,
+          "option_text": "Deep copy is faster",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 62,
+      "subskill_id": 3,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does the \"this\" keyword work in JavaScript?",
+      "options": [
+        {
+          "option_id": 5410,
+          "option_text": "Always refers to the window object",
+          "is_correct": false
+        },
+        {
+          "option_id": 5411,
+          "option_text": "Depends on how the function is called",
+          "is_correct": true
+        },
+        {
+          "option_id": 5412,
+          "option_text": "Refers to the parent function",
+          "is_correct": false
+        },
+        {
+          "option_id": 5413,
+          "option_text": "Is undefined in strict mode",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 63,
+      "subskill_id": 4,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does the virtual DOM improve performance?",
+      "options": [
+        {
+          "option_id": 5414,
+          "option_text": "By updating the real DOM directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 5415,
+          "option_text": "By batching updates and minimizing reflows",
+          "is_correct": true
+        },
+        {
+          "option_id": 5416,
+          "option_text": "By using WebAssembly",
+          "is_correct": false
+        },
+        {
+          "option_id": 5417,
+          "option_text": "By caching all DOM operations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 64,
+      "subskill_id": 4,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are controlled vs uncontrolled components?",
+      "options": [
+        {
+          "option_id": 5418,
+          "option_text": "Controlled by React state, uncontrolled by DOM refs",
+          "is_correct": true
+        },
+        {
+          "option_id": 5419,
+          "option_text": "Controlled by parent, uncontrolled by child",
+          "is_correct": false
+        },
+        {
+          "option_id": 5420,
+          "option_text": "Controlled with JavaScript, uncontrolled with HTML",
+          "is_correct": false
+        },
+        {
+          "option_id": 5421,
+          "option_text": "Controlled have validation, uncontrolled do not",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 65,
+      "subskill_id": 4,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Context API used for?",
+      "options": [
+        {
+          "option_id": 5422,
+          "option_text": "Global state management without prop drilling",
+          "is_correct": true
+        },
+        {
+          "option_id": 5423,
+          "option_text": "Styling components",
+          "is_correct": false
+        },
+        {
+          "option_id": 5424,
+          "option_text": "Handling API requests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5425,
+          "option_text": "Creating animations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 66,
+      "subskill_id": 4,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "When would you use useMemo vs useCallback?",
+      "options": [
+        {
+          "option_id": 5426,
+          "option_text": "useMemo for values, useCallback for functions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5427,
+          "option_text": "useCallback for values, useMemo for functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5428,
+          "option_text": "They are interchangeable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5429,
+          "option_text": "useMemo is deprecated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 67,
+      "subskill_id": 5,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you serve different images based on screen size?",
+      "options": [
+        {
+          "option_id": 5430,
+          "option_text": "Using srcset and sizes attributes",
+          "is_correct": true
+        },
+        {
+          "option_id": 5431,
+          "option_text": "Using CSS background images only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5432,
+          "option_text": "Using JavaScript window width",
+          "is_correct": false
+        },
+        {
+          "option_id": 5433,
+          "option_text": "Using media queries only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 68,
+      "subskill_id": 5,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are container queries?",
+      "options": [
+        {
+          "option_id": 5434,
+          "option_text": "Queries that respond to parent container size",
+          "is_correct": true
+        },
+        {
+          "option_id": 5435,
+          "option_text": "Media queries for containers",
+          "is_correct": false
+        },
+        {
+          "option_id": 5436,
+          "option_text": "Database container queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 5437,
+          "option_text": "Docker container queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 69,
+      "subskill_id": 5,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test responsive designs across devices?",
+      "options": [
+        {
+          "option_id": 5438,
+          "option_text": "Browser dev tools device emulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5439,
+          "option_text": "Real device testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5440,
+          "option_text": "Online responsive test tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 5441,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 70,
+      "subskill_id": 5,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between adaptive and responsive design?",
+      "options": [
+        {
+          "option_id": 5442,
+          "option_text": "Adaptive has fixed layouts, responsive flows continuously",
+          "is_correct": true
+        },
+        {
+          "option_id": 5443,
+          "option_text": "Responsive has fixed layouts, adaptive flows",
+          "is_correct": false
+        },
+        {
+          "option_id": 5444,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5445,
+          "option_text": "Adaptive is newer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 71,
+      "subskill_id": 6,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does the Intersection Observer work?",
+      "options": [
+        {
+          "option_id": 5446,
+          "option_text": "Observes when elements intersect with viewport",
+          "is_correct": true
+        },
+        {
+          "option_id": 5447,
+          "option_text": "Observes mouse intersections",
+          "is_correct": false
+        },
+        {
+          "option_id": 5448,
+          "option_text": "Observes network status",
+          "is_correct": false
+        },
+        {
+          "option_id": 5449,
+          "option_text": "Observes form submissions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 72,
+      "subskill_id": 6,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are Web Workers used for?",
+      "options": [
+        {
+          "option_id": 5450,
+          "option_text": "Running scripts in background threads",
+          "is_correct": true
+        },
+        {
+          "option_id": 5451,
+          "option_text": "Managing web sockets",
+          "is_correct": false
+        },
+        {
+          "option_id": 5452,
+          "option_text": "Styling web pages",
+          "is_correct": false
+        },
+        {
+          "option_id": 5453,
+          "option_text": "Creating animations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 73,
+      "subskill_id": 6,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement drag and drop natively?",
+      "options": [
+        {
+          "option_id": 5454,
+          "option_text": "Using the Drag and Drop API",
+          "is_correct": true
+        },
+        {
+          "option_id": 5455,
+          "option_text": "Using jQuery UI",
+          "is_correct": false
+        },
+        {
+          "option_id": 5456,
+          "option_text": "Using mouse events only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5457,
+          "option_text": "Using CSS transforms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 74,
+      "subskill_id": 6,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Payment Request API?",
+      "options": [
+        {
+          "option_id": 5458,
+          "option_text": "An API to request payments from users",
+          "is_correct": false
+        },
+        {
+          "option_id": 5459,
+          "option_text": "A browser API that streamlines checkout",
+          "is_correct": true
+        },
+        {
+          "option_id": 5460,
+          "option_text": "A credit card processor",
+          "is_correct": false
+        },
+        {
+          "option_id": 5461,
+          "option_text": "A payment gateway",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 75,
+      "subskill_id": 3,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the event loop in JavaScript?",
+      "options": [
+        {
+          "option_id": 5462,
+          "option_text": "A loop that handles DOM events",
+          "is_correct": false
+        },
+        {
+          "option_id": 5463,
+          "option_text": "Mechanism for async code execution",
+          "is_correct": true
+        },
+        {
+          "option_id": 5464,
+          "option_text": "A way to loop through arrays",
+          "is_correct": false
+        },
+        {
+          "option_id": 5465,
+          "option_text": "A timer function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 76,
+      "subskill_id": 1,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement ARIA roles for accessibility?",
+      "options": [
+        {
+          "option_id": 1441,
+          "option_text": "Add role attributes to HTML elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 1442,
+          "option_text": "Use semantic HTML5 elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 1443,
+          "option_text": "Add ARIA attributes to describe purpose",
+          "is_correct": false
+        },
+        {
+          "option_id": 1444,
+          "option_text": "Use JavaScript for accessibility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 77,
+      "subskill_id": 1,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are microformats and how are they used?",
+      "options": [
+        {
+          "option_id": 1445,
+          "option_text": "HTML markup for embedding metadata",
+          "is_correct": true
+        },
+        {
+          "option_id": 1446,
+          "option_text": "Small CSS files",
+          "is_correct": false
+        },
+        {
+          "option_id": 1447,
+          "option_text": "Tiny JavaScript libraries",
+          "is_correct": false
+        },
+        {
+          "option_id": 1448,
+          "option_text": "Mobile-specific formats",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 78,
+      "subskill_id": 1,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does the shadow DOM work?",
+      "options": [
+        {
+          "option_id": 1449,
+          "option_text": "Encapsulates DOM and CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 1450,
+          "option_text": "Creates hidden DOM trees",
+          "is_correct": false
+        },
+        {
+          "option_id": 1451,
+          "option_text": "Encapsulates DOM, CSS, and hides implementation",
+          "is_correct": true
+        },
+        {
+          "option_id": 1452,
+          "option_text": "Creates a DOM copy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 79,
+      "subskill_id": 1,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between localStorage and IndexedDB?",
+      "options": [
+        {
+          "option_id": 1453,
+          "option_text": "localStorage is sync, IndexedDB is async",
+          "is_correct": false
+        },
+        {
+          "option_id": 1454,
+          "option_text": "localStorage stores strings, IndexedDB stores structured data",
+          "is_correct": false
+        },
+        {
+          "option_id": 1455,
+          "option_text": "IndexedDB has larger storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 1456,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 80,
+      "subskill_id": 2,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is CSS Houdini?",
+      "options": [
+        {
+          "option_id": 1457,
+          "option_text": "A CSS framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 1458,
+          "option_text": "APIs that give access to CSS engine",
+          "is_correct": true
+        },
+        {
+          "option_id": 1459,
+          "option_text": "A new version of CSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 1460,
+          "option_text": "A browser extension",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 81,
+      "subskill_id": 2,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create complex CSS animations efficiently?",
+      "options": [
+        {
+          "option_id": 1461,
+          "option_text": "Use transform and opacity for better performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 1462,
+          "option_text": "Use JavaScript timers",
+          "is_correct": false
+        },
+        {
+          "option_id": 1463,
+          "option_text": "Use jQuery animate",
+          "is_correct": false
+        },
+        {
+          "option_id": 1464,
+          "option_text": "Use CSS transitions only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 82,
+      "subskill_id": 2,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the benefits and drawbacks of CSS-in-JS?",
+      "options": [
+        {
+          "option_id": 1465,
+          "option_text": "Better scoping but runtime overhead",
+          "is_correct": true
+        },
+        {
+          "option_id": 1466,
+          "option_text": "Faster rendering but larger bundle",
+          "is_correct": false
+        },
+        {
+          "option_id": 1467,
+          "option_text": "Easier debugging but slower",
+          "is_correct": false
+        },
+        {
+          "option_id": 1468,
+          "option_text": "No benefits at all",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 83,
+      "subskill_id": 2,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement dark mode with CSS?",
+      "options": [
+        {
+          "option_id": 1469,
+          "option_text": "Using prefers-color-scheme media query",
+          "is_correct": false
+        },
+        {
+          "option_id": 1470,
+          "option_text": "Using CSS custom properties and media queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 1471,
+          "option_text": "Using JavaScript to toggle classes",
+          "is_correct": false
+        },
+        {
+          "option_id": 1472,
+          "option_text": "Using prefers-color-scheme with CSS variables",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 84,
+      "subskill_id": 3,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is prototypal inheritance vs classical?",
+      "options": [
+        {
+          "option_id": 1473,
+          "option_text": "Classical uses classes, prototypal uses objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 1474,
+          "option_text": "Prototypal delegates through prototype chain",
+          "is_correct": true
+        },
+        {
+          "option_id": 1475,
+          "option_text": "Classical is older, prototypal is newer",
+          "is_correct": false
+        },
+        {
+          "option_id": 1476,
+          "option_text": "They are the same concept",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 85,
+      "subskill_id": 3,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a debounce function?",
+      "options": [
+        {
+          "option_id": 1477,
+          "option_text": "Using setTimeout and clearTimeout",
+          "is_correct": true
+        },
+        {
+          "option_id": 1478,
+          "option_text": "Using setInterval",
+          "is_correct": false
+        },
+        {
+          "option_id": 1479,
+          "option_text": "Using requestAnimationFrame",
+          "is_correct": false
+        },
+        {
+          "option_id": 1480,
+          "option_text": "Using Promise.all",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 86,
+      "subskill_id": 3,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What causes memory leaks in JavaScript?",
+      "options": [
+        {
+          "option_id": 1481,
+          "option_text": "Global variables and forgotten timers",
+          "is_correct": true
+        },
+        {
+          "option_id": 1482,
+          "option_text": "Too many variables",
+          "is_correct": false
+        },
+        {
+          "option_id": 1483,
+          "option_text": "Large arrays",
+          "is_correct": false
+        },
+        {
+          "option_id": 1484,
+          "option_text": "Function declarations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 87,
+      "subskill_id": 3,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do generators and iterators work?",
+      "options": [
+        {
+          "option_id": 1485,
+          "option_text": "Generators can pause execution with yield",
+          "is_correct": true
+        },
+        {
+          "option_id": 1486,
+          "option_text": "Iterators are the same as generators",
+          "is_correct": false
+        },
+        {
+          "option_id": 1487,
+          "option_text": "Generators cannot return values",
+          "is_correct": false
+        },
+        {
+          "option_id": 1488,
+          "option_text": "Iterators are only for arrays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 88,
+      "subskill_id": 4,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does React Fiber work internally?",
+      "options": [
+        {
+          "option_id": 1489,
+          "option_text": "Breaks rendering into units that can be prioritized",
+          "is_correct": true
+        },
+        {
+          "option_id": 1490,
+          "option_text": "Uses web workers",
+          "is_correct": false
+        },
+        {
+          "option_id": 1491,
+          "option_text": "Compiles React to vanilla JS",
+          "is_correct": false
+        },
+        {
+          "option_id": 1492,
+          "option_text": "Creates virtual DOM only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 89,
+      "subskill_id": 4,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement code splitting in React?",
+      "options": [
+        {
+          "option_id": 1493,
+          "option_text": "Using React.lazy() and Suspense",
+          "is_correct": true
+        },
+        {
+          "option_id": 1494,
+          "option_text": "Using dynamic imports with React.lazy",
+          "is_correct": false
+        },
+        {
+          "option_id": 1495,
+          "option_text": "Using webpack directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 1496,
+          "option_text": "Using multiple bundles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 90,
+      "subskill_id": 4,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are render props and when to use them?",
+      "options": [
+        {
+          "option_id": 1497,
+          "option_text": "Props that render components",
+          "is_correct": false
+        },
+        {
+          "option_id": 1498,
+          "option_text": "Function props that return JSX for sharing logic",
+          "is_correct": true
+        },
+        {
+          "option_id": 1499,
+          "option_text": "Props that conditionally render",
+          "is_correct": false
+        },
+        {
+          "option_id": 1500,
+          "option_text": "Props passed to render method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 91,
+      "subskill_id": 4,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create custom React hooks?",
+      "options": [
+        {
+          "option_id": 1501,
+          "option_text": "Functions starting with \"use\" that call other hooks",
+          "is_correct": true
+        },
+        {
+          "option_id": 1502,
+          "option_text": "By extending the Hook class",
+          "is_correct": false
+        },
+        {
+          "option_id": 1503,
+          "option_text": "By using useHook function",
+          "is_correct": false
+        },
+        {
+          "option_id": 1504,
+          "option_text": "By creating higher-order components",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 92,
+      "subskill_id": 5,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement RTL support in responsive designs?",
+      "options": [
+        {
+          "option_id": 1505,
+          "option_text": "Using direction: rtl and mirroring layouts",
+          "is_correct": false
+        },
+        {
+          "option_id": 1506,
+          "option_text": "Using CSS logical properties",
+          "is_correct": true
+        },
+        {
+          "option_id": 1507,
+          "option_text": "Creating separate RTL stylesheets",
+          "is_correct": false
+        },
+        {
+          "option_id": 1508,
+          "option_text": "Using JavaScript to flip elements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 93,
+      "subskill_id": 5,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are Core Web Vitals and how do you optimize them?",
+      "options": [
+        {
+          "option_id": 1509,
+          "option_text": "LCP, FID, CLS metrics for user experience",
+          "is_correct": true
+        },
+        {
+          "option_id": 1510,
+          "option_text": "Google ranking factors only",
+          "is_correct": false
+        },
+        {
+          "option_id": 1511,
+          "option_text": "Performance metrics for developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 1512,
+          "option_text": "SEO requirements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 94,
+      "subskill_id": 5,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a responsive email template?",
+      "options": [
+        {
+          "option_id": 1513,
+          "option_text": "Use tables and inline CSS with media queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 1514,
+          "option_text": "Use flexbox and grid",
+          "is_correct": false
+        },
+        {
+          "option_id": 1515,
+          "option_text": "Use modern CSS frameworks",
+          "is_correct": false
+        },
+        {
+          "option_id": 1516,
+          "option_text": "Use JavaScript",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 95,
+      "subskill_id": 5,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle complex responsive tables?",
+      "options": [
+        {
+          "option_id": 1517,
+          "option_text": "Use overflow-x: auto for horizontal scroll",
+          "is_correct": false
+        },
+        {
+          "option_id": 1518,
+          "option_text": "Use display: block and reorganize with media queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 1519,
+          "option_text": "Hide columns on mobile",
+          "is_correct": false
+        },
+        {
+          "option_id": 1520,
+          "option_text": "Convert to cards on mobile",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 96,
+      "subskill_id": 6,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement offline support with Service Workers?",
+      "options": [
+        {
+          "option_id": 1521,
+          "option_text": "Cache assets and serve when offline",
+          "is_correct": false
+        },
+        {
+          "option_id": 1522,
+          "option_text": "Intercept network requests and serve cached responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 1523,
+          "option_text": "Store data in IndexedDB",
+          "is_correct": false
+        },
+        {
+          "option_id": 1524,
+          "option_text": "Use AppCache",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 97,
+      "subskill_id": 6,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is WebAssembly and when would you use it?",
+      "options": [
+        {
+          "option_id": 1525,
+          "option_text": "Binary format for high-performance web apps",
+          "is_correct": true
+        },
+        {
+          "option_id": 1526,
+          "option_text": "Assembly language for web",
+          "is_correct": false
+        },
+        {
+          "option_id": 1527,
+          "option_text": "JavaScript replacement",
+          "is_correct": false
+        },
+        {
+          "option_id": 1528,
+          "option_text": "Browser plugin system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 98,
+      "subskill_id": 6,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does WebRTC enable peer-to-peer communication?",
+      "options": [
+        {
+          "option_id": 1529,
+          "option_text": "Through direct browser-to-browser connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 1530,
+          "option_text": "Using signaling servers and NAT traversal",
+          "is_correct": true
+        },
+        {
+          "option_id": 1531,
+          "option_text": "Through central servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 1532,
+          "option_text": "Using WebSockets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 99,
+      "subskill_id": 6,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement push notifications?",
+      "options": [
+        {
+          "option_id": 1533,
+          "option_text": "Using Service Workers and Push API",
+          "is_correct": true
+        },
+        {
+          "option_id": 1534,
+          "option_text": "Using WebSockets",
+          "is_correct": false
+        },
+        {
+          "option_id": 1535,
+          "option_text": "Using setInterval polling",
+          "is_correct": false
+        },
+        {
+          "option_id": 1536,
+          "option_text": "Using Server-Sent Events",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 100,
+      "subskill_id": 6,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement background sync with Service Workers?",
+      "options": [
+        {
+          "option_id": 1537,
+          "option_text": "Using sync event when connection returns",
+          "is_correct": false
+        },
+        {
+          "option_id": 1538,
+          "option_text": "Using background sync API to defer actions until online",
+          "is_correct": true
+        },
+        {
+          "option_id": 1539,
+          "option_text": "Using setInterval to check connection",
+          "is_correct": false
+        },
+        {
+          "option_id": 1540,
+          "option_text": "Using fetch with retry",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

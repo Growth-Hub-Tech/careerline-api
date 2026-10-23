@@ -16,10 +16,10 @@ from sqlalchemy.engine import Engine, make_url
 from sqlalchemy.pool import NullPool
 
 from app.core.config import settings
+from app.db import seed
 from app.db.session import engine as app_engine
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-LEVELS = ("BEGINNER", "JUNIOR", "MID", "ADVANCED")
 PASSWORD = "correct-horse-battery"
 
 
@@ -68,15 +68,9 @@ async def clean_database(database: Engine):
         ).scalars()
         names = ", ".join(f'"{name}"' for name in tables)
         conn.execute(text(f"TRUNCATE {names} RESTART IDENTITY CASCADE"))
-        # Reference data the app expects. Nothing creates it yet (see test_known_bugs.py),
-        # so the tests add the 4 levels by hand.
-        for level in LEVELS:
-            conn.execute(
-                text(
-                    "INSERT INTO proficiency_level (level_name) VALUES (CAST(:level AS levelname))"
-                ),
-                {"level": level},
-            )
+        # Reference data the app expects: the 4 levels and their score bands, from the seed
+        # files (tests add their own small skill; test_seeds.py loads the whole question bank)
+        seed.load(conn, tables=seed.LEVEL_TABLES)
     yield
     # Each test has its own event loop; close the app's pooled connections before it ends
     await app_engine.dispose()

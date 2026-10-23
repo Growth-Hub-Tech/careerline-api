@@ -29,7 +29,6 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic-settings==2.15.0
 pydantic_core==2.46.4
-PyMySQL==1.1.2
 pyngrok==8.1.2
 python-dotenv==1.2.2
 python-jose==3.5.0

@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from app.api.routes import api_router, health, legacy
+from app.api.routes import api_router, health
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.logging import configure_logging, get_logger
@@ -70,9 +70,8 @@ def create_app() -> FastAPI:
     # route always wins; off in production unless SAMPLE_API_ENABLED=true.
     if settings.sample_api_enabled:
         app.include_router(sample_router, prefix=settings.API_PREFIX)
-    # Outside the prefix: health checks, and the deprecated /api/* routes (removed on Day 4)
+    # Outside the prefix: health checks
     app.include_router(health.router)
-    app.include_router(legacy.router)
 
     return app
 

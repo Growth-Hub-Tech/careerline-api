@@ -1,0 +1,2906 @@
+{
+  "skill_id": 33,
+  "skill_name": "CRM & Sales Tools",
+  "questions": [
+    {
+      "question_id": 3201,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Salesforce?",
+      "options": [
+        {
+          "option_id": 15066,
+          "option_text": "A leading customer relationship management (CRM) platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 15067,
+          "option_text": "A marketing automation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15068,
+          "option_text": "A project management tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15069,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3202,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Salesforce account?",
+      "options": [
+        {
+          "option_id": 15070,
+          "option_text": "A record that stores information about a customer or company in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15071,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15072,
+          "option_text": "A Salesforce dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 15073,
+          "option_text": "A Salesforce lead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3203,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Salesforce contact?",
+      "options": [
+        {
+          "option_id": 15074,
+          "option_text": "A record that stores information about an individual contact in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15075,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15076,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15077,
+          "option_text": "A Salesforce opportunity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3204,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Salesforce lead?",
+      "options": [
+        {
+          "option_id": 15078,
+          "option_text": "A record that stores information about a potential customer in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15079,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15080,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15081,
+          "option_text": "A Salesforce contact",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3205,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Salesforce opportunity?",
+      "options": [
+        {
+          "option_id": 15082,
+          "option_text": "A record that stores information about a potential sale in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15083,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15084,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15085,
+          "option_text": "A Salesforce lead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3206,
+      "subskill_id": 150,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Salesforce dashboard?",
+      "options": [
+        {
+          "option_id": 15086,
+          "option_text": "A visual display of key metrics and data in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15087,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15088,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15089,
+          "option_text": "A Salesforce lead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3207,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is HubSpot CRM?",
+      "options": [
+        {
+          "option_id": 15090,
+          "option_text": "A free, easy-to-use CRM platform from HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15091,
+          "option_text": "A paid, complex CRM platform",
+          "is_correct": false
+        },
+        {
+          "option_id": 15092,
+          "option_text": "A project management tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15093,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3208,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a HubSpot contact?",
+      "options": [
+        {
+          "option_id": 15094,
+          "option_text": "A record that stores information about an individual contact in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15095,
+          "option_text": "A type of report in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15096,
+          "option_text": "A HubSpot company",
+          "is_correct": false
+        },
+        {
+          "option_id": 15097,
+          "option_text": "A HubSpot deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3209,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a HubSpot company?",
+      "options": [
+        {
+          "option_id": 15098,
+          "option_text": "A record that stores information about a company in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15099,
+          "option_text": "A type of report in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15100,
+          "option_text": "A HubSpot contact",
+          "is_correct": false
+        },
+        {
+          "option_id": 15101,
+          "option_text": "A HubSpot deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3210,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a HubSpot deal?",
+      "options": [
+        {
+          "option_id": 15102,
+          "option_text": "A record that stores information about a potential sale in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15103,
+          "option_text": "A type of report in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15104,
+          "option_text": "A HubSpot contact",
+          "is_correct": false
+        },
+        {
+          "option_id": 15105,
+          "option_text": "A HubSpot company",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3211,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a HubSpot pipeline?",
+      "options": [
+        {
+          "option_id": 15106,
+          "option_text": "A visual representation of the sales stages in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15107,
+          "option_text": "A type of report in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15108,
+          "option_text": "A HubSpot deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 15109,
+          "option_text": "A HubSpot dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3212,
+      "subskill_id": 151,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a HubSpot dashboard?",
+      "options": [
+        {
+          "option_id": 15110,
+          "option_text": "A visual display of key metrics and data in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15111,
+          "option_text": "A type of report in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15112,
+          "option_text": "A HubSpot pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 15113,
+          "option_text": "A HubSpot deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3213,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is sales automation?",
+      "options": [
+        {
+          "option_id": 15114,
+          "option_text": "The use of technology to automate sales tasks and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15115,
+          "option_text": "The use of technology to automate marketing tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15116,
+          "option_text": "The use of technology to automate customer service tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15117,
+          "option_text": "The use of technology to automate finance tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3214,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of sales automation?",
+      "options": [
+        {
+          "option_id": 15118,
+          "option_text": "To improve efficiency and productivity in sales",
+          "is_correct": true
+        },
+        {
+          "option_id": 15119,
+          "option_text": "To reduce sales efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 15120,
+          "option_text": "To ignore sales tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15121,
+          "option_text": "To delete sales tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3215,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales automation tool?",
+      "options": [
+        {
+          "option_id": 15122,
+          "option_text": "A tool that automates sales tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 15123,
+          "option_text": "A tool that automates marketing tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15124,
+          "option_text": "A tool that automates customer service tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15125,
+          "option_text": "A tool that automates finance tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3216,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a workflow in sales automation?",
+      "options": [
+        {
+          "option_id": 15126,
+          "option_text": "A sequence of automated tasks in sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15127,
+          "option_text": "A sequence of manual tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15128,
+          "option_text": "A sequence of ignored tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15129,
+          "option_text": "A sequence of deleted tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3217,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a trigger in sales automation?",
+      "options": [
+        {
+          "option_id": 15130,
+          "option_text": "An event that starts a workflow in sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15131,
+          "option_text": "An action in a workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 15132,
+          "option_text": "A type of report",
+          "is_correct": false
+        },
+        {
+          "option_id": 15133,
+          "option_text": "A type of dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3218,
+      "subskill_id": 152,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an action in sales automation?",
+      "options": [
+        {
+          "option_id": 15134,
+          "option_text": "A task performed in a workflow in sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15135,
+          "option_text": "An event that starts a workflow",
+          "is_correct": false
+        },
+        {
+          "option_id": 15136,
+          "option_text": "A type of report",
+          "is_correct": false
+        },
+        {
+          "option_id": 15137,
+          "option_text": "A type of dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3219,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is CRM data hygiene?",
+      "options": [
+        {
+          "option_id": 15138,
+          "option_text": "The practice of keeping CRM data clean, accurate, and complete",
+          "is_correct": true
+        },
+        {
+          "option_id": 15139,
+          "option_text": "The practice of ignoring CRM data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15140,
+          "option_text": "The practice of deleting CRM data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15141,
+          "option_text": "The practice of hiding CRM data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3220,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of CRM data hygiene?",
+      "options": [
+        {
+          "option_id": 15142,
+          "option_text": "To ensure accurate, reliable, and useful CRM data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15143,
+          "option_text": "To ignore data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15144,
+          "option_text": "To delete data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15145,
+          "option_text": "To hide data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3221,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is duplicate data in CRM?",
+      "options": [
+        {
+          "option_id": 15146,
+          "option_text": "Data that appears more than once in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 15147,
+          "option_text": "Unique data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15148,
+          "option_text": "Complete data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15149,
+          "option_text": "Accurate data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3222,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is incomplete data in CRM?",
+      "options": [
+        {
+          "option_id": 15150,
+          "option_text": "Data that is missing key information in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 15151,
+          "option_text": "Complete data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15152,
+          "option_text": "Accurate data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15153,
+          "option_text": "Duplicate data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3223,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is inaccurate data in CRM?",
+      "options": [
+        {
+          "option_id": 15154,
+          "option_text": "Data that contains errors or is incorrect in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 15155,
+          "option_text": "Accurate data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15156,
+          "option_text": "Complete data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15157,
+          "option_text": "Duplicate data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3224,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is data enrichment in CRM?",
+      "options": [
+        {
+          "option_id": 15158,
+          "option_text": "The process of adding missing information to CRM data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15159,
+          "option_text": "The process of deleting information from CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 15160,
+          "option_text": "The process of hiding information in CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 15161,
+          "option_text": "The process of ignoring information in CRM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3225,
+      "subskill_id": 153,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is data validation in CRM?",
+      "options": [
+        {
+          "option_id": 15162,
+          "option_text": "The process of ensuring CRM data meets quality standards",
+          "is_correct": true
+        },
+        {
+          "option_id": 15163,
+          "option_text": "The process of ignoring data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15164,
+          "option_text": "The process of deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15165,
+          "option_text": "The process of hiding data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3226,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a lead in Salesforce?",
+      "options": [
+        {
+          "option_id": 15166,
+          "option_text": "By entering lead information into Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15167,
+          "option_text": "By ignoring lead information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15168,
+          "option_text": "By deleting lead information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15169,
+          "option_text": "By hiding lead information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3227,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you convert a lead in Salesforce?",
+      "options": [
+        {
+          "option_id": 15170,
+          "option_text": "By qualifying the lead and clicking the convert button in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15171,
+          "option_text": "By ignoring the lead",
+          "is_correct": false
+        },
+        {
+          "option_id": 15172,
+          "option_text": "By deleting the lead",
+          "is_correct": false
+        },
+        {
+          "option_id": 15173,
+          "option_text": "By hiding the lead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3228,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Salesforce report?",
+      "options": [
+        {
+          "option_id": 15174,
+          "option_text": "A report that displays Salesforce data in a structured format",
+          "is_correct": true
+        },
+        {
+          "option_id": 15175,
+          "option_text": "A dashboard in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15176,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        },
+        {
+          "option_id": 15177,
+          "option_text": "A Salesforce lead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3229,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Salesforce workflow?",
+      "options": [
+        {
+          "option_id": 15178,
+          "option_text": "A set of automated actions in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15179,
+          "option_text": "A manual process in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15180,
+          "option_text": "A Salesforce report",
+          "is_correct": false
+        },
+        {
+          "option_id": 15181,
+          "option_text": "A Salesforce dashboard",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3230,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Salesforce automation?",
+      "options": [
+        {
+          "option_id": 15182,
+          "option_text": "The use of automation features within Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15183,
+          "option_text": "The use of manual processes in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15184,
+          "option_text": "The use of reporting in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15185,
+          "option_text": "The use of dashboards in Salesforce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3231,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a contact in HubSpot?",
+      "options": [
+        {
+          "option_id": 15186,
+          "option_text": "By entering contact information into HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15187,
+          "option_text": "By ignoring contact information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15188,
+          "option_text": "By deleting contact information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15189,
+          "option_text": "By hiding contact information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3232,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage deals in HubSpot?",
+      "options": [
+        {
+          "option_id": 15190,
+          "option_text": "By using the deal management features in HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15191,
+          "option_text": "By ignoring deal management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15192,
+          "option_text": "By deleting deal management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15193,
+          "option_text": "By hiding deal management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3233,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is HubSpot automation?",
+      "options": [
+        {
+          "option_id": 15194,
+          "option_text": "The use of automation features within HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15195,
+          "option_text": "The use of manual processes in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15196,
+          "option_text": "The use of reporting in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15197,
+          "option_text": "The use of dashboards in HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3234,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is HubSpot reporting?",
+      "options": [
+        {
+          "option_id": 15198,
+          "option_text": "The process of generating reports from HubSpot data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15199,
+          "option_text": "The process of ignoring HubSpot data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15200,
+          "option_text": "The process of deleting HubSpot data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15201,
+          "option_text": "The process of hiding HubSpot data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3235,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is HubSpot integration?",
+      "options": [
+        {
+          "option_id": 15202,
+          "option_text": "The connection between HubSpot and other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15203,
+          "option_text": "The process of ignoring integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15204,
+          "option_text": "The process of deleting integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15205,
+          "option_text": "The process of hiding integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3236,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you implement sales automation?",
+      "options": [
+        {
+          "option_id": 15206,
+          "option_text": "By identifying opportunities and implementing automation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15207,
+          "option_text": "By ignoring opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 15208,
+          "option_text": "By deleting opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 15209,
+          "option_text": "By hiding opportunities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3237,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales automation strategy?",
+      "options": [
+        {
+          "option_id": 15210,
+          "option_text": "A plan for using automation to improve sales processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15211,
+          "option_text": "A plan for ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15212,
+          "option_text": "A plan for deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15213,
+          "option_text": "A plan for hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3238,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales automation process?",
+      "options": [
+        {
+          "option_id": 15214,
+          "option_text": "The steps involved in automating a sales process",
+          "is_correct": true
+        },
+        {
+          "option_id": 15215,
+          "option_text": "The steps involved in ignoring a sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15216,
+          "option_text": "The steps involved in deleting a sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15217,
+          "option_text": "The steps involved in hiding a sales process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3239,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales automation workflow?",
+      "options": [
+        {
+          "option_id": 15218,
+          "option_text": "A sequence of automated tasks in a sales process",
+          "is_correct": true
+        },
+        {
+          "option_id": 15219,
+          "option_text": "A sequence of manual tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15220,
+          "option_text": "A sequence of ignored tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 15221,
+          "option_text": "A sequence of deleted tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3240,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales automation tool evaluation?",
+      "options": [
+        {
+          "option_id": 15222,
+          "option_text": "The process of evaluating and selecting a sales automation tool",
+          "is_correct": true
+        },
+        {
+          "option_id": 15223,
+          "option_text": "The process of ignoring sales automation tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 15224,
+          "option_text": "The process of deleting sales automation tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 15225,
+          "option_text": "The process of hiding sales automation tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3241,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you clean CRM data?",
+      "options": [
+        {
+          "option_id": 15226,
+          "option_text": "By identifying and removing duplicates, errors, and incomplete data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15227,
+          "option_text": "By ignoring data quality issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 15228,
+          "option_text": "By deleting data without review",
+          "is_correct": false
+        },
+        {
+          "option_id": 15229,
+          "option_text": "By hiding data issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3242,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prevent duplicate data?",
+      "options": [
+        {
+          "option_id": 15230,
+          "option_text": "By using de-duplication tools and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15231,
+          "option_text": "By ignoring duplicates",
+          "is_correct": false
+        },
+        {
+          "option_id": 15232,
+          "option_text": "By deleting all data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15233,
+          "option_text": "By hiding duplicates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3243,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you enrich CRM data?",
+      "options": [
+        {
+          "option_id": 15234,
+          "option_text": "By adding missing information using data enrichment tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15235,
+          "option_text": "By ignoring missing information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15236,
+          "option_text": "By deleting missing information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15237,
+          "option_text": "By hiding missing information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3244,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you validate CRM data?",
+      "options": [
+        {
+          "option_id": 15238,
+          "option_text": "By using data validation rules and tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15239,
+          "option_text": "By ignoring data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15240,
+          "option_text": "By deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15241,
+          "option_text": "By hiding data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3245,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you maintain CRM data hygiene?",
+      "options": [
+        {
+          "option_id": 15242,
+          "option_text": "By establishing regular data review and cleaning processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15243,
+          "option_text": "By ignoring data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15244,
+          "option_text": "By deleting data without review",
+          "is_correct": false
+        },
+        {
+          "option_id": 15245,
+          "option_text": "By hiding data issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3246,
+      "subskill_id": 150,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Salesforce pipeline?",
+      "options": [
+        {
+          "option_id": 15246,
+          "option_text": "A visual representation of the sales stages in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15247,
+          "option_text": "A type of report in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15248,
+          "option_text": "A Salesforce dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 15249,
+          "option_text": "A Salesforce account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3247,
+      "subskill_id": 151,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is HubSpot marketing hub?",
+      "options": [
+        {
+          "option_id": 15250,
+          "option_text": "The marketing automation component of HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15251,
+          "option_text": "The sales automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15252,
+          "option_text": "The service automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15253,
+          "option_text": "The operations automation component of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3248,
+      "subskill_id": 152,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales automation platform?",
+      "options": [
+        {
+          "option_id": 15254,
+          "option_text": "A platform for automating sales tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 15255,
+          "option_text": "A manual sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15256,
+          "option_text": "A single sales tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15257,
+          "option_text": "A sales reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3249,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a data cleansing tool?",
+      "options": [
+        {
+          "option_id": 15258,
+          "option_text": "A tool that identifies and removes duplicate data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15259,
+          "option_text": "A tool that creates duplicate data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15260,
+          "option_text": "A tool that ignores data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15261,
+          "option_text": "A tool that hides data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3250,
+      "subskill_id": 153,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a data hygiene best practice?",
+      "options": [
+        {
+          "option_id": 15262,
+          "option_text": "A proven practice for maintaining high-quality CRM data",
+          "is_correct": true
+        },
+        {
+          "option_id": 15263,
+          "option_text": "A practice that ignores data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15264,
+          "option_text": "A practice that deletes data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15265,
+          "option_text": "A practice that hides data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3251,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a Salesforce dashboard?",
+      "options": [
+        {
+          "option_id": 15266,
+          "option_text": "By defining key metrics, selecting widgets, and designing the layout",
+          "is_correct": true
+        },
+        {
+          "option_id": 15267,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15268,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15269,
+          "option_text": "By deleting widgets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3252,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Salesforce Einstein?",
+      "options": [
+        {
+          "option_id": 15270,
+          "option_text": "An AI-powered analytics tool within Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15271,
+          "option_text": "A manual reporting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15272,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15273,
+          "option_text": "A project management tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3253,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Salesforce Experience Cloud?",
+      "options": [
+        {
+          "option_id": 15274,
+          "option_text": "A platform for building customer portals and communities in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15275,
+          "option_text": "A platform for marketing automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15276,
+          "option_text": "A platform for sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15277,
+          "option_text": "A platform for data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3254,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Salesforce Marketing Cloud?",
+      "options": [
+        {
+          "option_id": 15278,
+          "option_text": "A platform for marketing automation in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15279,
+          "option_text": "A platform for sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15280,
+          "option_text": "A platform for customer service",
+          "is_correct": false
+        },
+        {
+          "option_id": 15281,
+          "option_text": "A platform for data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3255,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Salesforce Commerce Cloud?",
+      "options": [
+        {
+          "option_id": 15282,
+          "option_text": "A platform for e-commerce in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15283,
+          "option_text": "A platform for marketing automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15284,
+          "option_text": "A platform for sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15285,
+          "option_text": "A platform for data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3256,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a HubSpot dashboard?",
+      "options": [
+        {
+          "option_id": 15286,
+          "option_text": "By defining key metrics, selecting widgets, and designing the layout",
+          "is_correct": true
+        },
+        {
+          "option_id": 15287,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15288,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15289,
+          "option_text": "By deleting widgets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3257,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is HubSpot Sales Hub?",
+      "options": [
+        {
+          "option_id": 15290,
+          "option_text": "The sales automation component of HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15291,
+          "option_text": "The marketing automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15292,
+          "option_text": "The service automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15293,
+          "option_text": "The operations automation component of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3258,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is HubSpot Service Hub?",
+      "options": [
+        {
+          "option_id": 15294,
+          "option_text": "The customer service automation component of HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15295,
+          "option_text": "The sales automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15296,
+          "option_text": "The marketing automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15297,
+          "option_text": "The operations automation component of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3259,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is HubSpot CMS?",
+      "options": [
+        {
+          "option_id": 15298,
+          "option_text": "The content management system component of HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15299,
+          "option_text": "The sales automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15300,
+          "option_text": "The marketing automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15301,
+          "option_text": "The operations automation component of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3260,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is HubSpot Operations Hub?",
+      "options": [
+        {
+          "option_id": 15302,
+          "option_text": "The operations automation component of HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15303,
+          "option_text": "The sales automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15304,
+          "option_text": "The marketing automation component of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15305,
+          "option_text": "The service automation component of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3261,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize sales automation?",
+      "options": [
+        {
+          "option_id": 15306,
+          "option_text": "By continuously improving processes and leveraging data insights",
+          "is_correct": true
+        },
+        {
+          "option_id": 15307,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15308,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15309,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3262,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales automation framework?",
+      "options": [
+        {
+          "option_id": 15310,
+          "option_text": "A structured approach to automating sales tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 15311,
+          "option_text": "A random approach to automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15312,
+          "option_text": "A way to ignore automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15313,
+          "option_text": "A way to hide automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3263,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales automation maturity model?",
+      "options": [
+        {
+          "option_id": 15314,
+          "option_text": "A model for assessing the maturity of sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15315,
+          "option_text": "A model for ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15316,
+          "option_text": "A model for deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15317,
+          "option_text": "A model for hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3264,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales automation governance?",
+      "options": [
+        {
+          "option_id": 15318,
+          "option_text": "The framework for managing sales automation processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15319,
+          "option_text": "The framework for ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15320,
+          "option_text": "The framework for deleting automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15321,
+          "option_text": "The framework for hiding automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3265,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales automation ROI?",
+      "options": [
+        {
+          "option_id": 15322,
+          "option_text": "The return on investment from sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15323,
+          "option_text": "The cost of sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15324,
+          "option_text": "The loss from sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15325,
+          "option_text": "The waste from sales automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3266,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a data hygiene framework?",
+      "options": [
+        {
+          "option_id": 15326,
+          "option_text": "A structured approach to managing data hygiene",
+          "is_correct": true
+        },
+        {
+          "option_id": 15327,
+          "option_text": "A random approach to data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15328,
+          "option_text": "A way to ignore data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15329,
+          "option_text": "A way to hide data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3267,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data governance strategy?",
+      "options": [
+        {
+          "option_id": 15330,
+          "option_text": "A strategy for managing data governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 15331,
+          "option_text": "A strategy for ignoring data governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15332,
+          "option_text": "A strategy for deleting data governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15333,
+          "option_text": "A strategy for hiding data governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3268,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data quality framework?",
+      "options": [
+        {
+          "option_id": 15334,
+          "option_text": "A structured approach to ensuring data quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 15335,
+          "option_text": "A random approach to data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15336,
+          "option_text": "A way to ignore data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 15337,
+          "option_text": "A way to hide data quality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3269,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data hygiene audit?",
+      "options": [
+        {
+          "option_id": 15338,
+          "option_text": "A systematic review of data hygiene practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15339,
+          "option_text": "A random review of data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15340,
+          "option_text": "A way to ignore data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15341,
+          "option_text": "A way to hide data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3270,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure data hygiene?",
+      "options": [
+        {
+          "option_id": 15342,
+          "option_text": "By tracking data quality metrics and hygiene scores",
+          "is_correct": true
+        },
+        {
+          "option_id": 15343,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15344,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 15345,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3271,
+      "subskill_id": 150,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Salesforce App Cloud?",
+      "options": [
+        {
+          "option_id": 15346,
+          "option_text": "A platform for building and running apps in Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15347,
+          "option_text": "A platform for marketing automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15348,
+          "option_text": "A platform for sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15349,
+          "option_text": "A platform for data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3272,
+      "subskill_id": 151,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is HubSpot CRM integration?",
+      "options": [
+        {
+          "option_id": 15350,
+          "option_text": "The integration of HubSpot CRM with other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15351,
+          "option_text": "The process of ignoring integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15352,
+          "option_text": "The process of deleting integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15353,
+          "option_text": "The process of hiding integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3273,
+      "subskill_id": 152,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a sales automation platform evaluation?",
+      "options": [
+        {
+          "option_id": 15354,
+          "option_text": "The process of evaluating and selecting a sales automation platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 15355,
+          "option_text": "The process of ignoring sales automation platforms",
+          "is_correct": false
+        },
+        {
+          "option_id": 15356,
+          "option_text": "The process of deleting sales automation platforms",
+          "is_correct": false
+        },
+        {
+          "option_id": 15357,
+          "option_text": "The process of hiding sales automation platforms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3274,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data hygiene score?",
+      "options": [
+        {
+          "option_id": 15358,
+          "option_text": "A metric for measuring data hygiene quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 15359,
+          "option_text": "A metric for ignoring data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15360,
+          "option_text": "A metric for deleting data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15361,
+          "option_text": "A metric for hiding data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3275,
+      "subskill_id": 153,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a data hygiene report?",
+      "options": [
+        {
+          "option_id": 15362,
+          "option_text": "A report that displays data hygiene metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 15363,
+          "option_text": "A report that ignores data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15364,
+          "option_text": "A report that deletes data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15365,
+          "option_text": "A report that hides data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3276,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale Salesforce implementation?",
+      "options": [
+        {
+          "option_id": 15366,
+          "option_text": "By using enterprise-grade features and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15367,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15368,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15369,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3277,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Salesforce AI?",
+      "options": [
+        {
+          "option_id": 15370,
+          "option_text": "The use of artificial intelligence within Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15371,
+          "option_text": "The use of manual processes in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15372,
+          "option_text": "The use of reporting in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15373,
+          "option_text": "The use of dashboards in Salesforce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3278,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Salesforce automation?",
+      "options": [
+        {
+          "option_id": 15374,
+          "option_text": "The use of automation features within Salesforce",
+          "is_correct": true
+        },
+        {
+          "option_id": 15375,
+          "option_text": "The use of manual processes in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15376,
+          "option_text": "The use of reporting in Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15377,
+          "option_text": "The use of dashboards in Salesforce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3279,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Salesforce integration?",
+      "options": [
+        {
+          "option_id": 15378,
+          "option_text": "The connection between Salesforce and other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15379,
+          "option_text": "The process of ignoring integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15380,
+          "option_text": "The process of deleting integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15381,
+          "option_text": "The process of hiding integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3280,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Salesforce governance?",
+      "options": [
+        {
+          "option_id": 15382,
+          "option_text": "The framework for managing Salesforce processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15383,
+          "option_text": "The framework for ignoring Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15384,
+          "option_text": "The framework for deleting Salesforce",
+          "is_correct": false
+        },
+        {
+          "option_id": 15385,
+          "option_text": "The framework for hiding Salesforce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3281,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale HubSpot implementation?",
+      "options": [
+        {
+          "option_id": 15386,
+          "option_text": "By using enterprise-grade features and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15387,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15388,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15389,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3282,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is HubSpot AI?",
+      "options": [
+        {
+          "option_id": 15390,
+          "option_text": "The use of artificial intelligence within HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15391,
+          "option_text": "The use of manual processes in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15392,
+          "option_text": "The use of reporting in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15393,
+          "option_text": "The use of dashboards in HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3283,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is HubSpot automation?",
+      "options": [
+        {
+          "option_id": 15394,
+          "option_text": "The use of automation features within HubSpot",
+          "is_correct": true
+        },
+        {
+          "option_id": 15395,
+          "option_text": "The use of manual processes in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15396,
+          "option_text": "The use of reporting in HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15397,
+          "option_text": "The use of dashboards in HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3284,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is HubSpot integration?",
+      "options": [
+        {
+          "option_id": 15398,
+          "option_text": "The connection between HubSpot and other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15399,
+          "option_text": "The process of ignoring integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15400,
+          "option_text": "The process of deleting integrations",
+          "is_correct": false
+        },
+        {
+          "option_id": 15401,
+          "option_text": "The process of hiding integrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3285,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is HubSpot governance?",
+      "options": [
+        {
+          "option_id": 15402,
+          "option_text": "The framework for managing HubSpot processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 15403,
+          "option_text": "The framework for ignoring HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15404,
+          "option_text": "The framework for deleting HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15405,
+          "option_text": "The framework for hiding HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3286,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale sales automation?",
+      "options": [
+        {
+          "option_id": 15406,
+          "option_text": "By using processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 15407,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15408,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 15409,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3287,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales automation AI?",
+      "options": [
+        {
+          "option_id": 15410,
+          "option_text": "The use of artificial intelligence in sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15411,
+          "option_text": "The use of manual processes in sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15412,
+          "option_text": "The use of reporting in sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15413,
+          "option_text": "The use of dashboards in sales automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3288,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales automation platform strategy?",
+      "options": [
+        {
+          "option_id": 15414,
+          "option_text": "A high-level plan for using a sales automation platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 15415,
+          "option_text": "A high-level plan for ignoring sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15416,
+          "option_text": "A high-level plan for deleting sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15417,
+          "option_text": "A high-level plan for hiding sales automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3289,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales automation ecosystem?",
+      "options": [
+        {
+          "option_id": 15418,
+          "option_text": "The interconnected system of sales automation tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15419,
+          "option_text": "A single sales automation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15420,
+          "option_text": "A manual sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15421,
+          "option_text": "A sales reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3290,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales automation future?",
+      "options": [
+        {
+          "option_id": 15422,
+          "option_text": "The future of sales automation, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15423,
+          "option_text": "The future of ignoring sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15424,
+          "option_text": "The future of deleting sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15425,
+          "option_text": "The future of hiding sales automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3291,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a data hygiene strategy?",
+      "options": [
+        {
+          "option_id": 15426,
+          "option_text": "A high-level plan for managing data hygiene",
+          "is_correct": true
+        },
+        {
+          "option_id": 15427,
+          "option_text": "A high-level plan for ignoring data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15428,
+          "option_text": "A high-level plan for deleting data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15429,
+          "option_text": "A high-level plan for hiding data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3292,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is AI-powered data hygiene?",
+      "options": [
+        {
+          "option_id": 15430,
+          "option_text": "The use of artificial intelligence to improve data hygiene",
+          "is_correct": true
+        },
+        {
+          "option_id": 15431,
+          "option_text": "The use of manual processes for data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15432,
+          "option_text": "The use of reporting for data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15433,
+          "option_text": "The use of dashboards for data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3293,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data hygiene platform?",
+      "options": [
+        {
+          "option_id": 15434,
+          "option_text": "A platform for managing data hygiene at scale",
+          "is_correct": true
+        },
+        {
+          "option_id": 15435,
+          "option_text": "A manual data hygiene process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15436,
+          "option_text": "A single data hygiene tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15437,
+          "option_text": "A data hygiene reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3294,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a data hygiene ecosystem?",
+      "options": [
+        {
+          "option_id": 15438,
+          "option_text": "The interconnected system of data hygiene tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 15439,
+          "option_text": "A single data hygiene tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15440,
+          "option_text": "A manual data hygiene process",
+          "is_correct": false
+        },
+        {
+          "option_id": 15441,
+          "option_text": "A data hygiene reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3295,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is data hygiene future?",
+      "options": [
+        {
+          "option_id": 15442,
+          "option_text": "The future of data hygiene, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15443,
+          "option_text": "The future of ignoring data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15444,
+          "option_text": "The future of deleting data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15445,
+          "option_text": "The future of hiding data hygiene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3296,
+      "subskill_id": 150,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Salesforce industry cloud?",
+      "options": [
+        {
+          "option_id": 15446,
+          "option_text": "A specialized Salesforce cloud for specific industries",
+          "is_correct": true
+        },
+        {
+          "option_id": 15447,
+          "option_text": "A general-purpose Salesforce cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 15448,
+          "option_text": "A marketing automation cloud",
+          "is_correct": false
+        },
+        {
+          "option_id": 15449,
+          "option_text": "A data visualization cloud",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3297,
+      "subskill_id": 151,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is HubSpot enterprise?",
+      "options": [
+        {
+          "option_id": 15450,
+          "option_text": "The enterprise version of HubSpot with advanced features",
+          "is_correct": true
+        },
+        {
+          "option_id": 15451,
+          "option_text": "The free version of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15452,
+          "option_text": "The professional version of HubSpot",
+          "is_correct": false
+        },
+        {
+          "option_id": 15453,
+          "option_text": "The starter version of HubSpot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3298,
+      "subskill_id": 152,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sales automation strategy?",
+      "options": [
+        {
+          "option_id": 15454,
+          "option_text": "A high-level plan for sales automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 15455,
+          "option_text": "A high-level plan for ignoring sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15456,
+          "option_text": "A high-level plan for deleting sales automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15457,
+          "option_text": "A high-level plan for hiding sales automation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3299,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is data hygiene governance?",
+      "options": [
+        {
+          "option_id": 15458,
+          "option_text": "The framework for managing data hygiene governance",
+          "is_correct": true
+        },
+        {
+          "option_id": 15459,
+          "option_text": "The framework for ignoring data hygiene governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15460,
+          "option_text": "The framework for deleting data hygiene governance",
+          "is_correct": false
+        },
+        {
+          "option_id": 15461,
+          "option_text": "The framework for hiding data hygiene governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3300,
+      "subskill_id": 153,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is data hygiene ROI?",
+      "options": [
+        {
+          "option_id": 15462,
+          "option_text": "The return on investment from data hygiene",
+          "is_correct": true
+        },
+        {
+          "option_id": 15463,
+          "option_text": "The cost of data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15464,
+          "option_text": "The loss from data hygiene",
+          "is_correct": false
+        },
+        {
+          "option_id": 15465,
+          "option_text": "The waste from data hygiene",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

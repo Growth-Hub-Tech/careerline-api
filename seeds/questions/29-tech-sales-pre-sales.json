@@ -1,0 +1,2906 @@
+{
+  "skill_id": 29,
+  "skill_name": "Tech Sales & Pre-Sales",
+  "questions": [
+    {
+      "question_id": 2801,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a discovery call in tech sales?",
+      "options": [
+        {
+          "option_id": 13466,
+          "option_text": "A call to understand a prospect's needs and qualify them",
+          "is_correct": true
+        },
+        {
+          "option_id": 13467,
+          "option_text": "A call to sell the product immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 13468,
+          "option_text": "A call to present a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13469,
+          "option_text": "A call to close the deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2802,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a discovery call?",
+      "options": [
+        {
+          "option_id": 13470,
+          "option_text": "To identify if a prospect is a good fit for the product",
+          "is_correct": true
+        },
+        {
+          "option_id": 13471,
+          "option_text": "To close the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 13472,
+          "option_text": "To present a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13473,
+          "option_text": "To send a proposal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2803,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the structure of a discovery call?",
+      "options": [
+        {
+          "option_id": 13474,
+          "option_text": "Introduction, qualification, needs analysis, next steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 13475,
+          "option_text": "Only introduction",
+          "is_correct": false
+        },
+        {
+          "option_id": 13476,
+          "option_text": "Only qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 13477,
+          "option_text": "Only needs analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2804,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a qualification in a discovery call?",
+      "options": [
+        {
+          "option_id": 13478,
+          "option_text": "The process of determining if a prospect is a good fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 13479,
+          "option_text": "The process of selling the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 13480,
+          "option_text": "The process of presenting a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13481,
+          "option_text": "The process of closing the deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2805,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a needs analysis in a discovery call?",
+      "options": [
+        {
+          "option_id": 13482,
+          "option_text": "The process of understanding the prospect's needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 13483,
+          "option_text": "The process of selling the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 13484,
+          "option_text": "The process of presenting a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13485,
+          "option_text": "The process of closing the deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2806,
+      "subskill_id": 134,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pain point in a discovery call?",
+      "options": [
+        {
+          "option_id": 13486,
+          "option_text": "A problem the prospect is facing that the product can solve",
+          "is_correct": true
+        },
+        {
+          "option_id": 13487,
+          "option_text": "A feature of the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 13488,
+          "option_text": "A benefit of the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 13489,
+          "option_text": "A competitor's advantage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2807,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a demo in tech sales?",
+      "options": [
+        {
+          "option_id": 13490,
+          "option_text": "A presentation showing how a product works",
+          "is_correct": true
+        },
+        {
+          "option_id": 13491,
+          "option_text": "A presentation showing how a product is sold",
+          "is_correct": false
+        },
+        {
+          "option_id": 13492,
+          "option_text": "A presentation showing how a product is marketed",
+          "is_correct": false
+        },
+        {
+          "option_id": 13493,
+          "option_text": "A presentation showing how a product is developed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2808,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a demo?",
+      "options": [
+        {
+          "option_id": 13494,
+          "option_text": "To demonstrate the value of the product to the prospect",
+          "is_correct": true
+        },
+        {
+          "option_id": 13495,
+          "option_text": "To close the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 13496,
+          "option_text": "To qualify the prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 13497,
+          "option_text": "To send a proposal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2809,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the structure of a demo?",
+      "options": [
+        {
+          "option_id": 13498,
+          "option_text": "Introduction, demonstration, Q&A, next steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 13499,
+          "option_text": "Only introduction",
+          "is_correct": false
+        },
+        {
+          "option_id": 13500,
+          "option_text": "Only demonstration",
+          "is_correct": false
+        },
+        {
+          "option_id": 13501,
+          "option_text": "Only Q&A",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2810,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a product demonstration?",
+      "options": [
+        {
+          "option_id": 13502,
+          "option_text": "A presentation showing the product's features and functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 13503,
+          "option_text": "A presentation showing the product's price",
+          "is_correct": false
+        },
+        {
+          "option_id": 13504,
+          "option_text": "A presentation showing the product's marketing strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 13505,
+          "option_text": "A presentation showing the product's development process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2811,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a solution demonstration?",
+      "options": [
+        {
+          "option_id": 13506,
+          "option_text": "A presentation showing how the product solves the prospect's problem",
+          "is_correct": true
+        },
+        {
+          "option_id": 13507,
+          "option_text": "A presentation showing the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13508,
+          "option_text": "A presentation showing the product's price",
+          "is_correct": false
+        },
+        {
+          "option_id": 13509,
+          "option_text": "A presentation showing the product's marketing strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2812,
+      "subskill_id": 135,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a benefit demonstration?",
+      "options": [
+        {
+          "option_id": 13510,
+          "option_text": "A presentation showing the benefits of the product",
+          "is_correct": true
+        },
+        {
+          "option_id": 13511,
+          "option_text": "A presentation showing the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13512,
+          "option_text": "A presentation showing the product's price",
+          "is_correct": false
+        },
+        {
+          "option_id": 13513,
+          "option_text": "A presentation showing the product's development process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2813,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is objection handling in tech sales?",
+      "options": [
+        {
+          "option_id": 13514,
+          "option_text": "The process of addressing a prospect's concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 13515,
+          "option_text": "The process of ignoring a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 13516,
+          "option_text": "The process of dismissing a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 13517,
+          "option_text": "The process of avoiding a prospect's concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2814,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a common objection in tech sales?",
+      "options": [
+        {
+          "option_id": 13518,
+          "option_text": "Price, product, timing, stakeholder",
+          "is_correct": true
+        },
+        {
+          "option_id": 13519,
+          "option_text": "Only price",
+          "is_correct": false
+        },
+        {
+          "option_id": 13520,
+          "option_text": "Only product",
+          "is_correct": false
+        },
+        {
+          "option_id": 13521,
+          "option_text": "Only timing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2815,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a price objection?",
+      "options": [
+        {
+          "option_id": 13522,
+          "option_text": "An objection about the product's cost",
+          "is_correct": true
+        },
+        {
+          "option_id": 13523,
+          "option_text": "An objection about the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13524,
+          "option_text": "An objection about the product's timing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13525,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2816,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a product objection?",
+      "options": [
+        {
+          "option_id": 13526,
+          "option_text": "An objection about the product's features or functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 13527,
+          "option_text": "An objection about the product's cost",
+          "is_correct": false
+        },
+        {
+          "option_id": 13528,
+          "option_text": "An objection about the product's timing",
+          "is_correct": false
+        },
+        {
+          "option_id": 13529,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2817,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a timing objection?",
+      "options": [
+        {
+          "option_id": 13530,
+          "option_text": "An objection about the product's timing",
+          "is_correct": true
+        },
+        {
+          "option_id": 13531,
+          "option_text": "An objection about the product's cost",
+          "is_correct": false
+        },
+        {
+          "option_id": 13532,
+          "option_text": "An objection about the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13533,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2818,
+      "subskill_id": 136,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a stakeholder objection?",
+      "options": [
+        {
+          "option_id": 13534,
+          "option_text": "An objection about the product's stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 13535,
+          "option_text": "An objection about the product's cost",
+          "is_correct": false
+        },
+        {
+          "option_id": 13536,
+          "option_text": "An objection about the product's features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13537,
+          "option_text": "An objection about the product's timing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2819,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a CRM system?",
+      "options": [
+        {
+          "option_id": 13538,
+          "option_text": "A system for managing customer relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 13539,
+          "option_text": "A system for managing employee relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 13540,
+          "option_text": "A system for managing vendor relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 13541,
+          "option_text": "A system for managing partner relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2820,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a CRM system?",
+      "options": [
+        {
+          "option_id": 13542,
+          "option_text": "To manage customer interactions and data",
+          "is_correct": true
+        },
+        {
+          "option_id": 13543,
+          "option_text": "To manage employee interactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 13544,
+          "option_text": "To manage vendor interactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 13545,
+          "option_text": "To manage partner interactions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2821,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead in CRM?",
+      "options": [
+        {
+          "option_id": 13546,
+          "option_text": "A potential customer in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13547,
+          "option_text": "A current customer in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13548,
+          "option_text": "A former customer in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13549,
+          "option_text": "A competitor in a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2822,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an opportunity in CRM?",
+      "options": [
+        {
+          "option_id": 13550,
+          "option_text": "A potential sales deal in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13551,
+          "option_text": "A current sales deal in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13552,
+          "option_text": "A former sales deal in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13553,
+          "option_text": "A competitor in a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2823,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a contact in CRM?",
+      "options": [
+        {
+          "option_id": 13554,
+          "option_text": "A person in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13555,
+          "option_text": "A company in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13556,
+          "option_text": "A lead in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13557,
+          "option_text": "An opportunity in a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2824,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an account in CRM?",
+      "options": [
+        {
+          "option_id": 13558,
+          "option_text": "A company in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13559,
+          "option_text": "A person in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13560,
+          "option_text": "A lead in a CRM system",
+          "is_correct": false
+        },
+        {
+          "option_id": 13561,
+          "option_text": "An opportunity in a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2825,
+      "subskill_id": 137,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales pipeline in CRM?",
+      "options": [
+        {
+          "option_id": 13562,
+          "option_text": "A visual representation of the sales process in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13563,
+          "option_text": "A visual representation of the marketing process",
+          "is_correct": false
+        },
+        {
+          "option_id": 13564,
+          "option_text": "A visual representation of the customer service process",
+          "is_correct": false
+        },
+        {
+          "option_id": 13565,
+          "option_text": "A visual representation of the development process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2826,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you conduct a discovery call?",
+      "options": [
+        {
+          "option_id": 13566,
+          "option_text": "By preparing questions and listening actively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13567,
+          "option_text": "By talking too much",
+          "is_correct": false
+        },
+        {
+          "option_id": 13568,
+          "option_text": "By ignoring the prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 13569,
+          "option_text": "By avoiding questions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2827,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a discovery call script?",
+      "options": [
+        {
+          "option_id": 13570,
+          "option_text": "A guide for conducting a discovery call",
+          "is_correct": true
+        },
+        {
+          "option_id": 13571,
+          "option_text": "A guide for conducting a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13572,
+          "option_text": "A guide for handling objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13573,
+          "option_text": "A guide for using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2828,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a discovery call checklist?",
+      "options": [
+        {
+          "option_id": 13574,
+          "option_text": "A list of tasks for a discovery call",
+          "is_correct": true
+        },
+        {
+          "option_id": 13575,
+          "option_text": "A list of tasks for a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13576,
+          "option_text": "A list of tasks for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13577,
+          "option_text": "A list of tasks for using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2829,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a discovery call framework?",
+      "options": [
+        {
+          "option_id": 13578,
+          "option_text": "A structured approach to discovery calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 13579,
+          "option_text": "A structured approach to demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13580,
+          "option_text": "A structured approach to objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13581,
+          "option_text": "A structured approach to using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2830,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a discovery call best practice?",
+      "options": [
+        {
+          "option_id": 13582,
+          "option_text": "Prepare thoroughly, ask open-ended questions, and listen",
+          "is_correct": true
+        },
+        {
+          "option_id": 13583,
+          "option_text": "Talk too much and avoid questions",
+          "is_correct": false
+        },
+        {
+          "option_id": 13584,
+          "option_text": "Ignore the prospect's needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 13585,
+          "option_text": "Focus only on features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2831,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you deliver a demo?",
+      "options": [
+        {
+          "option_id": 13586,
+          "option_text": "By preparing thoroughly and focusing on the prospect's needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 13587,
+          "option_text": "By reading from a script without adaptation",
+          "is_correct": false
+        },
+        {
+          "option_id": 13588,
+          "option_text": "By ignoring the prospect's needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 13589,
+          "option_text": "By focusing only on features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2832,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a demo script?",
+      "options": [
+        {
+          "option_id": 13590,
+          "option_text": "A guide for delivering a demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13591,
+          "option_text": "A guide for conducting a discovery call",
+          "is_correct": false
+        },
+        {
+          "option_id": 13592,
+          "option_text": "A guide for handling objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13593,
+          "option_text": "A guide for using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2833,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a demo checklist?",
+      "options": [
+        {
+          "option_id": 13594,
+          "option_text": "A list of tasks for a demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13595,
+          "option_text": "A list of tasks for a discovery call",
+          "is_correct": false
+        },
+        {
+          "option_id": 13596,
+          "option_text": "A list of tasks for objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13597,
+          "option_text": "A list of tasks for using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2834,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a demo framework?",
+      "options": [
+        {
+          "option_id": 13598,
+          "option_text": "A structured approach to delivering demos",
+          "is_correct": true
+        },
+        {
+          "option_id": 13599,
+          "option_text": "A structured approach to discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13600,
+          "option_text": "A structured approach to objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13601,
+          "option_text": "A structured approach to using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2835,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a demo best practice?",
+      "options": [
+        {
+          "option_id": 13602,
+          "option_text": "Tailor the demo to the prospect and focus on value",
+          "is_correct": true
+        },
+        {
+          "option_id": 13603,
+          "option_text": "Use the same demo for every prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 13604,
+          "option_text": "Focus only on features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13605,
+          "option_text": "Ignore the prospect's needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2836,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle objections?",
+      "options": [
+        {
+          "option_id": 13606,
+          "option_text": "By acknowledging the objection and providing a solution",
+          "is_correct": true
+        },
+        {
+          "option_id": 13607,
+          "option_text": "By ignoring the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13608,
+          "option_text": "By dismissing the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13609,
+          "option_text": "By avoiding the objection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2837,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling framework?",
+      "options": [
+        {
+          "option_id": 13610,
+          "option_text": "A structured approach to handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 13611,
+          "option_text": "A structured approach to discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13612,
+          "option_text": "A structured approach to demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13613,
+          "option_text": "A structured approach to using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2838,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling technique?",
+      "options": [
+        {
+          "option_id": 13614,
+          "option_text": "LAER (Listen, Acknowledge, Explore, Respond)",
+          "is_correct": true
+        },
+        {
+          "option_id": 13615,
+          "option_text": "A technique for discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13616,
+          "option_text": "A technique for demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13617,
+          "option_text": "A technique for using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2839,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling best practice?",
+      "options": [
+        {
+          "option_id": 13618,
+          "option_text": "Listen, acknowledge, and respond calmly",
+          "is_correct": true
+        },
+        {
+          "option_id": 13619,
+          "option_text": "Ignore objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13620,
+          "option_text": "Dismiss objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13621,
+          "option_text": "Avoid objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2840,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling strategy?",
+      "options": [
+        {
+          "option_id": 13622,
+          "option_text": "Anticipate objections and prepare responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 13623,
+          "option_text": "Ignore objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13624,
+          "option_text": "Dismiss objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13625,
+          "option_text": "Avoid objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2841,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you use a CRM system?",
+      "options": [
+        {
+          "option_id": 13626,
+          "option_text": "By entering leads, tracking activities, and monitoring progress",
+          "is_correct": true
+        },
+        {
+          "option_id": 13627,
+          "option_text": "By ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 13628,
+          "option_text": "By deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 13629,
+          "option_text": "By hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2842,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM feature?",
+      "options": [
+        {
+          "option_id": 13630,
+          "option_text": "Lead management, contact management, opportunity management, reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 13631,
+          "option_text": "Only lead management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13632,
+          "option_text": "Only contact management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13633,
+          "option_text": "Only opportunity management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2843,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM integration?",
+      "options": [
+        {
+          "option_id": 13634,
+          "option_text": "The connection between CRM and other tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 13635,
+          "option_text": "A feature of CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13636,
+          "option_text": "A type of CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13637,
+          "option_text": "A best practice for CRM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2844,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM reporting?",
+      "options": [
+        {
+          "option_id": 13638,
+          "option_text": "The process of generating reports from CRM data",
+          "is_correct": true
+        },
+        {
+          "option_id": 13639,
+          "option_text": "The process of entering data into CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13640,
+          "option_text": "The process of deleting data from CRM",
+          "is_correct": false
+        },
+        {
+          "option_id": 13641,
+          "option_text": "The process of hiding data in CRM",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2845,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM automation?",
+      "options": [
+        {
+          "option_id": 13642,
+          "option_text": "The process of automating tasks in CRM",
+          "is_correct": true
+        },
+        {
+          "option_id": 13643,
+          "option_text": "The process of manually entering data",
+          "is_correct": false
+        },
+        {
+          "option_id": 13644,
+          "option_text": "The process of deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 13645,
+          "option_text": "The process of hiding data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2846,
+      "subskill_id": 134,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a discovery call question?",
+      "options": [
+        {
+          "option_id": 13646,
+          "option_text": "A question asked during a discovery call to gather information",
+          "is_correct": true
+        },
+        {
+          "option_id": 13647,
+          "option_text": "A question asked during a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13648,
+          "option_text": "A question asked during objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13649,
+          "option_text": "A question asked during CRM usage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2847,
+      "subskill_id": 135,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a demo audience?",
+      "options": [
+        {
+          "option_id": 13650,
+          "option_text": "The people who watch a demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13651,
+          "option_text": "The people who conduct a demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13652,
+          "option_text": "The people who handle objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13653,
+          "option_text": "The people who use a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2848,
+      "subskill_id": 136,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a objection handling mindset?",
+      "options": [
+        {
+          "option_id": 13654,
+          "option_text": "A positive attitude and a problem-solving approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 13655,
+          "option_text": "A negative attitude and a dismissive approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 13656,
+          "option_text": "An indifferent attitude and an avoidant approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 13657,
+          "option_text": "A hostile attitude and a confrontational approach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2849,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM data quality?",
+      "options": [
+        {
+          "option_id": 13658,
+          "option_text": "The accuracy and completeness of CRM data",
+          "is_correct": true
+        },
+        {
+          "option_id": 13659,
+          "option_text": "The speed of CRM data",
+          "is_correct": false
+        },
+        {
+          "option_id": 13660,
+          "option_text": "The volume of CRM data",
+          "is_correct": false
+        },
+        {
+          "option_id": 13661,
+          "option_text": "The security of CRM data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2850,
+      "subskill_id": 137,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CRM best practice?",
+      "options": [
+        {
+          "option_id": 13662,
+          "option_text": "Keep data clean, train users, and use automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 13663,
+          "option_text": "Ignore data quality",
+          "is_correct": false
+        },
+        {
+          "option_id": 13664,
+          "option_text": "Delete data regularly",
+          "is_correct": false
+        },
+        {
+          "option_id": 13665,
+          "option_text": "Hide data from users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2851,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you qualify a lead in a discovery call?",
+      "options": [
+        {
+          "option_id": 13666,
+          "option_text": "By asking qualification questions and assessing fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 13667,
+          "option_text": "By ignoring qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 13668,
+          "option_text": "By skipping qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 13669,
+          "option_text": "By avoiding qualification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2852,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you identify pain points in a discovery call?",
+      "options": [
+        {
+          "option_id": 13670,
+          "option_text": "By listening actively and asking probing questions",
+          "is_correct": true
+        },
+        {
+          "option_id": 13671,
+          "option_text": "By talking too much",
+          "is_correct": false
+        },
+        {
+          "option_id": 13672,
+          "option_text": "By ignoring the prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 13673,
+          "option_text": "By avoiding questions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2853,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build rapport in a discovery call?",
+      "options": [
+        {
+          "option_id": 13674,
+          "option_text": "By being friendly, empathetic, and professional",
+          "is_correct": true
+        },
+        {
+          "option_id": 13675,
+          "option_text": "By being cold and distant",
+          "is_correct": false
+        },
+        {
+          "option_id": 13676,
+          "option_text": "By being aggressive and pushy",
+          "is_correct": false
+        },
+        {
+          "option_id": 13677,
+          "option_text": "By being indifferent and uninterested",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2854,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you transition from a discovery call to a demo?",
+      "options": [
+        {
+          "option_id": 13678,
+          "option_text": "By summarizing the call and confirming next steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 13679,
+          "option_text": "By ending the call abruptly",
+          "is_correct": false
+        },
+        {
+          "option_id": 13680,
+          "option_text": "By avoiding next steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 13681,
+          "option_text": "By ignoring the call",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2855,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you follow up after a discovery call?",
+      "options": [
+        {
+          "option_id": 13682,
+          "option_text": "By sending a summary email and scheduling next steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 13683,
+          "option_text": "By ignoring follow-up",
+          "is_correct": false
+        },
+        {
+          "option_id": 13684,
+          "option_text": "By avoiding follow-up",
+          "is_correct": false
+        },
+        {
+          "option_id": 13685,
+          "option_text": "By deleting the prospect's contact",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2856,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you tailor a demo to a prospect?",
+      "options": [
+        {
+          "option_id": 13686,
+          "option_text": "By understanding the prospect's specific needs and challenges",
+          "is_correct": true
+        },
+        {
+          "option_id": 13687,
+          "option_text": "By using a generic demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13688,
+          "option_text": "By focusing only on features",
+          "is_correct": false
+        },
+        {
+          "option_id": 13689,
+          "option_text": "By ignoring the prospect's needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2857,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage a demo timeline?",
+      "options": [
+        {
+          "option_id": 13690,
+          "option_text": "By allocating time for each section of the demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13691,
+          "option_text": "By ignoring time management",
+          "is_correct": false
+        },
+        {
+          "option_id": 13692,
+          "option_text": "By spending too much time on one section",
+          "is_correct": false
+        },
+        {
+          "option_id": 13693,
+          "option_text": "By rushing through the demo",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2858,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle questions during a demo?",
+      "options": [
+        {
+          "option_id": 13694,
+          "option_text": "By listening carefully and responding thoughtfully",
+          "is_correct": true
+        },
+        {
+          "option_id": 13695,
+          "option_text": "By ignoring questions",
+          "is_correct": false
+        },
+        {
+          "option_id": 13696,
+          "option_text": "By dismissing questions",
+          "is_correct": false
+        },
+        {
+          "option_id": 13697,
+          "option_text": "By avoiding questions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2859,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you transition from a demo to a proposal?",
+      "options": [
+        {
+          "option_id": 13698,
+          "option_text": "By presenting a proposal that aligns with the demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13699,
+          "option_text": "By ignoring the demo",
+          "is_correct": false
+        },
+        {
+          "option_id": 13700,
+          "option_text": "By avoiding the proposal",
+          "is_correct": false
+        },
+        {
+          "option_id": 13701,
+          "option_text": "By presenting a generic proposal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2860,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you follow up after a demo?",
+      "options": [
+        {
+          "option_id": 13702,
+          "option_text": "By sending a thank-you email and addressing open questions",
+          "is_correct": true
+        },
+        {
+          "option_id": 13703,
+          "option_text": "By ignoring follow-up",
+          "is_correct": false
+        },
+        {
+          "option_id": 13704,
+          "option_text": "By avoiding follow-up",
+          "is_correct": false
+        },
+        {
+          "option_id": 13705,
+          "option_text": "By deleting the prospect's contact",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2861,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prepare for objections?",
+      "options": [
+        {
+          "option_id": 13706,
+          "option_text": "By anticipating objections and preparing responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 13707,
+          "option_text": "By ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13708,
+          "option_text": "By dismissing objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13709,
+          "option_text": "By avoiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2862,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you respond to objections?",
+      "options": [
+        {
+          "option_id": 13710,
+          "option_text": "By acknowledging the objection and providing a solution",
+          "is_correct": true
+        },
+        {
+          "option_id": 13711,
+          "option_text": "By ignoring the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13712,
+          "option_text": "By dismissing the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13713,
+          "option_text": "By avoiding the objection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2863,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prevent objections?",
+      "options": [
+        {
+          "option_id": 13714,
+          "option_text": "By addressing objections before they arise",
+          "is_correct": true
+        },
+        {
+          "option_id": 13715,
+          "option_text": "By ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13716,
+          "option_text": "By dismissing objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13717,
+          "option_text": "By avoiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2864,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you overcome objections?",
+      "options": [
+        {
+          "option_id": 13718,
+          "option_text": "By addressing the objection and highlighting value",
+          "is_correct": true
+        },
+        {
+          "option_id": 13719,
+          "option_text": "By ignoring the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13720,
+          "option_text": "By dismissing the objection",
+          "is_correct": false
+        },
+        {
+          "option_id": 13721,
+          "option_text": "By avoiding the objection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2865,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you track objections?",
+      "options": [
+        {
+          "option_id": 13722,
+          "option_text": "By recording objections in the CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13723,
+          "option_text": "By ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13724,
+          "option_text": "By dismissing objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 13725,
+          "option_text": "By avoiding objections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2866,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage leads in CRM?",
+      "options": [
+        {
+          "option_id": 13726,
+          "option_text": "By capturing leads, assigning tasks, and tracking progress",
+          "is_correct": true
+        },
+        {
+          "option_id": 13727,
+          "option_text": "By ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 13728,
+          "option_text": "By deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 13729,
+          "option_text": "By hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2867,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage opportunities in CRM?",
+      "options": [
+        {
+          "option_id": 13730,
+          "option_text": "By creating opportunities, tracking stages, and forecasting revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 13731,
+          "option_text": "By ignoring opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 13732,
+          "option_text": "By deleting opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 13733,
+          "option_text": "By hiding opportunities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2868,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage contacts in CRM?",
+      "options": [
+        {
+          "option_id": 13734,
+          "option_text": "By storing contact details, interactions, and communication history",
+          "is_correct": true
+        },
+        {
+          "option_id": 13735,
+          "option_text": "By ignoring contacts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13736,
+          "option_text": "By deleting contacts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13737,
+          "option_text": "By hiding contacts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2869,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage accounts in CRM?",
+      "options": [
+        {
+          "option_id": 13738,
+          "option_text": "By storing account details, contacts, and opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 13739,
+          "option_text": "By ignoring accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13740,
+          "option_text": "By deleting accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13741,
+          "option_text": "By hiding accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2870,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage sales pipeline in CRM?",
+      "options": [
+        {
+          "option_id": 13742,
+          "option_text": "By tracking sales stages, pipeline value, and conversion rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 13743,
+          "option_text": "By ignoring the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 13744,
+          "option_text": "By deleting the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 13745,
+          "option_text": "By hiding the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2871,
+      "subskill_id": 134,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a discovery call scoring?",
+      "options": [
+        {
+          "option_id": 13746,
+          "option_text": "A method of scoring leads based on their likelihood to convert",
+          "is_correct": true
+        },
+        {
+          "option_id": 13747,
+          "option_text": "A method of scoring opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 13748,
+          "option_text": "A method of scoring contacts",
+          "is_correct": false
+        },
+        {
+          "option_id": 13749,
+          "option_text": "A method of scoring accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2872,
+      "subskill_id": 135,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a demo success metric?",
+      "options": [
+        {
+          "option_id": 13750,
+          "option_text": "A metric that measures the success of a demo",
+          "is_correct": true
+        },
+        {
+          "option_id": 13751,
+          "option_text": "A metric that measures the success of a discovery call",
+          "is_correct": false
+        },
+        {
+          "option_id": 13752,
+          "option_text": "A metric that measures the success of objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13753,
+          "option_text": "A metric that measures the success of a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2873,
+      "subskill_id": 136,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a objection handling framework?",
+      "options": [
+        {
+          "option_id": 13754,
+          "option_text": "A structured approach to handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 13755,
+          "option_text": "A structured approach to discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13756,
+          "option_text": "A structured approach to demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13757,
+          "option_text": "A structured approach to using a CRM system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2874,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a CRM workflow?",
+      "options": [
+        {
+          "option_id": 13758,
+          "option_text": "A set of automated tasks and rules in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13759,
+          "option_text": "A set of manual tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13760,
+          "option_text": "A set of ignored tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13761,
+          "option_text": "A set of deleted tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2875,
+      "subskill_id": 137,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a CRM dashboard?",
+      "options": [
+        {
+          "option_id": 13762,
+          "option_text": "A visual display of key CRM metrics in a CRM system",
+          "is_correct": true
+        },
+        {
+          "option_id": 13763,
+          "option_text": "A visual display of key metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13764,
+          "option_text": "A visual display of key data",
+          "is_correct": false
+        },
+        {
+          "option_id": 13765,
+          "option_text": "A visual display of key reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2876,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale discovery calls?",
+      "options": [
+        {
+          "option_id": 13766,
+          "option_text": "By using processes, templates, and training",
+          "is_correct": true
+        },
+        {
+          "option_id": 13767,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13768,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13769,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2877,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize discovery calls?",
+      "options": [
+        {
+          "option_id": 13770,
+          "option_text": "By using data and feedback to improve call effectiveness",
+          "is_correct": true
+        },
+        {
+          "option_id": 13771,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13772,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13773,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2878,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure discovery call effectiveness?",
+      "options": [
+        {
+          "option_id": 13774,
+          "option_text": "By tracking metrics like conversion rates and call outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 13775,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13776,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13777,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2879,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a discovery call automation?",
+      "options": [
+        {
+          "option_id": 13778,
+          "option_text": "The use of technology to automate discovery calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 13779,
+          "option_text": "The use of technology to ignore discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13780,
+          "option_text": "The use of technology to delete discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13781,
+          "option_text": "The use of technology to hide discovery calls",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2880,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a discovery call AI?",
+      "options": [
+        {
+          "option_id": 13782,
+          "option_text": "The use of AI to improve discovery calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 13783,
+          "option_text": "The use of AI to ignore discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13784,
+          "option_text": "The use of AI to delete discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13785,
+          "option_text": "The use of AI to hide discovery calls",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2881,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale demos?",
+      "options": [
+        {
+          "option_id": 13786,
+          "option_text": "By using processes, templates, and training",
+          "is_correct": true
+        },
+        {
+          "option_id": 13787,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13788,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13789,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2882,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize demos?",
+      "options": [
+        {
+          "option_id": 13790,
+          "option_text": "By using data and feedback to improve demo effectiveness",
+          "is_correct": true
+        },
+        {
+          "option_id": 13791,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13792,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13793,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2883,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure demo effectiveness?",
+      "options": [
+        {
+          "option_id": 13794,
+          "option_text": "By tracking metrics like demo-to-opportunity rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 13795,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13796,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13797,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2884,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a demo automation?",
+      "options": [
+        {
+          "option_id": 13798,
+          "option_text": "The use of technology to automate demos",
+          "is_correct": true
+        },
+        {
+          "option_id": 13799,
+          "option_text": "The use of technology to ignore demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13800,
+          "option_text": "The use of technology to delete demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13801,
+          "option_text": "The use of technology to hide demos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2885,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a demo AI?",
+      "options": [
+        {
+          "option_id": 13802,
+          "option_text": "The use of AI to improve demos",
+          "is_correct": true
+        },
+        {
+          "option_id": 13803,
+          "option_text": "The use of AI to ignore demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13804,
+          "option_text": "The use of AI to delete demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13805,
+          "option_text": "The use of AI to hide demos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2886,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale objection handling?",
+      "options": [
+        {
+          "option_id": 13806,
+          "option_text": "By using processes, templates, and training",
+          "is_correct": true
+        },
+        {
+          "option_id": 13807,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13808,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13809,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2887,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize objection handling?",
+      "options": [
+        {
+          "option_id": 13810,
+          "option_text": "By using data and feedback to improve objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 13811,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13812,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13813,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2888,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure objection handling effectiveness?",
+      "options": [
+        {
+          "option_id": 13814,
+          "option_text": "By tracking metrics like objection resolution rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 13815,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13816,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13817,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2889,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a objection handling automation?",
+      "options": [
+        {
+          "option_id": 13818,
+          "option_text": "The use of technology to automate objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 13819,
+          "option_text": "The use of technology to ignore objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13820,
+          "option_text": "The use of technology to delete objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13821,
+          "option_text": "The use of technology to hide objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2890,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a objection handling AI?",
+      "options": [
+        {
+          "option_id": 13822,
+          "option_text": "The use of AI to improve objection handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 13823,
+          "option_text": "The use of AI to ignore objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13824,
+          "option_text": "The use of AI to delete objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13825,
+          "option_text": "The use of AI to hide objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2891,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale CRM usage?",
+      "options": [
+        {
+          "option_id": 13826,
+          "option_text": "By using processes, training, and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 13827,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13828,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13829,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2892,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize CRM usage?",
+      "options": [
+        {
+          "option_id": 13830,
+          "option_text": "By using data and feedback to improve CRM usage",
+          "is_correct": true
+        },
+        {
+          "option_id": 13831,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13832,
+          "option_text": "By deleting optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13833,
+          "option_text": "By hiding optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2893,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure CRM effectiveness?",
+      "options": [
+        {
+          "option_id": 13834,
+          "option_text": "By tracking metrics like user adoption and data quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 13835,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13836,
+          "option_text": "By deleting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 13837,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2894,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a CRM automation?",
+      "options": [
+        {
+          "option_id": 13838,
+          "option_text": "The use of technology to automate CRM tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 13839,
+          "option_text": "The use of technology to ignore CRM tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13840,
+          "option_text": "The use of technology to delete CRM tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 13841,
+          "option_text": "The use of technology to hide CRM tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2895,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a CRM AI?",
+      "options": [
+        {
+          "option_id": 13842,
+          "option_text": "The use of AI to improve CRM usage",
+          "is_correct": true
+        },
+        {
+          "option_id": 13843,
+          "option_text": "The use of AI to ignore CRM usage",
+          "is_correct": false
+        },
+        {
+          "option_id": 13844,
+          "option_text": "The use of AI to delete CRM usage",
+          "is_correct": false
+        },
+        {
+          "option_id": 13845,
+          "option_text": "The use of AI to hide CRM usage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2896,
+      "subskill_id": 134,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a discovery call strategy?",
+      "options": [
+        {
+          "option_id": 13846,
+          "option_text": "A high-level plan for using discovery calls effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13847,
+          "option_text": "A plan for ignoring discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13848,
+          "option_text": "A plan for deleting discovery calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 13849,
+          "option_text": "A plan for hiding discovery calls",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2897,
+      "subskill_id": 135,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a demo strategy?",
+      "options": [
+        {
+          "option_id": 13850,
+          "option_text": "A high-level plan for using demos effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13851,
+          "option_text": "A plan for ignoring demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13852,
+          "option_text": "A plan for deleting demos",
+          "is_correct": false
+        },
+        {
+          "option_id": 13853,
+          "option_text": "A plan for hiding demos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2898,
+      "subskill_id": 136,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a objection handling strategy?",
+      "options": [
+        {
+          "option_id": 13854,
+          "option_text": "A high-level plan for using objection handling effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13855,
+          "option_text": "A plan for ignoring objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13856,
+          "option_text": "A plan for deleting objection handling",
+          "is_correct": false
+        },
+        {
+          "option_id": 13857,
+          "option_text": "A plan for hiding objection handling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2899,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a CRM strategy?",
+      "options": [
+        {
+          "option_id": 13858,
+          "option_text": "A high-level plan for using CRM systems effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 13859,
+          "option_text": "A plan for ignoring CRM systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 13860,
+          "option_text": "A plan for deleting CRM systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 13861,
+          "option_text": "A plan for hiding CRM systems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2900,
+      "subskill_id": 137,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a CRM enterprise strategy?",
+      "options": [
+        {
+          "option_id": 13862,
+          "option_text": "A high-level plan for using CRM systems in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 13863,
+          "option_text": "A plan for ignoring CRM systems in a large organization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13864,
+          "option_text": "A plan for deleting CRM systems in a large organization",
+          "is_correct": false
+        },
+        {
+          "option_id": 13865,
+          "option_text": "A plan for hiding CRM systems in a large organization",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

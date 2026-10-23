@@ -1,0 +1,2906 @@
+{
+  "skill_id": 19,
+  "skill_name": "Data Analysis",
+  "questions": [
+    {
+      "question_id": 1801,
+      "subskill_id": 90,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Microsoft Excel?",
+      "options": [
+        {
+          "option_id": 9466,
+          "option_text": "A spreadsheet application for data analysis and visualization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9467,
+          "option_text": "A programming language for data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 9468,
+          "option_text": "A database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 9469,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1802,
+      "subskill_id": 90,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cell in Excel?",
+      "options": [
+        {
+          "option_id": 9470,
+          "option_text": "The intersection of a row and column in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9471,
+          "option_text": "A row in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9472,
+          "option_text": "A column in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9473,
+          "option_text": "A tab in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1803,
+      "subskill_id": 90,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a formula in Excel?",
+      "options": [
+        {
+          "option_id": 9474,
+          "option_text": "An equation that performs calculations on data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9475,
+          "option_text": "A function that summarizes data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9476,
+          "option_text": "A chart type",
+          "is_correct": false
+        },
+        {
+          "option_id": 9477,
+          "option_text": "A data validation rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1804,
+      "subskill_id": 90,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a function in Excel?",
+      "options": [
+        {
+          "option_id": 9478,
+          "option_text": "A pre-built calculation in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9479,
+          "option_text": "A cell reference",
+          "is_correct": false
+        },
+        {
+          "option_id": 9480,
+          "option_text": "A chart type",
+          "is_correct": false
+        },
+        {
+          "option_id": 9481,
+          "option_text": "A data type",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1805,
+      "subskill_id": 90,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a chart in Excel?",
+      "options": [
+        {
+          "option_id": 9482,
+          "option_text": "A visual representation of data in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9483,
+          "option_text": "A cell in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9484,
+          "option_text": "A formula in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9485,
+          "option_text": "A function in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1806,
+      "subskill_id": 91,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SQL?",
+      "options": [
+        {
+          "option_id": 9486,
+          "option_text": "A language for managing and querying relational databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 9487,
+          "option_text": "A programming language for data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 9488,
+          "option_text": "A spreadsheet application",
+          "is_correct": false
+        },
+        {
+          "option_id": 9489,
+          "option_text": "A data visualization tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1807,
+      "subskill_id": 91,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a database in SQL?",
+      "options": [
+        {
+          "option_id": 9490,
+          "option_text": "A structured collection of data organized for easy access",
+          "is_correct": true
+        },
+        {
+          "option_id": 9491,
+          "option_text": "A single table",
+          "is_correct": false
+        },
+        {
+          "option_id": 9492,
+          "option_text": "A spreadsheet file",
+          "is_correct": false
+        },
+        {
+          "option_id": 9493,
+          "option_text": "A data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1808,
+      "subskill_id": 91,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a table in SQL?",
+      "options": [
+        {
+          "option_id": 9494,
+          "option_text": "A collection of related data organized in rows and columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 9495,
+          "option_text": "A database structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 9496,
+          "option_text": "A data type",
+          "is_correct": false
+        },
+        {
+          "option_id": 9497,
+          "option_text": "A query",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1809,
+      "subskill_id": 91,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a SELECT statement in SQL?",
+      "options": [
+        {
+          "option_id": 9498,
+          "option_text": "A SQL statement used to retrieve data from a database",
+          "is_correct": true
+        },
+        {
+          "option_id": 9499,
+          "option_text": "A SQL statement used to insert data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9500,
+          "option_text": "A SQL statement used to update data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9501,
+          "option_text": "A SQL statement used to delete data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1810,
+      "subskill_id": 91,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a WHERE clause in SQL?",
+      "options": [
+        {
+          "option_id": 9502,
+          "option_text": "A SQL clause used to filter data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9503,
+          "option_text": "A SQL clause used to group data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9504,
+          "option_text": "A SQL clause used to sort data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9505,
+          "option_text": "A SQL clause used to join tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1811,
+      "subskill_id": 92,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Pandas in Python?",
+      "options": [
+        {
+          "option_id": 9506,
+          "option_text": "A Python library for data manipulation and analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 9507,
+          "option_text": "A Python library for data visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9508,
+          "option_text": "A Python library for machine learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9509,
+          "option_text": "A Python library for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1812,
+      "subskill_id": 92,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a DataFrame in Pandas?",
+      "options": [
+        {
+          "option_id": 9510,
+          "option_text": "A two-dimensional data structure in Pandas",
+          "is_correct": true
+        },
+        {
+          "option_id": 9511,
+          "option_text": "A one-dimensional data structure in Pandas",
+          "is_correct": false
+        },
+        {
+          "option_id": 9512,
+          "option_text": "A three-dimensional data structure in Pandas",
+          "is_correct": false
+        },
+        {
+          "option_id": 9513,
+          "option_text": "A type of data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1813,
+      "subskill_id": 92,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Series in Pandas?",
+      "options": [
+        {
+          "option_id": 9514,
+          "option_text": "A one-dimensional data structure in Pandas",
+          "is_correct": true
+        },
+        {
+          "option_id": 9515,
+          "option_text": "A two-dimensional data structure in Pandas",
+          "is_correct": false
+        },
+        {
+          "option_id": 9516,
+          "option_text": "A three-dimensional data structure in Pandas",
+          "is_correct": false
+        },
+        {
+          "option_id": 9517,
+          "option_text": "A type of data visualization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1814,
+      "subskill_id": 92,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do you import Pandas?",
+      "options": [
+        {
+          "option_id": 9518,
+          "option_text": "By using the import pandas as pd statement",
+          "is_correct": true
+        },
+        {
+          "option_id": 9519,
+          "option_text": "By using the import numpy as np statement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9520,
+          "option_text": "By using the import matplotlib.pyplot as plt statement",
+          "is_correct": false
+        },
+        {
+          "option_id": 9521,
+          "option_text": "By using the import seaborn as sns statement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1815,
+      "subskill_id": 92,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a CSV file in Pandas?",
+      "options": [
+        {
+          "option_id": 9522,
+          "option_text": "A file format for storing tabular data in plain text",
+          "is_correct": true
+        },
+        {
+          "option_id": 9523,
+          "option_text": "A file format for storing images",
+          "is_correct": false
+        },
+        {
+          "option_id": 9524,
+          "option_text": "A file format for storing audio",
+          "is_correct": false
+        },
+        {
+          "option_id": 9525,
+          "option_text": "A file format for storing video",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1816,
+      "subskill_id": 93,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is data visualization?",
+      "options": [
+        {
+          "option_id": 9526,
+          "option_text": "The graphical representation of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9527,
+          "option_text": "The process of analyzing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9528,
+          "option_text": "The process of cleaning data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9529,
+          "option_text": "The process of collecting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1817,
+      "subskill_id": 93,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a bar chart?",
+      "options": [
+        {
+          "option_id": 9530,
+          "option_text": "A chart that uses rectangular bars to represent data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9531,
+          "option_text": "A chart that uses points connected by lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9532,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        },
+        {
+          "option_id": 9533,
+          "option_text": "A chart that uses points on a graph",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1818,
+      "subskill_id": 93,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a line chart?",
+      "options": [
+        {
+          "option_id": 9534,
+          "option_text": "A chart that uses points connected by lines to show trends",
+          "is_correct": true
+        },
+        {
+          "option_id": 9535,
+          "option_text": "A chart that uses rectangular bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9536,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        },
+        {
+          "option_id": 9537,
+          "option_text": "A chart that uses points on a graph",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1819,
+      "subskill_id": 93,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a pie chart?",
+      "options": [
+        {
+          "option_id": 9538,
+          "option_text": "A chart that uses slices of a circle to show proportions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9539,
+          "option_text": "A chart that uses rectangular bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9540,
+          "option_text": "A chart that uses points connected by lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9541,
+          "option_text": "A chart that uses points on a graph",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1820,
+      "subskill_id": 93,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a scatter plot?",
+      "options": [
+        {
+          "option_id": 9542,
+          "option_text": "A chart that uses points on a graph to show relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 9543,
+          "option_text": "A chart that uses rectangular bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9544,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        },
+        {
+          "option_id": 9545,
+          "option_text": "A chart that uses points connected by lines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1821,
+      "subskill_id": 94,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is statistics?",
+      "options": [
+        {
+          "option_id": 9546,
+          "option_text": "The science of collecting, analyzing, and interpreting data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9547,
+          "option_text": "The science of programming",
+          "is_correct": false
+        },
+        {
+          "option_id": 9548,
+          "option_text": "The science of visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9549,
+          "option_text": "The science of machine learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1822,
+      "subskill_id": 94,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mean?",
+      "options": [
+        {
+          "option_id": 9550,
+          "option_text": "The average of a set of numbers",
+          "is_correct": true
+        },
+        {
+          "option_id": 9551,
+          "option_text": "The middle value of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9552,
+          "option_text": "The most frequent value in a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9553,
+          "option_text": "The spread of a set of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1823,
+      "subskill_id": 94,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a median?",
+      "options": [
+        {
+          "option_id": 9554,
+          "option_text": "The middle value of a set of numbers",
+          "is_correct": true
+        },
+        {
+          "option_id": 9555,
+          "option_text": "The average of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9556,
+          "option_text": "The most frequent value in a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9557,
+          "option_text": "The spread of a set of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1824,
+      "subskill_id": 94,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mode?",
+      "options": [
+        {
+          "option_id": 9558,
+          "option_text": "The most frequent value in a set of numbers",
+          "is_correct": true
+        },
+        {
+          "option_id": 9559,
+          "option_text": "The average of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9560,
+          "option_text": "The middle value of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9561,
+          "option_text": "The spread of a set of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1825,
+      "subskill_id": 94,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is standard deviation?",
+      "options": [
+        {
+          "option_id": 9562,
+          "option_text": "A measure of the spread of a set of numbers",
+          "is_correct": true
+        },
+        {
+          "option_id": 9563,
+          "option_text": "The average of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9564,
+          "option_text": "The middle value of a set of numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 9565,
+          "option_text": "The most frequent value in a set of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1826,
+      "subskill_id": 90,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a pivot table in Excel?",
+      "options": [
+        {
+          "option_id": 9566,
+          "option_text": "By selecting the data and using the pivot table function",
+          "is_correct": true
+        },
+        {
+          "option_id": 9567,
+          "option_text": "By writing a formula",
+          "is_correct": false
+        },
+        {
+          "option_id": 9568,
+          "option_text": "By creating a chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 9569,
+          "option_text": "By using a macro",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1827,
+      "subskill_id": 90,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is VLOOKUP in Excel?",
+      "options": [
+        {
+          "option_id": 9570,
+          "option_text": "A function that looks up a value in a table",
+          "is_correct": true
+        },
+        {
+          "option_id": 9571,
+          "option_text": "A function that calculates a sum",
+          "is_correct": false
+        },
+        {
+          "option_id": 9572,
+          "option_text": "A function that finds the average",
+          "is_correct": false
+        },
+        {
+          "option_id": 9573,
+          "option_text": "A function that counts values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1828,
+      "subskill_id": 90,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is conditional formatting in Excel?",
+      "options": [
+        {
+          "option_id": 9574,
+          "option_text": "A feature that applies formatting based on cell values",
+          "is_correct": true
+        },
+        {
+          "option_id": 9575,
+          "option_text": "A feature that creates charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9576,
+          "option_text": "A feature that creates pivot tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9577,
+          "option_text": "A feature that writes macros",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1829,
+      "subskill_id": 90,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a macro in Excel?",
+      "options": [
+        {
+          "option_id": 9578,
+          "option_text": "A recorded series of actions in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9579,
+          "option_text": "A formula in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9580,
+          "option_text": "A function in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9581,
+          "option_text": "A chart in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1830,
+      "subskill_id": 90,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Power Query in Excel?",
+      "options": [
+        {
+          "option_id": 9582,
+          "option_text": "A data connection and transformation tool in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9583,
+          "option_text": "A chart tool in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9584,
+          "option_text": "A function tool in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9585,
+          "option_text": "A pivot table tool in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1831,
+      "subskill_id": 91,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a JOIN in SQL?",
+      "options": [
+        {
+          "option_id": 9586,
+          "option_text": "A SQL clause used to combine data from multiple tables",
+          "is_correct": true
+        },
+        {
+          "option_id": 9587,
+          "option_text": "A SQL clause used to filter data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9588,
+          "option_text": "A SQL clause used to group data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9589,
+          "option_text": "A SQL clause used to sort data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1832,
+      "subskill_id": 91,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a GROUP BY clause in SQL?",
+      "options": [
+        {
+          "option_id": 9590,
+          "option_text": "A SQL clause used to group data by categories",
+          "is_correct": true
+        },
+        {
+          "option_id": 9591,
+          "option_text": "A SQL clause used to filter data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9592,
+          "option_text": "A SQL clause used to sort data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9593,
+          "option_text": "A SQL clause used to combine data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1833,
+      "subskill_id": 91,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an ORDER BY clause in SQL?",
+      "options": [
+        {
+          "option_id": 9594,
+          "option_text": "A SQL clause used to sort data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9595,
+          "option_text": "A SQL clause used to filter data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9596,
+          "option_text": "A SQL clause used to group data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9597,
+          "option_text": "A SQL clause used to combine data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1834,
+      "subskill_id": 91,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a subquery in SQL?",
+      "options": [
+        {
+          "option_id": 9598,
+          "option_text": "A SQL query nested inside another SQL query",
+          "is_correct": true
+        },
+        {
+          "option_id": 9599,
+          "option_text": "A SQL query that is not nested",
+          "is_correct": false
+        },
+        {
+          "option_id": 9600,
+          "option_text": "A SQL query that uses a function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9601,
+          "option_text": "A SQL query that uses a join",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1835,
+      "subskill_id": 91,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a CTE in SQL?",
+      "options": [
+        {
+          "option_id": 9602,
+          "option_text": "A temporary named result set in SQL",
+          "is_correct": true
+        },
+        {
+          "option_id": 9603,
+          "option_text": "A permanent table in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9604,
+          "option_text": "A view in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9605,
+          "option_text": "A stored procedure in SQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1836,
+      "subskill_id": 92,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you read a CSV file in Pandas?",
+      "options": [
+        {
+          "option_id": 9606,
+          "option_text": "By using the pd.read_csv function",
+          "is_correct": true
+        },
+        {
+          "option_id": 9607,
+          "option_text": "By using the pd.read_excel function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9608,
+          "option_text": "By using the pd.read_sql function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9609,
+          "option_text": "By using the pd.read_json function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1837,
+      "subskill_id": 92,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you filter data in Pandas?",
+      "options": [
+        {
+          "option_id": 9610,
+          "option_text": "By using boolean indexing",
+          "is_correct": true
+        },
+        {
+          "option_id": 9611,
+          "option_text": "By using the groupby function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9612,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9613,
+          "option_text": "By using the merge function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1838,
+      "subskill_id": 92,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you group data in Pandas?",
+      "options": [
+        {
+          "option_id": 9614,
+          "option_text": "By using the groupby function",
+          "is_correct": true
+        },
+        {
+          "option_id": 9615,
+          "option_text": "By using boolean indexing",
+          "is_correct": false
+        },
+        {
+          "option_id": 9616,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9617,
+          "option_text": "By using the merge function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1839,
+      "subskill_id": 92,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the apply function in Pandas?",
+      "options": [
+        {
+          "option_id": 9618,
+          "option_text": "A function that applies a function to each row or column",
+          "is_correct": true
+        },
+        {
+          "option_id": 9619,
+          "option_text": "A function that groups data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9620,
+          "option_text": "A function that filters data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9621,
+          "option_text": "A function that merges data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1840,
+      "subskill_id": 92,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle missing data in Pandas?",
+      "options": [
+        {
+          "option_id": 9622,
+          "option_text": "By using the dropna function or fillna function",
+          "is_correct": true
+        },
+        {
+          "option_id": 9623,
+          "option_text": "By using the groupby function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9624,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9625,
+          "option_text": "By using the merge function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1841,
+      "subskill_id": 93,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Matplotlib in Python?",
+      "options": [
+        {
+          "option_id": 9626,
+          "option_text": "A Python library for creating visualizations",
+          "is_correct": true
+        },
+        {
+          "option_id": 9627,
+          "option_text": "A Python library for data manipulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9628,
+          "option_text": "A Python library for machine learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9629,
+          "option_text": "A Python library for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1842,
+      "subskill_id": 93,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a histogram?",
+      "options": [
+        {
+          "option_id": 9630,
+          "option_text": "A chart that shows the distribution of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9631,
+          "option_text": "A chart that shows trends over time",
+          "is_correct": false
+        },
+        {
+          "option_id": 9632,
+          "option_text": "A chart that shows proportions",
+          "is_correct": false
+        },
+        {
+          "option_id": 9633,
+          "option_text": "A chart that shows relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1843,
+      "subskill_id": 93,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a box plot?",
+      "options": [
+        {
+          "option_id": 9634,
+          "option_text": "A chart that shows the spread of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9635,
+          "option_text": "A chart that shows the distribution of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9636,
+          "option_text": "A chart that shows trends over time",
+          "is_correct": false
+        },
+        {
+          "option_id": 9637,
+          "option_text": "A chart that shows proportions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1844,
+      "subskill_id": 93,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Seaborn in Python?",
+      "options": [
+        {
+          "option_id": 9638,
+          "option_text": "A Python library for statistical data visualization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9639,
+          "option_text": "A Python library for data manipulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9640,
+          "option_text": "A Python library for machine learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9641,
+          "option_text": "A Python library for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1845,
+      "subskill_id": 93,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a heatmap?",
+      "options": [
+        {
+          "option_id": 9642,
+          "option_text": "A graphical representation of data using colors",
+          "is_correct": true
+        },
+        {
+          "option_id": 9643,
+          "option_text": "A chart that uses bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9644,
+          "option_text": "A chart that uses lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9645,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1846,
+      "subskill_id": 94,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a normal distribution?",
+      "options": [
+        {
+          "option_id": 9646,
+          "option_text": "A bell-shaped curve showing the distribution of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9647,
+          "option_text": "A statistical test",
+          "is_correct": false
+        },
+        {
+          "option_id": 9648,
+          "option_text": "A data visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9649,
+          "option_text": "A data cleaning technique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1847,
+      "subskill_id": 94,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is hypothesis testing?",
+      "options": [
+        {
+          "option_id": 9650,
+          "option_text": "A method for testing a hypothesis using data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9651,
+          "option_text": "A method for cleaning data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9652,
+          "option_text": "A method for visualizing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9653,
+          "option_text": "A method for collecting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1848,
+      "subskill_id": 94,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a p-value?",
+      "options": [
+        {
+          "option_id": 9654,
+          "option_text": "A measure that indicates the probability of an observed result",
+          "is_correct": true
+        },
+        {
+          "option_id": 9655,
+          "option_text": "A measure that indicates the average of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9656,
+          "option_text": "A measure that indicates the spread of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9657,
+          "option_text": "A measure that indicates the correlation of data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1849,
+      "subskill_id": 94,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a confidence interval?",
+      "options": [
+        {
+          "option_id": 9658,
+          "option_text": "A range of values that is likely to contain the true value",
+          "is_correct": true
+        },
+        {
+          "option_id": 9659,
+          "option_text": "A single value that is the true value",
+          "is_correct": false
+        },
+        {
+          "option_id": 9660,
+          "option_text": "A measure of the spread of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9661,
+          "option_text": "A measure of the average of data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1850,
+      "subskill_id": 94,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is correlation?",
+      "options": [
+        {
+          "option_id": 9662,
+          "option_text": "A measure of the relationship between two variables",
+          "is_correct": true
+        },
+        {
+          "option_id": 9663,
+          "option_text": "A measure of the average of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9664,
+          "option_text": "A measure of the spread of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9665,
+          "option_text": "A measure of the probability of an observed result",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1851,
+      "subskill_id": 90,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Power Pivot in Excel?",
+      "options": [
+        {
+          "option_id": 9666,
+          "option_text": "A tool for data modeling and analysis in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9667,
+          "option_text": "A chart tool in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9668,
+          "option_text": "A function tool in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9669,
+          "option_text": "A pivot table tool in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1852,
+      "subskill_id": 90,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is DAX in Excel?",
+      "options": [
+        {
+          "option_id": 9670,
+          "option_text": "A formula language used in Power Pivot",
+          "is_correct": true
+        },
+        {
+          "option_id": 9671,
+          "option_text": "A programming language used in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9672,
+          "option_text": "A function used in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9673,
+          "option_text": "A chart type in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1853,
+      "subskill_id": 90,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you use Power Query for data transformation?",
+      "options": [
+        {
+          "option_id": 9674,
+          "option_text": "By using Power Query to connect, transform, and load data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9675,
+          "option_text": "By using pivot tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9676,
+          "option_text": "By using macros",
+          "is_correct": false
+        },
+        {
+          "option_id": 9677,
+          "option_text": "By using formulas",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1854,
+      "subskill_id": 90,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are dynamic arrays in Excel?",
+      "options": [
+        {
+          "option_id": 9678,
+          "option_text": "A new feature that allows formulas to return multiple values",
+          "is_correct": true
+        },
+        {
+          "option_id": 9679,
+          "option_text": "A new function in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9680,
+          "option_text": "A new chart type in Excel",
+          "is_correct": false
+        },
+        {
+          "option_id": 9681,
+          "option_text": "A new data type in Excel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1855,
+      "subskill_id": 90,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the LET function in Excel?",
+      "options": [
+        {
+          "option_id": 9682,
+          "option_text": "A function that allows you to define and reuse variables in formulas",
+          "is_correct": true
+        },
+        {
+          "option_id": 9683,
+          "option_text": "A function that calculates the sum",
+          "is_correct": false
+        },
+        {
+          "option_id": 9684,
+          "option_text": "A function that finds the average",
+          "is_correct": false
+        },
+        {
+          "option_id": 9685,
+          "option_text": "A function that counts values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1856,
+      "subskill_id": 91,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a window function in SQL?",
+      "options": [
+        {
+          "option_id": 9686,
+          "option_text": "A function that performs calculations across rows related to the current row",
+          "is_correct": true
+        },
+        {
+          "option_id": 9687,
+          "option_text": "A function that groups data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9688,
+          "option_text": "A function that filters data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9689,
+          "option_text": "A function that joins tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1857,
+      "subskill_id": 91,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a stored procedure in SQL?",
+      "options": [
+        {
+          "option_id": 9690,
+          "option_text": "A set of SQL statements that are stored in the database",
+          "is_correct": true
+        },
+        {
+          "option_id": 9691,
+          "option_text": "A view in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9692,
+          "option_text": "A table in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9693,
+          "option_text": "A function in SQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1858,
+      "subskill_id": 91,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a view in SQL?",
+      "options": [
+        {
+          "option_id": 9694,
+          "option_text": "A virtual table based on the result of a SQL query",
+          "is_correct": true
+        },
+        {
+          "option_id": 9695,
+          "option_text": "A physical table in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9696,
+          "option_text": "A stored procedure in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 9697,
+          "option_text": "A function in SQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1859,
+      "subskill_id": 91,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an index in SQL?",
+      "options": [
+        {
+          "option_id": 9698,
+          "option_text": "A database structure that improves query performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9699,
+          "option_text": "A database table",
+          "is_correct": false
+        },
+        {
+          "option_id": 9700,
+          "option_text": "A database view",
+          "is_correct": false
+        },
+        {
+          "option_id": 9701,
+          "option_text": "A database stored procedure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1860,
+      "subskill_id": 91,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a transaction in SQL?",
+      "options": [
+        {
+          "option_id": 9702,
+          "option_text": "A unit of work in a database",
+          "is_correct": true
+        },
+        {
+          "option_id": 9703,
+          "option_text": "A database table",
+          "is_correct": false
+        },
+        {
+          "option_id": 9704,
+          "option_text": "A database view",
+          "is_correct": false
+        },
+        {
+          "option_id": 9705,
+          "option_text": "A database index",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1861,
+      "subskill_id": 92,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you merge DataFrames in Pandas?",
+      "options": [
+        {
+          "option_id": 9706,
+          "option_text": "By using the merge function",
+          "is_correct": true
+        },
+        {
+          "option_id": 9707,
+          "option_text": "By using the groupby function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9708,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9709,
+          "option_text": "By using the filter function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1862,
+      "subskill_id": 92,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a pivot table in Pandas?",
+      "options": [
+        {
+          "option_id": 9710,
+          "option_text": "A function that creates a pivot table from a DataFrame",
+          "is_correct": true
+        },
+        {
+          "option_id": 9711,
+          "option_text": "A function that merges DataFrames",
+          "is_correct": false
+        },
+        {
+          "option_id": 9712,
+          "option_text": "A function that groups data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9713,
+          "option_text": "A function that applies a function to each row or column",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1863,
+      "subskill_id": 92,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the melt function in Pandas?",
+      "options": [
+        {
+          "option_id": 9714,
+          "option_text": "A function that unpivots a DataFrame",
+          "is_correct": true
+        },
+        {
+          "option_id": 9715,
+          "option_text": "A function that pivots a DataFrame",
+          "is_correct": false
+        },
+        {
+          "option_id": 9716,
+          "option_text": "A function that merges DataFrames",
+          "is_correct": false
+        },
+        {
+          "option_id": 9717,
+          "option_text": "A function that groups data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1864,
+      "subskill_id": 92,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the loc and iloc in Pandas?",
+      "options": [
+        {
+          "option_id": 9718,
+          "option_text": "Methods for selecting data by label and by integer position",
+          "is_correct": true
+        },
+        {
+          "option_id": 9719,
+          "option_text": "Methods for filtering data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9720,
+          "option_text": "Methods for grouping data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9721,
+          "option_text": "Methods for merging data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1865,
+      "subskill_id": 92,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle datetime data in Pandas?",
+      "options": [
+        {
+          "option_id": 9722,
+          "option_text": "By using the to_datetime function and related methods",
+          "is_correct": true
+        },
+        {
+          "option_id": 9723,
+          "option_text": "By using the groupby function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9724,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9725,
+          "option_text": "By using the merge function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1866,
+      "subskill_id": 93,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Plotly in Python?",
+      "options": [
+        {
+          "option_id": 9726,
+          "option_text": "A Python library for interactive data visualization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9727,
+          "option_text": "A Python library for data manipulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9728,
+          "option_text": "A Python library for machine learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9729,
+          "option_text": "A Python library for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1867,
+      "subskill_id": 93,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an interactive dashboard?",
+      "options": [
+        {
+          "option_id": 9730,
+          "option_text": "A dashboard that allows user interaction with data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9731,
+          "option_text": "A static chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 9732,
+          "option_text": "A data table",
+          "is_correct": false
+        },
+        {
+          "option_id": 9733,
+          "option_text": "A data report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1868,
+      "subskill_id": 93,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a geographic map in data visualization?",
+      "options": [
+        {
+          "option_id": 9734,
+          "option_text": "A map that shows data geographically",
+          "is_correct": true
+        },
+        {
+          "option_id": 9735,
+          "option_text": "A chart that uses bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9736,
+          "option_text": "A chart that uses lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9737,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1869,
+      "subskill_id": 93,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a network graph?",
+      "options": [
+        {
+          "option_id": 9738,
+          "option_text": "A graph that shows connections between nodes",
+          "is_correct": true
+        },
+        {
+          "option_id": 9739,
+          "option_text": "A chart that uses bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9740,
+          "option_text": "A chart that uses lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9741,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1870,
+      "subskill_id": 93,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a word cloud?",
+      "options": [
+        {
+          "option_id": 9742,
+          "option_text": "A visual representation of text data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9743,
+          "option_text": "A chart that uses bars",
+          "is_correct": false
+        },
+        {
+          "option_id": 9744,
+          "option_text": "A chart that uses lines",
+          "is_correct": false
+        },
+        {
+          "option_id": 9745,
+          "option_text": "A chart that uses slices of a circle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1871,
+      "subskill_id": 94,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is regression analysis?",
+      "options": [
+        {
+          "option_id": 9746,
+          "option_text": "A statistical method for modeling relationships between variables",
+          "is_correct": true
+        },
+        {
+          "option_id": 9747,
+          "option_text": "A method for cleaning data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9748,
+          "option_text": "A method for visualizing data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9749,
+          "option_text": "A method for collecting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1872,
+      "subskill_id": 94,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is ANOVA?",
+      "options": [
+        {
+          "option_id": 9750,
+          "option_text": "A statistical test for comparing means of multiple groups",
+          "is_correct": true
+        },
+        {
+          "option_id": 9751,
+          "option_text": "A test for comparing two means",
+          "is_correct": false
+        },
+        {
+          "option_id": 9752,
+          "option_text": "A test for categorical data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9753,
+          "option_text": "A test for correlation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1873,
+      "subskill_id": 94,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a chi-square test?",
+      "options": [
+        {
+          "option_id": 9754,
+          "option_text": "A statistical test for categorical data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9755,
+          "option_text": "A test for comparing means",
+          "is_correct": false
+        },
+        {
+          "option_id": 9756,
+          "option_text": "A test for correlation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9757,
+          "option_text": "A test for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1874,
+      "subskill_id": 94,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a t-test?",
+      "options": [
+        {
+          "option_id": 9758,
+          "option_text": "A statistical test for comparing two means",
+          "is_correct": true
+        },
+        {
+          "option_id": 9759,
+          "option_text": "A test for comparing multiple means",
+          "is_correct": false
+        },
+        {
+          "option_id": 9760,
+          "option_text": "A test for categorical data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9761,
+          "option_text": "A test for correlation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1875,
+      "subskill_id": 94,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Bayesian statistics?",
+      "options": [
+        {
+          "option_id": 9762,
+          "option_text": "A statistical approach that incorporates prior knowledge",
+          "is_correct": true
+        },
+        {
+          "option_id": 9763,
+          "option_text": "A statistical approach that uses only sample data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9764,
+          "option_text": "A statistical approach that ignores prior knowledge",
+          "is_correct": false
+        },
+        {
+          "option_id": 9765,
+          "option_text": "A statistical approach that is not used in practice",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1876,
+      "subskill_id": 90,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the LAMBDA function in Excel?",
+      "options": [
+        {
+          "option_id": 9766,
+          "option_text": "A function that creates custom functions in Excel",
+          "is_correct": true
+        },
+        {
+          "option_id": 9767,
+          "option_text": "A function that calculates the sum",
+          "is_correct": false
+        },
+        {
+          "option_id": 9768,
+          "option_text": "A function that finds the average",
+          "is_correct": false
+        },
+        {
+          "option_id": 9769,
+          "option_text": "A function that counts values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1877,
+      "subskill_id": 90,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are named ranges in Excel?",
+      "options": [
+        {
+          "option_id": 9770,
+          "option_text": "A feature that allows you to name a cell or range of cells",
+          "is_correct": true
+        },
+        {
+          "option_id": 9771,
+          "option_text": "A feature that creates charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9772,
+          "option_text": "A feature that creates pivot tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9773,
+          "option_text": "A feature that writes macros",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1878,
+      "subskill_id": 90,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Power BI integration in Excel?",
+      "options": [
+        {
+          "option_id": 9774,
+          "option_text": "A feature that connects Excel to Power BI",
+          "is_correct": true
+        },
+        {
+          "option_id": 9775,
+          "option_text": "A feature that creates charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9776,
+          "option_text": "A feature that creates pivot tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9777,
+          "option_text": "A feature that writes macros",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1879,
+      "subskill_id": 90,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the XLOOKUP function in Excel?",
+      "options": [
+        {
+          "option_id": 9778,
+          "option_text": "A function that looks up values in a table",
+          "is_correct": true
+        },
+        {
+          "option_id": 9779,
+          "option_text": "A function that calculates the sum",
+          "is_correct": false
+        },
+        {
+          "option_id": 9780,
+          "option_text": "A function that finds the average",
+          "is_correct": false
+        },
+        {
+          "option_id": 9781,
+          "option_text": "A function that counts values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1880,
+      "subskill_id": 90,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate Excel tasks with Python?",
+      "options": [
+        {
+          "option_id": 9782,
+          "option_text": "By using Python libraries like openpyxl or xlwings",
+          "is_correct": true
+        },
+        {
+          "option_id": 9783,
+          "option_text": "By using Excel macros",
+          "is_correct": false
+        },
+        {
+          "option_id": 9784,
+          "option_text": "By using Excel formulas",
+          "is_correct": false
+        },
+        {
+          "option_id": 9785,
+          "option_text": "By using Excel pivot tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1881,
+      "subskill_id": 91,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is query optimization in SQL?",
+      "options": [
+        {
+          "option_id": 9786,
+          "option_text": "The process of improving SQL query performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9787,
+          "option_text": "The process of writing SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 9788,
+          "option_text": "The process of deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9789,
+          "option_text": "The process of inserting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1882,
+      "subskill_id": 91,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a recursive CTE in SQL?",
+      "options": [
+        {
+          "option_id": 9790,
+          "option_text": "A CTE that refers to itself",
+          "is_correct": true
+        },
+        {
+          "option_id": 9791,
+          "option_text": "A CTE that does not refer to itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 9792,
+          "option_text": "A view that refers to itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 9793,
+          "option_text": "A stored procedure that refers to itself",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1883,
+      "subskill_id": 91,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pivot in SQL?",
+      "options": [
+        {
+          "option_id": 9794,
+          "option_text": "A SQL operation that converts rows to columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 9795,
+          "option_text": "A SQL operation that converts columns to rows",
+          "is_correct": false
+        },
+        {
+          "option_id": 9796,
+          "option_text": "A SQL operation that joins tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9797,
+          "option_text": "A SQL operation that groups data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1884,
+      "subskill_id": 91,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a partition in SQL?",
+      "options": [
+        {
+          "option_id": 9798,
+          "option_text": "A SQL operation that divides a result set into partitions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9799,
+          "option_text": "A SQL operation that joins tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9800,
+          "option_text": "A SQL operation that groups data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9801,
+          "option_text": "A SQL operation that filters data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1885,
+      "subskill_id": 91,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a database normalization?",
+      "options": [
+        {
+          "option_id": 9802,
+          "option_text": "The process of organizing data to reduce redundancy",
+          "is_correct": true
+        },
+        {
+          "option_id": 9803,
+          "option_text": "The process of writing SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 9804,
+          "option_text": "The process of deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9805,
+          "option_text": "The process of inserting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1886,
+      "subskill_id": 92,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the performance of Pandas vs SQL?",
+      "options": [
+        {
+          "option_id": 9806,
+          "option_text": "SQL is faster for complex queries; Pandas is faster for smaller datasets",
+          "is_correct": true
+        },
+        {
+          "option_id": 9807,
+          "option_text": "Pandas is always faster",
+          "is_correct": false
+        },
+        {
+          "option_id": 9808,
+          "option_text": "SQL is always faster",
+          "is_correct": false
+        },
+        {
+          "option_id": 9809,
+          "option_text": "They have the same performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1887,
+      "subskill_id": 92,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you optimize Pandas for large datasets?",
+      "options": [
+        {
+          "option_id": 9810,
+          "option_text": "By using efficient data types and vectorization",
+          "is_correct": true
+        },
+        {
+          "option_id": 9811,
+          "option_text": "By using loops",
+          "is_correct": false
+        },
+        {
+          "option_id": 9812,
+          "option_text": "By using the apply function",
+          "is_correct": false
+        },
+        {
+          "option_id": 9813,
+          "option_text": "By using the groupby function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1888,
+      "subskill_id": 92,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is Dask and how does it relate to Pandas?",
+      "options": [
+        {
+          "option_id": 9814,
+          "option_text": "A parallel computing library that scales Pandas",
+          "is_correct": true
+        },
+        {
+          "option_id": 9815,
+          "option_text": "A machine learning library",
+          "is_correct": false
+        },
+        {
+          "option_id": 9816,
+          "option_text": "A data visualization library",
+          "is_correct": false
+        },
+        {
+          "option_id": 9817,
+          "option_text": "A web development library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1889,
+      "subskill_id": 92,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is vectorization in Pandas?",
+      "options": [
+        {
+          "option_id": 9818,
+          "option_text": "A technique for performing operations on entire arrays",
+          "is_correct": true
+        },
+        {
+          "option_id": 9819,
+          "option_text": "A technique for performing operations on individual elements",
+          "is_correct": false
+        },
+        {
+          "option_id": 9820,
+          "option_text": "A technique for performing operations on subsets of data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9821,
+          "option_text": "A technique for performing operations on text data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1890,
+      "subskill_id": 92,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the eval and query functions in Pandas?",
+      "options": [
+        {
+          "option_id": 9822,
+          "option_text": "Functions that allow efficient evaluation of expressions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9823,
+          "option_text": "Functions that group data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9824,
+          "option_text": "Functions that merge data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9825,
+          "option_text": "Functions that filter data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1891,
+      "subskill_id": 93,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the best visualization for complex data?",
+      "options": [
+        {
+          "option_id": 9826,
+          "option_text": "The best visualization depends on the data and the goal",
+          "is_correct": true
+        },
+        {
+          "option_id": 9827,
+          "option_text": "Always use bar charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9828,
+          "option_text": "Always use pie charts",
+          "is_correct": false
+        },
+        {
+          "option_id": 9829,
+          "option_text": "Always use scatter plots",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1892,
+      "subskill_id": 93,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of storytelling in data visualization?",
+      "options": [
+        {
+          "option_id": 9830,
+          "option_text": "Storytelling helps communicate insights effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 9831,
+          "option_text": "Storytelling is not important in visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9832,
+          "option_text": "Storytelling replaces data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9833,
+          "option_text": "Storytelling is only for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1893,
+      "subskill_id": 93,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the ethical considerations in data visualization?",
+      "options": [
+        {
+          "option_id": 9834,
+          "option_text": "Avoiding misleading representations and ensuring accuracy",
+          "is_correct": true
+        },
+        {
+          "option_id": 9835,
+          "option_text": "There are no ethical concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 9836,
+          "option_text": "Ethics are not important in visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9837,
+          "option_text": "Always use the most complex visualizations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1894,
+      "subskill_id": 93,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of data visualization with AI?",
+      "options": [
+        {
+          "option_id": 9838,
+          "option_text": "AI will enable automated and personalized visualizations",
+          "is_correct": true
+        },
+        {
+          "option_id": 9839,
+          "option_text": "AI will replace all visualizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 9840,
+          "option_text": "AI will have no role in visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9841,
+          "option_text": "AI will make visualization obsolete",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1895,
+      "subskill_id": 93,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a dashboard for executives?",
+      "options": [
+        {
+          "option_id": 9842,
+          "option_text": "By focusing on key metrics and using clear visualizations",
+          "is_correct": true
+        },
+        {
+          "option_id": 9843,
+          "option_text": "By using complex visualizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 9844,
+          "option_text": "By including all data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9845,
+          "option_text": "By using text only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1896,
+      "subskill_id": 94,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between causation and correlation?",
+      "options": [
+        {
+          "option_id": 9846,
+          "option_text": "Causation indicates a direct cause-and-effect relationship; correlation indicates an association",
+          "is_correct": true
+        },
+        {
+          "option_id": 9847,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9848,
+          "option_text": "Correlation indicates causation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9849,
+          "option_text": "Causation indicates correlation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1897,
+      "subskill_id": 94,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a statistical power analysis?",
+      "options": [
+        {
+          "option_id": 9850,
+          "option_text": "A method for determining the probability of detecting an effect",
+          "is_correct": true
+        },
+        {
+          "option_id": 9851,
+          "option_text": "A method for determining the effect size",
+          "is_correct": false
+        },
+        {
+          "option_id": 9852,
+          "option_text": "A method for determining the sample size",
+          "is_correct": false
+        },
+        {
+          "option_id": 9853,
+          "option_text": "A method for determining the p-value",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1898,
+      "subskill_id": 94,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a multivariate analysis?",
+      "options": [
+        {
+          "option_id": 9854,
+          "option_text": "An analysis that considers multiple variables simultaneously",
+          "is_correct": true
+        },
+        {
+          "option_id": 9855,
+          "option_text": "An analysis that considers one variable",
+          "is_correct": false
+        },
+        {
+          "option_id": 9856,
+          "option_text": "An analysis that considers two variables",
+          "is_correct": false
+        },
+        {
+          "option_id": 9857,
+          "option_text": "An analysis that considers categorical variables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1899,
+      "subskill_id": 94,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a machine learning model in statistics?",
+      "options": [
+        {
+          "option_id": 9858,
+          "option_text": "A model that learns from data to make predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9859,
+          "option_text": "A model that describes data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9860,
+          "option_text": "A model that visualizes data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9861,
+          "option_text": "A model that stores data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1900,
+      "subskill_id": 94,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of statistics in data science?",
+      "options": [
+        {
+          "option_id": 9862,
+          "option_text": "Statistics provides the foundation for data science",
+          "is_correct": true
+        },
+        {
+          "option_id": 9863,
+          "option_text": "Statistics is not important in data science",
+          "is_correct": false
+        },
+        {
+          "option_id": 9864,
+          "option_text": "Statistics is only for data collection",
+          "is_correct": false
+        },
+        {
+          "option_id": 9865,
+          "option_text": "Statistics is only for data visualization",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

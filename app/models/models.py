@@ -6,7 +6,7 @@ from sqlalchemy.sql import func
 
 from app.db.base import Base
 
-# Changing the MySQL ENUM types to Python's versions
+# Enum types: the Python side of the Postgres enum types
 
 
 class LevelName(str, enum.Enum):
@@ -17,7 +17,7 @@ class LevelName(str, enum.Enum):
 
 
 # Values are UPPERCASE on purpose: they must be exactly the labels of the Postgres
-# enum types (created by Alembic and filled by scripts/migrate_mysql_to_postgres.py with .upper()).
+# enum types (created by the Alembic migration; the seed files use the same labels).
 # Name == value, and every Enum() column below stores the VALUE (values_callable),
 # so Python and Postgres can never disagree again.
 class AttemptStatus(str, enum.Enum):

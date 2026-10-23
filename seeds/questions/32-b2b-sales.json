@@ -1,0 +1,2906 @@
+{
+  "skill_id": 32,
+  "skill_name": "B2B Sales",
+  "questions": [
+    {
+      "question_id": 3101,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is enterprise selling?",
+      "options": [
+        {
+          "option_id": 14666,
+          "option_text": "Selling to large organizations with complex decision-making processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 14667,
+          "option_text": "Selling to small businesses only",
+          "is_correct": false
+        },
+        {
+          "option_id": 14668,
+          "option_text": "Selling to consumers directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 14669,
+          "option_text": "Selling through online marketplaces",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3102,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the characteristics of enterprise sales?",
+      "options": [
+        {
+          "option_id": 14670,
+          "option_text": "Long sales cycles, multiple stakeholders, and high deal values",
+          "is_correct": true
+        },
+        {
+          "option_id": 14671,
+          "option_text": "Short sales cycles and single decision-makers",
+          "is_correct": false
+        },
+        {
+          "option_id": 14672,
+          "option_text": "Low deal values and quick decisions",
+          "is_correct": false
+        },
+        {
+          "option_id": 14673,
+          "option_text": "Impulse buying and limited research",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3103,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between B2B and B2C sales?",
+      "options": [
+        {
+          "option_id": 14674,
+          "option_text": "B2B is for services, B2C is for products",
+          "is_correct": false
+        },
+        {
+          "option_id": 14675,
+          "option_text": "B2B sells to businesses, B2C sells to consumers",
+          "is_correct": true
+        },
+        {
+          "option_id": 14676,
+          "option_text": "B2B has shorter sales cycles",
+          "is_correct": false
+        },
+        {
+          "option_id": 14677,
+          "option_text": "B2C has more decision-makers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3104,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a typical enterprise sales cycle?",
+      "options": [
+        {
+          "option_id": 14678,
+          "option_text": "One day to one week",
+          "is_correct": false
+        },
+        {
+          "option_id": 14679,
+          "option_text": "One week to one month",
+          "is_correct": false
+        },
+        {
+          "option_id": 14680,
+          "option_text": "One month to three months",
+          "is_correct": false
+        },
+        {
+          "option_id": 14681,
+          "option_text": "Three to eighteen months or longer",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3105,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a key account in enterprise sales?",
+      "options": [
+        {
+          "option_id": 14682,
+          "option_text": "A high-value, strategic customer that requires dedicated management",
+          "is_correct": true
+        },
+        {
+          "option_id": 14683,
+          "option_text": "A small customer with low revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 14684,
+          "option_text": "A customer that buys once",
+          "is_correct": false
+        },
+        {
+          "option_id": 14685,
+          "option_text": "A customer that does not require relationship management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3106,
+      "subskill_id": 146,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a strategic partnership in enterprise sales?",
+      "options": [
+        {
+          "option_id": 14686,
+          "option_text": "A casual business arrangement",
+          "is_correct": false
+        },
+        {
+          "option_id": 14687,
+          "option_text": "A formal alliance between two organizations for mutual benefit",
+          "is_correct": true
+        },
+        {
+          "option_id": 14688,
+          "option_text": "A one-time transaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 14689,
+          "option_text": "A competitor relationship",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3107,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping in B2B sales?",
+      "options": [
+        {
+          "option_id": 14690,
+          "option_text": "A list of all competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 14691,
+          "option_text": "A customer purchase history",
+          "is_correct": false
+        },
+        {
+          "option_id": 14692,
+          "option_text": "A process of identifying and analyzing individuals who influence a decision",
+          "is_correct": true
+        },
+        {
+          "option_id": 14693,
+          "option_text": "A list of all suppliers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3108,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of stakeholder mapping?",
+      "options": [
+        {
+          "option_id": 14694,
+          "option_text": "To understand who makes decisions and how to influence them",
+          "is_correct": true
+        },
+        {
+          "option_id": 14695,
+          "option_text": "To track competitor activities",
+          "is_correct": false
+        },
+        {
+          "option_id": 14696,
+          "option_text": "To manage employee performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14697,
+          "option_text": "To analyze market trends",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3109,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a stakeholder in B2B sales?",
+      "options": [
+        {
+          "option_id": 14698,
+          "option_text": "A competitor in the market",
+          "is_correct": false
+        },
+        {
+          "option_id": 14699,
+          "option_text": "Any person or group with an interest in the outcome of a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14700,
+          "option_text": "A supplier of goods",
+          "is_correct": false
+        },
+        {
+          "option_id": 14701,
+          "option_text": "A customer who has already purchased",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3110,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a decision-maker in B2B sales?",
+      "options": [
+        {
+          "option_id": 14702,
+          "option_text": "A person who recommends products",
+          "is_correct": false
+        },
+        {
+          "option_id": 14703,
+          "option_text": "A person who influences the budget",
+          "is_correct": false
+        },
+        {
+          "option_id": 14704,
+          "option_text": "A person who uses the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 14705,
+          "option_text": "The person with final authority to approve a purchase",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3111,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an influencer in B2B sales?",
+      "options": [
+        {
+          "option_id": 14706,
+          "option_text": "A person who can sway the decision but does not have final authority",
+          "is_correct": true
+        },
+        {
+          "option_id": 14707,
+          "option_text": "A person who makes the final purchase decision",
+          "is_correct": false
+        },
+        {
+          "option_id": 14708,
+          "option_text": "A competitor who influences the market",
+          "is_correct": false
+        },
+        {
+          "option_id": 14709,
+          "option_text": "A supplier who provides recommendations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3112,
+      "subskill_id": 147,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a champion in B2B sales?",
+      "options": [
+        {
+          "option_id": 14710,
+          "option_text": "A competitor who advocates for another solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 14711,
+          "option_text": "An internal advocate who supports your solution within the buying organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 14712,
+          "option_text": "A neutral third-party consultant",
+          "is_correct": false
+        },
+        {
+          "option_id": 14713,
+          "option_text": "A customer who complains about the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3113,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a complex deal cycle in B2B sales?",
+      "options": [
+        {
+          "option_id": 14714,
+          "option_text": "A short and simple sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14715,
+          "option_text": "A process with a single decision-maker",
+          "is_correct": false
+        },
+        {
+          "option_id": 14716,
+          "option_text": "A prolonged sales process with multiple stakeholders and approval stages",
+          "is_correct": true
+        },
+        {
+          "option_id": 14717,
+          "option_text": "A process that requires no formal approval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3114,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the stages of a complex deal cycle?",
+      "options": [
+        {
+          "option_id": 14718,
+          "option_text": "Discovery, qualification, proposal, negotiation, and closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14719,
+          "option_text": "Initial contact, closing, and follow-up only",
+          "is_correct": false
+        },
+        {
+          "option_id": 14720,
+          "option_text": "Marketing, sales, and service",
+          "is_correct": false
+        },
+        {
+          "option_id": 14721,
+          "option_text": "Research, development, and launch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3115,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a long sales cycle?",
+      "options": [
+        {
+          "option_id": 14722,
+          "option_text": "A sales cycle that takes less than a week",
+          "is_correct": false
+        },
+        {
+          "option_id": 14723,
+          "option_text": "A sales cycle that takes months or years to complete",
+          "is_correct": true
+        },
+        {
+          "option_id": 14724,
+          "option_text": "A sales cycle that is completed in one call",
+          "is_correct": false
+        },
+        {
+          "option_id": 14725,
+          "option_text": "A sales cycle that requires no follow-up",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3116,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a multi-threaded deal?",
+      "options": [
+        {
+          "option_id": 14726,
+          "option_text": "A deal that involves only one person",
+          "is_correct": false
+        },
+        {
+          "option_id": 14727,
+          "option_text": "A deal that involves only the IT department",
+          "is_correct": false
+        },
+        {
+          "option_id": 14728,
+          "option_text": "A deal that involves only finance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14729,
+          "option_text": "A deal that engages multiple stakeholders across different departments",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3117,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a deal committee in B2B sales?",
+      "options": [
+        {
+          "option_id": 14730,
+          "option_text": "A group of people who review and approve large deals",
+          "is_correct": true
+        },
+        {
+          "option_id": 14731,
+          "option_text": "A team of competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 14732,
+          "option_text": "A customer support team",
+          "is_correct": false
+        },
+        {
+          "option_id": 14733,
+          "option_text": "A marketing focus group",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3118,
+      "subskill_id": 148,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a deal review process?",
+      "options": [
+        {
+          "option_id": 14734,
+          "option_text": "A process to ignore deal progress",
+          "is_correct": false
+        },
+        {
+          "option_id": 14735,
+          "option_text": "A structured process to evaluate the health and progress of a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14736,
+          "option_text": "A process to cancel deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14737,
+          "option_text": "A process to hide deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3119,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is relationship building in B2B sales?",
+      "options": [
+        {
+          "option_id": 14738,
+          "option_text": "A one-time transaction process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14739,
+          "option_text": "A process of ignoring clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 14740,
+          "option_text": "The process of developing and nurturing long-term professional connections",
+          "is_correct": true
+        },
+        {
+          "option_id": 14741,
+          "option_text": "A process of selling quickly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3120,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of relationship building?",
+      "options": [
+        {
+          "option_id": 14742,
+          "option_text": "To create trust, credibility, and long-term business partnerships",
+          "is_correct": true
+        },
+        {
+          "option_id": 14743,
+          "option_text": "To close deals without follow-up",
+          "is_correct": false
+        },
+        {
+          "option_id": 14744,
+          "option_text": "To avoid client interactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 14745,
+          "option_text": "To reduce communication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3121,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is trust in B2B sales?",
+      "options": [
+        {
+          "option_id": 14746,
+          "option_text": "A legal contract between parties",
+          "is_correct": false
+        },
+        {
+          "option_id": 14747,
+          "option_text": "A foundation of reliability, integrity, and competence in a business relationship",
+          "is_correct": true
+        },
+        {
+          "option_id": 14748,
+          "option_text": "A financial transaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 14749,
+          "option_text": "A marketing campaign",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3122,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is credibility in B2B sales?",
+      "options": [
+        {
+          "option_id": 14750,
+          "option_text": "The ability to close deals quickly",
+          "is_correct": false
+        },
+        {
+          "option_id": 14751,
+          "option_text": "The ability to create marketing materials",
+          "is_correct": false
+        },
+        {
+          "option_id": 14752,
+          "option_text": "The ability to manage finances",
+          "is_correct": false
+        },
+        {
+          "option_id": 14753,
+          "option_text": "The quality of being trusted and believed in through expertise and experience",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3123,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is rapport in B2B sales?",
+      "options": [
+        {
+          "option_id": 14754,
+          "option_text": "A harmonious relationship characterized by mutual understanding and respect",
+          "is_correct": true
+        },
+        {
+          "option_id": 14755,
+          "option_text": "A formal contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 14756,
+          "option_text": "A competitive rivalry",
+          "is_correct": false
+        },
+        {
+          "option_id": 14757,
+          "option_text": "A financial transaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3124,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a business relationship?",
+      "options": [
+        {
+          "option_id": 14758,
+          "option_text": "A personal friendship outside of work",
+          "is_correct": false
+        },
+        {
+          "option_id": 14759,
+          "option_text": "A connection between two or more organizations or individuals for mutual benefit",
+          "is_correct": true
+        },
+        {
+          "option_id": 14760,
+          "option_text": "A one-time transaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 14761,
+          "option_text": "A competitor relationship",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3125,
+      "subskill_id": 149,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a long-term relationship in B2B sales?",
+      "options": [
+        {
+          "option_id": 14762,
+          "option_text": "A relationship that lasts for a single transaction",
+          "is_correct": false
+        },
+        {
+          "option_id": 14763,
+          "option_text": "A relationship that is not maintained",
+          "is_correct": false
+        },
+        {
+          "option_id": 14764,
+          "option_text": "An ongoing partnership that extends beyond individual transactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 14765,
+          "option_text": "A relationship that is ignored after the sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3126,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you sell to enterprise companies?",
+      "options": [
+        {
+          "option_id": 14766,
+          "option_text": "By understanding their business needs and building relationships with key stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 14767,
+          "option_text": "By using high-pressure sales tactics",
+          "is_correct": false
+        },
+        {
+          "option_id": 14768,
+          "option_text": "By offering the lowest price",
+          "is_correct": false
+        },
+        {
+          "option_id": 14769,
+          "option_text": "By avoiding formal procurement processes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3127,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an enterprise sales strategy?",
+      "options": [
+        {
+          "option_id": 14770,
+          "option_text": "A strategy that ignores customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14771,
+          "option_text": "A comprehensive plan for targeting, engaging, and closing large business accounts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14772,
+          "option_text": "A strategy that focuses only on small businesses",
+          "is_correct": false
+        },
+        {
+          "option_id": 14773,
+          "option_text": "A strategy that uses only email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3128,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a multi-year enterprise deal?",
+      "options": [
+        {
+          "option_id": 14774,
+          "option_text": "A deal that is completed in one month",
+          "is_correct": false
+        },
+        {
+          "option_id": 14775,
+          "option_text": "A deal that is completed in one quarter",
+          "is_correct": false
+        },
+        {
+          "option_id": 14776,
+          "option_text": "A contract that spans multiple years with recurring revenue",
+          "is_correct": true
+        },
+        {
+          "option_id": 14777,
+          "option_text": "A deal that is not renewed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3129,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a proof of concept (POC) in enterprise sales?",
+      "options": [
+        {
+          "option_id": 14778,
+          "option_text": "A marketing brochure",
+          "is_correct": false
+        },
+        {
+          "option_id": 14779,
+          "option_text": "A financial document",
+          "is_correct": false
+        },
+        {
+          "option_id": 14780,
+          "option_text": "A legal contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 14781,
+          "option_text": "A small-scale implementation to validate that the solution meets the client's needs",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3130,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pilot program in enterprise sales?",
+      "options": [
+        {
+          "option_id": 14782,
+          "option_text": "A trial deployment of a solution with a limited group of users before full rollout",
+          "is_correct": true
+        },
+        {
+          "option_id": 14783,
+          "option_text": "A fully implemented solution",
+          "is_correct": false
+        },
+        {
+          "option_id": 14784,
+          "option_text": "A marketing campaign",
+          "is_correct": false
+        },
+        {
+          "option_id": 14785,
+          "option_text": "A competitor analysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3131,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you map stakeholders in B2B sales?",
+      "options": [
+        {
+          "option_id": 14786,
+          "option_text": "By guessing who is involved",
+          "is_correct": false
+        },
+        {
+          "option_id": 14787,
+          "option_text": "By identifying all individuals, understanding their roles, and their level of influence",
+          "is_correct": true
+        },
+        {
+          "option_id": 14788,
+          "option_text": "By ignoring decision-makers",
+          "is_correct": false
+        },
+        {
+          "option_id": 14789,
+          "option_text": "By focusing only on senior executives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3132,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder analysis framework?",
+      "options": [
+        {
+          "option_id": 14790,
+          "option_text": "A random approach to stakeholder management",
+          "is_correct": false
+        },
+        {
+          "option_id": 14791,
+          "option_text": "A way to ignore stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14792,
+          "option_text": "A structured method for evaluating stakeholder influence, interest, and needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 14793,
+          "option_text": "A way to hide stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3133,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder influence map?",
+      "options": [
+        {
+          "option_id": 14794,
+          "option_text": "A visual representation of stakeholders and their level of influence on a decision",
+          "is_correct": true
+        },
+        {
+          "option_id": 14795,
+          "option_text": "A competitive analysis chart",
+          "is_correct": false
+        },
+        {
+          "option_id": 14796,
+          "option_text": "A marketing calendar",
+          "is_correct": false
+        },
+        {
+          "option_id": 14797,
+          "option_text": "A budget spreadsheet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3134,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder power-interest grid?",
+      "options": [
+        {
+          "option_id": 14798,
+          "option_text": "A tool for ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14799,
+          "option_text": "A matrix that categorizes stakeholders based on their power and interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 14800,
+          "option_text": "A tool for hiding stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14801,
+          "option_text": "A financial planning tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3135,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prioritize stakeholders?",
+      "options": [
+        {
+          "option_id": 14802,
+          "option_text": "By ignoring their interests",
+          "is_correct": false
+        },
+        {
+          "option_id": 14803,
+          "option_text": "By focusing only on the lowest-level employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 14804,
+          "option_text": "By treating all stakeholders equally",
+          "is_correct": false
+        },
+        {
+          "option_id": 14805,
+          "option_text": "By considering their influence, interest, and alignment with your goals",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3136,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage a complex deal cycle?",
+      "options": [
+        {
+          "option_id": 14806,
+          "option_text": "By carefully planning each stage and proactively managing risks",
+          "is_correct": true
+        },
+        {
+          "option_id": 14807,
+          "option_text": "By rushing through the process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14808,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14809,
+          "option_text": "By skipping the proposal stage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3137,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a deal strategy?",
+      "options": [
+        {
+          "option_id": 14810,
+          "option_text": "A random approach to selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14811,
+          "option_text": "A documented plan for winning a specific deal, including tactics and resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 14812,
+          "option_text": "A list of competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 14813,
+          "option_text": "A budget tracking tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3138,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a deal risk assessment?",
+      "options": [
+        {
+          "option_id": 14814,
+          "option_text": "A way to ignore risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14815,
+          "option_text": "A way to hide risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14816,
+          "option_text": "A process of identifying, analyzing, and mitigating potential threats to a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14817,
+          "option_text": "A way to create risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3139,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a deal timeline?",
+      "options": [
+        {
+          "option_id": 14818,
+          "option_text": "A schedule of key milestones and deadlines for a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14819,
+          "option_text": "A list of competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 14820,
+          "option_text": "A budget plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 14821,
+          "option_text": "A marketing calendar",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3140,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a deal budget?",
+      "options": [
+        {
+          "option_id": 14822,
+          "option_text": "A cost-free process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14823,
+          "option_text": "The total financial resources allocated for a specific deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14824,
+          "option_text": "A list of stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14825,
+          "option_text": "A timeline of activities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3141,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build relationships with B2B clients?",
+      "options": [
+        {
+          "option_id": 14826,
+          "option_text": "By ignoring their needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14827,
+          "option_text": "By focusing only on closing deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14828,
+          "option_text": "By avoiding regular contact",
+          "is_correct": false
+        },
+        {
+          "option_id": 14829,
+          "option_text": "By providing value, being responsive, and demonstrating genuine interest in their success",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3142,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a relationship strategy?",
+      "options": [
+        {
+          "option_id": 14830,
+          "option_text": "A plan for building, maintaining, and strengthening business relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 14831,
+          "option_text": "A plan for ignoring relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14832,
+          "option_text": "A plan for ending relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14833,
+          "option_text": "A plan for avoiding clients",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3143,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a relationship management framework?",
+      "options": [
+        {
+          "option_id": 14834,
+          "option_text": "A random approach to managing relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14835,
+          "option_text": "A structured system for tracking and managing interactions with key contacts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14836,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14837,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3144,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a relationship building technique?",
+      "options": [
+        {
+          "option_id": 14838,
+          "option_text": "Ignoring clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 14839,
+          "option_text": "Avoiding communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 14840,
+          "option_text": "Active listening, providing value, and regular follow-ups",
+          "is_correct": true
+        },
+        {
+          "option_id": 14841,
+          "option_text": "Pressure selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3145,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you measure relationship health?",
+      "options": [
+        {
+          "option_id": 14842,
+          "option_text": "By tracking engagement, satisfaction, and mutual success",
+          "is_correct": true
+        },
+        {
+          "option_id": 14843,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 14844,
+          "option_text": "By counting the number of emails",
+          "is_correct": false
+        },
+        {
+          "option_id": 14845,
+          "option_text": "By measuring only revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3146,
+      "subskill_id": 146,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an enterprise procurement process?",
+      "options": [
+        {
+          "option_id": 14846,
+          "option_text": "A quick and informal buying process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14847,
+          "option_text": "A formal, structured process that large organizations use to evaluate and purchase solutions",
+          "is_correct": true
+        },
+        {
+          "option_id": 14848,
+          "option_text": "A process that ignores vendor qualifications",
+          "is_correct": false
+        },
+        {
+          "option_id": 14849,
+          "option_text": "A process that requires no documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3147,
+      "subskill_id": 147,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a stakeholder communication plan?",
+      "options": [
+        {
+          "option_id": 14850,
+          "option_text": "A plan to avoid stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14851,
+          "option_text": "A plan to ignore stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14852,
+          "option_text": "A plan to hide information from stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14853,
+          "option_text": "A structured approach to keeping stakeholders informed and engaged",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3148,
+      "subskill_id": 148,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a deal closure plan?",
+      "options": [
+        {
+          "option_id": 14854,
+          "option_text": "A detailed plan for finalizing a deal, including next steps and responsibilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 14855,
+          "option_text": "A plan to ignore the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 14856,
+          "option_text": "A plan to cancel the deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 14857,
+          "option_text": "A plan to hide the deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3149,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a relationship-building email?",
+      "options": [
+        {
+          "option_id": 14858,
+          "option_text": "A sales pitch that ignores the client's needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14859,
+          "option_text": "An email focused on providing value, sharing insights, and strengthening the connection",
+          "is_correct": true
+        },
+        {
+          "option_id": 14860,
+          "option_text": "A request for a contract signature",
+          "is_correct": false
+        },
+        {
+          "option_id": 14861,
+          "option_text": "A complaint email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3150,
+      "subskill_id": 149,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a relationship-building call?",
+      "options": [
+        {
+          "option_id": 14862,
+          "option_text": "A call to close a deal without discussion",
+          "is_correct": false
+        },
+        {
+          "option_id": 14863,
+          "option_text": "A call to ignore the client",
+          "is_correct": false
+        },
+        {
+          "option_id": 14864,
+          "option_text": "A conversation focused on understanding client needs and providing value",
+          "is_correct": true
+        },
+        {
+          "option_id": 14865,
+          "option_text": "A call to cancel the relationship",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3151,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale enterprise selling?",
+      "options": [
+        {
+          "option_id": 14866,
+          "option_text": "By building repeatable processes, leveraging technology, and investing in training",
+          "is_correct": true
+        },
+        {
+          "option_id": 14867,
+          "option_text": "By ignoring scalability",
+          "is_correct": false
+        },
+        {
+          "option_id": 14868,
+          "option_text": "By using manual processes only",
+          "is_correct": false
+        },
+        {
+          "option_id": 14869,
+          "option_text": "By avoiding technology",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3152,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an enterprise sales playbook?",
+      "options": [
+        {
+          "option_id": 14870,
+          "option_text": "A random approach to selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14871,
+          "option_text": "A comprehensive guide containing best practices, scripts, and processes for selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 14872,
+          "option_text": "A list of competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 14873,
+          "option_text": "A financial planning document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3153,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is enterprise sales forecasting?",
+      "options": [
+        {
+          "option_id": 14874,
+          "option_text": "Guessing future revenue",
+          "is_correct": false
+        },
+        {
+          "option_id": 14875,
+          "option_text": "Ignoring sales data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14876,
+          "option_text": "Predicting future sales revenue using data, trends, and analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 14877,
+          "option_text": "Hiding sales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3154,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is enterprise sales compensation?",
+      "options": [
+        {
+          "option_id": 14878,
+          "option_text": "A way to avoid paying salespeople",
+          "is_correct": false
+        },
+        {
+          "option_id": 14879,
+          "option_text": "A random reward system",
+          "is_correct": false
+        },
+        {
+          "option_id": 14880,
+          "option_text": "A plan to reduce earnings",
+          "is_correct": false
+        },
+        {
+          "option_id": 14881,
+          "option_text": "A structured plan for rewarding salespeople based on their performance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3155,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is enterprise sales enablement?",
+      "options": [
+        {
+          "option_id": 14882,
+          "option_text": "Providing sales teams with resources, tools, and training to improve their effectiveness",
+          "is_correct": true
+        },
+        {
+          "option_id": 14883,
+          "option_text": "Ignoring sales team needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14884,
+          "option_text": "Removing sales tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 14885,
+          "option_text": "Reducing training budgets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3156,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a stakeholder map?",
+      "options": [
+        {
+          "option_id": 14886,
+          "option_text": "By ignoring stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14887,
+          "option_text": "By identifying all stakeholders, their roles, and their influence on a decision",
+          "is_correct": true
+        },
+        {
+          "option_id": 14888,
+          "option_text": "By focusing only on senior executives",
+          "is_correct": false
+        },
+        {
+          "option_id": 14889,
+          "option_text": "By hiding stakeholder information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3157,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a stakeholder engagement strategy?",
+      "options": [
+        {
+          "option_id": 14890,
+          "option_text": "A plan to avoid stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14891,
+          "option_text": "A plan to ignore stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14892,
+          "option_text": "A structured approach to involving and communicating with stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 14893,
+          "option_text": "A plan to hide information from stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3158,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a stakeholder influence strategy?",
+      "options": [
+        {
+          "option_id": 14894,
+          "option_text": "A plan for building support and overcoming resistance among stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 14895,
+          "option_text": "A plan to ignore stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14896,
+          "option_text": "A plan to hide information from stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14897,
+          "option_text": "A plan to avoid stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3159,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle stakeholder conflicts?",
+      "options": [
+        {
+          "option_id": 14898,
+          "option_text": "By ignoring conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14899,
+          "option_text": "By understanding their concerns, finding common ground, and facilitating resolution",
+          "is_correct": true
+        },
+        {
+          "option_id": 14900,
+          "option_text": "By escalating conflicts immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 14901,
+          "option_text": "By avoiding stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3160,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you align stakeholders?",
+      "options": [
+        {
+          "option_id": 14902,
+          "option_text": "By ignoring their needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14903,
+          "option_text": "By forcing them to agree",
+          "is_correct": false
+        },
+        {
+          "option_id": 14904,
+          "option_text": "By ensuring all stakeholders are informed, engaged, and working toward a common goal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14905,
+          "option_text": "By hiding information from them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3161,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a complex deal cycle?",
+      "options": [
+        {
+          "option_id": 14906,
+          "option_text": "By ignoring the deal cycle",
+          "is_correct": false
+        },
+        {
+          "option_id": 14907,
+          "option_text": "By slowing down the process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14908,
+          "option_text": "By skipping important stages",
+          "is_correct": false
+        },
+        {
+          "option_id": 14909,
+          "option_text": "By identifying bottlenecks, removing obstacles, and accelerating decision-making",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3162,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a deal velocity?",
+      "options": [
+        {
+          "option_id": 14910,
+          "option_text": "The speed at which a deal moves through the sales pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 14911,
+          "option_text": "The value of a deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 14912,
+          "option_text": "The number of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14913,
+          "option_text": "The age of a deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3163,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a deal acceleration strategy?",
+      "options": [
+        {
+          "option_id": 14914,
+          "option_text": "A plan to slow down deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14915,
+          "option_text": "A plan to speed up the deal cycle by removing obstacles and creating urgency",
+          "is_correct": true
+        },
+        {
+          "option_id": 14916,
+          "option_text": "A plan to cancel deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14917,
+          "option_text": "A plan to hide deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3164,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a deal review framework?",
+      "options": [
+        {
+          "option_id": 14918,
+          "option_text": "A random approach to reviewing deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14919,
+          "option_text": "A way to ignore deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14920,
+          "option_text": "A structured process for evaluating deal health, risks, and next steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 14921,
+          "option_text": "A way to hide deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3165,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a deal risk mitigation?",
+      "options": [
+        {
+          "option_id": 14922,
+          "option_text": "A strategy for identifying and reducing risks that could prevent a deal from closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14923,
+          "option_text": "A strategy for ignoring risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14924,
+          "option_text": "A strategy for creating risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14925,
+          "option_text": "A strategy for hiding risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3166,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you build a relationship strategy?",
+      "options": [
+        {
+          "option_id": 14926,
+          "option_text": "By ignoring relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14927,
+          "option_text": "By defining goals, identifying key contacts, and planning engagement activities",
+          "is_correct": true
+        },
+        {
+          "option_id": 14928,
+          "option_text": "By avoiding clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 14929,
+          "option_text": "By hiding relationship data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3167,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a relationship lifecycle?",
+      "options": [
+        {
+          "option_id": 14930,
+          "option_text": "A single transaction process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14931,
+          "option_text": "A process that ends after the first sale",
+          "is_correct": false
+        },
+        {
+          "option_id": 14932,
+          "option_text": "The stages a relationship goes through from initiation to maturity and potential renewal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14933,
+          "option_text": "A process that ignores clients",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3168,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a relationship scorecard?",
+      "options": [
+        {
+          "option_id": 14934,
+          "option_text": "A random relationship assessment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14935,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14936,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14937,
+          "option_text": "A tool for measuring the health and value of a business relationship",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3169,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a relationship review?",
+      "options": [
+        {
+          "option_id": 14938,
+          "option_text": "A structured conversation to assess the state of a relationship and identify improvements",
+          "is_correct": true
+        },
+        {
+          "option_id": 14939,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14940,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14941,
+          "option_text": "A way to end relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3170,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you repair a damaged relationship?",
+      "options": [
+        {
+          "option_id": 14942,
+          "option_text": "By ignoring the damage",
+          "is_correct": false
+        },
+        {
+          "option_id": 14943,
+          "option_text": "By acknowledging the issue, taking responsibility, and rebuilding trust",
+          "is_correct": true
+        },
+        {
+          "option_id": 14944,
+          "option_text": "By hiding the issue",
+          "is_correct": false
+        },
+        {
+          "option_id": 14945,
+          "option_text": "By blaming the other party",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3171,
+      "subskill_id": 146,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an enterprise sales forecasting model?",
+      "options": [
+        {
+          "option_id": 14946,
+          "option_text": "A random guess",
+          "is_correct": false
+        },
+        {
+          "option_id": 14947,
+          "option_text": "A way to ignore forecasting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14948,
+          "option_text": "A structured approach to predicting revenue using historical data and insights",
+          "is_correct": true
+        },
+        {
+          "option_id": 14949,
+          "option_text": "A way to hide data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3172,
+      "subskill_id": 147,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a stakeholder influence matrix?",
+      "options": [
+        {
+          "option_id": 14950,
+          "option_text": "A tool that maps stakeholders based on their influence and interest in a decision",
+          "is_correct": true
+        },
+        {
+          "option_id": 14951,
+          "option_text": "A random stakeholder list",
+          "is_correct": false
+        },
+        {
+          "option_id": 14952,
+          "option_text": "A way to ignore stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14953,
+          "option_text": "A way to hide stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3173,
+      "subskill_id": 148,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a deal analytics?",
+      "options": [
+        {
+          "option_id": 14954,
+          "option_text": "A random deal assessment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14955,
+          "option_text": "The use of data to analyze deal performance, trends, and opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 14956,
+          "option_text": "A way to ignore deal performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14957,
+          "option_text": "A way to hide deal performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3174,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a relationship-building meeting?",
+      "options": [
+        {
+          "option_id": 14958,
+          "option_text": "A meeting to avoid clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 14959,
+          "option_text": "A meeting to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 14960,
+          "option_text": "A meeting focused on strengthening the connection and understanding client needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 14961,
+          "option_text": "A meeting to close a deal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3175,
+      "subskill_id": 149,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a relationship-building event?",
+      "options": [
+        {
+          "option_id": 14962,
+          "option_text": "A random social gathering",
+          "is_correct": false
+        },
+        {
+          "option_id": 14963,
+          "option_text": "A meeting to avoid clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 14964,
+          "option_text": "A one-time transactional event",
+          "is_correct": false
+        },
+        {
+          "option_id": 14965,
+          "option_text": "An event designed to strengthen relationships with clients and partners",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3176,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build an enterprise sales strategy?",
+      "options": [
+        {
+          "option_id": 14966,
+          "option_text": "By analyzing the market, understanding customer needs, and defining a clear approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 14967,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14968,
+          "option_text": "By ignoring customer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 14969,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3177,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an enterprise sales technology stack?",
+      "options": [
+        {
+          "option_id": 14970,
+          "option_text": "A random set of tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 14971,
+          "option_text": "The combination of tools used to support enterprise sales, including CRM, analytics, and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 14972,
+          "option_text": "A way to ignore technology",
+          "is_correct": false
+        },
+        {
+          "option_id": 14973,
+          "option_text": "A way to hide technology",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3178,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is enterprise sales AI?",
+      "options": [
+        {
+          "option_id": 14974,
+          "option_text": "A random approach to selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14975,
+          "option_text": "A way to ignore artificial intelligence",
+          "is_correct": false
+        },
+        {
+          "option_id": 14976,
+          "option_text": "The use of artificial intelligence to improve sales forecasting, insights, and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 14977,
+          "option_text": "A way to hide AI capabilities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3179,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is enterprise sales automation?",
+      "options": [
+        {
+          "option_id": 14978,
+          "option_text": "A way to ignore automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14979,
+          "option_text": "A way to hide automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14980,
+          "option_text": "A way to reduce efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 14981,
+          "option_text": "The use of technology to automate repetitive sales tasks and improve efficiency",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3180,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is enterprise sales future?",
+      "options": [
+        {
+          "option_id": 14982,
+          "option_text": "The future of enterprise sales, which may include more AI, automation, and personalized engagement",
+          "is_correct": true
+        },
+        {
+          "option_id": 14983,
+          "option_text": "The future of ignoring enterprise sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 14984,
+          "option_text": "The future of hiding enterprise sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 14985,
+          "option_text": "The future of deleting enterprise sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3181,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a stakeholder mapping framework?",
+      "options": [
+        {
+          "option_id": 14986,
+          "option_text": "By ignoring stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 14987,
+          "option_text": "By defining criteria for identifying, categorizing, and prioritizing stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 14988,
+          "option_text": "By hiding stakeholder information",
+          "is_correct": false
+        },
+        {
+          "option_id": 14989,
+          "option_text": "By avoiding stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3182,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping technology?",
+      "options": [
+        {
+          "option_id": 14990,
+          "option_text": "A random tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 14991,
+          "option_text": "A way to hide stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 14992,
+          "option_text": "Software that helps identify, track, and manage stakeholder relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 14993,
+          "option_text": "A way to ignore stakeholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3183,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping automation?",
+      "options": [
+        {
+          "option_id": 14994,
+          "option_text": "The use of automation to streamline the process of mapping and managing stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 14995,
+          "option_text": "The use of manual processes for stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 14996,
+          "option_text": "A way to ignore stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 14997,
+          "option_text": "A way to hide stakeholder mapping",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3184,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping strategy?",
+      "options": [
+        {
+          "option_id": 14998,
+          "option_text": "A random approach to stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 14999,
+          "option_text": "A high-level plan for identifying, engaging, and managing stakeholders",
+          "is_correct": true
+        },
+        {
+          "option_id": 15000,
+          "option_text": "A way to ignore stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15001,
+          "option_text": "A way to hide stakeholder mapping",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3185,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping future?",
+      "options": [
+        {
+          "option_id": 15002,
+          "option_text": "The future of ignoring stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15003,
+          "option_text": "The future of hiding stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15004,
+          "option_text": "The future of deleting stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15005,
+          "option_text": "The future of stakeholder mapping, which may include more AI and automation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3186,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a deal strategy framework?",
+      "options": [
+        {
+          "option_id": 15006,
+          "option_text": "By defining a structured approach to planning, executing, and closing deals",
+          "is_correct": true
+        },
+        {
+          "option_id": 15007,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 15008,
+          "option_text": "By ignoring deal strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 15009,
+          "option_text": "By copying a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3187,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is deal AI?",
+      "options": [
+        {
+          "option_id": 15010,
+          "option_text": "A random tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15011,
+          "option_text": "The use of artificial intelligence to analyze, predict, and optimize deal outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15012,
+          "option_text": "A way to ignore deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 15013,
+          "option_text": "A way to hide deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3188,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is deal automation?",
+      "options": [
+        {
+          "option_id": 15014,
+          "option_text": "A way to ignore automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15015,
+          "option_text": "A way to hide automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 15016,
+          "option_text": "The use of technology to automate deal-related tasks and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15017,
+          "option_text": "A way to reduce efficiency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3189,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is deal analytics?",
+      "options": [
+        {
+          "option_id": 15018,
+          "option_text": "The use of data to analyze deal performance, trends, and opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 15019,
+          "option_text": "A way to ignore data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15020,
+          "option_text": "A way to hide data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15021,
+          "option_text": "A way to delete data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3190,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is deal optimization?",
+      "options": [
+        {
+          "option_id": 15022,
+          "option_text": "A way to ignore optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15023,
+          "option_text": "The process of continuously improving deal processes to increase win rates and efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 15024,
+          "option_text": "A way to hide optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15025,
+          "option_text": "A way to reduce efficiency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3191,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a relationship strategy framework?",
+      "options": [
+        {
+          "option_id": 15026,
+          "option_text": "By ignoring relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15027,
+          "option_text": "By hiding relationship information",
+          "is_correct": false
+        },
+        {
+          "option_id": 15028,
+          "option_text": "By defining a structured approach to building, managing, and measuring relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 15029,
+          "option_text": "By avoiding clients",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3192,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is relationship AI?",
+      "options": [
+        {
+          "option_id": 15030,
+          "option_text": "A random tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 15031,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15032,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15033,
+          "option_text": "The use of artificial intelligence to analyze, predict, and optimize business relationships",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3193,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is relationship automation?",
+      "options": [
+        {
+          "option_id": 15034,
+          "option_text": "The use of technology to automate relationship management tasks and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 15035,
+          "option_text": "The use of manual processes for relationship management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15036,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15037,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3194,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is relationship analytics?",
+      "options": [
+        {
+          "option_id": 15038,
+          "option_text": "A way to ignore data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15039,
+          "option_text": "The use of data to analyze the health, value, and potential of business relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 15040,
+          "option_text": "A way to hide data",
+          "is_correct": false
+        },
+        {
+          "option_id": 15041,
+          "option_text": "A way to delete data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3195,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is relationship optimization?",
+      "options": [
+        {
+          "option_id": 15042,
+          "option_text": "A way to ignore optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15043,
+          "option_text": "A way to hide optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 15044,
+          "option_text": "The process of continuously improving relationship management to maximize mutual value",
+          "is_correct": true
+        },
+        {
+          "option_id": 15045,
+          "option_text": "A way to reduce relationship quality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3196,
+      "subskill_id": 146,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an enterprise sales ecosystem?",
+      "options": [
+        {
+          "option_id": 15046,
+          "option_text": "A random set of stakeholders",
+          "is_correct": false
+        },
+        {
+          "option_id": 15047,
+          "option_text": "A way to ignore sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 15048,
+          "option_text": "A way to hide sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 15049,
+          "option_text": "The interconnected network of stakeholders, partners, and systems involved in enterprise sales",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 3197,
+      "subskill_id": 147,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is stakeholder mapping governance?",
+      "options": [
+        {
+          "option_id": 15050,
+          "option_text": "The framework for managing stakeholder mapping processes, policies, and responsibilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 15051,
+          "option_text": "A way to ignore stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15052,
+          "option_text": "A way to hide stakeholder mapping",
+          "is_correct": false
+        },
+        {
+          "option_id": 15053,
+          "option_text": "A way to delete stakeholder mapping",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3198,
+      "subskill_id": 148,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a deal governance?",
+      "options": [
+        {
+          "option_id": 15054,
+          "option_text": "A way to ignore deal management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15055,
+          "option_text": "The framework for managing deal processes, policies, and responsibilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 15056,
+          "option_text": "A way to hide deal management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15057,
+          "option_text": "A way to delete deal management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3199,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a relationship governance?",
+      "options": [
+        {
+          "option_id": 15058,
+          "option_text": "A way to ignore relationship management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15059,
+          "option_text": "A way to hide relationship management",
+          "is_correct": false
+        },
+        {
+          "option_id": 15060,
+          "option_text": "The framework for managing relationship processes, policies, and responsibilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 15061,
+          "option_text": "A way to delete relationship management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3200,
+      "subskill_id": 149,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a relationship ecosystem?",
+      "options": [
+        {
+          "option_id": 15062,
+          "option_text": "A random set of clients",
+          "is_correct": false
+        },
+        {
+          "option_id": 15063,
+          "option_text": "A way to ignore relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15064,
+          "option_text": "A way to hide relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 15065,
+          "option_text": "The interconnected network of relationships that support a business",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

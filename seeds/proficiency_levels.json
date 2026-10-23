@@ -1,0 +1,18 @@
+[
+  {
+    "level_id": 1,
+    "level_name": "BEGINNER"
+  },
+  {
+    "level_id": 2,
+    "level_name": "JUNIOR"
+  },
+  {
+    "level_id": 3,
+    "level_name": "MID"
+  },
+  {
+    "level_id": 4,
+    "level_name": "ADVANCED"
+  }
+]

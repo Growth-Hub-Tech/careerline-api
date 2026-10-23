@@ -1,0 +1,2906 @@
+{
+  "skill_id": 9,
+  "skill_name": "Software Architecture",
+  "questions": [
+    {
+      "question_id": 801,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a monolith architecture?",
+      "options": [
+        {
+          "option_id": 4266,
+          "option_text": "An architecture with many small services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4267,
+          "option_text": "A cloud-based architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 4268,
+          "option_text": "A single-tiered software application where components are interconnected",
+          "is_correct": true
+        },
+        {
+          "option_id": 4269,
+          "option_text": "A database architecture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 802,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the characteristics of a monolithic application?",
+      "options": [
+        {
+          "option_id": 4270,
+          "option_text": "Single codebase, single deployment unit, shared resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 4271,
+          "option_text": "Multiple independent deployable units",
+          "is_correct": false
+        },
+        {
+          "option_id": 4272,
+          "option_text": "Distributed across many servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4273,
+          "option_text": "Each component has its own database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 803,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a typical example of a monolithic application?",
+      "options": [
+        {
+          "option_id": 4274,
+          "option_text": "Netflix streaming service",
+          "is_correct": false
+        },
+        {
+          "option_id": 4275,
+          "option_text": "Amazon shopping cart",
+          "is_correct": false
+        },
+        {
+          "option_id": 4276,
+          "option_text": "Uber ride matching",
+          "is_correct": false
+        },
+        {
+          "option_id": 4277,
+          "option_text": "A traditional e-commerce application with all modules in one codebase",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 804,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do components communicate in a monolith?",
+      "options": [
+        {
+          "option_id": 4278,
+          "option_text": "Via network calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 4279,
+          "option_text": "Through function calls within the same process",
+          "is_correct": true
+        },
+        {
+          "option_id": 4280,
+          "option_text": "Through message queues",
+          "is_correct": false
+        },
+        {
+          "option_id": 4281,
+          "option_text": "Via REST APIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 805,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a single codebase in monolith architecture?",
+      "options": [
+        {
+          "option_id": 4282,
+          "option_text": "Code split across multiple repositories",
+          "is_correct": false
+        },
+        {
+          "option_id": 4283,
+          "option_text": "Code written in multiple languages",
+          "is_correct": false
+        },
+        {
+          "option_id": 4284,
+          "option_text": "All application code in one repository",
+          "is_correct": true
+        },
+        {
+          "option_id": 4285,
+          "option_text": "Code stored in a database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 806,
+      "subskill_id": 44,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the deployment process for a monolithic application?",
+      "options": [
+        {
+          "option_id": 4286,
+          "option_text": "Deploy the entire application as a single unit",
+          "is_correct": true
+        },
+        {
+          "option_id": 4287,
+          "option_text": "Deploy each component independently",
+          "is_correct": false
+        },
+        {
+          "option_id": 4288,
+          "option_text": "Deploy only changed services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4289,
+          "option_text": "Continuous deployment of microservices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 807,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is microservices architecture?",
+      "options": [
+        {
+          "option_id": 4290,
+          "option_text": "A single large application",
+          "is_correct": false
+        },
+        {
+          "option_id": 4291,
+          "option_text": "An architecture with no services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4292,
+          "option_text": "A database architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 4293,
+          "option_text": "An architectural style that structures an app as a collection of small services",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 808,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a service in microservices architecture?",
+      "options": [
+        {
+          "option_id": 4294,
+          "option_text": "A database table",
+          "is_correct": false
+        },
+        {
+          "option_id": 4295,
+          "option_text": "An independently deployable component that performs specific functions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4296,
+          "option_text": "A user interface component",
+          "is_correct": false
+        },
+        {
+          "option_id": 4297,
+          "option_text": "A server rack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 809,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do microservices communicate with each other?",
+      "options": [
+        {
+          "option_id": 4298,
+          "option_text": "Through shared memory",
+          "is_correct": false
+        },
+        {
+          "option_id": 4299,
+          "option_text": "Via direct database access",
+          "is_correct": false
+        },
+        {
+          "option_id": 4300,
+          "option_text": "Using lightweight protocols like HTTP/REST or message queues",
+          "is_correct": true
+        },
+        {
+          "option_id": 4301,
+          "option_text": "They do not communicate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 810,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between monolith and microservices?",
+      "options": [
+        {
+          "option_id": 4302,
+          "option_text": "Monolith is one unit, microservices are many independent services",
+          "is_correct": true
+        },
+        {
+          "option_id": 4303,
+          "option_text": "Monolith is cloud-based, microservices are on-premise",
+          "is_correct": false
+        },
+        {
+          "option_id": 4304,
+          "option_text": "Monolith uses NoSQL, microservices use SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 4305,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 811,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API gateway in microservices?",
+      "options": [
+        {
+          "option_id": 4306,
+          "option_text": "A database for APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4307,
+          "option_text": "A service that stores API keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 4308,
+          "option_text": "A development tool for APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4309,
+          "option_text": "A single entry point that routes requests to appropriate microservices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 812,
+      "subskill_id": 45,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is domain-driven design in microservices?",
+      "options": [
+        {
+          "option_id": 4310,
+          "option_text": "Designing domains for websites",
+          "is_correct": false
+        },
+        {
+          "option_id": 4311,
+          "option_text": "An approach to design services around business domains",
+          "is_correct": true
+        },
+        {
+          "option_id": 4312,
+          "option_text": "A database design technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 4313,
+          "option_text": "A UI design pattern",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 813,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a design pattern in software development?",
+      "options": [
+        {
+          "option_id": 4314,
+          "option_text": "A template for user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4315,
+          "option_text": "A database schema template",
+          "is_correct": false
+        },
+        {
+          "option_id": 4316,
+          "option_text": "A reusable solution to common software design problems",
+          "is_correct": true
+        },
+        {
+          "option_id": 4317,
+          "option_text": "A project management methodology",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 814,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the three main categories of design patterns?",
+      "options": [
+        {
+          "option_id": 4318,
+          "option_text": "Creational, Structural, Behavioral",
+          "is_correct": true
+        },
+        {
+          "option_id": 4319,
+          "option_text": "Simple, Complex, Advanced",
+          "is_correct": false
+        },
+        {
+          "option_id": 4320,
+          "option_text": "Class, Object, Interface",
+          "is_correct": false
+        },
+        {
+          "option_id": 4321,
+          "option_text": "Local, Global, Distributed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 815,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a creational design pattern?",
+      "options": [
+        {
+          "option_id": 4322,
+          "option_text": "A pattern for structuring classes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4323,
+          "option_text": "A pattern for object communication",
+          "is_correct": false
+        },
+        {
+          "option_id": 4324,
+          "option_text": "A pattern for user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4325,
+          "option_text": "A pattern that deals with object creation mechanisms",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 816,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a structural design pattern?",
+      "options": [
+        {
+          "option_id": 4326,
+          "option_text": "Patterns for creating objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 4327,
+          "option_text": "Patterns that compose classes and objects to form larger structures",
+          "is_correct": true
+        },
+        {
+          "option_id": 4328,
+          "option_text": "Patterns for object behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 4329,
+          "option_text": "Patterns for database design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 817,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a behavioral design pattern?",
+      "options": [
+        {
+          "option_id": 4330,
+          "option_text": "Patterns for class structure",
+          "is_correct": false
+        },
+        {
+          "option_id": 4331,
+          "option_text": "Patterns for object creation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4332,
+          "option_text": "Patterns that identify communication patterns between objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 4333,
+          "option_text": "Patterns for user behavior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 818,
+      "subskill_id": 46,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why are design patterns useful?",
+      "options": [
+        {
+          "option_id": 4334,
+          "option_text": "They provide proven solutions, improve communication, and make code reusable",
+          "is_correct": true
+        },
+        {
+          "option_id": 4335,
+          "option_text": "They make code more complex",
+          "is_correct": false
+        },
+        {
+          "option_id": 4336,
+          "option_text": "They are only for documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4337,
+          "option_text": "They replace the need for testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 819,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is system design?",
+      "options": [
+        {
+          "option_id": 4338,
+          "option_text": "Writing code for a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4339,
+          "option_text": "Testing a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4340,
+          "option_text": "Deploying a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4341,
+          "option_text": "The process of defining architecture, components, and interfaces of a system",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 820,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is scalability in system design?",
+      "options": [
+        {
+          "option_id": 4342,
+          "option_text": "The ability to shrink a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4343,
+          "option_text": "The ability to handle growing amounts of work by adding resources",
+          "is_correct": true
+        },
+        {
+          "option_id": 4344,
+          "option_text": "The speed of a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4345,
+          "option_text": "The security of a system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 821,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is reliability in system design?",
+      "options": [
+        {
+          "option_id": 4346,
+          "option_text": "How fast a system responds",
+          "is_correct": false
+        },
+        {
+          "option_id": 4347,
+          "option_text": "How cheap a system is",
+          "is_correct": false
+        },
+        {
+          "option_id": 4348,
+          "option_text": "The probability that a system will function without failure",
+          "is_correct": true
+        },
+        {
+          "option_id": 4349,
+          "option_text": "The user interface quality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 822,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is availability in system design?",
+      "options": [
+        {
+          "option_id": 4350,
+          "option_text": "The percentage of time a system is operational and accessible",
+          "is_correct": true
+        },
+        {
+          "option_id": 4351,
+          "option_text": "The number of users a system can handle",
+          "is_correct": false
+        },
+        {
+          "option_id": 4352,
+          "option_text": "The storage capacity of a system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4353,
+          "option_text": "The programming language used",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 823,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is performance in system design?",
+      "options": [
+        {
+          "option_id": 4354,
+          "option_text": "The cost of the system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4355,
+          "option_text": "The number of developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4356,
+          "option_text": "The lines of code",
+          "is_correct": false
+        },
+        {
+          "option_id": 4357,
+          "option_text": "The speed and efficiency of system operations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 824,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between horizontal and vertical scaling?",
+      "options": [
+        {
+          "option_id": 4358,
+          "option_text": "Horizontal scaling adds power to existing servers, vertical adds more servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4359,
+          "option_text": "Horizontal scaling adds more servers, vertical adds power to existing servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 4360,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4361,
+          "option_text": "Horizontal is for databases, vertical for applications",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 825,
+      "subskill_id": 47,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is load balancing in system design?",
+      "options": [
+        {
+          "option_id": 4362,
+          "option_text": "A way to balance server weight",
+          "is_correct": false
+        },
+        {
+          "option_id": 4363,
+          "option_text": "A method to reduce server load by shutting them down",
+          "is_correct": false
+        },
+        {
+          "option_id": 4364,
+          "option_text": "A technique for database optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 4365,
+          "option_text": "Distributing network traffic across multiple servers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 826,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the advantages of monolithic architecture?",
+      "options": [
+        {
+          "option_id": 4366,
+          "option_text": "Complex deployment, independent scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 4367,
+          "option_text": "Simple to develop, test, deploy, and monitor",
+          "is_correct": true
+        },
+        {
+          "option_id": 4368,
+          "option_text": "Each service has its own database",
+          "is_correct": false
+        },
+        {
+          "option_id": 4369,
+          "option_text": "Technology diversity across components",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 827,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the disadvantages of monolithic architecture?",
+      "options": [
+        {
+          "option_id": 4370,
+          "option_text": "Easy to scale specific components",
+          "is_correct": false
+        },
+        {
+          "option_id": 4371,
+          "option_text": "Technology flexibility across modules",
+          "is_correct": false
+        },
+        {
+          "option_id": 4372,
+          "option_text": "Independent team ownership",
+          "is_correct": false
+        },
+        {
+          "option_id": 4373,
+          "option_text": "Becomes complex, hard to maintain, slow deployments",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 828,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "When would you choose a monolithic architecture?",
+      "options": [
+        {
+          "option_id": 4374,
+          "option_text": "For large distributed teams",
+          "is_correct": false
+        },
+        {
+          "option_id": 4375,
+          "option_text": "For systems requiring high scalability",
+          "is_correct": false
+        },
+        {
+          "option_id": 4376,
+          "option_text": "For simple applications or startups with small teams",
+          "is_correct": true
+        },
+        {
+          "option_id": 4377,
+          "option_text": "For polyglot programming requirements",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 829,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you scale a monolithic application?",
+      "options": [
+        {
+          "option_id": 4378,
+          "option_text": "By running multiple instances behind a load balancer",
+          "is_correct": true
+        },
+        {
+          "option_id": 4379,
+          "option_text": "By splitting it into microservices",
+          "is_correct": false
+        },
+        {
+          "option_id": 4380,
+          "option_text": "By scaling only specific components",
+          "is_correct": false
+        },
+        {
+          "option_id": 4381,
+          "option_text": "Monoliths cannot be scaled",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 830,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is modular monolith architecture?",
+      "options": [
+        {
+          "option_id": 4382,
+          "option_text": "A monolith split into microservices",
+          "is_correct": false
+        },
+        {
+          "option_id": 4383,
+          "option_text": "A monolith with clear module boundaries but still one deployment",
+          "is_correct": true
+        },
+        {
+          "option_id": 4384,
+          "option_text": "A distributed monolith",
+          "is_correct": false
+        },
+        {
+          "option_id": 4385,
+          "option_text": "A monolith with no modules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 831,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the advantages of microservices architecture?",
+      "options": [
+        {
+          "option_id": 4386,
+          "option_text": "Independent deployability, scalability, and technology diversity",
+          "is_correct": true
+        },
+        {
+          "option_id": 4387,
+          "option_text": "Simple deployment process",
+          "is_correct": false
+        },
+        {
+          "option_id": 4388,
+          "option_text": "Single codebase to manage",
+          "is_correct": false
+        },
+        {
+          "option_id": 4389,
+          "option_text": "Low network latency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 832,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the challenges of microservices architecture?",
+      "options": [
+        {
+          "option_id": 4390,
+          "option_text": "Easy to debug",
+          "is_correct": false
+        },
+        {
+          "option_id": 4391,
+          "option_text": "Simple data consistency",
+          "is_correct": false
+        },
+        {
+          "option_id": 4392,
+          "option_text": "Distributed system complexity, network latency, data management",
+          "is_correct": true
+        },
+        {
+          "option_id": 4393,
+          "option_text": "Monolithic codebase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 833,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is service discovery in microservices?",
+      "options": [
+        {
+          "option_id": 4394,
+          "option_text": "A mechanism for services to find and communicate with each other",
+          "is_correct": true
+        },
+        {
+          "option_id": 4395,
+          "option_text": "Finding bugs in services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4396,
+          "option_text": "Discovering new microservices patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 4397,
+          "option_text": "A security scanning tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 834,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is circuit breaker pattern in microservices?",
+      "options": [
+        {
+          "option_id": 4398,
+          "option_text": "A pattern for electrical circuits in data centers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4399,
+          "option_text": "A pattern that prevents cascading failures by failing fast",
+          "is_correct": true
+        },
+        {
+          "option_id": 4400,
+          "option_text": "A pattern for database connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 4401,
+          "option_text": "A pattern for user authentication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 835,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is distributed tracing in microservices?",
+      "options": [
+        {
+          "option_id": 4402,
+          "option_text": "Tracing network cables",
+          "is_correct": false
+        },
+        {
+          "option_id": 4403,
+          "option_text": "Tracking user behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 4404,
+          "option_text": "A security audit tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 4405,
+          "option_text": "Tracking requests across multiple services to debug performance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 836,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Singleton pattern and when would you use it?",
+      "options": [
+        {
+          "option_id": 4406,
+          "option_text": "A pattern for creating multiple instances of a class",
+          "is_correct": false
+        },
+        {
+          "option_id": 4407,
+          "option_text": "A pattern for database connections only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4408,
+          "option_text": "A pattern ensuring only one instance of a class exists",
+          "is_correct": true
+        },
+        {
+          "option_id": 4409,
+          "option_text": "A pattern for user authentication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 837,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Factory pattern?",
+      "options": [
+        {
+          "option_id": 4410,
+          "option_text": "A creational pattern that provides an interface for creating objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 4411,
+          "option_text": "A pattern for manufacturing physical goods",
+          "is_correct": false
+        },
+        {
+          "option_id": 4412,
+          "option_text": "A pattern for organizing code files",
+          "is_correct": false
+        },
+        {
+          "option_id": 4413,
+          "option_text": "A pattern for database design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 838,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Observer pattern?",
+      "options": [
+        {
+          "option_id": 4414,
+          "option_text": "A pattern for watching user behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 4415,
+          "option_text": "A pattern where objects are notified of state changes in other objects",
+          "is_correct": true
+        },
+        {
+          "option_id": 4416,
+          "option_text": "A pattern for security monitoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 4417,
+          "option_text": "A pattern for UI design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 839,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Strategy pattern?",
+      "options": [
+        {
+          "option_id": 4418,
+          "option_text": "A pattern for business strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 4419,
+          "option_text": "A pattern for game development",
+          "is_correct": false
+        },
+        {
+          "option_id": 4420,
+          "option_text": "A pattern for database queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 4421,
+          "option_text": "A pattern that enables selecting algorithms at runtime",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 840,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Adapter pattern?",
+      "options": [
+        {
+          "option_id": 4422,
+          "option_text": "A pattern for power plugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4423,
+          "option_text": "A pattern for network adapters",
+          "is_correct": false
+        },
+        {
+          "option_id": 4424,
+          "option_text": "A pattern that allows incompatible interfaces to work together",
+          "is_correct": true
+        },
+        {
+          "option_id": 4425,
+          "option_text": "A pattern for USB devices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 841,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is caching and why is it important in system design?",
+      "options": [
+        {
+          "option_id": 4426,
+          "option_text": "Storing frequently accessed data for faster retrieval",
+          "is_correct": true
+        },
+        {
+          "option_id": 4427,
+          "option_text": "Hiding data from users",
+          "is_correct": false
+        },
+        {
+          "option_id": 4428,
+          "option_text": "A backup strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 4429,
+          "option_text": "A security feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 842,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is database indexing and how does it improve performance?",
+      "options": [
+        {
+          "option_id": 4430,
+          "option_text": "A table of contents for books",
+          "is_correct": false
+        },
+        {
+          "option_id": 4431,
+          "option_text": "A data structure that speeds up data retrieval operations",
+          "is_correct": true
+        },
+        {
+          "option_id": 4432,
+          "option_text": "A way to index database servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4433,
+          "option_text": "A backup index",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 843,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is CDN and how does it work?",
+      "options": [
+        {
+          "option_id": 4434,
+          "option_text": "Content Development Network",
+          "is_correct": false
+        },
+        {
+          "option_id": 4435,
+          "option_text": "A database type",
+          "is_correct": false
+        },
+        {
+          "option_id": 4436,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 4437,
+          "option_text": "A distributed network of servers that deliver content based on location",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 844,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between SQL and NoSQL in system design?",
+      "options": [
+        {
+          "option_id": 4438,
+          "option_text": "SQL is for small data, NoSQL for big data",
+          "is_correct": false
+        },
+        {
+          "option_id": 4439,
+          "option_text": "SQL is faster than NoSQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 4440,
+          "option_text": "SQL has fixed schemas, NoSQL has flexible schemas",
+          "is_correct": true
+        },
+        {
+          "option_id": 4441,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 845,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is CAP theorem?",
+      "options": [
+        {
+          "option_id": 4442,
+          "option_text": "Consistency, Availability, Partition tolerance - you can only have two",
+          "is_correct": true
+        },
+        {
+          "option_id": 4443,
+          "option_text": "Capacity, Availability, Performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 4444,
+          "option_text": "Consistency, Accuracy, Performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 4445,
+          "option_text": "Caching, Availability, Partitioning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 846,
+      "subskill_id": 44,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the strangler pattern for migrating from monolith to microservices?",
+      "options": [
+        {
+          "option_id": 4446,
+          "option_text": "A pattern that kills the monolith immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 4447,
+          "option_text": "Gradually replacing parts of a monolith with new services",
+          "is_correct": true
+        },
+        {
+          "option_id": 4448,
+          "option_text": "A pattern for database strangulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4449,
+          "option_text": "A pattern for code optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 847,
+      "subskill_id": 45,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is event-driven architecture in microservices?",
+      "options": [
+        {
+          "option_id": 4450,
+          "option_text": "Services communicate through synchronous calls",
+          "is_correct": false
+        },
+        {
+          "option_id": 4451,
+          "option_text": "Services share a database",
+          "is_correct": false
+        },
+        {
+          "option_id": 4452,
+          "option_text": "Services are deployed together",
+          "is_correct": false
+        },
+        {
+          "option_id": 4453,
+          "option_text": "Services communicate through events and messages",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 848,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Decorator pattern?",
+      "options": [
+        {
+          "option_id": 4454,
+          "option_text": "A pattern for decorating user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4455,
+          "option_text": "A pattern for home decoration",
+          "is_correct": false
+        },
+        {
+          "option_id": 4456,
+          "option_text": "A pattern that adds behavior to objects dynamically",
+          "is_correct": true
+        },
+        {
+          "option_id": 4457,
+          "option_text": "A pattern for web design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 849,
+      "subskill_id": 47,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is message queue and when would you use it?",
+      "options": [
+        {
+          "option_id": 4458,
+          "option_text": "A communication method for asynchronous processing between services",
+          "is_correct": true
+        },
+        {
+          "option_id": 4459,
+          "option_text": "A queue for text messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 4460,
+          "option_text": "A database queue",
+          "is_correct": false
+        },
+        {
+          "option_id": 4461,
+          "option_text": "A user interface component",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 850,
+      "subskill_id": 46,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Template Method pattern?",
+      "options": [
+        {
+          "option_id": 4462,
+          "option_text": "A pattern for creating templates",
+          "is_correct": false
+        },
+        {
+          "option_id": 4463,
+          "option_text": "A pattern for document generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4464,
+          "option_text": "A pattern for UI templates",
+          "is_correct": false
+        },
+        {
+          "option_id": 4465,
+          "option_text": "A pattern that defines the skeleton of an algorithm in a method",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 851,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle transactions in a monolithic application?",
+      "options": [
+        {
+          "option_id": 4766,
+          "option_text": "Distributed transactions across multiple services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4767,
+          "option_text": "Two-phase commit protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 4768,
+          "option_text": "Database transactions with ACID properties",
+          "is_correct": true
+        },
+        {
+          "option_id": 4769,
+          "option_text": "Eventual consistency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 852,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the deployment strategies for monolithic applications?",
+      "options": [
+        {
+          "option_id": 4770,
+          "option_text": "Blue-green deployment, rolling updates, canary releases",
+          "is_correct": true
+        },
+        {
+          "option_id": 4771,
+          "option_text": "Deploy each module independently",
+          "is_correct": false
+        },
+        {
+          "option_id": 4772,
+          "option_text": "Database-per-service deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 4773,
+          "option_text": "Serverless deployment only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 853,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement continuous delivery with a monolith?",
+      "options": [
+        {
+          "option_id": 4774,
+          "option_text": "It is not possible with monoliths",
+          "is_correct": false
+        },
+        {
+          "option_id": 4775,
+          "option_text": "By deploying each function separately",
+          "is_correct": false
+        },
+        {
+          "option_id": 4776,
+          "option_text": "Using feature branches only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4777,
+          "option_text": "Automated testing, feature toggles, and incremental deployments",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 854,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the modular monolith and how does it differ from traditional monolith?",
+      "options": [
+        {
+          "option_id": 4778,
+          "option_text": "It has no modules",
+          "is_correct": false
+        },
+        {
+          "option_id": 4779,
+          "option_text": "Well-defined modules with clear boundaries but still single deployment",
+          "is_correct": true
+        },
+        {
+          "option_id": 4780,
+          "option_text": "It is a microservices architecture",
+          "is_correct": false
+        },
+        {
+          "option_id": 4781,
+          "option_text": "It uses multiple databases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 855,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test a monolithic application effectively?",
+      "options": [
+        {
+          "option_id": 4782,
+          "option_text": "Only unit tests are needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4783,
+          "option_text": "Test each service independently",
+          "is_correct": false
+        },
+        {
+          "option_id": 4784,
+          "option_text": "Comprehensive testing strategy including unit, integration, and end-to-end tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 4785,
+          "option_text": "No testing needed for monoliths",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 856,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle distributed transactions in microservices?",
+      "options": [
+        {
+          "option_id": 4786,
+          "option_text": "Use Saga pattern or eventual consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 4787,
+          "option_text": "Use two-phase commit across services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4788,
+          "option_text": "Distributed transactions are not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 4789,
+          "option_text": "Use a single database for all services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 857,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Saga pattern in microservices?",
+      "options": [
+        {
+          "option_id": 4790,
+          "option_text": "A pattern for database backups",
+          "is_correct": false
+        },
+        {
+          "option_id": 4791,
+          "option_text": "A pattern for service discovery",
+          "is_correct": false
+        },
+        {
+          "option_id": 4792,
+          "option_text": "A pattern for load balancing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4793,
+          "option_text": "A pattern for managing distributed transactions with compensating actions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 858,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement service discovery and registration?",
+      "options": [
+        {
+          "option_id": 4794,
+          "option_text": "Manually configure IP addresses",
+          "is_correct": false
+        },
+        {
+          "option_id": 4795,
+          "option_text": "Use service registry like Consul, Eureka, or etcd",
+          "is_correct": true
+        },
+        {
+          "option_id": 4796,
+          "option_text": "Service discovery is automatic",
+          "is_correct": false
+        },
+        {
+          "option_id": 4797,
+          "option_text": "Use DNS only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 859,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between orchestration and choreography in microservices?",
+      "options": [
+        {
+          "option_id": 4798,
+          "option_text": "They are the same concept",
+          "is_correct": false
+        },
+        {
+          "option_id": 4799,
+          "option_text": "Orchestration is event-driven, choreography uses a central controller",
+          "is_correct": false
+        },
+        {
+          "option_id": 4800,
+          "option_text": "Orchestration has central controller, choreography is event-driven",
+          "is_correct": true
+        },
+        {
+          "option_id": 4801,
+          "option_text": "Orchestration is for monoliths, choreography for microservices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 860,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle data consistency across microservices?",
+      "options": [
+        {
+          "option_id": 4802,
+          "option_text": "Event-driven architecture and eventual consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 4803,
+          "option_text": "Shared database across all services",
+          "is_correct": false
+        },
+        {
+          "option_id": 4804,
+          "option_text": "Distributed transactions with locks",
+          "is_correct": false
+        },
+        {
+          "option_id": 4805,
+          "option_text": "Data consistency is not a concern",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 861,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Dependency Injection pattern and why is it useful?",
+      "options": [
+        {
+          "option_id": 4806,
+          "option_text": "A pattern for database connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 4807,
+          "option_text": "A pattern for UI components",
+          "is_correct": false
+        },
+        {
+          "option_id": 4808,
+          "option_text": "A pattern for logging",
+          "is_correct": false
+        },
+        {
+          "option_id": 4809,
+          "option_text": "A pattern that provides loose coupling and easier testing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 862,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Proxy pattern and when would you use it?",
+      "options": [
+        {
+          "option_id": 4810,
+          "option_text": "A pattern for network proxies",
+          "is_correct": false
+        },
+        {
+          "option_id": 4811,
+          "option_text": "A pattern that controls access to another object",
+          "is_correct": true
+        },
+        {
+          "option_id": 4812,
+          "option_text": "A pattern for authentication",
+          "is_correct": false
+        },
+        {
+          "option_id": 4813,
+          "option_text": "A pattern for caching",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 863,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Command pattern?",
+      "options": [
+        {
+          "option_id": 4814,
+          "option_text": "A pattern for command line interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4815,
+          "option_text": "A pattern for database commands",
+          "is_correct": false
+        },
+        {
+          "option_id": 4816,
+          "option_text": "A pattern that encapsulates a request as an object",
+          "is_correct": true
+        },
+        {
+          "option_id": 4817,
+          "option_text": "A pattern for operating system commands",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 864,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Facade pattern?",
+      "options": [
+        {
+          "option_id": 4818,
+          "option_text": "A pattern that provides a simplified interface to a complex subsystem",
+          "is_correct": true
+        },
+        {
+          "option_id": 4819,
+          "option_text": "A pattern for building facades",
+          "is_correct": false
+        },
+        {
+          "option_id": 4820,
+          "option_text": "A pattern for user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4821,
+          "option_text": "A pattern for authentication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 865,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between Bridge and Adapter patterns?",
+      "options": [
+        {
+          "option_id": 4822,
+          "option_text": "They are identical patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 4823,
+          "option_text": "Bridge is for incompatible interfaces, Adapter decouples abstraction",
+          "is_correct": false
+        },
+        {
+          "option_id": 4824,
+          "option_text": "Adapter is for runtime, Bridge is for compile time",
+          "is_correct": false
+        },
+        {
+          "option_id": 4825,
+          "option_text": "Bridge decouples abstraction from implementation, Adapter makes interfaces compatible",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 866,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you design a URL shortener like TinyURL?",
+      "options": [
+        {
+          "option_id": 4826,
+          "option_text": "Use a simple auto-increment ID",
+          "is_correct": false
+        },
+        {
+          "option_id": 4827,
+          "option_text": "Generate unique keys, handle collisions, and redirect HTTP 301",
+          "is_correct": true
+        },
+        {
+          "option_id": 4828,
+          "option_text": "Store URLs in filesystem",
+          "is_correct": false
+        },
+        {
+          "option_id": 4829,
+          "option_text": "Use only client-side JavaScript",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 867,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you design a chat system?",
+      "options": [
+        {
+          "option_id": 4830,
+          "option_text": "Use HTTP polling only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4831,
+          "option_text": "Store messages in browser storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 4832,
+          "option_text": "WebSockets for real-time, message queues, and database for persistence",
+          "is_correct": true
+        },
+        {
+          "option_id": 4833,
+          "option_text": "Email notifications only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 868,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you estimate storage and traffic requirements for a system?",
+      "options": [
+        {
+          "option_id": 4834,
+          "option_text": "Calculate daily active users, data per user, and request rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 4835,
+          "option_text": "Make a random guess",
+          "is_correct": false
+        },
+        {
+          "option_id": 4836,
+          "option_text": "Use unlimited storage assumptions",
+          "is_correct": false
+        },
+        {
+          "option_id": 4837,
+          "option_text": "Ignore traffic estimates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 869,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is database sharding and how do you implement it?",
+      "options": [
+        {
+          "option_id": 4838,
+          "option_text": "A backup strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 4839,
+          "option_text": "A way to encrypt databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 4840,
+          "option_text": "A database normalization technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 4841,
+          "option_text": "Horizontal partitioning of data across multiple databases based on a shard key",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 870,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the trade-offs between consistency and availability?",
+      "options": [
+        {
+          "option_id": 4842,
+          "option_text": "Consistency and availability are always both possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 4843,
+          "option_text": "CAP theorem states you must choose between them during network partitions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4844,
+          "option_text": "Availability is always more important",
+          "is_correct": false
+        },
+        {
+          "option_id": 4845,
+          "option_text": "Consistency is always more important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 871,
+      "subskill_id": 44,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you migrate from monolith to microservices incrementally?",
+      "options": [
+        {
+          "option_id": 4846,
+          "option_text": "Rewrite everything at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 4847,
+          "option_text": "Keep monolith running forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 4848,
+          "option_text": "Use strangler pattern to gradually replace parts",
+          "is_correct": true
+        },
+        {
+          "option_id": 4849,
+          "option_text": "Migrate database first, then code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 872,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Bulkhead pattern in microservices?",
+      "options": [
+        {
+          "option_id": 4850,
+          "option_text": "Isolating elements to prevent failures from spreading",
+          "is_correct": true
+        },
+        {
+          "option_id": 4851,
+          "option_text": "A pattern for ship design",
+          "is_correct": false
+        },
+        {
+          "option_id": 4852,
+          "option_text": "A pattern for bulk data transfer",
+          "is_correct": false
+        },
+        {
+          "option_id": 4853,
+          "option_text": "A pattern for database partitioning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 873,
+      "subskill_id": 46,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Composite pattern?",
+      "options": [
+        {
+          "option_id": 4854,
+          "option_text": "A pattern for composite materials",
+          "is_correct": false
+        },
+        {
+          "option_id": 4855,
+          "option_text": "A pattern for UI composites",
+          "is_correct": false
+        },
+        {
+          "option_id": 4856,
+          "option_text": "A pattern for database composition",
+          "is_correct": false
+        },
+        {
+          "option_id": 4857,
+          "option_text": "A pattern that composes objects into tree structures",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 874,
+      "subskill_id": 47,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you design a rate limiter?",
+      "options": [
+        {
+          "option_id": 4858,
+          "option_text": "Block all requests after first one",
+          "is_correct": false
+        },
+        {
+          "option_id": 4859,
+          "option_text": "Use token bucket or leaky bucket algorithms with Redis",
+          "is_correct": true
+        },
+        {
+          "option_id": 4860,
+          "option_text": "Rate limiting is not needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4861,
+          "option_text": "Use database counters",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 875,
+      "subskill_id": 45,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the API Gateway pattern and its responsibilities?",
+      "options": [
+        {
+          "option_id": 4862,
+          "option_text": "Request routing, authentication, rate limiting",
+          "is_correct": false
+        },
+        {
+          "option_id": 4863,
+          "option_text": "Protocol translation and response aggregation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4864,
+          "option_text": "Load balancing and caching",
+          "is_correct": false
+        },
+        {
+          "option_id": 4865,
+          "option_text": "All of the above API Gateway responsibilities",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 876,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle database scaling in a monolithic application?",
+      "options": [
+        {
+          "option_id": 4666,
+          "option_text": "Use microservices for database scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 4667,
+          "option_text": "Read replicas, caching, and database partitioning",
+          "is_correct": true
+        },
+        {
+          "option_id": 4668,
+          "option_text": "Monoliths cannot scale databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 4669,
+          "option_text": "Use multiple database types",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 877,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the strategies for breaking a monolith into microservices?",
+      "options": [
+        {
+          "option_id": 4670,
+          "option_text": "Extract services by business capability",
+          "is_correct": false
+        },
+        {
+          "option_id": 4671,
+          "option_text": "Use strangler fig pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 4672,
+          "option_text": "Decouple database first",
+          "is_correct": false
+        },
+        {
+          "option_id": 4673,
+          "option_text": "All of the above decomposition strategies",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 878,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you manage technical debt in a large monolith?",
+      "options": [
+        {
+          "option_id": 4674,
+          "option_text": "Ignore it until rewrite",
+          "is_correct": false
+        },
+        {
+          "option_id": 4675,
+          "option_text": "Add more features",
+          "is_correct": false
+        },
+        {
+          "option_id": 4676,
+          "option_text": "Refactor incrementally, improve test coverage, and modularize",
+          "is_correct": true
+        },
+        {
+          "option_id": 4677,
+          "option_text": "Delete the codebase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 879,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the strangler fig pattern and how do you implement it?",
+      "options": [
+        {
+          "option_id": 4678,
+          "option_text": "Gradually replace monolith components with new services over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 4679,
+          "option_text": "A pattern for killing legacy applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 4680,
+          "option_text": "A pattern for database migration",
+          "is_correct": false
+        },
+        {
+          "option_id": 4681,
+          "option_text": "A pattern for code optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 880,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you maintain data integrity during monolith decomposition?",
+      "options": [
+        {
+          "option_id": 4682,
+          "option_text": "Ignore data integrity",
+          "is_correct": false
+        },
+        {
+          "option_id": 4683,
+          "option_text": "Use event-driven architecture and distributed transactions patterns",
+          "is_correct": true
+        },
+        {
+          "option_id": 4684,
+          "option_text": "Keep all data in one database",
+          "is_correct": false
+        },
+        {
+          "option_id": 4685,
+          "option_text": "Duplicate all data across services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 881,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement CQRS in a microservices architecture?",
+      "options": [
+        {
+          "option_id": 4686,
+          "option_text": "Separate read and write models",
+          "is_correct": false
+        },
+        {
+          "option_id": 4687,
+          "option_text": "Use different databases for reads and writes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4688,
+          "option_text": "Eventual consistency between models",
+          "is_correct": false
+        },
+        {
+          "option_id": 4689,
+          "option_text": "All of the above CQRS characteristics",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 882,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is event sourcing and when would you use it?",
+      "options": [
+        {
+          "option_id": 4690,
+          "option_text": "Store only current state",
+          "is_correct": false
+        },
+        {
+          "option_id": 4691,
+          "option_text": "A pattern for logging events",
+          "is_correct": false
+        },
+        {
+          "option_id": 4692,
+          "option_text": "Store state changes as sequence of events, useful for auditing",
+          "is_correct": true
+        },
+        {
+          "option_id": 4693,
+          "option_text": "A pattern for event planning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 883,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle distributed tracing in production microservices?",
+      "options": [
+        {
+          "option_id": 4694,
+          "option_text": "Use tools like Jaeger, Zipkin, or AWS X-Ray",
+          "is_correct": true
+        },
+        {
+          "option_id": 4695,
+          "option_text": "Manual logging only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4696,
+          "option_text": "Distributed tracing is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 4697,
+          "option_text": "Use application logs only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 884,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security considerations in microservices architecture?",
+      "options": [
+        {
+          "option_id": 4698,
+          "option_text": "Secure service-to-service communication, API gateway security, and mTLS",
+          "is_correct": true
+        },
+        {
+          "option_id": 4699,
+          "option_text": "Security is not a concern",
+          "is_correct": false
+        },
+        {
+          "option_id": 4700,
+          "option_text": "Only perimeter security is needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4701,
+          "option_text": "Use the same security as monoliths",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 885,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement blue-green deployment for microservices?",
+      "options": [
+        {
+          "option_id": 4702,
+          "option_text": "Run two identical environments and switch traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 4703,
+          "option_text": "Deploy new version alongside old",
+          "is_correct": false
+        },
+        {
+          "option_id": 4704,
+          "option_text": "Test new version before switching",
+          "is_correct": false
+        },
+        {
+          "option_id": 4705,
+          "option_text": "All of the above blue-green practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 886,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between State and Strategy patterns?",
+      "options": [
+        {
+          "option_id": 4706,
+          "option_text": "They are identical patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 4707,
+          "option_text": "Strategy changes object state, State changes algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 4708,
+          "option_text": "State changes behavior based on internal state, Strategy selects algorithm",
+          "is_correct": true
+        },
+        {
+          "option_id": 4709,
+          "option_text": "State is for UI, Strategy is for algorithms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 887,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the Visitor pattern and when would you use it?",
+      "options": [
+        {
+          "option_id": 4710,
+          "option_text": "A pattern that separates algorithms from objects they operate on",
+          "is_correct": true
+        },
+        {
+          "option_id": 4711,
+          "option_text": "A pattern for website visitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 4712,
+          "option_text": "A pattern for user tracking",
+          "is_correct": false
+        },
+        {
+          "option_id": 4713,
+          "option_text": "A pattern for visitor management systems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 888,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the Interpreter pattern?",
+      "options": [
+        {
+          "option_id": 4714,
+          "option_text": "A pattern for language translation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4715,
+          "option_text": "A pattern that defines a grammar and interprets sentences",
+          "is_correct": true
+        },
+        {
+          "option_id": 4716,
+          "option_text": "A pattern for code interpretation",
+          "is_correct": false
+        },
+        {
+          "option_id": 4717,
+          "option_text": "A pattern for database queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 889,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you choose between different design patterns for a problem?",
+      "options": [
+        {
+          "option_id": 4718,
+          "option_text": "Understand the problem, consider trade-offs, and pattern intent",
+          "is_correct": true
+        },
+        {
+          "option_id": 4719,
+          "option_text": "Use the first pattern you know",
+          "is_correct": false
+        },
+        {
+          "option_id": 4720,
+          "option_text": "Use all patterns together",
+          "is_correct": false
+        },
+        {
+          "option_id": 4721,
+          "option_text": "Patterns are not useful",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 890,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the Memento pattern?",
+      "options": [
+        {
+          "option_id": 4722,
+          "option_text": "A pattern for souvenirs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4723,
+          "option_text": "A pattern for memory management",
+          "is_correct": false
+        },
+        {
+          "option_id": 4724,
+          "option_text": "A pattern that captures and restores object state",
+          "is_correct": true
+        },
+        {
+          "option_id": 4725,
+          "option_text": "A pattern for backup systems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 891,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a distributed key-value store like DynamoDB?",
+      "options": [
+        {
+          "option_id": 4726,
+          "option_text": "Consistent hashing, replication, and quorum-based consensus",
+          "is_correct": true
+        },
+        {
+          "option_id": 4727,
+          "option_text": "Single master database",
+          "is_correct": false
+        },
+        {
+          "option_id": 4728,
+          "option_text": "Simple key-value file storage",
+          "is_correct": false
+        },
+        {
+          "option_id": 4729,
+          "option_text": "In-memory cache only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 892,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a social media platform like Twitter?",
+      "options": [
+        {
+          "option_id": 4730,
+          "option_text": "Handle timelines with fan-out approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 4731,
+          "option_text": "Use caching for hot content",
+          "is_correct": false
+        },
+        {
+          "option_id": 4732,
+          "option_text": "Support high write throughput",
+          "is_correct": false
+        },
+        {
+          "option_id": 4733,
+          "option_text": "All of the above Twitter design considerations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 893,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a ride-sharing service like Uber?",
+      "options": [
+        {
+          "option_id": 4734,
+          "option_text": "Use geospatial indexing for finding nearby drivers",
+          "is_correct": true
+        },
+        {
+          "option_id": 4735,
+          "option_text": "Store all driver locations in memory",
+          "is_correct": false
+        },
+        {
+          "option_id": 4736,
+          "option_text": "Use simple latitude/longitude comparisons",
+          "is_correct": false
+        },
+        {
+          "option_id": 4737,
+          "option_text": "Poll all drivers for location",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 894,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a video streaming platform like Netflix?",
+      "options": [
+        {
+          "option_id": 4738,
+          "option_text": "CDN for content delivery, adaptive bitrate streaming, and recommendations",
+          "is_correct": true
+        },
+        {
+          "option_id": 4739,
+          "option_text": "Store all videos on a single server",
+          "is_correct": false
+        },
+        {
+          "option_id": 4740,
+          "option_text": "Use only progressive downloads",
+          "is_correct": false
+        },
+        {
+          "option_id": 4741,
+          "option_text": "No caching needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 895,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a payment system with high consistency requirements?",
+      "options": [
+        {
+          "option_id": 4742,
+          "option_text": "ACID transactions, idempotency keys, and audit logs",
+          "is_correct": true
+        },
+        {
+          "option_id": 4743,
+          "option_text": "Use eventual consistency",
+          "is_correct": false
+        },
+        {
+          "option_id": 4744,
+          "option_text": "No consistency needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4745,
+          "option_text": "Store transactions in memory",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 896,
+      "subskill_id": 44,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle distributed transactions during monolith decomposition?",
+      "options": [
+        {
+          "option_id": 4746,
+          "option_text": "Ignore transaction boundaries",
+          "is_correct": false
+        },
+        {
+          "option_id": 4747,
+          "option_text": "Keep all data in one database forever",
+          "is_correct": false
+        },
+        {
+          "option_id": 4748,
+          "option_text": "Use Saga pattern and event-driven architecture",
+          "is_correct": true
+        },
+        {
+          "option_id": 4749,
+          "option_text": "Transactions are not needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 897,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the Sidecar pattern in microservices?",
+      "options": [
+        {
+          "option_id": 4750,
+          "option_text": "Attach helper components like logging or monitoring to services",
+          "is_correct": true
+        },
+        {
+          "option_id": 4751,
+          "option_text": "A pattern for motorcycle sidecars",
+          "is_correct": false
+        },
+        {
+          "option_id": 4752,
+          "option_text": "A pattern for database sidecars",
+          "is_correct": false
+        },
+        {
+          "option_id": 4753,
+          "option_text": "A pattern for UI sidebars",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 898,
+      "subskill_id": 46,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the Null Object pattern?",
+      "options": [
+        {
+          "option_id": 4754,
+          "option_text": "A pattern for null values in databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 4755,
+          "option_text": "A pattern that provides default behavior instead of null references",
+          "is_correct": true
+        },
+        {
+          "option_id": 4756,
+          "option_text": "A pattern for empty objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 4757,
+          "option_text": "A pattern for null pointers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 899,
+      "subskill_id": 47,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a real-time gaming leaderboard?",
+      "options": [
+        {
+          "option_id": 4758,
+          "option_text": "Use sorted sets in Redis",
+          "is_correct": false
+        },
+        {
+          "option_id": 4759,
+          "option_text": "Update scores in real-time",
+          "is_correct": false
+        },
+        {
+          "option_id": 4760,
+          "option_text": "Handle millions of players",
+          "is_correct": false
+        },
+        {
+          "option_id": 4761,
+          "option_text": "All of the above leaderboard design elements",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 900,
+      "subskill_id": 45,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement canary releases for microservices?",
+      "options": [
+        {
+          "option_id": 4762,
+          "option_text": "Roll out to all users at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 4763,
+          "option_text": "Deploy to staging only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4764,
+          "option_text": "Gradually roll out to small user subset, monitor, then expand",
+          "is_correct": true
+        },
+        {
+          "option_id": 4765,
+          "option_text": "Canary releases are not possible",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

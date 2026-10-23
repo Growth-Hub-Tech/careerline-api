@@ -1,0 +1,2906 @@
+{
+  "skill_id": 10,
+  "skill_name": "Testing & QA",
+  "questions": [
+    {
+      "question_id": 901,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is unit testing?",
+      "options": [
+        {
+          "option_id": 4866,
+          "option_text": "Testing the entire application",
+          "is_correct": false
+        },
+        {
+          "option_id": 4867,
+          "option_text": "Testing user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4868,
+          "option_text": "Testing individual components or functions in isolation",
+          "is_correct": true
+        },
+        {
+          "option_id": 4869,
+          "option_text": "Testing database performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 902,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a unit in unit testing?",
+      "options": [
+        {
+          "option_id": 4870,
+          "option_text": "The smallest testable part of a software",
+          "is_correct": true
+        },
+        {
+          "option_id": 4871,
+          "option_text": "A team of testers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4872,
+          "option_text": "A testing document",
+          "is_correct": false
+        },
+        {
+          "option_id": 4873,
+          "option_text": "A test environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 903,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of unit testing?",
+      "options": [
+        {
+          "option_id": 4874,
+          "option_text": "To test user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4875,
+          "option_text": "To validate system requirements",
+          "is_correct": false
+        },
+        {
+          "option_id": 4876,
+          "option_text": "To find integration issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 4877,
+          "option_text": "To verify that individual units of code work correctly",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 904,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test case?",
+      "options": [
+        {
+          "option_id": 4878,
+          "option_text": "A container for tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4879,
+          "option_text": "A set of conditions to determine if a feature works correctly",
+          "is_correct": true
+        },
+        {
+          "option_id": 4880,
+          "option_text": "A test framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4881,
+          "option_text": "A bug report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 905,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test suite?",
+      "options": [
+        {
+          "option_id": 4882,
+          "option_text": "A set of test data",
+          "is_correct": false
+        },
+        {
+          "option_id": 4883,
+          "option_text": "A testing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 4884,
+          "option_text": "A collection of test cases",
+          "is_correct": true
+        },
+        {
+          "option_id": 4885,
+          "option_text": "A testing environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 906,
+      "subskill_id": 48,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is code coverage in testing?",
+      "options": [
+        {
+          "option_id": 4886,
+          "option_text": "A measure of how much code is executed by tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 4887,
+          "option_text": "The number of lines of code",
+          "is_correct": false
+        },
+        {
+          "option_id": 4888,
+          "option_text": "The cost of testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4889,
+          "option_text": "The time taken to test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 907,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is integration testing?",
+      "options": [
+        {
+          "option_id": 4890,
+          "option_text": "Testing individual functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 4891,
+          "option_text": "Testing user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4892,
+          "option_text": "Testing security",
+          "is_correct": false
+        },
+        {
+          "option_id": 4893,
+          "option_text": "Testing how different modules or services work together",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 908,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How does integration testing differ from unit testing?",
+      "options": [
+        {
+          "option_id": 4894,
+          "option_text": "Integration tests are smaller than unit tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4895,
+          "option_text": "Unit tests isolate components, integration tests test interactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4896,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4897,
+          "option_text": "Integration tests are written before unit tests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 909,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a integration test?",
+      "options": [
+        {
+          "option_id": 4898,
+          "option_text": "A test that runs in production",
+          "is_correct": false
+        },
+        {
+          "option_id": 4899,
+          "option_text": "A test for a single function",
+          "is_correct": false
+        },
+        {
+          "option_id": 4900,
+          "option_text": "A test that verifies interactions between components",
+          "is_correct": true
+        },
+        {
+          "option_id": 4901,
+          "option_text": "A test for database schema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 910,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is API testing?",
+      "options": [
+        {
+          "option_id": 4902,
+          "option_text": "Testing application programming interfaces directly",
+          "is_correct": true
+        },
+        {
+          "option_id": 4903,
+          "option_text": "Testing user interfaces",
+          "is_correct": false
+        },
+        {
+          "option_id": 4904,
+          "option_text": "Testing hardware APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 4905,
+          "option_text": "Testing API documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 911,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is database testing?",
+      "options": [
+        {
+          "option_id": 4906,
+          "option_text": "Testing database queries and data integrity",
+          "is_correct": false
+        },
+        {
+          "option_id": 4907,
+          "option_text": "Testing database performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 4908,
+          "option_text": "Testing database security",
+          "is_correct": false
+        },
+        {
+          "option_id": 4909,
+          "option_text": "All of the above database testing aspects",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 912,
+      "subskill_id": 49,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why is integration testing important?",
+      "options": [
+        {
+          "option_id": 4910,
+          "option_text": "It is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 4911,
+          "option_text": "It catches issues when components interact that unit tests miss",
+          "is_correct": true
+        },
+        {
+          "option_id": 4912,
+          "option_text": "It replaces unit testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4913,
+          "option_text": "It is faster than unit testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 913,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Test-Driven Development (TDD)?",
+      "options": [
+        {
+          "option_id": 4914,
+          "option_text": "Writing tests after code is written",
+          "is_correct": false
+        },
+        {
+          "option_id": 4915,
+          "option_text": "Testing code by running it",
+          "is_correct": false
+        },
+        {
+          "option_id": 4916,
+          "option_text": "Writing tests before writing the corresponding code",
+          "is_correct": true
+        },
+        {
+          "option_id": 4917,
+          "option_text": "Deleting tests after code works",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 914,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the three phases of TDD?",
+      "options": [
+        {
+          "option_id": 4918,
+          "option_text": "Red, Green, Refactor",
+          "is_correct": true
+        },
+        {
+          "option_id": 4919,
+          "option_text": "Write, Test, Debug",
+          "is_correct": false
+        },
+        {
+          "option_id": 4920,
+          "option_text": "Plan, Code, Test",
+          "is_correct": false
+        },
+        {
+          "option_id": 4921,
+          "option_text": "Design, Implement, Verify",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 915,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does \"Red-Green-Refactor\" mean in TDD?",
+      "options": [
+        {
+          "option_id": 4922,
+          "option_text": "Write failing test (red), make it pass (green), improve code (refactor)",
+          "is_correct": true
+        },
+        {
+          "option_id": 4923,
+          "option_text": "Stop at red light, go at green light",
+          "is_correct": false
+        },
+        {
+          "option_id": 4924,
+          "option_text": "Red means code is broken, green means fixed",
+          "is_correct": false
+        },
+        {
+          "option_id": 4925,
+          "option_text": "Red for errors, green for success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 916,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a failing test in TDD?",
+      "options": [
+        {
+          "option_id": 4926,
+          "option_text": "A test that passes",
+          "is_correct": false
+        },
+        {
+          "option_id": 4927,
+          "option_text": "A test that fails because the feature is not implemented yet",
+          "is_correct": true
+        },
+        {
+          "option_id": 4928,
+          "option_text": "A bug in the test",
+          "is_correct": false
+        },
+        {
+          "option_id": 4929,
+          "option_text": "A test that should be deleted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 917,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is refactoring in TDD?",
+      "options": [
+        {
+          "option_id": 4930,
+          "option_text": "Adding new features",
+          "is_correct": false
+        },
+        {
+          "option_id": 4931,
+          "option_text": "Writing more tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4932,
+          "option_text": "Improving code structure without changing behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 4933,
+          "option_text": "Deleting old code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 918,
+      "subskill_id": 50,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why write tests before code in TDD?",
+      "options": [
+        {
+          "option_id": 4934,
+          "option_text": "To clarify requirements and design before implementation",
+          "is_correct": true
+        },
+        {
+          "option_id": 4935,
+          "option_text": "To slow down development",
+          "is_correct": false
+        },
+        {
+          "option_id": 4936,
+          "option_text": "To have documentation after coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 4937,
+          "option_text": "It does not matter when tests are written",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 919,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a test framework?",
+      "options": [
+        {
+          "option_id": 4938,
+          "option_text": "A set of tools for writing and running tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4939,
+          "option_text": "Provides test structure and assertions",
+          "is_correct": false
+        },
+        {
+          "option_id": 4940,
+          "option_text": "Generates test reports",
+          "is_correct": false
+        },
+        {
+          "option_id": 4941,
+          "option_text": "All of the above test framework features",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 920,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is JUnit?",
+      "options": [
+        {
+          "option_id": 4942,
+          "option_text": "A JavaScript testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4943,
+          "option_text": "A testing framework for Java",
+          "is_correct": true
+        },
+        {
+          "option_id": 4944,
+          "option_text": "A Python testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4945,
+          "option_text": "A database testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 921,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is pytest?",
+      "options": [
+        {
+          "option_id": 4946,
+          "option_text": "A Java testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4947,
+          "option_text": "A JavaScript testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4948,
+          "option_text": "A testing framework for Python",
+          "is_correct": true
+        },
+        {
+          "option_id": 4949,
+          "option_text": "A security testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 922,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Jest?",
+      "options": [
+        {
+          "option_id": 4950,
+          "option_text": "A JavaScript testing framework",
+          "is_correct": true
+        },
+        {
+          "option_id": 4951,
+          "option_text": "A Java testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4952,
+          "option_text": "A Python testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4953,
+          "option_text": "A Ruby testing framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 923,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Mocha?",
+      "options": [
+        {
+          "option_id": 4954,
+          "option_text": "A JavaScript test framework",
+          "is_correct": true
+        },
+        {
+          "option_id": 4955,
+          "option_text": "A type of coffee",
+          "is_correct": false
+        },
+        {
+          "option_id": 4956,
+          "option_text": "A test runner",
+          "is_correct": false
+        },
+        {
+          "option_id": 4957,
+          "option_text": "A test framework for Node.js",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 924,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Selenium?",
+      "options": [
+        {
+          "option_id": 4958,
+          "option_text": "A unit testing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 4959,
+          "option_text": "A tool for automating web browsers",
+          "is_correct": true
+        },
+        {
+          "option_id": 4960,
+          "option_text": "A performance testing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 4961,
+          "option_text": "A database testing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 925,
+      "subskill_id": 51,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is mocking in testing?",
+      "options": [
+        {
+          "option_id": 4962,
+          "option_text": "Creating fake objects to simulate real dependencies",
+          "is_correct": true
+        },
+        {
+          "option_id": 4963,
+          "option_text": "Making fun of code",
+          "is_correct": false
+        },
+        {
+          "option_id": 4964,
+          "option_text": "Copying real objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 4965,
+          "option_text": "Testing with real databases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 926,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are test doubles and what types exist?",
+      "options": [
+        {
+          "option_id": 4966,
+          "option_text": "Copy of real objects used in testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 4967,
+          "option_text": "Objects that stand in for real dependencies in testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 4968,
+          "option_text": "Double the number of tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4969,
+          "option_text": "A testing technique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 927,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is mocking and when would you use it?",
+      "options": [
+        {
+          "option_id": 4970,
+          "option_text": "Creating objects that simulate real dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 4971,
+          "option_text": "Used to isolate the unit being tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 4972,
+          "option_text": "Used when real objects are unavailable or impractical",
+          "is_correct": false
+        },
+        {
+          "option_id": 4973,
+          "option_text": "All of the above describe mocking",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 928,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is stubbing in unit testing?",
+      "options": [
+        {
+          "option_id": 4974,
+          "option_text": "Removing code from tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 4975,
+          "option_text": "Testing with real databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 4976,
+          "option_text": "Providing predetermined responses to method calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 4977,
+          "option_text": "Creating fake users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 929,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between mock and stub?",
+      "options": [
+        {
+          "option_id": 4978,
+          "option_text": "Stubs provide answers, mocks verify interactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 4979,
+          "option_text": "Mocks provide answers, stubs verify interactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 4980,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 4981,
+          "option_text": "Stubs are for databases, mocks for APIs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 930,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is test isolation in unit testing?",
+      "options": [
+        {
+          "option_id": 4982,
+          "option_text": "Running tests in separate rooms",
+          "is_correct": false
+        },
+        {
+          "option_id": 4983,
+          "option_text": "Ensuring tests do not depend on each other or external state",
+          "is_correct": true
+        },
+        {
+          "option_id": 4984,
+          "option_text": "Isolating developers from testers",
+          "is_correct": false
+        },
+        {
+          "option_id": 4985,
+          "option_text": "Testing in isolation mode",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 931,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is contract testing?",
+      "options": [
+        {
+          "option_id": 4986,
+          "option_text": "Testing legal contracts",
+          "is_correct": false
+        },
+        {
+          "option_id": 4987,
+          "option_text": "Testing service agreements",
+          "is_correct": false
+        },
+        {
+          "option_id": 4988,
+          "option_text": "Testing API contracts between services",
+          "is_correct": true
+        },
+        {
+          "option_id": 4989,
+          "option_text": "A type of integration testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 932,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is end-to-end testing?",
+      "options": [
+        {
+          "option_id": 4990,
+          "option_text": "Testing only the frontend",
+          "is_correct": false
+        },
+        {
+          "option_id": 4991,
+          "option_text": "Testing only the backend",
+          "is_correct": false
+        },
+        {
+          "option_id": 4992,
+          "option_text": "Testing the entire application flow from start to finish",
+          "is_correct": true
+        },
+        {
+          "option_id": 4993,
+          "option_text": "Testing database connections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 933,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between integration and end-to-end testing?",
+      "options": [
+        {
+          "option_id": 4994,
+          "option_text": "Integration tests multiple components, E2E tests the whole system",
+          "is_correct": true
+        },
+        {
+          "option_id": 4995,
+          "option_text": "E2E tests multiple components, integration tests whole system",
+          "is_correct": false
+        },
+        {
+          "option_id": 4996,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 4997,
+          "option_text": "Integration is faster, E2E is slower",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 934,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is database integration testing?",
+      "options": [
+        {
+          "option_id": 4998,
+          "option_text": "Testing database performance only",
+          "is_correct": false
+        },
+        {
+          "option_id": 4999,
+          "option_text": "Testing application interaction with the database",
+          "is_correct": true
+        },
+        {
+          "option_id": 5000,
+          "option_text": "Testing database security",
+          "is_correct": false
+        },
+        {
+          "option_id": 5001,
+          "option_text": "Testing database backups",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 935,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is API contract testing?",
+      "options": [
+        {
+          "option_id": 5002,
+          "option_text": "Testing that API meets its specified contract",
+          "is_correct": true
+        },
+        {
+          "option_id": 5003,
+          "option_text": "Testing API documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5004,
+          "option_text": "Testing API authentication",
+          "is_correct": false
+        },
+        {
+          "option_id": 5005,
+          "option_text": "Testing API rate limits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 936,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the benefits of TDD?",
+      "options": [
+        {
+          "option_id": 5006,
+          "option_text": "Better code design and fewer bugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 5007,
+          "option_text": "Living documentation and confidence to refactor",
+          "is_correct": false
+        },
+        {
+          "option_id": 5008,
+          "option_text": "Faster debugging and regression detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 5009,
+          "option_text": "All of the above TDD benefits",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 937,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the challenges of TDD?",
+      "options": [
+        {
+          "option_id": 5010,
+          "option_text": "Learning curve and time investment",
+          "is_correct": true
+        },
+        {
+          "option_id": 5011,
+          "option_text": "Makes code worse",
+          "is_correct": false
+        },
+        {
+          "option_id": 5012,
+          "option_text": "Increases bugs",
+          "is_correct": false
+        },
+        {
+          "option_id": 5013,
+          "option_text": "No challenges exist",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 938,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is outside-in TDD?",
+      "options": [
+        {
+          "option_id": 5014,
+          "option_text": "Testing from the inside out",
+          "is_correct": false
+        },
+        {
+          "option_id": 5015,
+          "option_text": "Starting with high-level tests and working down to implementation",
+          "is_correct": true
+        },
+        {
+          "option_id": 5016,
+          "option_text": "Testing only external APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 5017,
+          "option_text": "Testing from the database up",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 939,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is inside-out TDD?",
+      "options": [
+        {
+          "option_id": 5018,
+          "option_text": "Testing from the outside in",
+          "is_correct": false
+        },
+        {
+          "option_id": 5019,
+          "option_text": "Starting with unit tests and building up",
+          "is_correct": true
+        },
+        {
+          "option_id": 5020,
+          "option_text": "Testing internal components only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5021,
+          "option_text": "Testing without mocks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 940,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does TDD improve code design?",
+      "options": [
+        {
+          "option_id": 5022,
+          "option_text": "Encourages loose coupling and high cohesion",
+          "is_correct": true
+        },
+        {
+          "option_id": 5023,
+          "option_text": "Makes code more complex",
+          "is_correct": false
+        },
+        {
+          "option_id": 5024,
+          "option_text": "Has no effect on design",
+          "is_correct": false
+        },
+        {
+          "option_id": 5025,
+          "option_text": "Makes code harder to maintain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 941,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is xUnit pattern?",
+      "options": [
+        {
+          "option_id": 5026,
+          "option_text": "A family of unit testing frameworks",
+          "is_correct": true
+        },
+        {
+          "option_id": 5027,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 5028,
+          "option_text": "A testing methodology",
+          "is_correct": false
+        },
+        {
+          "option_id": 5029,
+          "option_text": "A type of test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 942,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are assertions in testing frameworks?",
+      "options": [
+        {
+          "option_id": 5030,
+          "option_text": "Statements that verify expected outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 5031,
+          "option_text": "Test names",
+          "is_correct": false
+        },
+        {
+          "option_id": 5032,
+          "option_text": "Test configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 5033,
+          "option_text": "Test reports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 943,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is test setup and teardown?",
+      "options": [
+        {
+          "option_id": 5034,
+          "option_text": "Code that runs before and after tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 5035,
+          "option_text": "Installing and uninstalling software",
+          "is_correct": false
+        },
+        {
+          "option_id": 5036,
+          "option_text": "Test configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 5037,
+          "option_text": "Test documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 944,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are parameterized tests?",
+      "options": [
+        {
+          "option_id": 5038,
+          "option_text": "Tests with parameters passed from command line",
+          "is_correct": false
+        },
+        {
+          "option_id": 5039,
+          "option_text": "Tests that accept configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 5040,
+          "option_text": "Tests that run multiple times with different inputs",
+          "is_correct": true
+        },
+        {
+          "option_id": 5041,
+          "option_text": "Tests for parameters",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 945,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is test fixture?",
+      "options": [
+        {
+          "option_id": 5042,
+          "option_text": "A fixed state of objects used as a baseline for tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 5043,
+          "option_text": "A device for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5044,
+          "option_text": "A test environment",
+          "is_correct": false
+        },
+        {
+          "option_id": 5045,
+          "option_text": "A test report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 946,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is code coverage and what are different coverage metrics?",
+      "options": [
+        {
+          "option_id": 5046,
+          "option_text": "Line, branch, function coverage",
+          "is_correct": true
+        },
+        {
+          "option_id": 5047,
+          "option_text": "Only line coverage exists",
+          "is_correct": false
+        },
+        {
+          "option_id": 5048,
+          "option_text": "Coverage is not important",
+          "is_correct": false
+        },
+        {
+          "option_id": 5049,
+          "option_text": "Coverage measures test speed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 947,
+      "subskill_id": 49,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is testing pyramid?",
+      "options": [
+        {
+          "option_id": 5050,
+          "option_text": "A visual representation of test distribution",
+          "is_correct": false
+        },
+        {
+          "option_id": 5051,
+          "option_text": "Many unit tests, fewer integration tests, even fewer E2E tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 5052,
+          "option_text": "A testing strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 5053,
+          "option_text": "A test prioritization model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 948,
+      "subskill_id": 50,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between TDD and BDD?",
+      "options": [
+        {
+          "option_id": 5054,
+          "option_text": "TDD focuses on behavior, BDD on implementation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5055,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5056,
+          "option_text": "TDD focuses on unit tests, BDD on business-readable scenarios",
+          "is_correct": true
+        },
+        {
+          "option_id": 5057,
+          "option_text": "BDD is for frontend, TDD for backend",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 949,
+      "subskill_id": 51,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is test runner?",
+      "options": [
+        {
+          "option_id": 5058,
+          "option_text": "A tool that executes tests and reports results",
+          "is_correct": true
+        },
+        {
+          "option_id": 5059,
+          "option_text": "A person who runs tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5060,
+          "option_text": "A test framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 5061,
+          "option_text": "A type of test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 950,
+      "subskill_id": 48,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is boundary value testing?",
+      "options": [
+        {
+          "option_id": 5062,
+          "option_text": "Testing values at the edges of input ranges",
+          "is_correct": true
+        },
+        {
+          "option_id": 5063,
+          "option_text": "Testing only middle values",
+          "is_correct": false
+        },
+        {
+          "option_id": 5064,
+          "option_text": "Testing random values",
+          "is_correct": false
+        },
+        {
+          "option_id": 5065,
+          "option_text": "Testing database boundaries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 951,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test private methods in unit testing?",
+      "options": [
+        {
+          "option_id": 5066,
+          "option_text": "Call them directly from tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5067,
+          "option_text": "Change them to public for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5068,
+          "option_text": "Test them through public methods that use them",
+          "is_correct": true
+        },
+        {
+          "option_id": 5069,
+          "option_text": "Private methods cannot be tested",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 952,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is test-driven bug fixing?",
+      "options": [
+        {
+          "option_id": 5070,
+          "option_text": "Write a failing test that reproduces the bug, then fix it",
+          "is_correct": true
+        },
+        {
+          "option_id": 5071,
+          "option_text": "Fix the bug first, then write tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5072,
+          "option_text": "Delete the buggy code",
+          "is_correct": false
+        },
+        {
+          "option_id": 5073,
+          "option_text": "Ignore the bug",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 953,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle flaky tests?",
+      "options": [
+        {
+          "option_id": 5074,
+          "option_text": "Identify root cause and fix them",
+          "is_correct": false
+        },
+        {
+          "option_id": 5075,
+          "option_text": "Remove or quarantine flaky tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5076,
+          "option_text": "Use retry mechanisms",
+          "is_correct": false
+        },
+        {
+          "option_id": 5077,
+          "option_text": "All of the above strategies for flaky tests",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 954,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is mutation testing?",
+      "options": [
+        {
+          "option_id": 5078,
+          "option_text": "Testing genetic mutations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5079,
+          "option_text": "Introducing small changes to code to see if tests catch them",
+          "is_correct": true
+        },
+        {
+          "option_id": 5080,
+          "option_text": "Testing code mutations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5081,
+          "option_text": "A type of performance testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 955,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure test effectiveness beyond code coverage?",
+      "options": [
+        {
+          "option_id": 5082,
+          "option_text": "Mutation testing and defect detection rate",
+          "is_correct": true
+        },
+        {
+          "option_id": 5083,
+          "option_text": "Number of tests written",
+          "is_correct": false
+        },
+        {
+          "option_id": 5084,
+          "option_text": "Time spent testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5085,
+          "option_text": "Lines of test code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 956,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test microservices integration?",
+      "options": [
+        {
+          "option_id": 5086,
+          "option_text": "Use contract testing and consumer-driven tests",
+          "is_correct": true
+        },
+        {
+          "option_id": 5087,
+          "option_text": "Test each service in isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5088,
+          "option_text": "Only test in production",
+          "is_correct": false
+        },
+        {
+          "option_id": 5089,
+          "option_text": "Use unit tests only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 957,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is consumer-driven contract testing?",
+      "options": [
+        {
+          "option_id": 5090,
+          "option_text": "Consumers define expectations for providers",
+          "is_correct": false
+        },
+        {
+          "option_id": 5091,
+          "option_text": "Ensures provider meets consumer requirements",
+          "is_correct": false
+        },
+        {
+          "option_id": 5092,
+          "option_text": "Tools like Pact implement this pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 5093,
+          "option_text": "All of the above describe consumer-driven contracts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 958,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test database migrations?",
+      "options": [
+        {
+          "option_id": 5094,
+          "option_text": "Run migrations in production without testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5095,
+          "option_text": "Test rollback and forward migrations in CI environment",
+          "is_correct": true
+        },
+        {
+          "option_id": 5096,
+          "option_text": "Migrations cannot be tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 5097,
+          "option_text": "Test only forward migrations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 959,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is component testing?",
+      "options": [
+        {
+          "option_id": 5098,
+          "option_text": "Testing individual functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5099,
+          "option_text": "Testing the entire system",
+          "is_correct": false
+        },
+        {
+          "option_id": 5100,
+          "option_text": "Testing a group of units as a component",
+          "is_correct": true
+        },
+        {
+          "option_id": 5101,
+          "option_text": "Testing hardware components",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 960,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle external dependencies in integration tests?",
+      "options": [
+        {
+          "option_id": 5102,
+          "option_text": "Use test doubles, test containers, or sandbox environments",
+          "is_correct": true
+        },
+        {
+          "option_id": 5103,
+          "option_text": "Use real production systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 5104,
+          "option_text": "Ignore external dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 5105,
+          "option_text": "Test without them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 961,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you practice TDD with legacy code?",
+      "options": [
+        {
+          "option_id": 5106,
+          "option_text": "Write characterization tests to capture existing behavior",
+          "is_correct": false
+        },
+        {
+          "option_id": 5107,
+          "option_text": "Refactor to make code testable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5108,
+          "option_text": "Add tests before making changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 5109,
+          "option_text": "All of the above approaches for legacy TDD",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 962,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between classic TDD and mockist TDD?",
+      "options": [
+        {
+          "option_id": 5110,
+          "option_text": "Classic uses mocks, mockist uses real objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 5111,
+          "option_text": "Classic uses real objects when possible, mockist uses mocks extensively",
+          "is_correct": true
+        },
+        {
+          "option_id": 5112,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 5113,
+          "option_text": "Mockist is for OOP, classic for functional",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 963,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you TDD a complex algorithm?",
+      "options": [
+        {
+          "option_id": 5114,
+          "option_text": "Start with simple cases and gradually add complexity",
+          "is_correct": true
+        },
+        {
+          "option_id": 5115,
+          "option_text": "Implement the whole algorithm first",
+          "is_correct": false
+        },
+        {
+          "option_id": 5116,
+          "option_text": "TDD does not work for algorithms",
+          "is_correct": false
+        },
+        {
+          "option_id": 5117,
+          "option_text": "Write all tests at once",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 964,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is triangulation in TDD?",
+      "options": [
+        {
+          "option_id": 5118,
+          "option_text": "Adding more test cases to drive general solution",
+          "is_correct": true
+        },
+        {
+          "option_id": 5119,
+          "option_text": "A geometry technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 5120,
+          "option_text": "Testing three things at once",
+          "is_correct": false
+        },
+        {
+          "option_id": 5121,
+          "option_text": "A refactoring technique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 965,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you know when to stop writing tests in TDD?",
+      "options": [
+        {
+          "option_id": 5122,
+          "option_text": "When all requirements are covered",
+          "is_correct": false
+        },
+        {
+          "option_id": 5123,
+          "option_text": "When confidence is high",
+          "is_correct": false
+        },
+        {
+          "option_id": 5124,
+          "option_text": "When no more tests fail",
+          "is_correct": false
+        },
+        {
+          "option_id": 5125,
+          "option_text": "All of the above stopping criteria",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 966,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the features of modern test frameworks?",
+      "options": [
+        {
+          "option_id": 5126,
+          "option_text": "Assertions, test runners, and reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 5127,
+          "option_text": "Only assertions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5128,
+          "option_text": "Only test runners",
+          "is_correct": false
+        },
+        {
+          "option_id": 5129,
+          "option_text": "Only reporting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 967,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you customize test framework behavior?",
+      "options": [
+        {
+          "option_id": 5130,
+          "option_text": "Using configuration files and extensions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5131,
+          "option_text": "Frameworks cannot be customized",
+          "is_correct": false
+        },
+        {
+          "option_id": 5132,
+          "option_text": "By editing framework source code",
+          "is_correct": false
+        },
+        {
+          "option_id": 5133,
+          "option_text": "Customization is not needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 968,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is test parallelization and how do you implement it?",
+      "options": [
+        {
+          "option_id": 5134,
+          "option_text": "Running tests concurrently to speed up execution",
+          "is_correct": true
+        },
+        {
+          "option_id": 5135,
+          "option_text": "Running tests sequentially",
+          "is_correct": false
+        },
+        {
+          "option_id": 5136,
+          "option_text": "Writing tests in parallel",
+          "is_correct": false
+        },
+        {
+          "option_id": 5137,
+          "option_text": "A testing technique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 969,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you integrate testing with CI/CD pipelines?",
+      "options": [
+        {
+          "option_id": 5138,
+          "option_text": "Run tests automatically on code changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 5139,
+          "option_text": "Fail builds on test failures",
+          "is_correct": false
+        },
+        {
+          "option_id": 5140,
+          "option_text": "Generate test reports in CI",
+          "is_correct": false
+        },
+        {
+          "option_id": 5141,
+          "option_text": "All of the above CI/CD testing practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 970,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are test reporting tools and how do you use them?",
+      "options": [
+        {
+          "option_id": 5142,
+          "option_text": "Tools that generate test execution reports",
+          "is_correct": true
+        },
+        {
+          "option_id": 5143,
+          "option_text": "Tools that write tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5144,
+          "option_text": "Tools that run tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5145,
+          "option_text": "Tools that delete tests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 971,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is property-based testing?",
+      "options": [
+        {
+          "option_id": 5146,
+          "option_text": "Testing properties of objects",
+          "is_correct": false
+        },
+        {
+          "option_id": 5147,
+          "option_text": "Testing real estate properties",
+          "is_correct": false
+        },
+        {
+          "option_id": 5148,
+          "option_text": "Testing that properties hold for many generated inputs",
+          "is_correct": true
+        },
+        {
+          "option_id": 5149,
+          "option_text": "A type of unit testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 972,
+      "subskill_id": 49,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test asynchronous code?",
+      "options": [
+        {
+          "option_id": 5150,
+          "option_text": "Use async test helpers, callbacks, or promises",
+          "is_correct": true
+        },
+        {
+          "option_id": 5151,
+          "option_text": "Test synchronously",
+          "is_correct": false
+        },
+        {
+          "option_id": 5152,
+          "option_text": "Asynchronous code cannot be tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 5153,
+          "option_text": "Ignore timing issues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 973,
+      "subskill_id": 50,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the transformation priority premise in TDD?",
+      "options": [
+        {
+          "option_id": 5154,
+          "option_text": "A guideline for choosing simpler transformations",
+          "is_correct": true
+        },
+        {
+          "option_id": 5155,
+          "option_text": "A TDD priority list",
+          "is_correct": false
+        },
+        {
+          "option_id": 5156,
+          "option_text": "A refactoring technique",
+          "is_correct": false
+        },
+        {
+          "option_id": 5157,
+          "option_text": "A test ordering strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 974,
+      "subskill_id": 51,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is test coverage tool integration?",
+      "options": [
+        {
+          "option_id": 5158,
+          "option_text": "Integrating coverage tools with build process",
+          "is_correct": true
+        },
+        {
+          "option_id": 5159,
+          "option_text": "Coverage tools are not integrated",
+          "is_correct": false
+        },
+        {
+          "option_id": 5160,
+          "option_text": "Manual coverage checking",
+          "is_correct": false
+        },
+        {
+          "option_id": 5161,
+          "option_text": "Coverage integration is automatic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 975,
+      "subskill_id": 48,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is snapshot testing and when would you use it?",
+      "options": [
+        {
+          "option_id": 5162,
+          "option_text": "Testing UI components by comparing saved snapshots",
+          "is_correct": true
+        },
+        {
+          "option_id": 5163,
+          "option_text": "Testing database snapshots",
+          "is_correct": false
+        },
+        {
+          "option_id": 5164,
+          "option_text": "Testing backup snapshots",
+          "is_correct": false
+        },
+        {
+          "option_id": 5165,
+          "option_text": "Testing with camera snapshots",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 976,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you test concurrent or multithreaded code?",
+      "options": [
+        {
+          "option_id": 5166,
+          "option_text": "Test sequentially only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5167,
+          "option_text": "Use deterministic testing, stress testing, and thread-safe assertions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5168,
+          "option_text": "Concurrent code cannot be tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 5169,
+          "option_text": "Test only in production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 977,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the strategies for testing random or non-deterministic code?",
+      "options": [
+        {
+          "option_id": 5170,
+          "option_text": "Use fixed seeds and property-based testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5171,
+          "option_text": "Test statistical distributions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5172,
+          "option_text": "Mock random generators",
+          "is_correct": false
+        },
+        {
+          "option_id": 5173,
+          "option_text": "All of the above strategies for random code",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 978,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you test performance and load at unit level?",
+      "options": [
+        {
+          "option_id": 5174,
+          "option_text": "Use benchmarks and measure execution time",
+          "is_correct": true
+        },
+        {
+          "option_id": 5175,
+          "option_text": "Performance cannot be tested at unit level",
+          "is_correct": false
+        },
+        {
+          "option_id": 5176,
+          "option_text": "Only test at system level",
+          "is_correct": false
+        },
+        {
+          "option_id": 5177,
+          "option_text": "Use standard unit tests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 979,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is fuzz testing and how do you implement it?",
+      "options": [
+        {
+          "option_id": 5178,
+          "option_text": "Testing with invalid or random inputs to find crashes",
+          "is_correct": true
+        },
+        {
+          "option_id": 5179,
+          "option_text": "Testing with valid inputs only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5180,
+          "option_text": "A type of security testing only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5181,
+          "option_text": "Testing fuzzy logic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 980,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you test security vulnerabilities at unit level?",
+      "options": [
+        {
+          "option_id": 5182,
+          "option_text": "Test for injection flaws, boundary checks, and input validation",
+          "is_correct": true
+        },
+        {
+          "option_id": 5183,
+          "option_text": "Security cannot be tested at unit level",
+          "is_correct": false
+        },
+        {
+          "option_id": 5184,
+          "option_text": "Only integration tests catch security issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 5185,
+          "option_text": "Security testing is not needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 981,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a testing strategy for a distributed system?",
+      "options": [
+        {
+          "option_id": 5186,
+          "option_text": "Contract testing, integration testing, and chaos engineering",
+          "is_correct": true
+        },
+        {
+          "option_id": 5187,
+          "option_text": "Only unit testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5188,
+          "option_text": "Only end-to-end testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5189,
+          "option_text": "Test each service in isolation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 982,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is chaos engineering and how does it relate to testing?",
+      "options": [
+        {
+          "option_id": 5190,
+          "option_text": "Intentionally injecting failures to test system resilience",
+          "is_correct": true
+        },
+        {
+          "option_id": 5191,
+          "option_text": "Creating chaos in production",
+          "is_correct": false
+        },
+        {
+          "option_id": 5192,
+          "option_text": "A testing methodology",
+          "is_correct": false
+        },
+        {
+          "option_id": 5193,
+          "option_text": "Random testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 983,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you test event-driven architectures?",
+      "options": [
+        {
+          "option_id": 5194,
+          "option_text": "Test event producers, consumers, and event schemas",
+          "is_correct": true
+        },
+        {
+          "option_id": 5195,
+          "option_text": "Test only the events",
+          "is_correct": false
+        },
+        {
+          "option_id": 5196,
+          "option_text": "Test only the consumers",
+          "is_correct": false
+        },
+        {
+          "option_id": 5197,
+          "option_text": "Event-driven systems cannot be tested",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 984,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the challenges of testing in a microservices environment?",
+      "options": [
+        {
+          "option_id": 5198,
+          "option_text": "Network latency, service discovery, and data consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 5199,
+          "option_text": "No challenges exist",
+          "is_correct": false
+        },
+        {
+          "option_id": 5200,
+          "option_text": "Only database challenges",
+          "is_correct": false
+        },
+        {
+          "option_id": 5201,
+          "option_text": "Only deployment challenges",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 985,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement canary testing in production?",
+      "options": [
+        {
+          "option_id": 5202,
+          "option_text": "Roll out to small user subset and monitor",
+          "is_correct": false
+        },
+        {
+          "option_id": 5203,
+          "option_text": "Compare metrics against baseline",
+          "is_correct": false
+        },
+        {
+          "option_id": 5204,
+          "option_text": "Automated rollback on issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 5205,
+          "option_text": "All of the above canary testing practices",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 986,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale TDD across large development teams?",
+      "options": [
+        {
+          "option_id": 5206,
+          "option_text": "Establish coding standards and test conventions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5207,
+          "option_text": "TDD cannot scale",
+          "is_correct": false
+        },
+        {
+          "option_id": 5208,
+          "option_text": "Each team does their own approach",
+          "is_correct": false
+        },
+        {
+          "option_id": 5209,
+          "option_text": "Skip TDD for large teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 987,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the limits of TDD and when not to use it?",
+      "options": [
+        {
+          "option_id": 5210,
+          "option_text": "Exploratory development, prototyping, or UI design",
+          "is_correct": true
+        },
+        {
+          "option_id": 5211,
+          "option_text": "Always use TDD",
+          "is_correct": false
+        },
+        {
+          "option_id": 5212,
+          "option_text": "Never use TDD",
+          "is_correct": false
+        },
+        {
+          "option_id": 5213,
+          "option_text": "TDD has no limits",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 988,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you combine TDD with other development methodologies?",
+      "options": [
+        {
+          "option_id": 5214,
+          "option_text": "TDD with Agile, BDD, or pair programming",
+          "is_correct": true
+        },
+        {
+          "option_id": 5215,
+          "option_text": "TDD cannot be combined",
+          "is_correct": false
+        },
+        {
+          "option_id": 5216,
+          "option_text": "TDD replaces all methodologies",
+          "is_correct": false
+        },
+        {
+          "option_id": 5217,
+          "option_text": "TDD is standalone only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 989,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of TDD in DevOps and continuous delivery?",
+      "options": [
+        {
+          "option_id": 5218,
+          "option_text": "Provides confidence for automated deployments",
+          "is_correct": false
+        },
+        {
+          "option_id": 5219,
+          "option_text": "Enables continuous testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5220,
+          "option_text": "Reduces regression risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 5221,
+          "option_text": "All of the above TDD roles in DevOps",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 990,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure ROI of TDD in software projects?",
+      "options": [
+        {
+          "option_id": 5222,
+          "option_text": "Track defect rates, maintenance costs, and development speed",
+          "is_correct": true
+        },
+        {
+          "option_id": 5223,
+          "option_text": "ROI cannot be measured",
+          "is_correct": false
+        },
+        {
+          "option_id": 5224,
+          "option_text": "Count lines of test code",
+          "is_correct": false
+        },
+        {
+          "option_id": 5225,
+          "option_text": "Measure time spent testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 991,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a custom test framework?",
+      "options": [
+        {
+          "option_id": 5226,
+          "option_text": "Implement test discovery, assertions, and reporting",
+          "is_correct": true
+        },
+        {
+          "option_id": 5227,
+          "option_text": "Use existing frameworks only",
+          "is_correct": false
+        },
+        {
+          "option_id": 5228,
+          "option_text": "Custom frameworks are not needed",
+          "is_correct": false
+        },
+        {
+          "option_id": 5229,
+          "option_text": "Copy an existing framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 992,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the architectural considerations for test frameworks?",
+      "options": [
+        {
+          "option_id": 5230,
+          "option_text": "Extensibility, performance, and ease of use",
+          "is_correct": true
+        },
+        {
+          "option_id": 5231,
+          "option_text": "Only performance matters",
+          "is_correct": false
+        },
+        {
+          "option_id": 5232,
+          "option_text": "Only ease of use matters",
+          "is_correct": false
+        },
+        {
+          "option_id": 5233,
+          "option_text": "No architecture needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 993,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement test data management across frameworks?",
+      "options": [
+        {
+          "option_id": 5234,
+          "option_text": "Use data factories, fixtures, and data builders",
+          "is_correct": true
+        },
+        {
+          "option_id": 5235,
+          "option_text": "Hardcode test data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5236,
+          "option_text": "Use real production data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5237,
+          "option_text": "Test data management is not needed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 994,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is test environment virtualization and how does it work?",
+      "options": [
+        {
+          "option_id": 5238,
+          "option_text": "Simulating test environments to reduce costs",
+          "is_correct": true
+        },
+        {
+          "option_id": 5239,
+          "option_text": "Virtual machines for testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5240,
+          "option_text": "Cloud-based testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5241,
+          "option_text": "Containerized tests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 995,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you evaluate and choose test frameworks for enterprise?",
+      "options": [
+        {
+          "option_id": 5242,
+          "option_text": "Consider community, features, and integration capabilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 5243,
+          "option_text": "Choose the most popular one",
+          "is_correct": false
+        },
+        {
+          "option_id": 5244,
+          "option_text": "Build your own",
+          "is_correct": false
+        },
+        {
+          "option_id": 5245,
+          "option_text": "Use whatever developers prefer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 996,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you test machine learning models?",
+      "options": [
+        {
+          "option_id": 5246,
+          "option_text": "Test data quality, model accuracy, and bias",
+          "is_correct": false
+        },
+        {
+          "option_id": 5247,
+          "option_text": "Test training pipeline and model serving",
+          "is_correct": false
+        },
+        {
+          "option_id": 5248,
+          "option_text": "Test against baseline models",
+          "is_correct": false
+        },
+        {
+          "option_id": 5249,
+          "option_text": "All of the above ML testing approaches",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 997,
+      "subskill_id": 49,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is contract testing in a polyglot microservices environment?",
+      "options": [
+        {
+          "option_id": 5250,
+          "option_text": "Testing service contracts across different languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 5251,
+          "option_text": "Testing only in one language",
+          "is_correct": false
+        },
+        {
+          "option_id": 5252,
+          "option_text": "Contract testing is language-specific",
+          "is_correct": false
+        },
+        {
+          "option_id": 5253,
+          "option_text": "Polyglot environments cannot use contract testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 998,
+      "subskill_id": 50,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does TDD apply to infrastructure as code?",
+      "options": [
+        {
+          "option_id": 5254,
+          "option_text": "Write tests for infrastructure modules before creating them",
+          "is_correct": true
+        },
+        {
+          "option_id": 5255,
+          "option_text": "Infrastructure cannot be tested",
+          "is_correct": false
+        },
+        {
+          "option_id": 5256,
+          "option_text": "Test after deployment",
+          "is_correct": false
+        },
+        {
+          "option_id": 5257,
+          "option_text": "TDD does not apply to infrastructure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 999,
+      "subskill_id": 51,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement test impact analysis?",
+      "options": [
+        {
+          "option_id": 5258,
+          "option_text": "Analyze code changes to determine which tests to run",
+          "is_correct": true
+        },
+        {
+          "option_id": 5259,
+          "option_text": "Run all tests every time",
+          "is_correct": false
+        },
+        {
+          "option_id": 5260,
+          "option_text": "Run no tests",
+          "is_correct": false
+        },
+        {
+          "option_id": 5261,
+          "option_text": "Manual test selection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1000,
+      "subskill_id": 48,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is differential testing?",
+      "options": [
+        {
+          "option_id": 5262,
+          "option_text": "Comparing outputs of different implementations",
+          "is_correct": true
+        },
+        {
+          "option_id": 5263,
+          "option_text": "Testing differences between versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5264,
+          "option_text": "A type of regression testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 5265,
+          "option_text": "Testing with different inputs",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

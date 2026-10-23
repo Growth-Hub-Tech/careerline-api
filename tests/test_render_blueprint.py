@@ -58,3 +58,14 @@ def test_the_test_server_serves_the_sample_api_and_reads_cors_from_the_dashboard
     assert web["SAMPLE_API_ENABLED"]["value"] == "true"
     assert web["APP_ENV"]["value"] != "production"
     assert web["CORS_ORIGINS"]["sync"] is False
+
+
+def test_the_test_server_loads_the_seed_files_on_every_deploy():
+    start = (Path(__file__).resolve().parents[1] / "scripts/start.sh").read_text()
+    assert "python -m app.db.seed" in start
+    assert (
+        start.index("alembic upgrade head")
+        < start.index("app.db.seed")
+        < start.index("exec uvicorn")
+    )
+    assert _env(_service("web"))["SEED_ON_START"]["value"] == "true"

@@ -1,0 +1,2906 @@
+{
+  "skill_id": 31,
+  "skill_name": "Sales Fundamentals",
+  "questions": [
+    {
+      "question_id": 3001,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14266,
+          "option_text": "A visual representation of the stages a lead goes through to become a customer",
+          "is_correct": true
+        },
+        {
+          "option_id": 14267,
+          "option_text": "A list of all customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 14268,
+          "option_text": "A sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 14269,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3002,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the stages of a typical sales pipeline?",
+      "options": [
+        {
+          "option_id": 14270,
+          "option_text": "Prospecting, Qualification, Proposal, Closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14271,
+          "option_text": "Only Prospecting and Closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14272,
+          "option_text": "Only Qualification and Proposal",
+          "is_correct": false
+        },
+        {
+          "option_id": 14273,
+          "option_text": "Marketing, Sales, Support",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3003,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14274,
+          "option_text": "To track and manage sales opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 14275,
+          "option_text": "To track marketing campaigns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14276,
+          "option_text": "To manage customer support",
+          "is_correct": false
+        },
+        {
+          "option_id": 14277,
+          "option_text": "To manage employee performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3004,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales process?",
+      "options": [
+        {
+          "option_id": 14278,
+          "option_text": "A set of steps that a salesperson follows to close a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14279,
+          "option_text": "A list of all customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 14280,
+          "option_text": "A sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 14281,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3005,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a sales process and a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14282,
+          "option_text": "A sales process is the steps; a sales pipeline is the visual representation",
+          "is_correct": true
+        },
+        {
+          "option_id": 14283,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 14284,
+          "option_text": "A sales pipeline is the steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 14285,
+          "option_text": "A sales process is the visual representation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3006,
+      "subskill_id": 142,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a sales funnel?",
+      "options": [
+        {
+          "option_id": 14286,
+          "option_text": "A visual representation of the customer journey from awareness to purchase",
+          "is_correct": true
+        },
+        {
+          "option_id": 14287,
+          "option_text": "A list of all customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 14288,
+          "option_text": "A sales report",
+          "is_correct": false
+        },
+        {
+          "option_id": 14289,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3007,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is prospecting in sales?",
+      "options": [
+        {
+          "option_id": 14290,
+          "option_text": "The process of identifying potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 14291,
+          "option_text": "The process of closing deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14292,
+          "option_text": "The process of managing accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14293,
+          "option_text": "The process of marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3008,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of prospecting?",
+      "options": [
+        {
+          "option_id": 14294,
+          "option_text": "To build a list of potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 14295,
+          "option_text": "To close deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14296,
+          "option_text": "To manage accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14297,
+          "option_text": "To create marketing campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3009,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead in sales?",
+      "options": [
+        {
+          "option_id": 14298,
+          "option_text": "A potential customer who has shown interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 14299,
+          "option_text": "A current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14300,
+          "option_text": "A former customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14301,
+          "option_text": "A competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3010,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a prospect in sales?",
+      "options": [
+        {
+          "option_id": 14302,
+          "option_text": "A potential customer who is a good fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 14303,
+          "option_text": "A current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14304,
+          "option_text": "A former customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14305,
+          "option_text": "A competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3011,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cold call?",
+      "options": [
+        {
+          "option_id": 14306,
+          "option_text": "A call to a potential customer who has not expressed interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 14307,
+          "option_text": "A call to a current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14308,
+          "option_text": "A call to a former customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14309,
+          "option_text": "A call to a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3012,
+      "subskill_id": 143,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a warm lead?",
+      "options": [
+        {
+          "option_id": 14310,
+          "option_text": "A lead that has shown interest and is more likely to convert",
+          "is_correct": true
+        },
+        {
+          "option_id": 14311,
+          "option_text": "A lead that has not shown interest",
+          "is_correct": false
+        },
+        {
+          "option_id": 14312,
+          "option_text": "A current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14313,
+          "option_text": "A former customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3013,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is lead qualification?",
+      "options": [
+        {
+          "option_id": 14314,
+          "option_text": "The process of determining if a lead is a good fit",
+          "is_correct": true
+        },
+        {
+          "option_id": 14315,
+          "option_text": "The process of closing a deal",
+          "is_correct": false
+        },
+        {
+          "option_id": 14316,
+          "option_text": "The process of prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14317,
+          "option_text": "The process of managing accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3014,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of lead qualification?",
+      "options": [
+        {
+          "option_id": 14318,
+          "option_text": "To focus on leads that are most likely to convert",
+          "is_correct": true
+        },
+        {
+          "option_id": 14319,
+          "option_text": "To close deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14320,
+          "option_text": "To prospect new leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14321,
+          "option_text": "To manage accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3015,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is BANT in lead qualification?",
+      "options": [
+        {
+          "option_id": 14322,
+          "option_text": "Budget, Authority, Need, Timeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 14323,
+          "option_text": "Budget, Authority, Need, Timing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14324,
+          "option_text": "Budget, Authority, Need, Time",
+          "is_correct": false
+        },
+        {
+          "option_id": 14325,
+          "option_text": "Budget, Authority, Need, Target",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3016,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is CHAMP in lead qualification?",
+      "options": [
+        {
+          "option_id": 14326,
+          "option_text": "Challenges, Authority, Money, Prioritization",
+          "is_correct": true
+        },
+        {
+          "option_id": 14327,
+          "option_text": "Challenges, Authority, Money, Process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14328,
+          "option_text": "Challenges, Authority, Money, People",
+          "is_correct": false
+        },
+        {
+          "option_id": 14329,
+          "option_text": "Challenges, Authority, Money, Product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3017,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a qualified lead?",
+      "options": [
+        {
+          "option_id": 14330,
+          "option_text": "A lead that meets the qualification criteria",
+          "is_correct": true
+        },
+        {
+          "option_id": 14331,
+          "option_text": "A lead that does not meet the qualification criteria",
+          "is_correct": false
+        },
+        {
+          "option_id": 14332,
+          "option_text": "A current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14333,
+          "option_text": "A former customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3018,
+      "subskill_id": 144,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an unqualified lead?",
+      "options": [
+        {
+          "option_id": 14334,
+          "option_text": "A lead that does not meet the qualification criteria",
+          "is_correct": true
+        },
+        {
+          "option_id": 14335,
+          "option_text": "A lead that meets the qualification criteria",
+          "is_correct": false
+        },
+        {
+          "option_id": 14336,
+          "option_text": "A current customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 14337,
+          "option_text": "A former customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3019,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is closing in sales?",
+      "options": [
+        {
+          "option_id": 14338,
+          "option_text": "The final step of the sales process where the deal is closed",
+          "is_correct": true
+        },
+        {
+          "option_id": 14339,
+          "option_text": "The first step of the sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14340,
+          "option_text": "The middle step of the sales process",
+          "is_correct": false
+        },
+        {
+          "option_id": 14341,
+          "option_text": "The marketing step",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3020,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of closing?",
+      "options": [
+        {
+          "option_id": 14342,
+          "option_text": "To secure the deal and finalize the sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14343,
+          "option_text": "To prospect new leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14344,
+          "option_text": "To qualify leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14345,
+          "option_text": "To market the product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3021,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a closing technique?",
+      "options": [
+        {
+          "option_id": 14346,
+          "option_text": "A method used to close a sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14347,
+          "option_text": "A method used to prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 14348,
+          "option_text": "A method used to qualify leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14349,
+          "option_text": "A method used to market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3022,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the assumptive close?",
+      "options": [
+        {
+          "option_id": 14350,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": true
+        },
+        {
+          "option_id": 14351,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 14352,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        },
+        {
+          "option_id": 14353,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3023,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the summary close?",
+      "options": [
+        {
+          "option_id": 14354,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": true
+        },
+        {
+          "option_id": 14355,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 14356,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        },
+        {
+          "option_id": 14357,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3024,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the urgency close?",
+      "options": [
+        {
+          "option_id": 14358,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": true
+        },
+        {
+          "option_id": 14359,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 14360,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 14361,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3025,
+      "subskill_id": 145,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the alternative close?",
+      "options": [
+        {
+          "option_id": 14362,
+          "option_text": "A closing technique where the salesperson offers alternatives",
+          "is_correct": true
+        },
+        {
+          "option_id": 14363,
+          "option_text": "A closing technique where the salesperson assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 14364,
+          "option_text": "A closing technique where the salesperson summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 14365,
+          "option_text": "A closing technique where the salesperson creates urgency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3026,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you build a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14366,
+          "option_text": "By identifying stages, defining criteria, and tracking opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 14367,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14368,
+          "option_text": "By ignoring stages",
+          "is_correct": false
+        },
+        {
+          "option_id": 14369,
+          "option_text": "By copying from another team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3027,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you manage a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14370,
+          "option_text": "By tracking deal progress, updating stages, and forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14371,
+          "option_text": "By ignoring the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14372,
+          "option_text": "By not updating stages",
+          "is_correct": false
+        },
+        {
+          "option_id": 14373,
+          "option_text": "By deleting deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3028,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is pipeline velocity?",
+      "options": [
+        {
+          "option_id": 14374,
+          "option_text": "The speed at which deals move through the pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 14375,
+          "option_text": "The number of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14376,
+          "option_text": "The value of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14377,
+          "option_text": "The age of deals in the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3029,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is pipeline coverage?",
+      "options": [
+        {
+          "option_id": 14378,
+          "option_text": "The ratio of pipeline value to sales quota",
+          "is_correct": true
+        },
+        {
+          "option_id": 14379,
+          "option_text": "The number of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14380,
+          "option_text": "The speed of deals in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14381,
+          "option_text": "The age of deals in the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3030,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you forecast from a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14382,
+          "option_text": "By analyzing pipeline data and trends",
+          "is_correct": true
+        },
+        {
+          "option_id": 14383,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14384,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14385,
+          "option_text": "By copying from another team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3031,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prospect for new leads?",
+      "options": [
+        {
+          "option_id": 14386,
+          "option_text": "By identifying ideal customer profiles and using multiple channels",
+          "is_correct": true
+        },
+        {
+          "option_id": 14387,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14388,
+          "option_text": "By ignoring channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 14389,
+          "option_text": "By copying from another team",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3032,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prospecting strategy?",
+      "options": [
+        {
+          "option_id": 14390,
+          "option_text": "A plan for finding and engaging potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 14391,
+          "option_text": "A plan for closing deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14392,
+          "option_text": "A plan for managing accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14393,
+          "option_text": "A plan for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3033,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a prospecting tool?",
+      "options": [
+        {
+          "option_id": 14394,
+          "option_text": "A tool used for prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14395,
+          "option_text": "A tool used for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14396,
+          "option_text": "A tool used for managing accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14397,
+          "option_text": "A tool used for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3034,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is social selling?",
+      "options": [
+        {
+          "option_id": 14398,
+          "option_text": "The use of social media to find and engage prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 14399,
+          "option_text": "The use of email to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 14400,
+          "option_text": "The use of phone to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 14401,
+          "option_text": "The use of direct mail to find and engage prospects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3035,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is referral selling?",
+      "options": [
+        {
+          "option_id": 14402,
+          "option_text": "The use of referrals to find and engage prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 14403,
+          "option_text": "The use of social media to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 14404,
+          "option_text": "The use of email to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 14405,
+          "option_text": "The use of phone to find and engage prospects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3036,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you qualify a lead?",
+      "options": [
+        {
+          "option_id": 14406,
+          "option_text": "By using a qualification framework like BANT or CHAMP",
+          "is_correct": true
+        },
+        {
+          "option_id": 14407,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14408,
+          "option_text": "By ignoring qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14409,
+          "option_text": "By qualifying all leads the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3037,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a qualification framework?",
+      "options": [
+        {
+          "option_id": 14410,
+          "option_text": "A structured method for qualifying leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14411,
+          "option_text": "A structured method for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14412,
+          "option_text": "A structured method for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14413,
+          "option_text": "A structured method for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3038,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead scoring system?",
+      "options": [
+        {
+          "option_id": 14414,
+          "option_text": "A system for scoring leads based on their fit and interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 14415,
+          "option_text": "A system for scoring deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14416,
+          "option_text": "A system for scoring accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14417,
+          "option_text": "A system for scoring marketing campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3039,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prioritize leads?",
+      "options": [
+        {
+          "option_id": 14418,
+          "option_text": "By focusing on high-value leads that are most likely to convert",
+          "is_correct": true
+        },
+        {
+          "option_id": 14419,
+          "option_text": "By treating all leads equally",
+          "is_correct": false
+        },
+        {
+          "option_id": 14420,
+          "option_text": "By ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14421,
+          "option_text": "By deleting leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3040,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a sales-qualified lead (SQL)?",
+      "options": [
+        {
+          "option_id": 14422,
+          "option_text": "A lead that has been qualified by sales",
+          "is_correct": true
+        },
+        {
+          "option_id": 14423,
+          "option_text": "A lead that has been qualified by marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14424,
+          "option_text": "A lead that has not been qualified",
+          "is_correct": false
+        },
+        {
+          "option_id": 14425,
+          "option_text": "A current customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3041,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you close a sale?",
+      "options": [
+        {
+          "option_id": 14426,
+          "option_text": "By using a closing framework and handling objections",
+          "is_correct": true
+        },
+        {
+          "option_id": 14427,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14428,
+          "option_text": "By ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 14429,
+          "option_text": "By avoiding the close",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3042,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing strategy?",
+      "options": [
+        {
+          "option_id": 14430,
+          "option_text": "A plan for closing a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14431,
+          "option_text": "A plan for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14432,
+          "option_text": "A plan for qualifying leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14433,
+          "option_text": "A plan for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3043,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is objection handling in closing?",
+      "options": [
+        {
+          "option_id": 14434,
+          "option_text": "The process of addressing a prospect's concerns before closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14435,
+          "option_text": "The process of ignoring a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14436,
+          "option_text": "The process of dismissing a prospect's concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14437,
+          "option_text": "The process of avoiding a prospect's concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3044,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a closing script?",
+      "options": [
+        {
+          "option_id": 14438,
+          "option_text": "A script used to close a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14439,
+          "option_text": "A script used to prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 14440,
+          "option_text": "A script used to qualify leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14441,
+          "option_text": "A script used to market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3045,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you handle closing anxiety?",
+      "options": [
+        {
+          "option_id": 14442,
+          "option_text": "By building confidence, handling objections, and asking for the sale",
+          "is_correct": true
+        },
+        {
+          "option_id": 14443,
+          "option_text": "By avoiding the close",
+          "is_correct": false
+        },
+        {
+          "option_id": 14444,
+          "option_text": "By ignoring objections",
+          "is_correct": false
+        },
+        {
+          "option_id": 14445,
+          "option_text": "By not asking for the sale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3046,
+      "subskill_id": 142,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a pipeline review?",
+      "options": [
+        {
+          "option_id": 14446,
+          "option_text": "A meeting to review the pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 14447,
+          "option_text": "A meeting to review marketing campaigns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14448,
+          "option_text": "A meeting to review customer support",
+          "is_correct": false
+        },
+        {
+          "option_id": 14449,
+          "option_text": "A meeting to review employee performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3047,
+      "subskill_id": 143,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email outreach?",
+      "options": [
+        {
+          "option_id": 14450,
+          "option_text": "A outreach method using email to cold prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 14451,
+          "option_text": "A outreach method using social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 14452,
+          "option_text": "A outreach method using phone",
+          "is_correct": false
+        },
+        {
+          "option_id": 14453,
+          "option_text": "A outreach method using direct mail",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3048,
+      "subskill_id": 144,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a marketing-qualified lead (MQL)?",
+      "options": [
+        {
+          "option_id": 14454,
+          "option_text": "A lead that has been qualified by marketing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14455,
+          "option_text": "A lead that has been qualified by sales",
+          "is_correct": false
+        },
+        {
+          "option_id": 14456,
+          "option_text": "A lead that has not been qualified",
+          "is_correct": false
+        },
+        {
+          "option_id": 14457,
+          "option_text": "A current customer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3049,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a trial close?",
+      "options": [
+        {
+          "option_id": 14458,
+          "option_text": "A closing technique that tests the prospect's readiness to buy",
+          "is_correct": true
+        },
+        {
+          "option_id": 14459,
+          "option_text": "A closing technique that assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 14460,
+          "option_text": "A closing technique that summarizes the benefits",
+          "is_correct": false
+        },
+        {
+          "option_id": 14461,
+          "option_text": "A closing technique that creates urgency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3050,
+      "subskill_id": 145,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a soft close?",
+      "options": [
+        {
+          "option_id": 14462,
+          "option_text": "A closing technique that is gentle and low-pressure",
+          "is_correct": true
+        },
+        {
+          "option_id": 14463,
+          "option_text": "A closing technique that is aggressive and high-pressure",
+          "is_correct": false
+        },
+        {
+          "option_id": 14464,
+          "option_text": "A closing technique that assumes the deal is done",
+          "is_correct": false
+        },
+        {
+          "option_id": 14465,
+          "option_text": "A closing technique that creates urgency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3051,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14466,
+          "option_text": "By removing bottlenecks, improving conversion rates, and forecasting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14467,
+          "option_text": "By ignoring optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14468,
+          "option_text": "By deleting deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14469,
+          "option_text": "By hiding deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3052,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline management best practice?",
+      "options": [
+        {
+          "option_id": 14470,
+          "option_text": "Regular pipeline reviews, accurate forecasting, and data hygiene",
+          "is_correct": true
+        },
+        {
+          "option_id": 14471,
+          "option_text": "Ignoring the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14472,
+          "option_text": "Not updating stages",
+          "is_correct": false
+        },
+        {
+          "option_id": 14473,
+          "option_text": "Deleting deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3053,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a pipeline leakage?",
+      "options": [
+        {
+          "option_id": 14474,
+          "option_text": "Deals that leak out of the pipeline without closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14475,
+          "option_text": "Deals that close successfully",
+          "is_correct": false
+        },
+        {
+          "option_id": 14476,
+          "option_text": "Deals that are in the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14477,
+          "option_text": "Deals that are won",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3054,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you fix pipeline leakage?",
+      "options": [
+        {
+          "option_id": 14478,
+          "option_text": "By identifying root causes and implementing fixes",
+          "is_correct": true
+        },
+        {
+          "option_id": 14479,
+          "option_text": "By ignoring the leakage",
+          "is_correct": false
+        },
+        {
+          "option_id": 14480,
+          "option_text": "By hiding the leakage",
+          "is_correct": false
+        },
+        {
+          "option_id": 14481,
+          "option_text": "By deleting the leakage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3055,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline forecasting accuracy?",
+      "options": [
+        {
+          "option_id": 14482,
+          "option_text": "The accuracy of pipeline forecasts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14483,
+          "option_text": "The speed of pipeline deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14484,
+          "option_text": "The number of pipeline deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14485,
+          "option_text": "The value of pipeline deals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3056,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you scale prospecting?",
+      "options": [
+        {
+          "option_id": 14486,
+          "option_text": "By using automation, multi-channel outreach, and data enrichment",
+          "is_correct": true
+        },
+        {
+          "option_id": 14487,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14488,
+          "option_text": "By deleting prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14489,
+          "option_text": "By hiding prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3057,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prospecting sequence?",
+      "options": [
+        {
+          "option_id": 14490,
+          "option_text": "A series of touchpoints to engage prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 14491,
+          "option_text": "A single touchpoint",
+          "is_correct": false
+        },
+        {
+          "option_id": 14492,
+          "option_text": "A tool for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14493,
+          "option_text": "A strategy for closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3058,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is multi-channel prospecting?",
+      "options": [
+        {
+          "option_id": 14494,
+          "option_text": "Using multiple channels like email, social media, and phone",
+          "is_correct": true
+        },
+        {
+          "option_id": 14495,
+          "option_text": "Using only one channel",
+          "is_correct": false
+        },
+        {
+          "option_id": 14496,
+          "option_text": "Using no channels",
+          "is_correct": false
+        },
+        {
+          "option_id": 14497,
+          "option_text": "Using only email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3059,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is account-based prospecting?",
+      "options": [
+        {
+          "option_id": 14498,
+          "option_text": "Prospecting targeted at specific accounts",
+          "is_correct": true
+        },
+        {
+          "option_id": 14499,
+          "option_text": "Prospecting targeted at individual leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14500,
+          "option_text": "Prospecting targeted at all leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14501,
+          "option_text": "Prospecting targeted at marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3060,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure prospecting success?",
+      "options": [
+        {
+          "option_id": 14502,
+          "option_text": "By tracking conversion rates, response rates, and pipeline contribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 14503,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14504,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 14505,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3061,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you implement lead scoring?",
+      "options": [
+        {
+          "option_id": 14506,
+          "option_text": "By creating a scoring model based on lead attributes and behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 14507,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14508,
+          "option_text": "By ignoring scoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 14509,
+          "option_text": "By deleting scoring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3062,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead qualification framework?",
+      "options": [
+        {
+          "option_id": 14510,
+          "option_text": "A framework for evaluating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14511,
+          "option_text": "A framework for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14512,
+          "option_text": "A framework for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14513,
+          "option_text": "A framework for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3063,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you align marketing and sales qualification?",
+      "options": [
+        {
+          "option_id": 14514,
+          "option_text": "By defining common criteria and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 14515,
+          "option_text": "By ignoring alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14516,
+          "option_text": "By deleting alignment",
+          "is_correct": false
+        },
+        {
+          "option_id": 14517,
+          "option_text": "By hiding alignment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3064,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead qualification process?",
+      "options": [
+        {
+          "option_id": 14518,
+          "option_text": "A process for qualifying leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14519,
+          "option_text": "A process for closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14520,
+          "option_text": "A process for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14521,
+          "option_text": "A process for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3065,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure lead qualification effectiveness?",
+      "options": [
+        {
+          "option_id": 14522,
+          "option_text": "By tracking conversion rates and win rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 14523,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14524,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 14525,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3066,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you develop a closing strategy?",
+      "options": [
+        {
+          "option_id": 14526,
+          "option_text": "By analyzing deal data and building a structured approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 14527,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14528,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14529,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3067,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing framework?",
+      "options": [
+        {
+          "option_id": 14530,
+          "option_text": "A structured approach to closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14531,
+          "option_text": "A structured approach to prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14532,
+          "option_text": "A structured approach to qualifying",
+          "is_correct": false
+        },
+        {
+          "option_id": 14533,
+          "option_text": "A structured approach to marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3068,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle closing objections?",
+      "options": [
+        {
+          "option_id": 14534,
+          "option_text": "By listening, acknowledging, and addressing concerns",
+          "is_correct": true
+        },
+        {
+          "option_id": 14535,
+          "option_text": "By ignoring concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14536,
+          "option_text": "By dismissing concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 14537,
+          "option_text": "By avoiding concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3069,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing timeline?",
+      "options": [
+        {
+          "option_id": 14538,
+          "option_text": "A timeline for closing a deal",
+          "is_correct": true
+        },
+        {
+          "option_id": 14539,
+          "option_text": "A timeline for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14540,
+          "option_text": "A timeline for qualifying",
+          "is_correct": false
+        },
+        {
+          "option_id": 14541,
+          "option_text": "A timeline for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3070,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure closing success?",
+      "options": [
+        {
+          "option_id": 14542,
+          "option_text": "By tracking win rates, deal size, and sales cycle length",
+          "is_correct": true
+        },
+        {
+          "option_id": 14543,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14544,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 14545,
+          "option_text": "By hiding metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3071,
+      "subskill_id": 142,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is pipeline reporting?",
+      "options": [
+        {
+          "option_id": 14546,
+          "option_text": "A report on pipeline performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14547,
+          "option_text": "A report on marketing performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 14548,
+          "option_text": "A report on customer support",
+          "is_correct": false
+        },
+        {
+          "option_id": 14549,
+          "option_text": "A report on employee performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3072,
+      "subskill_id": 143,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a prospecting automation?",
+      "options": [
+        {
+          "option_id": 14550,
+          "option_text": "The use of tools to automate prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14551,
+          "option_text": "The use of tools to automate closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14552,
+          "option_text": "The use of tools to automate qualifying",
+          "is_correct": false
+        },
+        {
+          "option_id": 14553,
+          "option_text": "The use of tools to automate marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3073,
+      "subskill_id": 144,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is lead qualification scoring?",
+      "options": [
+        {
+          "option_id": 14554,
+          "option_text": "A system for scoring leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14555,
+          "option_text": "A system for scoring deals",
+          "is_correct": false
+        },
+        {
+          "option_id": 14556,
+          "option_text": "A system for scoring accounts",
+          "is_correct": false
+        },
+        {
+          "option_id": 14557,
+          "option_text": "A system for scoring marketing campaigns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3074,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing playbook?",
+      "options": [
+        {
+          "option_id": 14558,
+          "option_text": "A guide for closing deals",
+          "is_correct": true
+        },
+        {
+          "option_id": 14559,
+          "option_text": "A guide for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14560,
+          "option_text": "A guide for qualifying leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 14561,
+          "option_text": "A guide for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3075,
+      "subskill_id": 145,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a closing metric?",
+      "options": [
+        {
+          "option_id": 14562,
+          "option_text": "A metric for measuring closing success",
+          "is_correct": true
+        },
+        {
+          "option_id": 14563,
+          "option_text": "A metric for measuring prospecting success",
+          "is_correct": false
+        },
+        {
+          "option_id": 14564,
+          "option_text": "A metric for measuring qualifying success",
+          "is_correct": false
+        },
+        {
+          "option_id": 14565,
+          "option_text": "A metric for measuring marketing success",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3076,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale a sales pipeline?",
+      "options": [
+        {
+          "option_id": 14566,
+          "option_text": "By using processes, tools, and data to increase pipeline efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 14567,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 14568,
+          "option_text": "By deleting pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14569,
+          "option_text": "By hiding pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3077,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is pipeline automation?",
+      "options": [
+        {
+          "option_id": 14570,
+          "option_text": "The use of technology to automate pipeline tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 14571,
+          "option_text": "The use of technology to ignore pipeline tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14572,
+          "option_text": "The use of technology to delete pipeline tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14573,
+          "option_text": "The use of technology to hide pipeline tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3078,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is pipeline AI?",
+      "options": [
+        {
+          "option_id": 14574,
+          "option_text": "The use of AI to analyze and optimize the pipeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 14575,
+          "option_text": "The use of AI to ignore the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14576,
+          "option_text": "The use of AI to delete the pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 14577,
+          "option_text": "The use of AI to hide the pipeline",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3079,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pipeline strategy?",
+      "options": [
+        {
+          "option_id": 14578,
+          "option_text": "A high-level plan for pipeline management",
+          "is_correct": true
+        },
+        {
+          "option_id": 14579,
+          "option_text": "A high-level plan for ignoring pipeline management",
+          "is_correct": false
+        },
+        {
+          "option_id": 14580,
+          "option_text": "A high-level plan for deleting pipeline management",
+          "is_correct": false
+        },
+        {
+          "option_id": 14581,
+          "option_text": "A high-level plan for hiding pipeline management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3080,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you forecast pipeline revenue?",
+      "options": [
+        {
+          "option_id": 14582,
+          "option_text": "By analyzing historical data and current pipeline trends",
+          "is_correct": true
+        },
+        {
+          "option_id": 14583,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14584,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14585,
+          "option_text": "By hiding data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3081,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you automate prospecting?",
+      "options": [
+        {
+          "option_id": 14586,
+          "option_text": "By using AI and automation to scale prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14587,
+          "option_text": "By ignoring automation",
+          "is_correct": false
+        },
+        {
+          "option_id": 14588,
+          "option_text": "By deleting prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14589,
+          "option_text": "By hiding prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3082,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an AI-powered prospecting tool?",
+      "options": [
+        {
+          "option_id": 14590,
+          "option_text": "A tool that uses AI to identify and engage prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 14591,
+          "option_text": "A tool that ignores AI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14592,
+          "option_text": "A tool that deletes prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14593,
+          "option_text": "A tool that hides prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3083,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prospecting tech stack?",
+      "options": [
+        {
+          "option_id": 14594,
+          "option_text": "A combination of tools used for prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 14595,
+          "option_text": "A single tool used for prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14596,
+          "option_text": "A tool that ignores prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14597,
+          "option_text": "A tool that deletes prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3084,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prospecting data strategy?",
+      "options": [
+        {
+          "option_id": 14598,
+          "option_text": "A strategy for managing prospecting data",
+          "is_correct": true
+        },
+        {
+          "option_id": 14599,
+          "option_text": "A strategy for ignoring prospecting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14600,
+          "option_text": "A strategy for deleting prospecting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14601,
+          "option_text": "A strategy for hiding prospecting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3085,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure prospecting ROI?",
+      "options": [
+        {
+          "option_id": 14602,
+          "option_text": "By tracking cost per lead, conversion rates, and pipeline contribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 14603,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14604,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14605,
+          "option_text": "By hiding ROI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3086,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a lead qualification model?",
+      "options": [
+        {
+          "option_id": 14606,
+          "option_text": "By defining criteria, scoring, and implementing automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 14607,
+          "option_text": "By ignoring criteria",
+          "is_correct": false
+        },
+        {
+          "option_id": 14608,
+          "option_text": "By deleting criteria",
+          "is_correct": false
+        },
+        {
+          "option_id": 14609,
+          "option_text": "By hiding criteria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3087,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an AI-powered lead qualification?",
+      "options": [
+        {
+          "option_id": 14610,
+          "option_text": "A system that uses AI to qualify leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 14611,
+          "option_text": "A system that ignores AI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14612,
+          "option_text": "A system that deletes qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14613,
+          "option_text": "A system that hides qualification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3088,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead qualification automation?",
+      "options": [
+        {
+          "option_id": 14614,
+          "option_text": "The use of technology to automate lead qualification",
+          "is_correct": true
+        },
+        {
+          "option_id": 14615,
+          "option_text": "The use of technology to ignore lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14616,
+          "option_text": "The use of technology to delete lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14617,
+          "option_text": "The use of technology to hide lead qualification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3089,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead qualification strategy?",
+      "options": [
+        {
+          "option_id": 14618,
+          "option_text": "A high-level plan for lead qualification",
+          "is_correct": true
+        },
+        {
+          "option_id": 14619,
+          "option_text": "A high-level plan for ignoring lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14620,
+          "option_text": "A high-level plan for deleting lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14621,
+          "option_text": "A high-level plan for hiding lead qualification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3090,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure lead qualification ROI?",
+      "options": [
+        {
+          "option_id": 14622,
+          "option_text": "By tracking conversion rates, win rates, and cost per lead",
+          "is_correct": true
+        },
+        {
+          "option_id": 14623,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14624,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14625,
+          "option_text": "By hiding ROI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3091,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a closing framework?",
+      "options": [
+        {
+          "option_id": 14626,
+          "option_text": "By analyzing deal data and building a structured framework",
+          "is_correct": true
+        },
+        {
+          "option_id": 14627,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14628,
+          "option_text": "By ignoring data",
+          "is_correct": false
+        },
+        {
+          "option_id": 14629,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3092,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is an AI-powered closing tool?",
+      "options": [
+        {
+          "option_id": 14630,
+          "option_text": "A tool that uses AI to assist with closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14631,
+          "option_text": "A tool that ignores AI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14632,
+          "option_text": "A tool that deletes closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14633,
+          "option_text": "A tool that hides closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3093,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a closing automation?",
+      "options": [
+        {
+          "option_id": 14634,
+          "option_text": "The use of technology to automate closing tasks",
+          "is_correct": true
+        },
+        {
+          "option_id": 14635,
+          "option_text": "The use of technology to ignore closing tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14636,
+          "option_text": "The use of technology to delete closing tasks",
+          "is_correct": false
+        },
+        {
+          "option_id": 14637,
+          "option_text": "The use of technology to hide closing tasks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3094,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a closing strategy?",
+      "options": [
+        {
+          "option_id": 14638,
+          "option_text": "A high-level plan for closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14639,
+          "option_text": "A high-level plan for ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14640,
+          "option_text": "A high-level plan for deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14641,
+          "option_text": "A high-level plan for hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3095,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure closing ROI?",
+      "options": [
+        {
+          "option_id": 14642,
+          "option_text": "By tracking win rates, deal size, and sales cycle length",
+          "is_correct": true
+        },
+        {
+          "option_id": 14643,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14644,
+          "option_text": "By ignoring ROI",
+          "is_correct": false
+        },
+        {
+          "option_id": 14645,
+          "option_text": "By hiding ROI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3096,
+      "subskill_id": 142,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a pipeline optimization strategy?",
+      "options": [
+        {
+          "option_id": 14646,
+          "option_text": "A high-level plan for optimizing pipeline performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 14647,
+          "option_text": "A high-level plan for ignoring pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14648,
+          "option_text": "A high-level plan for deleting pipeline optimization",
+          "is_correct": false
+        },
+        {
+          "option_id": 14649,
+          "option_text": "A high-level plan for hiding pipeline optimization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3097,
+      "subskill_id": 143,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a prospecting future?",
+      "options": [
+        {
+          "option_id": 14650,
+          "option_text": "The future of prospecting, which may include new AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 14651,
+          "option_text": "The future of ignoring prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14652,
+          "option_text": "The future of deleting prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 14653,
+          "option_text": "The future of hiding prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3098,
+      "subskill_id": 144,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead qualification future?",
+      "options": [
+        {
+          "option_id": 14654,
+          "option_text": "The future of lead qualification",
+          "is_correct": true
+        },
+        {
+          "option_id": 14655,
+          "option_text": "The future of ignoring lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14656,
+          "option_text": "The future of deleting lead qualification",
+          "is_correct": false
+        },
+        {
+          "option_id": 14657,
+          "option_text": "The future of hiding lead qualification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3099,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a closing future?",
+      "options": [
+        {
+          "option_id": 14658,
+          "option_text": "The future of closing",
+          "is_correct": true
+        },
+        {
+          "option_id": 14659,
+          "option_text": "The future of ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14660,
+          "option_text": "The future of deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14661,
+          "option_text": "The future of hiding closing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3100,
+      "subskill_id": 145,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a closing enterprise strategy?",
+      "options": [
+        {
+          "option_id": 14662,
+          "option_text": "A high-level strategy for closing in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 14663,
+          "option_text": "A high-level strategy for ignoring closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14664,
+          "option_text": "A high-level strategy for deleting closing",
+          "is_correct": false
+        },
+        {
+          "option_id": 14665,
+          "option_text": "A high-level strategy for hiding closing",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

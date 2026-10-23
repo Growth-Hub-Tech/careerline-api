@@ -1,0 +1,2906 @@
+{
+  "skill_id": 12,
+  "skill_name": "Blockchain Development",
+  "questions": [
+    {
+      "question_id": 1101,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a smart contract?",
+      "options": [
+        {
+          "option_id": 6666,
+          "option_text": "A self-executing contract with terms written in code",
+          "is_correct": true
+        },
+        {
+          "option_id": 6667,
+          "option_text": "A physical contract stored in a safe",
+          "is_correct": false
+        },
+        {
+          "option_id": 6668,
+          "option_text": "A verbal agreement between two parties",
+          "is_correct": false
+        },
+        {
+          "option_id": 6669,
+          "option_text": "A contract signed on paper",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1102,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a smart contract?",
+      "options": [
+        {
+          "option_id": 6670,
+          "option_text": "To store data permanently",
+          "is_correct": false
+        },
+        {
+          "option_id": 6671,
+          "option_text": "To send emails automatically",
+          "is_correct": false
+        },
+        {
+          "option_id": 6672,
+          "option_text": "To automate and enforce agreements without intermediaries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6673,
+          "option_text": "To create websites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1103,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What blockchain is most commonly used for smart contracts?",
+      "options": [
+        {
+          "option_id": 6674,
+          "option_text": "Bitcoin",
+          "is_correct": false
+        },
+        {
+          "option_id": 6675,
+          "option_text": "Ethereum",
+          "is_correct": true
+        },
+        {
+          "option_id": 6676,
+          "option_text": "Cardano",
+          "is_correct": false
+        },
+        {
+          "option_id": 6677,
+          "option_text": "Solana",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1104,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What language is commonly used to write smart contracts on Ethereum?",
+      "options": [
+        {
+          "option_id": 6678,
+          "option_text": "Python",
+          "is_correct": false
+        },
+        {
+          "option_id": 6679,
+          "option_text": "JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 6680,
+          "option_text": "Java",
+          "is_correct": false
+        },
+        {
+          "option_id": 6681,
+          "option_text": "Solidity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1105,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a decentralized application (dApp)?",
+      "options": [
+        {
+          "option_id": 6682,
+          "option_text": "An application that runs on a decentralized network",
+          "is_correct": true
+        },
+        {
+          "option_id": 6683,
+          "option_text": "An app that runs on a single server",
+          "is_correct": false
+        },
+        {
+          "option_id": 6684,
+          "option_text": "An app that does not use any code",
+          "is_correct": false
+        },
+        {
+          "option_id": 6685,
+          "option_text": "A type of mobile game",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1106,
+      "subskill_id": 56,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between a smart contract and a traditional contract?",
+      "options": [
+        {
+          "option_id": 6686,
+          "option_text": "Smart contracts are only for cryptocurrencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6687,
+          "option_text": "Traditional contracts are automated",
+          "is_correct": false
+        },
+        {
+          "option_id": 6688,
+          "option_text": "Smart contracts are self-executing; traditional require intermediaries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6689,
+          "option_text": "They are exactly the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1107,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Solidity?",
+      "options": [
+        {
+          "option_id": 6690,
+          "option_text": "A type of cryptocurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6691,
+          "option_text": "A programming language for writing smart contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6692,
+          "option_text": "A web framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 6693,
+          "option_text": "A database management system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1108,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Solidity contract?",
+      "options": [
+        {
+          "option_id": 6694,
+          "option_text": "A legal document in Solidity",
+          "is_correct": false
+        },
+        {
+          "option_id": 6695,
+          "option_text": "A database schema",
+          "is_correct": false
+        },
+        {
+          "option_id": 6696,
+          "option_text": "A web page code",
+          "is_correct": false
+        },
+        {
+          "option_id": 6697,
+          "option_text": "A collection of code and data stored on the blockchain",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1109,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a function in Solidity?",
+      "options": [
+        {
+          "option_id": 6698,
+          "option_text": "A block of code that performs a specific task",
+          "is_correct": true
+        },
+        {
+          "option_id": 6699,
+          "option_text": "A variable type",
+          "is_correct": false
+        },
+        {
+          "option_id": 6700,
+          "option_text": "A storage container",
+          "is_correct": false
+        },
+        {
+          "option_id": 6701,
+          "option_text": "A mathematical equation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1110,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a mapping in Solidity?",
+      "options": [
+        {
+          "option_id": 6702,
+          "option_text": "A function to map data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6703,
+          "option_text": "A type of loop",
+          "is_correct": false
+        },
+        {
+          "option_id": 6704,
+          "option_text": "A key-value data structure",
+          "is_correct": true
+        },
+        {
+          "option_id": 6705,
+          "option_text": "A storage array",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1111,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a struct in Solidity?",
+      "options": [
+        {
+          "option_id": 6706,
+          "option_text": "A simple integer variable",
+          "is_correct": false
+        },
+        {
+          "option_id": 6707,
+          "option_text": "A custom data type that groups related data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6708,
+          "option_text": "A type of function",
+          "is_correct": false
+        },
+        {
+          "option_id": 6709,
+          "option_text": "A storage modifier",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1112,
+      "subskill_id": 57,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an event in Solidity?",
+      "options": [
+        {
+          "option_id": 6710,
+          "option_text": "A type of variable",
+          "is_correct": false
+        },
+        {
+          "option_id": 6711,
+          "option_text": "A function that triggers errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 6712,
+          "option_text": "A storage data type",
+          "is_correct": false
+        },
+        {
+          "option_id": 6713,
+          "option_text": "A way to log and listen to contract activities",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1113,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Web3?",
+      "options": [
+        {
+          "option_id": 6714,
+          "option_text": "The third generation of the web focused on decentralization",
+          "is_correct": true
+        },
+        {
+          "option_id": 6715,
+          "option_text": "A type of blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6716,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6717,
+          "option_text": "A cryptocurrency wallet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1114,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Web3.js library?",
+      "options": [
+        {
+          "option_id": 6718,
+          "option_text": "A database library",
+          "is_correct": false
+        },
+        {
+          "option_id": 6719,
+          "option_text": "A CSS framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 6720,
+          "option_text": "A JavaScript library for interacting with Ethereum",
+          "is_correct": true
+        },
+        {
+          "option_id": 6721,
+          "option_text": "A Python library",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1115,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Web3 provider?",
+      "options": [
+        {
+          "option_id": 6722,
+          "option_text": "A type of web browser",
+          "is_correct": false
+        },
+        {
+          "option_id": 6723,
+          "option_text": "A service that connects applications to the blockchain",
+          "is_correct": true
+        },
+        {
+          "option_id": 6724,
+          "option_text": "A database provider",
+          "is_correct": false
+        },
+        {
+          "option_id": 6725,
+          "option_text": "A hosting service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1116,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is MetaMask in Web3?",
+      "options": [
+        {
+          "option_id": 6726,
+          "option_text": "A type of blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6727,
+          "option_text": "A smart contract language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6728,
+          "option_text": "A web browser",
+          "is_correct": false
+        },
+        {
+          "option_id": 6729,
+          "option_text": "A cryptocurrency wallet and Web3 provider browser extension",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1117,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an Ethereum wallet?",
+      "options": [
+        {
+          "option_id": 6730,
+          "option_text": "A tool for storing, sending, and receiving ETH and tokens",
+          "is_correct": true
+        },
+        {
+          "option_id": 6731,
+          "option_text": "A type of smart contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6732,
+          "option_text": "A database for Ethereum data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6733,
+          "option_text": "A web server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1118,
+      "subskill_id": 58,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a blockchain explorer?",
+      "options": [
+        {
+          "option_id": 6734,
+          "option_text": "A tool for mining blocks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6735,
+          "option_text": "A wallet for cryptocurrencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6736,
+          "option_text": "A tool for viewing blockchain transactions and data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6737,
+          "option_text": "A type of cryptocurrency exchange",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1119,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is DeFi?",
+      "options": [
+        {
+          "option_id": 6738,
+          "option_text": "A type of cryptocurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6739,
+          "option_text": "Decentralized Finance - financial services on blockchain without intermediaries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6740,
+          "option_text": "A centralized banking system",
+          "is_correct": false
+        },
+        {
+          "option_id": 6741,
+          "option_text": "A type of smart contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1120,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a decentralized exchange (DEX)?",
+      "options": [
+        {
+          "option_id": 6742,
+          "option_text": "An exchange that operates without a central authority",
+          "is_correct": true
+        },
+        {
+          "option_id": 6743,
+          "option_text": "A traditional stock exchange",
+          "is_correct": false
+        },
+        {
+          "option_id": 6744,
+          "option_text": "A type of cryptocurrency wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6745,
+          "option_text": "A central bank",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1121,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is liquidity in DeFi?",
+      "options": [
+        {
+          "option_id": 6746,
+          "option_text": "Cash in a bank account",
+          "is_correct": false
+        },
+        {
+          "option_id": 6747,
+          "option_text": "A type of asset",
+          "is_correct": false
+        },
+        {
+          "option_id": 6748,
+          "option_text": "A type of stablecoin",
+          "is_correct": false
+        },
+        {
+          "option_id": 6749,
+          "option_text": "Funds available in a market or protocol for trading",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1122,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a stablecoin?",
+      "options": [
+        {
+          "option_id": 6750,
+          "option_text": "A very fast cryptocurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6751,
+          "option_text": "A cryptocurrency designed to maintain a stable value",
+          "is_correct": true
+        },
+        {
+          "option_id": 6752,
+          "option_text": "A type of blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6753,
+          "option_text": "A high-volatility token",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1123,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is staking in blockchain?",
+      "options": [
+        {
+          "option_id": 6754,
+          "option_text": "Buying and selling tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6755,
+          "option_text": "Mining new tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6756,
+          "option_text": "Locking tokens to support network operations and earn rewards",
+          "is_correct": true
+        },
+        {
+          "option_id": 6757,
+          "option_text": "Sending tokens to a wallet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1124,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is yield farming?",
+      "options": [
+        {
+          "option_id": 6758,
+          "option_text": "Earning rewards by providing liquidity or staking in DeFi protocols",
+          "is_correct": true
+        },
+        {
+          "option_id": 6759,
+          "option_text": "Traditional farming in agriculture",
+          "is_correct": false
+        },
+        {
+          "option_id": 6760,
+          "option_text": "Selling cryptocurrencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6761,
+          "option_text": "Trading on a DEX",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1125,
+      "subskill_id": 59,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a DAO?",
+      "options": [
+        {
+          "option_id": 6762,
+          "option_text": "A type of cryptocurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6763,
+          "option_text": "A centralized organization",
+          "is_correct": false
+        },
+        {
+          "option_id": 6764,
+          "option_text": "A smart contract language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6765,
+          "option_text": "Decentralized Autonomous Organization - governed by smart contracts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1126,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the lifecycle of a smart contract?",
+      "options": [
+        {
+          "option_id": 6766,
+          "option_text": "Birth, life, death",
+          "is_correct": false
+        },
+        {
+          "option_id": 6767,
+          "option_text": "Deploy, execute, update, destroy",
+          "is_correct": true
+        },
+        {
+          "option_id": 6768,
+          "option_text": "Plan, code, deploy",
+          "is_correct": false
+        },
+        {
+          "option_id": 6769,
+          "option_text": "Build, test, release",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1127,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a self-destruct function in smart contracts?",
+      "options": [
+        {
+          "option_id": 6770,
+          "option_text": "A function that deletes the contract code",
+          "is_correct": false
+        },
+        {
+          "option_id": 6771,
+          "option_text": "A function that terminates the blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6772,
+          "option_text": "A function that removes a contract from the blockchain and sends remaining ETH",
+          "is_correct": true
+        },
+        {
+          "option_id": 6773,
+          "option_text": "A function that reboots the network",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1128,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is gas in Ethereum smart contracts?",
+      "options": [
+        {
+          "option_id": 6774,
+          "option_text": "A fee paid to execute transactions and smart contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6775,
+          "option_text": "A type of cryptocurrency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6776,
+          "option_text": "A storage type",
+          "is_correct": false
+        },
+        {
+          "option_id": 6777,
+          "option_text": "A network speed metric",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1129,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a smart contract and a dApp?",
+      "options": [
+        {
+          "option_id": 6778,
+          "option_text": "Smart contracts are for finance, dApps for games",
+          "is_correct": false
+        },
+        {
+          "option_id": 6779,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6780,
+          "option_text": "dApps are stored off-chain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6781,
+          "option_text": "Smart contracts are the backend logic, dApps include frontend",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1130,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an Oracle in smart contracts?",
+      "options": [
+        {
+          "option_id": 6782,
+          "option_text": "A type of database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6783,
+          "option_text": "A service that provides external data to smart contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6784,
+          "option_text": "A JavaScript library",
+          "is_correct": false
+        },
+        {
+          "option_id": 6785,
+          "option_text": "A blockchain explorer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1131,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between uint and int in Solidity?",
+      "options": [
+        {
+          "option_id": 6786,
+          "option_text": "uint is for decimals, int is for integers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6787,
+          "option_text": "uint is for strings, int is for numbers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6788,
+          "option_text": "uint is unsigned integer (non-negative), int is signed (can be negative)",
+          "is_correct": true
+        },
+        {
+          "option_id": 6789,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1132,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between public and private in Solidity?",
+      "options": [
+        {
+          "option_id": 6790,
+          "option_text": "Public functions can be called externally, private only internally",
+          "is_correct": true
+        },
+        {
+          "option_id": 6791,
+          "option_text": "Private functions can be called externally",
+          "is_correct": false
+        },
+        {
+          "option_id": 6792,
+          "option_text": "Public is for variables, private is for functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6793,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1133,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a modifier in Solidity?",
+      "options": [
+        {
+          "option_id": 6794,
+          "option_text": "A data type",
+          "is_correct": false
+        },
+        {
+          "option_id": 6795,
+          "option_text": "A storage keyword",
+          "is_correct": false
+        },
+        {
+          "option_id": 6796,
+          "option_text": "A security token",
+          "is_correct": false
+        },
+        {
+          "option_id": 6797,
+          "option_text": "A reusable condition that changes function behavior",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1134,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is inheritance in Solidity?",
+      "options": [
+        {
+          "option_id": 6798,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6799,
+          "option_text": "The ability for one contract to inherit properties from another",
+          "is_correct": true
+        },
+        {
+          "option_id": 6800,
+          "option_text": "A way to copy code",
+          "is_correct": false
+        },
+        {
+          "option_id": 6801,
+          "option_text": "A network feature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1135,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the require function in Solidity?",
+      "options": [
+        {
+          "option_id": 6802,
+          "option_text": "A function that requires input",
+          "is_correct": false
+        },
+        {
+          "option_id": 6803,
+          "option_text": "A function that logs events",
+          "is_correct": false
+        },
+        {
+          "option_id": 6804,
+          "option_text": "A function that validates conditions and reverts if false",
+          "is_correct": true
+        },
+        {
+          "option_id": 6805,
+          "option_text": "A function that deploys contracts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1136,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How does Web3.js interact with Ethereum?",
+      "options": [
+        {
+          "option_id": 6806,
+          "option_text": "Through RPC calls to an Ethereum node",
+          "is_correct": true
+        },
+        {
+          "option_id": 6807,
+          "option_text": "By mining directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 6808,
+          "option_text": "Through a central server",
+          "is_correct": false
+        },
+        {
+          "option_id": 6809,
+          "option_text": "By creating new blocks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1137,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between web3.eth and web3.js?",
+      "options": [
+        {
+          "option_id": 6810,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6811,
+          "option_text": "web3.eth is for servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6812,
+          "option_text": "web3.js is for databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 6813,
+          "option_text": "web3.eth is a package for Ethereum interactions, web3.js is the main library",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1138,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a transaction receipt in Web3?",
+      "options": [
+        {
+          "option_id": 6814,
+          "option_text": "A proof of payment",
+          "is_correct": false
+        },
+        {
+          "option_id": 6815,
+          "option_text": "A record containing transaction details like status and logs",
+          "is_correct": true
+        },
+        {
+          "option_id": 6816,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6817,
+          "option_text": "A network notification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1139,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between MetaMask and a hardware wallet?",
+      "options": [
+        {
+          "option_id": 6818,
+          "option_text": "MetaMask is a hardware device",
+          "is_correct": false
+        },
+        {
+          "option_id": 6819,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6820,
+          "option_text": "MetaMask is software wallet, hardware wallet is physical for offline storage",
+          "is_correct": true
+        },
+        {
+          "option_id": 6821,
+          "option_text": "Hardware wallets are used for mining",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1140,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you connect a frontend application to Web3?",
+      "options": [
+        {
+          "option_id": 6822,
+          "option_text": "By injecting Web3 provider like MetaMask into the app",
+          "is_correct": true
+        },
+        {
+          "option_id": 6823,
+          "option_text": "By installing a server",
+          "is_correct": false
+        },
+        {
+          "option_id": 6824,
+          "option_text": "By using a database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6825,
+          "option_text": "By writing smart contracts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1141,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an automated market maker (AMM)?",
+      "options": [
+        {
+          "option_id": 6826,
+          "option_text": "A type of stock market",
+          "is_correct": false
+        },
+        {
+          "option_id": 6827,
+          "option_text": "A central bank",
+          "is_correct": false
+        },
+        {
+          "option_id": 6828,
+          "option_text": "A manual trading system",
+          "is_correct": false
+        },
+        {
+          "option_id": 6829,
+          "option_text": "A DeFi protocol that uses liquidity pools for trading",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1142,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is impermanent loss in DeFi?",
+      "options": [
+        {
+          "option_id": 6830,
+          "option_text": "A permanent loss of funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 6831,
+          "option_text": "A temporary loss in value when providing liquidity",
+          "is_correct": true
+        },
+        {
+          "option_id": 6832,
+          "option_text": "A loss due to hacking",
+          "is_correct": false
+        },
+        {
+          "option_id": 6833,
+          "option_text": "A loss of transaction history",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1143,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lending protocol in DeFi?",
+      "options": [
+        {
+          "option_id": 6834,
+          "option_text": "A protocol for sending money",
+          "is_correct": false
+        },
+        {
+          "option_id": 6835,
+          "option_text": "A protocol for mining tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6836,
+          "option_text": "A protocol that allows users to borrow and lend assets",
+          "is_correct": true
+        },
+        {
+          "option_id": 6837,
+          "option_text": "A protocol for staking coins",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1144,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between centralized and decentralized finance?",
+      "options": [
+        {
+          "option_id": 6838,
+          "option_text": "Centralized has intermediaries; decentralized operates without middlemen",
+          "is_correct": true
+        },
+        {
+          "option_id": 6839,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6840,
+          "option_text": "Decentralized is controlled by governments",
+          "is_correct": false
+        },
+        {
+          "option_id": 6841,
+          "option_text": "Centralized is built on blockchain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1145,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are governance tokens in DeFi?",
+      "options": [
+        {
+          "option_id": 6842,
+          "option_text": "Tokens used to mine cryptocurrencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6843,
+          "option_text": "Tokens that store value",
+          "is_correct": false
+        },
+        {
+          "option_id": 6844,
+          "option_text": "Tokens that represent government bonds",
+          "is_correct": false
+        },
+        {
+          "option_id": 6845,
+          "option_text": "Tokens that give holders voting rights in DeFi protocols",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1146,
+      "subskill_id": 56,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a token in blockchain?",
+      "options": [
+        {
+          "option_id": 6846,
+          "option_text": "A physical token for identification",
+          "is_correct": false
+        },
+        {
+          "option_id": 6847,
+          "option_text": "A digital asset representing value or utility on a blockchain",
+          "is_correct": true
+        },
+        {
+          "option_id": 6848,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6849,
+          "option_text": "A mining reward",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1147,
+      "subskill_id": 57,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between ERC-20 and ERC-721?",
+      "options": [
+        {
+          "option_id": 6850,
+          "option_text": "ERC-20 is for NFTs, ERC-721 is for tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6851,
+          "option_text": "They are the same standard",
+          "is_correct": false
+        },
+        {
+          "option_id": 6852,
+          "option_text": "ERC-20 is for fungible tokens, ERC-721 is for non-fungible tokens",
+          "is_correct": true
+        },
+        {
+          "option_id": 6853,
+          "option_text": "ERC-721 is for DeFi only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1148,
+      "subskill_id": 58,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a hash function in blockchain?",
+      "options": [
+        {
+          "option_id": 6854,
+          "option_text": "A function that converts input into a fixed-size output for security",
+          "is_correct": true
+        },
+        {
+          "option_id": 6855,
+          "option_text": "A function that stores data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6856,
+          "option_text": "A function that creates tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6857,
+          "option_text": "A function that mines blocks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1149,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the role of miners in blockchain?",
+      "options": [
+        {
+          "option_id": 6858,
+          "option_text": "To create tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6859,
+          "option_text": "To store data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6860,
+          "option_text": "To validate transactions and secure the network",
+          "is_correct": true
+        },
+        {
+          "option_id": 6861,
+          "option_text": "To buy and sell cryptocurrencies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1150,
+      "subskill_id": 59,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between PoW and PoS?",
+      "options": [
+        {
+          "option_id": 6862,
+          "option_text": "PoW is stake-based, PoS is energy-based",
+          "is_correct": false
+        },
+        {
+          "option_id": 6863,
+          "option_text": "PoW uses computational power, PoS uses staked tokens",
+          "is_correct": true
+        },
+        {
+          "option_id": 6864,
+          "option_text": "PoS uses computational power, PoW uses staked tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6865,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1151,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you upgrade a smart contract?",
+      "options": [
+        {
+          "option_id": 6866,
+          "option_text": "Use proxy patterns or delegate calls to new logic contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6867,
+          "option_text": "Delete and redeploy the contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6868,
+          "option_text": "Modify the code on the blockchain directly",
+          "is_correct": false
+        },
+        {
+          "option_id": 6869,
+          "option_text": "Smart contracts cannot be upgraded",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1152,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the security risks in smart contracts?",
+      "options": [
+        {
+          "option_id": 6870,
+          "option_text": "There are no security risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6871,
+          "option_text": "Only logic errors exist",
+          "is_correct": false
+        },
+        {
+          "option_id": 6872,
+          "option_text": "Reentrancy, overflow, and unchecked calls are common risks",
+          "is_correct": true
+        },
+        {
+          "option_id": 6873,
+          "option_text": "Only external dependencies cause risks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1153,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test a smart contract?",
+      "options": [
+        {
+          "option_id": 6874,
+          "option_text": "Only deploy it on mainnet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6875,
+          "option_text": "Write unit tests using frameworks like Hardhat or Truffle",
+          "is_correct": true
+        },
+        {
+          "option_id": 6876,
+          "option_text": "Test it manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 6877,
+          "option_text": "Smart contracts cannot be tested",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1154,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a proxy contract and a logic contract?",
+      "options": [
+        {
+          "option_id": 6878,
+          "option_text": "They are the same contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6879,
+          "option_text": "Logic contract stores data, proxy handles logic",
+          "is_correct": false
+        },
+        {
+          "option_id": 6880,
+          "option_text": "Proxy is for storage only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6881,
+          "option_text": "Proxy delegates calls to logic contract, enabling upgradability",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1155,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the reentrancy attack in smart contracts?",
+      "options": [
+        {
+          "option_id": 6882,
+          "option_text": "An attack where a contract calls back into itself before state updates",
+          "is_correct": true
+        },
+        {
+          "option_id": 6883,
+          "option_text": "An attack on network consensus",
+          "is_correct": false
+        },
+        {
+          "option_id": 6884,
+          "option_text": "An attack on wallet keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6885,
+          "option_text": "A type of mining attack",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1156,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between memory and storage in Solidity?",
+      "options": [
+        {
+          "option_id": 6886,
+          "option_text": "Memory stores data permanently, storage is temporary",
+          "is_correct": false
+        },
+        {
+          "option_id": 6887,
+          "option_text": "Memory is temporary, storage is persistent on the blockchain",
+          "is_correct": true
+        },
+        {
+          "option_id": 6888,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6889,
+          "option_text": "Memory is for strings only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1157,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the payable modifier in Solidity?",
+      "options": [
+        {
+          "option_id": 6890,
+          "option_text": "A modifier for non-payable functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6891,
+          "option_text": "A modifier for private functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6892,
+          "option_text": "A modifier that allows a function to receive ETH",
+          "is_correct": true
+        },
+        {
+          "option_id": 6893,
+          "option_text": "A modifier for view functions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1158,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between view and pure functions?",
+      "options": [
+        {
+          "option_id": 6894,
+          "option_text": "View functions read state, pure functions neither read nor write",
+          "is_correct": true
+        },
+        {
+          "option_id": 6895,
+          "option_text": "Pure functions read state, view functions do not",
+          "is_correct": false
+        },
+        {
+          "option_id": 6896,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6897,
+          "option_text": "View functions modify state, pure functions do not",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1159,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an interface in Solidity?",
+      "options": [
+        {
+          "option_id": 6898,
+          "option_text": "A user interface for DApps",
+          "is_correct": false
+        },
+        {
+          "option_id": 6899,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6900,
+          "option_text": "A UI library",
+          "is_correct": false
+        },
+        {
+          "option_id": 6901,
+          "option_text": "A contract that defines a set of functions without implementation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1160,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle errors in Solidity?",
+      "options": [
+        {
+          "option_id": 6902,
+          "option_text": "Using try-catch in every function",
+          "is_correct": false
+        },
+        {
+          "option_id": 6903,
+          "option_text": "Using require, assert, and revert statements",
+          "is_correct": true
+        },
+        {
+          "option_id": 6904,
+          "option_text": "Using console.log",
+          "is_correct": false
+        },
+        {
+          "option_id": 6905,
+          "option_text": "Errors cannot be handled in Solidity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1161,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle events in Web3.js?",
+      "options": [
+        {
+          "option_id": 6906,
+          "option_text": "By using console.log",
+          "is_correct": false
+        },
+        {
+          "option_id": 6907,
+          "option_text": "By creating a new contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6908,
+          "option_text": "By listening to event logs using on() or once()",
+          "is_correct": true
+        },
+        {
+          "option_id": 6909,
+          "option_text": "By ignoring events",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1162,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between eth_call and eth_sendTransaction?",
+      "options": [
+        {
+          "option_id": 6910,
+          "option_text": "eth_call reads data without changing state, eth_sendTransaction changes state",
+          "is_correct": true
+        },
+        {
+          "option_id": 6911,
+          "option_text": "eth_sendTransaction reads data, eth_call changes state",
+          "is_correct": false
+        },
+        {
+          "option_id": 6912,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6913,
+          "option_text": "eth_call is for token transfers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1163,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you sign a transaction in Web3?",
+      "options": [
+        {
+          "option_id": 6914,
+          "option_text": "By using a hardware wallet automatically",
+          "is_correct": false
+        },
+        {
+          "option_id": 6915,
+          "option_text": "By using a smart contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6916,
+          "option_text": "By sending it un-signed",
+          "is_correct": false
+        },
+        {
+          "option_id": 6917,
+          "option_text": "Using web3.eth.accounts.signTransaction or MetaMask signing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1164,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of the JSON-RPC in Web3?",
+      "options": [
+        {
+          "option_id": 6918,
+          "option_text": "It is a type of smart contract",
+          "is_correct": false
+        },
+        {
+          "option_id": 6919,
+          "option_text": "It is a protocol used for communication between Web3 and Ethereum nodes",
+          "is_correct": true
+        },
+        {
+          "option_id": 6920,
+          "option_text": "It is a programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6921,
+          "option_text": "It is a network protocol",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1165,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you deploy a contract using Web3?",
+      "options": [
+        {
+          "option_id": 6922,
+          "option_text": "By using a text editor",
+          "is_correct": false
+        },
+        {
+          "option_id": 6923,
+          "option_text": "By sending ETH to an address",
+          "is_correct": false
+        },
+        {
+          "option_id": 6924,
+          "option_text": "By compiling and using contract.deploy() with a signed transaction",
+          "is_correct": true
+        },
+        {
+          "option_id": 6925,
+          "option_text": "By copying the code to the blockchain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1166,
+      "subskill_id": 59,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are flash loans in DeFi?",
+      "options": [
+        {
+          "option_id": 6926,
+          "option_text": "Uncollateralized loans that must be repaid within the same transaction",
+          "is_correct": true
+        },
+        {
+          "option_id": 6927,
+          "option_text": "Long-term loans with collateral",
+          "is_correct": false
+        },
+        {
+          "option_id": 6928,
+          "option_text": "Loans from banks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6929,
+          "option_text": "Government-backed loans",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1167,
+      "subskill_id": 59,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the concept of composability in DeFi?",
+      "options": [
+        {
+          "option_id": 6930,
+          "option_text": "A type of programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6931,
+          "option_text": "A way to create tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6932,
+          "option_text": "A method for mining",
+          "is_correct": false
+        },
+        {
+          "option_id": 6933,
+          "option_text": "The ability for DeFi protocols to interact and build on each other",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1168,
+      "subskill_id": 59,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you calculate APR and APY in DeFi?",
+      "options": [
+        {
+          "option_id": 6934,
+          "option_text": "APR and APY are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6935,
+          "option_text": "APR is simple interest, APY includes compounding",
+          "is_correct": true
+        },
+        {
+          "option_id": 6936,
+          "option_text": "APY is simple interest, APR includes compounding",
+          "is_correct": false
+        },
+        {
+          "option_id": 6937,
+          "option_text": "They cannot be calculated in DeFi",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1169,
+      "subskill_id": 59,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of liquidity pools in DeFi?",
+      "options": [
+        {
+          "option_id": 6938,
+          "option_text": "To store stablecoins",
+          "is_correct": false
+        },
+        {
+          "option_id": 6939,
+          "option_text": "To mine new coins",
+          "is_correct": false
+        },
+        {
+          "option_id": 6940,
+          "option_text": "To provide funds for trading and earn fees from traders",
+          "is_correct": true
+        },
+        {
+          "option_id": 6941,
+          "option_text": "To lock tokens permanently",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1170,
+      "subskill_id": 59,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the risks associated with DeFi protocols?",
+      "options": [
+        {
+          "option_id": 6942,
+          "option_text": "Smart contract bugs, impermanent loss, and market volatility",
+          "is_correct": true
+        },
+        {
+          "option_id": 6943,
+          "option_text": "There are no risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6944,
+          "option_text": "Only theft of private keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6945,
+          "option_text": "Only gas fees",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1171,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Ethereum Virtual Machine (EVM)?",
+      "options": [
+        {
+          "option_id": 6946,
+          "option_text": "A physical machine",
+          "is_correct": false
+        },
+        {
+          "option_id": 6947,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6948,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6949,
+          "option_text": "The runtime environment for executing smart contracts on Ethereum",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1172,
+      "subskill_id": 57,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is gas optimization in Solidity?",
+      "options": [
+        {
+          "option_id": 6950,
+          "option_text": "Creating more gas",
+          "is_correct": false
+        },
+        {
+          "option_id": 6951,
+          "option_text": "Writing efficient code to reduce transaction costs",
+          "is_correct": true
+        },
+        {
+          "option_id": 6952,
+          "option_text": "Using less gas tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6953,
+          "option_text": "Avoiding gas fees entirely",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1173,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a fork and a clone in blockchain?",
+      "options": [
+        {
+          "option_id": 6954,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6955,
+          "option_text": "Fork is a copy of code, clone is a copy of tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6956,
+          "option_text": "Fork creates a new blockchain from an existing one, clone duplicates state",
+          "is_correct": true
+        },
+        {
+          "option_id": 6957,
+          "option_text": "Fork is for tokens, clone is for contracts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1174,
+      "subskill_id": 56,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an oracle and how does it work?",
+      "options": [
+        {
+          "option_id": 6958,
+          "option_text": "A service that feeds real-world data to smart contracts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6959,
+          "option_text": "A database system",
+          "is_correct": false
+        },
+        {
+          "option_id": 6960,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 6961,
+          "option_text": "A consensus protocol",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1175,
+      "subskill_id": 58,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between on-chain and off-chain data?",
+      "options": [
+        {
+          "option_id": 6962,
+          "option_text": "On-chain data is stored on the blockchain, off-chain is stored externally",
+          "is_correct": true
+        },
+        {
+          "option_id": 6963,
+          "option_text": "Off-chain is stored on the blockchain, on-chain is external",
+          "is_correct": false
+        },
+        {
+          "option_id": 6964,
+          "option_text": "They are both stored on the blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 6965,
+          "option_text": "On-chain data is faster to access",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1176,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a secure token contract?",
+      "options": [
+        {
+          "option_id": 6966,
+          "option_text": "By using only public functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6967,
+          "option_text": "Follow ERC-20 standard, include safeguards against common attacks",
+          "is_correct": true
+        },
+        {
+          "option_id": 6968,
+          "option_text": "By making it immutable from day one",
+          "is_correct": false
+        },
+        {
+          "option_id": 6969,
+          "option_text": "By avoiding testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1177,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the best practices for writing secure smart contracts?",
+      "options": [
+        {
+          "option_id": 6970,
+          "option_text": "Use complex logic everywhere",
+          "is_correct": false
+        },
+        {
+          "option_id": 6971,
+          "option_text": "Do not test your contracts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6972,
+          "option_text": "Use latest compiler, limit external calls, and use checks-effects-interactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6973,
+          "option_text": "Avoid using libraries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1178,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a multisig wallet in Solidity?",
+      "options": [
+        {
+          "option_id": 6974,
+          "option_text": "By requiring multiple signatures to execute transactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6975,
+          "option_text": "By allowing single person to control funds",
+          "is_correct": false
+        },
+        {
+          "option_id": 6976,
+          "option_text": "By using a single private key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6977,
+          "option_text": "By using only hardware wallets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1179,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the challenges of upgrading smart contracts?",
+      "options": [
+        {
+          "option_id": 6978,
+          "option_text": "Data migration",
+          "is_correct": false
+        },
+        {
+          "option_id": 6979,
+          "option_text": "Proxy initialization",
+          "is_correct": false
+        },
+        {
+          "option_id": 6980,
+          "option_text": "State consistency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6981,
+          "option_text": "All of the above challenges",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1180,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you perform a smart contract audit?",
+      "options": [
+        {
+          "option_id": 6982,
+          "option_text": "By running only automated tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 6983,
+          "option_text": "Combination of automated analysis and manual review by experts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6984,
+          "option_text": "By testing only once",
+          "is_correct": false
+        },
+        {
+          "option_id": 6985,
+          "option_text": "By ignoring all errors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1181,
+      "subskill_id": 57,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use libraries in Solidity?",
+      "options": [
+        {
+          "option_id": 6986,
+          "option_text": "By copying code into contracts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6987,
+          "option_text": "Libraries cannot be used in Solidity",
+          "is_correct": false
+        },
+        {
+          "option_id": 6988,
+          "option_text": "Using using A for B syntax to attach library functions to types",
+          "is_correct": true
+        },
+        {
+          "option_id": 6989,
+          "option_text": "By importing them without any syntax",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1182,
+      "subskill_id": 57,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between delegatecall and call?",
+      "options": [
+        {
+          "option_id": 6990,
+          "option_text": "delegatecall runs in caller context, call runs in callee context",
+          "is_correct": true
+        },
+        {
+          "option_id": 6991,
+          "option_text": "call runs in caller context, delegatecall runs in callee context",
+          "is_correct": false
+        },
+        {
+          "option_id": 6992,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6993,
+          "option_text": "delegatecall is for value transfers only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1183,
+      "subskill_id": 57,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement custom errors in Solidity?",
+      "options": [
+        {
+          "option_id": 6994,
+          "option_text": "By using require with string messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 6995,
+          "option_text": "By using revert only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6996,
+          "option_text": "By using try-catch",
+          "is_correct": false
+        },
+        {
+          "option_id": 6997,
+          "option_text": "Using error keyword with custom error types",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1184,
+      "subskill_id": 57,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between immutable and constant?",
+      "options": [
+        {
+          "option_id": 6998,
+          "option_text": "Both are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 6999,
+          "option_text": "constant is fixed at compile-time, immutable is set at deployment time",
+          "is_correct": true
+        },
+        {
+          "option_id": 7000,
+          "option_text": "immutable is fixed at compile-time, constant is set at deployment time",
+          "is_correct": false
+        },
+        {
+          "option_id": 7001,
+          "option_text": "They are both variable types",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1185,
+      "subskill_id": 57,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a token standard like ERC-20?",
+      "options": [
+        {
+          "option_id": 7002,
+          "option_text": "Implement required functions like transfer, balanceOf, and approve",
+          "is_correct": true
+        },
+        {
+          "option_id": 7003,
+          "option_text": "Just name the contract ERC-20",
+          "is_correct": false
+        },
+        {
+          "option_id": 7004,
+          "option_text": "Use only a constructor",
+          "is_correct": false
+        },
+        {
+          "option_id": 7005,
+          "option_text": "Only use mapping",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1186,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you build a full-stack dApp with Web3?",
+      "options": [
+        {
+          "option_id": 7006,
+          "option_text": "Use only HTML",
+          "is_correct": false
+        },
+        {
+          "option_id": 7007,
+          "option_text": "Write smart contracts only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7008,
+          "option_text": "Combine smart contracts, Web3.js, and frontend frameworks",
+          "is_correct": true
+        },
+        {
+          "option_id": 7009,
+          "option_text": "Use a central server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1187,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the security considerations in Web3 development?",
+      "options": [
+        {
+          "option_id": 7010,
+          "option_text": "Private key management",
+          "is_correct": false
+        },
+        {
+          "option_id": 7011,
+          "option_text": "Smart contract security",
+          "is_correct": false
+        },
+        {
+          "option_id": 7012,
+          "option_text": "Frontend vulnerabilities",
+          "is_correct": false
+        },
+        {
+          "option_id": 7013,
+          "option_text": "All of the above are critical considerations",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1188,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle transaction failures in Web3?",
+      "options": [
+        {
+          "option_id": 7014,
+          "option_text": "By ignoring failures",
+          "is_correct": false
+        },
+        {
+          "option_id": 7015,
+          "option_text": "Using try-catch, waiting for transaction receipts, and error handling",
+          "is_correct": true
+        },
+        {
+          "option_id": 7016,
+          "option_text": "By sending transactions without checks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7017,
+          "option_text": "Transactions always succeed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1189,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between Web3.js and ethers.js?",
+      "options": [
+        {
+          "option_id": 7018,
+          "option_text": "Web3.js is for Ethereum, ethers.js is also for Ethereum but with simpler API",
+          "is_correct": true
+        },
+        {
+          "option_id": 7019,
+          "option_text": "They work on different blockchains",
+          "is_correct": false
+        },
+        {
+          "option_id": 7020,
+          "option_text": "ethers.js is for Bitcoin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7021,
+          "option_text": "They are identical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1190,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement multi-chain support in Web3?",
+      "options": [
+        {
+          "option_id": 7022,
+          "option_text": "By using a single network",
+          "is_correct": false
+        },
+        {
+          "option_id": 7023,
+          "option_text": "Multi-chain support is not possible",
+          "is_correct": false
+        },
+        {
+          "option_id": 7024,
+          "option_text": "Use multiple providers and chain-specific configurations",
+          "is_correct": true
+        },
+        {
+          "option_id": 7025,
+          "option_text": "Deploy separate applications for each chain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1191,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a DeFi protocol?",
+      "options": [
+        {
+          "option_id": 7026,
+          "option_text": "Start coding immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 7027,
+          "option_text": "Ignore security concerns",
+          "is_correct": false
+        },
+        {
+          "option_id": 7028,
+          "option_text": "Use only frontend",
+          "is_correct": false
+        },
+        {
+          "option_id": 7029,
+          "option_text": "Define core logic, ensure security, and conduct thorough testing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1192,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the risks of DeFi lending platforms?",
+      "options": [
+        {
+          "option_id": 7030,
+          "option_text": "There are no risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 7031,
+          "option_text": "Liquidation risk, smart contract bugs, and market volatility",
+          "is_correct": true
+        },
+        {
+          "option_id": 7032,
+          "option_text": "Only high gas fees",
+          "is_correct": false
+        },
+        {
+          "option_id": 7033,
+          "option_text": "Only low interest rates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1193,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you calculate impermanent loss accurately?",
+      "options": [
+        {
+          "option_id": 7034,
+          "option_text": "Using the formula based on price ratio changes in the liquidity pool",
+          "is_correct": true
+        },
+        {
+          "option_id": 7035,
+          "option_text": "Impermanent loss cannot be calculated",
+          "is_correct": false
+        },
+        {
+          "option_id": 7036,
+          "option_text": "By checking token prices at the time of deposit",
+          "is_correct": false
+        },
+        {
+          "option_id": 7037,
+          "option_text": "By tracking only one token price",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1194,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between cross-chain and multi-chain DeFi?",
+      "options": [
+        {
+          "option_id": 7038,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 7039,
+          "option_text": "Cross-chain is built on one blockchain",
+          "is_correct": false
+        },
+        {
+          "option_id": 7040,
+          "option_text": "Cross-chain enables interoperability, multi-chain supports multiple chains",
+          "is_correct": true
+        },
+        {
+          "option_id": 7041,
+          "option_text": "Multi-chain is only for NFTs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1195,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a stablecoin mechanism?",
+      "options": [
+        {
+          "option_id": 7042,
+          "option_text": "By using only fiat reserves",
+          "is_correct": false
+        },
+        {
+          "option_id": 7043,
+          "option_text": "Use algorithmic mechanisms, collateralization, or hybrid approach",
+          "is_correct": true
+        },
+        {
+          "option_id": 7044,
+          "option_text": "By pegging to Bitcoin",
+          "is_correct": false
+        },
+        {
+          "option_id": 7045,
+          "option_text": "By not backing the token",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1196,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is sharding and how does it affect blockchain scalability?",
+      "options": [
+        {
+          "option_id": 7046,
+          "option_text": "A way to store data",
+          "is_correct": false
+        },
+        {
+          "option_id": 7047,
+          "option_text": "A consensus algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 7048,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 7049,
+          "option_text": "A technique to split the blockchain into smaller partitions for faster processing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1197,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are layer 2 solutions in blockchain?",
+      "options": [
+        {
+          "option_id": 7050,
+          "option_text": "Protocols built on top of L1 for scaling and speed improvements",
+          "is_correct": true
+        },
+        {
+          "option_id": 7051,
+          "option_text": "The base blockchain itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 7052,
+          "option_text": "A type of wallet",
+          "is_correct": false
+        },
+        {
+          "option_id": 7053,
+          "option_text": "A type of token",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1198,
+      "subskill_id": 56,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a consensus mechanism?",
+      "options": [
+        {
+          "option_id": 7054,
+          "option_text": "By copying existing systems",
+          "is_correct": false
+        },
+        {
+          "option_id": 7055,
+          "option_text": "Define validators, block creation rules, and finality conditions",
+          "is_correct": true
+        },
+        {
+          "option_id": 7056,
+          "option_text": "Consensus mechanisms are pre-defined only",
+          "is_correct": false
+        },
+        {
+          "option_id": 7057,
+          "option_text": "Use a central server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1199,
+      "subskill_id": 58,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between public and private blockchains?",
+      "options": [
+        {
+          "option_id": 7058,
+          "option_text": "Private blockchains are accessible to everyone",
+          "is_correct": false
+        },
+        {
+          "option_id": 7059,
+          "option_text": "Public blockchains are permissioned",
+          "is_correct": false
+        },
+        {
+          "option_id": 7060,
+          "option_text": "Public are open and permissionless, private are restricted and permissioned",
+          "is_correct": true
+        },
+        {
+          "option_id": 7061,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1200,
+      "subskill_id": 59,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the future trends in blockchain development?",
+      "options": [
+        {
+          "option_id": 7062,
+          "option_text": "Only NFT development",
+          "is_correct": false
+        },
+        {
+          "option_id": 7063,
+          "option_text": "Only DeFi applications",
+          "is_correct": false
+        },
+        {
+          "option_id": 7064,
+          "option_text": "Only mining optimizations",
+          "is_correct": false
+        },
+        {
+          "option_id": 7065,
+          "option_text": "Scalability solutions, interoperability, and enterprise adoption",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

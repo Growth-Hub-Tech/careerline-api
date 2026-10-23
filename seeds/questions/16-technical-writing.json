@@ -1,0 +1,2906 @@
+{
+  "skill_id": 16,
+  "skill_name": "Technical Writing",
+  "questions": [
+    {
+      "question_id": 1501,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is technical documentation?",
+      "options": [
+        {
+          "option_id": 8266,
+          "option_text": "Written materials that explain how to use, develop, or maintain a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 8267,
+          "option_text": "A marketing brochure",
+          "is_correct": false
+        },
+        {
+          "option_id": 8268,
+          "option_text": "A sales script",
+          "is_correct": false
+        },
+        {
+          "option_id": 8269,
+          "option_text": "A legal contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1502,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of technical documentation?",
+      "options": [
+        {
+          "option_id": 8270,
+          "option_text": "To help users and developers understand and use a product effectively",
+          "is_correct": true
+        },
+        {
+          "option_id": 8271,
+          "option_text": "To sell the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 8272,
+          "option_text": "To confuse users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8273,
+          "option_text": "To replace customer support",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1503,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What are the types of technical documentation?",
+      "options": [
+        {
+          "option_id": 8274,
+          "option_text": "User documentation, developer documentation, and system documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 8275,
+          "option_text": "Only user documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8276,
+          "option_text": "Only developer documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8277,
+          "option_text": "Only marketing documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1504,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is user documentation?",
+      "options": [
+        {
+          "option_id": 8278,
+          "option_text": "Documentation written for end-users of a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 8279,
+          "option_text": "Documentation written for developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8280,
+          "option_text": "Documentation written for system administrators",
+          "is_correct": false
+        },
+        {
+          "option_id": 8281,
+          "option_text": "Documentation written for marketers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1505,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is developer documentation?",
+      "options": [
+        {
+          "option_id": 8282,
+          "option_text": "Documentation written for developers building on a platform",
+          "is_correct": true
+        },
+        {
+          "option_id": 8283,
+          "option_text": "Documentation written for end-users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8284,
+          "option_text": "Documentation written for managers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8285,
+          "option_text": "Documentation written for designers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1506,
+      "subskill_id": 75,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is system documentation?",
+      "options": [
+        {
+          "option_id": 8286,
+          "option_text": "Documentation that describes the system architecture and components",
+          "is_correct": true
+        },
+        {
+          "option_id": 8287,
+          "option_text": "Documentation for end-users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8288,
+          "option_text": "Documentation for marketers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8289,
+          "option_text": "Documentation for sales teams",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1507,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is API documentation?",
+      "options": [
+        {
+          "option_id": 8290,
+          "option_text": "Documentation that explains how to use an API",
+          "is_correct": true
+        },
+        {
+          "option_id": 8291,
+          "option_text": "Documentation for end-users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8292,
+          "option_text": "Documentation for system administrators",
+          "is_correct": false
+        },
+        {
+          "option_id": 8293,
+          "option_text": "Documentation for marketers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1508,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of API documentation?",
+      "options": [
+        {
+          "option_id": 8294,
+          "option_text": "To help developers integrate with an API quickly and correctly",
+          "is_correct": true
+        },
+        {
+          "option_id": 8295,
+          "option_text": "To confuse developers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8296,
+          "option_text": "To promote the API",
+          "is_correct": false
+        },
+        {
+          "option_id": 8297,
+          "option_text": "To replace customer support",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1509,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API reference?",
+      "options": [
+        {
+          "option_id": 8298,
+          "option_text": "A detailed list of API endpoints, parameters, and responses",
+          "is_correct": true
+        },
+        {
+          "option_id": 8299,
+          "option_text": "A marketing brochure",
+          "is_correct": false
+        },
+        {
+          "option_id": 8300,
+          "option_text": "A user manual",
+          "is_correct": false
+        },
+        {
+          "option_id": 8301,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1510,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a Getting Started guide in API docs?",
+      "options": [
+        {
+          "option_id": 8302,
+          "option_text": "A guide that helps developers make their first API call",
+          "is_correct": true
+        },
+        {
+          "option_id": 8303,
+          "option_text": "A troubleshooting guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8304,
+          "option_text": "A release notes document",
+          "is_correct": false
+        },
+        {
+          "option_id": 8305,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1511,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API endpoint?",
+      "options": [
+        {
+          "option_id": 8306,
+          "option_text": "A specific URL where an API can be accessed",
+          "is_correct": true
+        },
+        {
+          "option_id": 8307,
+          "option_text": "A parameter in an API call",
+          "is_correct": false
+        },
+        {
+          "option_id": 8308,
+          "option_text": "A response from an API",
+          "is_correct": false
+        },
+        {
+          "option_id": 8309,
+          "option_text": "A header in an API request",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1512,
+      "subskill_id": 76,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an API parameter?",
+      "options": [
+        {
+          "option_id": 8310,
+          "option_text": "A value passed to an API to modify its behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": 8311,
+          "option_text": "An endpoint URL",
+          "is_correct": false
+        },
+        {
+          "option_id": 8312,
+          "option_text": "A response from an API",
+          "is_correct": false
+        },
+        {
+          "option_id": 8313,
+          "option_text": "A header in an API request",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1513,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a user manual?",
+      "options": [
+        {
+          "option_id": 8314,
+          "option_text": "A document that explains how to use a product or service",
+          "is_correct": true
+        },
+        {
+          "option_id": 8315,
+          "option_text": "A marketing brochure",
+          "is_correct": false
+        },
+        {
+          "option_id": 8316,
+          "option_text": "A sales script",
+          "is_correct": false
+        },
+        {
+          "option_id": 8317,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1514,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a user manual?",
+      "options": [
+        {
+          "option_id": 8318,
+          "option_text": "To help users understand and use a product correctly and safely",
+          "is_correct": true
+        },
+        {
+          "option_id": 8319,
+          "option_text": "To confuse users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8320,
+          "option_text": "To promote the product",
+          "is_correct": false
+        },
+        {
+          "option_id": 8321,
+          "option_text": "To replace customer support",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1515,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a quick start guide?",
+      "options": [
+        {
+          "option_id": 8322,
+          "option_text": "A short guide that helps users get started quickly",
+          "is_correct": true
+        },
+        {
+          "option_id": 8323,
+          "option_text": "A detailed reference manual",
+          "is_correct": false
+        },
+        {
+          "option_id": 8324,
+          "option_text": "A troubleshooting guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8325,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1516,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a troubleshooting guide?",
+      "options": [
+        {
+          "option_id": 8326,
+          "option_text": "A document that helps users solve common problems",
+          "is_correct": true
+        },
+        {
+          "option_id": 8327,
+          "option_text": "A quick start guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8328,
+          "option_text": "A reference manual",
+          "is_correct": false
+        },
+        {
+          "option_id": 8329,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1517,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a reference manual?",
+      "options": [
+        {
+          "option_id": 8330,
+          "option_text": "A comprehensive document that lists all product features and functions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8331,
+          "option_text": "A quick start guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8332,
+          "option_text": "A troubleshooting guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8333,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1518,
+      "subskill_id": 77,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a training manual?",
+      "options": [
+        {
+          "option_id": 8334,
+          "option_text": "A document used to train users on a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 8335,
+          "option_text": "A quick start guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8336,
+          "option_text": "A troubleshooting guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8337,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1519,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a style guide in technical writing?",
+      "options": [
+        {
+          "option_id": 8338,
+          "option_text": "A set of standards for writing and designing documents",
+          "is_correct": true
+        },
+        {
+          "option_id": 8339,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 8340,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        },
+        {
+          "option_id": 8341,
+          "option_text": "A sales script",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1520,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of a style guide?",
+      "options": [
+        {
+          "option_id": 8342,
+          "option_text": "To ensure consistency and quality across all documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 8343,
+          "option_text": "To confuse writers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8344,
+          "option_text": "To replace writers",
+          "is_correct": false
+        },
+        {
+          "option_id": 8345,
+          "option_text": "To sell more products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1521,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the Chicago Manual of Style?",
+      "options": [
+        {
+          "option_id": 8346,
+          "option_text": "A widely used style guide for publishing",
+          "is_correct": true
+        },
+        {
+          "option_id": 8347,
+          "option_text": "A style guide for coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 8348,
+          "option_text": "A style guide for marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8349,
+          "option_text": "A style guide for sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1522,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the AP Stylebook?",
+      "options": [
+        {
+          "option_id": 8350,
+          "option_text": "A style guide commonly used in journalism and news writing",
+          "is_correct": true
+        },
+        {
+          "option_id": 8351,
+          "option_text": "A style guide for coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 8352,
+          "option_text": "A style guide for marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8353,
+          "option_text": "A style guide for sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1523,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a tone in technical writing?",
+      "options": [
+        {
+          "option_id": 8354,
+          "option_text": "The attitude or feeling conveyed by the writing",
+          "is_correct": true
+        },
+        {
+          "option_id": 8355,
+          "option_text": "The grammatical correctness of the writing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8356,
+          "option_text": "The layout of the document",
+          "is_correct": false
+        },
+        {
+          "option_id": 8357,
+          "option_text": "The font used in the document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1524,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is voice in technical writing?",
+      "options": [
+        {
+          "option_id": 8358,
+          "option_text": "The personality or perspective of the writing",
+          "is_correct": true
+        },
+        {
+          "option_id": 8359,
+          "option_text": "The grammatical correctness of the writing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8360,
+          "option_text": "The layout of the document",
+          "is_correct": false
+        },
+        {
+          "option_id": 8361,
+          "option_text": "The font used in the document",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1525,
+      "subskill_id": 78,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is plain language in technical writing?",
+      "options": [
+        {
+          "option_id": 8362,
+          "option_text": "Clear, concise, and unambiguous language that is easy to understand",
+          "is_correct": true
+        },
+        {
+          "option_id": 8363,
+          "option_text": "Complex and technical language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8364,
+          "option_text": "Marketing language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8365,
+          "option_text": "Legal language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1526,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you plan technical documentation?",
+      "options": [
+        {
+          "option_id": 8366,
+          "option_text": "By identifying the audience, purpose, and scope of the documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 8367,
+          "option_text": "By writing without a plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 8368,
+          "option_text": "By copying another company's documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8369,
+          "option_text": "By skipping the planning phase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1527,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a documentation plan?",
+      "options": [
+        {
+          "option_id": 8370,
+          "option_text": "A document that outlines the documentation strategy, scope, and timeline",
+          "is_correct": true
+        },
+        {
+          "option_id": 8371,
+          "option_text": "A marketing plan",
+          "is_correct": false
+        },
+        {
+          "option_id": 8372,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        },
+        {
+          "option_id": 8373,
+          "option_text": "A sales plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1528,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you structure technical documentation?",
+      "options": [
+        {
+          "option_id": 8374,
+          "option_text": "By organizing content logically with clear headings and sections",
+          "is_correct": true
+        },
+        {
+          "option_id": 8375,
+          "option_text": "By writing everything in one paragraph",
+          "is_correct": false
+        },
+        {
+          "option_id": 8376,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8377,
+          "option_text": "By skipping headings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1529,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a documentation template?",
+      "options": [
+        {
+          "option_id": 8378,
+          "option_text": "A pre-designed format for creating consistent documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 8379,
+          "option_text": "A marketing brochure",
+          "is_correct": false
+        },
+        {
+          "option_id": 8380,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        },
+        {
+          "option_id": 8381,
+          "option_text": "A sales script",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1530,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you maintain technical documentation?",
+      "options": [
+        {
+          "option_id": 8382,
+          "option_text": "By regularly reviewing and updating documentation based on feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 8383,
+          "option_text": "By ignoring feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 8384,
+          "option_text": "By rewriting everything from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 8385,
+          "option_text": "By deleting old documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1531,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write API documentation?",
+      "options": [
+        {
+          "option_id": 8386,
+          "option_text": "By understanding the API and using clear examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 8387,
+          "option_text": "By copying another API's documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8388,
+          "option_text": "By skipping examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 8389,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1532,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is OpenAPI/Swagger?",
+      "options": [
+        {
+          "option_id": 8390,
+          "option_text": "A specification for writing REST APIs",
+          "is_correct": true
+        },
+        {
+          "option_id": 8391,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8392,
+          "option_text": "A style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8393,
+          "option_text": "A marketing tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1533,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an API endpoint URL?",
+      "options": [
+        {
+          "option_id": 8394,
+          "option_text": "The full path to an API resource",
+          "is_correct": true
+        },
+        {
+          "option_id": 8395,
+          "option_text": "A parameter in an API call",
+          "is_correct": false
+        },
+        {
+          "option_id": 8396,
+          "option_text": "A response from an API",
+          "is_correct": false
+        },
+        {
+          "option_id": 8397,
+          "option_text": "A header in an API request",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1534,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are API request and response examples?",
+      "options": [
+        {
+          "option_id": 8398,
+          "option_text": "Examples showing what a request and response look like",
+          "is_correct": true
+        },
+        {
+          "option_id": 8399,
+          "option_text": "Marketing materials",
+          "is_correct": false
+        },
+        {
+          "option_id": 8400,
+          "option_text": "A style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8401,
+          "option_text": "A product roadmap",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1535,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you test API documentation?",
+      "options": [
+        {
+          "option_id": 8402,
+          "option_text": "By trying out the API calls and verifying the documentation is accurate",
+          "is_correct": true
+        },
+        {
+          "option_id": 8403,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8404,
+          "option_text": "By ignoring errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 8405,
+          "option_text": "By skipping testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1536,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write a user manual?",
+      "options": [
+        {
+          "option_id": 8406,
+          "option_text": "By structuring it with an introduction, instructions, and troubleshooting",
+          "is_correct": true
+        },
+        {
+          "option_id": 8407,
+          "option_text": "By writing everything in one section",
+          "is_correct": false
+        },
+        {
+          "option_id": 8408,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8409,
+          "option_text": "By skipping the introduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1537,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the structure of a user manual?",
+      "options": [
+        {
+          "option_id": 8410,
+          "option_text": "Introduction, setup, tasks, troubleshooting, and reference",
+          "is_correct": true
+        },
+        {
+          "option_id": 8411,
+          "option_text": "Only instructions",
+          "is_correct": false
+        },
+        {
+          "option_id": 8412,
+          "option_text": "Only troubleshooting",
+          "is_correct": false
+        },
+        {
+          "option_id": 8413,
+          "option_text": "Only reference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1538,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write clear instructions?",
+      "options": [
+        {
+          "option_id": 8414,
+          "option_text": "By using simple language and step-by-step instructions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8415,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8416,
+          "option_text": "By skipping steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 8417,
+          "option_text": "By using vague language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1539,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are safety warnings in user manuals?",
+      "options": [
+        {
+          "option_id": 8418,
+          "option_text": "Warnings that alert users to potential hazards or risks",
+          "is_correct": true
+        },
+        {
+          "option_id": 8419,
+          "option_text": "Marketing messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 8420,
+          "option_text": "Style guide rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8421,
+          "option_text": "Product features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1540,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a quick start guide?",
+      "options": [
+        {
+          "option_id": 8422,
+          "option_text": "By focusing on the most common tasks users need to perform",
+          "is_correct": true
+        },
+        {
+          "option_id": 8423,
+          "option_text": "By including all features",
+          "is_correct": false
+        },
+        {
+          "option_id": 8424,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8425,
+          "option_text": "By skipping setup instructions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1541,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you create a style guide?",
+      "options": [
+        {
+          "option_id": 8426,
+          "option_text": "By defining rules for tone, voice, grammar, and formatting",
+          "is_correct": true
+        },
+        {
+          "option_id": 8427,
+          "option_text": "By copying another company's style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8428,
+          "option_text": "By skipping grammar rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8429,
+          "option_text": "By ignoring formatting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1542,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are common style guide rules?",
+      "options": [
+        {
+          "option_id": 8430,
+          "option_text": "Rules for capitalization, punctuation, and spelling",
+          "is_correct": true
+        },
+        {
+          "option_id": 8431,
+          "option_text": "Rules for coding",
+          "is_correct": false
+        },
+        {
+          "option_id": 8432,
+          "option_text": "Rules for marketing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8433,
+          "option_text": "Rules for sales",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1543,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you maintain consistency with a style guide?",
+      "options": [
+        {
+          "option_id": 8434,
+          "option_text": "By periodically reviewing content and comparing it to the style guide",
+          "is_correct": true
+        },
+        {
+          "option_id": 8435,
+          "option_text": "By ignoring the style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8436,
+          "option_text": "By rewriting everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 8437,
+          "option_text": "By deleting old content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1544,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a style guide and a template?",
+      "options": [
+        {
+          "option_id": 8438,
+          "option_text": "A style guide is for writing rules; a template is for formatting",
+          "is_correct": true
+        },
+        {
+          "option_id": 8439,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8440,
+          "option_text": "A template is for writing rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8441,
+          "option_text": "A style guide is for formatting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1545,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you apply a style guide to existing content?",
+      "options": [
+        {
+          "option_id": 8442,
+          "option_text": "By reviewing existing content and updating it to match the style guide",
+          "is_correct": true
+        },
+        {
+          "option_id": 8443,
+          "option_text": "By ignoring the style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8444,
+          "option_text": "By rewriting everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 8445,
+          "option_text": "By deleting old content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1546,
+      "subskill_id": 75,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a documentation review process?",
+      "options": [
+        {
+          "option_id": 8446,
+          "option_text": "A process where documentation is reviewed by peers for accuracy and quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 8447,
+          "option_text": "A marketing review",
+          "is_correct": false
+        },
+        {
+          "option_id": 8448,
+          "option_text": "A legal review",
+          "is_correct": false
+        },
+        {
+          "option_id": 8449,
+          "option_text": "A design review",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1547,
+      "subskill_id": 76,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an authentication method in API docs?",
+      "options": [
+        {
+          "option_id": 8450,
+          "option_text": "Methods like API keys, OAuth, or basic auth for accessing the API",
+          "is_correct": true
+        },
+        {
+          "option_id": 8451,
+          "option_text": "Marketing messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 8452,
+          "option_text": "Style guide rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8453,
+          "option_text": "Product features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1548,
+      "subskill_id": 77,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write troubleshooting content?",
+      "options": [
+        {
+          "option_id": 8454,
+          "option_text": "By identifying common issues and providing clear solutions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8455,
+          "option_text": "By ignoring issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 8456,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8457,
+          "option_text": "By skipping troubleshooting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1549,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a content style guide?",
+      "options": [
+        {
+          "option_id": 8458,
+          "option_text": "A style guide that defines content standards for a product or brand",
+          "is_correct": true
+        },
+        {
+          "option_id": 8459,
+          "option_text": "A marketing style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8460,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8461,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1550,
+      "subskill_id": 78,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a grammar style guide?",
+      "options": [
+        {
+          "option_id": 8462,
+          "option_text": "A style guide that defines grammar, punctuation, and word usage",
+          "is_correct": true
+        },
+        {
+          "option_id": 8463,
+          "option_text": "A marketing style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8464,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8465,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1551,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you manage documentation versioning?",
+      "options": [
+        {
+          "option_id": 8466,
+          "option_text": "By using version control systems like Git to track changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8467,
+          "option_text": "By copying and pasting old versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 8468,
+          "option_text": "By deleting old versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 8469,
+          "option_text": "By ignoring versioning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1552,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is single sourcing in documentation?",
+      "options": [
+        {
+          "option_id": 8470,
+          "option_text": "A method of creating and reusing content across multiple documents",
+          "is_correct": true
+        },
+        {
+          "option_id": 8471,
+          "option_text": "Writing everything from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 8472,
+          "option_text": "Using only one document",
+          "is_correct": false
+        },
+        {
+          "option_id": 8473,
+          "option_text": "Ignoring content reuse",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1553,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you localize technical documentation?",
+      "options": [
+        {
+          "option_id": 8474,
+          "option_text": "By translating and adapting content for different languages and cultures",
+          "is_correct": true
+        },
+        {
+          "option_id": 8475,
+          "option_text": "By copying content",
+          "is_correct": false
+        },
+        {
+          "option_id": 8476,
+          "option_text": "By ignoring localization",
+          "is_correct": false
+        },
+        {
+          "option_id": 8477,
+          "option_text": "By using machine translation only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1554,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the best practices for technical documentation?",
+      "options": [
+        {
+          "option_id": 8478,
+          "option_text": "Writing clear, user-focused content, and keeping it updated",
+          "is_correct": true
+        },
+        {
+          "option_id": 8479,
+          "option_text": "Using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8480,
+          "option_text": "Ignoring user feedback",
+          "is_correct": false
+        },
+        {
+          "option_id": 8481,
+          "option_text": "Writing once and never updating",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1555,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you measure documentation effectiveness?",
+      "options": [
+        {
+          "option_id": 8482,
+          "option_text": "By tracking user feedback, support tickets, and documentation usage",
+          "is_correct": true
+        },
+        {
+          "option_id": 8483,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8484,
+          "option_text": "By ignoring measurements",
+          "is_correct": false
+        },
+        {
+          "option_id": 8485,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1556,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you version API documentation?",
+      "options": [
+        {
+          "option_id": 8486,
+          "option_text": "By using semantic versioning and maintaining previous versions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8487,
+          "option_text": "By deleting old versions",
+          "is_correct": false
+        },
+        {
+          "option_id": 8488,
+          "option_text": "By ignoring versioning",
+          "is_correct": false
+        },
+        {
+          "option_id": 8489,
+          "option_text": "By rewriting everything",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1557,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you generate API docs from code?",
+      "options": [
+        {
+          "option_id": 8490,
+          "option_text": "By using tools like Swagger or JSDoc to generate docs from code",
+          "is_correct": true
+        },
+        {
+          "option_id": 8491,
+          "option_text": "By writing docs manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 8492,
+          "option_text": "By copying from other APIs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8493,
+          "option_text": "By ignoring generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1558,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are the best practices for API documentation?",
+      "options": [
+        {
+          "option_id": 8494,
+          "option_text": "Clear, consistent, and complete documentation for developers",
+          "is_correct": true
+        },
+        {
+          "option_id": 8495,
+          "option_text": "Using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8496,
+          "option_text": "Ignoring developer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8497,
+          "option_text": "Writing once and never updating",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1559,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you handle API deprecation in docs?",
+      "options": [
+        {
+          "option_id": 8498,
+          "option_text": "By marking endpoints as deprecated and providing migration guidance",
+          "is_correct": true
+        },
+        {
+          "option_id": 8499,
+          "option_text": "By deleting endpoints immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": 8500,
+          "option_text": "By ignoring deprecation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8501,
+          "option_text": "By not updating docs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1560,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you document error responses in APIs?",
+      "options": [
+        {
+          "option_id": 8502,
+          "option_text": "By listing error codes, descriptions, and possible solutions",
+          "is_correct": true
+        },
+        {
+          "option_id": 8503,
+          "option_text": "By ignoring errors",
+          "is_correct": false
+        },
+        {
+          "option_id": 8504,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8505,
+          "option_text": "By skipping error documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1561,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you design user manuals for different audiences?",
+      "options": [
+        {
+          "option_id": 8506,
+          "option_text": "By tailoring content to the audience's needs and expertise level",
+          "is_correct": true
+        },
+        {
+          "option_id": 8507,
+          "option_text": "By writing one-size-fits-all content",
+          "is_correct": false
+        },
+        {
+          "option_id": 8508,
+          "option_text": "By ignoring the audience",
+          "is_correct": false
+        },
+        {
+          "option_id": 8509,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1562,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create user manuals for complex products?",
+      "options": [
+        {
+          "option_id": 8510,
+          "option_text": "By simplifying complex concepts and using clear examples",
+          "is_correct": true
+        },
+        {
+          "option_id": 8511,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8512,
+          "option_text": "By skipping examples",
+          "is_correct": false
+        },
+        {
+          "option_id": 8513,
+          "option_text": "By ignoring user needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1563,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you test user manuals?",
+      "options": [
+        {
+          "option_id": 8514,
+          "option_text": "By having users test the instructions and provide feedback",
+          "is_correct": true
+        },
+        {
+          "option_id": 8515,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8516,
+          "option_text": "By ignoring testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8517,
+          "option_text": "By not updating based on feedback",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1564,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you update user manuals?",
+      "options": [
+        {
+          "option_id": 8518,
+          "option_text": "By keeping documentation up to date with product changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8519,
+          "option_text": "By ignoring product changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8520,
+          "option_text": "By rewriting everything",
+          "is_correct": false
+        },
+        {
+          "option_id": 8521,
+          "option_text": "By deleting old content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1565,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you make user manuals accessible?",
+      "options": [
+        {
+          "option_id": 8522,
+          "option_text": "By using plain language, clear formatting, and accessible design",
+          "is_correct": true
+        },
+        {
+          "option_id": 8523,
+          "option_text": "By using complex language",
+          "is_correct": false
+        },
+        {
+          "option_id": 8524,
+          "option_text": "By ignoring formatting",
+          "is_correct": false
+        },
+        {
+          "option_id": 8525,
+          "option_text": "By skipping design considerations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1566,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you enforce a style guide across a team?",
+      "options": [
+        {
+          "option_id": 8526,
+          "option_text": "By making the style guide accessible and conducting training",
+          "is_correct": true
+        },
+        {
+          "option_id": 8527,
+          "option_text": "By ignoring the style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8528,
+          "option_text": "By keeping it hidden",
+          "is_correct": false
+        },
+        {
+          "option_id": 8529,
+          "option_text": "By not training writers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1567,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a brand style guide?",
+      "options": [
+        {
+          "option_id": 8530,
+          "option_text": "A guide that defines the visual and messaging identity of a brand",
+          "is_correct": true
+        },
+        {
+          "option_id": 8531,
+          "option_text": "A technical style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8532,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8533,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1568,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you create a content style guide for a product?",
+      "options": [
+        {
+          "option_id": 8534,
+          "option_text": "By defining content rules for the product's voice, tone, and formatting",
+          "is_correct": true
+        },
+        {
+          "option_id": 8535,
+          "option_text": "By copying another product's guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8536,
+          "option_text": "By ignoring content rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8537,
+          "option_text": "By skipping formatting rules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1569,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of a style guide in localization?",
+      "options": [
+        {
+          "option_id": 8538,
+          "option_text": "It ensures consistency in translated content across languages",
+          "is_correct": true
+        },
+        {
+          "option_id": 8539,
+          "option_text": "It has no role",
+          "is_correct": false
+        },
+        {
+          "option_id": 8540,
+          "option_text": "It confuses translators",
+          "is_correct": false
+        },
+        {
+          "option_id": 8541,
+          "option_text": "It is only for English",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1570,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you update a style guide over time?",
+      "options": [
+        {
+          "option_id": 8542,
+          "option_text": "By regularly reviewing and updating it based on feedback and changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8543,
+          "option_text": "By ignoring updates",
+          "is_correct": false
+        },
+        {
+          "option_id": 8544,
+          "option_text": "By rewriting it from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 8545,
+          "option_text": "By deleting it",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1571,
+      "subskill_id": 75,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a documentation audit?",
+      "options": [
+        {
+          "option_id": 8546,
+          "option_text": "A systematic review of documentation to identify gaps and issues",
+          "is_correct": true
+        },
+        {
+          "option_id": 8547,
+          "option_text": "A marketing audit",
+          "is_correct": false
+        },
+        {
+          "option_id": 8548,
+          "option_text": "A legal audit",
+          "is_correct": false
+        },
+        {
+          "option_id": 8549,
+          "option_text": "A design audit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1572,
+      "subskill_id": 76,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is API authentication documentation?",
+      "options": [
+        {
+          "option_id": 8550,
+          "option_text": "Documentation on how to authenticate with the API",
+          "is_correct": true
+        },
+        {
+          "option_id": 8551,
+          "option_text": "Marketing messages",
+          "is_correct": false
+        },
+        {
+          "option_id": 8552,
+          "option_text": "Style guide rules",
+          "is_correct": false
+        },
+        {
+          "option_id": 8553,
+          "option_text": "Product features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1573,
+      "subskill_id": 77,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a user onboarding guide?",
+      "options": [
+        {
+          "option_id": 8554,
+          "option_text": "A guide that helps new users get started with a product",
+          "is_correct": true
+        },
+        {
+          "option_id": 8555,
+          "option_text": "A troubleshooting guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8556,
+          "option_text": "A reference manual",
+          "is_correct": false
+        },
+        {
+          "option_id": 8557,
+          "option_text": "A style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1574,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a writing style guide?",
+      "options": [
+        {
+          "option_id": 8558,
+          "option_text": "A style guide that defines rules for writing content",
+          "is_correct": true
+        },
+        {
+          "option_id": 8559,
+          "option_text": "A marketing style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8560,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8561,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1575,
+      "subskill_id": 78,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a visual style guide?",
+      "options": [
+        {
+          "option_id": 8562,
+          "option_text": "A style guide that defines visual design elements",
+          "is_correct": true
+        },
+        {
+          "option_id": 8563,
+          "option_text": "A writing style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8564,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8565,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1576,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a documentation as code strategy?",
+      "options": [
+        {
+          "option_id": 8566,
+          "option_text": "By treating documentation as code and using version control",
+          "is_correct": true
+        },
+        {
+          "option_id": 8567,
+          "option_text": "By ignoring version control",
+          "is_correct": false
+        },
+        {
+          "option_id": 8568,
+          "option_text": "By not tracking changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8569,
+          "option_text": "By writing docs in Word",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1577,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is continuous documentation?",
+      "options": [
+        {
+          "option_id": 8570,
+          "option_text": "A practice of continuously updating documentation with product changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8571,
+          "option_text": "Writing docs once",
+          "is_correct": false
+        },
+        {
+          "option_id": 8572,
+          "option_text": "Ignoring product changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8573,
+          "option_text": "Not updating docs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1578,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale documentation across teams?",
+      "options": [
+        {
+          "option_id": 8574,
+          "option_text": "By creating standardized processes and using shared tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8575,
+          "option_text": "By having each team do their own thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8576,
+          "option_text": "By ignoring standards",
+          "is_correct": false
+        },
+        {
+          "option_id": 8577,
+          "option_text": "By not sharing tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1579,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of documentation in DevOps?",
+      "options": [
+        {
+          "option_id": 8578,
+          "option_text": "Documentation is a key part of DevOps for sharing knowledge and processes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8579,
+          "option_text": "Documentation is not important in DevOps",
+          "is_correct": false
+        },
+        {
+          "option_id": 8580,
+          "option_text": "Documentation is only for users",
+          "is_correct": false
+        },
+        {
+          "option_id": 8581,
+          "option_text": "Documentation is for marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1580,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a documentation culture?",
+      "options": [
+        {
+          "option_id": 8582,
+          "option_text": "By encouraging teams to document as part of their workflow",
+          "is_correct": true
+        },
+        {
+          "option_id": 8583,
+          "option_text": "By not prioritizing documentation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8584,
+          "option_text": "By making documentation someone else's job",
+          "is_correct": false
+        },
+        {
+          "option_id": 8585,
+          "option_text": "By ignoring documentation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1581,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design API docs for developer experience?",
+      "options": [
+        {
+          "option_id": 8586,
+          "option_text": "By focusing on developer needs, clarity, and usability",
+          "is_correct": true
+        },
+        {
+          "option_id": 8587,
+          "option_text": "By using complex jargon",
+          "is_correct": false
+        },
+        {
+          "option_id": 8588,
+          "option_text": "By ignoring developer needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8589,
+          "option_text": "By not testing docs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1582,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a developer portal?",
+      "options": [
+        {
+          "option_id": 8590,
+          "option_text": "A central hub where developers can find API docs, guides, and tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8591,
+          "option_text": "A marketing website",
+          "is_correct": false
+        },
+        {
+          "option_id": 8592,
+          "option_text": "A product dashboard",
+          "is_correct": false
+        },
+        {
+          "option_id": 8593,
+          "option_text": "A support portal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1583,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement API docs as code?",
+      "options": [
+        {
+          "option_id": 8594,
+          "option_text": "By writing API docs in a version-controlled format like Markdown",
+          "is_correct": true
+        },
+        {
+          "option_id": 8595,
+          "option_text": "By using Word documents",
+          "is_correct": false
+        },
+        {
+          "option_id": 8596,
+          "option_text": "By not using version control",
+          "is_correct": false
+        },
+        {
+          "option_id": 8597,
+          "option_text": "By writing docs in PDF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1584,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure API documentation success?",
+      "options": [
+        {
+          "option_id": 8598,
+          "option_text": "By tracking usage metrics, developer satisfaction, and support tickets",
+          "is_correct": true
+        },
+        {
+          "option_id": 8599,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8600,
+          "option_text": "By ignoring metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 8601,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1585,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle API docs for multiple audiences?",
+      "options": [
+        {
+          "option_id": 8602,
+          "option_text": "By providing different levels of documentation for different user types",
+          "is_correct": true
+        },
+        {
+          "option_id": 8603,
+          "option_text": "By using one-size-fits-all docs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8604,
+          "option_text": "By ignoring user types",
+          "is_correct": false
+        },
+        {
+          "option_id": 8605,
+          "option_text": "By not segmenting content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1586,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create user manuals for enterprise products?",
+      "options": [
+        {
+          "option_id": 8606,
+          "option_text": "By understanding enterprise needs and creating comprehensive documentation",
+          "is_correct": true
+        },
+        {
+          "option_id": 8607,
+          "option_text": "By creating simple docs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8608,
+          "option_text": "By ignoring enterprise needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8609,
+          "option_text": "By not updating docs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1587,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement user manuals in multiple formats?",
+      "options": [
+        {
+          "option_id": 8610,
+          "option_text": "By providing the manual in PDF, online, and interactive formats",
+          "is_correct": true
+        },
+        {
+          "option_id": 8611,
+          "option_text": "By using only one format",
+          "is_correct": false
+        },
+        {
+          "option_id": 8612,
+          "option_text": "By ignoring other formats",
+          "is_correct": false
+        },
+        {
+          "option_id": 8613,
+          "option_text": "By not considering formats",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1588,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you integrate user manuals with product design?",
+      "options": [
+        {
+          "option_id": 8614,
+          "option_text": "By working closely with designers and developers during the design process",
+          "is_correct": true
+        },
+        {
+          "option_id": 8615,
+          "option_text": "By writing docs in isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 8616,
+          "option_text": "By not collaborating",
+          "is_correct": false
+        },
+        {
+          "option_id": 8617,
+          "option_text": "By ignoring design",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1589,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create user manuals for SaaS products?",
+      "options": [
+        {
+          "option_id": 8618,
+          "option_text": "By creating guides for setup, configuration, and ongoing use",
+          "is_correct": true
+        },
+        {
+          "option_id": 8619,
+          "option_text": "By creating simple docs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8620,
+          "option_text": "By ignoring SaaS needs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8621,
+          "option_text": "By not updating docs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1590,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you use AI in user manual creation?",
+      "options": [
+        {
+          "option_id": 8622,
+          "option_text": "By using AI tools to assist with writing and maintaining user manuals",
+          "is_correct": true
+        },
+        {
+          "option_id": 8623,
+          "option_text": "By not using AI",
+          "is_correct": false
+        },
+        {
+          "option_id": 8624,
+          "option_text": "By writing docs manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 8625,
+          "option_text": "By ignoring AI tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1591,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale a style guide across a global organization?",
+      "options": [
+        {
+          "option_id": 8626,
+          "option_text": "By creating a centralized style guide and ensuring it is followed",
+          "is_correct": true
+        },
+        {
+          "option_id": 8627,
+          "option_text": "By not having a style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8628,
+          "option_text": "By keeping it hidden",
+          "is_correct": false
+        },
+        {
+          "option_id": 8629,
+          "option_text": "By not enforcing it",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1592,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the future of style guides in technical writing?",
+      "options": [
+        {
+          "option_id": 8630,
+          "option_text": "Style guides will become more dynamic and integrated with AI tools",
+          "is_correct": true
+        },
+        {
+          "option_id": 8631,
+          "option_text": "Style guides will stay the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 8632,
+          "option_text": "Style guides will become less important",
+          "is_correct": false
+        },
+        {
+          "option_id": 8633,
+          "option_text": "Style guides will be replaced by AI",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1593,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement accessibility in style guides?",
+      "options": [
+        {
+          "option_id": 8634,
+          "option_text": "By including accessibility standards in the style guide",
+          "is_correct": true
+        },
+        {
+          "option_id": 8635,
+          "option_text": "By ignoring accessibility",
+          "is_correct": false
+        },
+        {
+          "option_id": 8636,
+          "option_text": "By not considering accessibility",
+          "is_correct": false
+        },
+        {
+          "option_id": 8637,
+          "option_text": "By having a separate accessibility guide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1594,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you measure the impact of a style guide?",
+      "options": [
+        {
+          "option_id": 8638,
+          "option_text": "By tracking consistency, user feedback, and documentation quality",
+          "is_correct": true
+        },
+        {
+          "option_id": 8639,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 8640,
+          "option_text": "By ignoring impact",
+          "is_correct": false
+        },
+        {
+          "option_id": 8641,
+          "option_text": "By not measuring",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1595,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you evolve a style guide with product changes?",
+      "options": [
+        {
+          "option_id": 8642,
+          "option_text": "By regularly reviewing and updating the style guide with product changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 8643,
+          "option_text": "By ignoring product changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 8644,
+          "option_text": "By not updating it",
+          "is_correct": false
+        },
+        {
+          "option_id": 8645,
+          "option_text": "By rewriting it from scratch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1596,
+      "subskill_id": 75,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is documentation governance?",
+      "options": [
+        {
+          "option_id": 8646,
+          "option_text": "A framework for managing documentation quality and consistency",
+          "is_correct": true
+        },
+        {
+          "option_id": 8647,
+          "option_text": "A marketing framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 8648,
+          "option_text": "A legal framework",
+          "is_correct": false
+        },
+        {
+          "option_id": 8649,
+          "option_text": "A design framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1597,
+      "subskill_id": 76,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a developer documentation strategy?",
+      "options": [
+        {
+          "option_id": 8650,
+          "option_text": "By creating a comprehensive plan for developer docs",
+          "is_correct": true
+        },
+        {
+          "option_id": 8651,
+          "option_text": "By ignoring strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 8652,
+          "option_text": "By not planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 8653,
+          "option_text": "By copying competitors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1598,
+      "subskill_id": 77,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create interactive user manuals?",
+      "options": [
+        {
+          "option_id": 8654,
+          "option_text": "By creating interactive tutorials and embedded help",
+          "is_correct": true
+        },
+        {
+          "option_id": 8655,
+          "option_text": "By using static PDFs",
+          "is_correct": false
+        },
+        {
+          "option_id": 8656,
+          "option_text": "By ignoring interactivity",
+          "is_correct": false
+        },
+        {
+          "option_id": 8657,
+          "option_text": "By not considering user experience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1599,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you create a multilingual style guide?",
+      "options": [
+        {
+          "option_id": 8658,
+          "option_text": "By creating a style guide that supports translation and localization",
+          "is_correct": true
+        },
+        {
+          "option_id": 8659,
+          "option_text": "By ignoring localization",
+          "is_correct": false
+        },
+        {
+          "option_id": 8660,
+          "option_text": "By using only English",
+          "is_correct": false
+        },
+        {
+          "option_id": 8661,
+          "option_text": "By not planning for localization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1600,
+      "subskill_id": 78,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a technical style guide?",
+      "options": [
+        {
+          "option_id": 8662,
+          "option_text": "A style guide that defines rules for technical content and formatting",
+          "is_correct": true
+        },
+        {
+          "option_id": 8663,
+          "option_text": "A marketing style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8664,
+          "option_text": "A coding style guide",
+          "is_correct": false
+        },
+        {
+          "option_id": 8665,
+          "option_text": "A sales style guide",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

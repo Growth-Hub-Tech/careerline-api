@@ -1,0 +1,2906 @@
+{
+  "skill_id": 36,
+  "skill_name": "Cold Outreach & Prospecting",
+  "questions": [
+    {
+      "question_id": 3501,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is cold email outreach?",
+      "options": [
+        {
+          "option_id": 16266,
+          "option_text": "A method of reaching out to potential customers who have not expressed interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 16267,
+          "option_text": "A method of reaching out to existing customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16268,
+          "option_text": "A method of ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16269,
+          "option_text": "A method of deleting potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3502,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of cold email outreach?",
+      "options": [
+        {
+          "option_id": 16270,
+          "option_text": "To generate interest and create new business opportunities",
+          "is_correct": true
+        },
+        {
+          "option_id": 16271,
+          "option_text": "To ignore new opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 16272,
+          "option_text": "To delete new opportunities",
+          "is_correct": false
+        },
+        {
+          "option_id": 16273,
+          "option_text": "To hide new opportunities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3503,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cold email?",
+      "options": [
+        {
+          "option_id": 16274,
+          "option_text": "An email sent to a potential customer who has not expressed interest",
+          "is_correct": true
+        },
+        {
+          "option_id": 16275,
+          "option_text": "An email sent to an existing customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 16276,
+          "option_text": "An email sent to a former customer",
+          "is_correct": false
+        },
+        {
+          "option_id": 16277,
+          "option_text": "An email sent to a competitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3504,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cold email subject line?",
+      "options": [
+        {
+          "option_id": 16278,
+          "option_text": "The subject line of a cold email",
+          "is_correct": true
+        },
+        {
+          "option_id": 16279,
+          "option_text": "The body of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16280,
+          "option_text": "The call to action of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16281,
+          "option_text": "The signature of a cold email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3505,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cold email body?",
+      "options": [
+        {
+          "option_id": 16282,
+          "option_text": "The main content of a cold email",
+          "is_correct": true
+        },
+        {
+          "option_id": 16283,
+          "option_text": "The subject line of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16284,
+          "option_text": "The call to action of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16285,
+          "option_text": "The signature of a cold email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3506,
+      "subskill_id": 162,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cold email call to action?",
+      "options": [
+        {
+          "option_id": 16286,
+          "option_text": "A clear instruction for the recipient to take action",
+          "is_correct": true
+        },
+        {
+          "option_id": 16287,
+          "option_text": "A subject line of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16288,
+          "option_text": "A body of a cold email",
+          "is_correct": false
+        },
+        {
+          "option_id": 16289,
+          "option_text": "A signature of a cold email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3507,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is LinkedIn prospecting?",
+      "options": [
+        {
+          "option_id": 16290,
+          "option_text": "The process of finding and connecting with potential customers on LinkedIn",
+          "is_correct": true
+        },
+        {
+          "option_id": 16291,
+          "option_text": "The process of ignoring potential customers on LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16292,
+          "option_text": "The process of deleting potential customers on LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16293,
+          "option_text": "The process of hiding potential customers on LinkedIn",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3508,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of LinkedIn prospecting?",
+      "options": [
+        {
+          "option_id": 16294,
+          "option_text": "To build a network of potential customers and generate leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16295,
+          "option_text": "To ignore potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16296,
+          "option_text": "To delete potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16297,
+          "option_text": "To hide potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3509,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a LinkedIn profile?",
+      "options": [
+        {
+          "option_id": 16298,
+          "option_text": "A personal profile on LinkedIn",
+          "is_correct": true
+        },
+        {
+          "option_id": 16299,
+          "option_text": "A company profile on LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16300,
+          "option_text": "A group on LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16301,
+          "option_text": "A message on LinkedIn",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3510,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a LinkedIn connection?",
+      "options": [
+        {
+          "option_id": 16302,
+          "option_text": "A connection to another LinkedIn user",
+          "is_correct": true
+        },
+        {
+          "option_id": 16303,
+          "option_text": "A connection to a LinkedIn group",
+          "is_correct": false
+        },
+        {
+          "option_id": 16304,
+          "option_text": "A connection to a LinkedIn page",
+          "is_correct": false
+        },
+        {
+          "option_id": 16305,
+          "option_text": "A connection to a LinkedIn job",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3511,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a LinkedIn message?",
+      "options": [
+        {
+          "option_id": 16306,
+          "option_text": "A message sent to another LinkedIn user",
+          "is_correct": true
+        },
+        {
+          "option_id": 16307,
+          "option_text": "A message sent to a LinkedIn group",
+          "is_correct": false
+        },
+        {
+          "option_id": 16308,
+          "option_text": "A message sent to a LinkedIn page",
+          "is_correct": false
+        },
+        {
+          "option_id": 16309,
+          "option_text": "A message sent to a LinkedIn job",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3512,
+      "subskill_id": 163,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a LinkedIn group?",
+      "options": [
+        {
+          "option_id": 16310,
+          "option_text": "A community of LinkedIn users with shared interests",
+          "is_correct": true
+        },
+        {
+          "option_id": 16311,
+          "option_text": "A community of LinkedIn employees",
+          "is_correct": false
+        },
+        {
+          "option_id": 16312,
+          "option_text": "A community of LinkedIn competitors",
+          "is_correct": false
+        },
+        {
+          "option_id": 16313,
+          "option_text": "A community of LinkedIn investors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3513,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is social selling?",
+      "options": [
+        {
+          "option_id": 16314,
+          "option_text": "The use of social media to find and engage prospects",
+          "is_correct": true
+        },
+        {
+          "option_id": 16315,
+          "option_text": "The use of email to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 16316,
+          "option_text": "The use of phone to find and engage prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 16317,
+          "option_text": "The use of direct mail to find and engage prospects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3514,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of social selling?",
+      "options": [
+        {
+          "option_id": 16318,
+          "option_text": "To build relationships and generate leads through social media",
+          "is_correct": true
+        },
+        {
+          "option_id": 16319,
+          "option_text": "To ignore social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16320,
+          "option_text": "To delete social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16321,
+          "option_text": "To hide social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3515,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a social selling platform?",
+      "options": [
+        {
+          "option_id": 16322,
+          "option_text": "A platform used for social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16323,
+          "option_text": "A platform used for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16324,
+          "option_text": "A platform used for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16325,
+          "option_text": "A platform used for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3516,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a social selling strategy?",
+      "options": [
+        {
+          "option_id": 16326,
+          "option_text": "A plan for using social media to sell",
+          "is_correct": true
+        },
+        {
+          "option_id": 16327,
+          "option_text": "A plan for ignoring social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16328,
+          "option_text": "A plan for deleting social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16329,
+          "option_text": "A plan for hiding social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3517,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a social selling content?",
+      "options": [
+        {
+          "option_id": 16330,
+          "option_text": "Content used for social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16331,
+          "option_text": "Content used for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16332,
+          "option_text": "Content used for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16333,
+          "option_text": "Content used for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3518,
+      "subskill_id": 164,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a social selling engagement?",
+      "options": [
+        {
+          "option_id": 16334,
+          "option_text": "Interaction with prospects on social media",
+          "is_correct": true
+        },
+        {
+          "option_id": 16335,
+          "option_text": "Ignoring prospects on social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16336,
+          "option_text": "Deleting prospects on social media",
+          "is_correct": false
+        },
+        {
+          "option_id": 16337,
+          "option_text": "Hiding prospects on social media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3519,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is lead generation?",
+      "options": [
+        {
+          "option_id": 16338,
+          "option_text": "The process of identifying and attracting potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 16339,
+          "option_text": "The process of ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16340,
+          "option_text": "The process of deleting potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16341,
+          "option_text": "The process of hiding potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3520,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of lead generation?",
+      "options": [
+        {
+          "option_id": 16342,
+          "option_text": "To build a pipeline of potential customers",
+          "is_correct": true
+        },
+        {
+          "option_id": 16343,
+          "option_text": "To ignore potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16344,
+          "option_text": "To delete potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16345,
+          "option_text": "To hide potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3521,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation strategy?",
+      "options": [
+        {
+          "option_id": 16346,
+          "option_text": "A plan for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16347,
+          "option_text": "A plan for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16348,
+          "option_text": "A plan for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16349,
+          "option_text": "A plan for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3522,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation tool?",
+      "options": [
+        {
+          "option_id": 16350,
+          "option_text": "A tool for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16351,
+          "option_text": "A tool for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16352,
+          "option_text": "A tool for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16353,
+          "option_text": "A tool for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3523,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation campaign?",
+      "options": [
+        {
+          "option_id": 16354,
+          "option_text": "A campaign for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16355,
+          "option_text": "A campaign for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16356,
+          "option_text": "A campaign for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16357,
+          "option_text": "A campaign for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3524,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation funnel?",
+      "options": [
+        {
+          "option_id": 16358,
+          "option_text": "A visual representation of the lead generation process",
+          "is_correct": true
+        },
+        {
+          "option_id": 16359,
+          "option_text": "A visual representation of the ignoring process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16360,
+          "option_text": "A visual representation of the deleting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16361,
+          "option_text": "A visual representation of the hiding process",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3525,
+      "subskill_id": 165,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a lead generation metric?",
+      "options": [
+        {
+          "option_id": 16362,
+          "option_text": "A metric for measuring lead generation success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16363,
+          "option_text": "A metric for measuring lead generation ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16364,
+          "option_text": "A metric for measuring lead generation deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16365,
+          "option_text": "A metric for measuring lead generation hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3526,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you write a cold email?",
+      "options": [
+        {
+          "option_id": 16366,
+          "option_text": "By personalizing the email, keeping it concise, and having a clear call to action",
+          "is_correct": true
+        },
+        {
+          "option_id": 16367,
+          "option_text": "By making it generic and vague",
+          "is_correct": false
+        },
+        {
+          "option_id": 16368,
+          "option_text": "By ignoring personalization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16369,
+          "option_text": "By deleting the email",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3527,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email sequence?",
+      "options": [
+        {
+          "option_id": 16370,
+          "option_text": "A series of emails sent to a prospect over time",
+          "is_correct": true
+        },
+        {
+          "option_id": 16371,
+          "option_text": "A single email sent to a prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 16372,
+          "option_text": "A series of ignored emails",
+          "is_correct": false
+        },
+        {
+          "option_id": 16373,
+          "option_text": "A series of deleted emails",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3528,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email personalization?",
+      "options": [
+        {
+          "option_id": 16374,
+          "option_text": "Tailoring the email to the individual recipient",
+          "is_correct": true
+        },
+        {
+          "option_id": 16375,
+          "option_text": "Using a generic template for all recipients",
+          "is_correct": false
+        },
+        {
+          "option_id": 16376,
+          "option_text": "Ignoring the recipient",
+          "is_correct": false
+        },
+        {
+          "option_id": 16377,
+          "option_text": "Deleting the recipient",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3529,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email follow-up?",
+      "options": [
+        {
+          "option_id": 16378,
+          "option_text": "An email sent to follow up with a prospect",
+          "is_correct": true
+        },
+        {
+          "option_id": 16379,
+          "option_text": "An email sent to ignore a prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 16380,
+          "option_text": "An email sent to delete a prospect",
+          "is_correct": false
+        },
+        {
+          "option_id": 16381,
+          "option_text": "An email sent to hide a prospect",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3530,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email metric?",
+      "options": [
+        {
+          "option_id": 16382,
+          "option_text": "A metric for measuring cold email success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16383,
+          "option_text": "A metric for measuring cold email ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16384,
+          "option_text": "A metric for measuring cold email deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16385,
+          "option_text": "A metric for measuring cold email hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3531,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you prospect on LinkedIn?",
+      "options": [
+        {
+          "option_id": 16386,
+          "option_text": "By using LinkedIn Sales Navigator and targeted searches",
+          "is_correct": true
+        },
+        {
+          "option_id": 16387,
+          "option_text": "By ignoring LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16388,
+          "option_text": "By deleting LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16389,
+          "option_text": "By hiding LinkedIn",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3532,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a LinkedIn Sales Navigator?",
+      "options": [
+        {
+          "option_id": 16390,
+          "option_text": "A tool for advanced LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16391,
+          "option_text": "A tool for ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16392,
+          "option_text": "A tool for deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16393,
+          "option_text": "A tool for hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3533,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a LinkedIn InMail?",
+      "options": [
+        {
+          "option_id": 16394,
+          "option_text": "A direct message sent on LinkedIn",
+          "is_correct": true
+        },
+        {
+          "option_id": 16395,
+          "option_text": "An email sent through LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16396,
+          "option_text": "A post on LinkedIn",
+          "is_correct": false
+        },
+        {
+          "option_id": 16397,
+          "option_text": "A comment on LinkedIn",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3534,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a LinkedIn search?",
+      "options": [
+        {
+          "option_id": 16398,
+          "option_text": "A search for potential customers on LinkedIn",
+          "is_correct": true
+        },
+        {
+          "option_id": 16399,
+          "option_text": "A search for ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16400,
+          "option_text": "A search for deleting potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16401,
+          "option_text": "A search for hiding potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3535,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a LinkedIn lead?",
+      "options": [
+        {
+          "option_id": 16402,
+          "option_text": "A lead found on LinkedIn",
+          "is_correct": true
+        },
+        {
+          "option_id": 16403,
+          "option_text": "A lead that is ignored",
+          "is_correct": false
+        },
+        {
+          "option_id": 16404,
+          "option_text": "A lead that is deleted",
+          "is_correct": false
+        },
+        {
+          "option_id": 16405,
+          "option_text": "A lead that is hidden",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3536,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you practice social selling?",
+      "options": [
+        {
+          "option_id": 16406,
+          "option_text": "By engaging with prospects on social media and building relationships",
+          "is_correct": true
+        },
+        {
+          "option_id": 16407,
+          "option_text": "By ignoring prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 16408,
+          "option_text": "By deleting prospects",
+          "is_correct": false
+        },
+        {
+          "option_id": 16409,
+          "option_text": "By hiding prospects",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3537,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a social selling framework?",
+      "options": [
+        {
+          "option_id": 16410,
+          "option_text": "A structured approach to social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16411,
+          "option_text": "A random approach to social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16412,
+          "option_text": "A way to ignore social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16413,
+          "option_text": "A way to delete social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3538,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a social selling tool?",
+      "options": [
+        {
+          "option_id": 16414,
+          "option_text": "A tool for social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16415,
+          "option_text": "A tool for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16416,
+          "option_text": "A tool for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16417,
+          "option_text": "A tool for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3539,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a social selling metric?",
+      "options": [
+        {
+          "option_id": 16418,
+          "option_text": "A metric for measuring social selling success",
+          "is_correct": true
+        },
+        {
+          "option_id": 16419,
+          "option_text": "A metric for measuring social selling ignoring",
+          "is_correct": false
+        },
+        {
+          "option_id": 16420,
+          "option_text": "A metric for measuring social selling deleting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16421,
+          "option_text": "A metric for measuring social selling hiding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3540,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a social selling best practice?",
+      "options": [
+        {
+          "option_id": 16422,
+          "option_text": "A proven practice for social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16423,
+          "option_text": "A practice for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16424,
+          "option_text": "A practice for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16425,
+          "option_text": "A practice for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3541,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you generate leads?",
+      "options": [
+        {
+          "option_id": 16426,
+          "option_text": "By identifying potential customers and reaching out to them",
+          "is_correct": true
+        },
+        {
+          "option_id": 16427,
+          "option_text": "By ignoring potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16428,
+          "option_text": "By deleting potential customers",
+          "is_correct": false
+        },
+        {
+          "option_id": 16429,
+          "option_text": "By hiding potential customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3542,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation process?",
+      "options": [
+        {
+          "option_id": 16430,
+          "option_text": "A set of steps for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16431,
+          "option_text": "A set of steps for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16432,
+          "option_text": "A set of steps for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16433,
+          "option_text": "A set of steps for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3543,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation technique?",
+      "options": [
+        {
+          "option_id": 16434,
+          "option_text": "A method for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16435,
+          "option_text": "A method for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16436,
+          "option_text": "A method for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16437,
+          "option_text": "A method for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3544,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation channel?",
+      "options": [
+        {
+          "option_id": 16438,
+          "option_text": "A channel for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16439,
+          "option_text": "A channel for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16440,
+          "option_text": "A channel for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16441,
+          "option_text": "A channel for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3545,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation qualification?",
+      "options": [
+        {
+          "option_id": 16442,
+          "option_text": "The process of qualifying leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16443,
+          "option_text": "The process of ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16444,
+          "option_text": "The process of deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16445,
+          "option_text": "The process of hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3546,
+      "subskill_id": 162,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a cold email template?",
+      "options": [
+        {
+          "option_id": 16446,
+          "option_text": "A pre-designed format for a cold email",
+          "is_correct": true
+        },
+        {
+          "option_id": 16447,
+          "option_text": "A pre-designed format for ignoring emails",
+          "is_correct": false
+        },
+        {
+          "option_id": 16448,
+          "option_text": "A pre-designed format for deleting emails",
+          "is_correct": false
+        },
+        {
+          "option_id": 16449,
+          "option_text": "A pre-designed format for hiding emails",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3547,
+      "subskill_id": 163,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a LinkedIn connection request?",
+      "options": [
+        {
+          "option_id": 16450,
+          "option_text": "A request to connect with another LinkedIn user",
+          "is_correct": true
+        },
+        {
+          "option_id": 16451,
+          "option_text": "A request to ignore another LinkedIn user",
+          "is_correct": false
+        },
+        {
+          "option_id": 16452,
+          "option_text": "A request to delete another LinkedIn user",
+          "is_correct": false
+        },
+        {
+          "option_id": 16453,
+          "option_text": "A request to hide another LinkedIn user",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3548,
+      "subskill_id": 164,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a social selling content strategy?",
+      "options": [
+        {
+          "option_id": 16454,
+          "option_text": "A plan for creating social selling content",
+          "is_correct": true
+        },
+        {
+          "option_id": 16455,
+          "option_text": "A plan for ignoring social selling content",
+          "is_correct": false
+        },
+        {
+          "option_id": 16456,
+          "option_text": "A plan for deleting social selling content",
+          "is_correct": false
+        },
+        {
+          "option_id": 16457,
+          "option_text": "A plan for hiding social selling content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3549,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation software?",
+      "options": [
+        {
+          "option_id": 16458,
+          "option_text": "A software tool for generating leads",
+          "is_correct": true
+        },
+        {
+          "option_id": 16459,
+          "option_text": "A software tool for ignoring leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16460,
+          "option_text": "A software tool for deleting leads",
+          "is_correct": false
+        },
+        {
+          "option_id": 16461,
+          "option_text": "A software tool for hiding leads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3550,
+      "subskill_id": 165,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a lead generation ROI?",
+      "options": [
+        {
+          "option_id": 16462,
+          "option_text": "The return on investment from lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16463,
+          "option_text": "The cost of lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16464,
+          "option_text": "The loss from lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16465,
+          "option_text": "The waste from lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3551,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize cold email outreach?",
+      "options": [
+        {
+          "option_id": 16466,
+          "option_text": "By using personalization, A/B testing, and data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 16467,
+          "option_text": "By ignoring personalization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16468,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16469,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3552,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cold email outreach strategy?",
+      "options": [
+        {
+          "option_id": 16470,
+          "option_text": "A plan for optimizing cold email outreach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16471,
+          "option_text": "A plan for ignoring cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16472,
+          "option_text": "A plan for deleting cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16473,
+          "option_text": "A plan for hiding cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3553,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cold email outreach platform?",
+      "options": [
+        {
+          "option_id": 16474,
+          "option_text": "A platform for managing cold email outreach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16475,
+          "option_text": "A platform for ignoring cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16476,
+          "option_text": "A platform for deleting cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16477,
+          "option_text": "A platform for hiding cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3554,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cold email outreach analytics?",
+      "options": [
+        {
+          "option_id": 16478,
+          "option_text": "The use of analytics to improve cold email outreach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16479,
+          "option_text": "The use of guessing to improve cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16480,
+          "option_text": "The use of ignoring to improve cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16481,
+          "option_text": "The use of deleting to improve cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3555,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cold email outreach automation?",
+      "options": [
+        {
+          "option_id": 16482,
+          "option_text": "The use of automation to improve cold email outreach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16483,
+          "option_text": "The use of manual processes for cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16484,
+          "option_text": "The use of ignoring for cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16485,
+          "option_text": "The use of deleting for cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3556,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize LinkedIn prospecting?",
+      "options": [
+        {
+          "option_id": 16486,
+          "option_text": "By using personalization, A/B testing, and data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 16487,
+          "option_text": "By ignoring personalization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16488,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16489,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3557,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting strategy?",
+      "options": [
+        {
+          "option_id": 16490,
+          "option_text": "A plan for optimizing LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16491,
+          "option_text": "A plan for ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16492,
+          "option_text": "A plan for deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16493,
+          "option_text": "A plan for hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3558,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting tool?",
+      "options": [
+        {
+          "option_id": 16494,
+          "option_text": "A tool for LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16495,
+          "option_text": "A tool for ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16496,
+          "option_text": "A tool for deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16497,
+          "option_text": "A tool for hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3559,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting analytics?",
+      "options": [
+        {
+          "option_id": 16498,
+          "option_text": "The use of analytics to improve LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16499,
+          "option_text": "The use of guessing to improve LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16500,
+          "option_text": "The use of ignoring to improve LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16501,
+          "option_text": "The use of deleting to improve LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3560,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting automation?",
+      "options": [
+        {
+          "option_id": 16502,
+          "option_text": "The use of automation to improve LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16503,
+          "option_text": "The use of manual processes for LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16504,
+          "option_text": "The use of ignoring for LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16505,
+          "option_text": "The use of deleting for LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3561,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize social selling?",
+      "options": [
+        {
+          "option_id": 16506,
+          "option_text": "By using personalization, A/B testing, and data analysis",
+          "is_correct": true
+        },
+        {
+          "option_id": 16507,
+          "option_text": "By ignoring personalization",
+          "is_correct": false
+        },
+        {
+          "option_id": 16508,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16509,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3562,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a social selling strategy?",
+      "options": [
+        {
+          "option_id": 16510,
+          "option_text": "A plan for optimizing social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16511,
+          "option_text": "A plan for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16512,
+          "option_text": "A plan for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16513,
+          "option_text": "A plan for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3563,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a social selling platform?",
+      "options": [
+        {
+          "option_id": 16514,
+          "option_text": "A platform for social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16515,
+          "option_text": "A platform for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16516,
+          "option_text": "A platform for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16517,
+          "option_text": "A platform for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3564,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a social selling analytics?",
+      "options": [
+        {
+          "option_id": 16518,
+          "option_text": "The use of analytics to improve social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16519,
+          "option_text": "The use of guessing to improve social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16520,
+          "option_text": "The use of ignoring to improve social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16521,
+          "option_text": "The use of deleting to improve social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3565,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a social selling automation?",
+      "options": [
+        {
+          "option_id": 16522,
+          "option_text": "The use of automation to improve social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16523,
+          "option_text": "The use of manual processes for social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16524,
+          "option_text": "The use of ignoring for social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16525,
+          "option_text": "The use of deleting for social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3566,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you optimize lead generation?",
+      "options": [
+        {
+          "option_id": 16526,
+          "option_text": "By using data analysis, A/B testing, and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16527,
+          "option_text": "By ignoring data analysis",
+          "is_correct": false
+        },
+        {
+          "option_id": 16528,
+          "option_text": "By guessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 16529,
+          "option_text": "By deleting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3567,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation strategy?",
+      "options": [
+        {
+          "option_id": 16530,
+          "option_text": "A plan for optimizing lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16531,
+          "option_text": "A plan for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16532,
+          "option_text": "A plan for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16533,
+          "option_text": "A plan for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3568,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation platform?",
+      "options": [
+        {
+          "option_id": 16534,
+          "option_text": "A platform for lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16535,
+          "option_text": "A platform for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16536,
+          "option_text": "A platform for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16537,
+          "option_text": "A platform for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3569,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation analytics?",
+      "options": [
+        {
+          "option_id": 16538,
+          "option_text": "The use of analytics to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16539,
+          "option_text": "The use of guessing to improve lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16540,
+          "option_text": "The use of ignoring to improve lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16541,
+          "option_text": "The use of deleting to improve lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3570,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation automation?",
+      "options": [
+        {
+          "option_id": 16542,
+          "option_text": "The use of automation to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16543,
+          "option_text": "The use of manual processes for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16544,
+          "option_text": "The use of ignoring for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16545,
+          "option_text": "The use of deleting for lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3571,
+      "subskill_id": 162,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a cold email outreach dashboard?",
+      "options": [
+        {
+          "option_id": 16546,
+          "option_text": "A visual display of cold email outreach metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16547,
+          "option_text": "A visual display of ignored cold email outreach metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16548,
+          "option_text": "A visual display of deleted cold email outreach metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16549,
+          "option_text": "A visual display of hidden cold email outreach metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3572,
+      "subskill_id": 163,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting dashboard?",
+      "options": [
+        {
+          "option_id": 16550,
+          "option_text": "A visual display of LinkedIn prospecting metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16551,
+          "option_text": "A visual display of ignored LinkedIn prospecting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16552,
+          "option_text": "A visual display of deleted LinkedIn prospecting metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16553,
+          "option_text": "A visual display of hidden LinkedIn prospecting metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3573,
+      "subskill_id": 164,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a social selling dashboard?",
+      "options": [
+        {
+          "option_id": 16554,
+          "option_text": "A visual display of social selling metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16555,
+          "option_text": "A visual display of ignored social selling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16556,
+          "option_text": "A visual display of deleted social selling metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16557,
+          "option_text": "A visual display of hidden social selling metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3574,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation dashboard?",
+      "options": [
+        {
+          "option_id": 16558,
+          "option_text": "A visual display of lead generation metrics",
+          "is_correct": true
+        },
+        {
+          "option_id": 16559,
+          "option_text": "A visual display of ignored lead generation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16560,
+          "option_text": "A visual display of deleted lead generation metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 16561,
+          "option_text": "A visual display of hidden lead generation metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3575,
+      "subskill_id": 165,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a lead generation maturity model?",
+      "options": [
+        {
+          "option_id": 16562,
+          "option_text": "A model for assessing the maturity of lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16563,
+          "option_text": "A model for ignoring lead generation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16564,
+          "option_text": "A model for deleting lead generation maturity",
+          "is_correct": false
+        },
+        {
+          "option_id": 16565,
+          "option_text": "A model for hiding lead generation maturity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3576,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale cold email outreach?",
+      "options": [
+        {
+          "option_id": 16566,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16567,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16568,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16569,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3577,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a cold email outreach ecosystem?",
+      "options": [
+        {
+          "option_id": 16570,
+          "option_text": "The interconnected system of cold email outreach tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16571,
+          "option_text": "A single cold email outreach tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16572,
+          "option_text": "A manual cold email outreach process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16573,
+          "option_text": "A cold email outreach reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3578,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is cold email outreach AI?",
+      "options": [
+        {
+          "option_id": 16574,
+          "option_text": "The use of artificial intelligence to improve cold email outreach",
+          "is_correct": true
+        },
+        {
+          "option_id": 16575,
+          "option_text": "The use of manual processes for cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16576,
+          "option_text": "The use of ignoring for cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16577,
+          "option_text": "The use of deleting for cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3579,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is cold email outreach future?",
+      "options": [
+        {
+          "option_id": 16578,
+          "option_text": "The future of cold email outreach, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16579,
+          "option_text": "The future of ignoring cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16580,
+          "option_text": "The future of deleting cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16581,
+          "option_text": "The future of hiding cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3580,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is cold email outreach governance?",
+      "options": [
+        {
+          "option_id": 16582,
+          "option_text": "The framework for managing cold email outreach processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16583,
+          "option_text": "The framework for ignoring cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16584,
+          "option_text": "The framework for deleting cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16585,
+          "option_text": "The framework for hiding cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3581,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale LinkedIn prospecting?",
+      "options": [
+        {
+          "option_id": 16586,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16587,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16588,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16589,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3582,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting ecosystem?",
+      "options": [
+        {
+          "option_id": 16590,
+          "option_text": "The interconnected system of LinkedIn prospecting tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16591,
+          "option_text": "A single LinkedIn prospecting tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16592,
+          "option_text": "A manual LinkedIn prospecting process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16593,
+          "option_text": "A LinkedIn prospecting reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3583,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is LinkedIn prospecting AI?",
+      "options": [
+        {
+          "option_id": 16594,
+          "option_text": "The use of artificial intelligence to improve LinkedIn prospecting",
+          "is_correct": true
+        },
+        {
+          "option_id": 16595,
+          "option_text": "The use of manual processes for LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16596,
+          "option_text": "The use of ignoring for LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16597,
+          "option_text": "The use of deleting for LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3584,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is LinkedIn prospecting future?",
+      "options": [
+        {
+          "option_id": 16598,
+          "option_text": "The future of LinkedIn prospecting, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16599,
+          "option_text": "The future of ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16600,
+          "option_text": "The future of deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16601,
+          "option_text": "The future of hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3585,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is LinkedIn prospecting governance?",
+      "options": [
+        {
+          "option_id": 16602,
+          "option_text": "The framework for managing LinkedIn prospecting processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16603,
+          "option_text": "The framework for ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16604,
+          "option_text": "The framework for deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16605,
+          "option_text": "The framework for hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3586,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale social selling?",
+      "options": [
+        {
+          "option_id": 16606,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16607,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16608,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16609,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3587,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a social selling ecosystem?",
+      "options": [
+        {
+          "option_id": 16610,
+          "option_text": "The interconnected system of social selling tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16611,
+          "option_text": "A single social selling tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16612,
+          "option_text": "A manual social selling process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16613,
+          "option_text": "A social selling reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3588,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is social selling AI?",
+      "options": [
+        {
+          "option_id": 16614,
+          "option_text": "The use of artificial intelligence to improve social selling",
+          "is_correct": true
+        },
+        {
+          "option_id": 16615,
+          "option_text": "The use of manual processes for social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16616,
+          "option_text": "The use of ignoring for social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16617,
+          "option_text": "The use of deleting for social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3589,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is social selling future?",
+      "options": [
+        {
+          "option_id": 16618,
+          "option_text": "The future of social selling, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16619,
+          "option_text": "The future of ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16620,
+          "option_text": "The future of deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16621,
+          "option_text": "The future of hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3590,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is social selling governance?",
+      "options": [
+        {
+          "option_id": 16622,
+          "option_text": "The framework for managing social selling processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16623,
+          "option_text": "The framework for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16624,
+          "option_text": "The framework for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16625,
+          "option_text": "The framework for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3591,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you scale lead generation?",
+      "options": [
+        {
+          "option_id": 16626,
+          "option_text": "By using scalable processes, tools, and best practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16627,
+          "option_text": "By ignoring scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16628,
+          "option_text": "By deleting scaling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16629,
+          "option_text": "By hiding scaling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3592,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead generation ecosystem?",
+      "options": [
+        {
+          "option_id": 16630,
+          "option_text": "The interconnected system of lead generation tools and practices",
+          "is_correct": true
+        },
+        {
+          "option_id": 16631,
+          "option_text": "A single lead generation tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 16632,
+          "option_text": "A manual lead generation process",
+          "is_correct": false
+        },
+        {
+          "option_id": 16633,
+          "option_text": "A lead generation reporting tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3593,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation AI?",
+      "options": [
+        {
+          "option_id": 16634,
+          "option_text": "The use of artificial intelligence to improve lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16635,
+          "option_text": "The use of manual processes for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16636,
+          "option_text": "The use of ignoring for lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16637,
+          "option_text": "The use of deleting for lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3594,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation future?",
+      "options": [
+        {
+          "option_id": 16638,
+          "option_text": "The future of lead generation, which may include more AI and automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16639,
+          "option_text": "The future of ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16640,
+          "option_text": "The future of deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16641,
+          "option_text": "The future of hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3595,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is lead generation governance?",
+      "options": [
+        {
+          "option_id": 16642,
+          "option_text": "The framework for managing lead generation processes and policies",
+          "is_correct": true
+        },
+        {
+          "option_id": 16643,
+          "option_text": "The framework for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16644,
+          "option_text": "The framework for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16645,
+          "option_text": "The framework for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3596,
+      "subskill_id": 162,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a cold email outreach enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16646,
+          "option_text": "A high-level strategy for cold email outreach in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16647,
+          "option_text": "A high-level strategy for ignoring cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16648,
+          "option_text": "A high-level strategy for deleting cold email outreach",
+          "is_correct": false
+        },
+        {
+          "option_id": 16649,
+          "option_text": "A high-level strategy for hiding cold email outreach",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3597,
+      "subskill_id": 163,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a LinkedIn prospecting enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16650,
+          "option_text": "A high-level strategy for LinkedIn prospecting in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16651,
+          "option_text": "A high-level strategy for ignoring LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16652,
+          "option_text": "A high-level strategy for deleting LinkedIn prospecting",
+          "is_correct": false
+        },
+        {
+          "option_id": 16653,
+          "option_text": "A high-level strategy for hiding LinkedIn prospecting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3598,
+      "subskill_id": 164,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a social selling enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16654,
+          "option_text": "A high-level strategy for social selling in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16655,
+          "option_text": "A high-level strategy for ignoring social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16656,
+          "option_text": "A high-level strategy for deleting social selling",
+          "is_correct": false
+        },
+        {
+          "option_id": 16657,
+          "option_text": "A high-level strategy for hiding social selling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3599,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead generation enterprise strategy?",
+      "options": [
+        {
+          "option_id": 16658,
+          "option_text": "A high-level strategy for lead generation in a large organization",
+          "is_correct": true
+        },
+        {
+          "option_id": 16659,
+          "option_text": "A high-level strategy for ignoring lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16660,
+          "option_text": "A high-level strategy for deleting lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16661,
+          "option_text": "A high-level strategy for hiding lead generation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 3600,
+      "subskill_id": 165,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a lead generation ROI?",
+      "options": [
+        {
+          "option_id": 16662,
+          "option_text": "The return on investment from lead generation",
+          "is_correct": true
+        },
+        {
+          "option_id": 16663,
+          "option_text": "The cost of lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16664,
+          "option_text": "The loss from lead generation",
+          "is_correct": false
+        },
+        {
+          "option_id": 16665,
+          "option_text": "The waste from lead generation",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

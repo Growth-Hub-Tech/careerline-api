@@ -67,7 +67,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real token from `/auth/login`. Recruiter and organisation accounts don't exist yet, so any learner token works on their endpoints for now.
 
-What is real today: `/auth/register`, `/auth/login`, `/learners/*`, `/skills/*`, `/attempts/*` and `/recommendations/*` (they use the database). Everything tagged `Sample:` is sample.
+What is real today: `/auth/register`, `/auth/login`, `/learners/*`, `/skills/*`, `/attempts/*` and `/recommendations/*` (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -167,5 +167,6 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 4** (breaking, for old clients only): removed the old duplicate `/api/*` routes (use `/api/v1`) and the open sign-up `POST /api/v1/learners/register` (use `POST /api/v1/auth/register`). A fresh database now has the 4 levels and the question bank (seed files).
 - **Day 3**: sample endpoints for privacy, payments (Paystack checkout, credits), subscriptions, recruiter, invitations, organisation audit, heatmap and targets; checkout and invitation flows work end to end on sample data; `/api/v1/sample/*` helpers.
 - **Day 2**: sample endpoints for contact, accounts, skills and roles, tests, results (PDF report), profile, beginner path and programme clicks; `X-Sample-Data` and `X-Mock-Scenario`; new error codes `payment_required` (402), `expired` (410), `rate_limited` (429); `openapi.json` committed.

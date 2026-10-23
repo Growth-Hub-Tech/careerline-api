@@ -1,0 +1,2906 @@
+{
+  "skill_id": 3,
+  "skill_name": "Database Management",
+  "questions": [
+    {
+      "question_id": 201,
+      "subskill_id": 13,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does SQL stand for?",
+      "options": [
+        {
+          "option_id": 5866,
+          "option_text": "Structured Query Language",
+          "is_correct": true
+        },
+        {
+          "option_id": 5867,
+          "option_text": "Standard Query Language",
+          "is_correct": false
+        },
+        {
+          "option_id": 5868,
+          "option_text": "Simple Query Language",
+          "is_correct": false
+        },
+        {
+          "option_id": 5869,
+          "option_text": "Sequential Query Language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 202,
+      "subskill_id": 13,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Which SQL statement is used to retrieve data from a database?",
+      "options": [
+        {
+          "option_id": 5870,
+          "option_text": "INSERT",
+          "is_correct": false
+        },
+        {
+          "option_id": 5871,
+          "option_text": "UPDATE",
+          "is_correct": false
+        },
+        {
+          "option_id": 5872,
+          "option_text": "SELECT",
+          "is_correct": true
+        },
+        {
+          "option_id": 5873,
+          "option_text": "DELETE",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 203,
+      "subskill_id": 13,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a primary key?",
+      "options": [
+        {
+          "option_id": 5874,
+          "option_text": "A key that opens all tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 5875,
+          "option_text": "A unique identifier for each row in a table",
+          "is_correct": true
+        },
+        {
+          "option_id": 5876,
+          "option_text": "The first key created in a database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5877,
+          "option_text": "A key that can contain NULL values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 204,
+      "subskill_id": 13,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between WHERE and HAVING clauses?",
+      "options": [
+        {
+          "option_id": 5878,
+          "option_text": "WHERE filters rows, HAVING filters groups",
+          "is_correct": true
+        },
+        {
+          "option_id": 5879,
+          "option_text": "HAVING filters rows, WHERE filters groups",
+          "is_correct": false
+        },
+        {
+          "option_id": 5880,
+          "option_text": "They are interchangeable",
+          "is_correct": false
+        },
+        {
+          "option_id": 5881,
+          "option_text": "WHERE is for SELECT only, HAVING is for all queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 205,
+      "subskill_id": 13,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does JOIN do in SQL?",
+      "options": [
+        {
+          "option_id": 5882,
+          "option_text": "Combines rows from two or more tables based on related columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 5883,
+          "option_text": "Deletes records from multiple tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 5884,
+          "option_text": "Updates records in multiple tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 5885,
+          "option_text": "Creates a new table",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 206,
+      "subskill_id": 14,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is NoSQL?",
+      "options": [
+        {
+          "option_id": 5886,
+          "option_text": "A database that does not use SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 5887,
+          "option_text": "A non-relational database designed for specific data models",
+          "is_correct": true
+        },
+        {
+          "option_id": 5888,
+          "option_text": "A database with no security",
+          "is_correct": false
+        },
+        {
+          "option_id": 5889,
+          "option_text": "A database that only runs on Linux",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 207,
+      "subskill_id": 14,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Name the main types of NoSQL databases.",
+      "options": [
+        {
+          "option_id": 5890,
+          "option_text": "Document, key-value, column-family, graph",
+          "is_correct": true
+        },
+        {
+          "option_id": 5891,
+          "option_text": "Relational, object-oriented, hierarchical",
+          "is_correct": false
+        },
+        {
+          "option_id": 5892,
+          "option_text": "MySQL, PostgreSQL, MongoDB",
+          "is_correct": false
+        },
+        {
+          "option_id": 5893,
+          "option_text": "Local, remote, distributed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 208,
+      "subskill_id": 14,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is MongoDB?",
+      "options": [
+        {
+          "option_id": 5894,
+          "option_text": "A relational database management system",
+          "is_correct": false
+        },
+        {
+          "option_id": 5895,
+          "option_text": "A document-oriented NoSQL database",
+          "is_correct": true
+        },
+        {
+          "option_id": 5896,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 5897,
+          "option_text": "A cloud service provider",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 209,
+      "subskill_id": 14,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a document in NoSQL databases?",
+      "options": [
+        {
+          "option_id": 5898,
+          "option_text": "A text file stored in the database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5899,
+          "option_text": "A row in a table",
+          "is_correct": false
+        },
+        {
+          "option_id": 5900,
+          "option_text": "A JSON-like data structure used in document databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 5901,
+          "option_text": "A user manual",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 210,
+      "subskill_id": 14,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between SQL and NoSQL databases?",
+      "options": [
+        {
+          "option_id": 5902,
+          "option_text": "SQL uses structured schemas, NoSQL uses flexible schemas",
+          "is_correct": true
+        },
+        {
+          "option_id": 5903,
+          "option_text": "SQL is faster than NoSQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 5904,
+          "option_text": "NoSQL is older than SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 5905,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 211,
+      "subskill_id": 15,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a database schema?",
+      "options": [
+        {
+          "option_id": 5906,
+          "option_text": "The structure that defines the organization of data in a database",
+          "is_correct": true
+        },
+        {
+          "option_id": 5907,
+          "option_text": "A diagram of the database server",
+          "is_correct": false
+        },
+        {
+          "option_id": 5908,
+          "option_text": "A backup of the database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5909,
+          "option_text": "A user account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 212,
+      "subskill_id": 15,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is normalization in databases?",
+      "options": [
+        {
+          "option_id": 5910,
+          "option_text": "Process of organizing data to reduce redundancy",
+          "is_correct": true
+        },
+        {
+          "option_id": 5911,
+          "option_text": "Making data normal",
+          "is_correct": false
+        },
+        {
+          "option_id": 5912,
+          "option_text": "Encrypting database content",
+          "is_correct": false
+        },
+        {
+          "option_id": 5913,
+          "option_text": "Backing up data regularly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 213,
+      "subskill_id": 15,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a foreign key?",
+      "options": [
+        {
+          "option_id": 5914,
+          "option_text": "A key from another country",
+          "is_correct": false
+        },
+        {
+          "option_id": 5915,
+          "option_text": "A field that references the primary key of another table",
+          "is_correct": true
+        },
+        {
+          "option_id": 5916,
+          "option_text": "A key that is not used",
+          "is_correct": false
+        },
+        {
+          "option_id": 5917,
+          "option_text": "A secondary password",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 214,
+      "subskill_id": 15,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is denormalization?",
+      "options": [
+        {
+          "option_id": 5918,
+          "option_text": "Adding redundancy to improve read performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 5919,
+          "option_text": "Removing all constraints",
+          "is_correct": false
+        },
+        {
+          "option_id": 5920,
+          "option_text": "Deleting duplicate data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5921,
+          "option_text": "Normalizing to 5NF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 215,
+      "subskill_id": 15,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an entity-relationship diagram (ERD)?",
+      "options": [
+        {
+          "option_id": 5922,
+          "option_text": "A diagram showing relationships between entities in a database",
+          "is_correct": true
+        },
+        {
+          "option_id": 5923,
+          "option_text": "A chart of employee relationships",
+          "is_correct": false
+        },
+        {
+          "option_id": 5924,
+          "option_text": "A network diagram",
+          "is_correct": false
+        },
+        {
+          "option_id": 5925,
+          "option_text": "A flowchart of program logic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 216,
+      "subskill_id": 16,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an index in a database?",
+      "options": [
+        {
+          "option_id": 5926,
+          "option_text": "A table of contents for faster data retrieval",
+          "is_correct": true
+        },
+        {
+          "option_id": 5927,
+          "option_text": "The main table",
+          "is_correct": false
+        },
+        {
+          "option_id": 5928,
+          "option_text": "A backup file",
+          "is_correct": false
+        },
+        {
+          "option_id": 5929,
+          "option_text": "A user permission",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 217,
+      "subskill_id": 16,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why are indexes used in databases?",
+      "options": [
+        {
+          "option_id": 5930,
+          "option_text": "To slow down queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 5931,
+          "option_text": "To speed up data retrieval operations",
+          "is_correct": true
+        },
+        {
+          "option_id": 5932,
+          "option_text": "To encrypt data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5933,
+          "option_text": "To compress data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 218,
+      "subskill_id": 16,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a primary index?",
+      "options": [
+        {
+          "option_id": 5934,
+          "option_text": "An index on the primary key",
+          "is_correct": true
+        },
+        {
+          "option_id": 5935,
+          "option_text": "The first index created",
+          "is_correct": false
+        },
+        {
+          "option_id": 5936,
+          "option_text": "The most important index",
+          "is_correct": false
+        },
+        {
+          "option_id": 5937,
+          "option_text": "An index on a foreign key",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 219,
+      "subskill_id": 16,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Can indexes slow down write operations?",
+      "options": [
+        {
+          "option_id": 5938,
+          "option_text": "No, indexes always speed up all operations",
+          "is_correct": false
+        },
+        {
+          "option_id": 5939,
+          "option_text": "Yes, because indexes need to be updated on writes",
+          "is_correct": true
+        },
+        {
+          "option_id": 5940,
+          "option_text": "Only on weekends",
+          "is_correct": false
+        },
+        {
+          "option_id": 5941,
+          "option_text": "Indexes have no effect on writes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 220,
+      "subskill_id": 16,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a unique index?",
+      "options": [
+        {
+          "option_id": 5942,
+          "option_text": "An index that allows duplicate values",
+          "is_correct": false
+        },
+        {
+          "option_id": 5943,
+          "option_text": "An index that enforces uniqueness of values",
+          "is_correct": true
+        },
+        {
+          "option_id": 5944,
+          "option_text": "The only index allowed",
+          "is_correct": false
+        },
+        {
+          "option_id": 5945,
+          "option_text": "An index on a single column",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 221,
+      "subskill_id": 17,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is query optimization?",
+      "options": [
+        {
+          "option_id": 5946,
+          "option_text": "Making queries run faster and more efficiently",
+          "is_correct": true
+        },
+        {
+          "option_id": 5947,
+          "option_text": "Writing longer queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 5948,
+          "option_text": "Deleting slow queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 5949,
+          "option_text": "Using only SELECT *",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 222,
+      "subskill_id": 17,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the EXPLAIN command used for in SQL?",
+      "options": [
+        {
+          "option_id": 5950,
+          "option_text": "To explain the query to users",
+          "is_correct": false
+        },
+        {
+          "option_id": 5951,
+          "option_text": "To show the execution plan of a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 5952,
+          "option_text": "To document the database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5953,
+          "option_text": "To explain error messages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 223,
+      "subskill_id": 17,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "Why is SELECT * considered bad practice?",
+      "options": [
+        {
+          "option_id": 5954,
+          "option_text": "Because it might return unnecessary data",
+          "is_correct": true
+        },
+        {
+          "option_id": 5955,
+          "option_text": "Because it is slower to type",
+          "is_correct": false
+        },
+        {
+          "option_id": 5956,
+          "option_text": "Because it is deprecated",
+          "is_correct": false
+        },
+        {
+          "option_id": 5957,
+          "option_text": "It is not bad practice",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 224,
+      "subskill_id": 17,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a full table scan?",
+      "options": [
+        {
+          "option_id": 5958,
+          "option_text": "Reading every row in a table sequentially",
+          "is_correct": true
+        },
+        {
+          "option_id": 5959,
+          "option_text": "Scanning only indexed columns",
+          "is_correct": false
+        },
+        {
+          "option_id": 5960,
+          "option_text": "A type of backup",
+          "is_correct": false
+        },
+        {
+          "option_id": 5961,
+          "option_text": "A security audit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 225,
+      "subskill_id": 17,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an execution plan?",
+      "options": [
+        {
+          "option_id": 5962,
+          "option_text": "A business document",
+          "is_correct": false
+        },
+        {
+          "option_id": 5963,
+          "option_text": "The steps a database takes to execute a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 5964,
+          "option_text": "A project timeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 5965,
+          "option_text": "A backup schedule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 226,
+      "subskill_id": 13,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which type of JOIN returns all rows from the left table and matched rows from the right table?",
+      "options": [
+        {
+          "option_id": 5966,
+          "option_text": "INNER JOIN",
+          "is_correct": false
+        },
+        {
+          "option_id": 5967,
+          "option_text": "LEFT JOIN",
+          "is_correct": true
+        },
+        {
+          "option_id": 5968,
+          "option_text": "RIGHT JOIN",
+          "is_correct": false
+        },
+        {
+          "option_id": 5969,
+          "option_text": "FULL OUTER JOIN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 227,
+      "subskill_id": 13,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the main difference between UNION and UNION ALL?",
+      "options": [
+        {
+          "option_id": 5970,
+          "option_text": "UNION removes duplicates, UNION ALL keeps duplicates",
+          "is_correct": true
+        },
+        {
+          "option_id": 5971,
+          "option_text": "UNION ALL removes duplicates, UNION keeps duplicates",
+          "is_correct": false
+        },
+        {
+          "option_id": 5972,
+          "option_text": "UNION works on tables, UNION ALL works on views",
+          "is_correct": false
+        },
+        {
+          "option_id": 5973,
+          "option_text": "They are identical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 228,
+      "subskill_id": 13,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which SQL feature allows you to perform calculations across rows related to the current row?",
+      "options": [
+        {
+          "option_id": 5974,
+          "option_text": "Aggregate functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5975,
+          "option_text": "Window functions",
+          "is_correct": true
+        },
+        {
+          "option_id": 5976,
+          "option_text": "Scalar functions",
+          "is_correct": false
+        },
+        {
+          "option_id": 5977,
+          "option_text": "Table-valued functions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 229,
+      "subskill_id": 13,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a Common Table Expression (CTE)?",
+      "options": [
+        {
+          "option_id": 5978,
+          "option_text": "A temporary result set that exists only within the execution scope of a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 5979,
+          "option_text": "A permanent table for storing common data",
+          "is_correct": false
+        },
+        {
+          "option_id": 5980,
+          "option_text": "A type of index",
+          "is_correct": false
+        },
+        {
+          "option_id": 5981,
+          "option_text": "A database backup",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 230,
+      "subskill_id": 13,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which of the following is NOT an ACID property?",
+      "options": [
+        {
+          "option_id": 5982,
+          "option_text": "Atomicity",
+          "is_correct": false
+        },
+        {
+          "option_id": 5983,
+          "option_text": "Consistency",
+          "is_correct": false
+        },
+        {
+          "option_id": 5984,
+          "option_text": "Isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 5985,
+          "option_text": "Distribution",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 231,
+      "subskill_id": 14,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which of the following is an example of a document database?",
+      "options": [
+        {
+          "option_id": 5986,
+          "option_text": "MySQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 5987,
+          "option_text": "MongoDB",
+          "is_correct": true
+        },
+        {
+          "option_id": 5988,
+          "option_text": "Redis",
+          "is_correct": false
+        },
+        {
+          "option_id": 5989,
+          "option_text": "Neo4j",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 232,
+      "subskill_id": 14,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Redis is an example of which type of NoSQL database?",
+      "options": [
+        {
+          "option_id": 5990,
+          "option_text": "Document database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5991,
+          "option_text": "Key-value store",
+          "is_correct": true
+        },
+        {
+          "option_id": 5992,
+          "option_text": "Column-family database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5993,
+          "option_text": "Graph database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 233,
+      "subskill_id": 14,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Apache Cassandra is an example of which type of NoSQL database?",
+      "options": [
+        {
+          "option_id": 5994,
+          "option_text": "Document database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5995,
+          "option_text": "Key-value store",
+          "is_correct": false
+        },
+        {
+          "option_id": 5996,
+          "option_text": "Column-family database",
+          "is_correct": true
+        },
+        {
+          "option_id": 5997,
+          "option_text": "Graph database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 234,
+      "subskill_id": 14,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Neo4j is an example of which type of NoSQL database?",
+      "options": [
+        {
+          "option_id": 5998,
+          "option_text": "Document database",
+          "is_correct": false
+        },
+        {
+          "option_id": 5999,
+          "option_text": "Key-value store",
+          "is_correct": false
+        },
+        {
+          "option_id": 6000,
+          "option_text": "Column-family database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6001,
+          "option_text": "Graph database",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 235,
+      "subskill_id": 14,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "In MongoDB, what does the aggregation pipeline do?",
+      "options": [
+        {
+          "option_id": 6002,
+          "option_text": "Processes and transforms data through multiple stages",
+          "is_correct": true
+        },
+        {
+          "option_id": 6003,
+          "option_text": "Backs up the database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6004,
+          "option_text": "Creates indexes",
+          "is_correct": false
+        },
+        {
+          "option_id": 6005,
+          "option_text": "Manages user authentication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 236,
+      "subskill_id": 15,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "A table is in 1NF if it has:",
+      "options": [
+        {
+          "option_id": 6006,
+          "option_text": "A primary key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6007,
+          "option_text": "No repeating groups and atomic values",
+          "is_correct": true
+        },
+        {
+          "option_id": 6008,
+          "option_text": "No transitive dependencies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6009,
+          "option_text": "All non-key attributes fully dependent on the primary key",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 237,
+      "subskill_id": 15,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which normal form eliminates transitive dependencies?",
+      "options": [
+        {
+          "option_id": 6010,
+          "option_text": "1NF",
+          "is_correct": false
+        },
+        {
+          "option_id": 6011,
+          "option_text": "2NF",
+          "is_correct": false
+        },
+        {
+          "option_id": 6012,
+          "option_text": "3NF",
+          "is_correct": true
+        },
+        {
+          "option_id": 6013,
+          "option_text": "BCNF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 238,
+      "subskill_id": 15,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How is a many-to-many relationship typically implemented in a relational database?",
+      "options": [
+        {
+          "option_id": 6014,
+          "option_text": "Using a foreign key in one table",
+          "is_correct": false
+        },
+        {
+          "option_id": 6015,
+          "option_text": "Using the same primary key in both tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 6016,
+          "option_text": "Using a junction/link table with foreign keys to both tables",
+          "is_correct": true
+        },
+        {
+          "option_id": 6017,
+          "option_text": "It cannot be implemented",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 239,
+      "subskill_id": 15,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is database sharding?",
+      "options": [
+        {
+          "option_id": 6018,
+          "option_text": "Horizontally partitioning data across multiple servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 6019,
+          "option_text": "Vertically partitioning a table within the same database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6020,
+          "option_text": "Creating database backups",
+          "is_correct": false
+        },
+        {
+          "option_id": 6021,
+          "option_text": "Encrypting database content",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 240,
+      "subskill_id": 15,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the main difference between partitioning and sharding?",
+      "options": [
+        {
+          "option_id": 6022,
+          "option_text": "Partitioning splits data within one server, sharding distributes across servers",
+          "is_correct": true
+        },
+        {
+          "option_id": 6023,
+          "option_text": "Sharding splits data within one server, partitioning distributes across servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6024,
+          "option_text": "They are the same concept",
+          "is_correct": false
+        },
+        {
+          "option_id": 6025,
+          "option_text": "Partitioning is for SQL, sharding is for NoSQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 241,
+      "subskill_id": 16,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "B-tree indexes are most effective for which types of queries?",
+      "options": [
+        {
+          "option_id": 6026,
+          "option_text": "Equality and range queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6027,
+          "option_text": "Full-text searches",
+          "is_correct": false
+        },
+        {
+          "option_id": 6028,
+          "option_text": "Queries with wildcards at the beginning",
+          "is_correct": false
+        },
+        {
+          "option_id": 6029,
+          "option_text": "Geospatial queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 242,
+      "subskill_id": 16,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a composite index?",
+      "options": [
+        {
+          "option_id": 6030,
+          "option_text": "An index on multiple columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 6031,
+          "option_text": "An index that combines B-tree and hash",
+          "is_correct": false
+        },
+        {
+          "option_id": 6032,
+          "option_text": "An index on computed columns",
+          "is_correct": false
+        },
+        {
+          "option_id": 6033,
+          "option_text": "An index that includes foreign keys only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 243,
+      "subskill_id": 16,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "When would an index likely NOT be used by the query optimizer?",
+      "options": [
+        {
+          "option_id": 6034,
+          "option_text": "When the table is very large",
+          "is_correct": false
+        },
+        {
+          "option_id": 6035,
+          "option_text": "When using functions on indexed columns in WHERE clause",
+          "is_correct": true
+        },
+        {
+          "option_id": 6036,
+          "option_text": "When selecting a small percentage of rows",
+          "is_correct": false
+        },
+        {
+          "option_id": 6037,
+          "option_text": "When the index is unique",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 244,
+      "subskill_id": 16,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a covering index?",
+      "options": [
+        {
+          "option_id": 6038,
+          "option_text": "An index that covers the entire table",
+          "is_correct": false
+        },
+        {
+          "option_id": 6039,
+          "option_text": "An index that includes all columns needed for a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 6040,
+          "option_text": "An index on the primary key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6041,
+          "option_text": "An index that is backed up",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 245,
+      "subskill_id": 16,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Index cardinality refers to:",
+      "options": [
+        {
+          "option_id": 6042,
+          "option_text": "The number of distinct values in an index",
+          "is_correct": true
+        },
+        {
+          "option_id": 6043,
+          "option_text": "The size of the index in MB",
+          "is_correct": false
+        },
+        {
+          "option_id": 6044,
+          "option_text": "The number of tables using the index",
+          "is_correct": false
+        },
+        {
+          "option_id": 6045,
+          "option_text": "The position of the index in the query plan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 246,
+      "subskill_id": 17,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which tool would you use to identify slow queries in MySQL?",
+      "options": [
+        {
+          "option_id": 6046,
+          "option_text": "EXPLAIN statement",
+          "is_correct": true
+        },
+        {
+          "option_id": 6047,
+          "option_text": "SHOW TABLES",
+          "is_correct": false
+        },
+        {
+          "option_id": 6048,
+          "option_text": "DESCRIBE",
+          "is_correct": false
+        },
+        {
+          "option_id": 6049,
+          "option_text": "SELECT VERSION()",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 247,
+      "subskill_id": 17,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is query caching?",
+      "options": [
+        {
+          "option_id": 6050,
+          "option_text": "Storing query results to reuse for identical queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6051,
+          "option_text": "Caching database connections",
+          "is_correct": false
+        },
+        {
+          "option_id": 6052,
+          "option_text": "Backing up query logs",
+          "is_correct": false
+        },
+        {
+          "option_id": 6053,
+          "option_text": "Indexing queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 248,
+      "subskill_id": 17,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Which join type is generally most efficient for large datasets?",
+      "options": [
+        {
+          "option_id": 6054,
+          "option_text": "CROSS JOIN",
+          "is_correct": false
+        },
+        {
+          "option_id": 6055,
+          "option_text": "INNER JOIN on indexed columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 6056,
+          "option_text": "FULL OUTER JOIN",
+          "is_correct": false
+        },
+        {
+          "option_id": 6057,
+          "option_text": "SELF JOIN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 249,
+      "subskill_id": 17,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "Why can OR conditions in WHERE clauses cause performance issues?",
+      "options": [
+        {
+          "option_id": 6058,
+          "option_text": "They prevent efficient index usage",
+          "is_correct": true
+        },
+        {
+          "option_id": 6059,
+          "option_text": "They increase network traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 6060,
+          "option_text": "They cause table locks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6061,
+          "option_text": "They disable query caching",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 250,
+      "subskill_id": 17,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is parameter sniffing?",
+      "options": [
+        {
+          "option_id": 6062,
+          "option_text": "A security vulnerability in SQL",
+          "is_correct": false
+        },
+        {
+          "option_id": 6063,
+          "option_text": "When SQL Server creates a plan based on first parameter value",
+          "is_correct": true
+        },
+        {
+          "option_id": 6064,
+          "option_text": "A method for encrypting parameters",
+          "is_correct": false
+        },
+        {
+          "option_id": 6065,
+          "option_text": "A way to validate user input",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 251,
+      "subskill_id": 13,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Which SQL clause would you use to write a recursive query?",
+      "options": [
+        {
+          "option_id": 6066,
+          "option_text": "WITH RECURSIVE",
+          "is_correct": true
+        },
+        {
+          "option_id": 6067,
+          "option_text": "LOOP",
+          "is_correct": false
+        },
+        {
+          "option_id": 6068,
+          "option_text": "ITERATE",
+          "is_correct": false
+        },
+        {
+          "option_id": 6069,
+          "option_text": "RECURSE",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 252,
+      "subskill_id": 13,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between READ COMMITTED and REPEATABLE READ isolation levels?",
+      "options": [
+        {
+          "option_id": 6070,
+          "option_text": "READ COMMITTED prevents dirty reads, REPEATABLE READ prevents non-repeatable reads",
+          "is_correct": true
+        },
+        {
+          "option_id": 6071,
+          "option_text": "REPEATABLE READ prevents dirty reads, READ COMMITTED prevents non-repeatable reads",
+          "is_correct": false
+        },
+        {
+          "option_id": 6072,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6073,
+          "option_text": "READ COMMITTED is for writes, REPEATABLE READ is for reads",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 253,
+      "subskill_id": 13,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you prevent deadlocks in a high-concurrency database?",
+      "options": [
+        {
+          "option_id": 6074,
+          "option_text": "Access tables in the same order across transactions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6075,
+          "option_text": "Use longer transactions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6076,
+          "option_text": "Increase lock timeouts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6077,
+          "option_text": "Disable indexes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 254,
+      "subskill_id": 13,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What does the MERGE statement do in SQL?",
+      "options": [
+        {
+          "option_id": 6078,
+          "option_text": "Combines multiple SELECT statements",
+          "is_correct": false
+        },
+        {
+          "option_id": 6079,
+          "option_text": "Inserts, updates, or deletes based on a source table",
+          "is_correct": true
+        },
+        {
+          "option_id": 6080,
+          "option_text": "Merges two databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 6081,
+          "option_text": "Joins tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 255,
+      "subskill_id": 13,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "Which of the following is true about materialized views?",
+      "options": [
+        {
+          "option_id": 6082,
+          "option_text": "They store data physically and can be refreshed",
+          "is_correct": true
+        },
+        {
+          "option_id": 6083,
+          "option_text": "They are virtual and run queries each time",
+          "is_correct": false
+        },
+        {
+          "option_id": 6084,
+          "option_text": "They cannot be indexed",
+          "is_correct": false
+        },
+        {
+          "option_id": 6085,
+          "option_text": "They are only available in MySQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 256,
+      "subskill_id": 14,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "In MongoDB, what is the maximum document size?",
+      "options": [
+        {
+          "option_id": 6086,
+          "option_text": "4MB",
+          "is_correct": false
+        },
+        {
+          "option_id": 6087,
+          "option_text": "16MB",
+          "is_correct": true
+        },
+        {
+          "option_id": 6088,
+          "option_text": "64MB",
+          "is_correct": false
+        },
+        {
+          "option_id": 6089,
+          "option_text": "1GB",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 257,
+      "subskill_id": 14,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does Cassandra achieve high availability?",
+      "options": [
+        {
+          "option_id": 6090,
+          "option_text": "Master-slave replication",
+          "is_correct": false
+        },
+        {
+          "option_id": 6091,
+          "option_text": "Multi-master replication with no single point of failure",
+          "is_correct": true
+        },
+        {
+          "option_id": 6092,
+          "option_text": "Single master with failover",
+          "is_correct": false
+        },
+        {
+          "option_id": 6093,
+          "option_text": "Centralized coordinator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 258,
+      "subskill_id": 14,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the CAP theorem and how does it apply to NoSQL databases?",
+      "options": [
+        {
+          "option_id": 6094,
+          "option_text": "Consistency, Availability, Partition tolerance - you can only have two",
+          "is_correct": true
+        },
+        {
+          "option_id": 6095,
+          "option_text": "Capacity, Availability, Performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 6096,
+          "option_text": "Consistency, Accuracy, Performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 6097,
+          "option_text": "Caching, Availability, Partitioning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 259,
+      "subskill_id": 14,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is an advantage of graph databases over relational for social networks?",
+      "options": [
+        {
+          "option_id": 6098,
+          "option_text": "Better for hierarchical data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6099,
+          "option_text": "More efficient for complex relationship queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6100,
+          "option_text": "Faster for simple lookups",
+          "is_correct": false
+        },
+        {
+          "option_id": 6101,
+          "option_text": "Easier to backup",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 260,
+      "subskill_id": 14,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "In Redis, what is the difference between RDB and AOF persistence?",
+      "options": [
+        {
+          "option_id": 6102,
+          "option_text": "RDB takes snapshots, AOF logs every write operation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6103,
+          "option_text": "AOF takes snapshots, RDB logs every write operation",
+          "is_correct": false
+        },
+        {
+          "option_id": 6104,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6105,
+          "option_text": "RDB is for clustering, AOF is for standalone",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 261,
+      "subskill_id": 15,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a slowly changing dimension (SCD) Type 2?",
+      "options": [
+        {
+          "option_id": 6106,
+          "option_text": "Overwrites old data with new data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6107,
+          "option_text": "Creates a new record to track historical changes",
+          "is_correct": true
+        },
+        {
+          "option_id": 6108,
+          "option_text": "Updates only certain columns",
+          "is_correct": false
+        },
+        {
+          "option_id": 6109,
+          "option_text": "Adds a new column for changes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 262,
+      "subskill_id": 15,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between star schema and snowflake schema?",
+      "options": [
+        {
+          "option_id": 6110,
+          "option_text": "Star schema has denormalized dimensions, snowflake has normalized dimensions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6111,
+          "option_text": "Snowflake has denormalized dimensions, star has normalized dimensions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6112,
+          "option_text": "Star is for OLTP, snowflake is for OLAP",
+          "is_correct": false
+        },
+        {
+          "option_id": 6113,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 263,
+      "subskill_id": 15,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a surrogate key and when would you use it?",
+      "options": [
+        {
+          "option_id": 6114,
+          "option_text": "An artificial key used as a primary key when natural keys are unsuitable",
+          "is_correct": true
+        },
+        {
+          "option_id": 6115,
+          "option_text": "A backup key for disaster recovery",
+          "is_correct": false
+        },
+        {
+          "option_id": 6116,
+          "option_text": "A key that replaces foreign keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6117,
+          "option_text": "A temporary key for testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 264,
+      "subskill_id": 15,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is data vault modeling?",
+      "options": [
+        {
+          "option_id": 6118,
+          "option_text": "A secure database design pattern",
+          "is_correct": false
+        },
+        {
+          "option_id": 6119,
+          "option_text": "A methodology for enterprise data warehousing",
+          "is_correct": true
+        },
+        {
+          "option_id": 6120,
+          "option_text": "A way to encrypt data at rest",
+          "is_correct": false
+        },
+        {
+          "option_id": 6121,
+          "option_text": "A backup strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 265,
+      "subskill_id": 15,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you design a schema for time-series data?",
+      "options": [
+        {
+          "option_id": 6122,
+          "option_text": "Use a wide table with columns for each time period",
+          "is_correct": false
+        },
+        {
+          "option_id": 6123,
+          "option_text": "Partition by time range and use appropriate indexing",
+          "is_correct": true
+        },
+        {
+          "option_id": 6124,
+          "option_text": "Store all data in a single JSON column",
+          "is_correct": false
+        },
+        {
+          "option_id": 6125,
+          "option_text": "Use a key-value store only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 266,
+      "subskill_id": 16,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a covering index and why is it beneficial?",
+      "options": [
+        {
+          "option_id": 6126,
+          "option_text": "An index that includes all columns needed for a query",
+          "is_correct": false
+        },
+        {
+          "option_id": 6127,
+          "option_text": "An index that covers all queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6128,
+          "option_text": "Eliminates the need to access the table data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6129,
+          "option_text": "An index that covers multiple tables",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 267,
+      "subskill_id": 16,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between clustered and non-clustered indexes?",
+      "options": [
+        {
+          "option_id": 6130,
+          "option_text": "Clustered determines physical order, non-clustered is separate structure",
+          "is_correct": true
+        },
+        {
+          "option_id": 6131,
+          "option_text": "Non-clustered determines physical order, clustered is separate",
+          "is_correct": false
+        },
+        {
+          "option_id": 6132,
+          "option_text": "Clustered is faster for writes, non-clustered for reads",
+          "is_correct": false
+        },
+        {
+          "option_id": 6133,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 268,
+      "subskill_id": 16,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is index fragmentation and how do you fix it?",
+      "options": [
+        {
+          "option_id": 6134,
+          "option_text": "When index pages become disorganized; rebuild or reorganize",
+          "is_correct": true
+        },
+        {
+          "option_id": 6135,
+          "option_text": "When indexes are broken; delete and recreate",
+          "is_correct": false
+        },
+        {
+          "option_id": 6136,
+          "option_text": "When indexes are too large; compress them",
+          "is_correct": false
+        },
+        {
+          "option_id": 6137,
+          "option_text": "When indexes are missing; create them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 269,
+      "subskill_id": 16,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "When would you use a filtered index?",
+      "options": [
+        {
+          "option_id": 6138,
+          "option_text": "To index a subset of rows that meet a condition",
+          "is_correct": true
+        },
+        {
+          "option_id": 6139,
+          "option_text": "To filter out NULL values from the index",
+          "is_correct": false
+        },
+        {
+          "option_id": 6140,
+          "option_text": "To create an index on filtered data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6141,
+          "option_text": "All of the above",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 270,
+      "subskill_id": 16,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a full-text index and when would you use it?",
+      "options": [
+        {
+          "option_id": 6142,
+          "option_text": "For searching text content with advanced linguistic features",
+          "is_correct": true
+        },
+        {
+          "option_id": 6143,
+          "option_text": "For indexing binary data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6144,
+          "option_text": "For indexing images",
+          "is_correct": false
+        },
+        {
+          "option_id": 6145,
+          "option_text": "For indexing numeric ranges",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 271,
+      "subskill_id": 17,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a query execution plan and how do you read it?",
+      "options": [
+        {
+          "option_id": 6146,
+          "option_text": "A business document for queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6147,
+          "option_text": "The steps the database takes to execute a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 6148,
+          "option_text": "A backup plan for queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6149,
+          "option_text": "A security plan for queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 272,
+      "subskill_id": 17,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the N+1 query problem?",
+      "options": [
+        {
+          "option_id": 6150,
+          "option_text": "Making N+1 database calls when 1 would suffice",
+          "is_correct": true
+        },
+        {
+          "option_id": 6151,
+          "option_text": "Having N+1 tables in a database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6152,
+          "option_text": "Using N+1 indexes",
+          "is_correct": false
+        },
+        {
+          "option_id": 6153,
+          "option_text": "A query that returns N+1 rows",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 273,
+      "subskill_id": 17,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How would you optimize a query that uses multiple JOINs?",
+      "options": [
+        {
+          "option_id": 6154,
+          "option_text": "Use appropriate indexes on join columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 6155,
+          "option_text": "Use more JOINs",
+          "is_correct": false
+        },
+        {
+          "option_id": 6156,
+          "option_text": "Avoid all JOINs",
+          "is_correct": false
+        },
+        {
+          "option_id": 6157,
+          "option_text": "Use subqueries instead",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 274,
+      "subskill_id": 17,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between optimistic and pessimistic locking?",
+      "options": [
+        {
+          "option_id": 6158,
+          "option_text": "Optimistic assumes no conflict, pessimistic prevents conflicts",
+          "is_correct": true
+        },
+        {
+          "option_id": 6159,
+          "option_text": "Pessimistic assumes no conflict, optimistic prevents conflicts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6160,
+          "option_text": "Optimistic locks everything, pessimistic locks nothing",
+          "is_correct": false
+        },
+        {
+          "option_id": 6161,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 275,
+      "subskill_id": 17,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is query parameterization and why is it important?",
+      "options": [
+        {
+          "option_id": 6162,
+          "option_text": "Using parameters instead of literals to prevent SQL injection",
+          "is_correct": true
+        },
+        {
+          "option_id": 6163,
+          "option_text": "Adding parameters to make queries longer",
+          "is_correct": false
+        },
+        {
+          "option_id": 6164,
+          "option_text": "A way to document queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6165,
+          "option_text": "Making queries configurable",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 276,
+      "subskill_id": 13,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Which of the following is true about the SERIALIZABLE isolation level?",
+      "options": [
+        {
+          "option_id": 6166,
+          "option_text": "It allows dirty reads",
+          "is_correct": false
+        },
+        {
+          "option_id": 6167,
+          "option_text": "It prevents phantom reads but allows non-repeatable reads",
+          "is_correct": false
+        },
+        {
+          "option_id": 6168,
+          "option_text": "It provides the highest level of isolation with no concurrency anomalies",
+          "is_correct": true
+        },
+        {
+          "option_id": 6169,
+          "option_text": "It is the default in MySQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 277,
+      "subskill_id": 13,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement optimistic locking in SQL without using database locks?",
+      "options": [
+        {
+          "option_id": 6170,
+          "option_text": "Use SELECT FOR UPDATE",
+          "is_correct": false
+        },
+        {
+          "option_id": 6171,
+          "option_text": "Use a version column and check it during update",
+          "is_correct": true
+        },
+        {
+          "option_id": 6172,
+          "option_text": "Use table locks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6173,
+          "option_text": "Use serializable isolation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 278,
+      "subskill_id": 13,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a write skew anomaly and when does it occur?",
+      "options": [
+        {
+          "option_id": 6174,
+          "option_text": "When two transactions write to the same row simultaneously",
+          "is_correct": false
+        },
+        {
+          "option_id": 6175,
+          "option_text": "When two transactions read overlapping data sets and write conflicting data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6176,
+          "option_text": "When a transaction writes skewed data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6177,
+          "option_text": "When writes are not balanced across nodes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 279,
+      "subskill_id": 13,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "Which technique would you use to detect and resolve deadlocks in a distributed database?",
+      "options": [
+        {
+          "option_id": 6178,
+          "option_text": "Wait-die and wound-wait schemes",
+          "is_correct": true
+        },
+        {
+          "option_id": 6179,
+          "option_text": "Increase lock timeouts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6180,
+          "option_text": "Use a single coordinator",
+          "is_correct": false
+        },
+        {
+          "option_id": 6181,
+          "option_text": "Disable locking",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 280,
+      "subskill_id": 13,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is snapshot isolation and how does it differ from SERIALIZABLE?",
+      "options": [
+        {
+          "option_id": 6182,
+          "option_text": "Snapshot isolation uses row versions, SERIALIZABLE uses locks",
+          "is_correct": true
+        },
+        {
+          "option_id": 6183,
+          "option_text": "SERIALIZABLE uses row versions, snapshot isolation uses locks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6184,
+          "option_text": "They are identical",
+          "is_correct": false
+        },
+        {
+          "option_id": 6185,
+          "option_text": "Snapshot is weaker than READ COMMITTED",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 281,
+      "subskill_id": 14,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does Cassandra handle read repair and hinted handoff?",
+      "options": [
+        {
+          "option_id": 6186,
+          "option_text": "Read repair fixes stale data during reads, hinted handoff queues writes for down nodes",
+          "is_correct": true
+        },
+        {
+          "option_id": 6187,
+          "option_text": "Hinted handoff fixes reads, read repair handles writes",
+          "is_correct": false
+        },
+        {
+          "option_id": 6188,
+          "option_text": "They are the same mechanism",
+          "is_correct": false
+        },
+        {
+          "option_id": 6189,
+          "option_text": "Both are used only for writes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 282,
+      "subskill_id": 14,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between strong consistency and eventual consistency in DynamoDB?",
+      "options": [
+        {
+          "option_id": 6190,
+          "option_text": "Strong consistency reads always return latest write, eventual may return stale data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6191,
+          "option_text": "Eventual consistency always returns latest, strong may return stale",
+          "is_correct": false
+        },
+        {
+          "option_id": 6192,
+          "option_text": "Strong is faster, eventual is slower",
+          "is_correct": false
+        },
+        {
+          "option_id": 6193,
+          "option_text": "There is no difference",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 283,
+      "subskill_id": 14,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a globally distributed MongoDB cluster?",
+      "options": [
+        {
+          "option_id": 6194,
+          "option_text": "Single replica set across all regions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6195,
+          "option_text": "Use sharding with zone-based data distribution",
+          "is_correct": true
+        },
+        {
+          "option_id": 6196,
+          "option_text": "Multiple independent clusters",
+          "is_correct": false
+        },
+        {
+          "option_id": 6197,
+          "option_text": "Master-master replication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 284,
+      "subskill_id": 14,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the PACELC theorem and how does it extend CAP?",
+      "options": [
+        {
+          "option_id": 6198,
+          "option_text": "Adds tradeoffs between latency and consistency during normal operation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6199,
+          "option_text": "Replaces CAP completely",
+          "is_correct": false
+        },
+        {
+          "option_id": 6200,
+          "option_text": "Focuses only on availability",
+          "is_correct": false
+        },
+        {
+          "option_id": 6201,
+          "option_text": "Only applies to NoSQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 285,
+      "subskill_id": 14,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement ACID transactions in a NoSQL database like MongoDB?",
+      "options": [
+        {
+          "option_id": 6202,
+          "option_text": "Use multi-document transactions with snapshot isolation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6203,
+          "option_text": "NoSQL cannot support ACID",
+          "is_correct": false
+        },
+        {
+          "option_id": 6204,
+          "option_text": "Use two-phase commit manually",
+          "is_correct": false
+        },
+        {
+          "option_id": 6205,
+          "option_text": "Switch to SQL database",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 286,
+      "subskill_id": 15,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is temporal database design and how do you implement slowly changing dimensions?",
+      "options": [
+        {
+          "option_id": 6206,
+          "option_text": "Tracking historical data with valid time ranges",
+          "is_correct": true
+        },
+        {
+          "option_id": 6207,
+          "option_text": "Designing for temporary tables",
+          "is_correct": false
+        },
+        {
+          "option_id": 6208,
+          "option_text": "Time-based partitioning only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6209,
+          "option_text": "Caching frequently accessed data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 287,
+      "subskill_id": 15,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you design a schema for a multi-tenant SaaS application?",
+      "options": [
+        {
+          "option_id": 6210,
+          "option_text": "Separate database per tenant",
+          "is_correct": false
+        },
+        {
+          "option_id": 6211,
+          "option_text": "Shared database with tenant ID column and row-level security",
+          "is_correct": true
+        },
+        {
+          "option_id": 6212,
+          "option_text": "Single database without tenant isolation",
+          "is_correct": false
+        },
+        {
+          "option_id": 6213,
+          "option_text": "Use only NoSQL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 288,
+      "subskill_id": 15,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is polyglot persistence and when would you use it?",
+      "options": [
+        {
+          "option_id": 6214,
+          "option_text": "Using multiple database types for different data needs",
+          "is_correct": true
+        },
+        {
+          "option_id": 6215,
+          "option_text": "Speaking multiple database languages",
+          "is_correct": false
+        },
+        {
+          "option_id": 6216,
+          "option_text": "Using only one database type",
+          "is_correct": false
+        },
+        {
+          "option_id": 6217,
+          "option_text": "Database replication strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 289,
+      "subskill_id": 15,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle schema migrations in a zero-downtime deployment?",
+      "options": [
+        {
+          "option_id": 6218,
+          "option_text": "Backward-compatible changes with phased rollout",
+          "is_correct": true
+        },
+        {
+          "option_id": 6219,
+          "option_text": "Take application offline during migration",
+          "is_correct": false
+        },
+        {
+          "option_id": 6220,
+          "option_text": "Migrate during low traffic only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6221,
+          "option_text": "Use database replication",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 290,
+      "subskill_id": 15,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is CQRS and how does it affect database design?",
+      "options": [
+        {
+          "option_id": 6222,
+          "option_text": "Separating read and write models, possibly using different databases",
+          "is_correct": true
+        },
+        {
+          "option_id": 6223,
+          "option_text": "Command Query Responsibility Segregation for security",
+          "is_correct": false
+        },
+        {
+          "option_id": 6224,
+          "option_text": "A type of indexing strategy",
+          "is_correct": false
+        },
+        {
+          "option_id": 6225,
+          "option_text": "A backup strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 291,
+      "subskill_id": 16,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do bitmap indexes work and when are they most effective?",
+      "options": [
+        {
+          "option_id": 6226,
+          "option_text": "Store bitmaps for each distinct value; effective for low-cardinality columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 6227,
+          "option_text": "Store images in the database",
+          "is_correct": false
+        },
+        {
+          "option_id": 6228,
+          "option_text": "Compress data using bitmaps",
+          "is_correct": false
+        },
+        {
+          "option_id": 6229,
+          "option_text": "Effective for high-cardinality columns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 292,
+      "subskill_id": 16,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a GiST and a SP-GiST index in PostgreSQL?",
+      "options": [
+        {
+          "option_id": 6230,
+          "option_text": "GiST is balanced, SP-GiST is space-partitioned for non-balanced data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6231,
+          "option_text": "SP-GiST is faster for all queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6232,
+          "option_text": "GiST is for spatial data only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6233,
+          "option_text": "They are identical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 293,
+      "subskill_id": 16,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement full-text search across multiple languages?",
+      "options": [
+        {
+          "option_id": 6234,
+          "option_text": "Use language-specific analyzers and language detection",
+          "is_correct": true
+        },
+        {
+          "option_id": 6235,
+          "option_text": "Store all text in English only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6236,
+          "option_text": "Use separate indexes for each language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6237,
+          "option_text": "Rely on basic LIKE queries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 294,
+      "subskill_id": 16,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are expression indexes and when would you use them?",
+      "options": [
+        {
+          "option_id": 6238,
+          "option_text": "Indexes on expressions or functions; for queries with function calls",
+          "is_correct": true
+        },
+        {
+          "option_id": 6239,
+          "option_text": "Indexes that evaluate expressions at runtime",
+          "is_correct": false
+        },
+        {
+          "option_id": 6240,
+          "option_text": "Indexes on computed columns only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6241,
+          "option_text": "A type of materialized view",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 295,
+      "subskill_id": 16,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you choose between hash indexes and B-tree indexes?",
+      "options": [
+        {
+          "option_id": 6242,
+          "option_text": "Hash for equality, B-tree for range queries",
+          "is_correct": true
+        },
+        {
+          "option_id": 6243,
+          "option_text": "B-tree for equality, hash for range",
+          "is_correct": false
+        },
+        {
+          "option_id": 6244,
+          "option_text": "Hash is always faster",
+          "is_correct": false
+        },
+        {
+          "option_id": 6245,
+          "option_text": "B-tree is deprecated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 296,
+      "subskill_id": 17,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you analyze and tune a query that performs poorly only under production load?",
+      "options": [
+        {
+          "option_id": 6246,
+          "option_text": "Use production monitoring tools and query plans",
+          "is_correct": false
+        },
+        {
+          "option_id": 6247,
+          "option_text": "Test with production data volume and concurrent load",
+          "is_correct": false
+        },
+        {
+          "option_id": 6248,
+          "option_text": "Use performance schema and slow query logs",
+          "is_correct": false
+        },
+        {
+          "option_id": 6249,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 297,
+      "subskill_id": 17,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is parameter sniffing and how do you mitigate its effects?",
+      "options": [
+        {
+          "option_id": 6250,
+          "option_text": "When SQL Server caches plans for specific parameter values",
+          "is_correct": true
+        },
+        {
+          "option_id": 6251,
+          "option_text": "A security vulnerability",
+          "is_correct": false
+        },
+        {
+          "option_id": 6252,
+          "option_text": "A way to sniff SQL parameters",
+          "is_correct": false
+        },
+        {
+          "option_id": 6253,
+          "option_text": "An indexing strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 298,
+      "subskill_id": 17,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement query routing and read replicas for scaling?",
+      "options": [
+        {
+          "option_id": 6254,
+          "option_text": "Route read queries to replicas, writes to primary",
+          "is_correct": true
+        },
+        {
+          "option_id": 6255,
+          "option_text": "Send all queries to primary",
+          "is_correct": false
+        },
+        {
+          "option_id": 6256,
+          "option_text": "Random routing",
+          "is_correct": false
+        },
+        {
+          "option_id": 6257,
+          "option_text": "Use replicas for writes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 299,
+      "subskill_id": 17,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between horizontal and vertical query optimization?",
+      "options": [
+        {
+          "option_id": 6258,
+          "option_text": "Horizontal reduces rows processed, vertical reduces columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 6259,
+          "option_text": "Vertical reduces rows, horizontal reduces columns",
+          "is_correct": false
+        },
+        {
+          "option_id": 6260,
+          "option_text": "Horizontal is for joins, vertical for selects",
+          "is_correct": false
+        },
+        {
+          "option_id": 6261,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 300,
+      "subskill_id": 17,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you design a query performance monitoring system?",
+      "options": [
+        {
+          "option_id": 6262,
+          "option_text": "Collect metrics, set baselines, alert on anomalies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6263,
+          "option_text": "Use database-specific monitoring tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 6264,
+          "option_text": "Track slow queries and execution plans",
+          "is_correct": false
+        },
+        {
+          "option_id": 6265,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    }
+  ]
+}

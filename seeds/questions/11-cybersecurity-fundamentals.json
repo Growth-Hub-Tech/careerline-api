@@ -1,0 +1,2906 @@
+{
+  "skill_id": 11,
+  "skill_name": "Cybersecurity Fundamentals",
+  "questions": [
+    {
+      "question_id": 1001,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What does OWASP stand for?",
+      "options": [
+        {
+          "option_id": 6266,
+          "option_text": "Open Web Application Security Project",
+          "is_correct": true
+        },
+        {
+          "option_id": 6267,
+          "option_text": "Open World Application Security Protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 6268,
+          "option_text": "Online Web Application Security Program",
+          "is_correct": false
+        },
+        {
+          "option_id": 6269,
+          "option_text": "Open Web Access Security Project",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1002,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the OWASP Top 10?",
+      "options": [
+        {
+          "option_id": 6270,
+          "option_text": "A list of top programming languages",
+          "is_correct": false
+        },
+        {
+          "option_id": 6271,
+          "option_text": "A list of top tech companies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6272,
+          "option_text": "A list of the most critical web application security risks",
+          "is_correct": true
+        },
+        {
+          "option_id": 6273,
+          "option_text": "A list of top cybersecurity tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1003,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the purpose of OWASP?",
+      "options": [
+        {
+          "option_id": 6274,
+          "option_text": "To rank software products",
+          "is_correct": false
+        },
+        {
+          "option_id": 6275,
+          "option_text": "To improve software security through open community projects",
+          "is_correct": true
+        },
+        {
+          "option_id": 6276,
+          "option_text": "To sell security tools",
+          "is_correct": false
+        },
+        {
+          "option_id": 6277,
+          "option_text": "To certify security professionals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1004,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a security vulnerability?",
+      "options": [
+        {
+          "option_id": 6278,
+          "option_text": "A weakness in a system that can be exploited",
+          "is_correct": true
+        },
+        {
+          "option_id": 6279,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6280,
+          "option_text": "A security policy",
+          "is_correct": false
+        },
+        {
+          "option_id": 6281,
+          "option_text": "A firewall rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1005,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a threat in cybersecurity?",
+      "options": [
+        {
+          "option_id": 6282,
+          "option_text": "A firewall configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 6283,
+          "option_text": "An antivirus software",
+          "is_correct": false
+        },
+        {
+          "option_id": 6284,
+          "option_text": "A security patch",
+          "is_correct": false
+        },
+        {
+          "option_id": 6285,
+          "option_text": "A potential danger that can exploit a vulnerability",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1006,
+      "subskill_id": 52,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is risk in cybersecurity?",
+      "options": [
+        {
+          "option_id": 6286,
+          "option_text": "A type of vulnerability",
+          "is_correct": false
+        },
+        {
+          "option_id": 6287,
+          "option_text": "The likelihood of a threat exploiting a vulnerability",
+          "is_correct": true
+        },
+        {
+          "option_id": 6288,
+          "option_text": "A security control",
+          "is_correct": false
+        },
+        {
+          "option_id": 6289,
+          "option_text": "A malware variant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1007,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is encryption?",
+      "options": [
+        {
+          "option_id": 6290,
+          "option_text": "The process of converting plaintext into ciphertext",
+          "is_correct": true
+        },
+        {
+          "option_id": 6291,
+          "option_text": "The process of deleting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6292,
+          "option_text": "The process of backing up data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6293,
+          "option_text": "The process of compressing files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1008,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between encryption and hashing?",
+      "options": [
+        {
+          "option_id": 6294,
+          "option_text": "Encryption is for passwords only",
+          "is_correct": false
+        },
+        {
+          "option_id": 6295,
+          "option_text": "Hashing is reversible, encryption is not",
+          "is_correct": false
+        },
+        {
+          "option_id": 6296,
+          "option_text": "Encryption is reversible, hashing is one-way",
+          "is_correct": true
+        },
+        {
+          "option_id": 6297,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1009,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is symmetric encryption?",
+      "options": [
+        {
+          "option_id": 6298,
+          "option_text": "Encryption with two different keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6299,
+          "option_text": "Encryption where the same key is used for both encryption and decryption",
+          "is_correct": true
+        },
+        {
+          "option_id": 6300,
+          "option_text": "Encryption with no key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6301,
+          "option_text": "Encryption that only works on text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1010,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is asymmetric encryption?",
+      "options": [
+        {
+          "option_id": 6302,
+          "option_text": "Encryption with one key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6303,
+          "option_text": "Encryption with no key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6304,
+          "option_text": "Symmetric key encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6305,
+          "option_text": "Encryption that uses a public key and a private key",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1011,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a cryptographic key?",
+      "options": [
+        {
+          "option_id": 6306,
+          "option_text": "A piece of data used to encrypt and decrypt messages",
+          "is_correct": true
+        },
+        {
+          "option_id": 6307,
+          "option_text": "A physical key to a server room",
+          "is_correct": false
+        },
+        {
+          "option_id": 6308,
+          "option_text": "A password manager",
+          "is_correct": false
+        },
+        {
+          "option_id": 6309,
+          "option_text": "A firewall rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1012,
+      "subskill_id": 53,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SSL/TLS?",
+      "options": [
+        {
+          "option_id": 6310,
+          "option_text": "A programming language for secure apps",
+          "is_correct": false
+        },
+        {
+          "option_id": 6311,
+          "option_text": "A database security protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 6312,
+          "option_text": "Protocols that provide secure communication over a network",
+          "is_correct": true
+        },
+        {
+          "option_id": 6313,
+          "option_text": "An antivirus software",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1013,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is authentication?",
+      "options": [
+        {
+          "option_id": 6314,
+          "option_text": "The process of granting permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6315,
+          "option_text": "The process of verifying the identity of a user or system",
+          "is_correct": true
+        },
+        {
+          "option_id": 6316,
+          "option_text": "The process of encrypting data",
+          "is_correct": false
+        },
+        {
+          "option_id": 6317,
+          "option_text": "The process of backing up files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1014,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between authentication and authorization?",
+      "options": [
+        {
+          "option_id": 6318,
+          "option_text": "Authentication verifies identity, authorization grants permissions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6319,
+          "option_text": "Authorization verifies identity, authentication grants permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6320,
+          "option_text": "They are the same thing",
+          "is_correct": false
+        },
+        {
+          "option_id": 6321,
+          "option_text": "Authentication is for files, authorization is for users",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1015,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is multi-factor authentication (MFA)?",
+      "options": [
+        {
+          "option_id": 6322,
+          "option_text": "Using only a password",
+          "is_correct": false
+        },
+        {
+          "option_id": 6323,
+          "option_text": "Using only biometrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 6324,
+          "option_text": "Using only a security token",
+          "is_correct": false
+        },
+        {
+          "option_id": 6325,
+          "option_text": "Using two or more independent credentials for verification",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1016,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a password policy?",
+      "options": [
+        {
+          "option_id": 6326,
+          "option_text": "A policy for resetting password managers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6327,
+          "option_text": "A set of rules for creating and managing passwords",
+          "is_correct": true
+        },
+        {
+          "option_id": 6328,
+          "option_text": "A policy for sharing passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6329,
+          "option_text": "A policy for storing passwords in plain text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1017,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is biometric authentication?",
+      "options": [
+        {
+          "option_id": 6330,
+          "option_text": "Authentication using only passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6331,
+          "option_text": "Authentication using security tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6332,
+          "option_text": "Authentication using unique biological traits like fingerprints",
+          "is_correct": true
+        },
+        {
+          "option_id": 6333,
+          "option_text": "Authentication using multiple passwords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1018,
+      "subskill_id": 54,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is SSO (Single Sign-On)?",
+      "options": [
+        {
+          "option_id": 6334,
+          "option_text": "A system that allows users to authenticate once and access multiple applications",
+          "is_correct": true
+        },
+        {
+          "option_id": 6335,
+          "option_text": "A system for single passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6336,
+          "option_text": "A system for single-factor authentication",
+          "is_correct": false
+        },
+        {
+          "option_id": 6337,
+          "option_text": "A system for single-user access",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1019,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a vulnerability?",
+      "options": [
+        {
+          "option_id": 6338,
+          "option_text": "A type of attack",
+          "is_correct": false
+        },
+        {
+          "option_id": 6339,
+          "option_text": "A security control",
+          "is_correct": false
+        },
+        {
+          "option_id": 6340,
+          "option_text": "A firewall rule",
+          "is_correct": false
+        },
+        {
+          "option_id": 6341,
+          "option_text": "A weakness that can be exploited by a threat",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1020,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a zero-day vulnerability?",
+      "options": [
+        {
+          "option_id": 6342,
+          "option_text": "A vulnerability that was fixed in 24 hours",
+          "is_correct": false
+        },
+        {
+          "option_id": 6343,
+          "option_text": "A vulnerability unknown to the vendor with no available patch",
+          "is_correct": true
+        },
+        {
+          "option_id": 6344,
+          "option_text": "A vulnerability that only affects new software",
+          "is_correct": false
+        },
+        {
+          "option_id": 6345,
+          "option_text": "A vulnerability that can be ignored",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1021,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is phishing?",
+      "options": [
+        {
+          "option_id": 6346,
+          "option_text": "A fraud attempt to obtain sensitive information by pretending to be a trustworthy source",
+          "is_correct": true
+        },
+        {
+          "option_id": 6347,
+          "option_text": "A type of fishing tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 6348,
+          "option_text": "A security control",
+          "is_correct": false
+        },
+        {
+          "option_id": 6349,
+          "option_text": "A firewall rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1022,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is malware?",
+      "options": [
+        {
+          "option_id": 6350,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6351,
+          "option_text": "A security patch",
+          "is_correct": false
+        },
+        {
+          "option_id": 6352,
+          "option_text": "Software designed to harm or exploit devices",
+          "is_correct": true
+        },
+        {
+          "option_id": 6353,
+          "option_text": "A type of antivirus software",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1023,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is ransomware?",
+      "options": [
+        {
+          "option_id": 6354,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6355,
+          "option_text": "Malware that encrypts files and demands payment for decryption",
+          "is_correct": true
+        },
+        {
+          "option_id": 6356,
+          "option_text": "A security tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 6357,
+          "option_text": "A type of password manager",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1024,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is social engineering?",
+      "options": [
+        {
+          "option_id": 6358,
+          "option_text": "A type of programming",
+          "is_correct": false
+        },
+        {
+          "option_id": 6359,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6360,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6361,
+          "option_text": "Manipulating people into revealing confidential information",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1025,
+      "subskill_id": 55,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a data breach?",
+      "options": [
+        {
+          "option_id": 6362,
+          "option_text": "An incident where sensitive data is accessed or stolen without authorization",
+          "is_correct": true
+        },
+        {
+          "option_id": 6363,
+          "option_text": "A type of backup",
+          "is_correct": false
+        },
+        {
+          "option_id": 6364,
+          "option_text": "A security control",
+          "is_correct": false
+        },
+        {
+          "option_id": 6365,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1026,
+      "subskill_id": 52,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What are the most common OWASP Top 10 vulnerabilities?",
+      "options": [
+        {
+          "option_id": 6366,
+          "option_text": "Injection, Broken Authentication, XSS, etc.",
+          "is_correct": true
+        },
+        {
+          "option_id": 6367,
+          "option_text": "Only SQL injection and XSS",
+          "is_correct": false
+        },
+        {
+          "option_id": 6368,
+          "option_text": "Only authentication issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 6369,
+          "option_text": "Only configuration errors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1027,
+      "subskill_id": 52,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is injection (SQL injection) in OWASP?",
+      "options": [
+        {
+          "option_id": 6370,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6371,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6372,
+          "option_text": "An attack where malicious code is inserted into a query",
+          "is_correct": true
+        },
+        {
+          "option_id": 6373,
+          "option_text": "A security control",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1028,
+      "subskill_id": 52,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is XSS (Cross-Site Scripting) in OWASP?",
+      "options": [
+        {
+          "option_id": 6374,
+          "option_text": "An attack on database servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6375,
+          "option_text": "An attack where malicious scripts are injected into web pages",
+          "is_correct": true
+        },
+        {
+          "option_id": 6376,
+          "option_text": "A type of firewall rule",
+          "is_correct": false
+        },
+        {
+          "option_id": 6377,
+          "option_text": "A network security protocol",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1029,
+      "subskill_id": 52,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is CSRF (Cross-Site Request Forgery)?",
+      "options": [
+        {
+          "option_id": 6378,
+          "option_text": "An attack on encryption keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6379,
+          "option_text": "An attack on network infrastructure",
+          "is_correct": false
+        },
+        {
+          "option_id": 6380,
+          "option_text": "An attack on server hardware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6381,
+          "option_text": "An attack that forces a user to perform unwanted actions on a trusted site",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1030,
+      "subskill_id": 52,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is insecure deserialization?",
+      "options": [
+        {
+          "option_id": 6382,
+          "option_text": "A vulnerability when untrusted data is used to manipulate an object",
+          "is_correct": true
+        },
+        {
+          "option_id": 6383,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6384,
+          "option_text": "A firewall configuration",
+          "is_correct": false
+        },
+        {
+          "option_id": 6385,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1031,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is AES encryption?",
+      "options": [
+        {
+          "option_id": 6386,
+          "option_text": "Asymmetric Encryption Standard",
+          "is_correct": false
+        },
+        {
+          "option_id": 6387,
+          "option_text": "Advanced Encryption Security",
+          "is_correct": false
+        },
+        {
+          "option_id": 6388,
+          "option_text": "Advanced Encryption Standard",
+          "is_correct": true
+        },
+        {
+          "option_id": 6389,
+          "option_text": "AES is not an encryption algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1032,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is RSA encryption?",
+      "options": [
+        {
+          "option_id": 6390,
+          "option_text": "A symmetric encryption algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6391,
+          "option_text": "An asymmetric encryption algorithm named after its creators",
+          "is_correct": true
+        },
+        {
+          "option_id": 6392,
+          "option_text": "A hashing algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6393,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1033,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between symmetric and asymmetric encryption?",
+      "options": [
+        {
+          "option_id": 6394,
+          "option_text": "Symmetric uses one key, asymmetric uses a key pair",
+          "is_correct": true
+        },
+        {
+          "option_id": 6395,
+          "option_text": "Asymmetric uses one key, symmetric uses a key pair",
+          "is_correct": false
+        },
+        {
+          "option_id": 6396,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6397,
+          "option_text": "Symmetric is only for text, asymmetric is for files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1034,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a digital signature?",
+      "options": [
+        {
+          "option_id": 6398,
+          "option_text": "A type of password",
+          "is_correct": false
+        },
+        {
+          "option_id": 6399,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6400,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6401,
+          "option_text": "A cryptographic mechanism for verifying authenticity and integrity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1035,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is public key infrastructure (PKI)?",
+      "options": [
+        {
+          "option_id": 6402,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6403,
+          "option_text": "A system for managing public-key encryption and digital certificates",
+          "is_correct": true
+        },
+        {
+          "option_id": 6404,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6405,
+          "option_text": "A programming framework",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1036,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is OAuth 2.0?",
+      "options": [
+        {
+          "option_id": 6406,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6407,
+          "option_text": "A database protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 6408,
+          "option_text": "An open standard for access delegation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6409,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1037,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is OpenID Connect?",
+      "options": [
+        {
+          "option_id": 6410,
+          "option_text": "An authentication layer built on top of OAuth 2.0",
+          "is_correct": true
+        },
+        {
+          "option_id": 6411,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6412,
+          "option_text": "A database protocol",
+          "is_correct": false
+        },
+        {
+          "option_id": 6413,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1038,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is LDAP authentication?",
+      "options": [
+        {
+          "option_id": 6414,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6415,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6416,
+          "option_text": "A programming language",
+          "is_correct": false
+        },
+        {
+          "option_id": 6417,
+          "option_text": "Authentication using the Lightweight Directory Access Protocol",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1039,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a JWT and how is it used?",
+      "options": [
+        {
+          "option_id": 6418,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6419,
+          "option_text": "A compact token format for securely transmitting information",
+          "is_correct": true
+        },
+        {
+          "option_id": 6420,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6421,
+          "option_text": "A database format",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1040,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is session management?",
+      "options": [
+        {
+          "option_id": 6422,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6423,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6424,
+          "option_text": "The process of controlling user sessions securely",
+          "is_correct": true
+        },
+        {
+          "option_id": 6425,
+          "option_text": "A type of malware",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1041,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between a vulnerability, threat, and risk?",
+      "options": [
+        {
+          "option_id": 6426,
+          "option_text": "Vulnerability is a weakness, threat is a danger, risk is the likelihood of exploitation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6427,
+          "option_text": "They are all the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6428,
+          "option_text": "Risk is a weakness, vulnerability is a threat",
+          "is_correct": false
+        },
+        {
+          "option_id": 6429,
+          "option_text": "Threat is a weakness, vulnerability is a danger",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1042,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a buffer overflow?",
+      "options": [
+        {
+          "option_id": 6430,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6431,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6432,
+          "option_text": "A security control",
+          "is_correct": false
+        },
+        {
+          "option_id": 6433,
+          "option_text": "A vulnerability where data exceeds memory buffer limits",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1043,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a man-in-the-middle attack?",
+      "options": [
+        {
+          "option_id": 6434,
+          "option_text": "An attack on server hardware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6435,
+          "option_text": "An attack where the attacker intercepts communication between two parties",
+          "is_correct": true
+        },
+        {
+          "option_id": 6436,
+          "option_text": "An attack on database servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6437,
+          "option_text": "A type of firewall rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1044,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a DDoS attack?",
+      "options": [
+        {
+          "option_id": 6438,
+          "option_text": "An attack on encryption keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6439,
+          "option_text": "An attack on user credentials",
+          "is_correct": false
+        },
+        {
+          "option_id": 6440,
+          "option_text": "An attack that overwhelms a server with traffic to make it unavailable",
+          "is_correct": true
+        },
+        {
+          "option_id": 6441,
+          "option_text": "An attack on password hashing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1045,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a security misconfiguration?",
+      "options": [
+        {
+          "option_id": 6442,
+          "option_text": "An insecure setup of security controls or settings",
+          "is_correct": true
+        },
+        {
+          "option_id": 6443,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6444,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6445,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1046,
+      "subskill_id": 54,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the principle of least privilege?",
+      "options": [
+        {
+          "option_id": 6446,
+          "option_text": "Only administrators have permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6447,
+          "option_text": "Only the system has permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6448,
+          "option_text": "Only external users have permissions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6449,
+          "option_text": "Users should have only the minimum permissions needed to do their job",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1047,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is defense in depth?",
+      "options": [
+        {
+          "option_id": 6450,
+          "option_text": "A single layer of security",
+          "is_correct": false
+        },
+        {
+          "option_id": 6451,
+          "option_text": "Using multiple layers of security controls",
+          "is_correct": true
+        },
+        {
+          "option_id": 6452,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6453,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1048,
+      "subskill_id": 53,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a firewall?",
+      "options": [
+        {
+          "option_id": 6454,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6455,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6456,
+          "option_text": "A network security device that monitors and controls traffic",
+          "is_correct": true
+        },
+        {
+          "option_id": 6457,
+          "option_text": "A type of password manager",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1049,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is an intrusion detection system (IDS)?",
+      "options": [
+        {
+          "option_id": 6458,
+          "option_text": "A system that monitors network traffic for suspicious activity",
+          "is_correct": true
+        },
+        {
+          "option_id": 6459,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6460,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6461,
+          "option_text": "A type of malware",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1050,
+      "subskill_id": 55,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a security audit?",
+      "options": [
+        {
+          "option_id": 6462,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6463,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6464,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6465,
+          "option_text": "A systematic evaluation of security policies and controls",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1051,
+      "subskill_id": 52,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prevent SQL injection attacks?",
+      "options": [
+        {
+          "option_id": 6466,
+          "option_text": "Use dynamic SQL queries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6467,
+          "option_text": "Use parameterized queries and stored procedures",
+          "is_correct": true
+        },
+        {
+          "option_id": 6468,
+          "option_text": "Disable all database access",
+          "is_correct": false
+        },
+        {
+          "option_id": 6469,
+          "option_text": "Use plain text passwords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1052,
+      "subskill_id": 52,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you prevent XSS attacks?",
+      "options": [
+        {
+          "option_id": 6470,
+          "option_text": "Disable JavaScript",
+          "is_correct": false
+        },
+        {
+          "option_id": 6471,
+          "option_text": "Use plain text output",
+          "is_correct": false
+        },
+        {
+          "option_id": 6472,
+          "option_text": "Sanitize and escape user input",
+          "is_correct": true
+        },
+        {
+          "option_id": 6473,
+          "option_text": "Use HTML comments",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1053,
+      "subskill_id": 52,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you secure APIs against OWASP Top 10?",
+      "options": [
+        {
+          "option_id": 6474,
+          "option_text": "Use proper authentication, rate limiting, and input validation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6475,
+          "option_text": "Allow unlimited access",
+          "is_correct": false
+        },
+        {
+          "option_id": 6476,
+          "option_text": "Disable all logging",
+          "is_correct": false
+        },
+        {
+          "option_id": 6477,
+          "option_text": "Use only GET requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1054,
+      "subskill_id": 52,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between stored XSS and reflected XSS?",
+      "options": [
+        {
+          "option_id": 6478,
+          "option_text": "Stored XSS is harmless",
+          "is_correct": false
+        },
+        {
+          "option_id": 6479,
+          "option_text": "Reflected XSS is permanent",
+          "is_correct": false
+        },
+        {
+          "option_id": 6480,
+          "option_text": "Stored XSS is a client-side attack",
+          "is_correct": false
+        },
+        {
+          "option_id": 6481,
+          "option_text": "Stored XSS is saved on the server, reflected XSS is in a request",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1055,
+      "subskill_id": 52,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a security misconfiguration in OWASP?",
+      "options": [
+        {
+          "option_id": 6482,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6483,
+          "option_text": "An insecure default or incomplete configuration of security controls",
+          "is_correct": true
+        },
+        {
+          "option_id": 6484,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6485,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1056,
+      "subskill_id": 53,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is end-to-end encryption?",
+      "options": [
+        {
+          "option_id": 6486,
+          "option_text": "Encryption that only works on local files",
+          "is_correct": false
+        },
+        {
+          "option_id": 6487,
+          "option_text": "Encryption that only works on network packets",
+          "is_correct": false
+        },
+        {
+          "option_id": 6488,
+          "option_text": "Encryption where only the sender and recipient can read the message",
+          "is_correct": true
+        },
+        {
+          "option_id": 6489,
+          "option_text": "Encryption that uses only one key",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1057,
+      "subskill_id": 53,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between hashing and encryption?",
+      "options": [
+        {
+          "option_id": 6490,
+          "option_text": "Hashing is one-way, encryption is reversible with a key",
+          "is_correct": true
+        },
+        {
+          "option_id": 6491,
+          "option_text": "Encryption is one-way, hashing is reversible",
+          "is_correct": false
+        },
+        {
+          "option_id": 6492,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6493,
+          "option_text": "Both use public and private keys",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1058,
+      "subskill_id": 53,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is elliptic curve cryptography?",
+      "options": [
+        {
+          "option_id": 6494,
+          "option_text": "A symmetric encryption algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6495,
+          "option_text": "A hashing algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6496,
+          "option_text": "A firewall rule",
+          "is_correct": false
+        },
+        {
+          "option_id": 6497,
+          "option_text": "A public-key encryption system based on elliptic curves",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1059,
+      "subskill_id": 53,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does TLS handshake work?",
+      "options": [
+        {
+          "option_id": 6498,
+          "option_text": "It only uses symmetric encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6499,
+          "option_text": "It establishes encryption parameters and exchanges keys",
+          "is_correct": true
+        },
+        {
+          "option_id": 6500,
+          "option_text": "It only authenticates the client",
+          "is_correct": false
+        },
+        {
+          "option_id": 6501,
+          "option_text": "It only authenticates the server",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1060,
+      "subskill_id": 53,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a certificate authority (CA)?",
+      "options": [
+        {
+          "option_id": 6502,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6503,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6504,
+          "option_text": "An entity that issues digital certificates",
+          "is_correct": true
+        },
+        {
+          "option_id": 6505,
+          "option_text": "A type of malware",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1061,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does OAuth 2.0 flow work?",
+      "options": [
+        {
+          "option_id": 6506,
+          "option_text": "Client requests authorization, receives token, uses token to access resource",
+          "is_correct": true
+        },
+        {
+          "option_id": 6507,
+          "option_text": "Client sends password directly to resource server",
+          "is_correct": false
+        },
+        {
+          "option_id": 6508,
+          "option_text": "Client never needs to authenticate",
+          "is_correct": false
+        },
+        {
+          "option_id": 6509,
+          "option_text": "Token is sent in the URL",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1062,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How does JWT authentication work?",
+      "options": [
+        {
+          "option_id": 6510,
+          "option_text": "It is a type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6511,
+          "option_text": "It uses session cookies",
+          "is_correct": false
+        },
+        {
+          "option_id": 6512,
+          "option_text": "It uses database sessions",
+          "is_correct": false
+        },
+        {
+          "option_id": 6513,
+          "option_text": "It uses signed tokens containing user claims",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1063,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is password hashing and why is it important?",
+      "options": [
+        {
+          "option_id": 6514,
+          "option_text": "It stores passwords in plain text",
+          "is_correct": false
+        },
+        {
+          "option_id": 6515,
+          "option_text": "It converts passwords into irreversible hashes to protect them",
+          "is_correct": true
+        },
+        {
+          "option_id": 6516,
+          "option_text": "It encrypts passwords with the same key",
+          "is_correct": false
+        },
+        {
+          "option_id": 6517,
+          "option_text": "It makes passwords stronger automatically",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1064,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a session token?",
+      "options": [
+        {
+          "option_id": 6518,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6519,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6520,
+          "option_text": "A unique identifier for a user session",
+          "is_correct": true
+        },
+        {
+          "option_id": 6521,
+          "option_text": "A type of malware",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1065,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is biometric authentication and how is it stored securely?",
+      "options": [
+        {
+          "option_id": 6522,
+          "option_text": "Stored as hashed templates, not raw biometric data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6523,
+          "option_text": "Stored as raw images",
+          "is_correct": false
+        },
+        {
+          "option_id": 6524,
+          "option_text": "Stored in plain text",
+          "is_correct": false
+        },
+        {
+          "option_id": 6525,
+          "option_text": "Stored in cookies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1066,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the impact of a zero-day vulnerability?",
+      "options": [
+        {
+          "option_id": 6526,
+          "option_text": "Minimal impact on security",
+          "is_correct": false
+        },
+        {
+          "option_id": 6527,
+          "option_text": "It cannot be exploited",
+          "is_correct": false
+        },
+        {
+          "option_id": 6528,
+          "option_text": "It is always harmless",
+          "is_correct": false
+        },
+        {
+          "option_id": 6529,
+          "option_text": "Can be exploited by attackers before a patch is available",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1067,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "How do you detect a security breach?",
+      "options": [
+        {
+          "option_id": 6530,
+          "option_text": "By checking user passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6531,
+          "option_text": "Using monitoring tools and indicators of compromise",
+          "is_correct": true
+        },
+        {
+          "option_id": 6532,
+          "option_text": "By restarting servers",
+          "is_correct": false
+        },
+        {
+          "option_id": 6533,
+          "option_text": "By disabling all services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1068,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a supply chain attack?",
+      "options": [
+        {
+          "option_id": 6534,
+          "option_text": "An attack on physical supply chains",
+          "is_correct": false
+        },
+        {
+          "option_id": 6535,
+          "option_text": "An attack on supplier contracts",
+          "is_correct": false
+        },
+        {
+          "option_id": 6536,
+          "option_text": "An attack that exploits vulnerabilities in third-party components",
+          "is_correct": true
+        },
+        {
+          "option_id": 6537,
+          "option_text": "An attack on logistics systems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1069,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between a threat actor and a vulnerability?",
+      "options": [
+        {
+          "option_id": 6538,
+          "option_text": "A threat actor is a person or group, a vulnerability is a system weakness",
+          "is_correct": true
+        },
+        {
+          "option_id": 6539,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6540,
+          "option_text": "A vulnerability is a person, a threat actor is a weakness",
+          "is_correct": false
+        },
+        {
+          "option_id": 6541,
+          "option_text": "Both are system weaknesses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1070,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What are common indicators of compromise (IoC)?",
+      "options": [
+        {
+          "option_id": 6542,
+          "option_text": "Unusual network traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 6543,
+          "option_text": "Unexpected system changes",
+          "is_correct": false
+        },
+        {
+          "option_id": 6544,
+          "option_text": "Suspicious log entries",
+          "is_correct": false
+        },
+        {
+          "option_id": 6545,
+          "option_text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1071,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a security policy?",
+      "options": [
+        {
+          "option_id": 6546,
+          "option_text": "A type of firewall rule",
+          "is_correct": false
+        },
+        {
+          "option_id": 6547,
+          "option_text": "A document that defines security rules and procedures",
+          "is_correct": true
+        },
+        {
+          "option_id": 6548,
+          "option_text": "A type of encryption algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6549,
+          "option_text": "A malware detection tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1072,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the CIA triad?",
+      "options": [
+        {
+          "option_id": 6550,
+          "option_text": "Central Intelligence Agency",
+          "is_correct": false
+        },
+        {
+          "option_id": 6551,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6552,
+          "option_text": "Confidentiality, Integrity, Availability",
+          "is_correct": true
+        },
+        {
+          "option_id": 6553,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1073,
+      "subskill_id": 54,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a zero-trust security model?",
+      "options": [
+        {
+          "option_id": 6554,
+          "option_text": "Never trust, always verify every request",
+          "is_correct": true
+        },
+        {
+          "option_id": 6555,
+          "option_text": "Trust everyone inside the network",
+          "is_correct": false
+        },
+        {
+          "option_id": 6556,
+          "option_text": "Only trust external users",
+          "is_correct": false
+        },
+        {
+          "option_id": 6557,
+          "option_text": "Trust no one at all times",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1074,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a SIEM system?",
+      "options": [
+        {
+          "option_id": 6558,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6559,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6560,
+          "option_text": "A type of malware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6561,
+          "option_text": "Security Information and Event Management system for monitoring and analysis",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1075,
+      "subskill_id": 55,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is incident response?",
+      "options": [
+        {
+          "option_id": 6562,
+          "option_text": "A type of firewall rule",
+          "is_correct": false
+        },
+        {
+          "option_id": 6563,
+          "option_text": "The process of handling security breaches and incidents",
+          "is_correct": true
+        },
+        {
+          "option_id": 6564,
+          "option_text": "A type of encryption algorithm",
+          "is_correct": false
+        },
+        {
+          "option_id": 6565,
+          "option_text": "A malware detection tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1076,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you implement a secure development lifecycle (SDL)?",
+      "options": [
+        {
+          "option_id": 6566,
+          "option_text": "Integrate security at every stage of development",
+          "is_correct": true
+        },
+        {
+          "option_id": 6567,
+          "option_text": "Add security only at the end of development",
+          "is_correct": false
+        },
+        {
+          "option_id": 6568,
+          "option_text": "Skip security testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 6569,
+          "option_text": "Only use automated security tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1077,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you perform a threat modeling exercise?",
+      "options": [
+        {
+          "option_id": 6570,
+          "option_text": "By guessing potential threats",
+          "is_correct": false
+        },
+        {
+          "option_id": 6571,
+          "option_text": "By ignoring threats",
+          "is_correct": false
+        },
+        {
+          "option_id": 6572,
+          "option_text": "Identifying assets, threats, vulnerabilities, and mitigations",
+          "is_correct": true
+        },
+        {
+          "option_id": 6573,
+          "option_text": "By using only one method",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1078,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the limitations of OWASP Top 10?",
+      "options": [
+        {
+          "option_id": 6574,
+          "option_text": "It covers all security issues",
+          "is_correct": false
+        },
+        {
+          "option_id": 6575,
+          "option_text": "It is web-focused and may not cover all application security risks",
+          "is_correct": true
+        },
+        {
+          "option_id": 6576,
+          "option_text": "It is outdated",
+          "is_correct": false
+        },
+        {
+          "option_id": 6577,
+          "option_text": "It only applies to mobile apps",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1079,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you secure a microservices architecture?",
+      "options": [
+        {
+          "option_id": 6578,
+          "option_text": "Use API gateways, mTLS, and service mesh",
+          "is_correct": true
+        },
+        {
+          "option_id": 6579,
+          "option_text": "Disable all security controls",
+          "is_correct": false
+        },
+        {
+          "option_id": 6580,
+          "option_text": "Allow all internal traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 6581,
+          "option_text": "Only use perimeter security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1080,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of security champions in a development team?",
+      "options": [
+        {
+          "option_id": 6582,
+          "option_text": "Act as advocates for security within the team",
+          "is_correct": true
+        },
+        {
+          "option_id": 6583,
+          "option_text": "Only handle security incidents",
+          "is_correct": false
+        },
+        {
+          "option_id": 6584,
+          "option_text": "Write all code",
+          "is_correct": false
+        },
+        {
+          "option_id": 6585,
+          "option_text": "Replace security tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1081,
+      "subskill_id": 53,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How does quantum computing affect encryption?",
+      "options": [
+        {
+          "option_id": 6586,
+          "option_text": "Quantum computing has no effect on encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6587,
+          "option_text": "Quantum computing makes encryption stronger",
+          "is_correct": false
+        },
+        {
+          "option_id": 6588,
+          "option_text": "Quantum computers can break RSA and ECC encryption",
+          "is_correct": true
+        },
+        {
+          "option_id": 6589,
+          "option_text": "Quantum computing only affects passwords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1082,
+      "subskill_id": 53,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is homomorphic encryption?",
+      "options": [
+        {
+          "option_id": 6590,
+          "option_text": "An encryption that cannot be decrypted",
+          "is_correct": false
+        },
+        {
+          "option_id": 6591,
+          "option_text": "Encryption that allows computations on encrypted data",
+          "is_correct": true
+        },
+        {
+          "option_id": 6592,
+          "option_text": "Encryption that only works on text",
+          "is_correct": false
+        },
+        {
+          "option_id": 6593,
+          "option_text": "Encryption that uses no keys",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1083,
+      "subskill_id": 53,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is zero-knowledge proof in cryptography?",
+      "options": [
+        {
+          "option_id": 6594,
+          "option_text": "A proof with no evidence",
+          "is_correct": false
+        },
+        {
+          "option_id": 6595,
+          "option_text": "A type of password",
+          "is_correct": false
+        },
+        {
+          "option_id": 6596,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6597,
+          "option_text": "A way to prove knowledge without revealing the information itself",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1084,
+      "subskill_id": 53,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement key rotation securely?",
+      "options": [
+        {
+          "option_id": 6598,
+          "option_text": "Automate the process with proper monitoring and rollback plans",
+          "is_correct": true
+        },
+        {
+          "option_id": 6599,
+          "option_text": "Manually change keys once a year",
+          "is_correct": false
+        },
+        {
+          "option_id": 6600,
+          "option_text": "Never rotate keys",
+          "is_correct": false
+        },
+        {
+          "option_id": 6601,
+          "option_text": "Share keys in plain text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1085,
+      "subskill_id": 53,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between encryption at rest and encryption in transit?",
+      "options": [
+        {
+          "option_id": 6602,
+          "option_text": "Encryption in transit is for cloud, encryption at rest is for on-premise",
+          "is_correct": false
+        },
+        {
+          "option_id": 6603,
+          "option_text": "Encryption at rest is only for databases",
+          "is_correct": false
+        },
+        {
+          "option_id": 6604,
+          "option_text": "Encryption at rest protects stored data, encryption in transit protects data during transfer",
+          "is_correct": true
+        },
+        {
+          "option_id": 6605,
+          "option_text": "They are the same",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1086,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement a secure password reset flow?",
+      "options": [
+        {
+          "option_id": 6606,
+          "option_text": "Send the current password via email",
+          "is_correct": false
+        },
+        {
+          "option_id": 6607,
+          "option_text": "Use time-limited tokens and verify user identity",
+          "is_correct": true
+        },
+        {
+          "option_id": 6608,
+          "option_text": "Allow password reset without verification",
+          "is_correct": false
+        },
+        {
+          "option_id": 6609,
+          "option_text": "Store reset links in plain text",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1087,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between OAuth 2.0 and OpenID Connect?",
+      "options": [
+        {
+          "option_id": 6610,
+          "option_text": "OAuth is for authentication, OpenID Connect is for authorization",
+          "is_correct": false
+        },
+        {
+          "option_id": 6611,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6612,
+          "option_text": "OpenID Connect is for cloud, OAuth is for on-premise",
+          "is_correct": false
+        },
+        {
+          "option_id": 6613,
+          "option_text": "OAuth is for authorization, OpenID Connect adds authentication layer",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1088,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement SSO with SAML?",
+      "options": [
+        {
+          "option_id": 6614,
+          "option_text": "Use a SAML identity provider and service provider with assertions",
+          "is_correct": true
+        },
+        {
+          "option_id": 6615,
+          "option_text": "Use only passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6616,
+          "option_text": "Use OAuth tokens",
+          "is_correct": false
+        },
+        {
+          "option_id": 6617,
+          "option_text": "Use API keys",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1089,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a session fixation attack and how do you prevent it?",
+      "options": [
+        {
+          "option_id": 6618,
+          "option_text": "An attack on server hardware",
+          "is_correct": false
+        },
+        {
+          "option_id": 6619,
+          "option_text": "An attack on user passwords",
+          "is_correct": false
+        },
+        {
+          "option_id": 6620,
+          "option_text": "An attack where the attacker fixes a session ID and forces it on the user",
+          "is_correct": true
+        },
+        {
+          "option_id": 6621,
+          "option_text": "An attack on network packets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1090,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement biometric authentication on mobile devices?",
+      "options": [
+        {
+          "option_id": 6622,
+          "option_text": "Store raw biometric data on the device",
+          "is_correct": false
+        },
+        {
+          "option_id": 6623,
+          "option_text": "Use platform APIs like Face ID or Fingerprint, store data in secure enclave",
+          "is_correct": true
+        },
+        {
+          "option_id": 6624,
+          "option_text": "Send biometric data to a central server",
+          "is_correct": false
+        },
+        {
+          "option_id": 6625,
+          "option_text": "Use plain text passwords",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1091,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How would you conduct a penetration test?",
+      "options": [
+        {
+          "option_id": 6626,
+          "option_text": "Use a single tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 6627,
+          "option_text": "Only test known vulnerabilities",
+          "is_correct": false
+        },
+        {
+          "option_id": 6628,
+          "option_text": "Test without planning",
+          "is_correct": false
+        },
+        {
+          "option_id": 6629,
+          "option_text": "Plan, scan, exploit, and report",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1092,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between a vulnerability assessment and a penetration test?",
+      "options": [
+        {
+          "option_id": 6630,
+          "option_text": "Vulnerability assessment identifies weaknesses, penetration test exploits them",
+          "is_correct": true
+        },
+        {
+          "option_id": 6631,
+          "option_text": "Penetration test identifies weaknesses, vulnerability assessment exploits them",
+          "is_correct": false
+        },
+        {
+          "option_id": 6632,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 6633,
+          "option_text": "Vulnerability assessment is for web apps only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1093,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you build a vulnerability management program?",
+      "options": [
+        {
+          "option_id": 6634,
+          "option_text": "By ignoring vulnerabilities",
+          "is_correct": false
+        },
+        {
+          "option_id": 6635,
+          "option_text": "By scanning once and stopping",
+          "is_correct": false
+        },
+        {
+          "option_id": 6636,
+          "option_text": "Identify, assess, prioritize, remediate, and verify",
+          "is_correct": true
+        },
+        {
+          "option_id": 6637,
+          "option_text": "By using only automated tools",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1094,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are common attack vectors in cloud environments?",
+      "options": [
+        {
+          "option_id": 6638,
+          "option_text": "Physical theft",
+          "is_correct": false
+        },
+        {
+          "option_id": 6639,
+          "option_text": "Misconfigured storage, exposed APIs, and insecure IAM",
+          "is_correct": true
+        },
+        {
+          "option_id": 6640,
+          "option_text": "Lost laptops",
+          "is_correct": false
+        },
+        {
+          "option_id": 6641,
+          "option_text": "Paper documents",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1095,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you handle a large-scale data breach?",
+      "options": [
+        {
+          "option_id": 6642,
+          "option_text": "Ignore the breach",
+          "is_correct": false
+        },
+        {
+          "option_id": 6643,
+          "option_text": "Delete all logs",
+          "is_correct": false
+        },
+        {
+          "option_id": 6644,
+          "option_text": "Only fix the immediate issue",
+          "is_correct": false
+        },
+        {
+          "option_id": 6645,
+          "option_text": "Contain, investigate, notify, and recover",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1096,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is a security operations center (SOC)?",
+      "options": [
+        {
+          "option_id": 6646,
+          "option_text": "A centralized team that monitors and responds to security incidents",
+          "is_correct": true
+        },
+        {
+          "option_id": 6647,
+          "option_text": "A type of firewall",
+          "is_correct": false
+        },
+        {
+          "option_id": 6648,
+          "option_text": "A type of encryption",
+          "is_correct": false
+        },
+        {
+          "option_id": 6649,
+          "option_text": "A malware detection tool",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1097,
+      "subskill_id": 54,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you implement zero-trust architecture?",
+      "options": [
+        {
+          "option_id": 6650,
+          "option_text": "Trust all internal traffic",
+          "is_correct": false
+        },
+        {
+          "option_id": 6651,
+          "option_text": "Disable all access controls",
+          "is_correct": false
+        },
+        {
+          "option_id": 6652,
+          "option_text": "Verify every request, regardless of source",
+          "is_correct": true
+        },
+        {
+          "option_id": 6653,
+          "option_text": "Only verify external requests",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1098,
+      "subskill_id": 52,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of AI in cybersecurity?",
+      "options": [
+        {
+          "option_id": 6654,
+          "option_text": "AI replaces all security controls",
+          "is_correct": false
+        },
+        {
+          "option_id": 6655,
+          "option_text": "AI enhances threat detection and response automation",
+          "is_correct": true
+        },
+        {
+          "option_id": 6656,
+          "option_text": "AI is only for malware detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 6657,
+          "option_text": "AI has no role in cybersecurity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1099,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "How do you conduct a security risk assessment?",
+      "options": [
+        {
+          "option_id": 6658,
+          "option_text": "By guessing risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6659,
+          "option_text": "By ignoring risks",
+          "is_correct": false
+        },
+        {
+          "option_id": 6660,
+          "option_text": "By using a single tool",
+          "is_correct": false
+        },
+        {
+          "option_id": 6661,
+          "option_text": "Identify assets, threats, vulnerabilities, and calculate risk scores",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question_id": 1100,
+      "subskill_id": 55,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What are the key components of a disaster recovery plan?",
+      "options": [
+        {
+          "option_id": 6662,
+          "option_text": "Backup, recovery procedures, and testing",
+          "is_correct": true
+        },
+        {
+          "option_id": 6663,
+          "option_text": "Only backups",
+          "is_correct": false
+        },
+        {
+          "option_id": 6664,
+          "option_text": "Only testing",
+          "is_correct": false
+        },
+        {
+          "option_id": 6665,
+          "option_text": "Only procedures",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

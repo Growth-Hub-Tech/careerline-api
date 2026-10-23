@@ -1,0 +1,2906 @@
+{
+  "skill_id": 20,
+  "skill_name": "Machine Learning",
+  "questions": [
+    {
+      "question_id": 1901,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is supervised learning?",
+      "options": [
+        {
+          "option_id": 9866,
+          "option_text": "A type of learning where the model learns from labeled data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9867,
+          "option_text": "A type of learning where the model learns from unlabeled data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9868,
+          "option_text": "A type of learning where the model learns by itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 9869,
+          "option_text": "A type of learning where the model learns from reinforcement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1902,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a label in supervised learning?",
+      "options": [
+        {
+          "option_id": 9870,
+          "option_text": "The target variable or output in supervised learning",
+          "is_correct": true
+        },
+        {
+          "option_id": 9871,
+          "option_text": "The input variable in supervised learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9872,
+          "option_text": "The model parameter",
+          "is_correct": false
+        },
+        {
+          "option_id": 9873,
+          "option_text": "The training algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1903,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a feature in supervised learning?",
+      "options": [
+        {
+          "option_id": 9874,
+          "option_text": "An input variable used to make predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9875,
+          "option_text": "The output variable in supervised learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9876,
+          "option_text": "The model evaluation metric",
+          "is_correct": false
+        },
+        {
+          "option_id": 9877,
+          "option_text": "The training algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1904,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is classification in supervised learning?",
+      "options": [
+        {
+          "option_id": 9878,
+          "option_text": "A type of supervised learning that predicts categories",
+          "is_correct": true
+        },
+        {
+          "option_id": 9879,
+          "option_text": "A type of supervised learning that predicts continuous values",
+          "is_correct": false
+        },
+        {
+          "option_id": 9880,
+          "option_text": "A type of unsupervised learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9881,
+          "option_text": "A type of reinforcement learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1905,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is regression in supervised learning?",
+      "options": [
+        {
+          "option_id": 9882,
+          "option_text": "A type of supervised learning that predicts continuous values",
+          "is_correct": true
+        },
+        {
+          "option_id": 9883,
+          "option_text": "A type of supervised learning that predicts categories",
+          "is_correct": false
+        },
+        {
+          "option_id": 9884,
+          "option_text": "A type of unsupervised learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9885,
+          "option_text": "A type of reinforcement learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1906,
+      "subskill_id": 95,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a training dataset?",
+      "options": [
+        {
+          "option_id": 9886,
+          "option_text": "A dataset used to train a machine learning model",
+          "is_correct": true
+        },
+        {
+          "option_id": 9887,
+          "option_text": "A dataset used to test a machine learning model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9888,
+          "option_text": "A dataset used to validate a machine learning model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9889,
+          "option_text": "A dataset used to deploy a machine learning model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1907,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is unsupervised learning?",
+      "options": [
+        {
+          "option_id": 9890,
+          "option_text": "A type of learning where the model learns from unlabeled data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9891,
+          "option_text": "A type of learning where the model learns from labeled data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9892,
+          "option_text": "A type of learning where the model learns by itself",
+          "is_correct": false
+        },
+        {
+          "option_id": 9893,
+          "option_text": "A type of learning where the model learns from reinforcement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1908,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is clustering in unsupervised learning?",
+      "options": [
+        {
+          "option_id": 9894,
+          "option_text": "A method of grouping data points into clusters",
+          "is_correct": true
+        },
+        {
+          "option_id": 9895,
+          "option_text": "A method of predicting continuous values",
+          "is_correct": false
+        },
+        {
+          "option_id": 9896,
+          "option_text": "A method of predicting categories",
+          "is_correct": false
+        },
+        {
+          "option_id": 9897,
+          "option_text": "A method of reducing data dimensions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1909,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is dimensionality reduction?",
+      "options": [
+        {
+          "option_id": 9898,
+          "option_text": "A technique to reduce the number of features in data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9899,
+          "option_text": "A technique to increase the number of features in data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9900,
+          "option_text": "A technique to group data points",
+          "is_correct": false
+        },
+        {
+          "option_id": 9901,
+          "option_text": "A technique to predict values",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1910,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is anomaly detection?",
+      "options": [
+        {
+          "option_id": 9902,
+          "option_text": "A technique to identify unusual data points",
+          "is_correct": true
+        },
+        {
+          "option_id": 9903,
+          "option_text": "A technique to group data points",
+          "is_correct": false
+        },
+        {
+          "option_id": 9904,
+          "option_text": "A technique to predict values",
+          "is_correct": false
+        },
+        {
+          "option_id": 9905,
+          "option_text": "A technique to reduce dimensions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1911,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a feature in unsupervised learning?",
+      "options": [
+        {
+          "option_id": 9906,
+          "option_text": "An input variable used in unsupervised learning",
+          "is_correct": true
+        },
+        {
+          "option_id": 9907,
+          "option_text": "The output variable in unsupervised learning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9908,
+          "option_text": "The model parameter",
+          "is_correct": false
+        },
+        {
+          "option_id": 9909,
+          "option_text": "The training algorithm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1912,
+      "subskill_id": 96,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the difference between supervised and unsupervised learning?",
+      "options": [
+        {
+          "option_id": 9910,
+          "option_text": "Supervised learning uses labeled data; unsupervised learning uses unlabeled data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9911,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9912,
+          "option_text": "Unsupervised learning uses labeled data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9913,
+          "option_text": "Supervised learning uses unlabeled data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1913,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is model evaluation in machine learning?",
+      "options": [
+        {
+          "option_id": 9914,
+          "option_text": "The process of assessing a model's performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9915,
+          "option_text": "The process of training a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9916,
+          "option_text": "The process of deploying a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9917,
+          "option_text": "The process of collecting data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1914,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a confusion matrix?",
+      "options": [
+        {
+          "option_id": 9918,
+          "option_text": "A table used to evaluate classification model performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 9919,
+          "option_text": "A table used to evaluate regression model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 9920,
+          "option_text": "A table used to evaluate clustering performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 9921,
+          "option_text": "A table used to evaluate dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1915,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is accuracy in model evaluation?",
+      "options": [
+        {
+          "option_id": 9922,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 9923,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 9924,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 9925,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1916,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is precision in model evaluation?",
+      "options": [
+        {
+          "option_id": 9926,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": true
+        },
+        {
+          "option_id": 9927,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 9928,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        },
+        {
+          "option_id": 9929,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1917,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is recall in model evaluation?",
+      "options": [
+        {
+          "option_id": 9930,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": true
+        },
+        {
+          "option_id": 9931,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 9932,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 9933,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1918,
+      "subskill_id": 97,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is an F1-score?",
+      "options": [
+        {
+          "option_id": 9934,
+          "option_text": "The harmonic mean of precision and recall",
+          "is_correct": true
+        },
+        {
+          "option_id": 9935,
+          "option_text": "The proportion of correct predictions out of total predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 9936,
+          "option_text": "The proportion of positive predictions that are correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 9937,
+          "option_text": "The proportion of actual positives correctly identified",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1919,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9938,
+          "option_text": "A Python library for machine learning",
+          "is_correct": true
+        },
+        {
+          "option_id": 9939,
+          "option_text": "A Python library for data visualization",
+          "is_correct": false
+        },
+        {
+          "option_id": 9940,
+          "option_text": "A Python library for data manipulation",
+          "is_correct": false
+        },
+        {
+          "option_id": 9941,
+          "option_text": "A Python library for web development",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1920,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "How do you install Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9942,
+          "option_text": "By using the pip install scikit-learn command",
+          "is_correct": true
+        },
+        {
+          "option_id": 9943,
+          "option_text": "By using the conda install scikit-learn command",
+          "is_correct": false
+        },
+        {
+          "option_id": 9944,
+          "option_text": "By using the apt-get install scikit-learn command",
+          "is_correct": false
+        },
+        {
+          "option_id": 9945,
+          "option_text": "By using the yum install scikit-learn command",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1921,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a classifier in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9946,
+          "option_text": "A class used for classification tasks in Scikit-learn",
+          "is_correct": true
+        },
+        {
+          "option_id": 9947,
+          "option_text": "A class used for regression tasks in Scikit-learn",
+          "is_correct": false
+        },
+        {
+          "option_id": 9948,
+          "option_text": "A class used for clustering tasks in Scikit-learn",
+          "is_correct": false
+        },
+        {
+          "option_id": 9949,
+          "option_text": "A class used for dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1922,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is a regressor in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9950,
+          "option_text": "A class used for regression tasks in Scikit-learn",
+          "is_correct": true
+        },
+        {
+          "option_id": 9951,
+          "option_text": "A class used for classification tasks in Scikit-learn",
+          "is_correct": false
+        },
+        {
+          "option_id": 9952,
+          "option_text": "A class used for clustering tasks in Scikit-learn",
+          "is_correct": false
+        },
+        {
+          "option_id": 9953,
+          "option_text": "A class used for dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1923,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is the train_test_split function?",
+      "options": [
+        {
+          "option_id": 9954,
+          "option_text": "A function that splits data into training and testing sets",
+          "is_correct": true
+        },
+        {
+          "option_id": 9955,
+          "option_text": "A function that creates a pipeline",
+          "is_correct": false
+        },
+        {
+          "option_id": 9956,
+          "option_text": "A function that performs hyperparameter tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 9957,
+          "option_text": "A function that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1924,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is fit() method in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9958,
+          "option_text": "A method that trains a model on training data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9959,
+          "option_text": "A method that makes predictions on test data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9960,
+          "option_text": "A method that evaluates a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9961,
+          "option_text": "A method that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1925,
+      "subskill_id": 98,
+      "difficulty_level": "BEGINNER",
+      "weight": 1,
+      "question_text": "What is predict() method in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 9962,
+          "option_text": "A method that makes predictions on test data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9963,
+          "option_text": "A method that trains a model on training data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9964,
+          "option_text": "A method that evaluates a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 9965,
+          "option_text": "A method that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1926,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between classification and regression?",
+      "options": [
+        {
+          "option_id": 9966,
+          "option_text": "Classification predicts categories; regression predicts continuous values",
+          "is_correct": true
+        },
+        {
+          "option_id": 9967,
+          "option_text": "Regression predicts categories; classification predicts continuous values",
+          "is_correct": false
+        },
+        {
+          "option_id": 9968,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 9969,
+          "option_text": "Classification is for supervised learning; regression is for unsupervised learning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1927,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is overfitting in supervised learning?",
+      "options": [
+        {
+          "option_id": 9970,
+          "option_text": "When a model learns the training data too well and performs poorly on new data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9971,
+          "option_text": "When a model cannot learn the training data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9972,
+          "option_text": "When a model performs well on both training and test data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9973,
+          "option_text": "When a model is too simple",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1928,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is underfitting in supervised learning?",
+      "options": [
+        {
+          "option_id": 9974,
+          "option_text": "When a model cannot learn the training data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9975,
+          "option_text": "When a model learns the training data too well",
+          "is_correct": false
+        },
+        {
+          "option_id": 9976,
+          "option_text": "When a model performs well on both training and test data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9977,
+          "option_text": "When a model is too complex",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1929,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a decision tree in classification?",
+      "options": [
+        {
+          "option_id": 9978,
+          "option_text": "A tree-like model used for classification",
+          "is_correct": true
+        },
+        {
+          "option_id": 9979,
+          "option_text": "A tree-like model used for regression",
+          "is_correct": false
+        },
+        {
+          "option_id": 9980,
+          "option_text": "A tree-like model used for clustering",
+          "is_correct": false
+        },
+        {
+          "option_id": 9981,
+          "option_text": "A tree-like model used for dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1930,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is linear regression?",
+      "options": [
+        {
+          "option_id": 9982,
+          "option_text": "A method for modeling the relationship between variables",
+          "is_correct": true
+        },
+        {
+          "option_id": 9983,
+          "option_text": "A method for classifying data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9984,
+          "option_text": "A method for clustering data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9985,
+          "option_text": "A method for reducing dimensionality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1931,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is K-means clustering?",
+      "options": [
+        {
+          "option_id": 9986,
+          "option_text": "A method for clustering data into K groups",
+          "is_correct": true
+        },
+        {
+          "option_id": 9987,
+          "option_text": "A method for classifying data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9988,
+          "option_text": "A method for regression",
+          "is_correct": false
+        },
+        {
+          "option_id": 9989,
+          "option_text": "A method for reducing dimensionality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1932,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is hierarchical clustering?",
+      "options": [
+        {
+          "option_id": 9990,
+          "option_text": "A method for clustering data using a hierarchy of clusters",
+          "is_correct": true
+        },
+        {
+          "option_id": 9991,
+          "option_text": "A method for classifying data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9992,
+          "option_text": "A method for regression",
+          "is_correct": false
+        },
+        {
+          "option_id": 9993,
+          "option_text": "A method for reducing dimensionality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1933,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is Principal Component Analysis (PCA)?",
+      "options": [
+        {
+          "option_id": 9994,
+          "option_text": "A technique for reducing the dimensionality of data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9995,
+          "option_text": "A technique for clustering data",
+          "is_correct": false
+        },
+        {
+          "option_id": 9996,
+          "option_text": "A technique for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 9997,
+          "option_text": "A technique for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1934,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is t-SNE?",
+      "options": [
+        {
+          "option_id": 9998,
+          "option_text": "A technique for visualizing high-dimensional data",
+          "is_correct": true
+        },
+        {
+          "option_id": 9999,
+          "option_text": "A technique for clustering data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10000,
+          "option_text": "A technique for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 10001,
+          "option_text": "A technique for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1935,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the elbow method in clustering?",
+      "options": [
+        {
+          "option_id": 10002,
+          "option_text": "A method to find the optimal number of clusters in K-means",
+          "is_correct": true
+        },
+        {
+          "option_id": 10003,
+          "option_text": "A method to evaluate classification models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10004,
+          "option_text": "A method to reduce dimensionality",
+          "is_correct": false
+        },
+        {
+          "option_id": 10005,
+          "option_text": "A method to visualize high-dimensional data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1936,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is cross-validation in model evaluation?",
+      "options": [
+        {
+          "option_id": 10006,
+          "option_text": "A method for evaluating model performance by splitting data into folds",
+          "is_correct": true
+        },
+        {
+          "option_id": 10007,
+          "option_text": "A method for evaluating model performance on a single test set",
+          "is_correct": false
+        },
+        {
+          "option_id": 10008,
+          "option_text": "A method for training a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10009,
+          "option_text": "A method for deploying a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1937,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the ROC curve?",
+      "options": [
+        {
+          "option_id": 10010,
+          "option_text": "A curve that shows the trade-off between true positive and false positive rates",
+          "is_correct": true
+        },
+        {
+          "option_id": 10011,
+          "option_text": "A curve that shows the trade-off between precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 10012,
+          "option_text": "A curve that shows the trade-off between accuracy and F1-score",
+          "is_correct": false
+        },
+        {
+          "option_id": 10013,
+          "option_text": "A curve that shows the trade-off between bias and variance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1938,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is AUC-ROC?",
+      "options": [
+        {
+          "option_id": 10014,
+          "option_text": "The area under the ROC curve",
+          "is_correct": true
+        },
+        {
+          "option_id": 10015,
+          "option_text": "The area under the precision-recall curve",
+          "is_correct": false
+        },
+        {
+          "option_id": 10016,
+          "option_text": "The area under the learning curve",
+          "is_correct": false
+        },
+        {
+          "option_id": 10017,
+          "option_text": "The area under the validation curve",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1939,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the confusion matrix in evaluation?",
+      "options": [
+        {
+          "option_id": 10018,
+          "option_text": "A table used to evaluate classification model performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10019,
+          "option_text": "A table used to evaluate regression model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10020,
+          "option_text": "A table used to evaluate clustering performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10021,
+          "option_text": "A table used to evaluate dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1940,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the difference between precision and recall?",
+      "options": [
+        {
+          "option_id": 10022,
+          "option_text": "Precision measures positive predictions accuracy; recall measures actual positives identification",
+          "is_correct": true
+        },
+        {
+          "option_id": 10023,
+          "option_text": "Recall measures positive predictions accuracy; precision measures actual positives identification",
+          "is_correct": false
+        },
+        {
+          "option_id": 10024,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10025,
+          "option_text": "Precision is for regression; recall is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1941,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "How do you split data using train_test_split?",
+      "options": [
+        {
+          "option_id": 10026,
+          "option_text": "By using the train_test_split function",
+          "is_correct": true
+        },
+        {
+          "option_id": 10027,
+          "option_text": "By using the cross_val_score function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10028,
+          "option_text": "By using the GridSearchCV function",
+          "is_correct": false
+        },
+        {
+          "option_id": 10029,
+          "option_text": "By using the Pipeline function",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1942,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the Pipeline class in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10030,
+          "option_text": "A class that chains multiple processing steps",
+          "is_correct": true
+        },
+        {
+          "option_id": 10031,
+          "option_text": "A class that performs hyperparameter tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 10032,
+          "option_text": "A class that evaluates models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10033,
+          "option_text": "A class that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1943,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is GridSearchCV in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10034,
+          "option_text": "A class that performs hyperparameter tuning",
+          "is_correct": true
+        },
+        {
+          "option_id": 10035,
+          "option_text": "A class that chains multiple processing steps",
+          "is_correct": false
+        },
+        {
+          "option_id": 10036,
+          "option_text": "A class that evaluates models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10037,
+          "option_text": "A class that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1944,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the StandardScaler in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10038,
+          "option_text": "A class that scales features to have zero mean and unit variance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10039,
+          "option_text": "A class that scales features to a fixed range",
+          "is_correct": false
+        },
+        {
+          "option_id": 10040,
+          "option_text": "A class that reduces dimensionality",
+          "is_correct": false
+        },
+        {
+          "option_id": 10041,
+          "option_text": "A class that evaluates models",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1945,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the classification_report function?",
+      "options": [
+        {
+          "option_id": 10042,
+          "option_text": "A function that returns a classification report",
+          "is_correct": true
+        },
+        {
+          "option_id": 10043,
+          "option_text": "A function that returns a regression report",
+          "is_correct": false
+        },
+        {
+          "option_id": 10044,
+          "option_text": "A function that returns a clustering report",
+          "is_correct": false
+        },
+        {
+          "option_id": 10045,
+          "option_text": "A function that returns a dimensionality reduction report",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1946,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a support vector machine (SVM)?",
+      "options": [
+        {
+          "option_id": 10046,
+          "option_text": "A supervised learning model that finds the hyperplane that best separates classes",
+          "is_correct": true
+        },
+        {
+          "option_id": 10047,
+          "option_text": "A supervised learning model that finds the line that best fits the data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10048,
+          "option_text": "A supervised learning model that finds the tree that best splits the data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10049,
+          "option_text": "A supervised learning model that finds the cluster that best groups the data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1947,
+      "subskill_id": 96,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is DBSCAN clustering?",
+      "options": [
+        {
+          "option_id": 10050,
+          "option_text": "A clustering algorithm that groups points based on density",
+          "is_correct": true
+        },
+        {
+          "option_id": 10051,
+          "option_text": "A clustering algorithm that groups points based on distance to centroids",
+          "is_correct": false
+        },
+        {
+          "option_id": 10052,
+          "option_text": "A clustering algorithm that groups points using a hierarchy",
+          "is_correct": false
+        },
+        {
+          "option_id": 10053,
+          "option_text": "A clustering algorithm that reduces dimensionality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1948,
+      "subskill_id": 97,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is a learning curve?",
+      "options": [
+        {
+          "option_id": 10054,
+          "option_text": "A curve that shows the performance of a model as the training size increases",
+          "is_correct": true
+        },
+        {
+          "option_id": 10055,
+          "option_text": "A curve that shows the performance of a model as hyperparameters change",
+          "is_correct": false
+        },
+        {
+          "option_id": 10056,
+          "option_text": "A curve that shows the trade-off between precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 10057,
+          "option_text": "A curve that shows the trade-off between bias and variance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1949,
+      "subskill_id": 98,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is the role of random_state in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10058,
+          "option_text": "A parameter that ensures reproducibility of results",
+          "is_correct": true
+        },
+        {
+          "option_id": 10059,
+          "option_text": "A parameter that controls the learning rate",
+          "is_correct": false
+        },
+        {
+          "option_id": 10060,
+          "option_text": "A parameter that controls the model complexity",
+          "is_correct": false
+        },
+        {
+          "option_id": 10061,
+          "option_text": "A parameter that controls the number of iterations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1950,
+      "subskill_id": 95,
+      "difficulty_level": "JUNIOR",
+      "weight": 1,
+      "question_text": "What is logistic regression?",
+      "options": [
+        {
+          "option_id": 10062,
+          "option_text": "A classification model that predicts probabilities",
+          "is_correct": true
+        },
+        {
+          "option_id": 10063,
+          "option_text": "A classification model that predicts categories",
+          "is_correct": false
+        },
+        {
+          "option_id": 10064,
+          "option_text": "A classification model that predicts continuous values",
+          "is_correct": false
+        },
+        {
+          "option_id": 10065,
+          "option_text": "A classification model that performs clustering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1951,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is ensemble learning in supervised learning?",
+      "options": [
+        {
+          "option_id": 10066,
+          "option_text": "A method that combines multiple models to improve performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10067,
+          "option_text": "A method that uses a single model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10068,
+          "option_text": "A method that reduces the number of features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10069,
+          "option_text": "A method that clusters data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1952,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Random Forest in classification?",
+      "options": [
+        {
+          "option_id": 10070,
+          "option_text": "An ensemble model that uses multiple decision trees",
+          "is_correct": true
+        },
+        {
+          "option_id": 10071,
+          "option_text": "A single decision tree model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10072,
+          "option_text": "A regression model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10073,
+          "option_text": "A clustering model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1953,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Gradient Boosting in classification?",
+      "options": [
+        {
+          "option_id": 10074,
+          "option_text": "An ensemble model that builds trees sequentially",
+          "is_correct": true
+        },
+        {
+          "option_id": 10075,
+          "option_text": "An ensemble model that builds trees in parallel",
+          "is_correct": false
+        },
+        {
+          "option_id": 10076,
+          "option_text": "A single decision tree model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10077,
+          "option_text": "A regression model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1954,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is a neural network in supervised learning?",
+      "options": [
+        {
+          "option_id": 10078,
+          "option_text": "A model that mimics the human brain",
+          "is_correct": true
+        },
+        {
+          "option_id": 10079,
+          "option_text": "A model that uses decision trees",
+          "is_correct": false
+        },
+        {
+          "option_id": 10080,
+          "option_text": "A model that uses linear regression",
+          "is_correct": false
+        },
+        {
+          "option_id": 10081,
+          "option_text": "A model that uses clustering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1955,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the bias-variance tradeoff?",
+      "options": [
+        {
+          "option_id": 10082,
+          "option_text": "The balance between model simplicity and complexity",
+          "is_correct": true
+        },
+        {
+          "option_id": 10083,
+          "option_text": "The balance between precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 10084,
+          "option_text": "The balance between accuracy and F1-score",
+          "is_correct": false
+        },
+        {
+          "option_id": 10085,
+          "option_text": "The balance between training and testing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1956,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is Gaussian mixture model (GMM) in clustering?",
+      "options": [
+        {
+          "option_id": 10086,
+          "option_text": "A probabilistic model that uses multiple Gaussian distributions",
+          "is_correct": true
+        },
+        {
+          "option_id": 10087,
+          "option_text": "A deterministic model that uses K-means",
+          "is_correct": false
+        },
+        {
+          "option_id": 10088,
+          "option_text": "A model that uses hierarchical clustering",
+          "is_correct": false
+        },
+        {
+          "option_id": 10089,
+          "option_text": "A model that uses DBSCAN",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1957,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between K-means and hierarchical clustering?",
+      "options": [
+        {
+          "option_id": 10090,
+          "option_text": "K-means is centroid-based; hierarchical clustering is tree-based",
+          "is_correct": true
+        },
+        {
+          "option_id": 10091,
+          "option_text": "Hierarchical clustering is centroid-based; K-means is tree-based",
+          "is_correct": false
+        },
+        {
+          "option_id": 10092,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10093,
+          "option_text": "K-means is for regression; hierarchical clustering is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1958,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is autoencoder in dimensionality reduction?",
+      "options": [
+        {
+          "option_id": 10094,
+          "option_text": "A neural network used for dimensionality reduction",
+          "is_correct": true
+        },
+        {
+          "option_id": 10095,
+          "option_text": "A neural network used for classification",
+          "is_correct": false
+        },
+        {
+          "option_id": 10096,
+          "option_text": "A neural network used for regression",
+          "is_correct": false
+        },
+        {
+          "option_id": 10097,
+          "option_text": "A neural network used for clustering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1959,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between PCA and t-SNE?",
+      "options": [
+        {
+          "option_id": 10098,
+          "option_text": "PCA is linear; t-SNE is non-linear",
+          "is_correct": true
+        },
+        {
+          "option_id": 10099,
+          "option_text": "t-SNE is linear; PCA is non-linear",
+          "is_correct": false
+        },
+        {
+          "option_id": 10100,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10101,
+          "option_text": "PCA is for classification; t-SNE is for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1960,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is outlier detection?",
+      "options": [
+        {
+          "option_id": 10102,
+          "option_text": "A technique for identifying data points that differ significantly from others",
+          "is_correct": true
+        },
+        {
+          "option_id": 10103,
+          "option_text": "A technique for grouping data points",
+          "is_correct": false
+        },
+        {
+          "option_id": 10104,
+          "option_text": "A technique for predicting values",
+          "is_correct": false
+        },
+        {
+          "option_id": 10105,
+          "option_text": "A technique for reducing dimensions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1961,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is k-fold cross-validation?",
+      "options": [
+        {
+          "option_id": 10106,
+          "option_text": "A method for splitting data into K folds for cross-validation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10107,
+          "option_text": "A method for splitting data into one training and one test set",
+          "is_correct": false
+        },
+        {
+          "option_id": 10108,
+          "option_text": "A method for splitting data into training, validation, and test sets",
+          "is_correct": false
+        },
+        {
+          "option_id": 10109,
+          "option_text": "A method for splitting data by time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1962,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is stratified k-fold cross-validation?",
+      "options": [
+        {
+          "option_id": 10110,
+          "option_text": "A method that ensures each fold has the same proportion of classes",
+          "is_correct": true
+        },
+        {
+          "option_id": 10111,
+          "option_text": "A method that ensures each fold has the same number of samples",
+          "is_correct": false
+        },
+        {
+          "option_id": 10112,
+          "option_text": "A method that ensures each fold has the same variance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10113,
+          "option_text": "A method that ensures each fold has the same mean",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1963,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the confusion matrix in classification?",
+      "options": [
+        {
+          "option_id": 10114,
+          "option_text": "A table used to evaluate classification model performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10115,
+          "option_text": "A table used to evaluate regression model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10116,
+          "option_text": "A table used to evaluate clustering performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10117,
+          "option_text": "A table used to evaluate dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1964,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the classification report in model evaluation?",
+      "options": [
+        {
+          "option_id": 10118,
+          "option_text": "A report that summarizes precision, recall, and F1-score",
+          "is_correct": true
+        },
+        {
+          "option_id": 10119,
+          "option_text": "A report that summarizes accuracy only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10120,
+          "option_text": "A report that summarizes regression metrics",
+          "is_correct": false
+        },
+        {
+          "option_id": 10121,
+          "option_text": "A report that summarizes clustering metrics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1965,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the difference between accuracy and F1-score?",
+      "options": [
+        {
+          "option_id": 10122,
+          "option_text": "Accuracy measures overall correctness; F1-score measures the harmonic mean of precision and recall",
+          "is_correct": true
+        },
+        {
+          "option_id": 10123,
+          "option_text": "F1-score measures overall correctness; accuracy measures the harmonic mean of precision and recall",
+          "is_correct": false
+        },
+        {
+          "option_id": 10124,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10125,
+          "option_text": "Accuracy is for regression; F1-score is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1966,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the purpose of FeatureUnion in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10126,
+          "option_text": "A class that combines multiple feature transformations",
+          "is_correct": true
+        },
+        {
+          "option_id": 10127,
+          "option_text": "A class that combines multiple models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10128,
+          "option_text": "A class that scales features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10129,
+          "option_text": "A class that performs hyperparameter tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1967,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is ColumnTransformer in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10130,
+          "option_text": "A class that applies different transformers to different columns",
+          "is_correct": true
+        },
+        {
+          "option_id": 10131,
+          "option_text": "A class that applies the same transformer to all columns",
+          "is_correct": false
+        },
+        {
+          "option_id": 10132,
+          "option_text": "A class that combines multiple models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10133,
+          "option_text": "A class that performs hyperparameter tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1968,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the role of cross_val_score in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10134,
+          "option_text": "A function that evaluates model performance using cross-validation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10135,
+          "option_text": "A function that trains a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10136,
+          "option_text": "A function that makes predictions",
+          "is_correct": false
+        },
+        {
+          "option_id": 10137,
+          "option_text": "A function that scales data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1969,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is RandomizedSearchCV in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10138,
+          "option_text": "A class that performs randomized hyperparameter search",
+          "is_correct": true
+        },
+        {
+          "option_id": 10139,
+          "option_text": "A class that performs grid hyperparameter search",
+          "is_correct": false
+        },
+        {
+          "option_id": 10140,
+          "option_text": "A class that performs cross-validation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10141,
+          "option_text": "A class that scales features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1970,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the purpose of validation curves?",
+      "options": [
+        {
+          "option_id": 10142,
+          "option_text": "A tool to visualize the effect of hyperparameters on model performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10143,
+          "option_text": "A tool to visualize the effect of features on model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10144,
+          "option_text": "A tool to visualize the effect of training size on model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10145,
+          "option_text": "A tool to visualize the effect of data preprocessing on model performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1971,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is XGBoost in supervised learning?",
+      "options": [
+        {
+          "option_id": 10146,
+          "option_text": "A gradient boosting framework optimized for speed and performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10147,
+          "option_text": "A bagging framework optimized for speed and performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10148,
+          "option_text": "A neural network framework optimized for speed and performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10149,
+          "option_text": "A clustering framework optimized for speed and performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1972,
+      "subskill_id": 96,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is spectral clustering?",
+      "options": [
+        {
+          "option_id": 10150,
+          "option_text": "A clustering algorithm that uses graph-based methods",
+          "is_correct": true
+        },
+        {
+          "option_id": 10151,
+          "option_text": "A clustering algorithm that uses centroid-based methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 10152,
+          "option_text": "A clustering algorithm that uses density-based methods",
+          "is_correct": false
+        },
+        {
+          "option_id": 10153,
+          "option_text": "A clustering algorithm that uses hierarchical methods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1973,
+      "subskill_id": 97,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the Matthews correlation coefficient (MCC)?",
+      "options": [
+        {
+          "option_id": 10154,
+          "option_text": "A metric that measures the quality of binary classifications",
+          "is_correct": true
+        },
+        {
+          "option_id": 10155,
+          "option_text": "A metric that measures the quality of regression models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10156,
+          "option_text": "A metric that measures the quality of clustering",
+          "is_correct": false
+        },
+        {
+          "option_id": 10157,
+          "option_text": "A metric that measures the quality of dimensionality reduction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1974,
+      "subskill_id": 98,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is the purpose of the make_pipeline function?",
+      "options": [
+        {
+          "option_id": 10158,
+          "option_text": "A function that creates a pipeline in a single line",
+          "is_correct": true
+        },
+        {
+          "option_id": 10159,
+          "option_text": "A function that creates a pipeline with cross-validation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10160,
+          "option_text": "A function that creates a pipeline with hyperparameter tuning",
+          "is_correct": false
+        },
+        {
+          "option_id": 10161,
+          "option_text": "A function that creates a pipeline with feature selection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1975,
+      "subskill_id": 95,
+      "difficulty_level": "MID",
+      "weight": 1,
+      "question_text": "What is CatBoost?",
+      "options": [
+        {
+          "option_id": 10162,
+          "option_text": "A gradient boosting framework designed to handle categorical features",
+          "is_correct": true
+        },
+        {
+          "option_id": 10163,
+          "option_text": "A bagging framework designed to handle categorical features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10164,
+          "option_text": "A neural network framework designed to handle categorical features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10165,
+          "option_text": "A clustering framework designed to handle categorical features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1976,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between bagging and boosting?",
+      "options": [
+        {
+          "option_id": 10166,
+          "option_text": "Bagging builds models in parallel; boosting builds models sequentially",
+          "is_correct": true
+        },
+        {
+          "option_id": 10167,
+          "option_text": "Boosting builds models in parallel; bagging builds models sequentially",
+          "is_correct": false
+        },
+        {
+          "option_id": 10168,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10169,
+          "option_text": "Bagging is for classification; boosting is for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1977,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is LightGBM in supervised learning?",
+      "options": [
+        {
+          "option_id": 10170,
+          "option_text": "A gradient boosting framework optimized for speed and efficiency",
+          "is_correct": true
+        },
+        {
+          "option_id": 10171,
+          "option_text": "A bagging framework optimized for speed and efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 10172,
+          "option_text": "A neural network framework optimized for speed and efficiency",
+          "is_correct": false
+        },
+        {
+          "option_id": 10173,
+          "option_text": "A clustering framework optimized for speed and efficiency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1978,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of regularization in supervised learning?",
+      "options": [
+        {
+          "option_id": 10174,
+          "option_text": "A technique to prevent overfitting by adding a penalty term",
+          "is_correct": true
+        },
+        {
+          "option_id": 10175,
+          "option_text": "A technique to prevent underfitting by adding a penalty term",
+          "is_correct": false
+        },
+        {
+          "option_id": 10176,
+          "option_text": "A technique to improve model accuracy",
+          "is_correct": false
+        },
+        {
+          "option_id": 10177,
+          "option_text": "A technique to reduce training time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1979,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between L1 and L2 regularization?",
+      "options": [
+        {
+          "option_id": 10178,
+          "option_text": "L1 regularization adds absolute value penalty; L2 adds squared penalty",
+          "is_correct": true
+        },
+        {
+          "option_id": 10179,
+          "option_text": "L2 regularization adds absolute value penalty; L1 adds squared penalty",
+          "is_correct": false
+        },
+        {
+          "option_id": 10180,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10181,
+          "option_text": "L1 is for regression; L2 is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1980,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of transfer learning in supervised learning?",
+      "options": [
+        {
+          "option_id": 10182,
+          "option_text": "A method that transfers knowledge from one task to another",
+          "is_correct": true
+        },
+        {
+          "option_id": 10183,
+          "option_text": "A method that trains a model from scratch",
+          "is_correct": false
+        },
+        {
+          "option_id": 10184,
+          "option_text": "A method that evaluates a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10185,
+          "option_text": "A method that deploys a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1981,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between K-means and K-medoids?",
+      "options": [
+        {
+          "option_id": 10186,
+          "option_text": "K-means uses centroids; K-medoids uses actual data points as medoids",
+          "is_correct": true
+        },
+        {
+          "option_id": 10187,
+          "option_text": "K-medoids uses centroids; K-means uses actual data points as medoids",
+          "is_correct": false
+        },
+        {
+          "option_id": 10188,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10189,
+          "option_text": "K-means is for regression; K-medoids is for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1982,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of manifold learning in dimensionality reduction?",
+      "options": [
+        {
+          "option_id": 10190,
+          "option_text": "A technique to learn the underlying structure of high-dimensional data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10191,
+          "option_text": "A technique to learn the underlying structure of low-dimensional data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10192,
+          "option_text": "A technique to learn the underlying structure of labeled data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10193,
+          "option_text": "A technique to learn the underlying structure of data with no structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1983,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is UMAP in dimensionality reduction?",
+      "options": [
+        {
+          "option_id": 10194,
+          "option_text": "A technique for non-linear dimensionality reduction",
+          "is_correct": true
+        },
+        {
+          "option_id": 10195,
+          "option_text": "A technique for linear dimensionality reduction",
+          "is_correct": false
+        },
+        {
+          "option_id": 10196,
+          "option_text": "A technique for clustering",
+          "is_correct": false
+        },
+        {
+          "option_id": 10197,
+          "option_text": "A technique for classification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1984,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between anomaly detection and novelty detection?",
+      "options": [
+        {
+          "option_id": 10198,
+          "option_text": "Anomaly detection identifies rare events; novelty detection identifies new patterns",
+          "is_correct": true
+        },
+        {
+          "option_id": 10199,
+          "option_text": "Novelty detection identifies rare events; anomaly detection identifies new patterns",
+          "is_correct": false
+        },
+        {
+          "option_id": 10200,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10201,
+          "option_text": "Anomaly detection is for classification; novelty detection is for regression",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1985,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of clustering in anomaly detection?",
+      "options": [
+        {
+          "option_id": 10202,
+          "option_text": "Clustering can be used to identify groups of outliers",
+          "is_correct": true
+        },
+        {
+          "option_id": 10203,
+          "option_text": "Clustering cannot be used for anomaly detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 10204,
+          "option_text": "Clustering is for grouping, not for anomaly detection",
+          "is_correct": false
+        },
+        {
+          "option_id": 10205,
+          "option_text": "Clustering is for classification, not for anomaly detection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1986,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the difference between validation and test sets?",
+      "options": [
+        {
+          "option_id": 10206,
+          "option_text": "Validation sets are used for hyperparameter tuning; test sets are used for final evaluation",
+          "is_correct": true
+        },
+        {
+          "option_id": 10207,
+          "option_text": "Test sets are used for hyperparameter tuning; validation sets are used for final evaluation",
+          "is_correct": false
+        },
+        {
+          "option_id": 10208,
+          "option_text": "They are the same",
+          "is_correct": false
+        },
+        {
+          "option_id": 10209,
+          "option_text": "Validation sets are for training; test sets are for tuning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1987,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of model interpretability?",
+      "options": [
+        {
+          "option_id": 10210,
+          "option_text": "A concept that helps explain how a model makes predictions",
+          "is_correct": true
+        },
+        {
+          "option_id": 10211,
+          "option_text": "A concept that helps improve model accuracy",
+          "is_correct": false
+        },
+        {
+          "option_id": 10212,
+          "option_text": "A concept that helps reduce training time",
+          "is_correct": false
+        },
+        {
+          "option_id": 10213,
+          "option_text": "A concept that helps increase model complexity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1988,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of SHAP values in model evaluation?",
+      "options": [
+        {
+          "option_id": 10214,
+          "option_text": "A method for explaining model predictions using Shapley values",
+          "is_correct": true
+        },
+        {
+          "option_id": 10215,
+          "option_text": "A method for explaining model predictions using LIME",
+          "is_correct": false
+        },
+        {
+          "option_id": 10216,
+          "option_text": "A method for evaluating model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10217,
+          "option_text": "A method for training a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1989,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of LIME in model evaluation?",
+      "options": [
+        {
+          "option_id": 10218,
+          "option_text": "A method for explaining model predictions using local approximations",
+          "is_correct": true
+        },
+        {
+          "option_id": 10219,
+          "option_text": "A method for explaining model predictions using Shapley values",
+          "is_correct": false
+        },
+        {
+          "option_id": 10220,
+          "option_text": "A method for evaluating model performance",
+          "is_correct": false
+        },
+        {
+          "option_id": 10221,
+          "option_text": "A method for training a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1990,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of adversarial validation in model evaluation?",
+      "options": [
+        {
+          "option_id": 10222,
+          "option_text": "A technique for detecting data distribution shift",
+          "is_correct": true
+        },
+        {
+          "option_id": 10223,
+          "option_text": "A technique for detecting data distribution drift",
+          "is_correct": false
+        },
+        {
+          "option_id": 10224,
+          "option_text": "A technique for detecting data leakage",
+          "is_correct": false
+        },
+        {
+          "option_id": 10225,
+          "option_text": "A technique for detecting model overfitting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1991,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of custom transformers in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10226,
+          "option_text": "A class that allows you to define custom data transformers",
+          "is_correct": true
+        },
+        {
+          "option_id": 10227,
+          "option_text": "A class that allows you to define custom models",
+          "is_correct": false
+        },
+        {
+          "option_id": 10228,
+          "option_text": "A class that allows you to define custom pipelines",
+          "is_correct": false
+        },
+        {
+          "option_id": 10229,
+          "option_text": "A class that allows you to define custom hyperparameters",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1992,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of meta-estimators in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10230,
+          "option_text": "Estimators that wrap other estimators to add functionality",
+          "is_correct": true
+        },
+        {
+          "option_id": 10231,
+          "option_text": "Estimators that are used for feature selection",
+          "is_correct": false
+        },
+        {
+          "option_id": 10232,
+          "option_text": "Estimators that are used for data preprocessing",
+          "is_correct": false
+        },
+        {
+          "option_id": 10233,
+          "option_text": "Estimators that are used for model evaluation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1993,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of scikit-learn's API design?",
+      "options": [
+        {
+          "option_id": 10234,
+          "option_text": "A consistent API with fit, predict, and transform methods",
+          "is_correct": true
+        },
+        {
+          "option_id": 10235,
+          "option_text": "A different API for each estimator",
+          "is_correct": false
+        },
+        {
+          "option_id": 10236,
+          "option_text": "An API that only uses fit and predict",
+          "is_correct": false
+        },
+        {
+          "option_id": 10237,
+          "option_text": "An API that only uses fit and transform",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1994,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of feature selection in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10238,
+          "option_text": "A technique to select the most important features",
+          "is_correct": true
+        },
+        {
+          "option_id": 10239,
+          "option_text": "A technique to create new features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10240,
+          "option_text": "A technique to reduce the number of features",
+          "is_correct": false
+        },
+        {
+          "option_id": 10241,
+          "option_text": "A technique to transform features",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1995,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of hyperparameter tuning in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10242,
+          "option_text": "A process for finding the optimal hyperparameters for a model",
+          "is_correct": true
+        },
+        {
+          "option_id": 10243,
+          "option_text": "A process for finding the optimal features for a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10244,
+          "option_text": "A process for finding the optimal data for a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10245,
+          "option_text": "A process for finding the optimal deployment strategy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1996,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of online learning?",
+      "options": [
+        {
+          "option_id": 10246,
+          "option_text": "A method where models are updated continuously with new data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10247,
+          "option_text": "A method where models are trained offline",
+          "is_correct": false
+        },
+        {
+          "option_id": 10248,
+          "option_text": "A method where models are trained on batch data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10249,
+          "option_text": "A method where models are trained on static data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1997,
+      "subskill_id": 96,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of self-supervised learning?",
+      "options": [
+        {
+          "option_id": 10250,
+          "option_text": "A method where models learn from unlabeled data to improve performance",
+          "is_correct": true
+        },
+        {
+          "option_id": 10251,
+          "option_text": "A method where models learn from labeled data only",
+          "is_correct": false
+        },
+        {
+          "option_id": 10252,
+          "option_text": "A method where models learn from reinforcement",
+          "is_correct": false
+        },
+        {
+          "option_id": 10253,
+          "option_text": "A method where models learn from no data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1998,
+      "subskill_id": 97,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of model calibration?",
+      "options": [
+        {
+          "option_id": 10254,
+          "option_text": "A concept where model probabilities align with actual outcomes",
+          "is_correct": true
+        },
+        {
+          "option_id": 10255,
+          "option_text": "A concept where model predictions are always correct",
+          "is_correct": false
+        },
+        {
+          "option_id": 10256,
+          "option_text": "A concept where model predictions are always incorrect",
+          "is_correct": false
+        },
+        {
+          "option_id": 10257,
+          "option_text": "A concept where model predictions are random",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 1999,
+      "subskill_id": 98,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the role of the base estimator in Scikit-learn?",
+      "options": [
+        {
+          "option_id": 10258,
+          "option_text": "The underlying estimator used in a meta-estimator",
+          "is_correct": true
+        },
+        {
+          "option_id": 10259,
+          "option_text": "The data used to train a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10260,
+          "option_text": "The features used in a model",
+          "is_correct": false
+        },
+        {
+          "option_id": 10261,
+          "option_text": "The hyperparameters used in a model",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 2000,
+      "subskill_id": 95,
+      "difficulty_level": "ADVANCED",
+      "weight": 1,
+      "question_text": "What is the concept of active learning?",
+      "options": [
+        {
+          "option_id": 10262,
+          "option_text": "A method where models actively query for additional data",
+          "is_correct": true
+        },
+        {
+          "option_id": 10263,
+          "option_text": "A method where models passively receive data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10264,
+          "option_text": "A method where models are trained on all available data",
+          "is_correct": false
+        },
+        {
+          "option_id": 10265,
+          "option_text": "A method where models are not trained at all",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

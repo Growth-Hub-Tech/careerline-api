@@ -39,6 +39,8 @@ services:
         value: staging
       - key: SAMPLE_API_ENABLED
         value: 'true' # sample answers for the endpoints not built yet (off in production)
+      - key: SEED_ON_START
+        value: 'true' # load seeds/ (levels, skills, questions) after migrating, on every deploy
       - key: LOG_JSON
         value: 'true'
       - key: WEB_CONCURRENCY

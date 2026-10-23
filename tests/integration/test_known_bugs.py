@@ -48,23 +48,3 @@ async def test_submit_does_not_wait_for_the_ai(client, learner, skill, monkeypat
     assert response.status_code == 200, response.text
     assert calls == [], f"submit called the AI {len(calls)} time(s) inside the request"
     assert elapsed < 1.0, f"submit took {elapsed:.1f}s waiting for the AI"
-
-
-@pytest.mark.xfail(
-    strict=True,
-    reason="Bug: nothing creates the 4 proficiency levels, so on a fresh database every start "
-    "attempt answers 400 'Level JUNIOR not found in database'. Day 4 adds seed files: then load "
-    "them in clean_database (instead of inserting the levels by hand) and drop this xfail.",
-)
-async def test_a_fresh_database_can_start_an_attempt(client, learner, skill, database):
-    with database.begin() as conn:
-        # Back to what migrations alone give you: no levels
-        conn.exec_driver_sql("TRUNCATE proficiency_level CASCADE")
-
-    response = await client.post(
-        f"{API}/attempts/start",
-        headers=learner["headers"],
-        json={"skill_id": skill["skill_id"], "declared_level": "JUNIOR"},
-    )
-
-    assert response.status_code == 200, response.text
