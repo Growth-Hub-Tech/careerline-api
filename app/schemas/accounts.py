@@ -14,6 +14,10 @@ class Account(BaseModel):
     account_type: AccountType
     email_verified: bool
     organisation_id: int | None = None
+    organisation_role: Literal["owner", "admin", "recruiter"] | None = Field(
+        default=None,
+        description="The role in organisation_id (owner and admin = organisation_admin)",
+    )
     created_at: datetime
 
 

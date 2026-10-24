@@ -12,8 +12,26 @@ from app.repositories.recommendation_repo import get_learning_pathway
 router = APIRouter(prefix="/recommendations", tags=["Recommendations"], route_class=EnvelopeRoute)
 
 
-# GET LEARNING PATHWAY FOR A LEARNER AND SKILL
-@router.get("/pathway/{learner_id}/{skill_id}", responses=errors(401, 403, 404))
+# MY LEARNING PATHWAY AND LEVELS: the learner comes from the session (Day 7)
+@router.get("/pathway/me/{skill_id}", responses=errors(401, 404))
+async def my_learning_pathway(
+    skill_id: int,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await learning_pathway(current_learner.learner_id, skill_id, db, current_learner)
+
+
+@router.get("/levels/me", responses=errors(401))
+async def get_my_levels(
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await get_learner_levels(current_learner.learner_id, db, current_learner)
+
+
+# GET LEARNING PATHWAY FOR A LEARNER AND SKILL (deprecated: use /pathway/me/{skill_id})
+@router.get("/pathway/{learner_id}/{skill_id}", responses=errors(401, 403, 404), deprecated=True)
 async def learning_pathway(
     learner_id: int,
     skill_id: int,
@@ -60,7 +78,8 @@ async def learning_pathway(
 
 
 # GET CONFIRMED LEVELS FOR A LEARNER ACROSS ALL SKILLS
-@router.get("/levels/{learner_id}", responses=errors(401, 403))
+# (deprecated: use /levels/me)
+@router.get("/levels/{learner_id}", responses=errors(401, 403), deprecated=True)
 async def get_learner_levels(
     learner_id: int,
     db: AsyncSession = Depends(get_db, scope="function"),

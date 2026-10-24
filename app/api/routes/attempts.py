@@ -78,6 +78,19 @@ async def submit_answers(
 
 
 # GET ATTEMPT DETAIL
+# MY ATTEMPT HISTORY: the learner comes from the session (Day 7)
+@router.get("/me", responses=errors(401))
+async def get_my_attempts(
+    limit: int = 10,
+    offset: int = 0,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await get_learner_attempts(
+        current_learner.learner_id, limit, offset, db, current_learner
+    )
+
+
 @router.get("/{attempt_id}", responses=errors(401, 403, 404))
 async def get_attempt(
     attempt_id: int,
@@ -104,7 +117,8 @@ async def get_attempt(
 
 
 # GET ATTEMPT HISTORY FOR A LEARNER
-@router.get("/learner/{learner_id}", responses=errors(401, 403))
+# (deprecated: use /attempts/me)
+@router.get("/learner/{learner_id}", responses=errors(401, 403), deprecated=True)
 async def get_learner_attempts(
     learner_id: int,
     limit: int = 10,

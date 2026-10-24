@@ -12,6 +12,7 @@ import pytest
 from fastapi import APIRouter, HTTPException
 
 from app.core.exceptions import AppError, ServiceUnavailableError
+from app.core.permissions import POLICIES, PUBLIC
 from app.main import app
 
 INTERNALS = ("Traceback", 'File "', "RuntimeError", "asyncpg", "SELECT", "/srv/app", "password=")
@@ -47,6 +48,9 @@ async def _unavailable():
 
 
 app.include_router(_router)
+# Every route needs an access rule (Day 7, app/core/permissions.py); these test routes are public
+for _route in _router.routes:
+    POLICIES[f"GET {_route.path}"] = PUBLIC  # type: ignore[attr-defined]
 
 
 def assert_one_format(response, status: int, code: str) -> dict:

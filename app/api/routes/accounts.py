@@ -3,9 +3,10 @@
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.api.deps import get_current_session, get_db
+from app.api.deps import current_membership, get_current_session, get_db
 from app.core.responses import EnvelopeRoute, errors
 from app.models.models import Learner
+from app.models.organisations import OrganisationMember
 from app.schemas.accounts import (
     Account,
     AccountUpdate,
@@ -21,29 +22,42 @@ from app.services.session_service import CurrentSession
 router = APIRouter(prefix="/accounts", tags=["Accounts"], route_class=EnvelopeRoute)
 
 
-def account_of(learner: Learner) -> Account:
+ACCOUNT_TYPES = {
+    "owner": "organisation_admin",
+    "admin": "organisation_admin",
+    "recruiter": "recruiter",
+}
+
+
+def account_of(learner: Learner, membership: OrganisationMember | None) -> Account:
+    role = membership.role if membership else None
     return Account(
         account_id=learner.learner_id,
         full_name=learner.full_name,
         email=learner.email,
         phone=learner.phone_number,
-        account_type="learner",
+        account_type=ACCOUNT_TYPES.get(role or "", "learner"),
         email_verified=learner.email_verified_at is not None,
-        organisation_id=None,
+        organisation_id=membership.organisation_id if membership else None,
+        organisation_role=role,
         created_at=learner.created_at,
     )
 
 
 # MY ACCOUNT: login details and account type (learner, recruiter or organisation admin)
 @router.get("/me", response_model=Account, responses=errors(401))
-async def get_my_account(current: CurrentSession = Depends(get_current_session)):
-    return account_of(current.learner)
+async def get_my_account(
+    current: CurrentSession = Depends(get_current_session),
+    membership: OrganisationMember | None = Depends(current_membership),
+):
+    return account_of(current.learner, membership)
 
 
 @router.patch("/me", response_model=Account, responses=errors(401))
 async def update_my_account(
     data: AccountUpdate,
     current: CurrentSession = Depends(get_current_session),
+    membership: OrganisationMember | None = Depends(current_membership),
     db: AsyncSession = Depends(get_db, scope="function"),
 ):
     learner = current.learner
@@ -53,7 +67,7 @@ async def update_my_account(
     if "phone" in changes:
         learner.phone_number = changes["phone"]
     await db.flush()
-    return account_of(learner)
+    return account_of(learner, membership)
 
 
 @router.post(

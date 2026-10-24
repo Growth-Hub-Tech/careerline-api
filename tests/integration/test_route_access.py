@@ -3,7 +3,8 @@
 Kinds of user: anonymous, a learner (no organisation), the recruiter, admin and owner of the
 organisation in the path, and the owner of ANOTHER organisation. "Allowed" means the request
 got past the access check (any answer but 401/403: e.g. 422 for the empty body this test
-sends, 404 for made-up ids); "denied" means 401 (anonymous) or 403, in the error envelope.
+sends, 404 for made-up ids); "denied" means 401 (anonymous) or 403, in the error envelope, and
+404 for an organisation in the path that is not the caller's.
 """
 
 import uuid
@@ -84,7 +85,7 @@ def fill(path: str, learner_id: int) -> str:
     return path
 
 
-def expected(policy: Policy, user: str) -> str:
+def expected(policy: Policy, user: str, path: str) -> str:
     """allowed, or the status the rule must answer with."""
     if policy.kind == "public":
         return "allowed"
@@ -92,8 +93,11 @@ def expected(policy: Policy, user: str) -> str:
         return "401"
     if policy.kind in ("signed_in", "self"):
         return "allowed"
-    # An organisation permission: only a member of THIS organisation whose role grants it
+    # An organisation permission: a member whose role grants it; when the path names an
+    # organisation, only a member of THAT one (404 for the others, so ids are not confirmed)
     role = {"recruiter": "recruiter", "admin": "admin", "owner": "owner"}.get(user)
+    if user == "other_org_owner":
+        return "404" if "{organisation_id}" in path else "allowed"
     if role is None:
         return "403"
     return "allowed" if policy.allows_role(role) else "403"
@@ -109,7 +113,7 @@ async def test_every_route_against_every_kind_of_user(client, db, people, method
             {"Authorization": f"Bearer {token_for(db, learner_id)}"} if user != "anonymous" else {}
         )
         response = await client.request(method, fill(path, learner_id), headers=headers)
-        want = expected(policy, user)
+        want = expected(policy, user, path)
         got = response.status_code
         if want == "allowed" and got in (401, 403):
             problems.append(f"{user}: expected access, got {got} {response.text[:120]}")
@@ -139,4 +143,4 @@ async def test_another_organisation_is_out_of_reach_even_for_its_owner(client, d
     headers = {"Authorization": f"Bearer {token_for(db, people['other_org_owner'])}"}
     for path in ("audits", "heatmap", "targets", "members", "users"):
         response = await client.get(f"/api/v1/organisations/{ORG_ID}/{path}", headers=headers)
-        assert response.status_code == 403, (path, response.text)
+        assert response.status_code == 404, (path, response.text)

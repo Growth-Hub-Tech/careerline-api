@@ -16,9 +16,18 @@ from app.services.learner_service import (
 router = APIRouter(prefix="/learners", tags=["Learners"], route_class=EnvelopeRoute)
 
 
-# GET LEARNER PROFILE
+# MY PROFILE: the learner comes from the session (Day 7)
+@router.get("/me", responses=errors(401))
+async def get_my_profile(
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await get_learner_profile(current_learner.learner_id, db, current_learner)
+
+
+# GET LEARNER PROFILE (deprecated: use /learners/me)
 # Only your own profile: it holds your email and phone number
-@router.get("/{learner_id}", responses=errors(401, 403, 404))
+@router.get("/{learner_id}", responses=errors(401, 403, 404), deprecated=True)
 async def get_learner_profile(
     learner_id: int,
     db: AsyncSession = Depends(get_db, scope="function"),
@@ -59,8 +68,11 @@ async def behavioural_answers(
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
-    # learner_id stays in the body for old clients, but it must be you
-    require_same_learner(data.learner_id, current_learner)
+    # The learner is the session's. learner_id in the body is optional (old clients send it),
+    # and refused if it is anyone else's
+    if data.learner_id is not None:
+        require_same_learner(data.learner_id, current_learner)
+    learner_id = current_learner.learner_id
 
     # ...and the attempt must be yours too
     attempt = await db.get(TestAttempt, data.attempt_id)
@@ -72,6 +84,6 @@ async def behavioural_answers(
         {"question_id": item.question_id, "answer_text": item.answer_text} for item in data.answers
     ]
     result = await submit_behavioural_answers(
-        db=db, learner_id=data.learner_id, attempt_id=data.attempt_id, answers=answers
+        db=db, learner_id=learner_id, attempt_id=data.attempt_id, answers=answers
     )
-    return ok(result, message=f"Behavioural answers saved for learner_id={data.learner_id}")
+    return ok(result, message=f"Behavioural answers saved for learner_id={learner_id}")
