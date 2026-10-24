@@ -10,7 +10,6 @@ import re
 import secrets
 
 from fastapi import APIRouter, Depends, Header, Query
-from pydantic import EmailStr
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -21,6 +20,8 @@ from app.db.session import get_db
 from app.models.email import TestMailboxMessage
 from app.schemas.test_mailbox import TestMailbox, TestMailboxCleared, TestMailboxMessageOut
 
+# Any address the API may have written to (also test-only domains like .local or .test)
+EMAIL_PATTERN = r"^[^@\s]+@[^@\s]+$"
 _LINK = re.compile(r"https?://[^\s<>\"\')]+")
 
 
@@ -59,7 +60,9 @@ def _links(text: str) -> list[str]:
     "Send X-Test-Mailbox-Token when the server has one.",
 )
 async def read_test_mailbox(
-    to: EmailStr = Query(description="The address the emails were sent to"),
+    to: str = Query(
+        max_length=320, pattern=EMAIL_PATTERN, description="The address the emails were sent to"
+    ),
     limit: int = Query(default=20, ge=1, le=100),
     db: AsyncSession = Depends(get_db, scope="function"),
 ):
@@ -97,7 +100,7 @@ async def read_test_mailbox(
     description="Delete the emails sent to one address (start a test with an empty mailbox).",
 )
 async def clear_test_mailbox(
-    to: EmailStr = Query(description="The address to clear"),
+    to: str = Query(max_length=320, pattern=EMAIL_PATTERN, description="The address to clear"),
     db: AsyncSession = Depends(get_db, scope="function"),
 ):
     address = str(to).lower()

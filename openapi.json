@@ -2841,6 +2841,19 @@
             ],
             "title": "Topic",
             "type": "string"
+          },
+          "website": {
+            "anyOf": [
+              {
+                "maxLength": 200,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Spam trap: leave it out or empty. Hide this input from people; bots fill it.",
+            "title": "Website"
           }
         },
         "required": [
@@ -7763,7 +7776,7 @@
     },
     "/api/v1/contact": {
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Public, no login. Stores the message and emails the team (who can reply straight to the sender) and an acknowledgement to the sender. At most 5 messages an hour per email address and per IP address (then 429 with Retry-After).",
         "operationId": "send_contact_message_api_v1_contact_post",
         "requestBody": {
           "content": {
@@ -7786,76 +7799,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -7875,45 +7818,11 @@
               }
             },
             "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "summary": "Send Contact Message",
         "tags": [
-          "Sample: Contact"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Contact"
         ]
       }
     },
@@ -16614,7 +16523,8 @@
             "required": true,
             "schema": {
               "description": "The address to clear",
-              "format": "email",
+              "maxLength": 320,
+              "pattern": "^[^@\\s]+@[^@\\s]+$",
               "title": "To",
               "type": "string"
             }
@@ -16678,7 +16588,8 @@
             "required": true,
             "schema": {
               "description": "The address the emails were sent to",
-              "format": "email",
+              "maxLength": 320,
+              "pattern": "^[^@\\s]+@[^@\\s]+$",
               "title": "To",
               "type": "string"
             }
