@@ -21,13 +21,15 @@ app/
                      plus health (/healthz, /readyz)
   core/              config, security, logging, exceptions, error handlers, response envelope, middleware
   db/                SQLAlchemy base, engine/session, migration check, seed loader (python -m app.db.seed)
+  email/             send_email(), backends (smtp, test mailbox, console), templates/ (one layout)
   integrations/      external services (OpenAI)
+  jobs/              background jobs: Postgres queue, handler registry, runner
   models/            SQLAlchemy models
   repositories/      database queries
   schemas/           Pydantic request/response models
   services/          business logic (attempts, scoring, recommendations)
   sample/            sample answers for endpoints not built yet (see "Sample API")
-  worker.py          background worker entry point (python -m app.worker)
+  worker.py          background worker: runs the jobs (python -m app.worker)
 migrations/          Alembic environment and the one starting migration
 seeds/               reference data: levels, skills, subskills, questions and options (JSON)
 scripts/             start.sh (Render entry point), export_openapi.py, data tools, sql/
@@ -154,7 +156,7 @@ A pull request into `main` must come from `dev`.
 
 ## Deployment (Render)
 
-`render.yaml` is a Render Blueprint for the test server: the web service (`pip install -r requirements.txt`, then `bash scripts/start.sh`, which migrates before starting, health check on `/healthz`), a background worker (`python -m app.worker`, a placeholder until Day 5) and a Postgres 16 database. Render generates `SECRET_KEY`; set `CORS_ORIGINS` (the website's address) and optionally `OPENAI_API_KEY` in the dashboard. See [docs/api.md](docs/api.md#test-server-render).
+`render.yaml` is a Render Blueprint for the test server: the web service (`pip install -r requirements.txt`, then `bash scripts/start.sh`, which migrates before starting, health check on `/healthz`), a background worker (`python -m app.worker`, runs the background jobs; on the free plan set `RUN_JOBS_IN_WEB=true` on the web service instead) and a Postgres 16 database. Render generates `SECRET_KEY`; set `CORS_ORIGINS` (the website's address) and optionally `OPENAI_API_KEY` in the dashboard. See [docs/api.md](docs/api.md#test-server-render).
 
 ## API docs for the frontend
 
@@ -170,6 +172,12 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 | `SECRET_KEY`   | Signs login tokens (JWT); a long random value                      |
 | `CORS_ORIGINS` | Comma-separated frontend origins (default `http://localhost:5173`) |
 | `LOG_JSON`     | `true` in production for JSON logs                                 |
+
+Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
+
+### Email layout
+
+Every email is rendered inside `app/email/templates/layout.html` (and `layout.txt` for the plain-text part). That pair is the only place that decides how emails look. Omotoke's email design replaces those two files, keeping the slot names documented at the top of `layout.html` (`content`, `preheader`, `footer_note`, `brand.*`).
 
 ## Scripts
 
