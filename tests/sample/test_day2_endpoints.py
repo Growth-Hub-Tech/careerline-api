@@ -1,45 +1,8 @@
-"""Day 2 sample answers: accounts, skills and roles, tests, results, profile,
-beginner path and programme clicks. (The contact form is real since Day 5: see
-tests/integration/test_contact.py.)"""
+"""Day 2 sample answers: skills and roles, tests, results, profile,
+beginner path and programme clicks. (The contact form is real since Day 5 and the accounts since Day
+6: see tests/integration/test_contact.py and test_accounts.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
-
-
-async def test_my_account_belongs_to_the_logged_in_person(client, auth):
-    data = assert_sample(await client.get(f"{API}/accounts/me", headers=auth))
-    assert data["account_id"] == 1
-    assert data["account_type"] in {"learner", "recruiter", "organisation_admin"}
-    assert "password" not in str(data).lower()
-
-
-async def test_updating_my_account_returns_the_changed_account(client, auth):
-    response = await client.patch(f"{API}/accounts/me", headers=auth, json={"full_name": "Ada O."})
-    data = assert_sample(response)
-    assert data["full_name"] == "Ada O."
-    assert data["email"] == "ada.okafor@example.com"
-
-
-async def test_a_new_password_must_have_8_characters(client, auth):
-    response = await client.post(
-        f"{API}/accounts/me/password",
-        headers=auth,
-        json={"current_password": "old-password", "new_password": "short"},
-    )
-    assert_sample_error(response, 422, "validation_error")
-
-
-async def test_password_reset_is_public_and_always_accepted(client):
-    response = await client.post(f"{API}/accounts/password-reset", json={"email": "x@example.com"})
-    assert assert_sample(response, 202) == {"status": "accepted"}
-
-
-async def test_an_expired_reset_token_is_a_410(client):
-    response = await client.post(
-        f"{API}/accounts/password-reset/confirm",
-        headers={"X-Mock-Scenario": "expired"},
-        json={"token": "old", "new_password": "a-new-password"},
-    )
-    assert_sample_error(response, 410, "expired")
 
 
 async def test_roles_list_the_skills_they_need(client):

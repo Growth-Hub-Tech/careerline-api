@@ -38,7 +38,9 @@ async def test_password_is_stored_hashed(client, db):
         text("SELECT hashed_password FROM learner WHERE email = 'hash@example.com'")
     ).scalar_one()
     assert stored != PASSWORD
-    assert stored.startswith("$2b$")
+    assert stored.startswith(
+        "$argon2id$"
+    )  # Day 6: Argon2id (older accounts keep bcrypt until login)
 
 
 async def test_login_with_the_oauth2_form_returns_a_plain_token_body(client, learner):
