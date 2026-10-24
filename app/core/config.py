@@ -45,6 +45,16 @@ class Settings(BaseSettings):
     # worker on one machine sees the same state; it is reset when the machine restarts.
     SAMPLE_STATE_FILE: str = "/tmp/careerline-sample-state.json"
 
+    # Background jobs (app/jobs). Production runs `python -m app.worker` as its own service; the
+    # free test server has no worker service, so RUN_JOBS_IN_WEB=true runs the jobs inside the API
+    RUN_JOBS_IN_WEB: bool = False
+    JOB_POLL_SECONDS: float = 2.0  # how often an idle worker looks for new jobs
+    JOB_LEASE_SECONDS: float = 300.0  # a job is retried if its worker is silent this long
+    JOB_BATCH_SIZE: int = 5
+    JOB_MAX_ATTEMPTS: int = 5  # then the job is dead-lettered (status "dead")
+    JOB_RETRY_BASE_SECONDS: float = 30.0  # 30s, 1m, 2m, 4m ... between attempts
+    JOB_RETRY_MAX_SECONDS: float = 3600.0
+
     # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60

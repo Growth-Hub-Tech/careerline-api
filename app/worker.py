@@ -1,8 +1,11 @@
-"""Background worker entry point: `python -m app.worker` (the Render worker service runs this).
+"""Background worker entry point: `python -m app.worker` (a worker service runs this).
 
-Day 3 only sets up the service: it starts, checks the database, logs a heartbeat and stops
-cleanly when Render sends SIGTERM. The real jobs (scoring and AI recommendations off the
-request, PDF reports, emails) arrive on Day 5.
+It runs the background jobs (app/jobs): claims due jobs from the background_jobs table, runs
+them, retries failures and dead-letters the hopeless ones, and stops cleanly on SIGTERM. Any
+number of workers can run at once; they never run the same job.
+
+The free test server has no worker service: there RUN_JOBS_IN_WEB=true runs the same loop
+inside the API process instead (app/main.py).
 """
 
 import asyncio
@@ -13,6 +16,7 @@ from sqlalchemy import text
 from app.core.config import settings
 from app.core.logging import configure_logging, get_logger
 from app.db.session import engine
+from app.jobs.runner import JobRunner
 
 logger = get_logger("app.worker")
 
@@ -29,14 +33,23 @@ async def check_database() -> bool:
         return False
 
 
-async def run(stop: asyncio.Event, heartbeat_seconds: float = HEARTBEAT_SECONDS) -> None:
-    logger.info("worker_started", env=settings.APP_ENV)
-    await check_database()
+async def _heartbeat(stop: asyncio.Event, heartbeat_seconds: float) -> None:
     while not stop.is_set():
         try:
             await asyncio.wait_for(stop.wait(), timeout=heartbeat_seconds)
         except TimeoutError:
             logger.info("worker_heartbeat", database_ok=await check_database())
+
+
+async def run(
+    stop: asyncio.Event,
+    heartbeat_seconds: float = HEARTBEAT_SECONDS,
+    runner: JobRunner | None = None,
+) -> None:
+    logger.info("worker_started", env=settings.APP_ENV)
+    await check_database()
+    runner = runner or JobRunner()
+    await asyncio.gather(runner.run_forever(stop), _heartbeat(stop, heartbeat_seconds))
     await engine.dispose()
     logger.info("worker_stopped")
 

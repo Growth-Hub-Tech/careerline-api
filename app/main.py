@@ -1,3 +1,4 @@
+import asyncio
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -11,10 +12,14 @@ from app.core.logging import configure_logging, get_logger
 from app.core.middleware import RequestContextMiddleware, SecurityHeadersMiddleware
 from app.db.migration_check import assert_database_at_head
 from app.db.session import engine
+from app.jobs.runner import JobRunner
 from app.sample.core import SampleDataHeaderMiddleware
 from app.sample.router import sample_router
 
 logger = get_logger(__name__)
+
+# Render stops a service 30 seconds after SIGTERM
+SHUTDOWN_GRACE_SECONDS = 25.0
 
 
 @asynccontextmanager
@@ -30,7 +35,23 @@ async def lifespan(app: FastAPI):
     logger.info(
         "startup", app=settings.APP_NAME, env=settings.APP_ENV, api_prefix=settings.API_PREFIX
     )
-    yield
+
+    # The free test server has no worker service: RUN_JOBS_IN_WEB=true runs the jobs in here
+    stop_jobs = asyncio.Event()
+    jobs_task = None
+    if settings.RUN_JOBS_IN_WEB:
+        jobs_task = asyncio.create_task(JobRunner().run_forever(stop_jobs))
+        logger.info("jobs_running_in_web_process")
+    try:
+        yield
+    finally:
+        if jobs_task is not None:
+            stop_jobs.set()
+            try:
+                # Let the job in progress finish; a job cut off here is retried when its lease ends
+                await asyncio.wait_for(jobs_task, timeout=SHUTDOWN_GRACE_SECONDS)
+            except TimeoutError:
+                jobs_task.cancel()
     await engine.dispose()
     logger.info("shutdown")
 
