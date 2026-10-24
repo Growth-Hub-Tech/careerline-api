@@ -147,7 +147,7 @@ async def test_protected_sample_routes_use_the_real_login_in_the_api_description
 
 
 async def test_body_validation_on_sample_routes_uses_the_error_envelope(client):
-    response = await client.post(f"{API}/contact", json={"email": "not-an-email"})
+    response = await client.post(f"{API}/payments/webhooks/paystack", json={"event": 42})
     assert_sample_error(response, 422, "validation_error")
 
 
