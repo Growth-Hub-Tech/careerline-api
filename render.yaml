@@ -43,6 +43,8 @@ services:
         value: 'true' # sample answers for the endpoints not built yet (off in production)
       - key: SEED_ON_START
         value: 'true' # load seeds/ (levels, skills, questions) after migrating, on every deploy
+      - key: DEMO_DATA_ON_START
+        value: 'true' # demo accounts and Demo Company Ltd (docs/api.md); refused in production
       - key: LOG_JSON
         value: 'true'
       - key: WEB_CONCURRENCY

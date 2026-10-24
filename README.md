@@ -105,6 +105,10 @@ CI and `tests/test_openapi_file.py` fail when the committed file is out of date.
 
 `seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions). `python -m app.db.seed` loads it; running it again changes nothing. The test server loads it on every deploy (`SEED_ON_START=true`). Details: [docs/database.md](docs/database.md).
 
+`python -m app.db.demo` loads the demo accounts and Demo Company Ltd (listed in [docs/api.md](docs/api.md)); the test server runs it on every deploy (`DEMO_DATA_ON_START=true`), and it refuses to run in production.
+
+Access: every route has one rule in `app/core/permissions.py` (public, signed in, self, or an organisation permission per role); a new route needs one, or the tests fail and the route is refused.
+
 ## Logging
 
 `app/core/logging.py` configures structlog. With `LOG_JSON=true` (Render) each line is one JSON object; locally you get readable, coloured lines. Use `get_logger(__name__)` and log events with fields: `logger.info("attempt_scored", attempt_id=..., percentage=...)`. Never log tokens, passwords, emails or request bodies.
