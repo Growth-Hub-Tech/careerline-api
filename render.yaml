@@ -53,6 +53,8 @@ services:
         sync: false # emails go to the test mailbox on staging; this keeps GET /api/v1/test-mailbox private
       - key: SUPPORT_EMAIL
         sync: false # where contact form messages go (on staging they land in the test mailbox)
+      - key: FRONTEND_URL
+        sync: false # the website: confirmation and reset links in emails point to its /verify-email and /reset-password pages
       - key: PYTHON_VERSION
         value: 3.13.12
 
@@ -82,6 +84,8 @@ services:
       - key: LOG_JSON
         value: 'true'
       - key: SUPPORT_EMAIL
+        sync: false
+      - key: FRONTEND_URL
         sync: false
       - key: PYTHON_VERSION
         value: 3.13.12

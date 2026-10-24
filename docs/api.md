@@ -13,15 +13,35 @@ Outside the `/api/v1` prefix: `GET /healthz` (the app is up), `GET /readyz` (the
 
 ## Log in
 
-1. `POST /api/v1/auth/register` with JSON `{ "full_name", "email", "phone", "password" }` (password at least 8 characters). The answer already holds a token.
-2. `POST /api/v1/auth/login` as a **form** (`application/x-www-form-urlencoded`), not JSON: `username=<email>&password=<password>`. The answer is the standard OAuth2 body `{ "access_token", "token_type": "bearer", "learner_id", "full_name" }` (no envelope).
-3. Send `Authorization: Bearer <access_token>` on every protected call. A token lasts 24 hours; a 401 means log in again.
+1. **Sign up:** `POST /api/v1/auth/register` with JSON `{ "full_name", "email", "phone", "password" }` (password at least 8 characters). The answer already holds a token (the new account is signed in). A confirmation email is sent at the same time.
+2. **Sign in:** `POST /api/v1/auth/login` as a **form** (`application/x-www-form-urlencoded`), not JSON: `username=<email>&password=<password>`. The answer is the standard OAuth2 body `{ "access_token", "token_type": "bearer", "learner_id", "full_name" }` (no envelope). Emails are not case-sensitive.
+3. Send `Authorization: Bearer <access_token>` on every protected call. A token lasts 24 hours; a `401` means sign in again.
+4. **Sign out:** `POST /api/v1/auth/logout` (with the token). That token stops working at once; other devices stay signed in. `?everywhere=true` signs out every device.
 
 ```ts
 const form = new URLSearchParams({ username: email, password });
 const res = await fetch(`${API}/auth/login`, { method: "POST", body: form });
 const { access_token } = await res.json();
 ```
+
+**Sessions.** Every sign-in is a session on the server. Sign-out ends one; a password reset ends all of them; changing the password ends all the others (the device that changed it stays signed in). Tokens issued before Day 6 no longer work: sign in again.
+
+**Too many failed sign-ins.** After 5 failed sign-ins for one email (whether or not it has an account) or 20 from one IP address within 15 minutes, `POST /auth/login` answers `429 rate_limited` with `Retry-After` (seconds), even with the right password. Show "Too many attempts, try again in N minutes". A wrong password and an unknown email get exactly the same `401` ("Invalid email or password").
+
+### Email confirmation and password reset
+
+The emails link to two pages of the website (`FRONTEND_URL` on the server, e.g. `http://localhost:5173`), with the token in the query string:
+
+| Email | Link | The page calls | Answers |
+| --- | --- | --- | --- |
+| Confirm your email (after sign-up) | `/verify-email?token=…` | `POST /api/v1/accounts/verify-email` `{ "token" }` | `200`, or `410 expired` (old, used or unknown link: offer "send a new link") |
+| Reset your password | `/reset-password?token=…` | `POST /api/v1/accounts/password-reset/confirm` `{ "token", "new_password" }` | `200` (every device is signed out: send to sign-in), or `410 expired` |
+
+- `POST /api/v1/accounts/password-reset` `{ "email" }` (forgot password) always answers `202`, whether or not the email has an account. The link works once, for 60 minutes; asking again makes the older link stop working.
+- `POST /api/v1/accounts/verify-email/resend` (signed in) sends a new confirmation link (the old one stops working); at most 3 an hour. Confirmation links work once, for 48 hours.
+- `GET /api/v1/accounts/me` shows `email_verified`. Signing in does not require a confirmed email (yet).
+- `POST /api/v1/accounts/me/password` `{ "current_password", "new_password" }`: a wrong current password is `400 wrong_password`.
+- On the test server, read these emails (and their `links`) from the test mailbox (below).
 
 ## Answers and errors
 
@@ -46,6 +66,7 @@ Every answer except login is an envelope:
 | Status | `error.code` | Meaning | What the app should do |
 | --- | --- | --- | --- |
 | 400 | `bad_request` | Invalid input (message says what) | Show the message |
+| 400 | `wrong_password` | Change password: the current password is not correct | Show it on the field |
 | 401 | `unauthenticated` | No token, bad token or expired | Send to login |
 | 402 | `payment_required` | Not enough credits / no subscription | Send to buy credits or plans |
 | 403 | `forbidden` | Logged in, but not allowed (someone else's data, wrong account type) | Show "not allowed" |
@@ -192,6 +213,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 6**: accounts are real (same paths and shapes, no more `X-Sample-Data` on `/accounts/*`): confirmation and reset emails with links to `/verify-email?token=` and `/reset-password?token=` on the website; new `POST /api/v1/auth/logout` (`?everywhere=true`); sign-in answers `429` after too many failures; tokens from before Day 6 must sign in again; new error code `wrong_password` (400, change password).
 - **Day 5**: every error carries a reference number (`error.request_id` = `X-Request-ID`) and a `500` never shows internals. `POST /api/v1/contact` is real (same shape; new optional spam-trap field `website`; `429` after 5 messages an hour). New, test server only: `GET`/`DELETE /api/v1/test-mailbox`. `POST /attempts/submit`: the AI advice now arrives later through a background job; new field `recommendations.ai_advice` (`queued` / `unavailable`).
 
 - **Day 4** (breaking, for old clients only): removed the old duplicate `/api/*` routes (use `/api/v1`) and the open sign-up `POST /api/v1/learners/register` (use `POST /api/v1/auth/register`). A fresh database now has the 4 levels and the question bank (seed files).
