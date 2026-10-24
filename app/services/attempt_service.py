@@ -29,7 +29,7 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
     # Get level ID from database
     level_id = await get_level_id_by_name(db, declared_level)
     if not level_id:
-        raise BadRequestError(f"Level {declared_level} not found in database")
+        raise BadRequestError(f"Level {declared_level} is not available yet")
 
     # Unknown skill: a clean 404 (before, the insert broke the foreign key and gave a 500)
     if await db.get(Skill, skill_id) is None:

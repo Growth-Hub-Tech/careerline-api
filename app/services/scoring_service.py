@@ -58,7 +58,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     if attempt is None:
         raise AttemptNotFound(f"Attempt {attempt_id} not found")
     if attempt.learner_id != learner_id:
-        raise AttemptNotYours(f"Attempt {attempt_id} does not belong to learner {learner_id}")
+        raise AttemptNotYours(f"Attempt {attempt_id} does not belong to you")
     if attempt.attempt_status != AttemptStatus.IN_PROGRESS:
         raise AttemptAlreadySubmitted(
             f"Attempt {attempt_id} is already {attempt.attempt_status.value.lower()}; start a new attempt to retake"
