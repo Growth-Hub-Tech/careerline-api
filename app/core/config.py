@@ -11,6 +11,9 @@ def _with_driver(url: str, driver: str) -> str:
     return url
 
 
+EMAIL_BACKENDS = ("smtp", "test_mailbox", "console")
+
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
 
@@ -55,6 +58,24 @@ class Settings(BaseSettings):
     JOB_RETRY_BASE_SECONDS: float = 30.0  # 30s, 1m, 2m, 4m ... between attempts
     JOB_RETRY_MAX_SECONDS: float = 3600.0
 
+    # Email (app/email). EMAIL_BACKEND: smtp (real emails), test_mailbox (stored in the database and
+    # readable at GET /api/v1/test-mailbox, for the test server), console (only logged).
+    # Unset = smtp in production, test_mailbox on staging, console everywhere else.
+    EMAIL_BACKEND: str | None = None
+    EMAIL_FROM: str = "CareerLine <no-reply@careerline.local>"
+    EMAIL_BRAND_NAME: str = "CareerLine"
+    EMAIL_LOGO_URL: str = ""  # an https:// image; empty = the brand name as text
+    SUPPORT_EMAIL: str = "support@careerline.local"  # the contact form goes here
+    FRONTEND_URL: str = "http://localhost:5173"  # links in emails point to the website
+    SMTP_HOST: str = ""
+    SMTP_PORT: int = 587
+    SMTP_USERNAME: str = ""
+    SMTP_PASSWORD: str = ""
+    SMTP_SECURITY: str = "starttls"  # starttls (port 587), ssl (port 465) or none
+    SMTP_TIMEOUT_SECONDS: float = 20.0
+    # The test mailbox API asks for this in X-Test-Mailbox-Token when it is set
+    TEST_MAILBOX_TOKEN: str = ""
+
     # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60
@@ -66,6 +87,31 @@ class Settings(BaseSettings):
         if isinstance(value, str):
             return [origin.strip() for origin in value.split(",") if origin.strip()]
         return value
+
+    @field_validator("EMAIL_BACKEND", mode="before")
+    @classmethod
+    def _check_email_backend(cls, value):
+        if value in (None, ""):
+            return None
+        value = str(value).strip().lower()
+        if value not in EMAIL_BACKENDS:
+            raise ValueError(f"EMAIL_BACKEND must be one of {', '.join(EMAIL_BACKENDS)}")
+        return value
+
+    @property
+    def email_backend(self) -> str:
+        if self.EMAIL_BACKEND:
+            return self.EMAIL_BACKEND
+        if self.is_production:
+            return "smtp"
+        if self.APP_ENV == "staging":
+            return "test_mailbox"
+        return "console"
+
+    @property
+    def test_mailbox_enabled(self) -> bool:
+        """The test mailbox API: never in production, and only while emails go to it."""
+        return not self.is_production and self.email_backend == "test_mailbox"
 
     @property
     def is_production(self) -> bool:

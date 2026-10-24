@@ -1,0 +1,19 @@
+{% extends "layout.txt" %}
+{% block content %}
+New contact form message
+
+Ticket:       {{ ticket_id }}
+From:         {{ full_name }} <{{ email }}>
+Topic:        {{ topic }}
+{% if organisation %}
+Organisation: {{ organisation }}
+{% endif %}
+Received:     {{ received_at }}
+
+{{ message }}
+
+Reply to this email to answer {{ full_name }} directly.
+{% endblock %}
+{% block footer_note %}
+Sent to the {{ brand.name }} team by the website contact form.
+{% endblock %}

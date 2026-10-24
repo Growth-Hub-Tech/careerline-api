@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% set subject = "We got your message (" ~ ticket_id ~ ")" %}
+{% block preheader %}Thanks for writing to {{ brand.name }}. We usually reply within two working days.{% endblock %}
+{% block content %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">Thanks, {{ full_name }}</h1>
+<p style="margin:0 0 16px 0;">We got your message and will reply to this address. We usually answer within two working days.</p>
+<p style="margin:0 0 16px 0;">Your reference is <strong>{{ ticket_id }}</strong>. Mention it if you write to us again.</p>
+<p style="margin:0 0 8px 0; color:#64748B;">What you sent us:</p>
+<div style="padding:16px; background-color:#F8FAFC; border-radius:6px; white-space:pre-wrap;">{{ message }}</div>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because this address was used on the {{ brand.name }} contact form.</p>{% endblock %}

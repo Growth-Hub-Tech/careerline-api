@@ -1507,6 +1507,72 @@
         "title": "ApiResponse[Targets]",
         "type": "object"
       },
+      "ApiResponse_TestMailboxCleared_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TestMailboxCleared"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[TestMailboxCleared]",
+        "type": "object"
+      },
+      "ApiResponse_TestMailbox_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TestMailbox"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[TestMailbox]",
+        "type": "object"
+      },
       "ApiResponse_Union_Subscription__NoneType__": {
         "properties": {
           "data": {
@@ -5485,6 +5551,106 @@
           "role_id"
         ],
         "title": "TeamMemberCreate",
+        "type": "object"
+      },
+      "TestMailbox": {
+        "properties": {
+          "messages": {
+            "description": "Newest first",
+            "items": {
+              "$ref": "#/components/schemas/TestMailboxMessageOut"
+            },
+            "title": "Messages",
+            "type": "array"
+          },
+          "to": {
+            "title": "To",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "messages"
+        ],
+        "title": "TestMailbox",
+        "type": "object"
+      },
+      "TestMailboxCleared": {
+        "properties": {
+          "deleted": {
+            "title": "Deleted",
+            "type": "integer"
+          },
+          "to": {
+            "title": "To",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "deleted"
+        ],
+        "title": "TestMailboxCleared",
+        "type": "object"
+      },
+      "TestMailboxMessageOut": {
+        "properties": {
+          "html": {
+            "title": "Html",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "integer"
+          },
+          "links": {
+            "description": "Every link in the email, e.g. a confirm or reset link",
+            "items": {
+              "type": "string"
+            },
+            "title": "Links",
+            "type": "array"
+          },
+          "received_at": {
+            "format": "date-time",
+            "title": "Received At",
+            "type": "string"
+          },
+          "reply_to": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reply To"
+          },
+          "subject": {
+            "title": "Subject",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "to": {
+            "title": "To",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "to",
+          "subject",
+          "text",
+          "html",
+          "reply_to",
+          "links",
+          "received_at"
+        ],
+        "title": "TestMailboxMessageOut",
         "type": "object"
       },
       "TokenResponse": {
@@ -16433,6 +16599,148 @@
           "server_error",
           "unavailable",
           "slow"
+        ]
+      }
+    },
+    "/api/v1/test-mailbox": {
+      "delete": {
+        "description": "Delete the emails sent to one address (start a test with an empty mailbox).",
+        "operationId": "clear_test_mailbox_api_v1_test_mailbox_delete",
+        "parameters": [
+          {
+            "description": "The address to clear",
+            "in": "query",
+            "name": "to",
+            "required": true,
+            "schema": {
+              "description": "The address to clear",
+              "format": "email",
+              "title": "To",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_TestMailboxCleared_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "summary": "Clear Test Mailbox",
+        "tags": [
+          "Test mailbox (test server only)"
+        ]
+      },
+      "get": {
+        "description": "The emails sent to one address on the test server, newest first. Send X-Test-Mailbox-Token when the server has one.",
+        "operationId": "read_test_mailbox_api_v1_test_mailbox_get",
+        "parameters": [
+          {
+            "description": "The address the emails were sent to",
+            "in": "query",
+            "name": "to",
+            "required": true,
+            "schema": {
+              "description": "The address the emails were sent to",
+              "format": "email",
+              "title": "To",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_TestMailbox_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "summary": "Read Test Mailbox",
+        "tags": [
+          "Test mailbox (test server only)"
         ]
       }
     },

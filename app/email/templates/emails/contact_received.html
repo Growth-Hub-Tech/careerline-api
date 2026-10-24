@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% set subject = "Contact form: " ~ topic ~ " from " ~ full_name ~ " (" ~ ticket_id ~ ")" %}
+{% block preheader %}New message from {{ full_name }} through the contact form.{% endblock %}
+{% block content %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">New contact form message</h1>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px 0; font-size:14px; line-height:22px;">
+  <tr><td style="padding-right:16px; color:#64748B;">Ticket</td><td>{{ ticket_id }}</td></tr>
+  <tr><td style="padding-right:16px; color:#64748B;">From</td><td>{{ full_name }} &lt;{{ email }}&gt;</td></tr>
+  <tr><td style="padding-right:16px; color:#64748B;">Topic</td><td>{{ topic }}</td></tr>
+  {% if organisation %}<tr><td style="padding-right:16px; color:#64748B;">Organisation</td><td>{{ organisation }}</td></tr>{% endif %}
+  <tr><td style="padding-right:16px; color:#64748B;">Received</td><td>{{ received_at }}</td></tr>
+</table>
+<div style="padding:16px; background-color:#F8FAFC; border-radius:6px; white-space:pre-wrap;">{{ message }}</div>
+<p style="margin:16px 0 0 0;">Reply to this email to answer {{ full_name }} directly.</p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">Sent to the {{ brand.name }} team by the website contact form.</p>{% endblock %}

@@ -15,6 +15,15 @@ from app.email import backends
 from app.email.message import EmailMessage
 from app.email.templates import TEMPLATE_DIR, available_emails, render_email
 
+PLAIN_CONTEXT = {
+    "ticket_id": "CT-20261027-0001",
+    "full_name": "Ada Learner",
+    "email": "ada@example.com",
+    "topic": "support",
+    "organisation": "Acme",
+    "message": "Hello, I need help.",
+    "received_at": "27 Oct 2026, 10:00 UTC",
+}
 SAMPLE_CONTEXT = {
     "ticket_id": "CT-20261027-0001",
     "full_name": "Ada <script>alert(1)</script>",
@@ -32,7 +41,7 @@ def test_the_day_5_emails_exist():
 
 @pytest.mark.parametrize("name", sorted(available_emails()))
 def test_every_email_renders_with_the_one_layout(name):
-    rendered = render_email(name, SAMPLE_CONTEXT)
+    rendered = render_email(name, PLAIN_CONTEXT)
     assert rendered.subject and "{{" not in rendered.subject
     # HTML part: the shared layout, inline styles, brand name, no unrendered placeholders
     assert 'data-layout="careerline-base"' in rendered.html
@@ -41,7 +50,9 @@ def test_every_email_renders_with_the_one_layout(name):
     assert "{{" not in rendered.html and "{%" not in rendered.html
     # Plain-text part: the shared text layout, no HTML tags
     assert settings.EMAIL_BRAND_NAME in rendered.text
-    assert not re.search(r"<[a-z/][^>]*>", rendered.text)
+    assert not re.search(
+        r"</?(p|div|table|tr|td|a|span|br|h1|strong|img|html|body)\b", rendered.text
+    )
     assert "{{" not in rendered.text
 
 

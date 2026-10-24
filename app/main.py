@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from app.api.routes import api_router, health
+from app.api.routes import api_router, health, test_mailbox
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.logging import configure_logging, get_logger
@@ -87,6 +87,9 @@ def create_app() -> FastAPI:
 
     # Global API prefix: every API route lives under /api/v1 without a v1 folder
     app.include_router(api_router, prefix=settings.API_PREFIX)
+    # The test server's mailbox (never in production; see app/api/routes/test_mailbox.py)
+    if not settings.is_production:
+        app.include_router(test_mailbox.router, prefix=settings.API_PREFIX)
     # Sample answers for endpoints not built yet (app/sample). After the real routes, so a real
     # route always wins; off in production unless SAMPLE_API_ENABLED=true.
     if settings.sample_api_enabled:
