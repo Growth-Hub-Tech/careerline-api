@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% set subject = "Confirm your email for " ~ brand.name %}
+{% block preheader %}One click to confirm your email address.{% endblock %}
+{% block content %}
+{% from "_components.html" import button with context %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">Confirm your email</h1>
+<p style="margin:0 0 16px 0;">Hi {{ full_name }}, thanks for signing up to {{ brand.name }}. Please confirm that this is your email address.</p>
+{{ button(link, "Confirm my email") }}
+<p style="margin:0;">The link works once, for {{ hours }} hours.</p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because of your {{ brand.name }} account.</p>{% endblock %}

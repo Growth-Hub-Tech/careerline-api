@@ -23,6 +23,12 @@ PLAIN_CONTEXT = {
     "organisation": "Acme",
     "message": "Hello, I need help.",
     "received_at": "27 Oct 2026, 10:00 UTC",
+    # Day 6 account emails
+    "link": "https://app.careerline.test/verify-email?token=abc",
+    "hours": 48,
+    "minutes": 60,
+    "changed_at": "28 Oct 2026, 10:00 UTC",
+    "reset_link": "https://app.careerline.test/forgot-password",
 }
 SAMPLE_CONTEXT = {
     "ticket_id": "CT-20261027-0001",
@@ -37,6 +43,17 @@ SAMPLE_CONTEXT = {
 
 def test_the_day_5_emails_exist():
     assert {"contact_received", "contact_acknowledgement"} <= set(available_emails())
+
+
+def test_the_day_6_account_emails_exist():
+    assert {"verify_email", "password_reset", "password_changed"} <= set(available_emails())
+
+
+def test_the_confirm_button_uses_the_brand_colour_and_shows_the_link():
+    rendered = render_email("verify_email", PLAIN_CONTEXT)
+    assert "#2563EB" in rendered.html
+    assert rendered.html.count("https://app.careerline.test/verify-email?token=abc") >= 2
+    assert "https://app.careerline.test/verify-email?token=abc" in rendered.text
 
 
 @pytest.mark.parametrize("name", sorted(available_emails()))

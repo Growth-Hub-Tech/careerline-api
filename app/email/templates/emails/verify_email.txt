@@ -1,0 +1,12 @@
+{% extends "layout.txt" %}
+{% block content %}
+Hi {{ full_name }}, thanks for signing up to {{ brand.name }}.
+
+Confirm your email address by opening this link:
+{{ link }}
+
+The link works once, for {{ hours }} hours.
+{% endblock %}
+{% block footer_note %}
+You got this email because of your {{ brand.name }} account.
+{% endblock %}
