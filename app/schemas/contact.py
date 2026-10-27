@@ -12,6 +12,11 @@ class ContactRequest(BaseModel):
     topic: ContactTopic = "general"
     organisation: str | None = Field(default=None, max_length=160)
     message: str = Field(min_length=10, max_length=5000)
+    website: str | None = Field(
+        default=None,
+        max_length=200,
+        description="Spam trap: leave it out or empty. Hide this input from people; bots fill it.",
+    )
 
 
 class ContactReceipt(BaseModel):

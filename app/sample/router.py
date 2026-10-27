@@ -11,7 +11,6 @@ from app.sample.routes import (
     accounts,
     assessments,
     beginner_path,
-    contact,
     helpers,
     invitations,
     organisations,
@@ -27,8 +26,7 @@ from app.sample.routes import (
 
 sample_router = APIRouter()
 
-# Day 2: first half of the API
-sample_router.include_router(contact.router)
+# Day 2: first half of the API (the contact form is real since Day 5: app/api/routes/contact.py)
 sample_router.include_router(accounts.router)
 sample_router.include_router(roles.router)
 sample_router.include_router(assessments.router)

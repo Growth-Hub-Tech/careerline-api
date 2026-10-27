@@ -1,24 +1,8 @@
-"""Day 2 sample answers: contact, accounts, skills and roles, tests, results, profile,
-beginner path and programme clicks."""
+"""Day 2 sample answers: accounts, skills and roles, tests, results, profile,
+beginner path and programme clicks. (The contact form is real since Day 5: see
+tests/integration/test_contact.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
-
-
-async def test_contact_form_is_public_and_returns_a_ticket(client):
-    response = await client.post(
-        f"{API}/contact",
-        json={"full_name": "Ada", "email": "ada@example.com", "message": "Please call me back."},
-    )
-    data = assert_sample(response, 201)
-    assert data["status"] == "received"
-    assert data["ticket_id"].startswith("CT-")
-
-
-async def test_contact_form_rejects_a_too_short_message(client):
-    response = await client.post(
-        f"{API}/contact", json={"full_name": "Ada", "email": "ada@example.com", "message": "hi"}
-    )
-    assert_sample_error(response, 422, "validation_error")
 
 
 async def test_my_account_belongs_to_the_logged_in_person(client, auth):

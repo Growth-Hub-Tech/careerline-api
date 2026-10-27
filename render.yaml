@@ -1,4 +1,6 @@
 # Render Blueprint for the CareerLine test server: web API + background worker + Postgres 16.
+# (On the free plan, which has no worker service, create the web service by hand and set
+# RUN_JOBS_IN_WEB=true: see docs/api.md, "Test server".)
 # Render dashboard: New > Blueprint > pick this repo and branch. Values marked sync: false are
 # asked for once in the dashboard; nothing secret is stored in this file.
 # Real values and the exact steps are in docs/api.md ("Test server").
@@ -45,6 +47,12 @@ services:
         value: 'true'
       - key: WEB_CONCURRENCY
         value: '2'
+      - key: RUN_JOBS_IN_WEB
+        value: 'false' # the worker below runs the jobs (on the free plan, with no worker, set true)
+      - key: TEST_MAILBOX_TOKEN
+        sync: false # emails go to the test mailbox on staging; this keeps GET /api/v1/test-mailbox private
+      - key: SUPPORT_EMAIL
+        sync: false # where contact form messages go (on staging they land in the test mailbox)
       - key: PYTHON_VERSION
         value: 3.13.12
 
@@ -55,7 +63,7 @@ services:
     plan: starter
     branch: dev
     buildCommand: pip install -r requirements.txt
-    # Placeholder until Day 5 (background jobs): starts, checks the database, logs a heartbeat
+    # Runs the background jobs (emails, AI advice); stops cleanly on SIGTERM
     startCommand: python -m app.worker
     envVars:
       - key: DATABASE_URL
@@ -73,5 +81,7 @@ services:
         value: staging
       - key: LOG_JSON
         value: 'true'
+      - key: SUPPORT_EMAIL
+        sync: false
       - key: PYTHON_VERSION
         value: 3.13.12

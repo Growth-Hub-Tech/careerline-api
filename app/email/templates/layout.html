@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{#
+  THE email layout: every CareerLine email is rendered inside this file.
+  To use Omotoke's design, replace this file (and layout.txt), keeping the slots:
+  title, preheader, content, footer_note; and the brand values (brand.name, brand.logo_url,
+  brand.color, brand.support_email, brand.website_url, brand.year).
+  Email clients ignore <style> blocks and external CSS: keep every style inline.
+#}
+<html lang="en" data-layout="careerline-base">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{ subject }}</title>
+</head>
+<body style="margin:0; padding:0; background-color:#F1F5F9; font-family:Arial, Helvetica, sans-serif; color:#0F172A;">
+  <span style="display:none; max-height:0; overflow:hidden; opacity:0;">{% block preheader %}{% endblock %}</span>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F1F5F9;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px; background-color:#FFFFFF; border-radius:8px;">
+          <tr>
+            <td style="padding:24px 32px; border-bottom:1px solid #E2E8F0;">
+              {% if brand.logo_url %}
+              <img src="{{ brand.logo_url }}" alt="{{ brand.name }}" height="32" style="display:block; height:32px; border:0;">
+              {% else %}
+              <span style="font-size:20px; font-weight:bold; color:{{ brand.color }};">{{ brand.name }}</span>
+              {% endif %}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:32px; font-size:16px; line-height:24px; color:#0F172A;">
+              {% block content %}{% endblock %}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 32px; border-top:1px solid #E2E8F0; font-size:12px; line-height:18px; color:#64748B;">
+              {% block footer_note %}{% endblock %}
+              <p style="margin:8px 0 0 0;">Questions? Write to <a href="mailto:{{ brand.support_email }}" style="color:{{ brand.color }};">{{ brand.support_email }}</a>.</p>
+              <p style="margin:8px 0 0 0;">&copy; {{ brand.year }} {{ brand.name }}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

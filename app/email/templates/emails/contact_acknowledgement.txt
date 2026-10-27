@@ -1,0 +1,15 @@
+{% extends "layout.txt" %}
+{% block content %}
+Thanks, {{ full_name }}
+
+We got your message and will reply to this address. We usually answer within two working days.
+
+Your reference is {{ ticket_id }}. Mention it if you write to us again.
+
+What you sent us:
+
+{{ message }}
+{% endblock %}
+{% block footer_note %}
+You got this email because this address was used on the {{ brand.name }} contact form.
+{% endblock %}

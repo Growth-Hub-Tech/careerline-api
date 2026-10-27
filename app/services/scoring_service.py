@@ -3,12 +3,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.config import settings
 from app.core.exceptions import BadRequestError, ConflictError, ForbiddenError, NotFoundError
 from app.core.logging import get_logger
-from app.integrations.openai_client import get_ai_benchmark
+from app.integrations.openai_client import fallback_recommendation
 from app.models.models import AttemptStatus
 from app.repositories.attempt_repo import get_attempt_for_update, get_attempt_question_ids
 from app.repositories.recommendation_repo import (
     get_level_name_for_attempt,
-    get_skill_name_for_attempt,
     get_subskill_scores,
     save_recommendations,
 )
@@ -22,6 +21,7 @@ from app.repositories.scoring_repo import (
     save_subskill_stats,
     update_attempt_score,
 )
+from app.services.ai_recommendations import ai_enabled, queue_ai_recommendations
 
 logger = get_logger(__name__)
 
@@ -58,7 +58,7 @@ async def submit_and_score(db: AsyncSession, attempt_id: int, learner_id: int, a
     if attempt is None:
         raise AttemptNotFound(f"Attempt {attempt_id} not found")
     if attempt.learner_id != learner_id:
-        raise AttemptNotYours(f"Attempt {attempt_id} does not belong to learner {learner_id}")
+        raise AttemptNotYours(f"Attempt {attempt_id} does not belong to you")
     if attempt.attempt_status != AttemptStatus.IN_PROGRESS:
         raise AttemptAlreadySubmitted(
             f"Attempt {attempt_id} is already {attempt.attempt_status.value.lower()}; start a new attempt to retake"
@@ -185,10 +185,6 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
     if not subskill_scores:
         return None
 
-    # Fetch skill name and level name
-    skill_name = await get_skill_name_for_attempt(db, attempt_id)
-    level_name = await get_level_name_for_attempt(db, attempt_id)
-
     # Identify weak subskills below threshold
     weak_subskills = [
         s for s in subskill_scores if float(s.percentage_score) < settings.WEAK_THRESHOLD
@@ -201,25 +197,18 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
     # Sort by lowest score first. most urgent first
     weak_subskills = sorted(weak_subskills, key=lambda x: float(x.percentage_score))
 
-    # Generate recommendations
+    # Plain advice now; the AI advice comes from a background job (never inside the request:
+    # before Day 5 submit waited for one OpenAI call per weak subskill)
     recommendations = []
     for priority, subskill in enumerate(weak_subskills, start=1):
         score = float(subskill.percentage_score)
-        name = subskill.subskill_name
-
-        # Call OpenAI for enriched recommendation
-        logger.info(
-            "ai_recommendation_requested", attempt_id=attempt_id, subskill=name, score=score
-        )
-        action = get_ai_benchmark(skill_name, name, level_name, score)
-
         recommendations.append(
             {
                 "priority": priority,
                 "subskill_id": subskill.subskill_id,
-                "subskill_name": name,
+                "subskill_name": subskill.subskill_name,
                 "percentage_score": score,
-                "recommendation": action,
+                "recommendation": fallback_recommendation(subskill.subskill_name, score),
             }
         )
 
@@ -227,4 +216,14 @@ async def generate_recommendations(db: AsyncSession, attempt_id: int, learner_id
     await save_recommendations(db, attempt_id, learner_id, recommendations)
     logger.info("recommendations_saved", attempt_id=attempt_id, count=len(recommendations))
 
-    return {"total_weak_areas": len(recommendations), "recommendations": recommendations}
+    # Queued in this transaction: the job exists only if the submit commits
+    ai_advice = "unavailable"
+    if ai_enabled():
+        await queue_ai_recommendations(db, attempt_id)
+        ai_advice = "queued"
+
+    return {
+        "total_weak_areas": len(recommendations),
+        "ai_advice": ai_advice,
+        "recommendations": recommendations,
+    }

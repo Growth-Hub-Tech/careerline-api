@@ -1,3 +1,5 @@
+import uuid
+
 from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
@@ -22,12 +24,14 @@ def error_response(
     details=None,
     headers: dict[str, str] | None = None,
 ) -> JSONResponse:
+    # Every error has a reference number. The request middleware always sets one; this fallback
+    # only matters if an error is ever rendered outside it.
+    request_id = request_id or uuid.uuid4().hex
     body = ErrorResponse(
         error=ErrorDetail(code=code, message=message, request_id=request_id, details=details)
     )
     response_headers = dict(headers or {})
-    if request_id:
-        response_headers["X-Request-ID"] = request_id
+    response_headers["X-Request-ID"] = request_id
     return JSONResponse(
         status_code=status_code,
         content=jsonable_encoder(body, exclude_none=True),
@@ -41,10 +45,17 @@ def _request_id(request: Request) -> str | None:
 
 async def app_error_handler(request: Request, exc: Exception) -> JSONResponse:
     assert isinstance(exc, AppError)
+    message, details = exc.message, exc.details
     if exc.status_code >= 500:
-        logger.error("app_error", code=exc.code, status=exc.status_code, message=exc.message)
+        # Logged once, with the stack trace and the request id (bound by the middleware).
+        # Handlers run inside Starlette's `except` block, so .exception() has the traceback.
+        logger.exception("app_error", code=exc.code, status=exc.status_code, message=exc.message)
+    if exc.status_code == 500:
+        # A 500 is always our fault: its text is for the logs, never for the client.
+        # (503 and the other 5xx keep their message: they are written for users, e.g. "try again".)
+        message, details = INTERNAL_ERROR_MESSAGE, None
     return error_response(
-        _request_id(request), exc.status_code, exc.code, exc.message, exc.details, exc.headers
+        _request_id(request), exc.status_code, exc.code, message, details, exc.headers
     )
 
 
@@ -58,7 +69,7 @@ async def http_exception_handler(request: Request, exc: Exception) -> JSONRespon
         message, details = "Request failed", exc.detail
     if status_code >= 500:
         # Never send internals to the client
-        logger.error("http_error", status=status_code, detail=exc.detail)
+        logger.exception("http_error", status=status_code, detail=exc.detail)
         message, details = INTERNAL_ERROR_MESSAGE, None
     return error_response(
         _request_id(request),

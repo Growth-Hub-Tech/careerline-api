@@ -2,7 +2,13 @@
 
 ## Migrations
 
-There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schema.py`, that creates every table and enum type. It replaced four hand-built migrations on Day 4; the schema is exactly the same (checked with `pg_dump --schema-only` on Postgres 16).
+There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schema.py`, that creates every table and enum type. It replaced four hand-built migrations on Day 4; the schema is exactly the same (checked with `pg_dump --schema-only` on Postgres 16). Later changes are migrations on top of it, in one straight line:
+
+| Revision | Day | What it does |
+| --- | --- | --- |
+| `c5a1d0e7b2f4` | 5 | `background_jobs` (the job queue) |
+| `d2e8f1a4c6b9` | 5 | `email_outbox`, `test_mailbox_messages` |
+| `e4b7c9d1f3a2` | 5 | `contact_messages`, `rate_limit_events` |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.

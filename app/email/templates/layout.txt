@@ -1,0 +1,10 @@
+{#- The plain-text version of the layout. Replace it together with layout.html. -#}
+{{ brand.name }}
+{{ "=" * (brand.name | length) }}
+
+{% block content %}{% endblock %}
+
+--
+{% block footer_note %}{% endblock %}
+Questions? Write to {{ brand.support_email }}.
+(c) {{ brand.year }} {{ brand.name }}
