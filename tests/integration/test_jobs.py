@@ -241,3 +241,29 @@ async def test_the_worker_loop_runs_jobs_until_stopped(db, calls):
     stop.set()
     await asyncio.wait_for(task, timeout=5)
     assert sorted(calls) == [1, 2]
+
+
+async def test_a_job_whose_batch_lease_ran_out_is_not_run_by_two_workers(db, calls):
+    """A claims 3 jobs in one batch and runs them one by one. Job 3 starts after the batch lease
+    ran out, so B may take it over, but then A must skip it, never run it as well."""
+
+    async def one_second(session, payload):
+        calls.append(("run", payload["n"]))
+        await asyncio.sleep(1.0)
+
+    registry.HANDLERS["test.one_second"] = one_second
+    for n in (1, 2, 3):
+        await enqueue("test.one_second", {"n": n})
+
+    a = runner("A", lease_seconds=1.5, batch_size=3)  # timeout 1.2s > 1.0s per job
+    b = runner("B", lease_seconds=1.5, batch_size=3)
+
+    async def b_polls_while_a_runs_job_2():
+        await asyncio.sleep(1.75)  # job 2 started at 1.0s; the batch lease ended at 1.5s
+        await b.run_once()
+
+    await asyncio.gather(a.run_once(), b_polls_while_a_runs_job_2())
+
+    assert sorted(calls) == [("run", 1), ("run", 2), ("run", 3)]  # each job ran once
+    statuses = db.execute(text("SELECT status FROM background_jobs")).scalars().all()
+    assert statuses == ["succeeded"] * 3

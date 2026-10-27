@@ -22,5 +22,9 @@ router = APIRouter(prefix="/contact", tags=["Contact"], route_class=EnvelopeRout
 async def send_contact_message(
     data: ContactRequest, request: Request, db: AsyncSession = Depends(get_db, scope="function")
 ):
-    client_ip = request.client.host if request.client else None
+    # Render's proxy appends the real client address as the LAST X-Forwarded-For entry. The
+    # entries before it come from the client, and uvicorn (--forwarded-allow-ips "*") puts the
+    # first one in request.client, so request.client.host can be anything the client sends.
+    hops = [hop.strip() for hop in request.headers.get("x-forwarded-for", "").split(",")]
+    client_ip = hops[-1] or (request.client.host if request.client else None)
     return await submit_contact_message(db, data, client_ip)

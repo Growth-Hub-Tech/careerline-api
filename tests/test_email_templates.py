@@ -155,3 +155,23 @@ async def test_smtp_without_a_host_fails_loudly(monkeypatch):
 
 async def test_the_console_backend_only_logs(caplog):
     await backends.ConsoleBackend().send(_message())
+
+
+def test_a_line_break_in_a_name_cannot_break_the_subject_header():
+    """The team email's subject includes the sender's name; SMTP refuses a header with a line
+    break, so without this the job fails on every attempt and the team never gets the message."""
+    rendered = render_email(
+        "contact_received", {**PLAIN_CONTEXT, "full_name": "Ada\r\nBcc: someone@example.com"}
+    )
+    assert "\r" not in rendered.subject and "\n" not in rendered.subject
+    mime = backends.SmtpBackend().build(
+        EmailMessage(
+            to="team@example.com",
+            subject=rendered.subject,
+            html=rendered.html,
+            text=rendered.text,
+            reply_to="ada@example.com",
+            reference="outbox-1",
+        )
+    )
+    assert mime["Bcc"] is None

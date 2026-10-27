@@ -59,7 +59,8 @@ def available_emails() -> list[str]:
 def render_email(name: str, context: dict[str, Any]) -> RenderedEmail:
     values = {**context, "brand": brand()}
     html_template = _env.get_template(f"emails/{name}.html")
-    subject = str(getattr(html_template.make_module(values), "subject", "")).strip()
+    # One line: a line break from what people typed (a name) would break the Subject header
+    subject = " ".join(str(getattr(html_template.make_module(values), "subject", "")).split())
     if not subject:
         raise ValueError(f"emails/{name}.html does not set a subject")
     html = html_template.render(values)

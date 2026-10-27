@@ -112,3 +112,29 @@ async def test_the_sample_contact_route_is_gone(client):
     ]
     assert len(contact) == 1
     assert not (contact[0].openapi_extra or {}).get("x-sample")
+
+
+async def test_a_spoofed_x_forwarded_for_does_not_get_round_the_ip_limit(db):
+    """Production runs uvicorn with --proxy-headers --forwarded-allow-ips "*": the client sends the
+    first X-Forwarded-For entries, and Render's proxy appends the real address as the last one."""
+    import httpx
+    from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
+
+    from app.main import app
+
+    proxied = ProxyHeadersMiddleware(app, trusted_hosts="*")
+    transport = httpx.ASGITransport(app=proxied, raise_app_exceptions=False)
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        for n in range(5):
+            response = await client.post(
+                f"{API}/contact",
+                json={**FORM, "email": f"victim{n}@example.com"},
+                headers={"X-Forwarded-For": f"10.9.8.{n}, 203.0.113.7"},
+            )
+            assert response.status_code == 201, response.text
+        response = await client.post(
+            f"{API}/contact",
+            json={**FORM, "email": "victim5@example.com"},
+            headers={"X-Forwarded-For": "10.9.8.99, 203.0.113.7"},
+        )
+    assert_error_envelope(response, 429, "rate_limited")

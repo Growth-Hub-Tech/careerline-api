@@ -16,7 +16,14 @@ from app.core.config import settings
 from app.core.logging import get_logger
 from app.db.session import AsyncSessionLocal
 from app.jobs import registry
-from app.jobs.queue import ClaimedJob, LeaseLost, claim, mark_failed, mark_succeeded
+from app.jobs.queue import (
+    ClaimedJob,
+    LeaseLost,
+    claim,
+    mark_failed,
+    mark_succeeded,
+    renew_lease,
+)
 
 logger = get_logger(__name__)
 
@@ -77,6 +84,11 @@ class JobRunner:
             return
         try:
             async with self.session_factory() as session:
+                # The batch shares one lease from claim time: give this job a full lease of its
+                # own now, or skip it if another worker took it over while earlier jobs ran
+                if not await renew_lease(session, job, self.worker_id, self.lease_seconds):
+                    raise LeaseLost(f"job {job.id} is no longer held by {self.worker_id}")
+                await session.commit()
                 await asyncio.wait_for(handler(session, job.payload), timeout=self.timeout_seconds)
                 await mark_succeeded(session, job, self.worker_id)
                 await session.commit()

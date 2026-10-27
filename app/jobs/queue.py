@@ -104,6 +104,27 @@ async def claim(
     return sorted(jobs, key=lambda job: job.id)
 
 
+async def renew_lease(
+    session: AsyncSession, job: ClaimedJob, worker_id: str, lease_seconds: float
+) -> bool:
+    """Start a full lease for a job about to run. False: its batch lease ran out meanwhile and
+    another worker took it over, so this worker must not run it."""
+    result = await session.execute(
+        text(
+            "UPDATE background_jobs SET locked_until = now() + make_interval(secs => :lease),"
+            " updated_at = now() "
+            "WHERE id = :id AND status = 'running' AND locked_by = :worker AND attempts = :attempts"
+        ),
+        {
+            "id": job.id,
+            "worker": worker_id,
+            "attempts": job.attempts,
+            "lease": float(lease_seconds),
+        },
+    )
+    return result.rowcount == 1  # type: ignore[attr-defined]
+
+
 async def mark_succeeded(session: AsyncSession, job: ClaimedJob, worker_id: str) -> None:
     """Mark the job done in the handler's transaction; raises LeaseLost if it is not ours anymore."""
     result = await session.execute(
