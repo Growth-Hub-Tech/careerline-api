@@ -26,8 +26,9 @@ class AttemptStatus(str, enum.Enum):
     IN_PROGRESS = "IN_PROGRESS"
     COMPLETED = "COMPLETED"
     CANCELLED = "CANCELLED"
-    PASSED = "PASSED"
-    FAILED = "FAILED"
+    PASSED = "PASSED"  # the retired fixed test (before Day 10)
+    FAILED = "FAILED"  # the retired fixed test (before Day 10)
+    EXPIRED = "EXPIRED"  # Day 10: the time ran out with too few answers for a result
 
 
 # Day 8: set by the question-quality check when the seeds load (app/services/question_quality.py)
@@ -193,6 +194,15 @@ class TestAttempt(Base):
     attempt_status: Mapped[AttemptStatus] = mapped_column(
         pg_enum(AttemptStatus, "attemptstatus"), default=AttemptStatus.IN_PROGRESS
     )
+    # Day 10: the adaptive test. fixed = the retired pass/fail test of before Day 10.
+    test_format: Mapped[str] = mapped_column(
+        String(20), nullable=False, default="adaptive", server_default="fixed"
+    )
+    question_count: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    ability: Mapped[float | None] = mapped_column(Numeric(5, 3), nullable=True)
+    confidence: Mapped[float | None] = mapped_column(Numeric(4, 3), nullable=True)
+    ended_by: Mapped[str | None] = mapped_column(String(20), nullable=True)  # finished | time_up
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[DateTime] = mapped_column(
         DateTime, server_default=func.now(), onupdate=func.now()
@@ -330,3 +340,11 @@ class AttemptQuestion(Base):
         Integer, ForeignKey("questions.question_id"), primary_key=True
     )
     position: Mapped[int] = mapped_column(Integer, nullable=False)
+    # Day 10: served one at a time; the answer is kept on the same row
+    level: Mapped[LevelName | None] = mapped_column(pg_enum(LevelName, "levelname"), nullable=True)
+    served_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    selected_option_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("options.option_id"), nullable=True
+    )
+    is_correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    answered_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
