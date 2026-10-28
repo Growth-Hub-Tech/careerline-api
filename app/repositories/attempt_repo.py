@@ -13,6 +13,7 @@ from app.models.models import (
     Subskill,
     TestAttempt,
 )
+from app.services.question_picking import pick_balanced
 
 logger = get_logger(__name__)
 
@@ -76,27 +77,9 @@ async def get_questions_for_attempt(
     )
     seen: dict[int, int] = {row[0]: row[1] for row in seen_result.all()}
 
-    # Same attempt_id -> same selection (reproducible); new attempt -> new selection
-    rng = random.Random(attempt_id)
-
-    # Group by subskill; inside each group: least-seen first, random among equals
-    groups: dict[int, list[Question]] = {}
-    for q in pool:
-        groups.setdefault(q.subskill_id, []).append(q)
-    for qs in groups.values():
-        qs.sort(key=lambda q: (seen.get(q.question_id, 0), rng.random()))
-
-    # Round-robin over subskills so every subskill is covered evenly
-    subskill_order = list(groups.keys())
-    rng.shuffle(subskill_order)
-    selected: list[Question] = []
-    while len(selected) < min(count, len(pool)):
-        for sid in subskill_order:
-            if groups[sid] and len(selected) < count:
-                selected.append(groups[sid].pop(0))
-
-    rng.shuffle(selected)  # mix subskills in the final order
-    return selected
+    # Same attempt_id -> same selection (reproducible); new attempt -> new selection.
+    # Balanced across subskills, least seen first (app/services/question_picking.py)
+    return pick_balanced(pool, seen, random.Random(attempt_id), count)
 
 
 # Fetch options for a question without revealing correct answer

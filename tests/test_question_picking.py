@@ -37,7 +37,8 @@ def test_balanced_pick_covers_every_subskill_evenly():
 
 def test_balanced_pick_prefers_questions_seen_least():
     pool = [q for q in bank() if q.level == "JUNIOR"]
-    seen = {q.question_id: 1 for q in pool[:9]}  # 3 never-seen questions are left, one per subskill
+    # 3 of the 4 questions of each subskill seen before: one never-seen question per subskill
+    seen = {q.question_id: 1 for q in pool if q.question_id % 4 != 0}
     picked = pick_balanced(pool, seen=seen, rng=random.Random(2), count=3)
     assert all(q.question_id not in seen for q in picked)
 
