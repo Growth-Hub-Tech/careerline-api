@@ -72,8 +72,8 @@ Every answer except login is an envelope:
 | 403 | `forbidden` | Logged in, but not allowed (someone else's data, wrong account type) | Show "not allowed" |
 | 404 | `not_found` | Doesn't exist (or isn't yours) | Show "not found" |
 | 405 | `method_not_allowed` | Wrong HTTP method | Bug in the call |
-| 409 | `conflict` | Already done (e.g. submitted twice, invitation already used) | Refresh the item |
-| 410 | `expired` / `gone` | Link, token or offer expired / old route retired | Ask for a new link |
+| 409 | `conflict` | Already done (e.g. invitation already used); tests also use `not_current_question`, `attempt_finished`, `skill_not_ready` | Refresh the item |
+| 410 | `expired` / `gone` | Link, token, offer or test time expired / old route retired | Ask for a new link, or show the test's end |
 | 422 | `validation_error` | Body or parameters invalid (`details` lists the fields) | Show the field errors |
 | 429 | `rate_limited` | Too many requests (`Retry-After` header, seconds) | Wait and retry |
 | 500 | `internal_error` | Our bug | Generic error + request id |
@@ -126,6 +126,7 @@ The test server loads these on every deploy (`DEMO_DATA_ON_START=true`). Every a
 | --- | --- |
 | `demo.learner@example.com` | a learner |
 | `demo.learner2@example.com` | a second learner (e.g. the candidate a recruiter invites) |
+| `demo.professional@example.com` | a professional with four finished tests and a skill history (Frontend Web Development twice, JUNIOR then MID; API Design; Backend Development) for the results and history screens |
 | `demo.owner@example.com` | owner of Demo Company Ltd (organisation id 41) |
 | `demo.admin@example.com` | admin of Demo Company Ltd |
 | `demo.recruiter@example.com` | recruiter of Demo Company Ltd |
@@ -139,9 +140,23 @@ Organisation 41 is also the sample organisation, so the sample audit, heatmap an
 - `test_ids` in a role: one per skill that can be tested now. Until `GET /tests` is real, a test id is `200 + skill_id` (so 201 is Frontend Web Development); start it with `POST /attempts/start` and that `skill_id`.
 - `GET /skills/` has `testable` for each skill. A skill can be tested only when every level has at least 15 questions that passed the question-quality check. Otherwise `POST /attempts/start` answers `409` with code `skill_not_ready` and `details: {"minimum_per_level": 15, "short_by": {"MID": 3}}`. Show those skills as "coming soon". Today 14 of the 50 skills can be tested.
 
+## Taking a test (Day 10)
+
+The adaptive test: 16 questions, one at a time, harder after a right answer and easier after a wrong one, 30 minutes. No pass or fail and no self-declared level: the test finds the level (docs/adaptive-engine.md).
+
+1. `POST /attempts/start` with `{"skill_id": 1}` → the attempt state with the first `question` (`question_id`, `question_text`, `subskill_id`, `options` with `option_id` and `option_text`; never which option is right). If a test of that skill is already in progress it is resumed: same attempt, same question, `resumed: true`. `declared_level` is retired: still accepted, ignored. A first test starts at JUNIOR, a retake at the level the person reached last time.
+2. `POST /attempts/{attempt_id}/answer` with `{"question_id": …, "selected_option_id": …}` → the next question (`answered` goes up; the response never says whether the answer was right), or after the last one `status: "completed"` with `result` and `recommendations`.
+3. After a reload, `GET /attempts/{attempt_id}/question` gives the same state again.
+
+`result`: `score` (0–100), `level` (BEGINNER 0–40, JUNIOR 41–60, MID 61–80, ADVANCED 81–100), `confidence` (0–1) and `confidence_label` (low/medium/high), `answered`, `correct`, `strengths` and `weaknesses` (subskills), `subskills` (each with `band`: strong/developing/weak), `ended_by` (`finished` or `time_up`), `completed_at`. `GET /attempts/{attempt_id}` carries the same `result`.
+
+Errors: `409 not_current_question` (that question is not the one to answer now: already answered or never served), `409 attempt_finished` (the test is over or cancelled: start a new one), `400` (an option of another question), `410 expired` (the 30 minutes ran out; `details.status` is `completed` when at least 8 questions were answered, so there is a result with `ended_by: "time_up"`, or `expired` with no result), `409 skill_not_ready` (Day 8). `POST /attempts/submit` (the old fixed test) answers `410 gone`.
+
+My skills: `GET /profile/skills` is the latest level per skill tested; `GET /profile/skills/history` (optionally `?skill_id=`) every finished test, newest first, with level, score, confidence, strengths and weaknesses.
+
 ## Background jobs
 
-Slow work runs in background jobs, after the request has answered: emails, and the AI advice for weak subskills. `POST /attempts/submit` now answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
+Slow work runs in background jobs, after the request has answered: emails, and the AI advice for weak subskills. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
 
 ## Sample data
 
@@ -153,7 +168,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -203,7 +218,7 @@ Paystack's webhook (`POST /payments/webhooks/paystack`, `charge.success`) does t
 
 1. Recruiter (or organisation): `POST /invitations` `{ "email", "full_name", "test_id": 202 }` → `status: "sent"`, `token`, `invite_url` (the link in the email: `https://<website>/invite/<token>`).
 2. Invitee opens the link: `GET /invitations/token/{token}` (no login needed) shows who invited them and the test. After login, `POST /invitations/token/{token}/accept` → `status: "accepted"` and an `attempt_id`.
-3. The invitee finishes the test → `status: "completed"` with a `result_id` (real: when the attempt is submitted; sample: `POST /sample/invitations/{token}/complete`).
+3. The invitee finishes the test → `status: "completed"` with a `result_id` (real: when the attempt is finished; sample: `POST /sample/invitations/{token}/complete`).
 4. The sender sees each step in `GET /invitations/{invitation_id}` and `GET /invitations`.
 
 Out-of-order steps are a 409, an expired invitation is a 410 (`POST /sample/invitations/{token}/expire` makes one expire now), a revoked one can't be accepted.
@@ -255,6 +270,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 10**: real test-taking (see "Taking a test"). `POST /attempts/start` returns the attempt state with one `question` (was: all questions at once) and resumes a test in progress; `declared_level` is ignored (was: required, `400` when invalid). New `GET /attempts/{attempt_id}/question` and `POST /attempts/{attempt_id}/answer`. `POST /attempts/submit` answers `410 gone` (the pass/fail result, `status: passed/failed`, `confirmed_level` and `level_suggestion` are gone). `GET /attempts/{attempt_id}`: new `result`, and `attempt_status` can be `expired`. `GET /profile/skills` is real (no more `X-Sample-Data`; `level` and `percentage_score` come from the latest test) and new `GET /profile/skills/history`. New demo account `demo.professional@example.com`. Still sample and unchanged: `/results` (its `passed` field will go when it is made real).
 - **Day 9**: no API change. The adaptive test engine and its simulation (docs/adaptive-engine.md); Day 10 serves it.
 - **Day 8**: `GET /roles` and `GET /roles/{role_id}` are real (same shapes, no more `X-Sample-Data`; 8 pilot roles, ids 101 to 108; `test_ids` only lists skills that can be tested now, as `200 + skill_id`). New `GET /job-titles` (the title ladder with the expected level for each). `GET /skills/`: new field `testable`. `POST /attempts/start`: new `409 skill_not_ready` for a skill without enough reviewed questions; only questions that passed the quality check are served.
 - **Day 7**: who may call what is enforced on every route (table in "Who can call what"): organisation and recruiter routes need an organisation role (learners get `403`; before, any token worked), another organisation's id is `404`. New `/me` routes (`/learners/me`, `/attempts/me`, `/recommendations/levels/me`, `/recommendations/pathway/me/{skill_id}`); the learner-id routes are deprecated. New `/organisations/{id}/users` (accounts and roles). `/accounts/me`: real `account_type` and `organisation_id`, new field `organisation_role`. `learner_id` optional in `POST /learners/behavioural-answers`. Demo accounts on the test server.
