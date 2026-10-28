@@ -187,6 +187,7 @@ Every email is rendered inside `app/email/templates/layout.html` (and `layout.tx
 
 ## Scripts
 
+- `scripts/simulate_adaptive.py`: simulates 1,000 people per level through the adaptive test engine and prints how well the scores separate the levels (docs/adaptive-engine.md).
 - `scripts/check_questions.py`: the question-quality check (Day 8): each question's issues and status, which skills can be tested, and the experts' review file (`--review-file`, then `--apply-reviews`). See docs/question-quality.md.
 - `scripts/rebalance_distractors.py`: drafts rewritten wrong options for human review. It never writes to the database.
 - `scripts/sql/`: one-off repair SQL for databases copied from the old MySQL database (`reset_sequences.sql`, `fix_learner_levels.sql`).
