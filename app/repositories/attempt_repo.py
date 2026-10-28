@@ -9,6 +9,7 @@ from app.models.models import (
     Option,
     ProficiencyLevel,
     Question,
+    QuestionStatus,
     Subskill,
     TestAttempt,
 )
@@ -46,11 +47,16 @@ async def get_questions_for_attempt(
     learner_id: int,
     count: int,
 ):
-    # Whole pool for this skill and difficulty level
+    # Whole pool for this skill and difficulty level: only questions that passed the quality
+    # check (Day 8)
     result = await db.execute(
         select(Question)
         .join(Subskill, Question.subskill_id == Subskill.subskill_id)
-        .where(Subskill.skill_id == skill_id, Question.difficulty_level == difficulty_level)
+        .where(
+            Subskill.skill_id == skill_id,
+            Question.difficulty_level == difficulty_level,
+            Question.status == QuestionStatus.ACTIVE,
+        )
         .order_by(Question.question_id)
     )
     pool = list(result.scalars().all())
