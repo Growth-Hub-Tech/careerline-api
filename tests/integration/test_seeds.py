@@ -83,12 +83,8 @@ async def test_a_fresh_database_with_the_seeds_can_start_an_attempt(client, lear
         # Back to what migrations alone give you: no reference data at all
         conn.exec_driver_sql("TRUNCATE proficiency_level, level_threshold CASCADE")
         load(conn)
-        skill_id = conn.execute(
-            text(
-                "SELECT s.skill_id FROM skills s JOIN subskills ss USING (skill_id) "
-                "JOIN questions q USING (subskill_id) WHERE q.difficulty_level = 'JUNIOR' LIMIT 1"
-            )
-        ).scalar_one()
+    # Frontend Web Development is well stocked (every level has enough active questions)
+    skill_id = 1
 
     response = await client.post(
         f"{API}/attempts/start",
@@ -113,3 +109,56 @@ def test_the_command_line_loader(database):
     assert "questions" in run.stdout
     last = [line.split() for line in run.stdout.splitlines() if line.startswith("questions")][0]
     assert last == ["questions", "4000", "0", "0", "4000"]
+
+
+def test_each_question_gets_its_status_and_issues_from_the_quality_check(database):
+    with database.begin() as conn:
+        load(conn)
+        rows = conn.execute(
+            text("SELECT status::text, count(*) FROM questions GROUP BY status")
+        ).all()
+        # question 1 ("What does HTML stand for?") is a good question
+        first = conn.execute(
+            text("SELECT status::text, quality_issues FROM questions WHERE question_id = 1")
+        ).one()
+        blocked = conn.execute(
+            text(
+                "SELECT count(*) FROM questions "
+                "WHERE status = 'NEEDS_REVIEW' AND cardinality(quality_issues) = 0"
+            )
+        ).scalar_one()
+    counts = dict(rows)
+    assert counts["ACTIVE"] > 0 and counts["NEEDS_REVIEW"] > 0
+    assert sum(counts.values()) == 4000
+    assert first == ("ACTIVE", [])
+    assert blocked == 0, "a question is never held back without a reason"
+
+
+def test_job_roles_and_the_title_ladder_are_loaded(database):
+    with database.begin() as conn:
+        load(conn)
+        roles = conn.execute(text("SELECT count(*) FROM job_roles")).scalar_one()
+        role_skills = conn.execute(text("SELECT count(*) FROM job_role_skills")).scalar_one()
+        ladder = conn.execute(
+            text("SELECT slug, expected_level::text FROM job_titles ORDER BY rank")
+        ).all()
+    assert roles == 8 and role_skills >= 16
+    assert [slug for slug, _ in ladder] == ["intern", "junior", "mid", "senior", "lead"]
+    assert ladder[0][1] == "BEGINNER" and ladder[-1][1] == "ADVANCED"
+
+
+def test_a_skill_removed_from_a_role_in_the_file_is_removed_from_the_role(database):
+    with database.begin() as conn:
+        load(conn)
+        conn.execute(
+            text(
+                "INSERT INTO job_role_skills (role_id, skill_id, target_level, position) "
+                "VALUES (101, 50, 'JUNIOR', 9)"
+            )
+        )
+    with database.begin() as conn:
+        load(conn)
+        extra = conn.execute(
+            text("SELECT count(*) FROM job_role_skills WHERE role_id = 101 AND skill_id = 50")
+        ).scalar_one()
+    assert extra == 0
