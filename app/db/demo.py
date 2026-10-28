@@ -10,7 +10,7 @@ and public on purpose: never use them anywhere real.
 
 import asyncio
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -40,12 +40,28 @@ class DemoAccount:
     role: str | None  # role in the demo company; None = a learner
 
 
+# Day 10: a professional with finished tests and a skill history, for the results screens
+DEMO_PROFESSIONAL = "demo.professional@example.com"
+
 DEMO_ACCOUNTS = (
     DemoAccount("demo.learner@example.com", "Demo Learner", None),
+    DemoAccount(DEMO_PROFESSIONAL, "Demo Professional", None),
     DemoAccount("demo.learner2@example.com", "Demo Learner Two", None),
     DemoAccount("demo.owner@example.com", "Demo Owner", "owner"),
     DemoAccount("demo.admin@example.com", "Demo Admin", "admin"),
     DemoAccount("demo.recruiter@example.com", "Demo Recruiter", "recruiter"),
+)
+
+
+# The demo professional's finished tests, oldest first: (skill, the level they answer at, days
+# ago). They answer every question at or below that level right and harder ones wrong, except
+# the skill's first subskill, which they always get wrong (so the result shows a weakness).
+# Frontend Web Development twice, to show progress in the history.
+DEMO_RESULTS = (
+    (1, "JUNIOR", 45),
+    (7, "MID", 20),
+    (1, "MID", 10),
+    (2, "JUNIOR", 5),
 )
 
 
@@ -113,7 +129,75 @@ async def load_into(db: AsyncSession) -> dict[str, Any]:
         else:
             member.organisation_id = DEMO_ORGANISATION_ID
             member.role = demo.role
-    return {"accounts_created": created, "accounts": len(DEMO_ACCOUNTS), "company": company.name}
+    professional = await db.scalar(select(Learner).where(Learner.email == DEMO_PROFESSIONAL))
+    assert professional is not None
+    results = await _load_demo_results(db, professional)
+    return {
+        "accounts_created": created,
+        "accounts": len(DEMO_ACCOUNTS),
+        "company": company.name,
+        "results_created": results,
+    }
+
+
+async def _load_demo_results(db: AsyncSession, professional: Learner) -> int:
+    """The demo professional's finished tests, taken through the real test engine. Only once
+    (skipped when they already have results) and only for skills that can be tested (none
+    before the question bank is loaded)."""
+    from app.models.history import SkillHistory
+    from app.models.models import AttemptStatus, Option, Question, Subskill, TestAttempt
+    from app.repositories.question_repo import readiness
+    from app.services import test_taking_service as taking
+
+    already = await db.scalar(
+        select(SkillHistory.id).where(SkillHistory.learner_id == professional.learner_id).limit(1)
+    )
+    if already is not None:
+        return 0
+    levels = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
+    created = 0
+    for skill_id, answers_at, days_ago in DEMO_RESULTS:
+        if not (await readiness(db, skill_id))[0]:
+            continue
+        weak_subskill = await db.scalar(
+            select(Subskill.subskill_id)
+            .where(Subskill.skill_id == skill_id)
+            .order_by(Subskill.subskill_id)
+            .limit(1)
+        )
+        state = await taking.start_or_resume(db, professional.learner_id, skill_id)
+        while state.status == "in_progress" and state.question is not None:
+            question = await db.get(Question, state.question.question_id)
+            assert question is not None
+            right = (
+                levels.index(question.difficulty_level.value) <= levels.index(answers_at)
+                and question.subskill_id != weak_subskill
+            )
+            option_id = await db.scalar(
+                select(Option.option_id)
+                .where(Option.question_id == question.question_id, Option.is_correct.is_(right))
+                .order_by(Option.option_id)
+                .limit(1)
+            )
+            assert option_id is not None
+            state = await taking.answer_question(
+                db, state.attempt_id, professional.learner_id, question.question_id, option_id
+            )
+        # Dated in the past, so the history reads like real use
+        when = datetime.now(UTC) - timedelta(days=days_ago)
+        attempt = await db.get(TestAttempt, state.attempt_id)
+        assert attempt is not None and attempt.attempt_status == AttemptStatus.COMPLETED
+        attempt.start_time = (when - timedelta(minutes=12)).replace(tzinfo=None)  # type: ignore[assignment]
+        attempt.end_time = when.replace(tzinfo=None)  # type: ignore[assignment]
+        attempt.expires_at = when + timedelta(minutes=18)
+        entry = await db.scalar(
+            select(SkillHistory).where(SkillHistory.attempt_id == state.attempt_id)
+        )
+        assert entry is not None
+        entry.recorded_at = when
+        await db.flush()
+        created += 1
+    return created
 
 
 async def load() -> dict[str, Any]:
@@ -135,7 +219,8 @@ def main() -> None:
     result = asyncio.run(_run())
     print(
         f"Demo data: {result['accounts']} accounts ({result['accounts_created']} new), "
-        f"company {result['company']!r} (id {DEMO_ORGANISATION_ID})"
+        f"company {result['company']!r} (id {DEMO_ORGANISATION_ID}), "
+        f"{result['results_created']} new results for {DEMO_PROFESSIONAL}"
     )
 
 

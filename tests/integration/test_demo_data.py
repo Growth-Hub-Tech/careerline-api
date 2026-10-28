@@ -9,8 +9,8 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.db import demo
-from app.sample.routes.organisations import ORG_ID
 from app.db.seed import load as load_seeds
+from app.sample.routes.organisations import ORG_ID
 from tests.integration.conftest import login
 
 API = settings.API_PREFIX
