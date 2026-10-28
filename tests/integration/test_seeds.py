@@ -87,13 +87,11 @@ async def test_a_fresh_database_with_the_seeds_can_start_an_attempt(client, lear
     skill_id = 1
 
     response = await client.post(
-        f"{API}/attempts/start",
-        headers=learner["headers"],
-        json={"skill_id": skill_id, "declared_level": "JUNIOR"},
+        f"{API}/attempts/start", headers=learner["headers"], json={"skill_id": skill_id}
     )
 
     assert response.status_code == 200, response.text
-    assert response.json()["data"]["questions"]
+    assert response.json()["data"]["question"]["options"]
 
 
 def test_the_command_line_loader(database):
