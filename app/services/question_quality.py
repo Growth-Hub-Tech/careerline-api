@@ -60,7 +60,7 @@ ISSUE_TEXT = {
     "empty_option": "has an empty option",
     "duplicate_option": "has two options with the same text",
     "duplicate_question": "the same question already exists in this skill",
-    "length_giveaway": "the correct option is the longest by far, so it gives itself away",
+    "length_giveaway": "the correct option is clearly the longest, so it can give itself away",
     "all_none_of_the_above": 'uses "all/none of the above"',
     "not_four_options": "does not have 4 options",
 }

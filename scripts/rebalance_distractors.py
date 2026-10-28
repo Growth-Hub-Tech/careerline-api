@@ -6,8 +6,8 @@ Nothing is written to the database. The script produces two files to review:
                               psql "$DATABASE_URL" -f rebalanced_updates.sql
 
 Usage (reads DATABASE_URL and OPENAI_API_KEY from .env):
-    python scripts/check_option_bias.py --csv biased.csv
-    python scripts/rebalance_distractors.py biased.csv --limit 50
+    python scripts/check_questions.py --review-file review.csv --skill 3
+    python scripts/rebalance_distractors.py review.csv --limit 50
 
 Use the same rules (DISTRACTOR_RULES below) in any prompt that GENERATES new
 questions, so the bias doesn't come back.
@@ -89,7 +89,10 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument("flagged_csv", help="CSV written by check_option_bias.py --csv")
+    ap.add_argument(
+        "flagged_csv",
+        help="CSV written by check_questions.py --review-file (only question_id is read)",
+    )
     ap.add_argument(
         "--limit", type=int, default=25, help="how many questions to rewrite (worst first)"
     )
