@@ -20,6 +20,12 @@ from tests.integration.conftest import answers_for, start_attempt, submit
 API = settings.API_PREFIX
 
 
+def ai_jobs(db) -> int:
+    return db.execute(
+        text("SELECT count(*) FROM background_jobs WHERE kind = 'ai_recommendations'")
+    ).scalar()
+
+
 @pytest.fixture
 def fake_ai(monkeypatch):
     calls: list[tuple] = []
@@ -65,7 +71,11 @@ async def test_submit_answers_with_plain_advice_and_queues_one_ai_job(
     for item in recommendations["recommendations"]:
         assert item["recommendation"].startswith("Dedicate focused time to")
 
-    jobs = db.execute(text("SELECT kind, dedupe_key, payload FROM background_jobs")).all()
+    jobs = db.execute(
+        text(
+            "SELECT kind, dedupe_key, payload FROM background_jobs WHERE kind = 'ai_recommendations'"
+        )
+    ).all()
     assert [(j.kind, j.dedupe_key) for j in jobs] == [
         ("ai_recommendations", f"ai-recommendations:attempt:{attempt['attempt_id']}")
     ]
@@ -77,7 +87,9 @@ async def test_the_job_replaces_the_plain_advice_with_the_ai_advice(
 ):
     attempt, _ = await _fail_everything(client, learner, skill)
 
-    assert await JobRunner(worker_id="test").run_once() == 1
+    runner = JobRunner(worker_id="test")
+    while await runner.run_once():  # the AI job (and the sign-up emails)
+        pass
     assert sorted(call[1] for call in fake_ai) == ["Functions", "Lists"]
 
     response = await client.get(
@@ -96,7 +108,7 @@ async def test_without_an_openai_key_no_ai_job_is_queued(client, learner, skill,
     monkeypatch.setattr(settings, "OPENAI_API_KEY", "")
     _, result = await _fail_everything(client, learner, skill)
     assert result["recommendations"]["ai_advice"] == "unavailable"
-    assert db.execute(text("SELECT count(*) FROM background_jobs")).scalar() == 0
+    assert ai_jobs(db) == 0
 
 
 async def test_no_weak_subskills_means_no_ai_job(client, learner, skill, fake_ai, db):
@@ -105,4 +117,4 @@ async def test_no_weak_subskills_means_no_ai_job(client, learner, skill, fake_ai
         client, learner["headers"], attempt["attempt_id"], answers_for(attempt, skill)
     )
     assert response.status_code == 200, response.text
-    assert db.execute(text("SELECT count(*) FROM background_jobs")).scalar() == 0
+    assert ai_jobs(db) == 0

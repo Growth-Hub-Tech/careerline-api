@@ -76,6 +76,14 @@ class Settings(BaseSettings):
     # The test mailbox API asks for this in X-Test-Mailbox-Token when it is set
     TEST_MAILBOX_TOKEN: str = ""
 
+    # Accounts (Day 6)
+    VERIFY_EMAIL_TOKEN_HOURS: int = 48  # a confirmation link works this long, once
+    PASSWORD_RESET_TOKEN_MINUTES: int = 60  # a reset link works this long, once
+    LOGIN_MAX_FAILURES_PER_EMAIL: int = 5  # failed sign-ins per email address ...
+    LOGIN_MAX_FAILURES_PER_IP: int = 20  # ... and per IP address ...
+    LOGIN_WINDOW_MINUTES: int = 15  # ... within this window, then 429 until it passes
+    SIGNUPS_PER_IP_PER_HOUR: int = 20
+
     # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60

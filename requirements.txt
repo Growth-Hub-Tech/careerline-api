@@ -2,6 +2,8 @@ alembic==1.20.0
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.13.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==26.1.0
 asyncpg==0.31.0
 bcrypt==4.0.1
 certifi==2026.5.20
@@ -23,7 +25,6 @@ jiter==0.15.0
 Mako==1.4.3
 MarkupSafe==3.0.3
 openai==2.40.0
-passlib==1.7.4
 psycopg2-binary==2.9.13
 pyasn1==0.6.4
 pycparser==3.0

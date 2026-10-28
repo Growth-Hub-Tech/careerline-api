@@ -1,4 +1,5 @@
 import enum
+from datetime import datetime
 
 from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, Numeric, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -75,6 +76,10 @@ class Learner(Base):
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     phone_number: Mapped[str] = mapped_column(String(20), nullable=True)
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=True)
+    # Day 6: set when the learner opens the confirmation link (NULL = not confirmed yet)
+    email_verified_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
     registration_date: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     learner_status: Mapped[LearnerStatus] = mapped_column(
         pg_enum(LearnerStatus, "learnerstatus"), default=LearnerStatus.ACTIVE

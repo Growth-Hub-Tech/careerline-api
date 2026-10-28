@@ -16,7 +16,7 @@ The backend for CareerLine AI. It tests learners across tech and revenue skills,
 app/
   main.py            create_app(): settings, logging, middleware, error handlers, routers, lifespan
   api/
-    deps.py          shared dependencies: get_db, get_current_learner, require_same_learner
+    deps.py          shared dependencies: get_db, get_current_session, get_current_learner
     routes/          one module per resource (auth, learners, skills, attempts, recommendations),
                      plus health (/healthz, /readyz)
   core/              config, security, logging, exceptions, error handlers, response envelope, middleware
@@ -169,9 +169,11 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 | Variable       | Description                                                        |
 | -------------- | ------------------------------------------------------------------ |
 | `DATABASE_URL` | Postgres connection string                                         |
-| `SECRET_KEY`   | Signs login tokens (JWT); a long random value                      |
+| `SECRET_KEY`   | Signs login tokens (JWT) and keys the rate-limit hashes; long, random |
 | `CORS_ORIGINS` | Comma-separated frontend origins (default `http://localhost:5173`) |
 | `LOG_JSON`     | `true` in production for JSON logs                                 |
+
+Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Settings: `VERIFY_EMAIL_TOKEN_HOURS`, `PASSWORD_RESET_TOKEN_MINUTES`, `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR`.
 
 Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
 
