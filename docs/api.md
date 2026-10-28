@@ -132,6 +132,13 @@ The test server loads these on every deploy (`DEMO_DATA_ON_START=true`). Every a
 
 Organisation 41 is also the sample organisation, so the sample audit, heatmap and target routes answer for it. Emails to these accounts land in the test mailbox.
 
+## Job roles, titles and which skills can be tested (Day 8)
+
+- `GET /roles` lists the 8 pilot job roles (ids 101 to 108; 101 Frontend Developer, 102 Backend Developer and 103 Data Analyst keep the sample ids). `GET /roles/{role_id}` gives a role's skills, main skill first. `target_level` is the level the role needs at the **mid** title.
+- `GET /job-titles` is the ladder: intern (BEGINNER), junior (JUNIOR), mid (MID), senior (ADVANCED), lead (ADVANCED). For another title, a skill's level moves by as many steps as the title is from mid, staying within BEGINNER to ADVANCED. Example: Frontend Developer needs Frontend Web Development at MID; a senior needs ADVANCED, an intern BEGINNER.
+- `test_ids` in a role: one per skill that can be tested now. Until `GET /tests` is real, a test id is `200 + skill_id` (so 201 is Frontend Web Development); start it with `POST /attempts/start` and that `skill_id`.
+- `GET /skills/` has `testable` for each skill. A skill can be tested only when every level has at least 15 questions that passed the question-quality check. Otherwise `POST /attempts/start` answers `409` with code `skill_not_ready` and `details: {"minimum_per_level": 15, "short_by": {"MID": 3}}`. Show those skills as "coming soon". Today 14 of the 50 skills can be tested.
+
 ## Background jobs
 
 Slow work runs in background jobs, after the request has answered: emails, and the AI advice for weak subskills. `POST /attempts/submit` now answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
@@ -146,7 +153,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/attempts/*`, `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -248,6 +255,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 8**: `GET /roles` and `GET /roles/{role_id}` are real (same shapes, no more `X-Sample-Data`; 8 pilot roles, ids 101 to 108; `test_ids` only lists skills that can be tested now, as `200 + skill_id`). New `GET /job-titles` (the title ladder with the expected level for each). `GET /skills/`: new field `testable`. `POST /attempts/start`: new `409 skill_not_ready` for a skill without enough reviewed questions; only questions that passed the quality check are served.
 - **Day 7**: who may call what is enforced on every route (table in "Who can call what"): organisation and recruiter routes need an organisation role (learners get `403`; before, any token worked), another organisation's id is `404`. New `/me` routes (`/learners/me`, `/attempts/me`, `/recommendations/levels/me`, `/recommendations/pathway/me/{skill_id}`); the learner-id routes are deprecated. New `/organisations/{id}/users` (accounts and roles). `/accounts/me`: real `account_type` and `organisation_id`, new field `organisation_role`. `learner_id` optional in `POST /learners/behavioural-answers`. Demo accounts on the test server.
 - **Day 6**: accounts are real (same paths and shapes, no more `X-Sample-Data` on `/accounts/*`): confirmation and reset emails with links to `/verify-email?token=` and `/reset-password?token=` on the website; new `POST /api/v1/auth/logout` (`?everywhere=true`); sign-in answers `429` after too many failures; tokens from before Day 6 must sign in again; new error code `wrong_password` (400, change password).
 - **Day 5**: every error carries a reference number (`error.request_id` = `X-Request-ID`) and a `500` never shows internals. `POST /api/v1/contact` is real (same shape; new optional spam-trap field `website`; `429` after 5 messages an hour). New, test server only: `GET`/`DELETE /api/v1/test-mailbox`. `POST /attempts/submit`: the AI advice now arrives later through a background job; new field `recommendations.ai_advice` (`queued` / `unavailable`).

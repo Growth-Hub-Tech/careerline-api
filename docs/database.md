@@ -11,6 +11,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `e4b7c9d1f3a2` | 5 | `contact_messages`, `rate_limit_events` |
 | `f6c3a8e2d5b1` | 6 | `auth_sessions`, `account_tokens`, `learner.email_verified_at` |
 | `a7d4e9b2c8f3` | 7 | `organisations`, `organisation_members` (role owner/admin/recruiter) |
+| `b8e3f1c6d2a9` | 8 | `questions.status` (ACTIVE/NEEDS_REVIEW/RETIRED) and `questions.quality_issues`; `job_roles`, `job_role_skills`, `job_titles` |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.
@@ -29,7 +30,7 @@ If it shows one of the old ids (`38a2cb03e747`, `e17f129e4f88`, `a1f3c9d2e801`),
 
 ## Seed files (`seeds/`)
 
-The reference data the app needs, as JSON files in the repo: the 4 proficiency levels and their score bands, 50 skills with 221 subskills, 4000 questions with 16000 options (one file per skill in `seeds/questions/`), and 10 behavioural questions. They came from the question tables of the old MySQL dump, without any of its personal data.
+The reference data the app needs, as JSON files in the repo: the 4 proficiency levels and their score bands, 50 skills with 221 subskills, 4000 questions with 16000 options (one file per skill in `seeds/questions/`), 10 behavioural questions, and (Day 8) the 8 pilot job roles with their skills (`job_roles.json`), the job-title ladder (`job_titles.json`) and the experts' decisions on flagged questions (`question_reviews.json`). They came from the question tables of the old MySQL dump, without any of its personal data.
 
 ```bash
 python -m app.db.seed     # load into DATABASE_URL; prints inserted / updated / unchanged per table
@@ -38,6 +39,7 @@ python -m app.db.seed     # load into DATABASE_URL; prints inserted / updated / 
 - **Safe to run twice.** Every row is upserted on its id from the file. The second run changes nothing.
 - **The files win.** A question edited directly in the database is put back to what the file says on the next load. Change questions in the seed files, through a pull request, then load.
 - **Nothing else is touched.** Rows not in the files stay (old attempts may point at them), learners' data is never read or changed, and the id counters are moved past the highest id so new rows get fresh ids.
+- **Question statuses are worked out on every load.** The question-quality check (docs/question-quality.md) runs over the files and stores each question's `status` and `quality_issues`; only `ACTIVE` questions are served. To change a status, fix the question or record an expert decision, then load.
 - **On Render** the test server loads them on every deploy (`SEED_ON_START=true`). Production only loads them when someone runs the command.
 
 Before the first load on a database that already has questions (the Render test database was filled by the old MySQL copy script, with the same ids), compare first if anyone edited questions there by hand (e.g. with `scripts/rebalance_distractors.py` output): the load would put the file version back.
