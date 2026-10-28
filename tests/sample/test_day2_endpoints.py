@@ -1,20 +1,8 @@
-"""Day 2 sample answers: skills and roles, tests, results, profile,
-beginner path and programme clicks. (The contact form is real since Day 5 and the accounts since Day
-6: see tests/integration/test_contact.py and test_accounts.py.)"""
+"""Day 2 sample answers: tests, results, profile, beginner path and programme clicks. (The contact
+form is real since Day 5, the accounts since Day 6 and the roles since Day 8: see
+tests/integration/test_contact.py, test_accounts.py and test_roles.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
-
-
-async def test_roles_list_the_skills_they_need(client):
-    roles = assert_sample(await client.get(f"{API}/roles"))
-    assert roles["total"] == len(roles["items"]) >= 3
-    role = assert_sample(await client.get(f"{API}/roles/{roles['items'][0]['role_id']}"))
-    assert role["skills"][0]["target_level"] in {"BEGINNER", "JUNIOR", "MID", "ADVANCED"}
-    assert role["test_ids"]
-
-
-async def test_an_unknown_role_is_a_404(client):
-    assert_sample_error(await client.get(f"{API}/roles/999"), 404, "not_found")
 
 
 async def test_the_test_catalogue_filters_by_skill_and_role(client):

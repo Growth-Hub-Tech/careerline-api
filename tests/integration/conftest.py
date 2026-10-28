@@ -84,8 +84,11 @@ def db(database: Engine):
 
 
 @pytest.fixture
-def skill(database: Engine) -> dict:
-    """One skill with 2 subskills, each with 3 JUNIOR questions of 3 options (1 correct)."""
+def skill(database: Engine, monkeypatch) -> dict:
+    """One skill with 2 subskills; each subskill has 3 questions of 3 options (1 correct) at
+    every level (6 per level). For these tests 3 active questions per level is enough to be
+    tested (the real limit, MIN_ACTIVE_QUESTIONS_PER_LEVEL, is 15)."""
+    monkeypatch.setattr(settings, "MIN_ACTIVE_QUESTIONS_PER_LEVEL", 3)
     questions: dict[int, dict] = {}
     with database.begin() as conn:
         skill_id = conn.execute(
@@ -104,30 +107,42 @@ def skill(database: Engine) -> dict:
                 {"skill_id": skill_id, "name": name},
             ).scalar_one()
             subskill_ids.append(subskill_id)
-            for number in range(1, 4):
-                question_id = conn.execute(
-                    text(
-                        "INSERT INTO questions (subskill_id, question_text, difficulty_level, weight) "
-                        "VALUES (:subskill_id, :text, 'JUNIOR', 1) RETURNING question_id"
-                    ),
-                    {"subskill_id": subskill_id, "text": f"{name} question {number}"},
-                ).scalar_one()
-                option_ids = [
-                    conn.execute(
-                        text(
-                            "INSERT INTO options (question_id, option_text, is_correct) "
-                            "VALUES (:question_id, :text, :correct) RETURNING option_id"
-                        ),
-                        {"question_id": question_id, "text": f"option {i}", "correct": i == 0},
-                    ).scalar_one()
-                    for i in range(3)
-                ]
-                questions[question_id] = {
-                    "subskill_id": subskill_id,
-                    "correct": option_ids[0],
-                    "wrong": option_ids[1:],
-                }
+        for level in LEVELS:
+            for subskill_id, name in zip(subskill_ids, ("Lists", "Functions"), strict=True):
+                for number in range(1, 4):
+                    question_id = _add_question(
+                        conn, subskill_id, level, f"{name} {level.lower()} question {number}"
+                    )
+                    option_ids = [
+                        conn.execute(
+                            text(
+                                "INSERT INTO options (question_id, option_text, is_correct) "
+                                "VALUES (:question_id, :text, :correct) RETURNING option_id"
+                            ),
+                            {"question_id": question_id, "text": f"option {i}", "correct": i == 0},
+                        ).scalar_one()
+                        for i in range(3)
+                    ]
+                    questions[question_id] = {
+                        "subskill_id": subskill_id,
+                        "level": level,
+                        "correct": option_ids[0],
+                        "wrong": option_ids[1:],
+                    }
     return {"skill_id": skill_id, "subskill_ids": subskill_ids, "questions": questions}
+
+
+LEVELS = ("BEGINNER", "JUNIOR", "MID", "ADVANCED")
+
+
+def _add_question(conn, subskill_id: int, level: str, question_text: str) -> int:
+    return conn.execute(
+        text(
+            "INSERT INTO questions (subskill_id, question_text, difficulty_level, weight) "
+            "VALUES (:subskill_id, :text, :level, 1) RETURNING question_id"
+        ),
+        {"subskill_id": subskill_id, "text": question_text, "level": level},
+    ).scalar_one()
 
 
 async def register(client, email: str, password: str = PASSWORD, full_name: str = "Test Learner"):
