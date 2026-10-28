@@ -84,6 +84,13 @@ class Settings(BaseSettings):
     LOGIN_WINDOW_MINUTES: int = 15  # ... within this window, then 429 until it passes
     SIGNUPS_PER_IP_PER_HOUR: int = 20
 
+    # Question quality (Day 8, app/services/question_quality.py). The correct option is the single
+    # longest and at least this many times the average wrong option: a review note / not served.
+    QUESTION_LENGTH_REVIEW_RATIO: float = 1.3
+    QUESTION_LENGTH_BLOCK_RATIO: float = 2.0
+    # A skill can be tested only when every level has at least this many ACTIVE questions
+    MIN_ACTIVE_QUESTIONS_PER_LEVEL: int = 15
+
     # Assessment config
     PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60

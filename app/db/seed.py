@@ -1,14 +1,16 @@
 """Load the reference data in seeds/ into the database: `python -m app.db.seed`.
 
 Reference data = proficiency levels, level thresholds, skills, subskills, questions with their
-options, and behavioural questions. Each row keeps its id from the seed file and is upserted on
+options, behavioural questions, job roles with their skills, and the job-title ladder. Each row keeps its id from the seed file and is upserted on
 it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
 database is put back to what the seed file says. Rows that are not in the files are left alone
 (attempts may point at them), and learners' data is never touched. Afterwards the id counters
 are moved past the highest id, so rows the app creates later get fresh ids.
 
 The seed files are the source of truth for the question bank: change a question there, in a pull
-request, and load again.
+request, and load again. Each question's status (ACTIVE, NEEDS_REVIEW, RETIRED) and issues come
+from the question-quality check (app/services/question_quality.py) plus the experts' decisions
+in seeds/question_reviews.json, so they are worked out again on every load.
 """
 
 import json
@@ -32,6 +34,8 @@ from app.models.models import (
     Skill,
     Subskill,
 )
+from app.models.roles import JobRole, JobRoleSkill, JobTitle
+from app.services import question_quality as quality
 
 SEEDS_DIR = Path(__file__).resolve().parents[2] / "seeds"
 BATCH = 1000
@@ -45,6 +49,9 @@ TABLES: dict[str, Table] = {
     "questions": Question.__table__,  # type: ignore[dict-item]
     "options": Option.__table__,  # type: ignore[dict-item]
     "behavioural_questions": BehaviouralQuestion.__table__,  # type: ignore[dict-item]
+    "job_titles": JobTitle.__table__,  # type: ignore[dict-item]
+    "job_roles": JobRole.__table__,  # type: ignore[dict-item]
+    "job_role_skills": JobRoleSkill.__table__,  # type: ignore[dict-item]
 }
 LEVEL_TABLES = ("proficiency_level", "level_threshold")
 
@@ -64,8 +71,52 @@ def _read(name: str) -> Any:
     return json.loads((SEEDS_DIR / name).read_text(encoding="utf-8"))
 
 
-def read_seed_rows() -> dict[str, list[dict[str, Any]]]:
-    """Every seed row, by table, with the database's column names."""
+def read_question_reviews() -> dict[int, str]:
+    """The experts' decisions: question_id -> approved | rejected."""
+    reviews = _read("question_reviews.json")["reviews"]
+    return {int(r["question_id"]): r["decision"] for r in reviews}
+
+
+def quality_thresholds() -> quality.Thresholds:
+    from app.core.config import settings
+
+    return quality.Thresholds(
+        review_ratio=settings.QUESTION_LENGTH_REVIEW_RATIO,
+        block_ratio=settings.QUESTION_LENGTH_BLOCK_RATIO,
+    )
+
+
+def _add_quality(rows: dict[str, list[dict[str, Any]]], limits: quality.Thresholds) -> None:
+    """Give every question its status and issues from the quality check and the reviews."""
+    skill_of = {s["subskill_id"]: s["skill_id"] for s in rows["subskills"]}
+    options: dict[int, list[quality.Option]] = {}
+    for option in rows["options"]:
+        options.setdefault(option["question_id"], []).append(
+            quality.Option(option["option_text"] or "", bool(option["is_correct"]))
+        )
+    checked = quality.check_bank(
+        (
+            quality.QuestionIn(
+                question_id=q["question_id"],
+                skill_id=skill_of.get(q["subskill_id"], 0),
+                text=q["question_text"],
+                options=tuple(options.get(q["question_id"], [])),
+            )
+            for q in rows["questions"]
+        ),
+        limits,
+    )
+    reviews = read_question_reviews()
+    for question in rows["questions"]:
+        issues = checked[question["question_id"]]
+        question["status"] = quality.decide_status(issues, reviews.get(question["question_id"]))
+        question["quality_issues"] = [issue.code for issue in issues]
+
+
+def read_seed_rows(limits: quality.Thresholds | None = None) -> dict[str, list[dict[str, Any]]]:
+    """Every seed row, by table, with the database's column names. `limits` are the length
+    limits of the quality check (default: the check's own defaults, which are the settings'
+    defaults)."""
     rows: dict[str, list[dict[str, Any]]] = {name: [] for name in TABLES}
     rows["proficiency_level"] = [
         {**level, "level_name": LevelName(level["level_name"])}
@@ -87,17 +138,34 @@ def read_seed_rows() -> dict[str, list[dict[str, Any]]]:
         {**q, "question_type": QuestionType(q["question_type"])}
         for q in _read("behavioural_questions.json")
     ]
+    _add_quality(rows, limits or quality.Thresholds())
+    rows["job_titles"] = [
+        {**t, "expected_level": LevelName(t["expected_level"])} for t in _read("job_titles.json")
+    ]
+    for role in _read("job_roles.json"):
+        skills = role.pop("skills")
+        rows["job_roles"].append(role)
+        rows["job_role_skills"].extend(
+            {
+                "role_id": role["role_id"],
+                "skill_id": s["skill_id"],
+                "target_level": LevelName(s["target_level"]),
+                "position": position,
+            }
+            for position, s in enumerate(skills, start=1)
+        )
     return rows
 
 
 def _upsert(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> Counts:
     counts = Counts(in_files=len(rows))
-    (key,) = table.primary_key.columns
+    keys = list(table.primary_key.columns)
+    key_names = {key.name for key in keys}
     for start in range(0, len(rows), BATCH):
         values = insert(table).values(rows[start : start + BATCH])
-        columns = [c for c in rows[0] if c != key.name]
+        columns = [c for c in rows[0] if c not in key_names]
         upsert: Any = values.on_conflict_do_update(
-            index_elements=[key],
+            index_elements=keys,
             set_={c: values.excluded[c] for c in columns},
             # only rows that really differ count as updated
             where=or_(*(table.c[c].is_distinct_from(values.excluded[c]) for c in columns)),
@@ -111,6 +179,8 @@ def _upsert(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> Count
 
 
 def _move_id_counter_past_max(conn: Connection, table: Table) -> None:
+    if len(table.primary_key.columns) != 1:
+        return  # a link table (two-column key): no id counter
     (key,) = table.primary_key.columns
     highest = conn.execute(select(func.max(key))).scalar()
     conn.execute(
@@ -126,14 +196,31 @@ def _move_id_counter_past_max(conn: Connection, table: Table) -> None:
 
 def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str, Counts]:
     """Upsert the seed rows of these tables (all by default) inside the caller's transaction."""
-    rows = read_seed_rows()
+    rows = read_seed_rows(quality_thresholds())
     result: dict[str, Counts] = {}
     for name, table in TABLES.items():
         if name not in tables:
             continue
         result[name] = _upsert(conn, table, rows[name]) if rows[name] else Counts()
         _move_id_counter_past_max(conn, table)
+        if name == "job_role_skills":
+            _drop_role_skills_not_in_files(conn, rows["job_role_skills"])
     return result
+
+
+def _drop_role_skills_not_in_files(conn: Connection, rows: list[dict[str, Any]]) -> None:
+    """A role's skills are exactly what its seed file says (a skill taken out is taken out)."""
+    table: Table = JobRoleSkill.__table__  # type: ignore[assignment]
+    wanted = {(r["role_id"], r["skill_id"]) for r in rows}
+    roles = {role_id for role_id, _ in wanted}
+    existing = conn.execute(
+        select(table.c.role_id, table.c.skill_id).where(table.c.role_id.in_(roles))
+    ).all()
+    for role_id, skill_id in existing:
+        if (role_id, skill_id) not in wanted:
+            conn.execute(
+                table.delete().where(table.c.role_id == role_id, table.c.skill_id == skill_id)
+            )
 
 
 def main() -> int:
