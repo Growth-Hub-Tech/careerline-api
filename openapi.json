@@ -211,6 +211,24 @@
         "title": "AnswerItem",
         "type": "object"
       },
+      "AnswerRequest": {
+        "properties": {
+          "question_id": {
+            "title": "Question Id",
+            "type": "integer"
+          },
+          "selected_option_id": {
+            "title": "Selected Option Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "question_id",
+          "selected_option_id"
+        ],
+        "title": "AnswerRequest",
+        "type": "object"
+      },
       "ApiResponse_AccountDeletion_": {
         "properties": {
           "data": {
@@ -400,6 +418,39 @@
           }
         },
         "title": "ApiResponse[AssessmentDetail]",
+        "type": "object"
+      },
+      "ApiResponse_AttemptState_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AttemptState"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[AttemptState]",
         "type": "object"
       },
       "ApiResponse_Audit_": {
@@ -1524,6 +1575,39 @@
         "title": "ApiResponse[RosterResult]",
         "type": "object"
       },
+      "ApiResponse_SkillHistory_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SkillHistory"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[SkillHistory]",
+        "type": "object"
+      },
       "ApiResponse_SkillProfile_": {
         "properties": {
           "data": {
@@ -2024,6 +2108,184 @@
           "role_ids"
         ],
         "title": "AssessmentSummary",
+        "type": "object"
+      },
+      "AttemptResult": {
+        "description": "The result of a finished test. No pass or fail: a score, a level and how sure we are.",
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "completed_at": {
+            "format": "date-time",
+            "title": "Completed At",
+            "type": "string"
+          },
+          "confidence": {
+            "description": "0-1: how sure the level is",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "confidence_label": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "title": "Confidence Label",
+            "type": "string"
+          },
+          "correct": {
+            "title": "Correct",
+            "type": "integer"
+          },
+          "ended_by": {
+            "enum": [
+              "finished",
+              "time_up"
+            ],
+            "title": "Ended By",
+            "type": "string"
+          },
+          "level": {
+            "$ref": "#/components/schemas/LevelName"
+          },
+          "score": {
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "integer"
+          },
+          "strengths": {
+            "items": {
+              "$ref": "#/components/schemas/SubskillRef"
+            },
+            "title": "Strengths",
+            "type": "array"
+          },
+          "subskills": {
+            "items": {
+              "$ref": "#/components/schemas/SubskillOutcome"
+            },
+            "title": "Subskills",
+            "type": "array"
+          },
+          "weaknesses": {
+            "items": {
+              "$ref": "#/components/schemas/SubskillRef"
+            },
+            "title": "Weaknesses",
+            "type": "array"
+          }
+        },
+        "required": [
+          "score",
+          "level",
+          "confidence",
+          "confidence_label",
+          "answered",
+          "correct",
+          "strengths",
+          "weaknesses",
+          "subskills",
+          "ended_by",
+          "completed_at"
+        ],
+        "title": "AttemptResult",
+        "type": "object"
+      },
+      "AttemptState": {
+        "description": "Where a test stands. status in_progress: answer `question`; completed: see `result`;\nexpired: the time ran out before enough answers for a result.",
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "attempt_id": {
+            "title": "Attempt Id",
+            "type": "integer"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          },
+          "question": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ServedQuestion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "recommendations": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Only in the answer that finishes the test",
+            "title": "Recommendations"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AttemptResult"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resumed": {
+            "default": false,
+            "title": "Resumed",
+            "type": "boolean"
+          },
+          "skill_id": {
+            "title": "Skill Id",
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "in_progress",
+              "completed",
+              "expired",
+              "cancelled"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "total_questions": {
+            "title": "Total Questions",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "attempt_id",
+          "skill_id",
+          "status",
+          "total_questions",
+          "answered",
+          "expires_at"
+        ],
+        "title": "AttemptState",
         "type": "object"
       },
       "Audit": {
@@ -5396,6 +5658,143 @@
         "title": "RosterUpload",
         "type": "object"
       },
+      "ServedOption": {
+        "properties": {
+          "option_id": {
+            "title": "Option Id",
+            "type": "integer"
+          },
+          "option_text": {
+            "title": "Option Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "option_id",
+          "option_text"
+        ],
+        "title": "ServedOption",
+        "type": "object"
+      },
+      "ServedQuestion": {
+        "description": "The question to answer now. Never carries the answer.",
+        "properties": {
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/ServedOption"
+            },
+            "title": "Options",
+            "type": "array"
+          },
+          "position": {
+            "description": "1 for the first question",
+            "title": "Position",
+            "type": "integer"
+          },
+          "question_id": {
+            "title": "Question Id",
+            "type": "integer"
+          },
+          "question_text": {
+            "title": "Question Text",
+            "type": "string"
+          },
+          "subskill_id": {
+            "title": "Subskill Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "position",
+          "question_id",
+          "question_text",
+          "subskill_id",
+          "options"
+        ],
+        "title": "ServedQuestion",
+        "type": "object"
+      },
+      "SkillHistory": {
+        "description": "Every finished test, newest first: how the person's level in each skill moved.",
+        "properties": {
+          "entries": {
+            "items": {
+              "$ref": "#/components/schemas/SkillHistoryEntry"
+            },
+            "title": "Entries",
+            "type": "array"
+          },
+          "learner_id": {
+            "title": "Learner Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "learner_id",
+          "entries"
+        ],
+        "title": "SkillHistory",
+        "type": "object"
+      },
+      "SkillHistoryEntry": {
+        "properties": {
+          "attempt_id": {
+            "title": "Attempt Id",
+            "type": "integer"
+          },
+          "confidence": {
+            "title": "Confidence",
+            "type": "number"
+          },
+          "level": {
+            "$ref": "#/components/schemas/LevelName"
+          },
+          "recorded_at": {
+            "format": "date-time",
+            "title": "Recorded At",
+            "type": "string"
+          },
+          "score": {
+            "title": "Score",
+            "type": "integer"
+          },
+          "skill_id": {
+            "title": "Skill Id",
+            "type": "integer"
+          },
+          "skill_name": {
+            "title": "Skill Name",
+            "type": "string"
+          },
+          "strengths": {
+            "items": {
+              "$ref": "#/components/schemas/SubskillRef"
+            },
+            "title": "Strengths",
+            "type": "array"
+          },
+          "weaknesses": {
+            "items": {
+              "$ref": "#/components/schemas/SubskillRef"
+            },
+            "title": "Weaknesses",
+            "type": "array"
+          }
+        },
+        "required": [
+          "attempt_id",
+          "skill_id",
+          "skill_name",
+          "level",
+          "score",
+          "confidence",
+          "strengths",
+          "weaknesses",
+          "recorded_at"
+        ],
+        "title": "SkillHistoryEntry",
+        "type": "object"
+      },
       "SkillLevel": {
         "properties": {
           "confirmed_at": {
@@ -5454,8 +5853,17 @@
       "StartAttemptRequest": {
         "properties": {
           "declared_level": {
-            "title": "Declared Level",
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "deprecated": true,
+            "description": "Retired (Day 10): ignored. The test finds the level itself.",
+            "title": "Declared Level"
           },
           "skill_id": {
             "title": "Skill Id",
@@ -5463,8 +5871,7 @@
           }
         },
         "required": [
-          "skill_id",
-          "declared_level"
+          "skill_id"
         ],
         "title": "StartAttemptRequest",
         "type": "object"
@@ -5574,6 +5981,67 @@
           "seats"
         ],
         "title": "Subscription",
+        "type": "object"
+      },
+      "SubskillOutcome": {
+        "properties": {
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "band": {
+            "enum": [
+              "strong",
+              "developing",
+              "weak"
+            ],
+            "title": "Band",
+            "type": "string"
+          },
+          "correct": {
+            "title": "Correct",
+            "type": "integer"
+          },
+          "percentage_score": {
+            "title": "Percentage Score",
+            "type": "number"
+          },
+          "subskill_id": {
+            "title": "Subskill Id",
+            "type": "integer"
+          },
+          "subskill_name": {
+            "title": "Subskill Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subskill_id",
+          "subskill_name",
+          "answered",
+          "correct",
+          "percentage_score",
+          "band"
+        ],
+        "title": "SubskillOutcome",
+        "type": "object"
+      },
+      "SubskillRef": {
+        "properties": {
+          "subskill_id": {
+            "title": "Subskill Id",
+            "type": "integer"
+          },
+          "subskill_name": {
+            "title": "Subskill Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subskill_id",
+          "subskill_name"
+        ],
+        "title": "SubskillRef",
         "type": "object"
       },
       "SubskillScore": {
@@ -6531,6 +6999,7 @@
     },
     "/api/v1/attempts/start": {
       "post": {
+        "description": "Starts the adaptive test of a skill and returns its first question, or resumes the test already in progress for that skill (resumed: true, the same question). 16 questions, harder after a right answer and easier after a wrong one; 30 minutes. declared_level is retired and ignored. 409 skill_not_ready: the skill cannot be tested yet.",
         "operationId": "start_test_attempt_api_v1_attempts_start_post",
         "requestBody": {
           "content": {
@@ -6547,21 +7016,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                  "$ref": "#/components/schemas/ApiResponse_AttemptState_"
                 }
               }
             },
             "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
           },
           "401": {
             "content": {
@@ -6572,92 +7031,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
-        "summary": "Start Test Attempt",
-        "tags": [
-          "Attempts"
-        ]
-      }
-    },
-    "/api/v1/attempts/submit": {
-      "post": {
-        "operationId": "submit_answers_api_v1_attempts_submit_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SubmitRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Any_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
           },
           "404": {
             "content": {
@@ -6695,6 +7068,58 @@
             "OAuth2PasswordBearer": []
           }
         ],
+        "summary": "Start Test Attempt",
+        "tags": [
+          "Attempts"
+        ]
+      }
+    },
+    "/api/v1/attempts/submit": {
+      "post": {
+        "deprecated": true,
+        "operationId": "submit_answers_api_v1_attempts_submit_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
         "summary": "Submit Answers",
         "tags": [
           "Attempts"
@@ -6773,6 +7198,124 @@
           }
         ],
         "summary": "Get Attempt",
+        "tags": [
+          "Attempts"
+        ]
+      }
+    },
+    "/api/v1/attempts/{attempt_id}/answer": {
+      "post": {
+        "description": "Answers the question to answer now and returns the next one, or, after the last question, the result (status completed, with result and recommendations). 409 not_current_question: that question is not the one to answer now (already answered, or never served); 409 attempt_finished: the test is over; 410 expired: the time ran out (details.status says whether it was scored: completed, or expired).",
+        "operationId": "answer_current_question_api_v1_attempts__attempt_id__answer_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "attempt_id",
+            "required": true,
+            "schema": {
+              "title": "Attempt Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_AttemptState_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad request: invalid input (the message says what is wrong)"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Answer Current Question",
         "tags": [
           "Attempts"
         ]
@@ -6860,6 +7403,84 @@
           }
         ],
         "summary": "Cancel Attempt",
+        "tags": [
+          "Attempts"
+        ]
+      }
+    },
+    "/api/v1/attempts/{attempt_id}/question": {
+      "get": {
+        "description": "Where the test stands: the question to answer now (status in_progress), the result (completed), or expired (the time ran out before enough answers for a result).",
+        "operationId": "get_current_question_api_v1_attempts__attempt_id__question_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "attempt_id",
+            "required": true,
+            "schema": {
+              "title": "Attempt Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_AttemptState_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get Current Question",
         "tags": [
           "Attempts"
         ]
@@ -12862,7 +13483,7 @@
     },
     "/api/v1/profile/skills": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "My level in each skill tested: the latest result per skill, newest first.",
         "operationId": "get_my_skill_profile_api_v1_profile_skills_get",
         "responses": {
           "200": {
@@ -12875,7 +13496,7 @@
             },
             "description": "Successful Response"
           },
-          "400": {
+          "401": {
             "content": {
               "application/json": {
                 "schema": {
@@ -12883,7 +13504,52 @@
                 }
               }
             },
-            "description": "Bad request: invalid input (the message says what is wrong)"
+            "description": "Not logged in: missing, invalid or expired token"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get My Skill Profile",
+        "tags": [
+          "Profile"
+        ]
+      }
+    },
+    "/api/v1/profile/skills/history": {
+      "get": {
+        "description": "Every finished test, newest first (optionally for one skill): level, score, confidence, strengths and weaknesses.",
+        "operationId": "get_my_skill_history_api_v1_profile_skills_history_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "skill_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Skill Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_SkillHistory_"
+                }
+              }
+            },
+            "description": "Successful Response"
           },
           "401": {
             "content": {
@@ -12895,7 +13561,7 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
+          "422": {
             "content": {
               "application/json": {
                 "schema": {
@@ -12903,77 +13569,7 @@
                 }
               }
             },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
+            "description": "Validation error: the request body or parameters are invalid (see details)"
           }
         },
         "security": [
@@ -12981,24 +13577,9 @@
             "OAuth2PasswordBearer": []
           }
         ],
-        "summary": "Get My Skill Profile",
+        "summary": "Get My Skill History",
         "tags": [
-          "Sample: Profile"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Profile"
         ]
       }
     },

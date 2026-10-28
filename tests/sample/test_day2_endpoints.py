@@ -57,17 +57,14 @@ async def test_the_pdf_report_is_ready_generating_or_failed(client, auth):
     assert assert_sample(again, 202)["status"] == "generating"
 
 
-async def test_my_profile_and_skill_profile(client, auth):
+async def test_my_profile(client, auth):
     profile = assert_sample(await client.get(f"{API}/profile", headers=auth))
     assert profile["learner_id"] == 1 and 0 <= profile["completeness"] <= 100
     changed = assert_sample(
         await client.patch(f"{API}/profile", headers=auth, json={"weekly_hours": 15})
     )
     assert changed["weekly_hours"] == 15 and changed["headline"] == profile["headline"]
-    skills = assert_sample(await client.get(f"{API}/profile/skills", headers=auth))
-    assert skills["skills"][0]["level"] == "JUNIOR"
-    empty = await client.get(f"{API}/profile/skills", headers={**auth, "X-Mock-Scenario": "empty"})
-    assert assert_sample(empty)["skills"] == []
+    # GET /profile/skills is real since Day 10 (tests/integration/test_test_taking.py)
 
 
 async def test_profile_rejects_an_unknown_budget(client, auth):

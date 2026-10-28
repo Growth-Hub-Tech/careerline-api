@@ -1,4 +1,4 @@
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.models import (
@@ -37,9 +37,14 @@ async def get_skill_name_for_attempt(db: AsyncSession, attempt_id: int):
 
 # Fetch learner level name for an attempt
 async def get_level_name_for_attempt(db: AsyncSession, attempt_id: int):
+    # The level the test gave (Day 10); old fixed tests only had the declared level
     result = await db.execute(
         select(ProficiencyLevel.level_name)
-        .join(TestAttempt, TestAttempt.declared_level_id == ProficiencyLevel.level_id)
+        .join(
+            TestAttempt,
+            func.coalesce(TestAttempt.assigned_level_id, TestAttempt.declared_level_id)
+            == ProficiencyLevel.level_id,
+        )
         .where(TestAttempt.attempt_id == attempt_id)
     )
     level = result.scalar_one_or_none()

@@ -1,10 +1,9 @@
 from fastapi import APIRouter, Depends
 
 from app.core.responses import ApiResponse
-from app.sample.core import SampleRoute, Scenario, sample, sample_route, sample_user, scenario
+from app.sample.core import SampleRoute, sample, sample_route, sample_user, scenario
 from app.sample.data import NOW, days_ago
-from app.schemas.common import LevelName
-from app.schemas.profile import Profile, ProfileUpdate, SkillLevel, SkillProfile
+from app.schemas.profile import Profile, ProfileUpdate
 
 router = APIRouter(
     prefix="/profile",
@@ -42,29 +41,3 @@ async def get_my_profile(learner_id: int = Depends(sample_user)):
 async def update_my_profile(data: ProfileUpdate, learner_id: int = Depends(sample_user)):
     changes = data.model_dump(exclude_unset=True)
     return sample(_profile(learner_id).model_copy(update={**changes, "updated_at": NOW}))
-
-
-# MY SKILLS: confirmed level per skill tested
-@router.get(
-    "/skills", response_model=ApiResponse[SkillProfile], openapi_extra=sample_route("empty")
-)
-async def get_my_skill_profile(
-    sc: Scenario = Depends(scenario), learner_id: int = Depends(sample_user)
-):
-    skills = [
-        SkillLevel(
-            skill_id=1,
-            skill_name="Frontend Web Development",
-            level=LevelName.JUNIOR,
-            percentage_score=64.0,
-            confirmed_at=days_ago(2),
-        ),
-        SkillLevel(
-            skill_id=3,
-            skill_name="Database Management",
-            level=LevelName.BEGINNER,
-            percentage_score=41.0,
-            confirmed_at=days_ago(9),
-        ),
-    ]
-    return sample(SkillProfile(learner_id=learner_id, skills=[] if sc.empty else skills))

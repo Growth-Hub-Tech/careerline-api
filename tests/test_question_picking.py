@@ -1,10 +1,10 @@
-"""Day 9: picking questions, shared by the fixed test and the adaptive engine: balanced across
-subskills, the least-seen questions first (no database)."""
+"""Day 9: picking the next question of the adaptive test: balanced across subskills, the
+least-seen questions first (no database). (The fixed test's pick_balanced went on Day 10.)"""
 
 import random
 from dataclasses import dataclass
 
-from app.services.question_picking import pick_balanced, pick_next
+from app.services.question_picking import pick_next
 
 
 @dataclass(frozen=True)
@@ -28,19 +28,13 @@ def level_of(q: Q) -> str:
     return q.level
 
 
-def test_balanced_pick_covers_every_subskill_evenly():
-    pool = [q for q in bank() if q.level == "JUNIOR"]
-    picked = pick_balanced(pool, seen={}, rng=random.Random(1), count=6)
-    assert len(picked) == 6
-    assert sorted(q.subskill_id for q in picked) == [1, 1, 2, 2, 3, 3]
-
-
-def test_balanced_pick_prefers_questions_seen_least():
+def test_the_next_question_prefers_questions_seen_least():
     pool = [q for q in bank() if q.level == "JUNIOR"]
     # 3 of the 4 questions of each subskill seen before: one never-seen question per subskill
     seen = {q.question_id: 1 for q in pool if q.question_id % 4 != 0}
-    picked = pick_balanced(pool, seen=seen, rng=random.Random(2), count=3)
-    assert all(q.question_id not in seen for q in picked)
+    for number in range(5):
+        question = pick_next(pool, "JUNIOR", [], seen, random.Random(number), level_of)
+        assert question is not None and question.question_id not in seen
 
 
 def test_the_next_question_is_at_the_asked_level_and_never_repeats():
