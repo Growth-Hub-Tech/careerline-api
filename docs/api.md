@@ -98,6 +98,40 @@ X-Test-Mailbox-Token: <ask the backend lead>       # only when the server has a 
 
 `links` lists every link in the email (e.g. the confirmation link), so a test can take `links[0]`. The test mailbox does not exist in production, and answers `404` when emails really go out.
 
+## Who can call what (Day 7)
+
+The signed-in person always comes from the token's session, never from the request. Use the `/me` routes: `GET /learners/me`, `/attempts/me`, `/recommendations/levels/me`, `/recommendations/pathway/me/{skill_id}`. The older routes with a learner id in the path still work for your own id (`403` for anyone else's) and are marked deprecated. `learner_id` in the body of `POST /learners/behavioural-answers` is no longer needed.
+
+An account can belong to one organisation, with one role. `GET /accounts/me` shows it: `account_type` (`learner`, `recruiter`, or `organisation_admin` for owners and admins), `organisation_id` and `organisation_role` (`owner`, `admin`, `recruiter` or `null`).
+
+| | Owner | Admin | Recruiter | Learner (no organisation) |
+| --- | --- | --- | --- | --- |
+| Learner routes (tests, results, profile, payments, ...) for themselves | ✓ | ✓ | ✓ | ✓ |
+| `/recruiter/*`, sending and reading `/invitations` | ✓ | ✓ | ✓ | 403 |
+| `GET /organisations/me` | ✓ | ✓ | ✓ | 403 |
+| Audit roster (`/members`), audits, heatmap, targets | ✓ | ✓ | 403 | 403 |
+| `/organisations/{id}/users`: add, change, remove admins and recruiters | ✓ | ✓ | 403 | 403 |
+| Make, demote or remove owners | ✓ | 403 | 403 | 403 |
+
+- Not signed in: `401`. Signed in without the permission: `403 forbidden`. Another organisation's id in the path: `404` (its existence is never confirmed).
+- Opening and accepting an invitation (`/invitations/token/...`) works for any account.
+- Organisation accounts: `GET /organisations/{id}/users` lists them; `POST` `{ "email", "role" }` gives an existing account a role (`404` if nobody has signed up with that email, `409` if it belongs to an organisation already); `PATCH /organisations/{id}/users/{learner_id}` `{ "role" }`; `DELETE` removes it from the organisation (the account stays). The last owner can't be demoted or removed (`409`).
+- The rules live in one file, `app/core/permissions.py`, with a test that calls every route as every role.
+
+## Demo accounts (test server only)
+
+The test server loads these on every deploy (`DEMO_DATA_ON_START=true`). Every account has the password **`demo-password-not-secret`** (public and fake on purpose; any change you make to a demo account is undone at the next deploy).
+
+| Email | Is |
+| --- | --- |
+| `demo.learner@example.com` | a learner |
+| `demo.learner2@example.com` | a second learner (e.g. the candidate a recruiter invites) |
+| `demo.owner@example.com` | owner of Demo Company Ltd (organisation id 41) |
+| `demo.admin@example.com` | admin of Demo Company Ltd |
+| `demo.recruiter@example.com` | recruiter of Demo Company Ltd |
+
+Organisation 41 is also the sample organisation, so the sample audit, heatmap and target routes answer for it. Emails to these accounts land in the test mailbox.
+
 ## Background jobs
 
 Slow work runs in background jobs, after the request has answered: emails, and the AI advice for weak subskills. `POST /attempts/submit` now answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
@@ -110,9 +144,9 @@ How to tell:
 
 - Response header `X-Sample-Data: true` (the browser can read it: it is in `Access-Control-Expose-Headers`), and `"message": "Sample data"` on success.
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
-- Protected sample endpoints need a real token from `/auth/login`. Recruiter and organisation accounts don't exist yet, so any learner token works on their endpoints for now.
+- Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/register`, `/auth/login`, `/learners/*`, `/skills/*`, `/attempts/*` and `/recommendations/*` (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/attempts/*`, `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -207,12 +241,14 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 - `CORS_ORIGINS` is the website's address(es), comma-separated, set in the dashboard: only those origins can call the API from a browser.
 - `APP_ENV=staging` and `SAMPLE_API_ENABLED=true`: the sample endpoints are on. In production they are off.
 - The worker (`python -m app.worker`) runs the background jobs (emails, AI advice). On the **free plan** there is no worker service: set `RUN_JOBS_IN_WEB=true` on the web service and the API process runs the jobs itself.
+- `DEMO_DATA_ON_START=true` loads the demo accounts and Demo Company Ltd on every deploy (see "Demo accounts"); it is refused in production.
 - Emails: `APP_ENV=staging` sends them to the test mailbox (see "Emails and the test mailbox"); set `TEST_MAILBOX_TOKEN` to keep it private. Production needs `EMAIL_BACKEND=smtp` with `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `EMAIL_FROM` and `SUPPORT_EMAIL`.
 
 ## Changelog
 
 Newest first. One line per API change, with the PR.
 
+- **Day 7**: who may call what is enforced on every route (table in "Who can call what"): organisation and recruiter routes need an organisation role (learners get `403`; before, any token worked), another organisation's id is `404`. New `/me` routes (`/learners/me`, `/attempts/me`, `/recommendations/levels/me`, `/recommendations/pathway/me/{skill_id}`); the learner-id routes are deprecated. New `/organisations/{id}/users` (accounts and roles). `/accounts/me`: real `account_type` and `organisation_id`, new field `organisation_role`. `learner_id` optional in `POST /learners/behavioural-answers`. Demo accounts on the test server.
 - **Day 6**: accounts are real (same paths and shapes, no more `X-Sample-Data` on `/accounts/*`): confirmation and reset emails with links to `/verify-email?token=` and `/reset-password?token=` on the website; new `POST /api/v1/auth/logout` (`?everywhere=true`); sign-in answers `429` after too many failures; tokens from before Day 6 must sign in again; new error code `wrong_password` (400, change password).
 - **Day 5**: every error carries a reference number (`error.request_id` = `X-Request-ID`) and a `500` never shows internals. `POST /api/v1/contact` is real (same shape; new optional spam-trap field `website`; `429` after 5 messages an hour). New, test server only: `GET`/`DELETE /api/v1/test-mailbox`. `POST /attempts/submit`: the AI advice now arrives later through a background job; new field `recommendations.ai_advice` (`queued` / `unavailable`).
 

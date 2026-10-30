@@ -14,11 +14,10 @@ from collections.abc import Callable
 from typing import Any
 
 from fastapi import Depends, Request
-from fastapi.security import OAuth2PasswordBearer
 from starlette.datastructures import MutableHeaders
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from app.core.config import settings
+from app.api.deps import get_current_session
 from app.core.exceptions import (
     AppError,
     BadRequestError,
@@ -32,7 +31,7 @@ from app.core.exceptions import (
     UnauthorizedError,
 )
 from app.core.responses import ApiResponse, EnvelopeRoute, errors
-from app.core.security import decode_access_token
+from app.services.session_service import CurrentSession
 
 SAMPLE_HEADER = "X-Sample-Data"
 SCENARIO_HEADER = "X-Mock-Scenario"
@@ -101,19 +100,13 @@ ROUTE_SCENARIOS = {
 }
 ALL_SCENARIOS = (*GENERIC_SCENARIOS, *ROUTE_SCENARIOS)
 
-# Protected sample routes need a real login token (from POST /api/v1/auth/login). The token is
-# checked (signature and expiry) but no account is looked up, so recruiter and organisation routes
-# can be tried with any learner token until those account types exist.
-_oauth2_scheme = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.API_PREFIX}/auth/login", auto_error=False
-)
 
-
-async def sample_user(token: str | None = Depends(_oauth2_scheme)) -> int:
-    learner_id = decode_access_token(token) if token else None
-    if learner_id is None:
-        raise _unauthenticated()
-    return learner_id
+# Protected sample routes need a real sign-in (from POST /api/v1/auth/login), like the real
+# routes: the session must be open (Day 6). Since Day 7 the organisation and recruiter routes also
+# need the right organisation role (app/core/permissions.py); on the test server the demo company
+# accounts have them (docs/api.md, "Demo accounts").
+async def sample_user(current: CurrentSession = Depends(get_current_session)) -> int:
+    return current.learner.learner_id
 
 
 def sample_route(*scenarios: str, summary_note: str | None = None) -> dict[str, Any]:

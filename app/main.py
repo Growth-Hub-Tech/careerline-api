@@ -1,7 +1,7 @@
 import asyncio
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
@@ -10,6 +10,7 @@ from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.logging import configure_logging, get_logger
 from app.core.middleware import RequestContextMiddleware, SecurityHeadersMiddleware
+from app.core.permissions import authorize
 from app.db.migration_check import assert_database_at_head
 from app.db.session import engine
 from app.jobs.runner import JobRunner
@@ -64,6 +65,8 @@ def create_app() -> FastAPI:
         description="CareerLine AI API: skill tests, scoring, proficiency levels and personalised learning pathways",
         version="2.0.0",
         lifespan=lifespan,
+        # Every route passes its access rule first (app/core/permissions.py: the one place)
+        dependencies=[Depends(authorize)],
     )
 
     # Middleware runs outermost-last: CORS -> security headers -> request id / access log / 500s

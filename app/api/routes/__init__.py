@@ -1,6 +1,15 @@
 from fastapi import APIRouter
 
-from app.api.routes import accounts, attempts, auth, contact, learners, recommendations, skills
+from app.api.routes import (
+    accounts,
+    attempts,
+    auth,
+    contact,
+    learners,
+    organisation_users,
+    recommendations,
+    skills,
+)
 
 # Every API router. app/main.py mounts this under settings.API_PREFIX (/api/v1),
 # so no route or folder repeats the prefix.
@@ -15,3 +24,4 @@ api_router.include_router(attempts.router)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)
 api_router.include_router(accounts.router)
+api_router.include_router(organisation_users.router)

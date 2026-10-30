@@ -45,6 +45,23 @@
             ],
             "title": "Organisation Id"
           },
+          "organisation_role": {
+            "anyOf": [
+              {
+                "enum": [
+                  "owner",
+                  "admin",
+                  "recruiter"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The role in organisation_id (owner and admin = organisation_admin)",
+            "title": "Organisation Role"
+          },
           "phone": {
             "anyOf": [
               {
@@ -812,6 +829,72 @@
           }
         },
         "title": "ApiResponse[Invitation]",
+        "type": "object"
+      },
+      "ApiResponse_OrganisationUserList_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OrganisationUserList"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[OrganisationUserList]",
+        "type": "object"
+      },
+      "ApiResponse_OrganisationUser_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OrganisationUser"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[OrganisationUser]",
         "type": "object"
       },
       "ApiResponse_Organisation_": {
@@ -2165,12 +2248,20 @@
             "type": "integer"
           },
           "learner_id": {
-            "title": "Learner Id",
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "deprecated": true,
+            "description": "Not needed: the learner is the one signed in. If sent, it must be yours.",
+            "title": "Learner Id"
           }
         },
         "required": [
-          "learner_id",
           "attempt_id",
           "answers"
         ],
@@ -3744,6 +3835,109 @@
           "created_at"
         ],
         "title": "Organisation",
+        "type": "object"
+      },
+      "OrganisationUser": {
+        "description": "An account of the organisation and its role (not the audit roster: see /members).",
+        "properties": {
+          "added_at": {
+            "format": "date-time",
+            "title": "Added At",
+            "type": "string"
+          },
+          "email": {
+            "title": "Email",
+            "type": "string"
+          },
+          "full_name": {
+            "title": "Full Name",
+            "type": "string"
+          },
+          "learner_id": {
+            "title": "Learner Id",
+            "type": "integer"
+          },
+          "role": {
+            "enum": [
+              "owner",
+              "admin",
+              "recruiter"
+            ],
+            "title": "Role",
+            "type": "string"
+          }
+        },
+        "required": [
+          "learner_id",
+          "full_name",
+          "email",
+          "role",
+          "added_at"
+        ],
+        "title": "OrganisationUser",
+        "type": "object"
+      },
+      "OrganisationUserCreate": {
+        "properties": {
+          "email": {
+            "format": "email",
+            "title": "Email",
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "owner",
+              "admin",
+              "recruiter"
+            ],
+            "title": "Role",
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "role"
+        ],
+        "title": "OrganisationUserCreate",
+        "type": "object"
+      },
+      "OrganisationUserList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OrganisationUser"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "total"
+        ],
+        "title": "OrganisationUserList",
+        "type": "object"
+      },
+      "OrganisationUserUpdate": {
+        "properties": {
+          "role": {
+            "enum": [
+              "owner",
+              "admin",
+              "recruiter"
+            ],
+            "title": "Role",
+            "type": "string"
+          }
+        },
+        "required": [
+          "role"
+        ],
+        "title": "OrganisationUserUpdate",
         "type": "object"
       },
       "Page_AssessmentSummary_": {
@@ -6092,6 +6286,7 @@
     },
     "/api/v1/attempts/learner/{learner_id}": {
       "get": {
+        "deprecated": true,
         "operationId": "get_learner_attempts_api_v1_attempts_learner__learner_id__get",
         "parameters": [
           {
@@ -6172,6 +6367,74 @@
           }
         ],
         "summary": "Get Learner Attempts",
+        "tags": [
+          "Attempts"
+        ]
+      }
+    },
+    "/api/v1/attempts/me": {
+      "get": {
+        "operationId": "get_my_attempts_api_v1_attempts_me_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 10,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "title": "Offset",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get My Attempts",
         "tags": [
           "Attempts"
         ]
@@ -8436,8 +8699,45 @@
         ]
       }
     },
+    "/api/v1/learners/me": {
+      "get": {
+        "operationId": "get_my_profile_api_v1_learners_me_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get My Profile",
+        "tags": [
+          "Learners"
+        ]
+      }
+    },
     "/api/v1/learners/{learner_id}": {
       "get": {
+        "deprecated": true,
         "operationId": "get_learner_profile_api_v1_learners__learner_id__get",
         "parameters": [
           {
@@ -10080,6 +10380,372 @@
           "server_error",
           "unavailable",
           "slow"
+        ]
+      }
+    },
+    "/api/v1/organisations/{organisation_id}/users": {
+      "get": {
+        "description": "The organisation's accounts and their roles. Owners and admins.",
+        "operationId": "list_organisation_users_api_v1_organisations__organisation_id__users_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organisation_id",
+            "required": true,
+            "schema": {
+              "title": "Organisation Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_OrganisationUserList_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "List Organisation Users",
+        "tags": [
+          "Organisations: accounts and roles"
+        ]
+      },
+      "post": {
+        "description": "Gives an existing account a role in the organisation (it must have signed up). Owners and admins; only an owner can add an owner. 409 if the account already belongs to an organisation.",
+        "operationId": "add_organisation_user_api_v1_organisations__organisation_id__users_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organisation_id",
+            "required": true,
+            "schema": {
+              "title": "Organisation Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrganisationUserCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_OrganisationUser_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Add Organisation User",
+        "tags": [
+          "Organisations: accounts and roles"
+        ]
+      }
+    },
+    "/api/v1/organisations/{organisation_id}/users/{learner_id}": {
+      "delete": {
+        "description": "Removes an account from the organisation (the account itself stays). Only an owner removes an owner; the last owner can't leave (409).",
+        "operationId": "remove_organisation_user_api_v1_organisations__organisation_id__users__learner_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organisation_id",
+            "required": true,
+            "schema": {
+              "title": "Organisation Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "learner_id",
+            "required": true,
+            "schema": {
+              "title": "Learner Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Acknowledgement_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Remove Organisation User",
+        "tags": [
+          "Organisations: accounts and roles"
+        ]
+      },
+      "patch": {
+        "description": "Changes an account's role. Only an owner changes an owner's role or makes an owner; the last owner can't be demoted (409).",
+        "operationId": "change_organisation_user_role_api_v1_organisations__organisation_id__users__learner_id__patch",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organisation_id",
+            "required": true,
+            "schema": {
+              "title": "Organisation Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "learner_id",
+            "required": true,
+            "schema": {
+              "title": "Learner Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrganisationUserUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_OrganisationUser_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Change Organisation User Role",
+        "tags": [
+          "Organisations: accounts and roles"
         ]
       }
     },
@@ -12739,8 +13405,45 @@
         ]
       }
     },
+    "/api/v1/recommendations/levels/me": {
+      "get": {
+        "operationId": "get_my_levels_api_v1_recommendations_levels_me_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get My Levels",
+        "tags": [
+          "Recommendations"
+        ]
+      }
+    },
     "/api/v1/recommendations/levels/{learner_id}": {
       "get": {
+        "deprecated": true,
         "operationId": "get_learner_levels_api_v1_recommendations_levels__learner_id__get",
         "parameters": [
           {
@@ -12806,8 +13509,76 @@
         ]
       }
     },
+    "/api/v1/recommendations/pathway/me/{skill_id}": {
+      "get": {
+        "operationId": "my_learning_pathway_api_v1_recommendations_pathway_me__skill_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "skill_id",
+            "required": true,
+            "schema": {
+              "title": "Skill Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Any_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "My Learning Pathway",
+        "tags": [
+          "Recommendations"
+        ]
+      }
+    },
     "/api/v1/recommendations/pathway/{learner_id}/{skill_id}": {
       "get": {
+        "deprecated": true,
         "operationId": "learning_pathway_api_v1_recommendations_pathway__learner_id___skill_id__get",
         "parameters": [
           {

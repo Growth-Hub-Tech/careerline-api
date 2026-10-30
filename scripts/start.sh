@@ -16,6 +16,13 @@ if [ "${SEED_ON_START:-false}" = "true" ]; then
   python -m app.db.seed
 fi
 
+# The test server's demo accounts and demo company (docs/api.md, "Demo accounts"). Never in
+# production: app/db/demo.py refuses to run there.
+if [ "${DEMO_DATA_ON_START:-false}" = "true" ]; then
+  echo "Loading demo accounts..."
+  python -m app.db.demo
+fi
+
 echo "Starting careerline-api on port ${PORT:-8000}..."
 exec uvicorn app.main:app \
   --host 0.0.0.0 \
