@@ -7,7 +7,7 @@ POST /learners/behavioural-answers is no longer needed and is ignored when it is
 
 from app.core.config import settings
 from app.main import app
-from tests.integration.conftest import answers_for, assert_error_envelope, start_attempt, submit
+from tests.integration.conftest import assert_error_envelope, start_attempt, take_test
 
 API = settings.API_PREFIX
 
@@ -19,9 +19,9 @@ async def test_my_profile(client, learner):
 
 
 async def test_my_attempts_levels_and_pathway(client, learner, skill):
-    attempt = await start_attempt(client, learner["headers"], skill["skill_id"])
-    await submit(
-        client, learner["headers"], attempt["attempt_id"], answers_for(attempt, skill, set())
+    lists_id = skill["subskill_ids"][0]
+    attempt = await take_test(
+        client, learner["headers"], skill, right=lambda info: info["subskill_id"] == lists_id
     )
 
     attempts = await client.get(f"{API}/attempts/me", headers=learner["headers"])
@@ -36,7 +36,7 @@ async def test_my_attempts_levels_and_pathway(client, learner, skill):
         f"{API}/recommendations/pathway/me/{skill['skill_id']}", headers=learner["headers"]
     )
     assert pathway.status_code == 200, pathway.text
-    assert len(pathway.json()["data"]["learning_pathway"]) == 2
+    assert len(pathway.json()["data"]["learning_pathway"]) == 1
 
 
 async def test_me_routes_need_a_login(client):

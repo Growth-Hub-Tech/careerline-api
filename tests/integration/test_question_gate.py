@@ -5,27 +5,31 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.db.seed import load
-from tests.integration.conftest import assert_error_envelope, start_attempt
+from tests.integration.conftest import assert_error_envelope, take_test
 
 API = settings.API_PREFIX
 
 
-async def test_questions_that_are_not_active_are_never_served(client, learner, skill, database):
-    junior = [qid for qid, info in skill["questions"].items() if info["level"] == "JUNIOR"]
-    held_back = junior[:2]
+async def test_questions_that_are_not_active_are_never_served(client, learner, skill, database, db):
+    held_back = [
+        qid for qid, info in skill["questions"].items() if info["level"] in ("JUNIOR", "MID")
+    ][::3]
     with database.begin() as conn:
-        conn.execute(
-            text("UPDATE questions SET status = 'NEEDS_REVIEW' WHERE question_id = :a"),
-            {"a": held_back[0]},
-        )
-        conn.execute(
-            text("UPDATE questions SET status = 'RETIRED' WHERE question_id = :a"),
-            {"a": held_back[1]},
-        )
-    attempt = await start_attempt(client, learner["headers"], skill["skill_id"])
-    served = {q["question_id"] for q in attempt["questions"]}
-    assert served and not served & set(held_back)
-    assert attempt["total_questions"] == 4
+        for number, question_id in enumerate(held_back):
+            conn.execute(
+                text("UPDATE questions SET status = :status WHERE question_id = :id"),
+                {"status": "RETIRED" if number % 2 else "NEEDS_REVIEW", "id": question_id},
+            )
+    flip = iter([True, False] * 8)
+    final = await take_test(client, learner["headers"], skill, right=lambda info: next(flip))
+    served = set(
+        db.execute(
+            text("SELECT question_id FROM attempt_question WHERE attempt_id = :id"),
+            {"id": final["attempt_id"]},
+        ).scalars()
+    )
+    assert len(served) == 16
+    assert not served & set(held_back)
 
 
 async def test_a_skill_short_of_active_questions_cannot_be_tested(
@@ -41,7 +45,7 @@ async def test_a_skill_short_of_active_questions_cannot_be_tested(
     response = await client.post(
         f"{API}/attempts/start",
         headers=learner["headers"],
-        json={"skill_id": skill["skill_id"], "declared_level": "JUNIOR"},
+        json={"skill_id": skill["skill_id"]},
     )
     error = assert_error_envelope(response, 409, "skill_not_ready")
     assert error["details"] == {"minimum_per_level": 6, "short_by": {"MID": 1}}
@@ -67,7 +71,7 @@ async def test_an_untestable_seeded_skill_is_refused(client, learner, database):
     response = await client.post(
         f"{API}/attempts/start",
         headers=learner["headers"],
-        json={"skill_id": 41, "declared_level": "BEGINNER"},
+        json={"skill_id": 41},
     )
     error = assert_error_envelope(response, 409, "skill_not_ready")
     assert error["details"]["short_by"] == {"BEGINNER": 15, "JUNIOR": 15, "MID": 15, "ADVANCED": 15}

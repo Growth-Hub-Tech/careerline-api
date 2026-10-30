@@ -1,6 +1,6 @@
 """Picking questions (Day 9): balanced across subskills, the questions a person has seen least
-first. Shared by the fixed test (pick_balanced, the picking from before Day 9) and the
-adaptive engine (pick_next, one question at a time). Works on any objects with question_id and
+first, one question at a time for the adaptive test (pick_next). (pick_balanced, the picking of
+the fixed test, went with that test on Day 10.) Works on any objects with question_id and
 subskill_id (ORM rows or the simulation's questions); no database.
 """
 
@@ -31,23 +31,6 @@ def _least_seen_groups[T: Pickable](
     for questions in groups.values():
         questions.sort(key=lambda q: (seen.get(q.question_id, 0), rng.random()))
     return groups
-
-
-def pick_balanced[T: Pickable](
-    pool: Sequence[T], seen: dict[int, int], rng: random.Random, count: int
-) -> list[T]:
-    """`count` questions: round-robin over the subskills (in random order) so every subskill is
-    covered evenly, least seen first; the result in random order."""
-    groups = _least_seen_groups(pool, seen, rng)
-    subskill_order = list(groups.keys())
-    rng.shuffle(subskill_order)
-    selected: list[T] = []
-    while len(selected) < min(count, len(pool)):
-        for subskill_id in subskill_order:
-            if groups[subskill_id] and len(selected) < count:
-                selected.append(groups[subskill_id].pop(0))
-    rng.shuffle(selected)  # mix subskills in the final order
-    return selected
 
 
 def pick_next[T: Pickable](

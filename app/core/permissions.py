@@ -131,6 +131,8 @@ POLICIES: dict[str, Policy] = {
     "GET /attempts/me": SIGNED_IN,
     "GET /attempts/learner/{learner_id}": SELF,
     "GET /attempts/{attempt_id}": SIGNED_IN,  # the route checks the attempt is yours
+    "GET /attempts/{attempt_id}/question": SIGNED_IN,  # same
+    "POST /attempts/{attempt_id}/answer": SIGNED_IN,  # same
     "PATCH /attempts/{attempt_id}/cancel": SIGNED_IN,  # same
     "GET /recommendations/levels/me": SIGNED_IN,
     "GET /recommendations/levels/{learner_id}": SELF,
@@ -162,6 +164,7 @@ POLICIES: dict[str, Policy] = {
     "GET /profile": SIGNED_IN,
     "PATCH /profile": SIGNED_IN,
     "GET /profile/skills": SIGNED_IN,
+    "GET /profile/skills/history": SIGNED_IN,
     "POST /beginner-path/intake": SIGNED_IN,
     "GET /beginner-path/recommendations": SIGNED_IN,
     "POST /programmes/{programme_id}/clicks": SIGNED_IN,

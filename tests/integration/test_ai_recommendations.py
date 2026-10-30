@@ -1,4 +1,5 @@
-"""Day 5: the AI advice for weak subskills is a background job, not part of submit.
+"""Day 5: the AI advice for weak subskills is a background job, not part of the request that
+ends a test (since Day 10 the last answer; before, submit).
 
 Before, submit called OpenAI once per weak subskill, synchronously, inside the request (a
 blocking call in an async route, so the whole server waited). Now submit saves the plain advice
@@ -13,9 +14,10 @@ from sqlalchemy import text
 
 import app.integrations.openai_client as openai_client
 import app.services.scoring_service as scoring_service
+import app.services.test_taking_service as test_taking_service
 from app.core.config import settings
 from app.jobs.runner import JobRunner
-from tests.integration.conftest import answers_for, start_attempt, submit
+from tests.integration.conftest import take_test
 
 API = settings.API_PREFIX
 
@@ -38,29 +40,26 @@ def fake_ai(monkeypatch):
     monkeypatch.setattr(openai_client, "get_ai_benchmark", slow_ai)
     # raising=False: submit must not reach the AI through its old import either
     monkeypatch.setattr(scoring_service, "get_ai_benchmark", slow_ai, raising=False)
+    monkeypatch.setattr(test_taking_service, "get_ai_benchmark", slow_ai, raising=False)
     monkeypatch.setattr(settings, "OPENAI_API_KEY", "sk-test-not-a-real-key")
     return calls
 
 
 async def _fail_everything(client, learner, skill):
-    attempt = await start_attempt(client, learner["headers"], skill["skill_id"])
-    response = await submit(
-        client, learner["headers"], attempt["attempt_id"], answers_for(attempt, skill, set())
-    )
-    assert response.status_code == 200, response.text
-    return attempt, response.json()["data"]
+    final = await take_test(client, learner["headers"], skill, right=lambda info: False)
+    return final, final
 
 
-async def test_submit_does_not_wait_for_the_ai(client, learner, skill, fake_ai):
+async def test_the_last_answer_does_not_wait_for_the_ai(client, learner, skill, fake_ai):
     started = time.monotonic()
     await _fail_everything(client, learner, skill)
     elapsed = time.monotonic() - started
 
-    assert fake_ai == [], f"submit called the AI {len(fake_ai)} time(s) inside the request"
-    assert elapsed < 1.0, f"submit took {elapsed:.1f}s waiting for the AI"
+    assert fake_ai == [], f"the test called the AI {len(fake_ai)} time(s) inside a request"
+    assert elapsed < 5.0, f"16 answers took {elapsed:.1f}s: something waited for the AI"
 
 
-async def test_submit_answers_with_plain_advice_and_queues_one_ai_job(
+async def test_the_end_of_a_test_gives_plain_advice_and_queues_one_ai_job(
     client, learner, skill, fake_ai, db
 ):
     attempt, result = await _fail_everything(client, learner, skill)
@@ -112,9 +111,5 @@ async def test_without_an_openai_key_no_ai_job_is_queued(client, learner, skill,
 
 
 async def test_no_weak_subskills_means_no_ai_job(client, learner, skill, fake_ai, db):
-    attempt = await start_attempt(client, learner["headers"], skill["skill_id"])
-    response = await submit(
-        client, learner["headers"], attempt["attempt_id"], answers_for(attempt, skill)
-    )
-    assert response.status_code == 200, response.text
+    await take_test(client, learner["headers"], skill)
     assert ai_jobs(db) == 0

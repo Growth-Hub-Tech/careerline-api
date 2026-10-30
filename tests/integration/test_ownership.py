@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy import text
 
 from app.core.config import settings
-from tests.integration.conftest import answers_for, start_attempt, submit
+from tests.integration.conftest import answer, option_for, start_attempt
 
 API = settings.API_PREFIX
 
@@ -18,6 +18,7 @@ async def owned_attempt(client, learner, skill) -> dict:
     [
         ("GET", "/attempts/{attempt_id}"),
         ("PATCH", "/attempts/{attempt_id}/cancel"),
+        ("GET", "/attempts/{attempt_id}/question"),
         ("GET", "/attempts/learner/{learner_id}"),
         ("GET", "/learners/{learner_id}"),
         ("GET", "/recommendations/levels/{learner_id}"),
@@ -39,25 +40,26 @@ async def test_another_learner_gets_403(
     assert response.json()["error"]["code"] == "forbidden"
 
 
-async def test_another_learner_cannot_submit_my_attempt(
+async def test_another_learner_cannot_answer_my_attempt(
     client, learner, other_learner, skill, owned_attempt, db
 ):
-    response = await submit(
-        client,
-        other_learner["headers"],
-        owned_attempt["attempt_id"],
-        answers_for(owned_attempt, skill),
+    question_id = owned_attempt["question"]["question_id"]
+    option_id = option_for(skill, question_id, True)
+    response = await answer(
+        client, other_learner["headers"], owned_attempt["attempt_id"], question_id, option_id
     )
 
     assert response.status_code == 403
-    status = db.execute(
-        text("SELECT attempt_status FROM test_attempt WHERE attempt_id = :id"),
+    answered = db.execute(
+        text(
+            "SELECT count(*) FROM attempt_question WHERE attempt_id = :id AND answered_at IS NOT NULL"
+        ),
         {"id": owned_attempt["attempt_id"]},
     ).scalar_one()
-    assert status == "IN_PROGRESS"
-    # ...and the owner can still submit it
-    mine = await submit(
-        client, learner["headers"], owned_attempt["attempt_id"], answers_for(owned_attempt, skill)
+    assert answered == 0
+    # ...and the owner can still answer it
+    mine = await answer(
+        client, learner["headers"], owned_attempt["attempt_id"], question_id, option_id
     )
     assert mine.status_code == 200
 

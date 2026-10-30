@@ -9,6 +9,7 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.db import demo
+from app.db.seed import load as load_seeds
 from app.sample.routes.organisations import ORG_ID
 from tests.integration.conftest import login
 
@@ -71,3 +72,37 @@ def test_the_start_script_loads_the_demo_data_only_when_asked():
     script = (demo.REPO_ROOT / "scripts" / "start.sh").read_text()
     assert 'if [ "${DEMO_DATA_ON_START:-false}" = "true" ]' in script
     assert "python -m app.db.demo" in script
+
+
+async def test_the_demo_professional_has_results_and_a_skill_history(client, database, db):
+    with database.begin() as conn:
+        load_seeds(conn)
+    first = await demo.load()
+    second = await demo.load()
+    assert first["results_created"] >= 3 and second["results_created"] == 0
+
+    token = (await login(client, demo.DEMO_PROFESSIONAL, demo.DEMO_PASSWORD)).json()["access_token"]
+    headers = {"Authorization": f"Bearer {token}"}
+    skills = (await client.get(f"{API}/profile/skills", headers=headers)).json()["data"]["skills"]
+    assert len(skills) >= 2
+    history = (await client.get(f"{API}/profile/skills/history", headers=headers)).json()["data"]
+    entries = history["entries"]
+    assert len(entries) == first["results_created"]
+    # a retake shows progress on the same skill
+    frontend = [e for e in entries if e["skill_id"] == 1]
+    assert len(frontend) == 2 and frontend[0]["score"] > frontend[1]["score"]
+    attempts = db.execute(
+        text(
+            "SELECT attempt_status, count(*) FROM test_attempt a JOIN learner l USING (learner_id) "
+            "WHERE l.email = :email GROUP BY attempt_status"
+        ),
+        {"email": demo.DEMO_PROFESSIONAL},
+    ).all()
+    assert attempts == [("COMPLETED", first["results_created"])]
+    one = await client.get(f"{API}/attempts/{entries[0]['attempt_id']}", headers=headers)
+    assert one.json()["data"]["attempt"]["result"]["answered"] == 16
+
+
+async def test_without_the_question_bank_the_demo_has_no_results(db):
+    result = await demo.load()
+    assert result["results_created"] == 0

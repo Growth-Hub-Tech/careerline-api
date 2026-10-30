@@ -3,12 +3,16 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_learner, get_db, require_same_learner
-from app.core.exceptions import BadRequestError, ForbiddenError, NotFoundError
+from app.core.exceptions import BadRequestError, ForbiddenError, GoneError, NotFoundError
 from app.core.responses import EnvelopeRoute, errors, ok
 from app.models.models import AttemptStatus, Learner, TestAttempt
-from app.schemas.attempts import StartAttemptRequest, SubmitRequest
-from app.services.attempt_service import start_attempt
-from app.services.scoring_service import generate_recommendations, submit_and_score
+from app.schemas.attempts import AnswerRequest, AttemptState, StartAttemptRequest, SubmitRequest
+from app.services.test_taking_service import (
+    answer_question,
+    attempt_result,
+    current_state,
+)
+from app.services.test_taking_service import start_or_resume as start_attempt
 
 # Create a router for attempt endpoints
 router = APIRouter(prefix="/attempts", tags=["Attempts"], route_class=EnvelopeRoute)
@@ -25,55 +29,68 @@ def score_or_none(attempt):
     return None
 
 
-# START A TEST ATTEMPT
-@router.post("/start", responses=errors(400, 401, 404))
+# START (OR RESUME) A TEST: the adaptive test of Day 10, one question at a time
+@router.post(
+    "/start",
+    response_model=AttemptState,
+    responses=errors(401, 404, 409),
+    description="Starts the adaptive test of a skill and returns its first question, or resumes "
+    "the test already in progress for that skill (resumed: true, the same question). 16 "
+    "questions, harder after a right answer and easier after a wrong one; 30 minutes. "
+    "declared_level is retired and ignored. 409 skill_not_ready: the skill cannot be tested yet.",
+)
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
-    attempt_data = await start_attempt(
-        db=db,
-        learner_id=current_learner.learner_id,  # from token
-        skill_id=data.skill_id,
-        declared_level=data.declared_level,
-    )
-    return ok(
-        {
-            "attempt_id": attempt_data["attempt_id"],
-            "declared_level": attempt_data["declared_level"],
-            "total_questions": attempt_data["total_questions"],
-            "questions": attempt_data["questions"],
-        },
-        message=f"Test attempt started for learner_id={current_learner.learner_id} on skill_id={data.skill_id} at {data.declared_level} level",
-    )
+    return await start_attempt(db, current_learner.learner_id, data.skill_id)  # from token
 
 
-# SUBMIT ANSWERS AND GET SCORE
-@router.post("/submit", responses=errors(400, 401, 403, 404, 409))
-async def submit_answers(
-    data: SubmitRequest,
+# THE QUESTION TO ANSWER NOW (resume after a reload)
+@router.get(
+    "/{attempt_id}/question",
+    response_model=AttemptState,
+    responses=errors(401, 403, 404),
+    description="Where the test stands: the question to answer now (status in_progress), the "
+    "result (completed), or expired (the time ran out before enough answers for a result).",
+)
+async def get_current_question(
+    attempt_id: int,
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
-    answers = [
-        {"question_id": item.question_id, "selected_option_id": item.selected_option_id}
-        for item in data.answers
-    ]
-    final_result = await submit_and_score(
-        db=db,
-        attempt_id=data.attempt_id,
-        learner_id=current_learner.learner_id,  # from token
-        answers=answers,
+    return await current_state(db, attempt_id, current_learner.learner_id)
+
+
+# ANSWER THE CURRENT QUESTION: the answer to it is never sent back
+@router.post(
+    "/{attempt_id}/answer",
+    response_model=AttemptState,
+    responses=errors(400, 401, 403, 404, 409, 410),
+    description="Answers the question to answer now and returns the next one, or, after the "
+    "last question, the result (status completed, with result and recommendations). 409 "
+    "not_current_question: that question is not the one to answer now (already answered, or "
+    "never served); 409 attempt_finished: the test is over; 410 expired: the time ran out "
+    "(details.status says whether it was scored: completed, or expired).",
+)
+async def answer_current_question(
+    attempt_id: int,
+    data: AnswerRequest,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await answer_question(
+        db, attempt_id, current_learner.learner_id, data.question_id, data.selected_option_id
     )
-    recommendations = await generate_recommendations(
-        db=db,
-        attempt_id=data.attempt_id,
-        learner_id=current_learner.learner_id,  # from token
-    )
-    return ok(
-        {"result": final_result, "recommendations": recommendations},
-        message=f"Answers submitted and scored for attempt_id={data.attempt_id}",
+
+
+# THE OLD FIXED PASS/FAIL TEST: retired on Day 10
+@router.post("/submit", responses=errors(410), deprecated=True)
+async def submit_answers(data: SubmitRequest):
+    raise GoneError(
+        "The fixed pass/fail test is retired: answer one question at a time with "
+        "POST /attempts/{attempt_id}/answer"
     )
 
 
@@ -102,6 +119,7 @@ async def get_attempt(
     if not attempt:
         raise NotFoundError(f"Attempt {attempt_id} not found")
     require_same_learner(attempt.learner_id, current_learner)
+    attempt_outcome = await attempt_result(db, attempt)
 
     return {
         "attempt": {
@@ -112,6 +130,8 @@ async def get_attempt(
             "overall_percentage": score_or_none(attempt),
             "start_time": attempt.start_time,
             "end_time": attempt.end_time,
+            # Day 10: the result of a finished adaptive test (null otherwise)
+            "result": attempt_outcome.model_dump(mode="json") if attempt_outcome else None,
         }
     }
 

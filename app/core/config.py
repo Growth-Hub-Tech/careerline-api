@@ -91,10 +91,15 @@ class Settings(BaseSettings):
     # A skill can be tested only when every level has at least this many ACTIVE questions
     MIN_ACTIVE_QUESTIONS_PER_LEVEL: int = 15
 
+    # The adaptive test (Day 9 engine, Day 10 test-taking; docs/adaptive-engine.md)
+    ADAPTIVE_QUESTION_COUNT: int = 16
+    ADAPTIVE_START_LEVEL: str = "JUNIOR"  # a first test; a retake starts at the level reached
+    ATTEMPT_TIME_LIMIT_MINUTES: int = 30
+    # A test whose time ran out is still scored when at least this many questions were answered
+    ADAPTIVE_MIN_ANSWERS_FOR_RESULT: int = 8
+
     # Assessment config
-    PASS_THRESHOLD: int = 60
     WEAK_THRESHOLD: int = 60
-    QUESTIONS_PER_LEVEL: int = 25
 
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod

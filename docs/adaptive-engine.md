@@ -1,6 +1,6 @@
-# The adaptive test engine (Day 9)
+# The adaptive test engine (Day 9) and taking a test (Day 10)
 
-Code: `app/services/adaptive_engine.py` (scoring and the next level), `app/services/question_picking.py` (which question). Plain arithmetic, no database, fully unit-tested (`tests/test_adaptive_engine.py`, `tests/test_question_picking.py`). Day 10 puts it behind the API.
+Code: `app/services/adaptive_engine.py` (scoring and the next level), `app/services/question_picking.py` (which question). Plain arithmetic, no database, fully unit-tested (`tests/test_adaptive_engine.py`, `tests/test_question_picking.py`). Since Day 10 it runs behind the API: `app/services/test_taking_service.py` (see "Behind the API" below and docs/api.md, "Taking a test").
 
 ## How a test runs
 
@@ -58,3 +58,12 @@ What it shows:
 - **Risk: the length give-away.** Someone who always picks the longest option, on the questions of Frontend Web Development that are ACTIVE today, averages 49 and reaches ADVANCED 29% of the time. The questions with a mild length give-away (1.3x to 2.0x) are still served. Fixing their wrong options (docs/question-quality.md) is what closes this.
 
 The question difficulties are the authors' labels. Once real answers come in, measure each question's difficulty from them and use it in place of the label (`difficulty()` in the engine is the one place to change).
+
+## Behind the API (Day 10)
+
+- Each question is chosen when the previous one is answered, and saved as served (`attempt_question` with its level and time) before it is shown, so a reload shows the same question (`GET /attempts/{id}/question`) and only that question can be answered. The answer is saved on the same row.
+- Starting a skill that has a test in progress resumes it; a database lock keeps two quick starts from making two tests.
+- A first test starts at `ADAPTIVE_START_LEVEL` (JUNIOR); a retake starts at the level of the person's latest result for that skill.
+- Time limit `ATTEMPT_TIME_LIMIT_MINUTES` (30). When it has run out (seen at the next request) the test is scored on what was answered if that is at least `ADAPTIVE_MIN_ANSWERS_FOR_RESULT` (8) questions (`ended_by: time_up`), otherwise it ends `EXPIRED` with no result.
+- When a test ends, the result (score, level, ability and confidence on `test_attempt`), the per-level and per-subskill stats, the level for `/recommendations/levels`, the advice for the weaknesses and the `skill_history` entry are saved in the same database transaction as the last answer: all or nothing (tested by making the history save fail).
+- The old fixed test (all questions at once, pass or fail against a self-declared level) is retired; its attempts stay in the database as `test_format = fixed`.

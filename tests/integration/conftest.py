@@ -180,36 +180,46 @@ async def other_learner(client) -> dict:
     return await _make_learner(client, "bola@example.com", "Bola Learner")
 
 
-async def start_attempt(client, headers: dict, skill_id: int, level: str = "JUNIOR") -> dict:
+async def start_attempt(client, headers: dict, skill_id: int) -> dict:
+    """Start (or resume) an adaptive test; returns the attempt state with its first question."""
     response = await client.post(
-        f"{settings.API_PREFIX}/attempts/start",
-        headers=headers,
-        json={"skill_id": skill_id, "declared_level": level},
+        f"{settings.API_PREFIX}/attempts/start", headers=headers, json={"skill_id": skill_id}
     )
     assert response.status_code == 200, response.text
     return response.json()["data"]
 
 
-def answers_for(attempt: dict, skill: dict, correct_subskills: set[int] | None = None) -> list:
-    """An answer for every served question: right for correct_subskills, wrong for the rest.
-
-    correct_subskills=None means answer everything correctly.
-    """
-    answers = []
-    for question in attempt["questions"]:
-        info = skill["questions"][question["question_id"]]
-        right = correct_subskills is None or info["subskill_id"] in correct_subskills
-        option_id = info["correct"] if right else info["wrong"][0]
-        answers.append({"question_id": question["question_id"], "selected_option_id": option_id})
-    return answers
-
-
-async def submit(client, headers: dict, attempt_id: int, answers: list):
+async def answer(client, headers: dict, attempt_id: int, question_id: int, option_id: int):
     return await client.post(
-        f"{settings.API_PREFIX}/attempts/submit",
+        f"{settings.API_PREFIX}/attempts/{attempt_id}/answer",
         headers=headers,
-        json={"attempt_id": attempt_id, "answers": answers},
+        json={"question_id": question_id, "selected_option_id": option_id},
     )
+
+
+def option_for(skill: dict, question_id: int, right: bool) -> int:
+    info = skill["questions"][question_id]
+    return info["correct"] if right else info["wrong"][0]
+
+
+async def take_test(client, headers: dict, skill: dict, right=lambda info: True) -> dict:
+    """Answer an adaptive test to the end; right(info) says whether to answer each question
+    right (info: the skill fixture's subskill_id, level, correct and wrong options).
+    Returns the last answer's data (status "completed" with the result)."""
+    state = await start_attempt(client, headers, skill["skill_id"])
+    while state["status"] == "in_progress":
+        question_id = state["question"]["question_id"]
+        is_right = right(skill["questions"][question_id])
+        response = await answer(
+            client,
+            headers,
+            state["attempt_id"],
+            question_id,
+            option_for(skill, question_id, is_right),
+        )
+        assert response.status_code == 200, response.text
+        state = response.json()["data"]
+    return state
 
 
 def assert_error_envelope(response, status: int, code: str) -> dict:
