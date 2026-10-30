@@ -4,6 +4,7 @@ from app.api.routes import (
     accounts,
     attempts,
     auth,
+    beginner_path,
     contact,
     learners,
     organisation_users,
@@ -29,6 +30,7 @@ api_router.include_router(attempts.router)
 api_router.include_router(profile.router)
 api_router.include_router(results.router)
 api_router.include_router(results.downloads)
+api_router.include_router(beginner_path.router)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)
 api_router.include_router(accounts.router)

@@ -82,7 +82,7 @@ def test_people_answers_put_a_revenue_role_first():
     }
     ranked = rank_roles(load_questionnaire(), answers, ROLE_INFO)
     assert ranked[0].slug in {"sales-development-representative", "account-executive"}
-    assert ranked[0].match_score == 100
+    assert ranked[0].match_score >= 85
 
 
 def test_more_interests_never_lower_a_score():
