@@ -9,6 +9,7 @@ from app.api.routes import (
     organisation_users,
     profile,
     recommendations,
+    results,
     roles,
     skills,
 )
@@ -26,6 +27,8 @@ api_router.include_router(roles.router)
 api_router.include_router(roles.titles_router)
 api_router.include_router(attempts.router)
 api_router.include_router(profile.router)
+api_router.include_router(results.router)
+api_router.include_router(results.downloads)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)
 api_router.include_router(accounts.router)
