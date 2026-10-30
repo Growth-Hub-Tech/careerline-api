@@ -100,6 +100,9 @@ class Settings(BaseSettings):
     # A test whose time ran out is still scored when at least this many questions were answered
     ADAPTIVE_MIN_ANSWERS_FOR_RESULT: int = 8
 
+    # PDF skill reports (Day 12): how long a download link works
+    REPORT_LINK_MINUTES: int = 15
+
     # Assessment config
     WEAK_THRESHOLD: int = 60
 
