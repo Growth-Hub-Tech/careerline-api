@@ -156,12 +156,15 @@ POLICIES: dict[str, Policy] = {
     "POST /contact": PUBLIC,
     "GET /test-mailbox": PUBLIC,
     "DELETE /test-mailbox": PUBLIC,
-    # A learner's own things (sample routes until built: they answer for the caller)
-    "GET /tests/{test_id}/access": SIGNED_IN,
+    # Results and their PDF report (Day 12): the routes check the result is yours
     "GET /results": SIGNED_IN,
     "GET /results/{result_id}": SIGNED_IN,
     "GET /results/{result_id}/report": SIGNED_IN,
     "POST /results/{result_id}/report": SIGNED_IN,
+    # A report's download link: the signed token in the path is the proof
+    "GET /reports/{token}": PUBLIC,
+    # A learner's own things (sample routes until built: they answer for the caller)
+    "GET /tests/{test_id}/access": SIGNED_IN,
     "GET /profile": SIGNED_IN,
     "PATCH /profile": SIGNED_IN,
     "GET /profile/skills": SIGNED_IN,

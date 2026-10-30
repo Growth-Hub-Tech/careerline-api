@@ -18,16 +18,14 @@ from app.sample.routes import (
     profile,
     programmes,
     recruiter,
-    results,
     subscriptions,
 )
 
 sample_router = APIRouter()
 
 # Day 2: first half of the API (real since then: contact on Day 5, accounts on
-# Day 6, roles on Day 8; see app/api/routes)
+# Day 6, roles on Day 8, results and their PDF report on Day 12; see app/api/routes)
 sample_router.include_router(assessments.router)
-sample_router.include_router(results.router)
 sample_router.include_router(profile.router)
 sample_router.include_router(beginner_path.router)
 sample_router.include_router(programmes.router)
