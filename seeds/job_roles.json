@@ -1,0 +1,182 @@
+[
+  {
+    "role_id": 101,
+    "slug": "frontend-developer",
+    "title": "Frontend Developer",
+    "track": "tech",
+    "summary": "Builds the screens people use, in the browser.",
+    "description": "Turns designs into fast, accessible web pages with HTML, CSS, JavaScript and React.",
+    "skills": [
+      {
+        "skill_id": 1,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 8,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 13,
+        "target_level": "BEGINNER"
+      }
+    ]
+  },
+  {
+    "role_id": 102,
+    "slug": "backend-developer",
+    "title": "Backend Developer",
+    "track": "tech",
+    "summary": "Builds the APIs and data behind an app.",
+    "description": "Designs REST APIs, authentication and databases, and keeps them fast and safe.",
+    "skills": [
+      {
+        "skill_id": 2,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 3,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 7,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 8,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 103,
+    "slug": "data-analyst",
+    "title": "Data Analyst",
+    "track": "tech",
+    "summary": "Answers business questions with data.",
+    "description": "Writes SQL, cleans data and turns it into dashboards and reports people act on.",
+    "skills": [
+      {
+        "skill_id": 19,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 3,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 23,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 104,
+    "slug": "machine-learning-engineer",
+    "title": "Machine Learning Engineer",
+    "track": "tech",
+    "summary": "Builds models that learn from data.",
+    "description": "Prepares data, trains and evaluates models, and puts them into production.",
+    "skills": [
+      {
+        "skill_id": 20,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 21,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 19,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 105,
+    "slug": "ai-engineer",
+    "title": "AI Engineer",
+    "track": "tech",
+    "summary": "Builds products on top of language models.",
+    "description": "Designs prompts, retrieval and evaluation for features built on large language models.",
+    "skills": [
+      {
+        "skill_id": 30,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 24,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 21,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 106,
+    "slug": "sales-development-representative",
+    "title": "Sales Development Representative",
+    "track": "revenue",
+    "summary": "Finds and books meetings with new customers.",
+    "description": "Researches prospects, writes cold outreach and qualifies leads for the sales team.",
+    "skills": [
+      {
+        "skill_id": 36,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 31,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 33,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 107,
+    "slug": "account-executive",
+    "title": "Account Executive",
+    "track": "revenue",
+    "summary": "Turns qualified leads into signed customers.",
+    "description": "Runs discovery, demos and negotiations, and forecasts the pipeline.",
+    "skills": [
+      {
+        "skill_id": 37,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 32,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 38,
+        "target_level": "JUNIOR"
+      }
+    ]
+  },
+  {
+    "role_id": 108,
+    "slug": "digital-marketer",
+    "title": "Digital Marketer",
+    "track": "revenue",
+    "summary": "Brings in and grows an audience online.",
+    "description": "Plans campaigns and content across channels and measures what works.",
+    "skills": [
+      {
+        "skill_id": 39,
+        "target_level": "MID"
+      },
+      {
+        "skill_id": 40,
+        "target_level": "JUNIOR"
+      },
+      {
+        "skill_id": 18,
+        "target_level": "JUNIOR"
+      }
+    ]
+  }
+]

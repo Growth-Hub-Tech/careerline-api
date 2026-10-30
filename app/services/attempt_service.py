@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
-from app.core.exceptions import BadRequestError, NotFoundError
+from app.core.exceptions import BadRequestError, ConflictError, NotFoundError
 from app.core.logging import get_logger
 from app.models.models import Skill
 from app.repositories.attempt_repo import (
@@ -11,8 +11,16 @@ from app.repositories.attempt_repo import (
     get_questions_for_attempt,
     record_attempt_questions,
 )
+from app.repositories.question_repo import readiness
 
 logger = get_logger(__name__)
+
+
+class SkillNotReady(ConflictError):
+    """Some level of the skill has too few ACTIVE questions to test it fairly (Day 8)."""
+
+    code = "skill_not_ready"
+
 
 # Validate declared level
 VALID_LEVELS = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
@@ -34,6 +42,17 @@ async def start_attempt(db: AsyncSession, learner_id: int, skill_id: int, declar
     # Unknown skill: a clean 404 (before, the insert broke the foreign key and gave a 500)
     if await db.get(Skill, skill_id) is None:
         raise NotFoundError(f"Skill {skill_id} not found")
+
+    # Only well-stocked skills: every level needs enough questions that passed the quality check
+    ready, short_by = await readiness(db, skill_id)
+    if not ready:
+        raise SkillNotReady(
+            f"Skill {skill_id} cannot be tested yet: some levels have too few reviewed questions",
+            details={
+                "minimum_per_level": settings.MIN_ACTIVE_QUESTIONS_PER_LEVEL,
+                "short_by": short_by,
+            },
+        )
 
     # Create the attempt
     attempt_id = await create_attempt(db, learner_id, skill_id, level_id)

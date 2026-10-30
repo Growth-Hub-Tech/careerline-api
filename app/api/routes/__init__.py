@@ -8,6 +8,7 @@ from app.api.routes import (
     learners,
     organisation_users,
     recommendations,
+    roles,
     skills,
 )
 
@@ -20,6 +21,8 @@ api_router.include_router(auth.router)
 api_router.include_router(auth.token_router)
 api_router.include_router(learners.router)
 api_router.include_router(skills.router)
+api_router.include_router(roles.router)
+api_router.include_router(roles.titles_router)
 api_router.include_router(attempts.router)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)

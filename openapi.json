@@ -831,6 +831,39 @@
         "title": "ApiResponse[Invitation]",
         "type": "object"
       },
+      "ApiResponse_JobTitleList_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JobTitleList"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[JobTitleList]",
+        "type": "object"
+      },
       "ApiResponse_OrganisationUserList_": {
         "properties": {
           "data": {
@@ -3746,6 +3779,60 @@
         "title": "InvitationPublic",
         "type": "object"
       },
+      "JobTitleItem": {
+        "description": "One step of the job-title ladder and the level expected at it.",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "expected_level": {
+            "$ref": "#/components/schemas/LevelName"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "rank": {
+            "title": "Rank",
+            "type": "integer"
+          },
+          "slug": {
+            "title": "Slug",
+            "type": "string"
+          },
+          "title_id": {
+            "title": "Title Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title_id",
+          "slug",
+          "name",
+          "rank",
+          "expected_level",
+          "description"
+        ],
+        "title": "JobTitleItem",
+        "type": "object"
+      },
+      "JobTitleList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/JobTitleItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "JobTitleList",
+        "type": "object"
+      },
       "LevelName": {
         "enum": [
           "BEGINNER",
@@ -5150,6 +5237,7 @@
         "type": "object"
       },
       "Role": {
+        "description": "skills: the main skill first. test_ids: the tests to take for this role, only for skills\nthat can be tested now; until GET /tests is real a test id is 200 + skill_id.",
         "properties": {
           "description": {
             "title": "Description",
@@ -5208,6 +5296,7 @@
         "type": "object"
       },
       "RoleSkill": {
+        "description": "target_level: the level the role needs in this skill at the mid title (see /job-titles).",
         "properties": {
           "skill_id": {
             "title": "Skill Id",
@@ -8568,6 +8657,28 @@
           "server_error",
           "unavailable",
           "slow"
+        ]
+      }
+    },
+    "/api/v1/job-titles": {
+      "get": {
+        "description": "The job-title ladder, lowest first, with the level expected at each title. A role skill's target_level is the level at the mid title; for another title it moves by as many steps as that title's expected_level is from MID (never below BEGINNER or above ADVANCED).",
+        "operationId": "list_job_titles_api_v1_job_titles_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_JobTitleList_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "List Job Titles",
+        "tags": [
+          "Skills and roles"
         ]
       }
     },
@@ -15002,7 +15113,6 @@
     },
     "/api/v1/roles": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "list_roles_api_v1_roles_get",
         "parameters": [
           {
@@ -15011,6 +15121,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -15021,6 +15133,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -15037,76 +15150,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -15116,62 +15159,16 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "summary": "List Roles",
         "tags": [
-          "Sample: Skills and roles"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Skills and roles"
         ]
       }
     },
     "/api/v1/roles/{role_id}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_role_api_v1_roles__role_id__get",
         "parameters": [
           {
@@ -15195,46 +15192,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
           "404": {
             "content": {
               "application/json": {
@@ -15245,26 +15202,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -15274,55 +15211,11 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "summary": "Get Role",
         "tags": [
-          "Sample: Skills and roles"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Skills and roles"
         ]
       }
     },

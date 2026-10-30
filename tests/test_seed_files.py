@@ -4,10 +4,11 @@ import re
 
 import pytest
 
-from app.db.seed import SEEDS_DIR, read_seed_rows
+from app.db.seed import SEEDS_DIR, read_question_reviews, read_seed_rows
 
 ROWS = read_seed_rows()
 LEVELS = {"BEGINNER", "JUNIOR", "MID", "ADVANCED"}
+LEVEL_ORDER = ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
 
 
 def _ids(table: str, key: str) -> list[int]:
@@ -79,6 +80,64 @@ def test_every_level_has_questions_for_every_skill_with_questions():
             str(question["difficulty_level"].value)
         )
     assert all(levels == LEVELS for levels in by_skill.values())
+
+
+def test_the_eight_pilot_job_roles_use_skills_that_have_questions():
+    skills_with_questions = {
+        row["skill_id"] for row in ROWS["subskills"] if row["subskill_id"] in _question_subskills()
+    }
+    roles = ROWS["job_roles"]
+    assert len(roles) == 8
+    assert len({r["slug"] for r in roles}) == 8
+    assert {r["track"] for r in roles} <= {"tech", "revenue"}
+    by_role: dict[int, list[dict]] = {}
+    for row in ROWS["job_role_skills"]:
+        by_role.setdefault(row["role_id"], []).append(row)
+        assert row["skill_id"] in skills_with_questions, row
+        assert str(row["target_level"].value) in LEVELS
+    assert set(by_role) == {r["role_id"] for r in roles}
+    for rows in by_role.values():
+        assert 2 <= len(rows) <= 5
+        assert len({r["skill_id"] for r in rows}) == len(rows)
+        # the first skill is the role's main one: the highest target level
+        assert rows[0]["target_level"] == max(
+            (r["target_level"] for r in rows), key=lambda level: LEVEL_ORDER.index(level.value)
+        )
+
+
+def test_the_job_title_ladder():
+    ladder = sorted(ROWS["job_titles"], key=lambda row: row["rank"])
+    assert [row["slug"] for row in ladder] == ["intern", "junior", "mid", "senior", "lead"]
+    expected = [LEVEL_ORDER.index(row["expected_level"].value) for row in ladder]
+    assert expected == sorted(expected), "a higher title never expects a lower level"
+    assert ladder[0]["expected_level"].value == "BEGINNER"
+    assert ladder[-1]["expected_level"].value == "ADVANCED"
+
+
+def test_expert_decisions_point_at_real_questions():
+    from app.services.question_quality import DECISIONS
+
+    questions = set(_ids("questions", "question_id"))
+    reviews = read_question_reviews()
+    for question_id, decision in reviews.items():
+        assert question_id in questions
+        assert decision in DECISIONS
+
+
+def test_every_question_has_a_status_from_the_quality_check():
+    from app.services.question_quality import ISSUE_TEXT
+
+    statuses = {str(row["status"].value) for row in ROWS["questions"]}
+    assert statuses <= {"ACTIVE", "NEEDS_REVIEW", "RETIRED"}
+    assert "ACTIVE" in statuses
+    for row in ROWS["questions"]:
+        assert set(row["quality_issues"]) <= set(ISSUE_TEXT), row["question_id"]
+        if not row["quality_issues"]:
+            assert row["status"].value == "ACTIVE" or row["question_id"] in read_question_reviews()
+
+
+def _question_subskills() -> set[int]:
+    return {row["subskill_id"] for row in ROWS["questions"]}
 
 
 def test_the_seed_files_hold_no_personal_data():

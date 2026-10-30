@@ -1,7 +1,8 @@
 import enum
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, Numeric, String, Text
+from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, Numeric, String, Text, text
+from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
 
@@ -27,6 +28,13 @@ class AttemptStatus(str, enum.Enum):
     CANCELLED = "CANCELLED"
     PASSED = "PASSED"
     FAILED = "FAILED"
+
+
+# Day 8: set by the question-quality check when the seeds load (app/services/question_quality.py)
+class QuestionStatus(str, enum.Enum):
+    ACTIVE = "ACTIVE"  # served in tests
+    NEEDS_REVIEW = "NEEDS_REVIEW"  # has a blocking issue; not served
+    RETIRED = "RETIRED"  # rejected by the experts; not served
 
 
 class QuestionType(str, enum.Enum):
@@ -131,6 +139,16 @@ class Question(Base):
         pg_enum(LevelName, "levelname"), nullable=False
     )
     weight: Mapped[int] = mapped_column(Integer, default=1)
+    # Day 8: only ACTIVE questions are served; quality_issues lists what the check found
+    status: Mapped[QuestionStatus] = mapped_column(
+        pg_enum(QuestionStatus, "questionstatus"),
+        nullable=False,
+        default=QuestionStatus.ACTIVE,
+        server_default=QuestionStatus.ACTIVE.value,
+    )
+    quality_issues: Mapped[list[str]] = mapped_column(
+        ARRAY(String(40)), nullable=False, default=list, server_default=text("'{}'")
+    )
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
 
     # Relationship: one question belongs to one subskill

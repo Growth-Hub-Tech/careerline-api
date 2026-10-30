@@ -1,0 +1,4 @@
+{
+  "_how": "Experts' decisions on questions the quality check flagged. decision: approved (serve it despite a review or length issue) or rejected (never serve it). Fill in the review file from scripts/check_questions.py, then run it with --apply-reviews. Never put an email address here.",
+  "reviews": []
+}

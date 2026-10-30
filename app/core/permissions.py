@@ -141,6 +141,7 @@ POLICIES: dict[str, Policy] = {
     "GET /skills/{skill_id}/subskills": PUBLIC,
     "GET /roles": PUBLIC,
     "GET /roles/{role_id}": PUBLIC,
+    "GET /job-titles": PUBLIC,
     "GET /tests": PUBLIC,
     "GET /tests/{test_id}": PUBLIC,
     "GET /programmes": PUBLIC,

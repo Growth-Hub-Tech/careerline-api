@@ -187,7 +187,7 @@ Every email is rendered inside `app/email/templates/layout.html` (and `layout.tx
 
 ## Scripts
 
-- `scripts/check_option_bias.py`: reports questions whose correct option gives itself away by its length.
+- `scripts/check_questions.py`: the question-quality check (Day 8): each question's issues and status, which skills can be tested, and the experts' review file (`--review-file`, then `--apply-reviews`). See docs/question-quality.md.
 - `scripts/rebalance_distractors.py`: drafts rewritten wrong options for human review. It never writes to the database.
 - `scripts/sql/`: one-off repair SQL for databases copied from the old MySQL database (`reset_sequences.sql`, `fix_learner_levels.sql`).
 

@@ -6,12 +6,13 @@ from app.api.deps import get_db
 from app.core.exceptions import NotFoundError
 from app.core.responses import EnvelopeRoute, errors
 from app.models.models import Skill, Subskill
+from app.repositories.question_repo import testable_skill_ids
 
 # Create a router for skill endpoints
 router = APIRouter(prefix="/skills", tags=["Skills"], route_class=EnvelopeRoute)
 
 
-# LIST ALL SKILLS WITH PAGINATION
+# LIST ALL SKILLS WITH PAGINATION (testable: POST /attempts/start accepts this skill now)
 @router.get("/")
 async def list_skills(
     limit: int = 10, offset: int = 0, db: AsyncSession = Depends(get_db, scope="function")
@@ -19,6 +20,7 @@ async def list_skills(
     # Fetch skills with pagination
     result = await db.execute(select(Skill).offset(offset).limit(limit))
     skills = result.scalars().all()
+    testable = await testable_skill_ids(db, [s.skill_id for s in skills])
 
     # Count total skills
     count_result = await db.execute(select(Skill))
@@ -34,6 +36,8 @@ async def list_skills(
                 "skill_name": s.skill_name,
                 "category": s.category,
                 "description": s.skill_descr,
+                # Day 8: every level has enough reviewed questions, so a test can start
+                "testable": s.skill_id in testable,
             }
             for s in skills
         ],

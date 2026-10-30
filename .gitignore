@@ -23,7 +23,8 @@ __pycache__/
 .idea/
 .DS_Store
 
-# Output of scripts/check_option_bias.py and scripts/rebalance_distractors.py
+# Output of scripts/check_questions.py and scripts/rebalance_distractors.py
 biased.csv
+review.csv
 rebalanced_review.csv
 rebalanced_updates.sql

@@ -1,0 +1,42 @@
+[
+  {
+    "title_id": 1,
+    "slug": "intern",
+    "name": "Intern",
+    "rank": 1,
+    "expected_level": "BEGINNER",
+    "description": "Learning the basics; works with close guidance."
+  },
+  {
+    "title_id": 2,
+    "slug": "junior",
+    "name": "Junior",
+    "rank": 2,
+    "expected_level": "JUNIOR",
+    "description": "Does well-defined tasks with some guidance."
+  },
+  {
+    "title_id": 3,
+    "slug": "mid",
+    "name": "Mid-level",
+    "rank": 3,
+    "expected_level": "MID",
+    "description": "Works on most tasks alone and knows when to ask."
+  },
+  {
+    "title_id": 4,
+    "slug": "senior",
+    "name": "Senior",
+    "rank": 4,
+    "expected_level": "ADVANCED",
+    "description": "Owns hard problems end to end and guides others."
+  },
+  {
+    "title_id": 5,
+    "slug": "lead",
+    "name": "Lead",
+    "rank": 5,
+    "expected_level": "ADVANCED",
+    "description": "Sets direction for a team. Same level as senior; the difference is breadth and leadership, which a skill test does not measure."
+  }
+]
