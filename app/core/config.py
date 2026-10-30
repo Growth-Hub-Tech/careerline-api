@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     # OpenAI
     OPENAI_API_KEY: str = ""
     OPENAI_TIMEOUT_SECONDS: float = 30.0
+    # Day 11: the model that explains test answers (asked once per question, then kept)
+    OPENAI_EXPLANATION_MODEL: str = "gpt-4o-mini"
 
     # App
     APP_NAME: str = "CareerLine API"
