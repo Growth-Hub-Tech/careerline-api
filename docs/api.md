@@ -179,6 +179,16 @@ A result is a finished test: `result_id` is the test's `attempt_id` (the one in 
 
 The PDF has the skill, the person's name and date, level and score, right answers, confidence, every subskill with its band, strengths and areas to work on, the advice and the person's history in that skill.
 
+## Beginner path (Day 13, part 1)
+
+For people new to tech: a short questionnaire, then up to three career paths.
+
+1. `GET /beginner-path/intake` (public) → `version` and `questions[]` (`question_id`, `section`: personality / goals / time / finances, `text`, `kind`: `single_choice` or `multi_choice`, `options[]` with `value` and `label`).
+2. `POST /beginner-path/intake` (signed in) with `{ "version", "answers": [{ "question_id", "values": ["…"] }] }`: every question once, values from its options, one value for `single_choice`. `201` → `{ intake_id, submitted_at, recommendations[] }`, best first: `rank`, `role_id` (as in `GET /roles`), `title`, `match_score` (0–100: how well the answers fit the role), `reasons` (up to 3 short sentences to show), `starting_test_id` (the test to take first, 200 + `skill_id`; `null` when none of the role's skills can be tested yet), `programme` (`null` until programmes are real, Day 14). `400 bad_request`: an unknown question or value, a missing answer, two values for a single choice, or an old `version` (load the questionnaire again).
+3. `GET /beginner-path/recommendations` (signed in) → the latest intake's paths; before any intake `{ "intake_id": null, "submitted_at": null, "recommendations": [] }`.
+
+The same answers always give the same paths. The questionnaire's text and scoring live in `seeds/beginner_intake.json`.
+
 ## Background jobs
 
 Slow work runs in background jobs, after the request has answered: emails, the AI advice for weak subskills, (Day 11) the AI explanations of a finished test's answers and (Day 12) the PDF skill reports. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
@@ -193,7 +203,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/beginner-path/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -295,6 +305,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 13**: `/beginner-path/*` is real (see "Beginner path"; no more `X-Sample-Data`). The questionnaire has 6 questions (version `2026-11`; the sample's `2026-10` answers `400`). Every question must be answered; values are checked. `recommendations` has up to 3 paths; `starting_test_id` can be `null`; `programme` is `null` for now. `GET /beginner-path/recommendations` before any intake: `intake_id` and `submitted_at` are `null` with an empty list (the sample's `empty` scenario is gone).
 - **Day 12**: `/results` is real (see "Results and PDF skill reports"; no more `X-Sample-Data`): `result_id` is the `attempt_id` of a finished test (the sample ids 501 and 502 are gone). Breaking against the sample: `passed` (list and detail) and `declared_level` (detail) are removed; new in the detail: `confidence` and `confidence_label`; `percentile` is `null` until a skill has 5 results; `recommendations[].programme_id` is `null` for now. Someone else's result is `404`. `GET /results/{result_id}/report` is real (same shape): `generating`, then `ready` with a 15-minute `download_url`; new public `GET /reports/{token}` (that link) answers the PDF, or `410 expired`. `POST /results/{result_id}/report` makes it again (`202`). The report's sample `X-Mock-Scenario` values (`generating`, `failed`) are gone.
 - **Day 11**: new `GET /attempts/{attempt_id}/review` (see "Reviewing a finished test"): every question of a finished test with the right answer, the choice and an explanation (AI or standard); `409 attempt_not_finished` while the test runs. New error code `attempt_not_finished` (409). No change to existing routes.
 - **Day 10**: real test-taking (see "Taking a test"). `POST /attempts/start` returns the attempt state with one `question` (was: all questions at once) and resumes a test in progress; `declared_level` is ignored (was: required, `400` when invalid). New `GET /attempts/{attempt_id}/question` and `POST /attempts/{attempt_id}/answer`. `POST /attempts/submit` answers `410 gone` (the pass/fail result, `status: passed/failed`, `confirmed_level` and `level_suggestion` are gone). `GET /attempts/{attempt_id}`: new `result`, and `attempt_status` can be `expired`. `GET /profile/skills` is real (no more `X-Sample-Data`; `level` and `percentage_score` come from the latest test) and new `GET /profile/skills/history`. New demo account `demo.professional@example.com`. Still sample and unchanged: `/results` (its `passed` field will go when it is made real).
