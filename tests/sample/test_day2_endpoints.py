@@ -1,7 +1,7 @@
-"""Day 2 sample answers: tests, profile, beginner path and programme clicks. (The contact
-form is real since Day 5, the accounts since Day 6, the roles since Day 8 and the results with
-their PDF report since Day 12: see tests/integration/test_contact.py, test_accounts.py,
-test_roles.py and test_results_and_reports.py.)"""
+"""Day 2 sample answers: tests, profile and programme clicks. (The contact form is real since
+Day 5, the accounts since Day 6, the roles since Day 8, the results with their PDF report since
+Day 12 and the beginner path since Day 13: see tests/integration/test_contact.py,
+test_accounts.py, test_roles.py, test_results_and_reports.py and test_beginner_path.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
 
@@ -48,43 +48,6 @@ async def test_my_profile(client, auth):
 async def test_profile_rejects_an_unknown_budget(client, auth):
     response = await client.patch(f"{API}/profile", headers=auth, json={"budget": "millions"})
     assert_sample_error(response, 422, "validation_error")
-
-
-async def test_beginner_path_intake_gives_ranked_career_paths(client, auth):
-    intake = assert_sample(await client.get(f"{API}/beginner-path/intake"))
-    sections = {q["section"] for q in intake["questions"]}
-    assert sections == {"personality", "goals", "time", "finances"}
-
-    answers = [
-        {"question_id": q["question_id"], "values": [q["options"][0]["value"]]}
-        for q in intake["questions"]
-    ]
-    response = await client.post(
-        f"{API}/beginner-path/intake",
-        headers=auth,
-        json={"version": intake["version"], "answers": answers},
-    )
-    path = assert_sample(response, 201)
-    ranks = [r["rank"] for r in path["recommendations"]]
-    assert ranks == sorted(ranks) and ranks[0] == 1
-    assert path["recommendations"][0]["reasons"]
-    assert path["recommendations"][0]["programme"]["provider_type"] == "incubate"
-
-
-async def test_beginner_path_rejects_unknown_questions(client, auth):
-    response = await client.post(
-        f"{API}/beginner-path/intake",
-        headers=auth,
-        json={"version": "2026-10", "answers": [{"question_id": "nope", "values": ["x"]}]},
-    )
-    assert_sample_error(response, 400, "bad_request")
-
-
-async def test_no_career_paths_before_the_intake(client, auth):
-    response = await client.get(
-        f"{API}/beginner-path/recommendations", headers={**auth, "X-Mock-Scenario": "empty"}
-    )
-    assert assert_sample(response)["recommendations"] == []
 
 
 async def test_programmes_and_a_recorded_click(client, auth):
