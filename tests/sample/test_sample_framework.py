@@ -61,7 +61,7 @@ async def test_the_frontend_may_read_the_marker_header(client):
 
 @pytest.mark.parametrize("name,status", sorted(ERROR_SCENARIO_STATUS.items()))
 async def test_each_error_scenario_forces_its_status_and_error_envelope(client, auth, name, status):
-    response = await client.get(f"{API}/results", headers={**auth, "X-Mock-Scenario": name})
+    response = await client.get(f"{API}/payments", headers={**auth, "X-Mock-Scenario": name})
     codes = {"server_error": "internal_error", "unavailable": "service_unavailable"}
     assert_sample_error(response, status, codes.get(name, name))
 
@@ -84,65 +84,67 @@ async def test_scenario_codes_match_the_api_error_codes(client, auth):
 
 async def test_unavailable_and_unauthenticated_use_the_standard_error_codes(client, auth):
     response = await client.get(
-        f"{API}/results", headers={**auth, "X-Mock-Scenario": "unavailable"}
+        f"{API}/payments", headers={**auth, "X-Mock-Scenario": "unavailable"}
     )
     assert response.json()["error"]["code"] == "service_unavailable"
-    response = await client.get(f"{API}/results", headers={"X-Mock-Scenario": "unauthenticated"})
+    response = await client.get(f"{API}/payments", headers={"X-Mock-Scenario": "unauthenticated"})
     assert response.headers["WWW-Authenticate"] == "Bearer"
 
 
 async def test_rate_limited_says_when_to_retry(client, auth):
     response = await client.get(
-        f"{API}/results", headers={**auth, "X-Mock-Scenario": "rate_limited"}
+        f"{API}/payments", headers={**auth, "X-Mock-Scenario": "rate_limited"}
     )
     assert response.headers["Retry-After"] == "30"
 
 
 async def test_the_empty_scenario_empties_lists(client, auth):
     data = assert_sample(
-        await client.get(f"{API}/results", headers={**auth, "X-Mock-Scenario": "empty"})
+        await client.get(f"{API}/payments", headers={**auth, "X-Mock-Scenario": "empty"})
     )
     assert data == {"items": [], "total": 0, "limit": 20, "offset": 0}
 
 
 async def test_scenario_names_ignore_case_and_spaces(client, auth):
-    response = await client.get(f"{API}/results", headers={**auth, "X-Mock-Scenario": " Empty "})
+    response = await client.get(f"{API}/payments", headers={**auth, "X-Mock-Scenario": " Empty "})
     assert assert_sample(response)["items"] == []
 
 
 async def test_an_unknown_scenario_is_a_400_that_lists_the_valid_ones(client, auth):
-    response = await client.get(f"{API}/results", headers={**auth, "X-Mock-Scenario": "emtpy"})
+    response = await client.get(f"{API}/payments", headers={**auth, "X-Mock-Scenario": "emtpy"})
     error = assert_sample_error(response, 400, "bad_request")
     assert "empty" in error["message"]
 
 
 async def test_a_scenario_the_route_does_not_offer_is_a_400(client, auth):
-    # "empty" makes no sense for one result
-    response = await client.get(f"{API}/results/501", headers={**auth, "X-Mock-Scenario": "empty"})
+    # "empty" makes no sense for one payment
+    response = await client.get(
+        f"{API}/payments/made-up-reference", headers={**auth, "X-Mock-Scenario": "empty"}
+    )
     assert_sample_error(response, 400, "bad_request")
 
 
 async def test_the_offered_scenarios_are_listed_in_the_api_description():
-    operation = app.openapi()["paths"][f"{API}/results"]["get"]
+    operation = app.openapi()["paths"][f"{API}/payments"]["get"]
     assert "empty" in operation["x-sample-scenarios"]
     assert "payment_required" in operation["x-sample-scenarios"]
 
 
 async def test_protected_sample_routes_need_a_login_token(client):
-    response = await client.get(f"{API}/results")
+    response = await client.get(f"{API}/payments")
     assert_sample_error(response, 401, "unauthenticated")
     assert response.headers["WWW-Authenticate"] == "Bearer"
 
 
 async def test_a_forged_token_is_refused(client):
     response = await client.get(
-        f"{API}/results", headers={"Authorization": "Bearer not-a-real-token"}
+        f"{API}/payments", headers={"Authorization": "Bearer not-a-real-token"}
     )
     assert_sample_error(response, 401, "unauthenticated")
 
 
 async def test_protected_sample_routes_use_the_real_login_in_the_api_description():
-    operation = app.openapi()["paths"][f"{API}/results"]["get"]
+    operation = app.openapi()["paths"][f"{API}/payments"]["get"]
     assert operation["security"] == [{"OAuth2PasswordBearer": []}]
 
 

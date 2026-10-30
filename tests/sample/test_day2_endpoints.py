@@ -1,6 +1,7 @@
-"""Day 2 sample answers: tests, results, profile, beginner path and programme clicks. (The contact
-form is real since Day 5, the accounts since Day 6 and the roles since Day 8: see
-tests/integration/test_contact.py, test_accounts.py and test_roles.py.)"""
+"""Day 2 sample answers: tests, profile, beginner path and programme clicks. (The contact
+form is real since Day 5, the accounts since Day 6, the roles since Day 8 and the results with
+their PDF report since Day 12: see tests/integration/test_contact.py, test_accounts.py,
+test_roles.py and test_results_and_reports.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
 
@@ -32,29 +33,6 @@ async def test_payment_needed_on_test_access_is_a_402(client, auth):
         f"{API}/tests/202/access", headers={**auth, "X-Mock-Scenario": "payment_required"}
     )
     assert_sample_error(response, 402, "payment_required")
-
-
-async def test_my_results_and_one_result_in_detail(client, auth):
-    results = assert_sample(await client.get(f"{API}/results", headers=auth))
-    assert results["total"] == 2
-    result = assert_sample(await client.get(f"{API}/results/501", headers=auth))
-    assert result["level"] == "JUNIOR"
-    assert {s["band"] for s in result["subskills"]} <= {"strong", "developing", "weak"}
-    assert result["recommendations"][0]["programme_id"] == 301
-
-
-async def test_the_pdf_report_is_ready_generating_or_failed(client, auth):
-    ready = assert_sample(await client.get(f"{API}/results/501/report", headers=auth))
-    assert ready["status"] == "ready" and ready["download_url"].endswith(".pdf")
-    for state in ("generating", "failed"):
-        report = assert_sample(
-            await client.get(
-                f"{API}/results/501/report", headers={**auth, "X-Mock-Scenario": state}
-            )
-        )
-        assert report["status"] == state and report["download_url"] is None
-    again = await client.post(f"{API}/results/501/report", headers=auth)
-    assert assert_sample(again, 202)["status"] == "generating"
 
 
 async def test_my_profile(client, auth):
