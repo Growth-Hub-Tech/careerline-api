@@ -133,6 +133,7 @@ POLICIES: dict[str, Policy] = {
     "GET /attempts/{attempt_id}": SIGNED_IN,  # the route checks the attempt is yours
     "GET /attempts/{attempt_id}/question": SIGNED_IN,  # same
     "POST /attempts/{attempt_id}/answer": SIGNED_IN,  # same
+    "GET /attempts/{attempt_id}/review": SIGNED_IN,  # same; only once the test is over
     "PATCH /attempts/{attempt_id}/cancel": SIGNED_IN,  # same
     "GET /recommendations/levels/me": SIGNED_IN,
     "GET /recommendations/levels/{learner_id}": SELF,

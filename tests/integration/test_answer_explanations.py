@@ -169,9 +169,7 @@ async def test_the_job_adds_ai_explanations_that_are_kept_for_everyone(
     assert data["ai_explanations"] == "ready"
     for item in data["items"]:
         assert item["explanation_source"] == "ai"
-        assert item["explanation"] == (
-            f"Because option 0 is right for: {item['question_text']}"
-        )
+        assert item["explanation"] == (f"Because option 0 is right for: {item['question_text']}")
     assert len(fake_ai) == 16
 
     # Another person's test of the same skill reuses what is kept: only new questions are asked
