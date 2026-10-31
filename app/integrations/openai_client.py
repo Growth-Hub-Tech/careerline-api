@@ -78,3 +78,45 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
         # If OpenAI API fails, fall back to generic message
         logger.warning("openai_call_failed", subskill=subskill_name, error=type(e).__name__)
         return fallback_recommendation(subskill_name, score)
+
+
+# Day 11: why the right answer of a test question is right, asked once per question after a
+# test (app/services/explanations.py keeps it). None when there is no key or the call fails;
+# the caller then shows the standard explanation.
+def explain_answer(
+    skill_name: str,
+    subskill_name: str,
+    question_text: str,
+    options: list[str],
+    correct_option: str,
+) -> str | None:
+    client = get_client()
+    if client is None:
+        return None
+
+    listed = "\n".join(f"- {option}" for option in options)
+    prompt = (
+        f"A {skill_name} test question on {subskill_name}:\n{question_text}\n\n"
+        f"Options:\n{listed}\n\nThe correct answer is: {correct_option}\n\n"
+        "In at most 3 short sentences, explain why this answer is correct and why the "
+        "other options are not. Plain words for a learner, no introduction, no markdown."
+    )
+    try:
+        response = client.chat.completions.create(
+            model=settings.OPENAI_EXPLANATION_MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a patient technical tutor. You explain test answers "
+                    "briefly and accurately.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=220,
+            temperature=0.3,
+        )
+        explanation = (response.choices[0].message.content or "").strip()
+        return explanation or None
+    except Exception as e:
+        logger.warning("openai_explanation_failed", error=type(e).__name__)
+        return None
