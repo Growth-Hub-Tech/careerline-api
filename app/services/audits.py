@@ -34,7 +34,14 @@ from app.models.roles import JobRoleSkill
 from app.repositories.question_repo import testable_skill_ids
 from app.schemas.common import LevelName, Page
 from app.schemas.organisations import Audit as AuditOut
-from app.schemas.organisations import AuditCreate, AuditSummary, Benchmark
+from app.schemas.organisations import (
+    AuditCreate,
+    AuditDeltas,
+    AuditRetest,
+    AuditSummary,
+    Benchmark,
+    MemberDelta,
+)
 from app.services import team
 from app.services.recruiting import LEVEL_ORDER, invite_url
 
@@ -139,6 +146,7 @@ async def _summaries(db: AsyncSession, rows: list[Audit]) -> list[AuditSummary]:
                 members_completed=completed,
                 started_at=row.started_at,
                 completed_at=completed_at,
+                baseline_audit_id=row.baseline_audit_id,
             )
         )
     return out
@@ -195,7 +203,9 @@ async def target_levels(
     return out
 
 
-async def benchmarks(db: AsyncSession, audit: Audit) -> list[Benchmark]:
+async def benchmarks(
+    db: AsyncSession, audit: Audit, *, with_baseline: bool = True
+) -> list[Benchmark]:
     members = (await _audit_members(db, [audit.id]))[audit.id]
     role_of = {m.team_member_id: m.role_id for m in members}
     rows = (
@@ -220,6 +230,14 @@ async def benchmarks(db: AsyncSession, audit: Audit) -> list[Benchmark]:
     titles = await team.role_titles(db, set(role_ids))
     names = await skill_names(db, {skill_id for _, skill_id in by_pair})
     industry = await industry_averages(db, {skill_id for _, skill_id in by_pair})
+    baseline: dict[tuple[int, int], float] = {}
+    if with_baseline and audit.baseline_audit_id is not None:
+        first = await db.get(Audit, audit.baseline_audit_id)
+        if first is not None:
+            baseline = {
+                (b.role_id, b.skill_id): b.team_average_score
+                for b in await benchmarks(db, first, with_baseline=False)
+            }
     out = []
     for role_id in role_ids:
         for skill_id, _ in skills.get(role_id, []):
@@ -242,6 +260,10 @@ async def benchmarks(db: AsyncSession, audit: Audit) -> list[Benchmark]:
                     members_tested=len(results),
                 )
             )
+            before = baseline.get((role_id, skill_id))
+            if before is not None:
+                out[-1].baseline_average_score = before
+                out[-1].score_delta = round(out[-1].team_average_score - before, 1)
     return out
 
 
@@ -326,6 +348,7 @@ async def _pick_members(
 async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: Audit) -> int:
     members = (await _audit_members(db, [audit.id]))[audit.id]
     testable = await _testable_by_role(db, sorted({m.role_id for m in members}))
+    repeat = await _baseline_tests(db, audit)
     people = {
         row.id: row
         for row in await db.scalars(
@@ -340,7 +363,10 @@ async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: 
     sent = 0
     for member in sorted(members, key=lambda m: m.team_member_id):
         person = people[member.team_member_id]
-        for skill_id in testable.get(member.role_id, []):
+        skills = testable.get(member.role_id, [])
+        if repeat is not None:  # a re-test: the tests they had in the baseline audit
+            skills = [s for s in skills if s in repeat.get(member.team_member_id, set())]
+        for skill_id in skills:
             row = Invitation(
                 token=secrets.token_urlsafe(32),
                 organisation_id=audit.organisation_id,
@@ -380,6 +406,21 @@ async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: 
     return sent
 
 
+async def _baseline_tests(db: AsyncSession, audit: Audit) -> dict[int, set[int]] | None:
+    """A re-test's baseline: member -> the skills they were invited to (None: not a re-test)."""
+    if audit.baseline_audit_id is None:
+        return None
+    out: dict[int, set[int]] = defaultdict(set)
+    for member_id, skill_id in await db.execute(
+        select(Invitation.team_member_id, Invitation.skill_id).where(
+            Invitation.audit_id == audit.baseline_audit_id, Invitation.status != "revoked"
+        )
+    ):
+        if member_id is not None:
+            out[member_id].add(skill_id)
+    return out
+
+
 async def create_audit(db: AsyncSession, actor: OrganisationMember, data: AuditCreate) -> AuditOut:
     members = await _pick_members(db, actor.organisation_id, data)
     audit = Audit(
@@ -411,3 +452,117 @@ async def start_audit(db: AsyncSession, actor: OrganisationMember, audit_id: int
         raise ConflictError("This audit has already been started")
     await _send_invitations(db, actor, audit)
     return await _audit_out(db, audit)
+
+
+# ---------- re-tests (Day 24) ----------
+
+
+async def retest_audit(
+    db: AsyncSession, actor: OrganisationMember, audit_id: int, data: AuditRetest
+) -> AuditOut:
+    """A new audit for the baseline's people (or some of them) and their same tests."""
+    first = await _own_audit(db, actor.organisation_id, audit_id)
+    if first.started_at is None:
+        raise ConflictError("This audit is still a draft: start it before re-testing it")
+    members = (await _audit_members(db, [first.id]))[first.id]
+    if data.member_ids is not None:
+        wanted = set(data.member_ids)
+        known = {m.team_member_id for m in members}
+        outside = sorted(wanted - known)
+        if outside:
+            name = await db.scalar(
+                select(TeamMember.full_name).where(
+                    TeamMember.id == outside[0],
+                    TeamMember.organisation_id == actor.organisation_id,
+                )
+            )
+            if name is None:
+                raise NotFoundError(f"Team member {outside[0]} not found")
+            raise BadRequestError(f"{name} was not in the audit being re-tested")
+        members = [m for m in members if m.team_member_id in wanted]
+    if not members:
+        raise BadRequestError("Nobody to re-test: the audit has no members left")
+    audit = Audit(
+        organisation_id=actor.organisation_id,
+        name=(data.name or f"{first.name} (re-test)").strip()[:120],
+        role_ids=list(first.role_ids),
+        created_by=actor.learner_id,
+        created_at=_now(),
+        baseline_audit_id=first.id,
+    )
+    db.add(audit)
+    await db.flush()
+    for member in members:
+        db.add(
+            AuditMember(
+                audit_id=audit.id, team_member_id=member.team_member_id, role_id=member.role_id
+            )
+        )
+    await db.flush()
+    if data.send_invitations:
+        await _send_invitations(db, actor, audit)
+    return await _audit_out(db, audit)
+
+
+async def _newest_in_audit(db: AsyncSession, audit_id: int) -> dict[tuple[int, int], SkillHistory]:
+    out: dict[tuple[int, int], SkillHistory] = {}
+    rows = await db.execute(
+        select(Invitation.team_member_id, Invitation.skill_id, SkillHistory)
+        .join(SkillHistory, SkillHistory.attempt_id == Invitation.attempt_id)
+        .where(Invitation.audit_id == audit_id, Invitation.status == "completed")
+        .order_by(SkillHistory.recorded_at.desc(), SkillHistory.id.desc())
+    )
+    for member_id, skill_id, history in rows.all():
+        if member_id is not None:
+            out.setdefault((member_id, skill_id), history)
+    return out
+
+
+async def audit_deltas(db: AsyncSession, organisation_id: int, audit_id: int) -> AuditDeltas:
+    audit = await _own_audit(db, organisation_id, audit_id)
+    if audit.baseline_audit_id is None:
+        raise BadRequestError("This audit is not a re-test: there is nothing to compare it with")
+    members = (await _audit_members(db, [audit.id]))[audit.id]
+    people = {
+        row.id: row
+        for row in await db.scalars(
+            select(TeamMember).where(TeamMember.id.in_([m.team_member_id for m in members]))
+        )
+    }
+    pairs = sorted(
+        {
+            (row.team_member_id, row.skill_id)
+            for row in await db.scalars(
+                select(Invitation).where(
+                    Invitation.audit_id == audit.id, Invitation.status != "revoked"
+                )
+            )
+            if row.team_member_id is not None
+        }
+    )
+    before = await _newest_in_audit(db, audit.baseline_audit_id)
+    after = await _newest_in_audit(db, audit.id)
+    role_of = {m.team_member_id: m.role_id for m in members}
+    names = await skill_names(db, {skill_id for _, skill_id in pairs})
+    items = []
+    for member_id, skill_id in pairs:
+        person = people.get(member_id)
+        if person is None:
+            continue
+        b, a = before.get((member_id, skill_id)), after.get((member_id, skill_id))
+        items.append(
+            MemberDelta(
+                member_id=member_id,
+                full_name=person.full_name,
+                role_id=role_of.get(member_id, person.role_id),
+                skill_id=skill_id,
+                skill_name=names.get(skill_id, ""),
+                before_score=float(b.score) if b else None,
+                before_level=LevelName(b.level.value) if b else None,
+                after_score=float(a.score) if a else None,
+                after_level=LevelName(a.level.value) if a else None,
+                score_delta=float(a.score - b.score) if a and b else None,
+            )
+        )
+    items.sort(key=lambda i: (i.full_name, i.member_id, i.skill_name))
+    return AuditDeltas(audit_id=audit.id, baseline_audit_id=audit.baseline_audit_id, items=items)

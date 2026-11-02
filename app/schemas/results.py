@@ -35,6 +35,15 @@ class ResultRecommendation(BaseModel):
     programme_id: int | None = None
 
 
+class PreviousResult(BaseModel):
+    """The person's result in the same skill just before this one (Day 24, pre/post re-test)."""
+
+    result_id: int
+    level: LevelName
+    percentage_score: float
+    completed_at: datetime
+
+
 class ResultDetail(ResultSummary):
     confidence: float = Field(ge=0, le=1, description="0-1: how sure the level is")
     confidence_label: Literal["low", "medium", "high"]
@@ -46,6 +55,13 @@ class ResultDetail(ResultSummary):
     strengths: list[str]
     gaps: list[str]
     recommendations: list[ResultRecommendation]
+    previous_result: PreviousResult | None = Field(
+        default=None, description="Day 24: the result in the same skill just before this one"
+    )
+    score_delta: float | None = Field(
+        default=None,
+        description="Day 24: percentage_score minus the previous result's (null without one)",
+    )
 
 
 class Report(BaseModel):

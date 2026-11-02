@@ -19,7 +19,7 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from jose import JWTError, jwt
-from sqlalchemy import func, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -41,6 +41,7 @@ from app.models.reports import ResultReport
 from app.schemas.attempts import AttemptResult
 from app.schemas.common import LevelName, Page
 from app.schemas.results import (
+    PreviousResult,
     Report,
     ResultDetail,
     ResultRecommendation,
@@ -144,6 +145,7 @@ async def result_detail(db: AsyncSession, result_id: int, learner_id: int) -> Re
     result = await _result(db, attempt)
     skill_name = await db.scalar(select(Skill.skill_name).where(Skill.skill_id == attempt.skill_id))
     programme_id = await best_programme_for_skill(db, attempt.skill_id)
+    previous = await previous_result(db, attempt)
     return ResultDetail(
         result_id=attempt.attempt_id,
         attempt_id=attempt.attempt_id,
@@ -171,6 +173,38 @@ async def result_detail(db: AsyncSession, result_id: int, learner_id: int) -> Re
             ResultRecommendation(subskill_name=name, text=advice, programme_id=programme_id)
             for name, advice in await _advice(db, attempt.attempt_id)
         ],
+        previous_result=previous,
+        score_delta=float(result.score) - previous.percentage_score if previous else None,
+    )
+
+
+async def previous_result(db: AsyncSession, attempt: TestAttempt) -> PreviousResult | None:
+    """Day 24 (pre/post re-test): the person's result in the same skill just before this one."""
+    this = await db.scalar(
+        select(SkillHistory).where(SkillHistory.attempt_id == attempt.attempt_id)
+    )
+    if this is None:
+        return None
+    before = await db.scalar(
+        select(SkillHistory)
+        .where(
+            SkillHistory.learner_id == this.learner_id,
+            SkillHistory.skill_id == this.skill_id,
+            or_(
+                SkillHistory.recorded_at < this.recorded_at,
+                and_(SkillHistory.recorded_at == this.recorded_at, SkillHistory.id < this.id),
+            ),
+        )
+        .order_by(SkillHistory.recorded_at.desc(), SkillHistory.id.desc())
+        .limit(1)
+    )
+    if before is None:
+        return None
+    return PreviousResult(
+        result_id=before.attempt_id,
+        level=LevelName(before.level.value),
+        percentage_score=float(before.score),
+        completed_at=before.recorded_at,
     )
 
 

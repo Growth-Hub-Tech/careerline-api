@@ -9,6 +9,7 @@
   status (in_progress, completed) follows its invitations and is not stored.
 - organisation_targets (Day 23): the level each role should reach in each skill, with an
   optional due date. Replaced as a whole by PUT /organisations/{id}/targets.
+- A re-test (Day 24) is an audit with baseline_audit_id: the same people and tests again.
 """
 
 from datetime import date, datetime
@@ -66,6 +67,10 @@ class Audit(Base):
     )
     # None: a draft (no invitations sent yet)
     started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # Day 24: a re-test of that audit (the same people, the same tests)
+    baseline_audit_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("audits.id", ondelete="SET NULL"), nullable=True
+    )
 
 
 class AuditMember(Base):
