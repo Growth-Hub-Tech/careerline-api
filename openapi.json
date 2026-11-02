@@ -8983,7 +8983,7 @@
     },
     "/api/v1/organisations/{organisation_id}/audits": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "Owners and admins. Newest first.",
         "operationId": "list_audits_api_v1_organisations__organisation_id__audits_get",
         "parameters": [
           {
@@ -9001,6 +9001,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -9011,6 +9013,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -9027,16 +9030,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9046,16 +9039,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -9077,26 +9060,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9106,36 +9069,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9145,27 +9078,11 @@
         ],
         "summary": "List Audits",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Organisation audit"
         ]
       },
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Owners and admins. The audit's members are the roster people in role_ids (or member_ids, who must be on the roster and in those roles) whose role has a test. send_invitations=true (the default) emails each of them an invitation for every testable skill of their role (free for them, any account can accept it); false makes a draft: start it with POST .../audits/{audit_id}/start. 404: an unknown role or member. 400: a member outside the roles, nobody on the roster in those roles, or no test for them.",
         "operationId": "start_audit_api_v1_organisations__organisation_id__audits_post",
         "parameters": [
           {
@@ -9219,16 +9136,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
           "403": {
             "content": {
               "application/json": {
@@ -9249,26 +9156,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9278,36 +9165,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9317,28 +9174,13 @@
         ],
         "summary": "Start Audit",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Organisation audit"
         ]
       }
     },
     "/api/v1/organisations/{organisation_id}/audits/{audit_id}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Owners and admins. status: draft, in_progress, or completed once every member has finished every test of the audit. benchmarks: one per role and skill with a finished test: the target level, the team's average score, how many reached the target, and the industry average (null until 5 people on CareerLine have a result in that skill).",
         "operationId": "get_audit_api_v1_organisations__organisation_id__audits__audit_id__get",
         "parameters": [
           {
@@ -9371,16 +9213,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9391,7 +9223,7 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
+          "403": {
             "content": {
               "application/json": {
                 "schema": {
@@ -9399,7 +9231,84 @@
                 }
               }
             },
-            "description": "Payment required: not enough credits or no active subscription"
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Get Audit",
+        "tags": [
+          "Organisation audit"
+        ]
+      }
+    },
+    "/api/v1/organisations/{organisation_id}/audits/{audit_id}/start": {
+      "post": {
+        "description": "Owners and admins. 409: already started.",
+        "operationId": "start_draft_audit_api_v1_organisations__organisation_id__audits__audit_id__start_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organisation_id",
+            "required": true,
+            "schema": {
+              "title": "Organisation Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "audit_id",
+            "required": true,
+            "schema": {
+              "title": "Audit Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Audit_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
           },
           "403": {
             "content": {
@@ -9431,16 +9340,6 @@
             },
             "description": "Conflict: e.g. this attempt was already submitted"
           },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9450,36 +9349,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9487,24 +9356,9 @@
             "OAuth2PasswordBearer": []
           }
         ],
-        "summary": "Get Audit",
+        "summary": "Start Draft Audit",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Organisation audit"
         ]
       }
     },
