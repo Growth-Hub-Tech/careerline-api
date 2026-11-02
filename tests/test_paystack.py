@@ -8,11 +8,11 @@ from app.integrations import paystack
 
 def test_a_signature_is_the_hmac_sha512_of_the_raw_body():
     body = b'{"event":"charge.success"}'
-    good = hmac.new(b"sk_test_abc", body, hashlib.sha512).hexdigest()
-    assert paystack.valid_signature(body, good, "sk_test_abc")
-    assert not paystack.valid_signature(body, good, "sk_test_other")
-    assert not paystack.valid_signature(body + b" ", good, "sk_test_abc")
-    assert not paystack.valid_signature(body, None, "sk_test_abc")
+    good = hmac.new(b"paystack-secret-one", body, hashlib.sha512).hexdigest()
+    assert paystack.valid_signature(body, good, "paystack-secret-one")
+    assert not paystack.valid_signature(body, good, "paystack-secret-two")
+    assert not paystack.valid_signature(body + b" ", good, "paystack-secret-one")
+    assert not paystack.valid_signature(body, None, "paystack-secret-one")
     assert not paystack.valid_signature(body, good, "")
 
 

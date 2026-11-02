@@ -18,7 +18,7 @@ from app.integrations import paystack
 from tests.integration.conftest import assert_error_envelope
 
 API = settings.API_PREFIX
-SECRET = "sk_test_not_a_real_key_0123456789"
+SECRET = "paystack-test-secret-for-tests-only"
 
 
 class FakePaystack:
@@ -268,7 +268,7 @@ async def test_a_webhook_without_a_valid_signature_is_refused(
 ):
     payment = await checkout(client, learner)
     event = charge_success(payment["reference"], 1_000_000)
-    raw, headers = signed(event, "sk_test_someone_else" if problem == "wrong_secret" else SECRET)
+    raw, headers = signed(event, "someone-elses-secret" if problem == "wrong_secret" else SECRET)
     if problem == "no_signature":
         headers.pop("x-paystack-signature")
     if problem == "changed_body":
