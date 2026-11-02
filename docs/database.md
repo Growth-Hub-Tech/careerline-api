@@ -23,6 +23,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `e7a1c5d9f3b2` | 19 | `candidates` (one per email per organisation) and `invitations` (a link to take one test: sent, accepted, completed or revoked). New empty tables. |
 | `f3a9c1e5b7d4` | 21 | `team_members` (an organisation's team roster: one per email per organisation, each with a job role), `organisations.seats_total` (existing organisations get 25) and `invitations.team_member_id` (the roster entry a team invitation tests). New empty table and columns. |
 | `a4c8e2f6d1b9` | 22 | `audits` (one round of testing some roles; a draft until `started_at`), `audit_members` (who is in it, with their role then) and `invitations.audit_id`. New empty tables and column. |
+| `b5d9f3a7e2c1` | 23 | `organisation_targets` (the level each role should reach in each skill, with an optional due date). New empty table. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.
