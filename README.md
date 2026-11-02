@@ -150,6 +150,14 @@ A pull request into `main` must come from `dev`.
 
 `render.yaml` is a Render Blueprint for the test server: the web service (`pip install -r requirements.txt`, then `bash scripts/start.sh`, which migrates before starting, health check on `/healthz`), a background worker (`python -m app.worker`, runs the background jobs; on the free plan set `RUN_JOBS_IN_WEB=true` on the web service instead) and a Postgres 16 database. Render generates `SECRET_KEY`; set `CORS_ORIGINS` (the website's address) and optionally `OPENAI_API_KEY` in the dashboard. See [docs/api.md](docs/api.md#test-server-render).
 
+## Going live
+
+With `APP_ENV=production` the API refuses to start, and logs every reason at once, while a setting is unsafe or still a test one (`app/core/launch_checks.py`): `SECRET_KEY` shorter than 32 characters or a placeholder; `FRONTEND_URL` or a `CORS_ORIGINS` entry not https (or `*`, or localhost); `PAYSTACK_SECRET_KEY` not a live key (`sk_live_…`); emails not going out by SMTP (`EMAIL_BACKEND`, `SMTP_HOST`); the placeholder `EMAIL_FROM`; `CHECK_MIGRATIONS_ON_STARTUP=false`. Check a configuration from a shell before deploying it:
+
+```bash
+APP_ENV=production python -m app.core.launch_checks   # lists the problems; exit 1 if any
+```
+
 ## API docs for the frontend
 
 [docs/api.md](docs/api.md): base URLs, login, envelopes and error codes, generating TypeScript types from `openapi.json`, and how API changes are announced (changelog, `api-change` label).
@@ -165,7 +173,7 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 | `CORS_ORIGINS` | Comma-separated frontend origins (default `http://localhost:5173`) |
 | `LOG_JSON`     | `true` in production for JSON logs                                 |
 
-Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Settings: `VERIFY_EMAIL_TOKEN_HOURS`, `PASSWORD_RESET_TOKEN_MINUTES`, `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR`.
+Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Settings: `VERIFY_EMAIL_TOKEN_HOURS`, `PASSWORD_RESET_TOKEN_MINUTES`, `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR`, `CHECKOUTS_PER_HOUR` (Paystack payments one person may start per hour).
 
 Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
 
