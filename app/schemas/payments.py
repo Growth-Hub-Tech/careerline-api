@@ -1,5 +1,6 @@
 # Payments go through Paystack: checkout gives an authorization_url, the person pays there,
-# Paystack redirects back to callback_url and tells the API by webhook. Credits pay for tests.
+# Paystack redirects back to callback_url and tells the API by webhook (signed). Credits pay for
+# tests.
 from datetime import datetime
 from typing import Literal
 
@@ -56,17 +57,6 @@ class CreditTransaction(BaseModel):
 class Credits(BaseModel):
     credits_balance: int
     transactions: list[CreditTransaction]
-
-
-class PaystackEventData(BaseModel):
-    reference: str
-
-
-class PaystackEvent(BaseModel):
-    """The part of Paystack's webhook body the API reads (the real one also checks the signature)."""
-
-    event: str
-    data: PaystackEventData
 
 
 class WebhookReceipt(BaseModel):
