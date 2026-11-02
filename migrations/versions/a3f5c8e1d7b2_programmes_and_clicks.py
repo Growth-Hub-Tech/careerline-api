@@ -41,7 +41,10 @@ def upgrade() -> None:
         sa.Column("url", sa.String(length=500), nullable=False),
         sa.Column("is_active", sa.Boolean(), server_default="true", nullable=False),
         sa.Column(
-            "created_at", sa.DateTime(timezone=True), server_default=sa.text("now()"), nullable=False
+            "created_at",
+            sa.DateTime(timezone=True),
+            server_default=sa.text("now()"),
+            nullable=False,
         ),
         sa.CheckConstraint(
             "provider_type IN ('incubate', 'partner')", name="ck_programmes_provider_type"
@@ -56,9 +59,7 @@ def upgrade() -> None:
         "programme_roles",
         sa.Column("programme_id", sa.Integer(), nullable=False),
         sa.Column("role_id", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(
-            ["programme_id"], ["programmes.programme_id"], ondelete="CASCADE"
-        ),
+        sa.ForeignKeyConstraint(["programme_id"], ["programmes.programme_id"], ondelete="CASCADE"),
         sa.ForeignKeyConstraint(["role_id"], ["job_roles.role_id"], ondelete="CASCADE"),
         sa.PrimaryKeyConstraint("programme_id", "role_id"),
     )
@@ -67,9 +68,7 @@ def upgrade() -> None:
         sa.Column("programme_id", sa.Integer(), nullable=False),
         sa.Column("skill_id", sa.Integer(), nullable=False),
         sa.Column("position", sa.Integer(), nullable=False),
-        sa.ForeignKeyConstraint(
-            ["programme_id"], ["programmes.programme_id"], ondelete="CASCADE"
-        ),
+        sa.ForeignKeyConstraint(["programme_id"], ["programmes.programme_id"], ondelete="CASCADE"),
         sa.ForeignKeyConstraint(["skill_id"], ["skills.skill_id"]),
         sa.PrimaryKeyConstraint("programme_id", "skill_id"),
     )
@@ -82,7 +81,10 @@ def upgrade() -> None:
         sa.Column("source", sa.String(length=20), nullable=False),
         sa.Column("result_id", sa.Integer(), nullable=True),
         sa.Column(
-            "clicked_at", sa.DateTime(timezone=True), server_default=sa.text("now()"), nullable=False
+            "clicked_at",
+            sa.DateTime(timezone=True),
+            server_default=sa.text("now()"),
+            nullable=False,
         ),
         sa.ForeignKeyConstraint(["learner_id"], ["learner.learner_id"], ondelete="CASCADE"),
         sa.ForeignKeyConstraint(["programme_id"], ["programmes.programme_id"]),

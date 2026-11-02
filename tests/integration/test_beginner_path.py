@@ -205,9 +205,9 @@ async def test_each_path_carries_a_programme_for_its_role(client, learner, progr
 
 async def test_the_programme_is_kept_with_the_intake(client, learner, programmes):
     questionnaire = await _questionnaire(client)
-    given = (
-        await _submit(client, learner["headers"], questionnaire, work_style="visual")
-    ).json()["data"]
+    given = (await _submit(client, learner["headers"], questionnaire, work_style="visual")).json()[
+        "data"
+    ]
     mine = (
         await client.get(f"{API}/beginner-path/recommendations", headers=learner["headers"])
     ).json()["data"]

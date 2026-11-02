@@ -273,9 +273,7 @@ def _drop_links_not_in_files(conn: Connection, table: Table, rows: list[dict[str
     for programme_id, value in existing:
         if (programme_id, value) not in wanted:
             conn.execute(
-                table.delete().where(
-                    table.c.programme_id == programme_id, table.c[other] == value
-                )
+                table.delete().where(table.c.programme_id == programme_id, table.c[other] == value)
             )
 
 
