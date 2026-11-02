@@ -103,6 +103,14 @@ class Settings(BaseSettings):
     # PDF skill reports (Day 12): how long a download link works
     REPORT_LINK_MINUTES: int = 15
 
+    # Payments (Day 16): Paystack. The secret key comes only from the environment (sk_test_...
+    # on the test server); without it checkout and the webhook answer 503 and nothing is charged.
+    PAYSTACK_SECRET_KEY: str = ""
+    PAYSTACK_BASE_URL: str = "https://api.paystack.co"
+    PAYSTACK_TIMEOUT_SECONDS: float = 15.0
+    # A checkout nobody paid is marked abandoned after this long (when it is next looked at)
+    PAYMENT_ABANDON_MINUTES: int = 60
+
     # Assessment config
     WEAK_THRESHOLD: int = 60
 

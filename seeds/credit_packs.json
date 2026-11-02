@@ -1,0 +1,32 @@
+{
+  "_note": "Prices in kobo (NGN 5,000 = 500000). A pack taken out of this file stops being sold.",
+  "packs": [
+    {
+      "pack_id": 1,
+      "name": "Starter",
+      "credits": 5,
+      "price": {
+        "amount": 500000,
+        "currency": "NGN"
+      }
+    },
+    {
+      "pack_id": 2,
+      "name": "Standard",
+      "credits": 12,
+      "price": {
+        "amount": 1000000,
+        "currency": "NGN"
+      }
+    },
+    {
+      "pack_id": 3,
+      "name": "Team",
+      "credits": 60,
+      "price": {
+        "amount": 4500000,
+        "currency": "NGN"
+      }
+    }
+  ]
+}

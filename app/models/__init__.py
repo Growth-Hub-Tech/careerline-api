@@ -9,6 +9,7 @@ from app.models import (  # noqa: F401
     jobs,
     models,
     organisations,
+    payments,
     programmes,
     reports,
     roles,
