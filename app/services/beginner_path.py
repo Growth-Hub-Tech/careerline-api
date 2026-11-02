@@ -10,7 +10,9 @@
 - The starting test of a path is the role's first skill (main skill first) that can be tested
   now; null when none can.
 - Every intake is kept with its answers and the paths it gave; GET .../recommendations is the
-  latest one. Programmes for each path come later (Day 14): programme is null for now.
+  latest one.
+- Day 14 (part 2): each path carries the programme that best prepares for its role (the first
+  in the programme list's order, app/services/programmes.py); null when the role has none.
 """
 
 import json
@@ -36,6 +38,7 @@ from app.schemas.beginner_path import (
     IntakeSubmission,
     QuestionKind,
 )
+from app.services.programmes import best_programmes_for_roles
 
 QUESTIONNAIRE_FILE = Path(__file__).resolve().parents[2] / "seeds" / "beginner_intake.json"
 RECOMMENDATIONS_COUNT = 3
@@ -197,6 +200,7 @@ async def submit_intake(
     ]
     ranked = rank_roles(questionnaire, answers, roles)
     starting = await _starting_tests(db, [r.role_id for r in ranked])
+    programmes = await best_programmes_for_roles(db, [r.role_id for r in ranked])
     recommendations = [
         CareerPathRecommendation(
             rank=r.rank,
@@ -205,7 +209,7 @@ async def submit_intake(
             match_score=r.match_score,
             reasons=r.reasons,
             starting_test_id=starting.get(r.role_id),
-            programme=None,
+            programme=programmes.get(r.role_id),
         )
         for r in ranked
     ]

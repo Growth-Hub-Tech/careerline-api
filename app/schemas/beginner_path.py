@@ -49,7 +49,9 @@ class CareerPathRecommendation(BaseModel):
         description="The test to take first (200 + skill_id); null when none of the role's "
         "skills can be tested yet"
     )
-    programme: ProgrammeSummary | None = Field(description="null until programmes are real")
+    programme: ProgrammeSummary | None = Field(
+        description="The programme that best prepares for this role; null when it has none"
+    )
 
 
 class BeginnerPath(BaseModel):

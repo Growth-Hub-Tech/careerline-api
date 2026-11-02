@@ -156,3 +156,32 @@ async def test_seed_programmes_load_twice_and_follow_the_file(database):
         assert list(roles) == [101]
         name = conn.execute(text("SELECT name FROM programmes WHERE programme_id = 301")).scalar()
         assert name == "Frontend Engineering Bootcamp"
+
+
+async def test_a_results_advice_points_at_a_programme_for_its_skill(
+    client, learner, skill, database
+):
+    finished = await take_test(client, learner["headers"], skill, right=lambda info: False)
+    result_id = finished["attempt_id"]
+    detail = (await client.get(f"{API}/results/{result_id}", headers=learner["headers"])).json()
+    assert detail["data"]["recommendations"]
+    assert all(r["programme_id"] is None for r in detail["data"]["recommendations"])
+
+    with database.begin() as conn:
+        conn.execute(
+            text(
+                "INSERT INTO programmes (programme_id, slug, name, provider, provider_type, mode, "
+                "duration_weeks, price_amount, summary, url) VALUES "
+                "(901, 'py', 'Python Basics', 'Incubate', 'incubate', 'online', 4, 0, 'Python', "
+                "'https://example.com/py')"
+            )
+        )
+        conn.execute(
+            text(
+                "INSERT INTO programme_skills (programme_id, skill_id, position) "
+                "VALUES (901, :skill_id, 1)"
+            ),
+            {"skill_id": skill["skill_id"]},
+        )
+    detail = (await client.get(f"{API}/results/{result_id}", headers=learner["headers"])).json()
+    assert {r["programme_id"] for r in detail["data"]["recommendations"]} == {901}

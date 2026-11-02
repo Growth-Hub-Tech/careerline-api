@@ -47,6 +47,7 @@ from app.schemas.results import (
     ResultSummary,
     SubskillScore,
 )
+from app.services.programmes import best_programme_for_skill
 from app.services.report_pdf import HistoryLine, ReportData, SubskillLine, build_report_pdf
 from app.services.test_taking_service import attempt_result
 
@@ -142,6 +143,7 @@ async def result_detail(db: AsyncSession, result_id: int, learner_id: int) -> Re
     attempt = await _owned_result(db, result_id, learner_id)
     result = await _result(db, attempt)
     skill_name = await db.scalar(select(Skill.skill_name).where(Skill.skill_id == attempt.skill_id))
+    programme_id = await best_programme_for_skill(db, attempt.skill_id)
     return ResultDetail(
         result_id=attempt.attempt_id,
         attempt_id=attempt.attempt_id,
@@ -166,7 +168,7 @@ async def result_detail(db: AsyncSession, result_id: int, learner_id: int) -> Re
         strengths=[s.subskill_name for s in result.strengths],
         gaps=[s.subskill_name for s in result.weaknesses],
         recommendations=[
-            ResultRecommendation(subskill_name=name, text=advice, programme_id=None)
+            ResultRecommendation(subskill_name=name, text=advice, programme_id=programme_id)
             for name, advice in await _advice(db, attempt.attempt_id)
         ],
     )

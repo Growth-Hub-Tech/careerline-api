@@ -8,6 +8,7 @@ from app.schemas.beginner_path import BeginnerPath, IntakeQuestionnaire, IntakeS
 from app.services.beginner_path import latest_career_paths, load_questionnaire, submit_intake
 
 # The beginner path (Day 13, part 1): intake questionnaire -> ranked career paths
+# (Day 14, part 2): each path with its programme
 router = APIRouter(prefix="/beginner-path", tags=["Beginner path"], route_class=EnvelopeRoute)
 
 
@@ -26,7 +27,8 @@ async def get_intake_questionnaire():
     description="Every question must be answered once, with option values from GET "
     "/beginner-path/intake (one value for single_choice) and the questionnaire's version. "
     "400: an unknown question or value, a missing answer, or an old version (load the "
-    "questionnaire again). programme is null until programmes are real.",
+    "questionnaire again). Each path's programme is the one that best prepares for the role "
+    "(null when the role has none).",
 )
 async def submit_beginner_intake(
     data: IntakeSubmission,
