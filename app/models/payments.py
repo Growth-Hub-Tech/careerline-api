@@ -84,6 +84,10 @@ class Payment(Base):
     callback_url: Mapped[str] = mapped_column(String(500), nullable=False)
     paystack_transaction_id: Mapped[int | None] = mapped_column(BigInteger, nullable=True)
     channel: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    # Day 25: the subscription a paid subscription_plan payment started or renewed
+    subscription_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("subscriptions.id", ondelete="SET NULL"), nullable=True
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )

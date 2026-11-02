@@ -46,9 +46,6 @@ class Settings(BaseSettings):
     # Sample API (app/sample): typed sample answers for the endpoints that are not built yet, so
     # the frontend can build against the real contract. Unset = on everywhere except production.
     SAMPLE_API_ENABLED: bool | None = None
-    # Where the sample flows (checkout, invitations) keep their state. A file, so every server
-    # worker on one machine sees the same state; it is reset when the machine restarts.
-    SAMPLE_STATE_FILE: str = "/tmp/careerline-sample-state.json"
 
     # Background jobs (app/jobs). Production runs `python -m app.worker` as its own service; the
     # free test server has no worker service, so RUN_JOBS_IN_WEB=true runs the jobs inside the API
@@ -113,6 +110,8 @@ class Settings(BaseSettings):
     PAYSTACK_TIMEOUT_SECONDS: float = 15.0
     # A checkout nobody paid is marked abandoned after this long (when it is next looked at)
     PAYMENT_ABANDON_MINUTES: int = 60
+    # Day 25: a plan whose period ended without a payment stays usable (past_due) this long
+    SUBSCRIPTION_GRACE_DAYS: int = 3
 
     # Privacy (Day 18): a copy of my data is kept this many days; each download link works this
     # many minutes; a deletion waits this many days so it can be cancelled

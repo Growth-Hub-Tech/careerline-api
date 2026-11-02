@@ -115,11 +115,14 @@ async def test_payments_checkout_sells_plans_too(client, learner, plans, fake_pa
     assert (await my_subscription(client, learner))["status"] == "active"
 
 
-async def test_one_plan_at_a_time(client, learner, plans, fake_paystack):
+async def test_one_plan_at_a_time(client, db, learner, plans, fake_paystack):
     await pay(client, fake_paystack, (await subscribe(client, learner, 11)).json()["data"])
     assert_error_envelope(await subscribe(client, learner, 11), 409, "conflict")
-    assert_error_envelope(await subscribe(client, learner, 12), 409, "conflict")
     assert_error_envelope(await subscribe(client, learner, 99), 404, "not_found")
+    recruiter = _org(db, "Hire Co", "rita", role="recruiter")
+    await pay(client, fake_paystack, (await subscribe(client, recruiter, 11)).json()["data"], 2)
+    error = assert_error_envelope(await subscribe(client, recruiter, 12), 409, "conflict")
+    assert "cancel" in error["message"]
 
 
 async def test_cancelling_keeps_the_plan_until_the_period_ends(

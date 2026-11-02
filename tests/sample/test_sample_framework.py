@@ -45,8 +45,8 @@ def test_real_operations_are_not_marked_as_sample():
 
 
 async def test_a_sample_answer_carries_the_marker_header_and_message(client, auth):
-    data = assert_sample(await client.get(f"{API}/subscriptions/plans", headers=auth))
-    assert len(data) > 0
+    data = assert_sample(await client.get(f"{API}/profile", headers=auth))
+    assert data["full_name"]
 
 
 async def test_real_routes_do_not_carry_the_marker(client):
@@ -55,17 +55,13 @@ async def test_real_routes_do_not_carry_the_marker(client):
 
 
 async def test_the_frontend_may_read_the_marker_header(client):
-    response = await client.get(
-        f"{API}/subscriptions/plans", headers={"Origin": "http://localhost:5173"}
-    )
+    response = await client.get(f"{API}/profile", headers={"Origin": "http://localhost:5173"})
     assert "x-sample-data" in response.headers["Access-Control-Expose-Headers"].lower()
 
 
 @pytest.mark.parametrize("name,status", sorted(ERROR_SCENARIO_STATUS.items()))
 async def test_each_error_scenario_forces_its_status_and_error_envelope(client, auth, name, status):
-    response = await client.get(
-        f"{API}/subscriptions/plans", headers={**auth, "X-Mock-Scenario": name}
-    )
+    response = await client.get(f"{API}/profile", headers={**auth, "X-Mock-Scenario": name})
     codes = {"server_error": "internal_error", "unavailable": "service_unavailable"}
     assert_sample_error(response, status, codes.get(name, name))
 
@@ -88,57 +84,41 @@ async def test_scenario_codes_match_the_api_error_codes(client, auth):
 
 async def test_unavailable_and_unauthenticated_use_the_standard_error_codes(client, auth):
     response = await client.get(
-        f"{API}/subscriptions/plans", headers={**auth, "X-Mock-Scenario": "unavailable"}
+        f"{API}/profile", headers={**auth, "X-Mock-Scenario": "unavailable"}
     )
     assert response.json()["error"]["code"] == "service_unavailable"
-    response = await client.get(
-        f"{API}/subscriptions/plans", headers={"X-Mock-Scenario": "unauthenticated"}
-    )
+    response = await client.get(f"{API}/profile", headers={"X-Mock-Scenario": "unauthenticated"})
     assert response.headers["WWW-Authenticate"] == "Bearer"
 
 
 async def test_rate_limited_says_when_to_retry(client, auth):
     response = await client.get(
-        f"{API}/subscriptions/plans", headers={**auth, "X-Mock-Scenario": "rate_limited"}
+        f"{API}/profile", headers={**auth, "X-Mock-Scenario": "rate_limited"}
     )
     assert response.headers["Retry-After"] == "30"
 
 
-async def test_an_offered_scenario_changes_the_answer(client, auth):
-    data = assert_sample(
-        await client.get(
-            f"{API}/subscriptions/me", headers={**auth, "X-Mock-Scenario": "no_subscription"}
-        )
-    )
-    assert data is None
-
-
 async def test_scenario_names_ignore_case_and_spaces(client, auth):
     response = await client.get(
-        f"{API}/subscriptions/me", headers={**auth, "X-Mock-Scenario": " No_Subscription "}
+        f"{API}/profile", headers={**auth, "X-Mock-Scenario": " Not_Found "}
     )
-    assert assert_sample(response) is None
+    assert_sample_error(response, 404, "not_found")
 
 
 async def test_an_unknown_scenario_is_a_400_that_lists_the_valid_ones(client, auth):
-    response = await client.get(
-        f"{API}/subscriptions/me", headers={**auth, "X-Mock-Scenario": "no_subscripton"}
-    )
+    response = await client.get(f"{API}/profile", headers={**auth, "X-Mock-Scenario": "not_fuond"})
     error = assert_sample_error(response, 400, "bad_request")
-    assert "no_subscription" in error["message"]
+    assert "not_found" in error["message"]
 
 
 async def test_a_scenario_the_route_does_not_offer_is_a_400(client, auth):
-    # "empty" makes no sense for one subscription
-    response = await client.get(
-        f"{API}/subscriptions/me", headers={**auth, "X-Mock-Scenario": "empty"}
-    )
+    # "empty" makes no sense for one profile
+    response = await client.get(f"{API}/profile", headers={**auth, "X-Mock-Scenario": "empty"})
     assert_sample_error(response, 400, "bad_request")
 
 
-async def test_the_offered_scenarios_are_listed_in_the_api_description():
-    operation = app.openapi()["paths"][f"{API}/subscriptions/me"]["get"]
-    assert "no_subscription" in operation["x-sample-scenarios"]
+async def test_the_scenarios_are_listed_in_the_api_description():
+    operation = app.openapi()["paths"][f"{API}/profile"]["get"]
     assert "payment_required" in operation["x-sample-scenarios"]
 
 
@@ -168,7 +148,7 @@ async def test_body_validation_on_sample_routes_uses_the_error_envelope(client, 
 def test_the_sample_api_can_be_switched_off(monkeypatch):
     monkeypatch.setattr(settings, "SAMPLE_API_ENABLED", False)
     paths = create_app().openapi()["paths"]
-    assert f"{API}/subscriptions/plans" not in paths
+    assert f"{API}/profile" not in paths
     assert f"{API}/skills/" in paths
 
 

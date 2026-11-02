@@ -14,12 +14,6 @@ from app.main import app
 API = settings.API_PREFIX
 
 
-@pytest.fixture(autouse=True)
-def sample_state(tmp_path, monkeypatch):
-    """Every test gets its own empty sample state (payments, invitations, ...)."""
-    monkeypatch.setattr(settings, "SAMPLE_STATE_FILE", str(tmp_path / "sample-state.json"))
-
-
 # The sample tests run without a database. Since Day 6/7 the app looks the session and the
 # organisation role up in the database; here a signed token stands in for an open session, and
 # every signed-in person is an owner of the sample organisation. The real lookups and the

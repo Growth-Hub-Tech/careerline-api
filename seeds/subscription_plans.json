@@ -1,0 +1,57 @@
+{
+  "_note": "Subscription plans (Day 25). Prices in kobo (NGN 3,000 = 300000). A plan taken out of this file stops being sold; people on it keep it until their period ends. credits_per_interval are added at the start of every paid period; seats (organisation plans) is how many people the team roster may hold.",
+  "plans": [
+    {
+      "plan_id": 11,
+      "name": "Individual Monthly",
+      "audience": "individual",
+      "interval": "monthly",
+      "price": {
+        "amount": 300000,
+        "currency": "NGN"
+      },
+      "credits_per_interval": 5,
+      "seats": null,
+      "features": [
+        "5 test credits a month",
+        "PDF reports",
+        "Learning pathways"
+      ]
+    },
+    {
+      "plan_id": 12,
+      "name": "Recruiter Monthly",
+      "audience": "recruiter",
+      "interval": "monthly",
+      "price": {
+        "amount": 2500000,
+        "currency": "NGN"
+      },
+      "credits_per_interval": 40,
+      "seats": 3,
+      "features": [
+        "40 candidate tests a month",
+        "Candidate reports",
+        "3 recruiter seats"
+      ]
+    },
+    {
+      "plan_id": 13,
+      "name": "Organisation Yearly",
+      "audience": "organisation",
+      "interval": "yearly",
+      "price": {
+        "amount": 150000000,
+        "currency": "NGN"
+      },
+      "credits_per_interval": 600,
+      "seats": 50,
+      "features": [
+        "Team audits",
+        "Capability heatmap",
+        "Targets and progress",
+        "50 seats"
+      ]
+    }
+  ]
+}

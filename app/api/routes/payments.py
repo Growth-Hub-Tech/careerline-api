@@ -26,17 +26,17 @@ async def list_credit_packs(db: AsyncSession = Depends(get_db, scope="function")
     return await payment_service.list_credit_packs(db)
 
 
-# CHECKOUT: start a Paystack payment for a credit pack
+# CHECKOUT: start a Paystack payment for a credit pack or a subscription plan
 @router.post(
     "/payments/checkout",
     status_code=201,
     response_model=Checkout,
-    responses=errors(400, 401, 404, 503),
+    responses=errors(400, 401, 403, 404, 409, 503),
     description="Saves a pending payment and starts a Paystack transaction: send the person to "
     "authorization_url. Paystack sends them back to callback_url?reference=... (default: the "
     "website's /payments/callback; it must be a page of the website, 400 otherwise); then call "
-    "GET /payments/{reference}. Only item_type credit_pack is on sale (400 for "
-    "subscription_plan). 503 when payments are not set up or Paystack does not answer: nothing "
+    "GET /payments/{reference}. item_type credit_pack (a pack's credits) or subscription_plan "
+    "(Day 25, the same as POST /subscriptions: 403/409 as there). 503 when payments are not set up or Paystack does not answer: nothing "
     "is charged.",
 )
 async def start_checkout(

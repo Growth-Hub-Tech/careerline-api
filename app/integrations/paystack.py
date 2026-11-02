@@ -45,6 +45,8 @@ class Transaction:
     currency: str
     transaction_id: int | None
     channel: str | None
+    # a reusable card authorization (Day 25): what subscription renewals are charged to
+    authorization_code: str | None = None
 
 
 def configured() -> bool:
@@ -135,4 +137,12 @@ def transaction_from(data: dict[str, Any]) -> Transaction:
         if isinstance(raw_id, int | str) and str(raw_id).isdigit()
         else None,
         channel=data.get("channel") if isinstance(data.get("channel"), str) else None,
+        authorization_code=_reusable_authorization(data.get("authorization")),
     )
+
+
+def _reusable_authorization(value: Any) -> str | None:
+    if not isinstance(value, dict) or value.get("reusable") is not True:
+        return None
+    code = value.get("authorization_code")
+    return code[:64] if isinstance(code, str) and code.startswith("AUTH_") else None
