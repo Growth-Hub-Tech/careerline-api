@@ -5,12 +5,10 @@ from fastapi import APIRouter, Depends
 from app.core.exceptions import NotFoundError
 from app.core.responses import ApiResponse
 from app.sample.core import SampleRoute, Scenario, sample, sample_route, sample_user, scenario
-from app.sample.data import NOW, days_ago
-from app.schemas.common import LevelName, Page
+from app.sample.data import days_ago
+from app.schemas.common import LevelName
 from app.schemas.organisations import (
     Audit,
-    AuditCreate,
-    AuditSummary,
     Benchmark,
     GroupBy,
     Heatmap,
@@ -139,70 +137,6 @@ def check_org(organisation_id: int) -> None:
         raise NotFoundError(
             f"Organisation {organisation_id} not found. The sample organisation is {ORG_ID}"
         )
-
-
-# AUDITS: test the team for their roles, then compare against targets and the industry
-@audit_router.get(
-    "/{organisation_id}/audits",
-    response_model=ApiResponse[Page[AuditSummary]],
-    openapi_extra=sample_route("empty", summary_note=ORG_NOTE),
-)
-async def list_audits(
-    organisation_id: int,
-    limit: int = 20,
-    offset: int = 0,
-    sc: Scenario = Depends(scenario),
-    learner_id: int = Depends(sample_user),
-):
-    check_org(organisation_id)
-    audits = [] if sc.empty else [AuditSummary(**AUDIT.model_dump())]
-    return sample(
-        Page[AuditSummary](
-            items=audits[offset : offset + limit], total=len(audits), limit=limit, offset=offset
-        )
-    )
-
-
-@audit_router.post(
-    "/{organisation_id}/audits",
-    status_code=201,
-    response_model=ApiResponse[Audit],
-    openapi_extra=sample_route(
-        summary_note=ORG_NOTE + " send_invitations=true emails everyone their test link."
-    ),
-)
-async def start_audit(
-    organisation_id: int, data: AuditCreate, learner_id: int = Depends(sample_user)
-):
-    check_org(organisation_id)
-    members = [m for m in MEMBERS if m.role_id in data.role_ids]
-    if data.member_ids is not None:
-        members = [m for m in members if m.member_id in data.member_ids]
-    return sample(
-        Audit(
-            audit_id=1202,
-            name=data.name,
-            status="in_progress" if data.send_invitations else "draft",
-            role_ids=data.role_ids,
-            members_total=len(members),
-            members_completed=0,
-            started_at=NOW if data.send_invitations else None,
-            completed_at=None,
-            benchmarks=[],
-        )
-    )
-
-
-@audit_router.get(
-    "/{organisation_id}/audits/{audit_id}",
-    response_model=ApiResponse[Audit],
-    openapi_extra=sample_route(summary_note=ORG_NOTE),
-)
-async def get_audit(organisation_id: int, audit_id: int, learner_id: int = Depends(sample_user)):
-    check_org(organisation_id)
-    if audit_id != AUDIT.audit_id:
-        raise NotFoundError(f"Audit {audit_id} not found. The sample audit is {AUDIT.audit_id}")
-    return sample(AUDIT)
 
 
 def _cell(skill_id: int, score: float | None, tested: int) -> HeatmapCell:

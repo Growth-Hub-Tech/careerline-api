@@ -118,7 +118,7 @@ async def test_an_audit_invites_everyone_in_its_roles_to_each_testable_skill(
         ]
     assert team_invitations(db, "dayo@example.com") == []
     emails = db.execute(
-        text("SELECT to_address FROM email_outbox WHERE template = 'invitation' ORDER BY id")
+        text("SELECT to_email FROM email_outbox WHERE template = 'invitation' ORDER BY id")
     ).scalars()
     assert sorted(emails) == ["ada@example.com", "bola@example.com", "chi@example.com"]
     members = (

@@ -100,6 +100,9 @@ class Settings(BaseSettings):
     # A test whose time ran out is still scored when at least this many questions were answered
     ADAPTIVE_MIN_ANSWERS_FOR_RESULT: int = 8
 
+    # Organisation audits (Day 22): how long the team's test invitations work
+    AUDIT_INVITATION_DAYS: int = 14
+
     # PDF skill reports (Day 12): how long a download link works
     REPORT_LINK_MINUTES: int = 15
 

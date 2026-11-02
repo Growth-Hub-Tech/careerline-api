@@ -58,6 +58,7 @@ class Invitation(Base):
         Index("ix_invitations_organisation", "organisation_id", "sent_at"),
         Index("ix_invitations_candidate", "candidate_id"),
         Index("ix_invitations_team_member", "team_member_id"),
+        Index("ix_invitations_audit", "audit_id"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
@@ -72,6 +73,10 @@ class Invitation(Base):
     # kind team_member: the roster entry it tests (Day 21)
     team_member_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("team_members.id", ondelete="SET NULL"), nullable=True
+    )
+    # the audit that sent it (Day 22)
+    audit_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("audits.id", ondelete="SET NULL"), nullable=True
     )
     email: Mapped[str] = mapped_column(String(320), nullable=False)
     full_name: Mapped[str] = mapped_column(String(120), nullable=False)

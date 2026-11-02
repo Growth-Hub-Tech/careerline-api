@@ -212,6 +212,7 @@ POLICIES: dict[str, Policy] = {
     "GET /organisations/{organisation_id}/audits": org(P.AUDITS_READ),
     "POST /organisations/{organisation_id}/audits": org(P.AUDITS_MANAGE),
     "GET /organisations/{organisation_id}/audits/{audit_id}": org(P.AUDITS_READ),
+    "POST /organisations/{organisation_id}/audits/{audit_id}/start": org(P.AUDITS_MANAGE),
     "GET /organisations/{organisation_id}/heatmap": org(P.AUDITS_READ),
     "GET /organisations/{organisation_id}/targets": org(P.AUDITS_READ),
     "PUT /organisations/{organisation_id}/targets": org(P.AUDITS_MANAGE),
