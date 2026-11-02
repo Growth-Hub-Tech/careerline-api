@@ -1,7 +1,8 @@
-"""Day 2 sample answers: tests, profile and programme clicks. (The contact form is real since
-Day 5, the accounts since Day 6, the roles since Day 8, the results with their PDF report since
-Day 12 and the beginner path since Day 13: see tests/integration/test_contact.py,
-test_accounts.py, test_roles.py, test_results_and_reports.py and test_beginner_path.py.)"""
+"""Day 2 sample answers: tests and profile. (The contact form is real since Day 5, the accounts
+since Day 6, the roles since Day 8, the results with their PDF report since Day 12, the beginner
+path since Day 13 and the programmes since Day 14: see tests/integration/test_contact.py,
+test_accounts.py, test_roles.py, test_results_and_reports.py, test_beginner_path.py and
+test_programmes.py.)"""
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
 
@@ -48,21 +49,3 @@ async def test_my_profile(client, auth):
 async def test_profile_rejects_an_unknown_budget(client, auth):
     response = await client.patch(f"{API}/profile", headers=auth, json={"budget": "millions"})
     assert_sample_error(response, 422, "validation_error")
-
-
-async def test_programmes_and_a_recorded_click(client, auth):
-    programmes = assert_sample(await client.get(f"{API}/programmes", params={"role_id": 102}))
-    assert {p["programme_id"] for p in programmes["items"]} == {302, 303}
-    programme = assert_sample(await client.get(f"{API}/programmes/301"))
-    assert programme["price"] == {"amount": 25_000_000, "currency": "NGN"}
-
-    response = await client.post(
-        f"{API}/programmes/301/clicks", headers=auth, json={"source": "result", "result_id": 501}
-    )
-    click = assert_sample(response, 201)
-    assert click["click_id"] in click["redirect_url"]
-
-
-async def test_a_click_needs_a_login(client):
-    response = await client.post(f"{API}/programmes/301/clicks", json={"source": "result"})
-    assert_sample_error(response, 401, "unauthenticated")

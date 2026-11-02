@@ -1,7 +1,7 @@
 """Day 13: the beginner path, part 1. The intake questionnaire is real (personality, goals,
 time and money), and the answers become up to three ranked career paths, each with a match
 score, the reasons behind it and the test to start with. The latest intake is kept per person.
-Programmes for each path come later (Day 14)."""
+Day 14 (part 2): each path carries the programme that best prepares for it."""
 
 import pytest
 
@@ -17,6 +17,12 @@ ROLE_TABLES = ("skills", "subskills", "job_titles", "job_roles", "job_role_skill
 def roles(database):
     with database.begin() as conn:
         load(conn, tables=ROLE_TABLES)
+
+
+@pytest.fixture
+def programmes(database):
+    with database.begin() as conn:
+        load(conn, tables=(*ROLE_TABLES, "programmes", "programme_roles", "programme_skills"))
 
 
 async def _questionnaire(client) -> dict:
@@ -78,7 +84,8 @@ async def test_answers_become_ranked_career_paths(client, learner, roles):
     assert {p["role_id"] for p in paths} <= {101, 102, 103, 104, 105, 106, 107, 108}
     scores = [p["match_score"] for p in paths]
     assert scores == sorted(scores, reverse=True)
-    assert paths[0]["reasons"] and paths[0]["programme"] is None
+    assert paths[0]["reasons"]
+    assert paths[0]["programme"] is None  # no programmes loaded in this test
 
 
 async def test_the_starting_test_is_the_roles_first_testable_skill(client, learner, database):
@@ -172,3 +179,37 @@ async def test_the_intake_needs_a_login(client, roles):
         json={"version": questionnaire["version"], "answers": _answers(questionnaire)},
     )
     assert_error_envelope(response, 401, "unauthenticated")
+
+
+async def test_each_path_carries_a_programme_for_its_role(client, learner, programmes):
+    questionnaire = await _questionnaire(client)
+    response = await _submit(
+        client, learner["headers"], questionnaire, work_style="logic", interests=["automate"]
+    )
+    assert response.status_code == 201, response.text
+    for path in response.json()["data"]["recommendations"]:
+        programme = path["programme"]
+        assert programme is not None, path
+        detail = (await client.get(f"{API}/programmes/{programme['programme_id']}")).json()
+        assert path["role_id"] in detail["data"]["role_ids"]
+        assert set(programme) == {
+            "programme_id",
+            "name",
+            "provider",
+            "provider_type",
+            "mode",
+            "duration_weeks",
+            "price",
+        }
+
+
+async def test_the_programme_is_kept_with_the_intake(client, learner, programmes):
+    questionnaire = await _questionnaire(client)
+    given = (
+        await _submit(client, learner["headers"], questionnaire, work_style="visual")
+    ).json()["data"]
+    mine = (
+        await client.get(f"{API}/beginner-path/recommendations", headers=learner["headers"])
+    ).json()["data"]
+    assert mine == given
+    assert all(p["programme"] for p in mine["recommendations"])
