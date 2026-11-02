@@ -1,0 +1,267 @@
+{
+  "version": "2026-11",
+  "questions": [
+    {
+      "question_id": "work_style",
+      "section": "personality",
+      "kind": "single_choice",
+      "text": "Which sounds most like you?",
+      "options": [
+        {
+          "value": "visual",
+          "label": "I like making things look and feel right",
+          "points": {
+            "frontend-developer": 3,
+            "digital-marketer": 2
+          },
+          "reason": "You enjoy making things look and feel right"
+        },
+        {
+          "value": "logic",
+          "label": "I like solving puzzles and making systems work",
+          "points": {
+            "backend-developer": 3,
+            "ai-engineer": 2,
+            "machine-learning-engineer": 1
+          },
+          "reason": "You like solving puzzles and making systems work"
+        },
+        {
+          "value": "data",
+          "label": "I like finding patterns in numbers",
+          "points": {
+            "data-analyst": 3,
+            "machine-learning-engineer": 2
+          },
+          "reason": "You like finding patterns in numbers"
+        },
+        {
+          "value": "people",
+          "label": "I like explaining and persuading",
+          "points": {
+            "sales-development-representative": 3,
+            "account-executive": 3,
+            "digital-marketer": 1
+          },
+          "reason": "You like explaining and persuading"
+        }
+      ]
+    },
+    {
+      "question_id": "interests",
+      "section": "personality",
+      "kind": "multi_choice",
+      "text": "Which of these would you enjoy? Pick any.",
+      "options": [
+        {
+          "value": "build_websites",
+          "label": "Building websites and apps people use",
+          "points": {
+            "frontend-developer": 2,
+            "backend-developer": 1
+          },
+          "reason": "You would enjoy building websites and apps"
+        },
+        {
+          "value": "automate",
+          "label": "Automating boring work with code",
+          "points": {
+            "backend-developer": 2,
+            "ai-engineer": 2
+          },
+          "reason": "You would enjoy automating work with code"
+        },
+        {
+          "value": "spreadsheets",
+          "label": "Digging into spreadsheets and charts",
+          "points": {
+            "data-analyst": 2
+          },
+          "reason": "You would enjoy spreadsheets and charts"
+        },
+        {
+          "value": "ai",
+          "label": "Working with AI and smart tools",
+          "points": {
+            "ai-engineer": 2,
+            "machine-learning-engineer": 2
+          },
+          "reason": "You are curious about AI and smart tools"
+        },
+        {
+          "value": "talk",
+          "label": "Talking to customers and closing deals",
+          "points": {
+            "sales-development-representative": 2,
+            "account-executive": 2
+          },
+          "reason": "You would enjoy talking to customers"
+        },
+        {
+          "value": "content",
+          "label": "Writing posts and growing an audience online",
+          "points": {
+            "digital-marketer": 3
+          },
+          "reason": "You would enjoy creating content and growing an audience"
+        }
+      ]
+    },
+    {
+      "question_id": "background",
+      "section": "goals",
+      "kind": "single_choice",
+      "text": "Where are you starting from?",
+      "options": [
+        {
+          "value": "new",
+          "label": "Completely new to tech",
+          "points": {
+            "frontend-developer": 1,
+            "data-analyst": 1,
+            "sales-development-representative": 1,
+            "digital-marketer": 1
+          },
+          "reason": "A friendly first step into tech"
+        },
+        {
+          "value": "some_code",
+          "label": "I have written some code",
+          "points": {
+            "backend-developer": 2,
+            "frontend-developer": 1,
+            "ai-engineer": 1
+          },
+          "reason": "Builds on the code you have already written"
+        },
+        {
+          "value": "maths",
+          "label": "I am strong in maths or statistics",
+          "points": {
+            "machine-learning-engineer": 3,
+            "data-analyst": 2
+          },
+          "reason": "Uses your maths and statistics"
+        },
+        {
+          "value": "business",
+          "label": "I have worked in sales, service or business",
+          "points": {
+            "account-executive": 2,
+            "sales-development-representative": 2,
+            "digital-marketer": 1
+          },
+          "reason": "Builds on your work experience in business"
+        }
+      ]
+    },
+    {
+      "question_id": "goal",
+      "section": "goals",
+      "kind": "multi_choice",
+      "text": "What do you want in the next 12 months?",
+      "options": [
+        {
+          "value": "first_job",
+          "label": "My first tech job",
+          "points": {
+            "frontend-developer": 1,
+            "data-analyst": 1,
+            "sales-development-representative": 1,
+            "digital-marketer": 1
+          },
+          "reason": "A common first job in tech"
+        },
+        {
+          "value": "switch",
+          "label": "Switch from my current career",
+          "points": {
+            "data-analyst": 1,
+            "account-executive": 1,
+            "backend-developer": 1
+          },
+          "reason": "A common role for people switching careers"
+        },
+        {
+          "value": "freelance",
+          "label": "Freelance income",
+          "points": {
+            "frontend-developer": 1,
+            "digital-marketer": 1,
+            "ai-engineer": 1
+          },
+          "reason": "Work you can do as a freelancer"
+        },
+        {
+          "value": "promotion",
+          "label": "Grow in my current company",
+          "points": {
+            "data-analyst": 1,
+            "ai-engineer": 1,
+            "account-executive": 1
+          },
+          "reason": "Valued in most companies"
+        }
+      ]
+    },
+    {
+      "question_id": "weekly_hours",
+      "section": "time",
+      "kind": "single_choice",
+      "text": "How many hours a week can you study?",
+      "options": [
+        {
+          "value": "lt5",
+          "label": "Less than 5",
+          "points": {
+            "sales-development-representative": 1,
+            "digital-marketer": 1
+          },
+          "reason": "You can start with a few hours a week"
+        },
+        {
+          "value": "5_10",
+          "label": "5 to 10"
+        },
+        {
+          "value": "10_20",
+          "label": "10 to 20"
+        },
+        {
+          "value": "gt20",
+          "label": "More than 20",
+          "points": {
+            "machine-learning-engineer": 1,
+            "ai-engineer": 1,
+            "backend-developer": 1
+          },
+          "reason": "Your time suits a deeper technical path"
+        }
+      ]
+    },
+    {
+      "question_id": "budget",
+      "section": "finances",
+      "kind": "single_choice",
+      "text": "How much can you spend on training?",
+      "options": [
+        {
+          "value": "free_only",
+          "label": "Free options only"
+        },
+        {
+          "value": "under_50k",
+          "label": "Under NGN 50,000"
+        },
+        {
+          "value": "50k_to_200k",
+          "label": "NGN 50,000 to 200,000"
+        },
+        {
+          "value": "over_200k",
+          "label": "Over NGN 200,000"
+        }
+      ]
+    }
+  ]
+}

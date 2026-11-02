@@ -45,11 +45,17 @@ class CareerPathRecommendation(BaseModel):
     title: str
     match_score: int = Field(ge=0, le=100)
     reasons: list[str]
-    starting_test_id: int
-    programme: ProgrammeSummary | None
+    starting_test_id: int | None = Field(
+        description="The test to take first (200 + skill_id); null when none of the role's "
+        "skills can be tested yet"
+    )
+    programme: ProgrammeSummary | None = Field(description="null until programmes are real")
 
 
 class BeginnerPath(BaseModel):
-    intake_id: int
-    submitted_at: datetime
+    """The career paths of one intake. No intake yet: intake_id and submitted_at are null and
+    recommendations is empty."""
+
+    intake_id: int | None
+    submitted_at: datetime | None
     recommendations: list[CareerPathRecommendation]
