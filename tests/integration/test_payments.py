@@ -197,9 +197,9 @@ async def test_checkout_of_something_not_for_sale(client, learner, fake_paystack
     response = await client.post(
         f"{API}/payments/checkout",
         headers=learner["headers"],
-        json={"item_type": "subscription_plan", "item_id": 11},
+        json={"item_type": "subscription_plan", "item_id": 99},
     )
-    assert_error_envelope(response, 400, "bad_request")
+    assert_error_envelope(response, 404, "not_found")  # plans are on sale since Day 25
     assert fake_paystack.calls("/transaction") == []
 
 
