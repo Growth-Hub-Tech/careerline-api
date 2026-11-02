@@ -199,9 +199,9 @@ Incubate's own and partner courses that prepare for a job role. The catalogue li
 - `GET /programmes/{programme_id}` (public) → the same plus `summary`, `skills` (names), `role_ids` and `url`. An unknown or retired programme is `404`.
 - `POST /programmes/{programme_id}/clicks` (signed in) with `{ "source": "result" | "beginner_path" | "programme_list" | "profile", "result_id"?: … }` → `201 { click_id, programme_id, redirect_url, clicked_at }`. Record the click first, then send the person to `redirect_url` (the provider's page with `ref=careerline&click=<click_id>`). `result_id`, when sent, must be one of your own finished results (`404` otherwise).
 
-## Payments and credits (Day 16, Paystack)
+## Payments and credits (Days 16–17, Paystack)
 
-Credits pay for tests (Day 17). People buy credit packs through Paystack. The test server uses Paystack's **test mode**: pay with Paystack's test cards, and no real money moves.
+Credits pay for tests (see "Paying for tests with credits"). People buy credit packs through Paystack. The test server uses Paystack's **test mode**: pay with Paystack's test cards, and no real money moves.
 
 1. `GET /payments/credit-packs` (public) → `[{ pack_id, name, credits, price }]` (prices in kobo).
 2. `POST /payments/checkout` (signed in) with `{ "item_type": "credit_pack", "item_id": <pack_id>, "callback_url"?: "<a page of the website>" }` → `201` a pending payment plus `authorization_url`. Send the person there (a full-page redirect, not an iframe). `callback_url` defaults to `<website>/payments/callback`; it must be on the website (`FRONTEND_URL` or one of `CORS_ORIGINS`), `400` otherwise. `item_type: "subscription_plan"` is `400` until subscriptions are real (Days 25–26). `404`: no such pack. `503 service_unavailable`: payments are not set up or Paystack is not answering; nothing was charged, try again later.
@@ -211,6 +211,14 @@ Credits pay for tests (Day 17). People buy credit packs through Paystack. The te
 A payment is paid, and its credits added, exactly once, however many times Paystack retries its webhook or the page is reloaded. Someone else's payment is `404`.
 
 For the team: Paystack's webhook URL (Paystack dashboard → Settings → API Keys & Webhooks) is `<API base>/api/v1/payments/webhooks/paystack`. Paystack signs every call (`x-paystack-signature`, HMAC-SHA512 of the body with the secret key); anything unsigned or wrongly signed is `401`. A `charge.success` whose amount or currency is not the payment's is logged and never paid.
+
+## Paying for tests with credits (Day 17)
+
+- `GET /tests` (public; `?skill_id=`, `?role_id=`, `limit` 1–100, `offset`) is the real catalogue: every skill that can be tested now, `test_id` = 200 + `skill_id`. Every test is the adaptive test (all four `levels`, `format: "adaptive"`, `question_count` 16, `duration_minutes` 30). `price_credits` is the price (`0` = free). `GET /tests/{test_id}` adds `description`, `subskills` and `what_you_get`; a skill that cannot be tested yet is `404`.
+- `GET /tests/{test_id}/access` (signed in) → `{ test_id, can_start, reason: free | credits | insufficient_credits, price_credits, credits_balance }`. When `can_start` is false, offer a credit pack.
+- `POST /attempts/start` takes the price when a **new** test starts (a resumed test costs nothing more). Without enough credits it is `402 payment_required` and nothing starts. The charge shows in `GET /credits` as `test_started` (a negative `change`).
+- A paid test that ends before any answer (cancelled with `PATCH /attempts/{id}/cancel`, or out of time) gives its credits back once (`refund`). After the first answer the credits are spent.
+- Prices live in `seeds/test_prices.json` (by `skill_id`; a skill not listed is free). For now: Backend Development and Database Management 2 credits, Version Control (Git) 1, everything else free (the sample's prices; the team sets the real ones).
 
 ## Background jobs
 
@@ -329,6 +337,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 17**: the test catalogue is real (see "Paying for tests with credits"; no more `X-Sample-Data` on `/tests/*`): it lists every testable skill (the sample had 4 made-up tests), always adaptive with 16 questions and 30 minutes; the sample's test `208` (fixed format) and `levels` subsets are gone; `limit` is checked (1–100). `GET /tests/{test_id}/access` is real. **Breaking:** `POST /attempts/start` on a paid test now takes credits and answers `402 payment_required` without enough (before, every test was free); new credit `reason` values in use: `test_started`, `refund`. The sample's `empty` and `payment_required` scenarios on `/tests` are gone.
 - **Day 16**: payments and credits are real (see "Payments and credits"; no more `X-Sample-Data` on `/payments/*` and `/credits`). **Breaking against the sample:** the sample Paystack page is gone for credit packs: `authorization_url` is Paystack's real (test-mode) checkout page; a new person's `credits_balance` starts at `0` (the sample gave 3); `item_type: "subscription_plan"` on `POST /payments/checkout` is `400` until Days 25–26 (`POST /subscriptions` is still sample and still uses the sample Paystack page); `callback_url` must be a page of the website (`400` otherwise); `503 service_unavailable` when payments are not set up; the webhook needs Paystack's signature (`401`) and no longer takes the sample body; the sample scenarios on these routes (`empty`, `pending`, `paid`, `failed`) are gone. `GET /payments` checks `limit` (1–100). Same paths and response shapes.
 - **Day 15**: beginner path: the budget answer now counts (see "Beginner path", "How the budget counts"). New field `recommendations[].programme_within_budget` (`true` / `false` / `null`). `programme` is now the best programme within the budget, or the role's cheapest when none fits. `match_score` values can change for the same answers (a path with an affordable programme scores higher), and a budget reason can be one of the 3 `reasons`. Intakes saved before this deploy read back with `programme_within_budget: null`. No route or field removed.
 - **Day 14**: `/programmes/*` is real (see "Programmes"; no more `X-Sample-Data`): 14 programmes covering all 8 pilot roles; the sample's `empty` scenario is gone; `limit` above 100 or below 1 is `422`. `POST /programmes/{programme_id}/clicks`: `result_id` must be your own finished result (`404` otherwise; the sample accepted any id), and `redirect_url` is the programme's real `url` with `ref` and `click`. Beginner path: each path's `programme` is now filled (`null` only when the role has no programme). Results: `recommendations[].programme_id` is now filled when a programme covers the result's skill. No route or field removed.
