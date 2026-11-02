@@ -9,6 +9,7 @@
 """
 
 import secrets
+from dataclasses import dataclass
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from sqlalchemy import func, select
@@ -132,11 +133,18 @@ async def record_click(
     )
 
 
+@dataclass(frozen=True)
+class PathProgramme:
+    programme: ProgrammeSummary | None
+    within_budget: bool | None  # None: no programme (or no budget given)
+
+
 async def best_programmes_for_roles(
-    db: AsyncSession, role_ids: list[int]
-) -> dict[int, ProgrammeSummary | None]:
-    """The first programme (in list order) of each role; None for a role with none."""
-    best: dict[int, ProgrammeSummary | None] = dict.fromkeys(role_ids)
+    db: AsyncSession, role_ids: list[int], limit: int | None = None
+) -> dict[int, PathProgramme]:
+    """Each role's programme: the first (in list order) within the price limit (kobo; None = no
+    limit), or else the cheapest; PathProgramme(None, None) for a role with none."""
+    best: dict[int, PathProgramme] = {r: PathProgramme(None, None) for r in role_ids}
     if not role_ids:
         return best
     rows = (
@@ -148,9 +156,16 @@ async def best_programmes_for_roles(
             )
         )
     ).all()
+    by_role: dict[int, list[Programme]] = {}
     for role_id, programme in rows:
-        if best[role_id] is None:
-            best[role_id] = summary(programme)
+        by_role.setdefault(role_id, []).append(programme)
+    for role_id, programmes in by_role.items():
+        within = [p for p in programmes if limit is None or p.price_amount <= limit]
+        if within:
+            best[role_id] = PathProgramme(summary(within[0]), True)
+        else:
+            cheapest = min(programmes, key=lambda p: (p.price_amount, p.programme_id))
+            best[role_id] = PathProgramme(summary(cheapest), False)
     return best
 
 

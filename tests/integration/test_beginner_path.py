@@ -267,7 +267,19 @@ async def test_an_affordable_programme_raises_the_match(client, learner, program
     assert open_budget[103]["match_score"] > tight[103]["match_score"]
     assert open_budget[103]["programme_within_budget"] is True
     assert open_budget[103]["programme"]["programme_id"] == 305  # Incubate's own first
-    assert "There is a programme within your budget" in open_budget[103]["reasons"]
+    assert not any("budget" in reason for reason in open_budget[103]["reasons"])  # no limit
+
+
+async def test_a_limited_budget_always_says_when_a_programme_fits(client, learner, programmes):
+    questionnaire = await _questionnaire(client)
+    paths = _by_role(
+        await _submit(client, learner["headers"], questionnaire, **DATA_PERSON, budget="under_50k")
+    )
+    analyst = paths[103]
+    assert analyst["programme_within_budget"] is True
+    assert analyst["programme"]["programme_id"] == 303  # NGN 45,000
+    assert len(analyst["reasons"]) == 3
+    assert analyst["reasons"][-1] == "There is a programme within your budget"
 
 
 async def test_under_50k_never_shows_a_programme_over_it_when_one_fits(client, learner, programmes):
