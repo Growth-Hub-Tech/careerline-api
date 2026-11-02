@@ -56,7 +56,9 @@ def person(name: str, email: str, role_id: int, department: str | None = None) -
 
 async def upload(client, who, members: list[dict]):
     return await client.post(
-        f"{API}/organisations/{who['id']}/members", headers=who["headers"], json={"members": members}
+        f"{API}/organisations/{who['id']}/members",
+        headers=who["headers"],
+        json={"members": members},
     )
 
 
@@ -213,7 +215,9 @@ async def test_recruiters_cannot_see_or_change_the_roster(client, db, owner, rol
     url = f"{API}/organisations/{owner['id']}/members"
     assert_error_envelope(await client.get(url, headers=recruiter), 403, "forbidden")
     response = await client.post(
-        url, headers=recruiter, json={"members": [person("Ada", "ada@example.com", roles["backend"])]}
+        url,
+        headers=recruiter,
+        json={"members": [person("Ada", "ada@example.com", roles["backend"])]},
     )
     assert_error_envelope(response, 403, "forbidden")
     me = await client.get(f"{API}/organisations/me", headers=recruiter)
