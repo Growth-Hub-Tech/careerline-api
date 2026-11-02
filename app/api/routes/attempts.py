@@ -6,7 +6,14 @@ from app.api.deps import get_current_learner, get_db, require_same_learner
 from app.core.exceptions import BadRequestError, ForbiddenError, GoneError, NotFoundError
 from app.core.responses import EnvelopeRoute, errors, ok
 from app.models.models import AttemptStatus, Learner, TestAttempt
-from app.schemas.attempts import AnswerRequest, AttemptState, StartAttemptRequest, SubmitRequest
+from app.schemas.attempts import (
+    AnswerRequest,
+    AttemptReview,
+    AttemptState,
+    StartAttemptRequest,
+    SubmitRequest,
+)
+from app.services.explanations import attempt_review
 from app.services.test_taking_service import (
     answer_question,
     attempt_result,
@@ -83,6 +90,25 @@ async def answer_current_question(
     return await answer_question(
         db, attempt_id, current_learner.learner_id, data.question_id, data.selected_option_id
     )
+
+
+# REVIEW A FINISHED TEST: right answers and explanations, only once the test is over (Day 11)
+@router.get(
+    "/{attempt_id}/review",
+    response_model=AttemptReview,
+    responses=errors(401, 403, 404, 409),
+    description="A finished test question by question: the options in the order they were "
+    "shown, the person's choice, the right answer and an explanation. 409 "
+    "attempt_not_finished while the test is running (nothing about the answers is shown "
+    "before the end). explanation_source ai: written by the AI (once per question, then kept); "
+    "standard: the plain explanation. ai_explanations generating: ask again in a few seconds.",
+)
+async def review_attempt(
+    attempt_id: int,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await attempt_review(db, attempt_id, current_learner.learner_id)
 
 
 # THE OLD FIXED PASS/FAIL TEST: retired on Day 10

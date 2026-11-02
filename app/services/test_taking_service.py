@@ -56,6 +56,7 @@ from app.schemas.attempts import (
     SubskillRef,
 )
 from app.services import adaptive_engine as engine
+from app.services.explanations import queue_explanations
 from app.services.question_picking import pick_next
 from app.services.scoring_service import generate_recommendations
 
@@ -289,6 +290,8 @@ async def _finish(
             db, attempt.learner_id, attempt.skill_id, attempt.attempt_id, level_id
         )
     await save_skill_history(db, attempt, scored)
+    # Day 11: the AI explanations of the answers are written in the background
+    await queue_explanations(db, attempt.attempt_id)
     logger.info(
         "attempt_finished",
         attempt_id=attempt.attempt_id,
@@ -313,6 +316,15 @@ async def _expire(db: AsyncSession, attempt: TestAttempt, served: list[Served]) 
         attempt.end_time = _now().replace(tzinfo=None)  # type: ignore[assignment]
         logger.info("attempt_expired", attempt_id=attempt.attempt_id)
     await db.flush()
+
+
+def is_expired(attempt: TestAttempt) -> bool:
+    return _is_expired(attempt)
+
+
+async def expire(db: AsyncSession, attempt: TestAttempt) -> None:
+    """End a test whose time ran out (scored if enough answers), e.g. when it is reviewed."""
+    await _expire(db, attempt, await _served(db, attempt.attempt_id))
 
 
 async def _state(

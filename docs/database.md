@@ -13,6 +13,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `a7d4e9b2c8f3` | 7 | `organisations`, `organisation_members` (role owner/admin/recruiter) |
 | `b8e3f1c6d2a9` | 8 | `questions.status` (ACTIVE/NEEDS_REVIEW/RETIRED) and `questions.quality_issues`; `job_roles`, `job_role_skills`, `job_titles` |
 | `c4f7a2d9e1b3` | 10 | The adaptive test: `test_attempt.test_format` (existing rows become `fixed`), `question_count`, `expires_at`, `ability`, `confidence`, `ended_by`, status `EXPIRED`; `attempt_question.level`, `served_at`, `selected_option_id`, `is_correct`, `answered_at`; `skill_history` (one row per finished test). Old attempts keep everything they had. |
+| `d9a4b6e1f2c7` | 11 | `question_explanations`: one AI explanation per question (kept for everyone), with a fingerprint of the question, options and right answer it was written for. New empty table. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.

@@ -72,7 +72,7 @@ Every answer except login is an envelope:
 | 403 | `forbidden` | Logged in, but not allowed (someone else's data, wrong account type) | Show "not allowed" |
 | 404 | `not_found` | Doesn't exist (or isn't yours) | Show "not found" |
 | 405 | `method_not_allowed` | Wrong HTTP method | Bug in the call |
-| 409 | `conflict` | Already done (e.g. invitation already used); tests also use `not_current_question`, `attempt_finished`, `skill_not_ready` | Refresh the item |
+| 409 | `conflict` | Already done (e.g. invitation already used); tests also use `not_current_question`, `attempt_finished`, `skill_not_ready`, `attempt_not_finished` | Refresh the item |
 | 410 | `expired` / `gone` | Link, token, offer or test time expired / old route retired | Ask for a new link, or show the test's end |
 | 422 | `validation_error` | Body or parameters invalid (`details` lists the fields) | Show the field errors |
 | 429 | `rate_limited` | Too many requests (`Retry-After` header, seconds) | Wait and retry |
@@ -152,11 +152,20 @@ The adaptive test: 16 questions, one at a time, harder after a right answer and 
 
 Errors: `409 not_current_question` (that question is not the one to answer now: already answered or never served), `409 attempt_finished` (the test is over or cancelled: start a new one), `400` (an option of another question), `410 expired` (the 30 minutes ran out; `details.status` is `completed` when at least 8 questions were answered, so there is a result with `ended_by: "time_up"`, or `expired` with no result), `409 skill_not_ready` (Day 8). `POST /attempts/submit` (the old fixed test) answers `410 gone`.
 
+### Reviewing a finished test (Day 11)
+
+`GET /attempts/{attempt_id}/review` → the test question by question, **only once it is over** (`completed`, `expired` or `cancelled`). While it is running the answer is `409 attempt_not_finished` and nothing about the answers is sent.
+
+- `items[]`: `position`, `question_id`, `question_text`, `subskill_id`, `subskill_name`, `level`, `options` (in the order they were shown, each with `is_correct` and `chosen`), `selected_option_id` (`null`: not answered before the end), `correct_option_id`, `is_correct`, `explanation` and `explanation_source`.
+- `explanation_source`: `ai` (written by the AI, once per question, then kept for everyone) or `standard` (a plain sentence naming the right answer and the choice).
+- `ai_explanations`: `ready` (every item has its AI explanation), `generating` (being written in the background: ask again in a few seconds, e.g. every 3 s up to a minute) or `unavailable` (standard explanations only: no AI configured, or the AI failed).
+- Also `attempt_id`, `skill_id`, `status` and `result` (the same `result` as above; `null` for an expired test without one).
+
 My skills: `GET /profile/skills` is the latest level per skill tested; `GET /profile/skills/history` (optionally `?skill_id=`) every finished test, newest first, with level, score, confidence, strengths and weaknesses.
 
 ## Background jobs
 
-Slow work runs in background jobs, after the request has answered: emails, and the AI advice for weak subskills. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
+Slow work runs in background jobs, after the request has answered: emails, the AI advice for weak subskills and (Day 11) the AI explanations of a finished test's answers. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
 
 ## Sample data
 
@@ -270,6 +279,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 11**: new `GET /attempts/{attempt_id}/review` (see "Reviewing a finished test"): every question of a finished test with the right answer, the choice and an explanation (AI or standard); `409 attempt_not_finished` while the test runs. New error code `attempt_not_finished` (409). No change to existing routes.
 - **Day 10**: real test-taking (see "Taking a test"). `POST /attempts/start` returns the attempt state with one `question` (was: all questions at once) and resumes a test in progress; `declared_level` is ignored (was: required, `400` when invalid). New `GET /attempts/{attempt_id}/question` and `POST /attempts/{attempt_id}/answer`. `POST /attempts/submit` answers `410 gone` (the pass/fail result, `status: passed/failed`, `confirmed_level` and `level_suggestion` are gone). `GET /attempts/{attempt_id}`: new `result`, and `attempt_status` can be `expired`. `GET /profile/skills` is real (no more `X-Sample-Data`; `level` and `percentage_score` come from the latest test) and new `GET /profile/skills/history`. New demo account `demo.professional@example.com`. Still sample and unchanged: `/results` (its `passed` field will go when it is made real).
 - **Day 9**: no API change. The adaptive test engine and its simulation (docs/adaptive-engine.md); Day 10 serves it.
 - **Day 8**: `GET /roles` and `GET /roles/{role_id}` are real (same shapes, no more `X-Sample-Data`; 8 pilot roles, ids 101 to 108; `test_ids` only lists skills that can be tested now, as `200 + skill_id`). New `GET /job-titles` (the title ladder with the expected level for each). `GET /skills/`: new field `testable`. `POST /attempts/start`: new `409 skill_not_ready` for a skill without enough reviewed questions; only questions that passed the quality check are served.

@@ -420,6 +420,39 @@
         "title": "ApiResponse[AssessmentDetail]",
         "type": "object"
       },
+      "ApiResponse_AttemptReview_": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AttemptReview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[AttemptReview]",
+        "type": "object"
+      },
       "ApiResponse_AttemptState_": {
         "properties": {
           "data": {
@@ -2195,6 +2228,65 @@
           "completed_at"
         ],
         "title": "AttemptResult",
+        "type": "object"
+      },
+      "AttemptReview": {
+        "description": "A finished test question by question. Only once the test is over (409\nattempt_not_finished before).",
+        "properties": {
+          "ai_explanations": {
+            "description": "ready: every item has its AI explanation; generating: being written now (ask again in a few seconds); unavailable: standard explanations only",
+            "enum": [
+              "ready",
+              "generating",
+              "unavailable"
+            ],
+            "title": "Ai Explanations",
+            "type": "string"
+          },
+          "attempt_id": {
+            "title": "Attempt Id",
+            "type": "integer"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ReviewItem"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AttemptResult"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "skill_id": {
+            "title": "Skill Id",
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "completed",
+              "expired",
+              "cancelled"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "attempt_id",
+          "skill_id",
+          "status",
+          "result",
+          "ai_explanations",
+          "items"
+        ],
+        "title": "AttemptReview",
         "type": "object"
       },
       "AttemptState": {
@@ -5498,6 +5590,133 @@
         "title": "ResultSummary",
         "type": "object"
       },
+      "ReviewItem": {
+        "properties": {
+          "correct_option_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correct Option Id"
+          },
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "explanation_source": {
+            "description": "ai: written by the AI; standard: the plain explanation (no AI key, AI still working, or the AI failed)",
+            "enum": [
+              "ai",
+              "standard"
+            ],
+            "title": "Explanation Source",
+            "type": "string"
+          },
+          "is_correct": {
+            "title": "Is Correct",
+            "type": "boolean"
+          },
+          "level": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LevelName"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "options": {
+            "description": "In the order they were shown",
+            "items": {
+              "$ref": "#/components/schemas/ReviewOption"
+            },
+            "title": "Options",
+            "type": "array"
+          },
+          "position": {
+            "title": "Position",
+            "type": "integer"
+          },
+          "question_id": {
+            "title": "Question Id",
+            "type": "integer"
+          },
+          "question_text": {
+            "title": "Question Text",
+            "type": "string"
+          },
+          "selected_option_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "null: not answered before the end",
+            "title": "Selected Option Id"
+          },
+          "subskill_id": {
+            "title": "Subskill Id",
+            "type": "integer"
+          },
+          "subskill_name": {
+            "title": "Subskill Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "position",
+          "question_id",
+          "question_text",
+          "subskill_id",
+          "subskill_name",
+          "level",
+          "options",
+          "selected_option_id",
+          "correct_option_id",
+          "is_correct",
+          "explanation",
+          "explanation_source"
+        ],
+        "title": "ReviewItem",
+        "type": "object"
+      },
+      "ReviewOption": {
+        "properties": {
+          "chosen": {
+            "description": "The option the person picked",
+            "title": "Chosen",
+            "type": "boolean"
+          },
+          "is_correct": {
+            "title": "Is Correct",
+            "type": "boolean"
+          },
+          "option_id": {
+            "title": "Option Id",
+            "type": "integer"
+          },
+          "option_text": {
+            "title": "Option Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "option_id",
+          "option_text",
+          "is_correct",
+          "chosen"
+        ],
+        "title": "ReviewOption",
+        "type": "object"
+      },
       "Role": {
         "description": "skills: the main skill first. test_ids: the tests to take for this role, only for skills\nthat can be tested now; until GET /tests is real a test id is 200 + skill_id.",
         "properties": {
@@ -7481,6 +7700,94 @@
           }
         ],
         "summary": "Get Current Question",
+        "tags": [
+          "Attempts"
+        ]
+      }
+    },
+    "/api/v1/attempts/{attempt_id}/review": {
+      "get": {
+        "description": "A finished test question by question: the options in the order they were shown, the person's choice, the right answer and an explanation. 409 attempt_not_finished while the test is running (nothing about the answers is shown before the end). explanation_source ai: written by the AI (once per question, then kept); standard: the plain explanation. ai_explanations generating: ask again in a few seconds.",
+        "operationId": "review_attempt_api_v1_attempts__attempt_id__review_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "attempt_id",
+            "required": true,
+            "schema": {
+              "title": "Attempt Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_AttemptReview_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Review Attempt",
         "tags": [
           "Attempts"
         ]

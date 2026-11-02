@@ -81,6 +81,47 @@ class AttemptState(BaseModel):
     )
 
 
+# Day 11: the review of a finished test, with the right answers and their explanations
+class ReviewOption(BaseModel):
+    option_id: int
+    option_text: str
+    is_correct: bool
+    chosen: bool = Field(description="The option the person picked")
+
+
+class ReviewItem(BaseModel):
+    position: int
+    question_id: int
+    question_text: str
+    subskill_id: int
+    subskill_name: str
+    level: LevelName | None
+    options: list[ReviewOption] = Field(description="In the order they were shown")
+    selected_option_id: int | None = Field(description="null: not answered before the end")
+    correct_option_id: int | None
+    is_correct: bool
+    explanation: str
+    explanation_source: Literal["ai", "standard"] = Field(
+        description="ai: written by the AI; standard: "
+        "the plain explanation (no AI key, AI still working, or the AI failed)"
+    )
+
+
+class AttemptReview(BaseModel):
+    """A finished test question by question. Only once the test is over (409
+    attempt_not_finished before)."""
+
+    attempt_id: int
+    skill_id: int
+    status: Literal["completed", "expired", "cancelled"]
+    result: AttemptResult | None
+    ai_explanations: Literal["ready", "generating", "unavailable"] = Field(
+        description="ready: every item has its AI explanation; generating: being written now "
+        "(ask again in a few seconds); unavailable: standard explanations only"
+    )
+    items: list[ReviewItem]
+
+
 # The old fixed test (retired on Day 10): POST /attempts/submit answers 410
 class AnswerItem(BaseModel):
     question_id: int
