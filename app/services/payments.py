@@ -28,13 +28,21 @@ from app.core.config import settings
 from app.core.exceptions import (
     BadRequestError,
     NotFoundError,
+    PaymentRequiredError,
     ServiceUnavailableError,
     UnauthorizedError,
 )
 from app.core.logging import get_logger
 from app.integrations import paystack
 from app.models.models import Learner
-from app.models.payments import CreditBalance, CreditPack, CreditTransaction, Payment, PaystackEvent
+from app.models.payments import (
+    CreditBalance,
+    CreditPack,
+    CreditTransaction,
+    Payment,
+    PaystackEvent,
+    TestPrice,
+)
 from app.schemas.common import Money, Page
 from app.schemas.payments import Checkout, CheckoutRequest, Credits
 from app.schemas.payments import CreditPack as CreditPackOut
@@ -160,13 +168,7 @@ async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutReque
 # ---------- settling ----------
 
 
-async def _add_credits(
-    db: AsyncSession,
-    learner_id: int,
-    change: int,
-    reason: str,
-    payment_id: int | None = None,
-) -> CreditTransaction:
+async def _locked_balance(db: AsyncSession, learner_id: int) -> CreditBalance:
     await db.execute(
         insert(CreditBalance)
         .values(learner_id=learner_id, balance=0)
@@ -176,6 +178,18 @@ async def _add_credits(
         select(CreditBalance).where(CreditBalance.learner_id == learner_id).with_for_update()
     )
     assert balance is not None
+    return balance
+
+
+async def _add_credits(
+    db: AsyncSession,
+    learner_id: int,
+    change: int,
+    reason: str,
+    payment_id: int | None = None,
+    attempt_id: int | None = None,
+) -> CreditTransaction:
+    balance = await _locked_balance(db, learner_id)
     balance.balance += change
     entry = CreditTransaction(
         learner_id=learner_id,
@@ -183,10 +197,56 @@ async def _add_credits(
         reason=reason,
         balance_after=balance.balance,
         payment_id=payment_id,
+        attempt_id=attempt_id,
     )
     db.add(entry)
     await db.flush()
     return entry
+
+
+# ---------- credits pay for tests (Day 17) ----------
+
+
+async def test_price(db: AsyncSession, skill_id: int) -> int:
+    price = await db.scalar(select(TestPrice.price_credits).where(TestPrice.skill_id == skill_id))
+    return price or 0
+
+
+async def charge_for_test(db: AsyncSession, learner_id: int, attempt_id: int, price: int) -> None:
+    """Take a new test's credits (402 when there are not enough). Runs in the transaction that
+    creates the attempt, so a 402 leaves no attempt behind."""
+    if price <= 0:
+        return
+    balance = await _locked_balance(db, learner_id)
+    if balance.balance < price:
+        raise PaymentRequiredError(
+            f"This test costs {price} credits and you have {balance.balance}: buy a credit pack"
+        )
+    await _add_credits(db, learner_id, -price, "test_started", attempt_id=attempt_id)
+
+
+async def refund_test(db: AsyncSession, learner_id: int, attempt_id: int) -> bool:
+    """Give back what a test cost, once (a test that ended before any answer). False when it
+    cost nothing or was already given back."""
+    charged = await db.scalar(
+        select(CreditTransaction).where(
+            CreditTransaction.attempt_id == attempt_id,
+            CreditTransaction.reason == "test_started",
+        )
+    )
+    if charged is None:
+        return False
+    await _locked_balance(db, learner_id)  # one change at a time
+    refunded = await db.scalar(
+        select(CreditTransaction.id).where(
+            CreditTransaction.attempt_id == attempt_id, CreditTransaction.reason == "refund"
+        )
+    )
+    if refunded is not None:
+        return False
+    await _add_credits(db, learner_id, -charged.change, "refund", attempt_id=attempt_id)
+    logger.info("test_refunded", attempt_id=attempt_id, credits=-charged.change)
+    return True
 
 
 async def settle(

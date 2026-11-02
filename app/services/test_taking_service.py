@@ -9,6 +9,9 @@
   the level for /recommendations/levels) and a skill-history entry are written in the same
   database transaction as the last answer: either all of it is saved or none of it.
 - There is no pass or fail and no self-declared level.
+- Day 17: a test with a price (test_prices) takes its credits when it starts (only a new test,
+  never a resumed one; 402 without enough credits). A test that ends before any answer
+  (cancelled, or out of time) gives them back.
 """
 
 import random
@@ -56,6 +59,7 @@ from app.schemas.attempts import (
     SubskillRef,
 )
 from app.services import adaptive_engine as engine
+from app.services import payments
 from app.services.explanations import queue_explanations
 from app.services.question_picking import pick_next
 from app.services.scoring_service import generate_recommendations
@@ -315,6 +319,17 @@ async def _expire(db: AsyncSession, attempt: TestAttempt, served: list[Served]) 
         attempt.attempt_status = AttemptStatus.EXPIRED
         attempt.end_time = _now().replace(tzinfo=None)  # type: ignore[assignment]
         logger.info("attempt_expired", attempt_id=attempt.attempt_id)
+        if not _answers(served):
+            await payments.refund_test(db, attempt.learner_id, attempt.attempt_id)
+    await db.flush()
+
+
+async def cancel(db: AsyncSession, attempt: TestAttempt) -> None:
+    """Cancel a test in progress; one with no answer yet gives its credits back."""
+    attempt.attempt_status = AttemptStatus.CANCELLED
+    attempt.end_time = _now().replace(tzinfo=None)  # type: ignore[assignment]
+    if not _answers(await _served(db, attempt.attempt_id)):
+        await payments.refund_test(db, attempt.learner_id, attempt.attempt_id)
     await db.flush()
 
 
@@ -371,7 +386,11 @@ async def _latest_level(db: AsyncSession, learner_id: int, skill_id: int) -> str
     return level.value if level else None
 
 
-async def start_or_resume(db: AsyncSession, learner_id: int, skill_id: int) -> AttemptState:
+async def start_or_resume(
+    db: AsyncSession, learner_id: int, skill_id: int, *, charge: bool = False
+) -> AttemptState:
+    """charge: take the test's price in credits when a new test starts (the API does; the demo
+    data loader does not)."""
     if await db.get(Skill, skill_id) is None:
         raise NotFoundError(f"Skill {skill_id} not found")
     # One start at a time per person and skill (two taps on "Start" give one test)
@@ -417,6 +436,9 @@ async def start_or_resume(db: AsyncSession, learner_id: int, skill_id: int) -> A
     )
     db.add(attempt)
     await db.flush()
+    if charge:
+        price = await payments.test_price(db, skill_id)
+        await payments.charge_for_test(db, learner_id, attempt.attempt_id, price)
     start_level = await _latest_level(db, learner_id, skill_id) or settings.ADAPTIVE_START_LEVEL
     first: list[Served] = []
     await _serve_next(db, attempt, first, start_level)

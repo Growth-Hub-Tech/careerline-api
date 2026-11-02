@@ -15,7 +15,7 @@ from tests.integration.conftest import answer, assert_error_envelope, option_for
 API = settings.API_PREFIX
 
 
-def test_id(skill: dict) -> int:
+def _test_id(skill: dict) -> int:
     return 200 + skill["skill_id"]
 
 
@@ -58,7 +58,7 @@ async def test_the_catalogue_lists_every_skill_that_can_be_tested(client, skill)
     page = response.json()["data"]
     assert page["total"] == 1
     (item,) = page["items"]
-    assert item["test_id"] == test_id(skill) and item["skill_id"] == skill["skill_id"]
+    assert item["test_id"] == _test_id(skill) and item["skill_id"] == skill["skill_id"]
     assert item["title"] == "Python" and item["skill_name"] == "Python"
     assert item["format"] == "adaptive" and item["price_credits"] == 0
     assert item["levels"] == ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
@@ -70,7 +70,7 @@ async def test_the_catalogue_lists_every_skill_that_can_be_tested(client, skill)
 
 
 async def test_test_detail_and_price(client, paid):
-    response = await client.get(f"{API}/tests/{test_id(paid)}")
+    response = await client.get(f"{API}/tests/{_test_id(paid)}")
     assert response.status_code == 200, response.text
     detail = response.json()["data"]
     assert detail["price_credits"] == 2
@@ -89,10 +89,10 @@ async def test_an_unknown_test_or_one_that_cannot_be_taken_is_a_404(client, skil
 
 
 async def test_access_to_a_free_test(client, learner, skill):
-    response = await client.get(f"{API}/tests/{test_id(skill)}/access", headers=learner["headers"])
+    response = await client.get(f"{API}/tests/{_test_id(skill)}/access", headers=learner["headers"])
     assert response.status_code == 200, response.text
     assert response.json()["data"] == {
-        "test_id": test_id(skill),
+        "test_id": _test_id(skill),
         "can_start": True,
         "reason": "free",
         "price_credits": 0,
@@ -101,13 +101,13 @@ async def test_access_to_a_free_test(client, learner, skill):
 
 
 async def test_access_to_a_paid_test_depends_on_the_balance(client, learner, paid, database):
-    path = f"{API}/tests/{test_id(paid)}/access"
+    path = f"{API}/tests/{_test_id(paid)}/access"
     short = (await client.get(path, headers=learner["headers"])).json()["data"]
     assert short["can_start"] is False and short["reason"] == "insufficient_credits"
     give_credits(database, learner, 3)
     enough = (await client.get(path, headers=learner["headers"])).json()["data"]
     assert enough == {
-        "test_id": test_id(paid),
+        "test_id": _test_id(paid),
         "can_start": True,
         "reason": "credits",
         "price_credits": 2,
