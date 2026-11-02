@@ -204,7 +204,7 @@ Incubate's own and partner courses that prepare for a job role. The catalogue li
 Credits pay for tests (see "Paying for tests with credits"). People buy credit packs through Paystack. The test server uses Paystack's **test mode**: pay with Paystack's test cards, and no real money moves.
 
 1. `GET /payments/credit-packs` (public) → `[{ pack_id, name, credits, price }]` (prices in kobo).
-2. `POST /payments/checkout` (signed in) with `{ "item_type": "credit_pack", "item_id": <pack_id>, "callback_url"?: "<a page of the website>" }` → `201` a pending payment plus `authorization_url`. Send the person there (a full-page redirect, not an iframe). `callback_url` defaults to `<website>/payments/callback`; it must be on the website (`FRONTEND_URL` or one of `CORS_ORIGINS`), `400` otherwise. `item_type: "subscription_plan"` is `400` until subscriptions are real (Days 25–26). `404`: no such pack. `503 service_unavailable`: payments are not set up or Paystack is not answering; nothing was charged, try again later.
+2. `POST /payments/checkout` (signed in) with `{ "item_type": "credit_pack", "item_id": <pack_id>, "callback_url"?: "<a page of the website>" }` → `201` a pending payment plus `authorization_url`. Send the person there (a full-page redirect, not an iframe). `callback_url` defaults to `<website>/payments/callback`; it must be on the website (`FRONTEND_URL` or one of `CORS_ORIGINS`), `400` otherwise. `item_type: "subscription_plan"` buys a plan (Day 25, see "Subscriptions"). `404`: no such pack or plan. `503 service_unavailable`: payments are not set up or Paystack is not answering; nothing was charged, try again later.
 3. Paystack sends the person back to `callback_url?reference=…&trxref=…`. Call `GET /payments/{reference}`: it asks Paystack about a pending payment, so it shows `paid` as soon as Paystack has the money. Show `pending` with a "checking…" state and poll every 2–3 s for up to a minute; `failed` → "payment failed, try again"; `abandoned` → the checkout was left unpaid (after an hour).
 4. `GET /credits` → `credits_balance` and the latest 50 `transactions` (`change`, `reason`: purchase / test_started / refund / subscription_grant, `balance_after`). `GET /payments` → my payments, newest first (`limit` 1–100, `offset`).
 
@@ -263,6 +263,18 @@ For owners and admins of an organisation (recruiters only see `GET /organisation
 
 Slow work runs in background jobs, after the request has answered: emails, the AI advice for weak subskills, (Day 11) the AI explanations of a finished test's answers and (Day 12) the PDF skill reports. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
 
+## Subscriptions (Day 25, Paystack)
+
+Plans are real (`seeds/subscription_plans.json`): **Individual Monthly** (anyone), **Recruiter Monthly** (an organisation account: owner, admin or recruiter) and **Organisation Yearly** (an organisation's owner or an admin; one per organisation; gives the organisation its seats). Paying works like buying credits (test mode on the test server).
+
+1. `GET /subscriptions/plans` (public) → `[{ plan_id, name, audience, interval, price, credits_per_interval, seats, features }]`.
+2. `POST /subscriptions` `{ plan_id, callback_url? }` (signed in; the same as `POST /payments/checkout` with `item_type: "subscription_plan"`) → `201` a pending payment plus `authorization_url`: send the person there, then `GET /payments/{reference}` on the callback page, exactly as for credits. `403`: the plan is not for this account (the message says why). `409`: a plan is already live (cancel it and subscribe again when it ends), or the organisation already has one. `404`: no such plan. `503`: payments are not set up.
+3. Once Paystack has the money the plan is **active** from now to the same day next month (or next year), and its `credits_per_interval` are added (`reason: "subscription_grant"` in `GET /credits`). An organisation plan's `seats` become the organisation's `seats_total` (`GET /organisations/me`) while it is live.
+4. `GET /subscriptions/me` → the live subscription (`status: "active"`; `"past_due"`: the period ended unpaid, still usable for `SUBSCRIPTION_GRACE_DAYS`, 3; paying again with `POST /subscriptions` renews it), else the newest ended one (`"cancelled"`), else `null`.
+5. `POST /subscriptions/me/cancel` → `cancel_at_period_end: true`; the plan (and its seats) stays until `current_period_end`, then it is `cancelled`. Calling it again changes nothing; `404` without a live plan.
+
+A plan is started (or renewed) and its credits added exactly once per payment, however often Paystack retries.
+
 ## Sample data
 
 Endpoints that are not built yet answer with **realistic, typed sample data**, on their real path, in the real envelope, with the real response model. Build the screens against them now: when the real feature lands (Days 6–27) the path and the shape stay the same, only the data becomes real.
@@ -273,7 +285,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/beginner-path/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/beginner-path/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/payments/*`, `/credits`, `/privacy/*`, `/recruiter/*`, `/invitations/*`, `/organisations/*`, `/subscriptions/*` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -293,42 +305,22 @@ Send the header `X-Mock-Scenario: <name>` on any sample call to get that case, w
 | `unavailable` | 503 `service_unavailable` |
 | `slow` | the normal answer after 2 seconds (loading states) |
 
-Some endpoints offer more (listed in their description in `/docs` and in `x-sample-scenarios`): `empty` (lists come back empty: empty states), `pending` / `paid` / `failed` (payment status), `past_due` / `cancelled` / `no_subscription` (subscription). A name the endpoint doesn't offer is a 400 that lists the ones it does, so a typo never looks like a normal answer. Names ignore case.
+The scenarios each endpoint offers are listed in its description in `/docs` and in `x-sample-scenarios` (the only sample endpoints left, `GET`/`PATCH /profile`, offer the ones above). A name the endpoint doesn't offer is a 400 that lists the ones it does, so a typo never looks like a normal answer. Names ignore case.
 
 ```bash
-curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: empty" "$API/payments"
-curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: payment_required" "$API/tests/202/access"
+curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: not_found" "$API/profile"
 ```
 
 ```ts
 // e.g. a dev-only switch in the app that adds the header to every call
-fetch(`${API}/payments`, { headers: { Authorization: `Bearer ${token}`, "X-Mock-Scenario": "empty" } });
+fetch(`${API}/profile`, { headers: { Authorization: `Bearer ${token}`, "X-Mock-Scenario": "slow" } });
 ```
 
 Real endpoints ignore the header.
 
-### Flows that work end to end on sample data
+### No sample flows left
 
-The sample server keeps a little state (on the server, gone after a restart or `POST /api/v1/sample/reset`), so these flows can be clicked through:
-
-**Buying credits or a plan (Paystack):**
-
-1. `POST /payments/checkout` `{ "item_type": "credit_pack", "item_id": 1, "callback_url": "https://<website>/payment/done" }` (or `POST /subscriptions` `{ "plan_id": 11, "callback_url": … }`) → 201, `status: "pending"`, `authorization_url`, `reference`.
-2. Send the browser to `authorization_url`. On the test server it is a sample Paystack page that pays at once and redirects to `callback_url?reference=…&trxref=…`, like Paystack does. Add `?outcome=failed` or `?outcome=abandoned` to the URL to try those.
-3. On the callback page, `GET /payments/{reference}` → `status: "paid"`, `credits_added`. `GET /credits` shows the new balance; `GET /subscriptions/me` shows the active plan.
-
-Paystack's webhook (`POST /payments/webhooks/paystack`, `charge.success`) does the same as step 2; it is the server's business, the app never calls it.
-
-**Inviting someone to a test:**
-
-1. Recruiter (or organisation): `POST /invitations` `{ "email", "full_name", "test_id": 202 }` → `status: "sent"`, `token`, `invite_url` (the link in the email: `https://<website>/invite/<token>`).
-2. Invitee opens the link: `GET /invitations/token/{token}` (no login needed) shows who invited them and the test. After login, `POST /invitations/token/{token}/accept` → `status: "accepted"` and an `attempt_id`.
-3. The invitee finishes the test → `status: "completed"` with a `result_id` (real: when the attempt is finished; sample: `POST /sample/invitations/{token}/complete`).
-4. The sender sees each step in `GET /invitations/{invitation_id}` and `GET /invitations`.
-
-Out-of-order steps are a 409, an expired invitation is a 410 (`POST /sample/invitations/{token}/expire` makes one expire now), a revoked one can't be accepted.
-
-`/api/v1/sample/*` endpoints (tag `Sample: helpers`) only exist to stand in for Paystack and for finishing a test. Never call them from the real app.
+Since Day 25 every flow is real: checkout (credits and plans) goes through Paystack's test mode, invitations through real tests. The sample state, the sample Paystack page and the `/api/v1/sample/*` helpers are gone.
 
 ## TypeScript types from `openapi.json`
 
@@ -376,6 +368,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 25**: subscriptions are real (see "Subscriptions"; no more `X-Sample-Data` on `/subscriptions/*`). `item_type: "subscription_plan"` on `POST /payments/checkout` now works (it was `400`). **Breaking against the sample:** `POST /subscriptions` answers Paystack's real (test-mode) `authorization_url`, not the sample Paystack page; a subscription exists only once paid (`GET /subscriptions/me` is `null` before); `403` when the plan is not for the account (recruiter and organisation plans), `409` for a second live plan, `503` without payments set up; the sample scenarios `past_due`, `cancelled` and `no_subscription` are gone; `/api/v1/sample/paystack/{reference}`, `/api/v1/sample/reset` and the other sample helpers are gone. `POST /payments/checkout` can also answer `403`/`409` for plans. Same paths and response shapes. New optional env var `SUBSCRIPTION_GRACE_DAYS=3`; `SAMPLE_STATE_FILE` is no longer read.
 - **Day 24**: pre/post re-tests. New: `POST /organisations/{organisation_id}/audits/{audit_id}/retest` and `GET .../audits/{audit_id}/deltas` (see "Re-test"). New fields, all additive: `baseline_audit_id` on audits, `baseline_average_score` and `score_delta` on benchmarks, `previous_result` and `score_delta` on `GET /results/{result_id}`. Nothing breaking.
 - **Day 23**: targets (`GET`/`PUT /organisations/{organisation_id}/targets`) and the capability heatmap (`GET /organisations/{organisation_id}/heatmap`) are real, so the whole organisation audit is real (see "Organisation audit"; no more `X-Sample-Data` under `/organisations`). Audit benchmarks now use the organisation's targets. **Breaking against the sample:** the sample targets and heatmap rows are gone (a new organisation has none); without `audit_id` the heatmap's `audit_id` is `null` (everyone's newest results, not one audit); columns are the skills of the roster's roles; `level` and `band` follow the rules above (`band` is against the target, not fixed score lines); `PUT` refuses a repeated role and skill (`400`) and unknown ones (`404`); the sample's `empty` scenario is gone. Same paths and response shapes.
 - **Day 22**: audits are real: `GET`/`POST /organisations/{organisation_id}/audits` and `GET .../audits/{audit_id}` (see "Organisation audit"; no more `X-Sample-Data` on them). New: `POST /organisations/{organisation_id}/audits/{audit_id}/start` starts a draft. Starting an audit emails every member an invitation per testable skill of their role; the members' `status` and `latest_level` now move. **Breaking against the sample:** the sample audit 1201 is gone; `members_total` counts only people whose role has a test; `benchmarks` lists only roles and skills with a finished test (empty until then); `industry_average_score` is `null` until 5 people have a result in that skill; `limit` is checked (1–100); unknown roles or members are `404`, bad picks `400`. Same paths and response shapes. Still sample: heatmap, targets.

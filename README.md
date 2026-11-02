@@ -126,7 +126,7 @@ python scripts/export_openapi.py --check  # openapi.json matches the code
 ### Tests
 
 - `tests/test_app.py`, `tests/test_db_guard.py`: fast unit tests, no database needed.
-- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint, the checkout and invitation flows), no database needed.
+- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint), no database needed.
 - `tests/test_worker_and_cors.py`, `tests/test_render_blueprint.py`: the worker, CORS and `render.yaml`.
 - `tests/integration/`: the real API on a real Postgres test database (register, login, attempts, scoring, recommendations, ownership, error envelopes). Open bugs are in `tests/integration/test_known_bugs.py`, marked `xfail(strict=True)`: they show as `xfailed` until the bug is fixed, then turn the run red so the marker gets removed.
 
