@@ -156,6 +156,5 @@ async def test_the_test_mailbox_is_off_when_emails_really_go_out(client, monkeyp
 
 def test_production_has_no_test_mailbox(monkeypatch):
     monkeypatch.setattr(settings, "APP_ENV", "production")
-    monkeypatch.setattr(settings, "SAMPLE_API_ENABLED", False)
     paths = {route.path for route in create_app().routes}
     assert f"{API}/test-mailbox" not in paths

@@ -1,12 +1,13 @@
 from datetime import datetime
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StringConstraints
 
 from app.schemas.common import LevelName
 
 Budget = Literal["free_only", "under_50k", "50k_to_200k", "over_200k"]
 Visibility = Literal["private", "recruiters"]
+Goal = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=100)]
 
 
 class Profile(BaseModel):
@@ -32,11 +33,16 @@ class ProfileUpdate(BaseModel):
     location: str | None = Field(default=None, max_length=120)
     current_role: str | None = Field(default=None, max_length=120)
     years_experience: int | None = Field(default=None, ge=0, le=60)
-    goals: list[str] | None = None
+    goals: list[Goal] | None = Field(default=None, max_length=10)
     weekly_hours: int | None = Field(default=None, ge=0, le=80)
     budget: Budget | None = None
-    linkedin_url: str | None = Field(default=None, max_length=300)
-    visibility: Visibility | None = None
+    linkedin_url: str | None = Field(
+        default=None, max_length=300, description="https://www.linkedin.com/... (400 otherwise)"
+    )
+    visibility: Visibility | None = Field(
+        default=None,
+        description="recruiters: the share_profile_with_recruiters consent is turned on",
+    )
 
 
 class SkillLevel(BaseModel):

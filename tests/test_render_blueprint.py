@@ -53,9 +53,9 @@ def test_no_secret_value_is_written_in_the_file():
                 )
 
 
-def test_the_test_server_serves_the_sample_api_and_reads_cors_from_the_dashboard():
+def test_the_test_server_is_not_production_and_reads_cors_from_the_dashboard():
     web = _env(_service("web"))
-    assert web["SAMPLE_API_ENABLED"]["value"] == "true"
+    assert "SAMPLE_API_ENABLED" not in web  # no sample API since Day 28
     assert web["APP_ENV"]["value"] != "production"
     assert web["CORS_ORIGINS"]["sync"] is False
 

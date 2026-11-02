@@ -3,9 +3,8 @@
     python scripts/export_openapi.py          # regenerate openapi.json
     python scripts/export_openapi.py --check  # exit 1 if openapi.json is out of date (CI)
 
-The file always includes the sample routes (whatever SAMPLE_API_ENABLED says here), so it is the
-whole contract: real endpoints plus the sample ones that will be built later. Keys are sorted and
-the output is stable, so the git diff of openapi.json shows exactly what changed in the API.
+The file is the whole contract (every endpoint is real since Day 28). Keys are sorted and the
+output is stable, so the git diff of openapi.json shows exactly what changed in the API.
 """
 
 import json
@@ -24,15 +23,9 @@ sys.path.insert(0, str(REPO_ROOT))
 
 
 def build_openapi() -> dict[str, Any]:
-    from app.core.config import settings
     from app.main import create_app
 
-    previous = settings.SAMPLE_API_ENABLED
-    settings.SAMPLE_API_ENABLED = True
-    try:
-        return create_app().openapi()
-    finally:
-        settings.SAMPLE_API_ENABLED = previous
+    return create_app().openapi()
 
 
 def render(spec: dict[str, Any]) -> str:

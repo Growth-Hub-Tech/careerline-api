@@ -8,7 +8,7 @@ Consents
 A copy of my data
 - POST queues a background job (one export at a time: asking again while one is queued, or
   while a ready one has not expired, gives that one). The job writes one JSON file with
-  everything held about the person (account, consents and their history, behavioural answers,
+  everything held about the person (account, profile, consents and their history, behavioural answers,
   every test with its answers and result, skill history, beginner-path intakes, payments,
   subscriptions, credits, programme clicks, organisations, sign-in sessions, contact messages) and emails them
   that it is ready (the email points at the website, never at the file).
@@ -20,7 +20,7 @@ Deleting my account
 - Needs the password. Scheduled ACCOUNT_DELETION_GRACE_DAYS ahead (a background job waits for
   that moment) and can be cancelled until then; the account keeps working meanwhile.
 - When it is carried out: the person's name, email, phone and password are replaced, the
-  account is switched off, every session ends, and their consents, intakes, behavioural
+  account is switched off, every session ends, and their profile, consents, intakes, behavioural
   answers, exports, programme clicks, organisation memberships, PDF reports, contact messages,
   emails and test-mailbox messages are deleted, and Paystack's copies of their payment events
   are emptied; a subscription is cancelled at once and its saved card forgotten, so it is never
@@ -69,6 +69,7 @@ from app.models.privacy import (
     DataExport,
     LearnerConsent,
 )
+from app.models.profiles import PersonProfile
 from app.models.programmes import ProgrammeClick
 from app.models.reports import ResultReport
 from app.models.subscriptions import Subscription, SubscriptionPlan
@@ -359,6 +360,22 @@ async def build_export(db: AsyncSession, learner_id: int) -> dict[str, Any]:
             select(Payment).where(Payment.learner_id == learner_id).order_by(Payment.id)
         )
     ]
+    person = await db.get(PersonProfile, learner_id)
+    out["profile"] = (
+        {
+            "headline": person.headline,
+            "location": person.location,
+            "current_role": person.current_role,
+            "years_experience": person.years_experience,
+            "goals": list(person.goals or []),
+            "weekly_hours": person.weekly_hours,
+            "budget": person.budget,
+            "linkedin_url": person.linkedin_url,
+            "updated_at": _iso(person.updated_at),
+        }
+        if person
+        else None
+    )
     out["subscriptions"] = [
         {
             "plan_name": plan_name,
@@ -549,6 +566,7 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
         ProgrammeClick,
         OrganisationMember,
         LearnerProfile,
+        PersonProfile,
     ):
         await db.execute(delete(model).where(model.learner_id == learner_id))
     await db.execute(delete(ResultReport).where(ResultReport.attempt_id.in_(attempt_ids)))

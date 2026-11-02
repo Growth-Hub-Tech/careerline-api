@@ -43,10 +43,6 @@ class Settings(BaseSettings):
     # Refuse to start when the database is behind the latest migration
     CHECK_MIGRATIONS_ON_STARTUP: bool = True
 
-    # Sample API (app/sample): typed sample answers for the endpoints that are not built yet, so
-    # the frontend can build against the real contract. Unset = on everywhere except production.
-    SAMPLE_API_ENABLED: bool | None = None
-
     # Background jobs (app/jobs). Production runs `python -m app.worker` as its own service; the
     # free test server has no worker service, so RUN_JOBS_IN_WEB=true runs the jobs inside the API
     RUN_JOBS_IN_WEB: bool = False
@@ -159,12 +155,6 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.APP_ENV == "production"
-
-    @property
-    def sample_api_enabled(self) -> bool:
-        if self.SAMPLE_API_ENABLED is not None:
-            return self.SAMPLE_API_ENABLED
-        return not self.is_production
 
     @property
     def async_database_url(self) -> str:
