@@ -45,4 +45,5 @@ class CandidateReport(BaseModel):
     fit: Fit
     summary: str
     results: list[CandidateTestResult]
-    report_url: str
+    # the newest result's PDF (a link that works for a few minutes); null while it is being made
+    report_url: str | None

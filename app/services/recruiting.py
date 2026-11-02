@@ -15,6 +15,7 @@
 
 import secrets
 from datetime import UTC, datetime, timedelta
+from typing import Any
 
 from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
@@ -24,16 +25,17 @@ from app.core.config import settings
 from app.core.exceptions import ConflictError, ExpiredError, NotFoundError
 from app.core.logging import get_logger
 from app.email.outbox import send_email
-from app.models.models import Skill
+from app.models.history import SkillHistory
+from app.models.models import AttemptStatus, LevelName, Skill, Subskill, TestAttempt
 from app.models.organisations import Organisation, OrganisationMember
 from app.models.recruiting import Candidate, Invitation
-from app.models.roles import JobRole
+from app.models.roles import JobRole, JobRoleSkill
 from app.schemas.common import Page
 from app.schemas.invitations import Invitation as InvitationOut
 from app.schemas.invitations import InvitationCreate, InvitationPublic
 from app.schemas.recruiter import Candidate as CandidateOut
-from app.schemas.recruiter import CandidateCreate, CandidateTestResult
-from app.services import test_catalogue
+from app.schemas.recruiter import CandidateCreate, CandidateReport, CandidateTestResult
+from app.services import reports, test_catalogue
 from app.services.test_taking_service import start_or_resume
 
 logger = get_logger(__name__)
@@ -69,11 +71,82 @@ async def _role_titles(db: AsyncSession, role_ids: set[int]) -> dict[int, str]:
     return {role_id: title for role_id, title in rows.all()}
 
 
+LEVEL_ORDER = [level.value for level in LevelName]
+
+
+def _meets(level: str, target: str | None) -> bool:
+    """Without a role target, JUNIOR and up counts as a pass."""
+    return LEVEL_ORDER.index(level) >= LEVEL_ORDER.index(target or "JUNIOR")
+
+
+def fit_for(results: list[tuple[str, str | None]]) -> str:
+    """(level, the role's target level or None) per result -> strong_fit when every level meets
+    its target, possible_fit when the worst is one level short, otherwise not_a_fit. Without a
+    target: MID and up strong, JUNIOR possible, BEGINNER not."""
+    worst = 0
+    for level, target in results:
+        gap = LEVEL_ORDER.index(target or "MID") - LEVEL_ORDER.index(level)
+        worst = max(worst, gap)
+    return "strong_fit" if worst <= 0 else "possible_fit" if worst == 1 else "not_a_fit"
+
+
+async def _completed_results(
+    db: AsyncSession, candidates: list[Candidate]
+) -> dict[int, list[tuple[CandidateTestResult, SkillHistory]]]:
+    """Every finished invited test per candidate, newest first."""
+    by_id = {c.id: c for c in candidates}
+    out: dict[int, list[tuple[CandidateTestResult, SkillHistory]]] = {c.id: [] for c in candidates}
+    if not by_id:
+        return out
+    rows = (
+        await db.execute(
+            select(Invitation, SkillHistory, Skill.skill_name)
+            .join(SkillHistory, SkillHistory.attempt_id == Invitation.attempt_id)
+            .join(Skill, Skill.skill_id == Invitation.skill_id)
+            .where(Invitation.candidate_id.in_(by_id), Invitation.status == "completed")
+            .order_by(SkillHistory.recorded_at.desc(), SkillHistory.id.desc())
+        )
+    ).all()
+    role_ids = {c.role_id for c in candidates if c.role_id is not None}
+    targets: dict[tuple[int, int], str] = {}
+    if role_ids:
+        for role_id, skill_id, target in (
+            await db.execute(
+                select(
+                    JobRoleSkill.role_id, JobRoleSkill.skill_id, JobRoleSkill.target_level
+                ).where(JobRoleSkill.role_id.in_(role_ids))
+            )
+        ).all():
+            targets[(role_id, skill_id)] = target.value
+    for invitation, history, skill_name in rows:
+        candidate = by_id[invitation.candidate_id]
+        target = (
+            targets.get((candidate.role_id, invitation.skill_id))
+            if candidate.role_id is not None
+            else None
+        )
+        result = CandidateTestResult(
+            test_id=test_catalogue.TEST_ID_OFFSET + invitation.skill_id,
+            test_title=skill_name,
+            level=history.level,
+            percentage_score=float(history.score),
+            passed=_meets(history.level.value, target),
+            completed_at=history.recorded_at,
+            result_id=history.attempt_id,
+        )
+        out[candidate.id].append((result, history))
+    return out
+
+
 async def latest_results(
-    db: AsyncSession, candidate_ids: list[int]
+    db: AsyncSession, candidates: list[Candidate]
 ) -> dict[int, CandidateTestResult]:
-    """The newest finished invited test per candidate (Day 20 fills this in)."""
-    return {}
+    """The newest finished invited test per candidate."""
+    return {
+        cid: results[0][0]
+        for cid, results in (await _completed_results(db, candidates)).items()
+        if results
+    }
 
 
 def _candidate_status(invitations: list[Invitation]) -> str:
@@ -94,7 +167,7 @@ async def _candidates_out(db: AsyncSession, rows: list[Candidate]) -> list[Candi
         for inv in await db.scalars(select(Invitation).where(Invitation.candidate_id.in_(ids))):
             invitations[inv.candidate_id].append(inv)  # type: ignore[index]
     titles = await _role_titles(db, {c.role_id for c in rows if c.role_id is not None})
-    results = await latest_results(db, ids)
+    results = await latest_results(db, rows)
     return [
         CandidateOut(
             candidate_id=c.id,
@@ -386,10 +459,75 @@ async def accept_invitation(db: AsyncSession, token: str, learner_id: int) -> In
     if row.status == "accepted":
         if row.accepted_by != learner_id:
             raise ConflictError("This invitation was already accepted by another account")
-        return await _public(db, row)
+        attempt = await db.get(TestAttempt, row.attempt_id) if row.attempt_id else None
+        if attempt is not None and attempt.attempt_status == AttemptStatus.IN_PROGRESS:
+            return await _public(db, row)
+        # the test was cancelled or ran out before a result: start it again
     state = await start_or_resume(db, learner_id, row.skill_id, charge=False)
     row.status, row.accepted_at, row.accepted_by = "accepted", _now(), learner_id
     row.attempt_id = state.attempt_id
     await db.flush()
     logger.info("invitation_accepted", invitation_id=row.id, attempt_id=row.attempt_id)
     return await _public(db, row)
+
+
+# ---------- the candidate report (Day 20) ----------
+
+
+async def candidate_report(
+    db: AsyncSession, actor: OrganisationMember, candidate_id: int, link_for: Any
+) -> CandidateReport:
+    candidate = await own_candidate(db, actor.organisation_id, candidate_id)
+    results = (await _completed_results(db, [candidate]))[candidate.id]
+    if not results:
+        raise NotFoundError(f"Candidate {candidate_id} has not finished an invited test yet")
+    titles = await _role_titles(db, {candidate.role_id} if candidate.role_id else set())
+    targets: dict[int, str] = {}
+    if candidate.role_id is not None:
+        targets = {
+            skill_id: target.value
+            for skill_id, target in (
+                await db.execute(
+                    select(JobRoleSkill.skill_id, JobRoleSkill.target_level).where(
+                        JobRoleSkill.role_id == candidate.role_id
+                    )
+                )
+            ).all()
+        }
+    latest_per_test: dict[int, tuple[CandidateTestResult, SkillHistory]] = {}
+    for result, history in results:  # newest first: keep each test's newest
+        latest_per_test.setdefault(result.test_id, (result, history))
+    fit = fit_for(
+        [
+            (r.level.value, targets.get(r.test_id - test_catalogue.TEST_ID_OFFSET))
+            for r, _ in latest_per_test.values()
+        ]
+    )
+    newest, history = results[0]
+    subskills = await _subskill_names(db, set(history.strengths) | set(history.weaknesses))
+    summary = f"Confirmed {newest.level.value} in {newest.test_title}"
+    strong = [subskills[i] for i in history.strengths if i in subskills]
+    weak = [subskills[i] for i in history.weaknesses if i in subskills]
+    if strong:
+        summary += f": strong on {', '.join(strong)}"
+    if weak:
+        summary += f"{',' if strong else ':'} developing on {', '.join(weak)}"
+    report = await reports.recruiter_report_link(db, newest.result_id, link_for)
+    return CandidateReport(
+        candidate_id=candidate.id,
+        full_name=candidate.full_name,
+        role_title=titles.get(candidate.role_id) if candidate.role_id is not None else None,
+        fit=fit,
+        summary=summary + ".",
+        results=[r for r, _ in results],
+        report_url=report,
+    )
+
+
+async def _subskill_names(db: AsyncSession, ids: set[int]) -> dict[int, str]:
+    if not ids:
+        return {}
+    rows = await db.execute(
+        select(Subskill.subskill_id, Subskill.subskill_name).where(Subskill.subskill_id.in_(ids))
+    )
+    return {i: name for i, name in rows.all()}
