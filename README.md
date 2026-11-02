@@ -103,7 +103,7 @@ CI and `tests/test_openapi_file.py` fail when the committed file is out of date.
 
 ## Seed files
 
-`seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions). `python -m app.db.seed` loads it; running it again changes nothing. The test server loads it on every deploy (`SEED_ON_START=true`). Details: [docs/database.md](docs/database.md).
+`seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions, job roles, programmes). `python -m app.db.seed` loads it; running it again changes nothing. The test server loads it on every deploy (`SEED_ON_START=true`). Details: [docs/database.md](docs/database.md).
 
 `python -m app.db.demo` loads the demo accounts and Demo Company Ltd (listed in [docs/api.md](docs/api.md)); the test server runs it on every deploy (`DEMO_DATA_ON_START=true`), and it refuses to run in production.
 

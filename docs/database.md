@@ -16,6 +16,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `d9a4b6e1f2c7` | 11 | `question_explanations`: one AI explanation per question (kept for everyone), with a fingerprint of the question, options and right answer it was written for. New empty table. |
 | `e3c7f9a1b5d8` | 12 | `result_reports`: the PDF skill report of a result (status generating/ready/failed, the PDF itself, a version that goes up when it is made again). New empty table. |
 | `f1b8d4c2a6e9` | 13 | `beginner_intakes`: every beginner-path intake (questionnaire version, answers) with the career paths it gave. New empty table. |
+| `a3f5c8e1d7b2` | 14 | `programmes`, `programme_roles`, `programme_skills` (reference data from `seeds/programmes.json`, filled by the seed loader) and `programme_clicks` (every click on a programme, for referral reporting). New tables. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.
@@ -34,7 +35,7 @@ If it shows one of the old ids (`38a2cb03e747`, `e17f129e4f88`, `a1f3c9d2e801`),
 
 ## Seed files (`seeds/`)
 
-The reference data the app needs, as JSON files in the repo: the 4 proficiency levels and their score bands, 50 skills with 221 subskills, 4000 questions with 16000 options (one file per skill in `seeds/questions/`), 10 behavioural questions, and (Day 8) the 8 pilot job roles with their skills (`job_roles.json`), the job-title ladder (`job_titles.json`) and the experts' decisions on flagged questions (`question_reviews.json`). `beginner_intake.json` (Day 13) is the beginner-path questionnaire with each option's points per job role; the app reads it directly (it is not loaded into a table). They came from the question tables of the old MySQL dump, without any of its personal data.
+The reference data the app needs, as JSON files in the repo: the 4 proficiency levels and their score bands, 50 skills with 221 subskills, 4000 questions with 16000 options (one file per skill in `seeds/questions/`), 10 behavioural questions, and (Day 8) the 8 pilot job roles with their skills (`job_roles.json`), the job-title ladder (`job_titles.json`) and the experts' decisions on flagged questions (`question_reviews.json`). `beginner_intake.json` (Day 13) is the beginner-path questionnaire with each option's points per job role; the app reads it directly (it is not loaded into a table). `programmes.json` (Day 14) is the programme catalogue with the roles and skills each covers (prices in kobo). It is a placeholder catalogue: the real programmes, prices and links replace it before launch. A programme taken out of the file is retired (hidden), not deleted. They came from the question tables of the old MySQL dump, without any of its personal data.
 
 ```bash
 python -m app.db.seed     # load into DATABASE_URL; prints inserted / updated / unchanged per table

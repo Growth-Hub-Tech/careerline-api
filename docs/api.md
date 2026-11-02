@@ -168,7 +168,7 @@ My skills: `GET /profile/skills` is the latest level per skill tested; `GET /pro
 A result is a finished test: `result_id` is the test's `attempt_id` (the one in `GET /attempts/me`).
 
 - `GET /results?limit=&offset=` → my results, newest first (a page): `result_id`, `attempt_id`, `test_id` (200 + `skill_id`), `skill_id`, `skill_name`, `level`, `percentage_score`, `completed_at`.
-- `GET /results/{result_id}` → the same plus `confidence` (0–1), `confidence_label`, `percentile` (the share of all results of that skill with a lower score, in %; `null` until the skill has at least 5 results), `subskills` (with `band`), `strengths` and `gaps` (subskill names), `recommendations` (`subskill_name`, `text`; `programme_id` is `null` until programmes are real).
+- `GET /results/{result_id}` → the same plus `confidence` (0–1), `confidence_label`, `percentile` (the share of all results of that skill with a lower score, in %; `null` until the skill has at least 5 results), `subskills` (with `band`), `strengths` and `gaps` (subskill names), `recommendations` (`subskill_name`, `text`, `programme_id`: the programme that best covers the result's skill, see "Programmes"; `null` when none does).
 - Someone else's result, a test still running and an expired test without a result are all `404`.
 
 **The PDF report:**
@@ -179,15 +179,23 @@ A result is a finished test: `result_id` is the test's `attempt_id` (the one in 
 
 The PDF has the skill, the person's name and date, level and score, right answers, confidence, every subskill with its band, strengths and areas to work on, the advice and the person's history in that skill.
 
-## Beginner path (Day 13, part 1)
+## Beginner path (Days 13–14)
 
 For people new to tech: a short questionnaire, then up to three career paths.
 
 1. `GET /beginner-path/intake` (public) → `version` and `questions[]` (`question_id`, `section`: personality / goals / time / finances, `text`, `kind`: `single_choice` or `multi_choice`, `options[]` with `value` and `label`).
-2. `POST /beginner-path/intake` (signed in) with `{ "version", "answers": [{ "question_id", "values": ["…"] }] }`: every question once, values from its options, one value for `single_choice`. `201` → `{ intake_id, submitted_at, recommendations[] }`, best first: `rank`, `role_id` (as in `GET /roles`), `title`, `match_score` (0–100: how well the answers fit the role), `reasons` (up to 3 short sentences to show), `starting_test_id` (the test to take first, 200 + `skill_id`; `null` when none of the role's skills can be tested yet), `programme` (`null` until programmes are real, Day 14). `400 bad_request`: an unknown question or value, a missing answer, two values for a single choice, or an old `version` (load the questionnaire again).
+2. `POST /beginner-path/intake` (signed in) with `{ "version", "answers": [{ "question_id", "values": ["…"] }] }`: every question once, values from its options, one value for `single_choice`. `201` → `{ intake_id, submitted_at, recommendations[] }`, best first: `rank`, `role_id` (as in `GET /roles`), `title`, `match_score` (0–100: how well the answers fit the role), `reasons` (up to 3 short sentences to show), `starting_test_id` (the test to take first, 200 + `skill_id`; `null` when none of the role's skills can be tested yet), `programme` (Day 14: the programme that best prepares for the role, as in `GET /programmes`, or `null` when the role has none). `400 bad_request`: an unknown question or value, a missing answer, two values for a single choice, or an old `version` (load the questionnaire again).
 3. `GET /beginner-path/recommendations` (signed in) → the latest intake's paths; before any intake `{ "intake_id": null, "submitted_at": null, "recommendations": [] }`.
 
 The same answers always give the same paths. The questionnaire's text and scoring live in `seeds/beginner_intake.json`.
+
+## Programmes (Day 14)
+
+Incubate's own and partner courses that prepare for a job role. The catalogue lives in `seeds/programmes.json` (prices in kobo, like every `Money`).
+
+- `GET /programmes` (public, `?role_id=`, `limit` 1–100, `offset`) → a page of `{ programme_id, name, provider, provider_type: incubate | partner, mode: online | in_person | hybrid, duration_weeks, price }`. Order: Incubate first, then the cheapest, then by id. The same order picks the programme shown on a career path or a result.
+- `GET /programmes/{programme_id}` (public) → the same plus `summary`, `skills` (names), `role_ids` and `url`. An unknown or retired programme is `404`.
+- `POST /programmes/{programme_id}/clicks` (signed in) with `{ "source": "result" | "beginner_path" | "programme_list" | "profile", "result_id"?: … }` → `201 { click_id, programme_id, redirect_url, clicked_at }`. Record the click first, then send the person to `redirect_url` (the provider's page with `ref=careerline&click=<click_id>`). `result_id`, when sent, must be one of your own finished results (`404` otherwise).
 
 ## Background jobs
 
@@ -305,6 +313,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 14**: `/programmes/*` is real (see "Programmes"; no more `X-Sample-Data`): 14 programmes covering all 8 pilot roles; the sample's `empty` scenario is gone; `limit` above 100 or below 1 is `422`. `POST /programmes/{programme_id}/clicks`: `result_id` must be your own finished result (`404` otherwise; the sample accepted any id), and `redirect_url` is the programme's real `url` with `ref` and `click`. Beginner path: each path's `programme` is now filled (`null` only when the role has no programme). Results: `recommendations[].programme_id` is now filled when a programme covers the result's skill. No route or field removed.
 - **Day 13**: `/beginner-path/*` is real (see "Beginner path"; no more `X-Sample-Data`). The questionnaire has 6 questions (version `2026-11`; the sample's `2026-10` answers `400`). Every question must be answered; values are checked. `recommendations` has up to 3 paths; `starting_test_id` can be `null`; `programme` is `null` for now. `GET /beginner-path/recommendations` before any intake: `intake_id` and `submitted_at` are `null` with an empty list (the sample's `empty` scenario is gone).
 - **Day 12**: `/results` is real (see "Results and PDF skill reports"; no more `X-Sample-Data`): `result_id` is the `attempt_id` of a finished test (the sample ids 501 and 502 are gone). Breaking against the sample: `passed` (list and detail) and `declared_level` (detail) are removed; new in the detail: `confidence` and `confidence_label`; `percentile` is `null` until a skill has 5 results; `recommendations[].programme_id` is `null` for now. Someone else's result is `404`. `GET /results/{result_id}/report` is real (same shape): `generating`, then `ready` with a 15-minute `download_url`; new public `GET /reports/{token}` (that link) answers the PDF, or `410 expired`. `POST /results/{result_id}/report` makes it again (`202`). The report's sample `X-Mock-Scenario` values (`generating`, `failed`) are gone.
 - **Day 11**: new `GET /attempts/{attempt_id}/review` (see "Reviewing a finished test"): every question of a finished test with the right answer, the choice and an explanation (AI or standard); `409 attempt_not_finished` while the test runs. New error code `attempt_not_finished` (409). No change to existing routes.
