@@ -7,4 +7,5 @@ from app.services import (  # noqa: F401
     explanations,
     privacy,
     reports,
+    subscriptions,
 )

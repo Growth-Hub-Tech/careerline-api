@@ -1,0 +1,9 @@
+{% extends "layout.txt" %}
+{% block content %}
+Hi {{ full_name }}, {% if declined %}we could not charge your card for your {{ plan_name }} plan.{% else %}your {{ plan_name }} plan is due for renewal and there is no saved card to charge.{% endif %} It is paid until {{ period_end }} and stays usable for {{ grace_days }} more days after that.
+
+To keep it, pay again here: {{ link }}
+{% endblock %}
+{% block footer_note %}
+You got this email because of your {{ brand.name }} subscription.
+{% endblock %}

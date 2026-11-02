@@ -112,6 +112,8 @@ class Settings(BaseSettings):
     PAYMENT_ABANDON_MINUTES: int = 60
     # Day 25: a plan whose period ended without a payment stays usable (past_due) this long
     SUBSCRIPTION_GRACE_DAYS: int = 3
+    # Day 26: how many times a renewal charges the saved card (once a day) before it gives up
+    SUBSCRIPTION_RENEW_ATTEMPTS: int = 3
 
     # Privacy (Day 18): a copy of my data is kept this many days; each download link works this
     # many minutes; a deletion waits this many days so it can be cancelled

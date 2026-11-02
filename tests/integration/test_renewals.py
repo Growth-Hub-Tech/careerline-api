@@ -21,7 +21,6 @@ from sqlalchemy import text
 from app.core.config import settings
 from app.integrations import paystack
 from app.jobs.runner import JobRunner
-from tests.integration.conftest import assert_error_envelope
 from tests.integration.test_payments import (  # noqa: F401 (packs: a fixture)
     SECRET,
     FakePaystack,
@@ -69,6 +68,7 @@ class RenewingPaystack(FakePaystack):
 @pytest.fixture
 def fake(monkeypatch, packs) -> RenewingPaystack:  # noqa: F811
     fake = RenewingPaystack()
+    monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
     monkeypatch.setattr(settings, "PAYSTACK_SECRET_KEY", SECRET)
     monkeypatch.setattr(paystack, "TRANSPORT", httpx.MockTransport(fake))
     return fake
@@ -107,7 +107,8 @@ def make_due(db, period_end_in: timedelta = timedelta(minutes=30)) -> None:
 
 async def subscribed(client, who, fake, plan_id: int = 11, authorization=AUTH) -> dict:
     checkout = (await subscribe(client, who, plan_id)).json()["data"]
-    event = charge_success(checkout["reference"], fake.amounts[checkout["reference"]])
+    event_id = 9000 + len(fake.requests)  # Paystack's event ids are unique
+    event = charge_success(checkout["reference"], fake.amounts[checkout["reference"]], event_id)
     if authorization:
         event["data"]["authorization"] = authorization
     assert (await webhook(client, event)).status_code == 200
@@ -150,7 +151,7 @@ async def test_the_renewal_charges_the_card_and_starts_the_next_period(
     assert payments["items"][0]["description"] == "Individual Monthly subscription (renewal)"
     # the next renewal is scheduled; running the jobs again charges nothing more
     jobs = renew_jobs(db)
-    assert [j.status for j in jobs] == ["done", "queued"]
+    assert [j.status for j in jobs] == ["succeeded", "queued"]
     await run_jobs()
     assert len(fake.calls("/transaction/charge_authorization")) == 1
 
@@ -166,7 +167,7 @@ async def test_a_declined_renewal_emails_the_person_and_tries_again_the_next_day
     assert await balance(client, learner) == 5
     mail = db.execute(
         text(
-            "SELECT subject, text_body FROM email_outbox WHERE template = 'subscription_payment_failed'"
+            "SELECT subject, text_body FROM test_mailbox_messages WHERE subject LIKE '%could not be renewed'"
         )
     ).one()
     assert "Individual Monthly" in mail.subject
@@ -197,7 +198,7 @@ async def test_after_the_last_attempt_the_card_is_not_tried_again(
         make_due(db, timedelta(minutes=-10))
         await run_jobs()
     assert len(fake.calls("/transaction/charge_authorization")) == 2
-    assert [j.status for j in renew_jobs(db)] == ["done", "done"]
+    assert [j.status for j in renew_jobs(db)] == ["succeeded", "succeeded"]
     count = db.execute(
         text("SELECT count(*) FROM email_outbox WHERE template = 'subscription_payment_failed'")
     ).scalar()
@@ -212,7 +213,9 @@ async def test_without_a_reusable_card_the_person_is_asked_to_pay(client, db, le
     await run_jobs()
     assert fake.calls("/transaction/charge_authorization") == []
     mail = db.execute(
-        text("SELECT text_body FROM email_outbox WHERE template = 'subscription_payment_failed'")
+        text(
+            "SELECT text_body FROM test_mailbox_messages WHERE subject LIKE '%could not be renewed'"
+        )
     ).scalar()
     assert "/subscription" in mail
 
@@ -265,7 +268,9 @@ async def test_a_renewal_paid_by_webhook_later_counts_once(client, db, learner, 
     assert (await my_subscription(client, learner))["status"] == "active"
 
 
-async def test_renewal_errors_never_reach_the_person(client, db, learner, plans, fake, monkeypatch):
+async def test_when_paystack_does_not_answer_the_renewal_is_tried_again_later(
+    client, db, learner, plans, fake, monkeypatch
+):
     await subscribed(client, learner, fake)
     make_due(db)
 
@@ -274,8 +279,15 @@ async def test_renewal_errors_never_reach_the_person(client, db, learner, plans,
 
     monkeypatch.setattr(paystack, "TRANSPORT", httpx.MockTransport(down))
     await run_jobs()
-    status = db.execute(text("SELECT status FROM payments ORDER BY id DESC LIMIT 1")).scalar()
-    assert status in ("failed", "paid") or status == "pending"
-    assert_error_envelope(
-        await client.post(f"{API}/subscriptions/me/cancel", headers={}), 401, "unauthenticated"
-    )
+    # nothing is known about the charge: nothing is recorded and the job runs again later
+    assert db.execute(text("SELECT count(*) FROM payments")).scalar() == 1
+    job = renew_jobs(db)[-1]
+    assert job.status == "queued" and job.run_after > datetime.now(UTC)
+    assert await balance(client, learner) == 5
+    assert (await my_subscription(client, learner))["status"] == "active"
+    # the same renewal uses the same reference, so Paystack can never charge it twice
+    monkeypatch.setattr(paystack, "TRANSPORT", httpx.MockTransport(fake))
+    make_due(db)
+    await run_jobs()
+    references = [json.loads(r.content)["reference"] for r in fake.calls("/transaction/charge")]
+    assert len(references) == 1 and references[0].startswith("cl_renew_")

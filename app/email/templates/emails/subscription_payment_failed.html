@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% set subject = "Your " ~ plan_name ~ " subscription could not be renewed" %}
+{% from "_components.html" import button with context %}
+{% block preheader %}Pay again to keep your plan.{% endblock %}
+{% block content %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">Your subscription could not be renewed</h1>
+<p style="margin:0 0 16px 0;">Hi {{ full_name }}, {% if declined %}we could not charge your card for your {{ plan_name }} plan.{% else %}your {{ plan_name }} plan is due for renewal and there is no saved card to charge.{% endif %} It is paid until {{ period_end }} and stays usable for {{ grace_days }} more days after that.</p>
+<p style="margin:0 0 24px 0;">To keep it, pay again here:</p>
+{{ button(link, "Renew my plan") }}
+<p style="margin:24px 0 0 0;">Or open this link: <a href="{{ link }}" style="color:{{ brand.color }};">{{ link }}</a></p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because of your {{ brand.name }} subscription.</p>{% endblock %}
