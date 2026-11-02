@@ -103,6 +103,26 @@ async def test_the_demo_professional_has_results_and_a_skill_history(client, dat
     assert one.json()["data"]["attempt"]["result"]["answered"] == 16
 
 
+async def test_the_demo_company_has_a_team_roster_once_the_job_roles_are_loaded(
+    client, database, db
+):
+    assert (await demo.load())["roster_added"] == 0  # no job roles yet
+    with database.begin() as conn:
+        load_seeds(conn)
+    assert (await demo.load())["roster_added"] == len(demo.DEMO_ROSTER)
+    assert (await demo.load())["roster_added"] == 0
+    token = (await login(client, "demo.owner@example.com", demo.DEMO_PASSWORD)).json()[
+        "access_token"
+    ]
+    headers = {"Authorization": f"Bearer {token}"}
+    org = (await client.get(f"{API}/organisations/me", headers=headers)).json()["data"]
+    assert org["seats_total"] == demo.DEMO_SEATS and org["seats_used"] == len(demo.DEMO_ROSTER)
+    members = (await client.get(f"{API}/organisations/{ORG_ID}/members", headers=headers)).json()[
+        "data"
+    ]
+    assert {m["email"] for m in members["items"]} == {e for e, *_ in demo.DEMO_ROSTER}
+
+
 async def test_without_the_question_bank_the_demo_has_no_results(db):
     result = await demo.load()
     assert result["results_created"] == 0

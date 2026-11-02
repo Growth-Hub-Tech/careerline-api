@@ -65,6 +65,17 @@ DEMO_RESULTS = (
 )
 
 
+# Day 21: the demo company's team roster (email, name, department, job role from
+# seeds/job_roles.json). The demo learners are on it, so an audit's emails reach accounts that
+# can sign in and take the tests.
+DEMO_SEATS = 50
+DEMO_ROSTER = (
+    ("demo.learner@example.com", "Demo Learner", "Engineering", 101),
+    ("demo.learner2@example.com", "Demo Learner Two", "Engineering", 102),
+    ("demo.professional@example.com", "Demo Professional", "Data", 103),
+)
+
+
 class DemoDataRefused(Exception):
     pass
 
@@ -129,6 +140,8 @@ async def load_into(db: AsyncSession) -> dict[str, Any]:
         else:
             member.organisation_id = DEMO_ORGANISATION_ID
             member.role = demo.role
+    company.seats_total = max(company.seats_total or 0, DEMO_SEATS)
+    roster = await _load_demo_roster(db)
     professional = await db.scalar(select(Learner).where(Learner.email == DEMO_PROFESSIONAL))
     assert professional is not None
     results = await _load_demo_results(db, professional)
@@ -136,8 +149,38 @@ async def load_into(db: AsyncSession) -> dict[str, Any]:
         "accounts_created": created,
         "accounts": len(DEMO_ACCOUNTS),
         "company": company.name,
+        "roster_added": roster,
         "results_created": results,
     }
+
+
+async def _load_demo_roster(db: AsyncSession) -> int:
+    """Adds the people of DEMO_ROSTER that are missing (only once their job role is loaded)."""
+    from app.models.audits import TeamMember
+    from app.models.roles import JobRole
+
+    added = 0
+    for email, full_name, department, role_id in DEMO_ROSTER:
+        if await db.get(JobRole, role_id) is None:
+            continue
+        found = await db.scalar(
+            select(TeamMember.id).where(
+                TeamMember.organisation_id == DEMO_ORGANISATION_ID, TeamMember.email == email
+            )
+        )
+        if found is None:
+            db.add(
+                TeamMember(
+                    organisation_id=DEMO_ORGANISATION_ID,
+                    full_name=full_name,
+                    email=email,
+                    department=department,
+                    role_id=role_id,
+                )
+            )
+            added += 1
+    await db.flush()
+    return added
 
 
 async def _load_demo_results(db: AsyncSession, professional: Learner) -> int:
