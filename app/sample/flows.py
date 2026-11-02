@@ -9,10 +9,9 @@ import uuid
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from app.core.exceptions import ConflictError, ExpiredError, NotFoundError
+from app.core.exceptions import ConflictError, NotFoundError
 from app.sample import store
 from app.schemas.common import Money
-from app.schemas.invitations import Invitation, InvitationCreate
 from app.schemas.payments import CreditPack, CreditTransaction, ItemType, Payment
 from app.schemas.subscriptions import Plan, Subscription
 
@@ -202,120 +201,3 @@ def cancel_subscription(learner_id: int) -> Subscription | None:
             return None
         data["cancel_at_period_end"] = True
         return Subscription(**data)
-
-
-# ---------- invitations ----------
-
-INVITATION_TEST_TITLES = {
-    201: "Frontend Web Development",
-    202: "Backend Development",
-    203: "Database Management",
-    208: "Version Control (Git)",
-}
-
-
-def create_invitation(sender_id: int, data: InvitationCreate, base_url: str) -> Invitation:
-    if data.test_id not in INVITATION_TEST_TITLES:
-        raise NotFoundError(
-            f"Test {data.test_id} not found. Sample tests: {sorted(INVITATION_TEST_TITLES)}"
-        )
-    token = f"inv_{uuid.uuid4().hex[:20]}"
-    sent = now()
-    with store.transaction() as state:
-        invitation = Invitation(
-            invitation_id=store.next_id(state, "invitation", 7101),
-            token=token,
-            kind=data.kind,
-            status="sent",
-            email=data.email,
-            full_name=data.full_name,
-            test_id=data.test_id,
-            test_title=INVITATION_TEST_TITLES[data.test_id],
-            candidate_id=data.candidate_id,
-            organisation_id=data.organisation_id,
-            attempt_id=None,
-            result_id=None,
-            invite_url=f"{base_url.rstrip('/')}/invite/{token}",
-            sent_at=sent,
-            accepted_at=None,
-            completed_at=None,
-            expires_at=sent + timedelta(days=data.expires_in_days),
-        )
-        state.setdefault("invitations", {})[token] = {
-            "invitation": invitation.model_dump(mode="json"),
-            "sender_id": sender_id,
-            "message": data.message,
-        }
-    return invitation
-
-
-def _invitation_record(state: dict[str, Any], token: str) -> dict[str, Any]:
-    record = state.get("invitations", {}).get(token)
-    if record is None:
-        raise NotFoundError("Invitation not found")
-    return record
-
-
-def _current(record: dict[str, Any]) -> Invitation:
-    invitation = Invitation(**record["invitation"])
-    if invitation.status in ("sent", "accepted") and invitation.expires_at <= now():
-        invitation = invitation.model_copy(update={"status": "expired"})
-        record["invitation"] = invitation.model_dump(mode="json")
-    return invitation
-
-
-def get_invitation_by_token(token: str) -> tuple[Invitation, str | None]:
-    with store.transaction() as state:
-        record = _invitation_record(state, token)
-        return _current(record), record["message"]
-
-
-def find_invitation(sender_id: int, invitation_id: int) -> Invitation:
-    with store.transaction() as state:
-        for record in state.get("invitations", {}).values():
-            if (
-                record["invitation"]["invitation_id"] == invitation_id
-                and record["sender_id"] == sender_id
-            ):
-                return _current(record)
-    raise NotFoundError(f"Invitation {invitation_id} not found")
-
-
-def list_invitations(sender_id: int) -> list[Invitation]:
-    with store.transaction() as state:
-        invitations = [
-            _current(r)
-            for r in state.get("invitations", {}).values()
-            if r["sender_id"] == sender_id
-        ]
-    return sorted(invitations, key=lambda i: i.sent_at, reverse=True)
-
-
-def move_invitation(token: str, to: str) -> Invitation:
-    """accept (sent -> accepted), complete (accepted -> completed) or revoke (sent/accepted -> revoked)."""
-    allowed = {"accepted": ("sent",), "completed": ("accepted",), "revoked": ("sent", "accepted")}
-    with store.transaction() as state:
-        record = _invitation_record(state, token)
-        invitation = _current(record)
-        if invitation.status == to:
-            return invitation  # repeating an accept or complete changes nothing
-        if invitation.status == "expired":
-            raise ExpiredError("This invitation has expired. Ask for a new one.")
-        if invitation.status not in allowed[to]:
-            raise ConflictError(f"This invitation is {invitation.status}; it can't be {to}")
-        changes: dict[str, Any] = {"status": to}
-        if to == "accepted":
-            changes |= {"accepted_at": now(), "attempt_id": store.next_id(state, "attempt", 9101)}
-        if to == "completed":
-            changes |= {"completed_at": now(), "result_id": 501}
-        invitation = invitation.model_copy(update=changes)
-        record["invitation"] = invitation.model_dump(mode="json")
-        return invitation
-
-
-def expire_invitation(token: str) -> Invitation:
-    """Sample helper: move expires_at into the past."""
-    with store.transaction() as state:
-        record = _invitation_record(state, token)
-        record["invitation"]["expires_at"] = (now() - timedelta(seconds=1)).isoformat()
-        return _current(record)

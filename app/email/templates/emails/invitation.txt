@@ -1,0 +1,17 @@
+{% extends "layout.txt" %}
+{% block content %}
+Hi {{ full_name }}, {{ organisation }} invited you to take the {{ test_title }} test on {{ brand.name }}. It takes about {{ minutes }} minutes and shows your level, skill by skill.
+{% if message %}
+Their message:
+{{ message }}
+{% endif %}
+Open your invitation here:
+{{ link }}
+
+The invitation works until {{ expires_on }}. You sign in or create a free account before the test starts, and {{ organisation }} sees the result of this test only.
+
+Not expecting this? You can ignore this email.
+{% endblock %}
+{% block footer_note %}
+You got this email because {{ organisation }} invited you on {{ brand.name }}.
+{% endblock %}

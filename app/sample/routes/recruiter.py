@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends
 
 from app.core.exceptions import NotFoundError
 from app.core.responses import ApiResponse
-from app.sample.core import SampleRoute, Scenario, sample, sample_route, sample_user, scenario
-from app.sample.data import NOW, days_ago
-from app.schemas.common import LevelName, Page
-from app.schemas.recruiter import Candidate, CandidateCreate, CandidateReport, CandidateTestResult
+from app.sample.core import SampleRoute, sample, sample_route, sample_user, scenario
+from app.sample.data import days_ago
+from app.schemas.common import LevelName
+from app.schemas.recruiter import Candidate, CandidateReport, CandidateTestResult
 
 router = APIRouter(
     prefix="/recruiter",
@@ -14,7 +14,7 @@ router = APIRouter(
     dependencies=[Depends(scenario)],
 )
 
-ROLE_NOTE = "Recruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get."
+ROLE_NOTE = "Sample until Day 20 (the candidates themselves are real since Day 19): the sample candidates 601-603."
 
 RESULT_TOBI = CandidateTestResult(
     test_id=202,
@@ -69,64 +69,6 @@ def _get(candidate_id: int) -> Candidate:
             f"Candidate {candidate_id} not found. Sample candidates: {sorted(CANDIDATES_BY_ID)}"
         )
     return candidate
-
-
-# MY CANDIDATES: filter by status; invite one with POST /invitations
-@router.get(
-    "/candidates",
-    response_model=ApiResponse[Page[Candidate]],
-    openapi_extra=sample_route("empty", summary_note=ROLE_NOTE),
-)
-async def list_candidates(
-    status: str | None = None,
-    limit: int = 20,
-    offset: int = 0,
-    sc: Scenario = Depends(scenario),
-    learner_id: int = Depends(sample_user),
-):
-    candidates = [] if sc.empty else CANDIDATES
-    if status:
-        candidates = [c for c in candidates if c.status == status]
-    return sample(
-        Page[Candidate](
-            items=candidates[offset : offset + limit],
-            total=len(candidates),
-            limit=limit,
-            offset=offset,
-        )
-    )
-
-
-@router.post(
-    "/candidates",
-    status_code=201,
-    response_model=ApiResponse[Candidate],
-    openapi_extra=sample_route(
-        summary_note=ROLE_NOTE + " An email already added is a `conflict` (409)."
-    ),
-)
-async def add_candidate(data: CandidateCreate, learner_id: int = Depends(sample_user)):
-    return sample(
-        Candidate(
-            candidate_id=604,
-            full_name=data.full_name,
-            email=data.email,
-            role_id=data.role_id,
-            role_title=ROLE_TITLES.get(data.role_id) if data.role_id else None,
-            status="added",
-            added_at=NOW,
-            latest_result=None,
-        )
-    )
-
-
-@router.get(
-    "/candidates/{candidate_id}",
-    response_model=ApiResponse[Candidate],
-    openapi_extra=sample_route(summary_note=ROLE_NOTE),
-)
-async def get_candidate(candidate_id: int, learner_id: int = Depends(sample_user)):
-    return sample(_get(candidate_id))
 
 
 # THE SCORED REPORT: only once the candidate has finished (404 before)
