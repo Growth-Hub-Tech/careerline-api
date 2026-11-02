@@ -163,9 +163,25 @@ Errors: `409 not_current_question` (that question is not the one to answer now: 
 
 My skills: `GET /profile/skills` is the latest level per skill tested; `GET /profile/skills/history` (optionally `?skill_id=`) every finished test, newest first, with level, score, confidence, strengths and weaknesses.
 
+## Results and PDF skill reports (Day 12)
+
+A result is a finished test: `result_id` is the test's `attempt_id` (the one in `GET /attempts/me`).
+
+- `GET /results?limit=&offset=` → my results, newest first (a page): `result_id`, `attempt_id`, `test_id` (200 + `skill_id`), `skill_id`, `skill_name`, `level`, `percentage_score`, `completed_at`.
+- `GET /results/{result_id}` → the same plus `confidence` (0–1), `confidence_label`, `percentile` (the share of all results of that skill with a lower score, in %; `null` until the skill has at least 5 results), `subskills` (with `band`), `strengths` and `gaps` (subskill names), `recommendations` (`subskill_name`, `text`; `programme_id` is `null` until programmes are real).
+- Someone else's result, a test still running and an expired test without a result are all `404`.
+
+**The PDF report:**
+
+1. `GET /results/{result_id}/report` → `status: "generating"` the first time (the PDF is made in the background, usually within a few seconds).
+2. Poll the same call every 2–3 s until `status: "ready"`: then `download_url` and `expires_at` (15 minutes) are set. Open `download_url` directly (a link or `window.open`): it needs no `Authorization` header and answers the PDF as a download. Each poll gives a fresh link; an expired or changed link answers `410 expired` (poll again for a new one).
+3. `status: "failed"`: show "try again" and call `POST /results/{result_id}/report` (`202`, `status: "generating"`). POST also makes a new version on purpose; the older links stop working.
+
+The PDF has the skill, the person's name and date, level and score, right answers, confidence, every subskill with its band, strengths and areas to work on, the advice and the person's history in that skill.
+
 ## Background jobs
 
-Slow work runs in background jobs, after the request has answered: emails, the AI advice for weak subskills and (Day 11) the AI explanations of a finished test's answers. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
+Slow work runs in background jobs, after the request has answered: emails, the AI advice for weak subskills, (Day 11) the AI explanations of a finished test's answers and (Day 12) the PDF skill reports. The answer that finishes a test (before Day 10, `POST /attempts/submit`) answers at once with plain advice and `recommendations.ai_advice`: `"queued"` (the AI advice replaces it within a minute or so: read it from `GET /recommendations/pathway/...`) or `"unavailable"` (no AI configured: the plain advice stays).
 
 ## Sample data
 
@@ -177,7 +193,7 @@ How to tell:
 - In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
 - Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
 
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
+What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/organisations/{id}/users` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
 
 ### Force an edge case: `X-Mock-Scenario`
 
@@ -197,16 +213,16 @@ Send the header `X-Mock-Scenario: <name>` on any sample call to get that case, w
 | `unavailable` | 503 `service_unavailable` |
 | `slow` | the normal answer after 2 seconds (loading states) |
 
-Some endpoints offer more (listed in their description in `/docs` and in `x-sample-scenarios`): `empty` (lists come back empty: empty states), `pending` / `paid` / `failed` (payment status), `generating` / `failed` (PDF report), `past_due` / `cancelled` / `no_subscription` (subscription). A name the endpoint doesn't offer is a 400 that lists the ones it does, so a typo never looks like a normal answer. Names ignore case.
+Some endpoints offer more (listed in their description in `/docs` and in `x-sample-scenarios`): `empty` (lists come back empty: empty states), `pending` / `paid` / `failed` (payment status), `past_due` / `cancelled` / `no_subscription` (subscription). A name the endpoint doesn't offer is a 400 that lists the ones it does, so a typo never looks like a normal answer. Names ignore case.
 
 ```bash
-curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: empty" "$API/results"
+curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: empty" "$API/payments"
 curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: payment_required" "$API/tests/202/access"
 ```
 
 ```ts
 // e.g. a dev-only switch in the app that adds the header to every call
-fetch(`${API}/results`, { headers: { Authorization: `Bearer ${token}`, "X-Mock-Scenario": "empty" } });
+fetch(`${API}/payments`, { headers: { Authorization: `Bearer ${token}`, "X-Mock-Scenario": "empty" } });
 ```
 
 Real endpoints ignore the header.
@@ -279,6 +295,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 12**: `/results` is real (see "Results and PDF skill reports"; no more `X-Sample-Data`): `result_id` is the `attempt_id` of a finished test (the sample ids 501 and 502 are gone). Breaking against the sample: `passed` (list and detail) and `declared_level` (detail) are removed; new in the detail: `confidence` and `confidence_label`; `percentile` is `null` until a skill has 5 results; `recommendations[].programme_id` is `null` for now. Someone else's result is `404`. `GET /results/{result_id}/report` is real (same shape): `generating`, then `ready` with a 15-minute `download_url`; new public `GET /reports/{token}` (that link) answers the PDF, or `410 expired`. `POST /results/{result_id}/report` makes it again (`202`). The report's sample `X-Mock-Scenario` values (`generating`, `failed`) are gone.
 - **Day 11**: new `GET /attempts/{attempt_id}/review` (see "Reviewing a finished test"): every question of a finished test with the right answer, the choice and an explanation (AI or standard); `409 attempt_not_finished` while the test runs. New error code `attempt_not_finished` (409). No change to existing routes.
 - **Day 10**: real test-taking (see "Taking a test"). `POST /attempts/start` returns the attempt state with one `question` (was: all questions at once) and resumes a test in progress; `declared_level` is ignored (was: required, `400` when invalid). New `GET /attempts/{attempt_id}/question` and `POST /attempts/{attempt_id}/answer`. `POST /attempts/submit` answers `410 gone` (the pass/fail result, `status: passed/failed`, `confirmed_level` and `level_suggestion` are gone). `GET /attempts/{attempt_id}`: new `result`, and `attempt_status` can be `expired`. `GET /profile/skills` is real (no more `X-Sample-Data`; `level` and `percentage_score` come from the latest test) and new `GET /profile/skills/history`. New demo account `demo.professional@example.com`. Still sample and unchanged: `/results` (its `passed` field will go when it is made real).
 - **Day 9**: no API change. The adaptive test engine and its simulation (docs/adaptive-engine.md); Day 10 serves it.

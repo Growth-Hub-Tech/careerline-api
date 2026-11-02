@@ -1,4 +1,4 @@
 """Imports every module that registers job handlers (see registry.HANDLER_MODULES)."""
 
 from app.email import outbox  # noqa: F401
-from app.services import account_service, ai_recommendations, explanations  # noqa: F401
+from app.services import account_service, ai_recommendations, explanations, reports  # noqa: F401

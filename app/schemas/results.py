@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from app.schemas.common import LevelName
 
@@ -10,14 +10,15 @@ ReportStatus = Literal["generating", "ready", "failed"]
 
 
 class ResultSummary(BaseModel):
+    """A finished test (Day 12: real; result_id is the attempt_id). No pass or fail."""
+
     result_id: int
     attempt_id: int
-    test_id: int
+    test_id: int = Field(description="200 + skill_id, as in GET /roles")
     skill_id: int
     skill_name: str
     level: LevelName
     percentage_score: float
-    passed: bool
     completed_at: datetime
 
 
@@ -35,8 +36,12 @@ class ResultRecommendation(BaseModel):
 
 
 class ResultDetail(ResultSummary):
-    declared_level: LevelName
-    percentile: int | None
+    confidence: float = Field(ge=0, le=1, description="0-1: how sure the level is")
+    confidence_label: Literal["low", "medium", "high"]
+    percentile: int | None = Field(
+        description="Share of all results of this skill (in %) with a lower score; null until "
+        "the skill has enough results to compare"
+    )
     subskills: list[SubskillScore]
     strengths: list[str]
     gaps: list[str]
