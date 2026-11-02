@@ -7,16 +7,19 @@
 - audits (Day 22): one round of testing for some roles. audit_members: who is in it, with the
   role they had then. Its invitations carry invitations.audit_id. Draft until started_at; the
   status (in_progress, completed) follows its invitations and is not stored.
+- organisation_targets (Day 23): the level each role should reach in each skill, with an
+  optional due date. Replaced as a whole by PUT /organisations/{id}/targets.
 """
 
-from datetime import datetime
+from datetime import date, datetime
 
-from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, UniqueConstraint
+from sqlalchemy import Date, DateTime, ForeignKey, Index, Integer, String, UniqueConstraint
 from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
 
 from app.db.base import Base
+from app.models.models import LevelName, pg_enum
 
 
 class TeamMember(Base):
@@ -77,4 +80,21 @@ class AuditMember(Base):
     # the member's role when the audit was made (the roster may change later)
     role_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("job_roles.role_id", ondelete="RESTRICT"), nullable=False
+    )
+
+
+class OrganisationTarget(Base):
+    __tablename__ = "organisation_targets"
+
+    organisation_id: Mapped[int] = mapped_column(
+        Integer, ForeignKey("organisations.id", ondelete="CASCADE"), primary_key=True
+    )
+    role_id: Mapped[int] = mapped_column(
+        Integer, ForeignKey("job_roles.role_id", ondelete="CASCADE"), primary_key=True
+    )
+    skill_id: Mapped[int] = mapped_column(Integer, ForeignKey("skills.skill_id"), primary_key=True)
+    target_level: Mapped[LevelName] = mapped_column(pg_enum(LevelName, "levelname"), nullable=False)
+    due_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
     )

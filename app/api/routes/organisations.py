@@ -14,12 +14,16 @@ from app.schemas.organisations import (
     Audit,
     AuditCreate,
     AuditSummary,
+    GroupBy,
+    Heatmap,
     Organisation,
     RosterResult,
     RosterUpload,
+    Targets,
+    TargetsUpdate,
     TeamMember,
 )
-from app.services import audits, team
+from app.services import audits, capability, team
 
 router = APIRouter(
     prefix="/organisations",
@@ -153,3 +157,59 @@ async def start_draft_audit(
     actor: OrganisationMember = Depends(acting_member),
 ):
     return await audits.start_audit(db, actor, audit_id)
+
+
+# CAPABILITY HEATMAP (Day 23): rows by department, role or person; columns are skills
+@router.get(
+    "/{organisation_id}/heatmap",
+    response_model=Heatmap,
+    responses=errors(401, 403, 404, 422),
+    description="Owners and admins. Columns: the skills of the people's roles. A cell averages "
+    "the people's newest team result in that skill; level is that average's level; band "
+    "compares it with the target (the organisation's target, else what the role needs; the "
+    "highest in the row): strong meets it, developing is one level short, weak further, "
+    "not_tested nobody has a result. department rows: key is the department in lower case "
+    "(none: no department). audit_id: only that audit's people and results (null: everyone's "
+    "newest team results).",
+)
+async def get_heatmap(
+    organisation_id: int,
+    group_by: GroupBy = "department",
+    audit_id: int | None = None,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    return await capability.heatmap(db, actor.organisation_id, group_by, audit_id)
+
+
+# TARGETS (Day 23): the level each role should reach in each skill, and progress towards it
+@router.get(
+    "/{organisation_id}/targets",
+    response_model=Targets,
+    responses=errors(401, 403, 404),
+    description="Owners and admins. By role, then skill. members_meeting: people in that role "
+    "whose newest team result in that skill is at or above the target.",
+)
+async def get_targets(
+    organisation_id: int,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    return await capability.get_targets(db, actor.organisation_id)
+
+
+@router.put(
+    "/{organisation_id}/targets",
+    response_model=Targets,
+    responses=errors(400, 401, 403, 404, 422),
+    description="Owners and admins. Replaces all targets (an empty list clears them). Audit "
+    "benchmarks and the heatmap use them instead of what the role needs. 400: the same role "
+    "and skill twice. 404: an unknown role or skill. Nothing changes on an error.",
+)
+async def set_targets(
+    organisation_id: int,
+    data: TargetsUpdate,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    return await capability.set_targets(db, actor.organisation_id, data)

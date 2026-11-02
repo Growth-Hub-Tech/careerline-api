@@ -9,7 +9,7 @@
   the audit (revoked ones don't count); otherwise in_progress. Nothing about it is stored but
   started_at: it always follows the invitations.
 - Benchmarks, per role and skill with at least one finished test in the audit: the target level
-  (what the role needs, from the job role), the team's average score, how many reached the
+  (the organisation's target, Day 23, else what the role needs, from the job role), the team's average score, how many reached the
   target, and the industry average (everyone's average score in that skill on CareerLine, once
   INDUSTRY_MIN_RESULTS people have one; null before, so nobody's score can be worked out).
 """
@@ -25,7 +25,7 @@ from app.core.config import settings
 from app.core.exceptions import BadRequestError, ConflictError, NotFoundError
 from app.core.logging import get_logger
 from app.email.outbox import send_email
-from app.models.audits import Audit, AuditMember, TeamMember
+from app.models.audits import Audit, AuditMember, OrganisationTarget, TeamMember
 from app.models.history import SkillHistory
 from app.models.models import Skill
 from app.models.organisations import Organisation, OrganisationMember
@@ -178,12 +178,21 @@ async def industry_averages(db: AsyncSession, skill_ids: set[int]) -> dict[int, 
 async def target_levels(
     db: AsyncSession, organisation_id: int, role_ids: list[int]
 ) -> dict[tuple[int, int], str]:
-    """(role, skill) -> the level the role needs."""
-    return {
+    """(role, skill) -> the organisation's target (Day 23), else the level the role needs."""
+    out = {
         (role_id, skill_id): target
         for role_id, skills in (await role_skills(db, role_ids)).items()
         for skill_id, target in skills
     }
+    if role_ids:
+        for row in await db.scalars(
+            select(OrganisationTarget).where(
+                OrganisationTarget.organisation_id == organisation_id,
+                OrganisationTarget.role_id.in_(role_ids),
+            )
+        ):
+            out[(row.role_id, row.skill_id)] = row.target_level.value
+    return out
 
 
 async def benchmarks(db: AsyncSession, audit: Audit) -> list[Benchmark]:

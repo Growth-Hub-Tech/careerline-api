@@ -8,8 +8,8 @@ from fastapi import Request
 from app.api.deps import current_membership, optional_current_session
 from app.core.config import settings
 from app.core.security import create_access_token, decode_token
+from app.db.demo import DEMO_ORGANISATION_ID as ORG_ID
 from app.main import app
-from app.sample.routes.organisations import ORG_ID
 
 API = settings.API_PREFIX
 
