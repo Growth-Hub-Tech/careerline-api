@@ -10,7 +10,7 @@ A copy of my data
   while a ready one has not expired, gives that one). The job writes one JSON file with
   everything held about the person (account, consents and their history, behavioural answers,
   every test with its answers and result, skill history, beginner-path intakes, payments,
-  credits, programme clicks, organisations, sign-in sessions, contact messages) and emails them
+  subscriptions, credits, programme clicks, organisations, sign-in sessions, contact messages) and emails them
   that it is ready (the email points at the website, never at the file).
 - GET gives a download link that works DATA_EXPORT_LINK_MINUTES without a login (the signed
   token is the proof); a fresh one on every GET. After DATA_EXPORT_DAYS the file is emptied and
@@ -23,7 +23,8 @@ Deleting my account
   account is switched off, every session ends, and their consents, intakes, behavioural
   answers, exports, programme clicks, organisation memberships, PDF reports, contact messages,
   emails and test-mailbox messages are deleted, and Paystack's copies of their payment events
-  are emptied. What stays, with no way back to the person: test attempts and their scores (so
+  are emptied; a subscription is cancelled at once and its saved card forgotten, so it is never
+  charged again. What stays, with no way back to the person: test attempts and their scores (so
   everyone else's percentiles do not move) and payments and credit records (kept for the
   accounts, as the law requires).
 """
@@ -34,7 +35,7 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from jose import JWTError, jwt
-from sqlalchemy import delete, or_, select, update
+from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
@@ -70,6 +71,7 @@ from app.models.privacy import (
 )
 from app.models.programmes import ProgrammeClick
 from app.models.reports import ResultReport
+from app.models.subscriptions import Subscription, SubscriptionPlan
 from app.schemas.privacy import AccountDeletion as AccountDeletionOut
 from app.schemas.privacy import (
     AccountDeletionRequest,
@@ -357,6 +359,24 @@ async def build_export(db: AsyncSession, learner_id: int) -> dict[str, Any]:
             select(Payment).where(Payment.learner_id == learner_id).order_by(Payment.id)
         )
     ]
+    out["subscriptions"] = [
+        {
+            "plan_name": plan_name,
+            "status": sub.status,
+            "current_period_start": _iso(sub.current_period_start),
+            "current_period_end": _iso(sub.current_period_end),
+            "cancel_at_period_end": sub.cancel_at_period_end,
+            "created_at": _iso(sub.created_at),
+        }
+        for sub, plan_name in (
+            await db.execute(
+                select(Subscription, SubscriptionPlan.name)
+                .join(SubscriptionPlan, SubscriptionPlan.plan_id == Subscription.plan_id)
+                .where(Subscription.learner_id == learner_id)
+                .order_by(Subscription.id)
+            )
+        ).all()
+    ]
     out["credit_transactions"] = [
         {
             "change": t.change,
@@ -541,6 +561,18 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
             .where(or_(PaystackEvent.reference.in_(references)))
             .values(payload={"erased": True})
         )
+    # a plan is never charged again: cancelled now, the saved card forgotten
+    await db.execute(
+        update(Subscription)
+        .where(Subscription.learner_id == learner_id)
+        .values(
+            status="cancelled",
+            cancel_at_period_end=True,
+            authorization_code=None,
+            cancelled_at=func.coalesce(Subscription.cancelled_at, func.now()),
+            updated_at=func.now(),
+        )
+    )
     learner.full_name = DELETED_NAME
     learner.email = f"deleted-{learner_id}-{uuid.uuid4().hex[:8]}@deleted.invalid"
     learner.phone_number = None  # type: ignore[assignment]

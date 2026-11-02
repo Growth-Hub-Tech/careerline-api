@@ -291,3 +291,31 @@ async def test_when_paystack_does_not_answer_the_renewal_is_tried_again_later(
     await run_jobs()
     references = [json.loads(r.content)["reference"] for r in fake.calls("/transaction/charge")]
     assert len(references) == 1 and references[0].startswith("cl_renew_")
+
+
+async def test_a_deleted_account_is_never_charged_again(client, db, database, learner, plans, fake):
+    from tests.integration.test_privacy import _ask_deletion, _make_due
+
+    await subscribed(client, learner, fake)
+    assert (await _ask_deletion(client, learner)).status_code in (200, 202)
+    await _make_due(database, learner)
+    await run_jobs()
+    row = db.execute(
+        text("SELECT status, authorization_code, cancel_at_period_end FROM subscriptions")
+    ).one()
+    assert row.status == "cancelled" and row.authorization_code is None
+    make_due(db)
+    await run_jobs()
+    assert fake.calls("/transaction/charge_authorization") == []
+
+
+async def test_the_data_export_lists_subscriptions(db, learner, client, plans, fake):
+    from app.db.session import AsyncSessionLocal
+    from app.services.privacy import build_export
+
+    await subscribed(client, learner, fake)
+    async with AsyncSessionLocal() as session:
+        data = await build_export(session, learner["learner_id"])
+    (sub,) = data["subscriptions"]
+    assert sub["plan_name"] == "Individual Monthly" and sub["status"] == "active"
+    assert "authorization_code" not in sub
