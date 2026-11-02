@@ -8,6 +8,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from app.api.routes import api_router, health, test_mailbox
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
+from app.core.launch_checks import production_problems
 from app.core.logging import configure_logging, get_logger
 from app.core.middleware import RequestContextMiddleware, SecurityHeadersMiddleware
 from app.core.permissions import authorize
@@ -23,6 +24,11 @@ SHUTDOWN_GRACE_SECONDS = 25.0
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Day 29: production never starts with an unsafe or test setting (app/core/launch_checks.py)
+    problems = production_problems(settings)
+    if problems:
+        logger.error("startup_refused", problems=problems)
+        raise RuntimeError("Unsafe production settings: " + "; ".join(problems))
     # Never serve requests against an old schema: scripts/start.sh migrates first,
     # and this stops anyone who starts uvicorn directly on a database that is behind.
     if settings.CHECK_MIGRATIONS_ON_STARTUP:

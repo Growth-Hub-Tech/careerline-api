@@ -16,6 +16,7 @@ GOOD = {
     "EMAIL_BACKEND": "smtp",
     "SMTP_HOST": "smtp.example.com",
     "EMAIL_FROM": "CareerLine <hello@careerline.ng>",
+    "CHECK_MIGRATIONS_ON_STARTUP": "true",  # the test run switches it off in the environment
 }
 
 

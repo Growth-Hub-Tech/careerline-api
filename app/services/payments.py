@@ -24,11 +24,13 @@ from sqlalchemy import func, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core import rate_limit
 from app.core.config import settings
 from app.core.exceptions import (
     BadRequestError,
     NotFoundError,
     PaymentRequiredError,
+    RateLimitedError,
     ServiceUnavailableError,
     UnauthorizedError,
 )
@@ -117,7 +119,19 @@ def _payment_out(payment: Payment) -> PaymentOut:
 
 
 async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutRequest) -> Checkout:
-    """A credit pack (Day 16) or a subscription plan (Day 25)."""
+    """A credit pack (Day 16) or a subscription plan (Day 25). At most CHECKOUTS_PER_HOUR a
+    person (Day 29)."""
+    limited = await rate_limit.hit(
+        db,
+        rate_limit.bucket("checkout:learner", str(learner.learner_id)),
+        limit=settings.CHECKOUTS_PER_HOUR,
+        window_seconds=3600,
+    )
+    if not limited.allowed:
+        raise RateLimitedError(
+            "Too many payments started in the last hour. Try again later.",
+            headers={"Retry-After": str(limited.retry_after)},
+        )
     if data.item_type == "subscription_plan":
         from app.services import subscriptions  # subscriptions uses this module
 
