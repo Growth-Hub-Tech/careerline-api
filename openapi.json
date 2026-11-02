@@ -8213,7 +8213,6 @@
     },
     "/api/v1/invitations": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "list_sent_invitations_api_v1_invitations_get",
         "parameters": [
           {
@@ -8222,6 +8221,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -8232,6 +8233,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -8248,16 +8250,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8267,16 +8259,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -8288,36 +8270,6 @@
             },
             "description": "Not allowed: e.g. this belongs to another person"
           },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -8327,65 +8279,15 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
         "summary": "List Sent Invitations",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Invitations"
         ]
       },
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Emails the invitee the link. kind candidate (the default) adds the candidate by candidate_id or email when needed. 404: unknown test_id, candidate_id or another organisation_id. sent -> accepted (the invitee opens invite_url, signs in and calls POST /invitations/token/{token}/accept, which starts the test) -> completed (that test finished; result_id is set). A sent invitation past expires_at shows as expired.",
         "operationId": "send_invitation_api_v1_invitations_post",
         "requestBody": {
           "content": {
@@ -8408,16 +8310,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8427,16 +8319,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -8458,26 +8340,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -8487,67 +8349,17 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
         "summary": "Send Invitation",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Invitations"
         ]
       }
     },
     "/api/v1/invitations/token/{token}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Public, so the page can show who invited them before they sign in. 410: expired.",
         "operationId": "open_invitation_api_v1_invitations_token__token__get",
         "parameters": [
           {
@@ -8571,46 +8383,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
           "404": {
             "content": {
               "application/json": {
@@ -8620,16 +8392,6 @@
               }
             },
             "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
           },
           "410": {
             "content": {
@@ -8650,62 +8412,17 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "summary": "Open Invitation",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Invitations"
         ]
       }
     },
     "/api/v1/invitations/token/{token}/accept": {
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete). Accepting twice is fine; a revoked or completed one is a `conflict` (409).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Starts the invited test (free: the organisation invited them) and returns its attempt_id; take it with /attempts/{attempt_id}/... Accepting twice is fine; another account, or a revoked or completed invitation, is a 409; expired is a 410.",
         "operationId": "accept_invitation_api_v1_invitations_token__token__accept_post",
         "parameters": [
           {
@@ -8729,16 +8446,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8748,26 +8455,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
           },
           "404": {
             "content": {
@@ -8808,36 +8495,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -8847,28 +8504,12 @@
         ],
         "summary": "Accept Invitation",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete). Accepting twice is fine; a revoked or completed one is a `conflict` (409).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Invitations"
         ]
       }
     },
     "/api/v1/invitations/{invitation_id}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_sent_invitation_api_v1_invitations__invitation_id__get",
         "parameters": [
           {
@@ -8892,16 +8533,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8911,16 +8542,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -8942,26 +8563,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -8971,67 +8572,17 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
         "summary": "Get Sent Invitation",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: POST /invitations (sent) -> the invitee opens invite_url and calls POST /invitations/token/{token}/accept (accepted, gets an attempt_id) -> the test is submitted (completed, gets a result_id; in the sample, POST /api/v1/sample/invitations/{token}/complete).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Invitations"
         ]
       }
     },
     "/api/v1/invitations/{invitation_id}/revoke": {
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Revoking twice is fine. 409: the invitation is expired or completed.",
         "operationId": "revoke_invitation_api_v1_invitations__invitation_id__revoke_post",
         "parameters": [
           {
@@ -9055,16 +8606,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9074,16 +8615,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -9115,16 +8646,6 @@
             },
             "description": "Conflict: e.g. this attempt was already submitted"
           },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9134,60 +8655,11 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
         "summary": "Revoke Invitation",
         "tags": [
-          "Sample: Invitations"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Invitations"
         ]
       }
     },
@@ -12968,7 +12440,7 @@
     },
     "/api/v1/recruiter/candidates": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nRecruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "Owners, admins and recruiters. status follows the candidate's invitations: added, invited, in_progress, completed.",
         "operationId": "list_candidates_api_v1_recruiter_candidates_get",
         "parameters": [
           {
@@ -12978,6 +12450,12 @@
             "schema": {
               "anyOf": [
                 {
+                  "enum": [
+                    "added",
+                    "invited",
+                    "in_progress",
+                    "completed"
+                  ],
                   "type": "string"
                 },
                 {
@@ -12993,6 +12471,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -13003,6 +12483,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -13019,16 +12500,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -13038,16 +12509,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -13059,36 +12520,6 @@
             },
             "description": "Not allowed: e.g. this belongs to another person"
           },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -13098,36 +12529,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -13137,27 +12538,11 @@
         ],
         "summary": "List Candidates",
         "tags": [
-          "Sample: Recruiter"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Recruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Recruiter"
         ]
       },
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nRecruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get. An email already added is a `conflict` (409).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "409: that email is already a candidate here. 404: unknown role_id.",
         "operationId": "add_candidate_api_v1_recruiter_candidates_post",
         "requestBody": {
           "content": {
@@ -13180,16 +12565,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -13199,16 +12574,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -13240,16 +12605,6 @@
             },
             "description": "Conflict: e.g. this attempt was already submitted"
           },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -13259,36 +12614,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -13298,28 +12623,12 @@
         ],
         "summary": "Add Candidate",
         "tags": [
-          "Sample: Recruiter"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Recruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get. An email already added is a `conflict` (409).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Recruiter"
         ]
       }
     },
     "/api/v1/recruiter/candidates/{candidate_id}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nRecruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_candidate_api_v1_recruiter_candidates__candidate_id__get",
         "parameters": [
           {
@@ -13343,16 +12652,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -13362,16 +12661,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -13393,26 +12682,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -13422,36 +12691,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -13461,28 +12700,13 @@
         ],
         "summary": "Get Candidate",
         "tags": [
-          "Sample: Recruiter"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Recruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Recruiter"
         ]
       }
     },
     "/api/v1/recruiter/candidates/{candidate_id}/report": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nRecruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get. Only candidate 601 has finished.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample until Day 20 (the candidates themselves are real since Day 19): the sample candidates 601-603. Only candidate 601 has finished.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_candidate_report_api_v1_recruiter_candidates__candidate_id__report_get",
         "parameters": [
           {
@@ -13627,7 +12851,7 @@
           "Sample: Recruiter"
         ],
         "x-sample": true,
-        "x-sample-note": "Recruiter accounts don't exist yet: any login token works here; `forbidden` shows the 403 a learner will get. Only candidate 601 has finished.",
+        "x-sample-note": "Sample until Day 20 (the candidates themselves are real since Day 19): the sample candidates 601-603. Only candidate 601 has finished.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -14067,322 +13291,6 @@
         "summary": "Get Role",
         "tags": [
           "Skills and roles"
-        ]
-      }
-    },
-    "/api/v1/sample/invitations/{token}/complete": {
-      "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample-only helper: not part of the API, never call it from production code.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
-        "operationId": "complete_invitation_api_v1_sample_invitations__token__complete_post",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "title": "Token",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Invitation_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
-          }
-        },
-        "summary": "Complete Invitation",
-        "tags": [
-          "Sample: helpers (not part of the API)"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample-only helper: not part of the API, never call it from production code.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
-        ]
-      }
-    },
-    "/api/v1/sample/invitations/{token}/expire": {
-      "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample-only helper: not part of the API, never call it from production code.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
-        "operationId": "expire_invitation_api_v1_sample_invitations__token__expire_post",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "title": "Token",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Invitation_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
-          }
-        },
-        "summary": "Expire Invitation",
-        "tags": [
-          "Sample: helpers (not part of the API)"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample-only helper: not part of the API, never call it from production code.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
         ]
       }
     },
