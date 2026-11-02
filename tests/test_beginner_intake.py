@@ -1,5 +1,5 @@
 """Day 13: the beginner-path questionnaire file and how answers become ranked career paths
-(no database)."""
+(no database). Day 15: how the budget answer counts."""
 
 import json
 from pathlib import Path
@@ -8,7 +8,9 @@ import pytest
 
 from app.core.exceptions import BadRequestError
 from app.services.beginner_path import (
+    BudgetFit,
     RoleInfo,
+    budget_limit,
     load_questionnaire,
     rank_roles,
     validate_answers,
@@ -115,3 +117,40 @@ def test_bad_answers_are_refused(answers, words):
     with pytest.raises(BadRequestError) as caught:
         validate_answers(load_questionnaire(), answers)
     assert words in caught.value.message
+
+
+@pytest.mark.parametrize(
+    "budget,limit",
+    [
+        ("free_only", 0),
+        ("under_50k", 4_999_999),
+        ("50k_to_200k", 20_000_000),
+        ("over_200k", None),
+    ],
+)
+def test_each_budget_answer_is_a_price_limit_in_kobo(budget, limit):
+    assert budget_limit(load_questionnaire(), {**FULL, "budget": [budget]}) == limit
+
+
+def test_an_affordable_programme_adds_to_the_match_and_gives_a_reason():
+    questionnaire = load_questionnaire()
+    neutral = {r.role_id: r for r in rank_roles(questionnaire, FULL, ROLE_INFO)}
+    fit = BudgetFit(
+        limit=0,
+        with_programmes={"data-analyst", "machine-learning-engineer"},
+        affordable={"machine-learning-engineer"},
+    )
+    ranked = {r.role_id: r for r in rank_roles(questionnaire, FULL, ROLE_INFO, budget=fit)}
+    assert ranked[104].match_score > neutral[104].match_score
+    assert ranked[103].match_score < neutral[103].match_score  # nothing it can afford
+    assert "There is a free programme for this path" in ranked[104].reasons
+
+
+def test_a_role_without_programmes_is_not_marked_down_for_the_budget():
+    questionnaire = load_questionnaire()
+    neutral = {r.role_id: r for r in rank_roles(questionnaire, FULL, ROLE_INFO)}
+    fit = BudgetFit(limit=0, with_programmes=set(), affordable=set())
+    ranked = {r.role_id: r for r in rank_roles(questionnaire, FULL, ROLE_INFO, budget=fit)}
+    assert {k: v.match_score for k, v in ranked.items()} == {
+        k: v.match_score for k, v in neutral.items()
+    }
