@@ -29,6 +29,9 @@ PLAIN_CONTEXT = {
     "minutes": 60,
     "changed_at": "28 Oct 2026, 10:00 UTC",
     "reset_link": "https://app.careerline.test/forgot-password",
+    # Day 18 privacy emails
+    "days": 7,
+    "deletion_date": "02 Dec 2026",
 }
 SAMPLE_CONTEXT = {
     "ticket_id": "CT-20261027-0001",

@@ -1,0 +1,12 @@
+{% extends "layout.txt" %}
+{% block content %}
+Hi {{ full_name }}, you asked us to delete your {{ brand.name }} account. On {{ deletion_date }} we will erase your name, email, answers and everything else that is yours.
+
+Changed your mind? Cancel the deletion from your privacy page before then and nothing is lost:
+{{ link }}
+
+If you did not ask for this, sign in, cancel it and change your password.
+{% endblock %}
+{% block footer_note %}
+You got this email because of your {{ brand.name }} account.
+{% endblock %}

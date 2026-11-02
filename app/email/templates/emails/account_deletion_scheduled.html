@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% set subject = "Your " ~ brand.name ~ " account will be deleted on " ~ deletion_date %}
+{% block preheader %}You can still keep your account until {{ deletion_date }}.{% endblock %}
+{% block content %}
+{% from "_components.html" import button with context %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">Your account will be deleted</h1>
+<p style="margin:0 0 16px 0;">Hi {{ full_name }}, you asked us to delete your {{ brand.name }} account. On {{ deletion_date }} we will erase your name, email, answers and everything else that is yours.</p>
+<p style="margin:0 0 16px 0;">Changed your mind? Cancel the deletion from your privacy page before then and nothing is lost.</p>
+{{ button(link, "Keep my account") }}
+<p style="margin:0;">If you did not ask for this, sign in, cancel it and change your password.</p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because of your {{ brand.name }} account.</p>{% endblock %}

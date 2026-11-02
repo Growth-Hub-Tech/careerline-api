@@ -1,0 +1,12 @@
+{% extends "layout.txt" %}
+{% block content %}
+Hi {{ full_name }}, the copy of everything {{ brand.name }} holds about you is ready. Sign in and download it from your privacy page:
+{{ link }}
+
+It stays available for {{ days }} days. After that you can ask for a new copy.
+
+If you did not ask for this, change your password and tell us.
+{% endblock %}
+{% block footer_note %}
+You got this email because of your {{ brand.name }} account.
+{% endblock %}

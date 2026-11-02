@@ -1,63 +1,12 @@
-"""Day 3 sample answers: privacy, subscriptions, recruiter, invitations, organisation
-audit, heatmap and targets (the flows are in test_day3_flows.py)."""
+"""Day 3 sample answers: subscriptions, recruiter, invitations, organisation audit, heatmap and
+targets (the flows are in test_day3_flows.py). Privacy is real since Day 18: see
+tests/integration/test_privacy.py."""
 
 import pytest
 
 from tests.sample.conftest import API, assert_sample, assert_sample_error
 
 ORG = f"{API}/organisations/41"
-
-
-async def test_consents_can_be_read_and_changed(client, auth):
-    consents = assert_sample(await client.get(f"{API}/privacy/consents", headers=auth))
-    assert {c["key"] for c in consents["items"]} == {
-        "marketing_emails",
-        "share_profile_with_recruiters",
-        "product_research",
-    }
-    response = await client.put(
-        f"{API}/privacy/consents",
-        headers=auth,
-        json={"items": [{"key": "marketing_emails", "granted": True}]},
-    )
-    changed = {c["key"]: c["granted"] for c in assert_sample(response)["items"]}
-    assert changed["marketing_emails"] is True
-
-
-async def test_an_unknown_consent_is_rejected(client, auth):
-    response = await client.put(
-        f"{API}/privacy/consents",
-        headers=auth,
-        json={"items": [{"key": "sell_my_data", "granted": True}]},
-    )
-    assert_sample_error(response, 422, "validation_error")
-
-
-async def test_data_export_is_queued_then_ready(client, auth):
-    queued = assert_sample(await client.post(f"{API}/privacy/data-exports", headers=auth), 202)
-    assert queued["status"] == "queued" and queued["download_url"] is None
-    ready = assert_sample(
-        await client.get(f"{API}/privacy/data-exports/{queued['export_id']}", headers=auth)
-    )
-    assert ready["status"] == "ready" and ready["download_url"]
-    pending = await client.get(
-        f"{API}/privacy/data-exports/{queued['export_id']}",
-        headers={**auth, "X-Mock-Scenario": "pending"},
-    )
-    assert assert_sample(pending)["status"] == "queued"
-
-
-async def test_account_deletion_is_scheduled_and_can_be_cancelled(client, auth):
-    response = await client.post(
-        f"{API}/privacy/account-deletion", headers=auth, json={"password": "my-password"}
-    )
-    scheduled = assert_sample(response, 202)
-    assert (
-        scheduled["status"] == "scheduled"
-        and scheduled["scheduled_for"] > scheduled["requested_at"]
-    )
-    cancelled = assert_sample(await client.delete(f"{API}/privacy/account-deletion", headers=auth))
-    assert cancelled["status"] == "cancelled"
 
 
 async def test_plans_are_public(client):

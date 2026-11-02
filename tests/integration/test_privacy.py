@@ -134,7 +134,10 @@ async def test_a_data_export_is_made_in_the_background_and_downloaded(client, le
 
 async def test_the_ready_email_points_at_the_website(client, learner, db):
     await client.post(f"{API}/privacy/data-exports", headers=learner["headers"])
-    await run_jobs()
+    runner = JobRunner(worker_id="test")  # stop before the email is sent (sending empties it)
+    while db.execute(text("SELECT status FROM data_exports")).scalar() != "ready":
+        assert await runner.run_once()
+        db.rollback()
     (subject, body) = db.execute(
         text(
             "SELECT subject, text_body FROM email_outbox WHERE template = 'data_export_ready' "
