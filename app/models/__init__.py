@@ -10,6 +10,7 @@ from app.models import (  # noqa: F401
     models,
     organisations,
     payments,
+    privacy,
     programmes,
     reports,
     roles,
