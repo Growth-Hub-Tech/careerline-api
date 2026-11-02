@@ -19,6 +19,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `a3f5c8e1d7b2` | 14 | `programmes`, `programme_roles`, `programme_skills` (reference data from `seeds/programmes.json`, filled by the seed loader) and `programme_clicks` (every click on a programme, for referral reporting). New tables. |
 | `b6d2e9f4a1c7` | 16 | `credit_packs` (from `seeds/credit_packs.json`), `payments` (one Paystack checkout each), `credit_balances` and `credit_transactions` (each person's credits and every change; a payment's credits are added by one transaction, ever), `paystack_events` (every webhook event once). New tables. |
 | `c8e4a2f6b9d3` | 17 | `test_prices` (from `seeds/test_prices.json`; a skill not listed is free) and `credit_transactions.attempt_id` (the test a charge or refund was for; one of each per test). New table and an empty new column. |
+| `d4f9b3a7c2e8` | 18 | `learner_consents`, `consent_events` (every consent change), `data_exports` (a copy of a person's data, kept 7 days), `account_deletions` (scheduled, cancelled or completed). New empty tables. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.
