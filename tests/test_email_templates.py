@@ -32,6 +32,9 @@ PLAIN_CONTEXT = {
     # Day 18 privacy emails
     "days": 7,
     "deletion_date": "02 Dec 2026",
+    # Day 19 invitation
+    "test_title": "Python",
+    "expires_on": "09 Nov 2026",
 }
 SAMPLE_CONTEXT = {
     "ticket_id": "CT-20261027-0001",

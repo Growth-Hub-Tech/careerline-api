@@ -1,5 +1,5 @@
-"""Sample-only helpers: they stand in for things outside the API (Paystack's payment page, the
-candidate finishing their test) so the sample flows can be clicked through end to end. They are
+"""Sample-only helpers: they stand in for things outside the API (Paystack's payment page) so the
+sample flows can be clicked through end to end. They are
 not part of the contract and disappear with the sample API."""
 
 from typing import Literal
@@ -13,7 +13,6 @@ from app.core.responses import ApiResponse
 from app.sample import flows, store
 from app.sample.core import SampleRoute, sample, sample_route, scenario
 from app.schemas.common import Acknowledgement
-from app.schemas.invitations import Invitation
 from app.schemas.payments import Payment
 
 router = APIRouter(
@@ -49,27 +48,7 @@ async def sample_paystack_checkout(
     return sample(payment)
 
 
-# THE INVITEE FINISHES THE TEST (the real API does this when the attempt is submitted)
-@router.post(
-    "/invitations/{token}/complete",
-    response_model=ApiResponse[Invitation],
-    openapi_extra=sample_route(summary_note=HELPER_NOTE),
-)
-async def complete_invitation(token: str):
-    return sample(flows.move_invitation(token, "completed"))
-
-
-# MAKE AN INVITATION EXPIRE NOW (to try the 410)
-@router.post(
-    "/invitations/{token}/expire",
-    response_model=ApiResponse[Invitation],
-    openapi_extra=sample_route(summary_note=HELPER_NOTE),
-)
-async def expire_invitation(token: str):
-    return sample(flows.expire_invitation(token))
-
-
-# FORGET ALL SAMPLE PAYMENTS, SUBSCRIPTIONS, CREDITS AND INVITATIONS
+# FORGET ALL SAMPLE PAYMENTS AND SUBSCRIPTIONS
 @router.post(
     "/reset",
     response_model=ApiResponse[Acknowledgement],

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% set subject = organisation ~ " invited you to take a " ~ test_title ~ " test on " ~ brand.name %}
+{% block preheader %}{{ organisation }} would like you to take a {{ test_title }} test.{% endblock %}
+{% block content %}
+{% from "_components.html" import button with context %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">You are invited to a test</h1>
+<p style="margin:0 0 16px 0;">Hi {{ full_name }}, {{ organisation }} invited you to take the {{ test_title }} test on {{ brand.name }}. It takes about {{ minutes }} minutes and shows your level, skill by skill.</p>
+{% if message %}<p style="margin:0 0 16px 0; padding:12px 16px; background:#f4f4f5; border-radius:6px;">{{ message }}</p>{% endif %}
+{{ button(link, "Open my invitation") }}
+<p style="margin:0 0 16px 0;">The invitation works until {{ expires_on }}. You sign in or create a free account before the test starts, and {{ organisation }} sees the result of this test only.</p>
+<p style="margin:0;">Not expecting this? You can ignore this email.</p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because {{ organisation }} invited you on {{ brand.name }}.</p>{% endblock %}

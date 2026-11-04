@@ -6,6 +6,7 @@ from app.api.routes import (
     auth,
     beginner_path,
     contact,
+    invitations,
     learners,
     organisation_users,
     payments,
@@ -13,6 +14,7 @@ from app.api.routes import (
     profile,
     programmes,
     recommendations,
+    recruiter,
     results,
     roles,
     skills,
@@ -43,3 +45,5 @@ api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)
 api_router.include_router(accounts.router)
 api_router.include_router(organisation_users.router)
+api_router.include_router(recruiter.router)
+api_router.include_router(invitations.router)

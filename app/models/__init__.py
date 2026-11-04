@@ -12,6 +12,7 @@ from app.models import (  # noqa: F401
     payments,
     privacy,
     programmes,
+    recruiting,
     reports,
     roles,
 )

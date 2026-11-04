@@ -1,6 +1,7 @@
-"""Day 3 sample answers: subscriptions, recruiter, invitations, organisation audit, heatmap and
-targets (the flows are in test_day3_flows.py). Privacy is real since Day 18: see
-tests/integration/test_privacy.py."""
+"""Day 3 sample answers: subscriptions, the recruiter's candidate report, organisation audit,
+heatmap and targets (the flows are in test_day3_flows.py). Privacy is real since Day 18
+(tests/integration/test_privacy.py), candidates and invitations since Day 19
+(tests/integration/test_recruiter.py)."""
 
 import pytest
 
@@ -14,15 +15,7 @@ async def test_plans_are_public(client):
     assert {p["audience"] for p in plans} == {"individual", "recruiter", "organisation"}
 
 
-async def test_recruiter_candidates_filter_and_report(client, auth):
-    candidates = assert_sample(await client.get(f"{API}/recruiter/candidates", headers=auth))
-    assert candidates["total"] == 3
-    done = assert_sample(
-        await client.get(
-            f"{API}/recruiter/candidates", headers=auth, params={"status": "completed"}
-        )
-    )
-    assert [c["candidate_id"] for c in done["items"]] == [601]
+async def test_the_sample_candidate_report(client, auth):
     report = assert_sample(await client.get(f"{API}/recruiter/candidates/601/report", headers=auth))
     assert report["fit"] in {"strong_fit", "possible_fit", "not_a_fit"}
     assert report["results"][0]["level"] == "MID"
@@ -31,23 +24,6 @@ async def test_recruiter_candidates_filter_and_report(client, auth):
 async def test_no_report_before_the_candidate_finishes(client, auth):
     response = await client.get(f"{API}/recruiter/candidates/602/report", headers=auth)
     assert_sample_error(response, 404, "not_found")
-
-
-async def test_adding_a_candidate(client, auth):
-    response = await client.post(
-        f"{API}/recruiter/candidates",
-        headers=auth,
-        json={"full_name": "Ada Okafor", "email": "ada@example.com", "role_id": 101},
-    )
-    candidate = assert_sample(response, 201)
-    assert candidate["status"] == "added" and candidate["role_title"] == "Frontend Developer"
-
-
-async def test_a_learner_on_a_recruiter_route_is_forbidden(client, auth):
-    response = await client.get(
-        f"{API}/recruiter/candidates", headers={**auth, "X-Mock-Scenario": "forbidden"}
-    )
-    assert_sample_error(response, 403, "forbidden")
 
 
 async def test_my_organisation_roster_and_upload(client, auth):

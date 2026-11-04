@@ -217,8 +217,6 @@ POLICIES: dict[str, Policy] = {
     "PUT /organisations/{organisation_id}/targets": org(P.AUDITS_MANAGE),
     # Sample API helpers (test server only: drive the sample flows)
     "GET /sample/paystack/{reference}": PUBLIC,
-    "POST /sample/invitations/{token}/complete": PUBLIC,
-    "POST /sample/invitations/{token}/expire": PUBLIC,
     "POST /sample/reset": PUBLIC,
 }
 
