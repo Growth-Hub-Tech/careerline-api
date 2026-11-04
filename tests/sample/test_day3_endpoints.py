@@ -1,4 +1,4 @@
-"""Day 3 sample answers: privacy, payments, subscriptions, recruiter, invitations, organisation
+"""Day 3 sample answers: privacy, subscriptions, recruiter, invitations, organisation
 audit, heatmap and targets (the flows are in test_day3_flows.py)."""
 
 import pytest
@@ -60,16 +60,9 @@ async def test_account_deletion_is_scheduled_and_can_be_cancelled(client, auth):
     assert cancelled["status"] == "cancelled"
 
 
-async def test_credit_packs_and_plans_are_public(client):
-    packs = assert_sample(await client.get(f"{API}/payments/credit-packs"))
-    assert all(p["price"]["currency"] == "NGN" and p["credits"] > 0 for p in packs)
+async def test_plans_are_public(client):
     plans = assert_sample(await client.get(f"{API}/subscriptions/plans"))
     assert {p["audience"] for p in plans} == {"individual", "recruiter", "organisation"}
-
-
-async def test_payment_history_can_be_empty(client, auth):
-    response = await client.get(f"{API}/payments", headers={**auth, "X-Mock-Scenario": "empty"})
-    assert assert_sample(response)["items"] == []
 
 
 async def test_recruiter_candidates_filter_and_report(client, auth):

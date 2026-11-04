@@ -4,9 +4,15 @@ from app.core.exceptions import NotFoundError
 from app.core.responses import ApiResponse
 from app.sample import flows
 from app.sample.core import SampleRoute, Scenario, sample, sample_route, sample_user, scenario
-from app.sample.routes.payments import authorization_url
 from app.schemas.payments import Checkout
 from app.schemas.subscriptions import Plan, SubscribeRequest, Subscription
+
+
+# Until subscriptions are real (Days 25-26) their checkout is paid on the sample Paystack page
+# (GET /sample/paystack/{reference}); it is a sample payment, not one of GET /payments.
+def authorization_url(request: Request, reference: str) -> str:
+    return str(request.url_for("sample_paystack_checkout", reference=reference))
+
 
 router = APIRouter(
     prefix="/subscriptions",

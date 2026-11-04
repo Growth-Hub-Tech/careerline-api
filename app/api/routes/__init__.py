@@ -8,6 +8,7 @@ from app.api.routes import (
     contact,
     learners,
     organisation_users,
+    payments,
     profile,
     programmes,
     recommendations,
@@ -33,6 +34,7 @@ api_router.include_router(results.router)
 api_router.include_router(results.downloads)
 api_router.include_router(beginner_path.router)
 api_router.include_router(programmes.router)
+api_router.include_router(payments.router)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)
 api_router.include_router(accounts.router)

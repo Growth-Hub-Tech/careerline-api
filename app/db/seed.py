@@ -1,9 +1,9 @@
 """Load the reference data in seeds/ into the database: `python -m app.db.seed`.
 
 Reference data = proficiency levels, level thresholds, skills, subskills, questions with their
-options, behavioural questions, job roles with their skills, the job-title ladder, and the
-programmes with the roles and skills they cover. Each row keeps its id from the seed file and is
-upserted on it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
+options, behavioural questions, job roles with their skills, the job-title ladder, the
+programmes with the roles and skills they cover, and the credit packs. Each row keeps its id
+from the seed file and is upserted on it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
 database is put back to what the seed file says. Rows that are not in the files are left alone
 (attempts may point at them; a programme not in the file is retired), and learners' data is
 never touched. Afterwards the id counters
@@ -36,6 +36,7 @@ from app.models.models import (
     Skill,
     Subskill,
 )
+from app.models.payments import CreditPack
 from app.models.programmes import Programme, ProgrammeRole, ProgrammeSkill
 from app.models.roles import JobRole, JobRoleSkill, JobTitle
 from app.services import question_quality as quality
@@ -58,6 +59,7 @@ TABLES: dict[str, Table] = {
     "programmes": Programme.__table__,  # type: ignore[dict-item]
     "programme_roles": ProgrammeRole.__table__,  # type: ignore[dict-item]
     "programme_skills": ProgrammeSkill.__table__,  # type: ignore[dict-item]
+    "credit_packs": CreditPack.__table__,  # type: ignore[dict-item]
 }
 LEVEL_TABLES = ("proficiency_level", "level_threshold")
 
@@ -177,6 +179,16 @@ def read_seed_rows(limits: quality.Thresholds | None = None) -> dict[str, list[d
             {"programme_id": pid, "skill_id": s, "position": position}
             for position, s in enumerate(skill_ids, start=1)
         )
+    for pack in _read("credit_packs.json")["packs"]:
+        price = pack.pop("price")
+        rows["credit_packs"].append(
+            {
+                **pack,
+                "price_amount": price["amount"],
+                "currency": price["currency"],
+                "is_active": True,
+            }
+        )
     return rows
 
 
@@ -232,8 +244,8 @@ def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str,
         _move_id_counter_past_max(conn, table)
         if name == "job_role_skills":
             _drop_role_skills_not_in_files(conn, rows["job_role_skills"])
-        if name == "programmes":
-            _retire_programmes_not_in_files(conn, rows["programmes"])
+        if name in ("programmes", "credit_packs"):
+            _retire_rows_not_in_files(conn, table, rows[name])
         if name in ("programme_roles", "programme_skills"):
             _drop_links_not_in_files(conn, table, rows[name])
     return result
@@ -254,13 +266,14 @@ def _drop_role_skills_not_in_files(conn: Connection, rows: list[dict[str, Any]])
             )
 
 
-def _retire_programmes_not_in_files(conn: Connection, rows: list[dict[str, Any]]) -> None:
-    """A programme taken out of the file is retired, not deleted: old clicks point at it."""
-    table: Table = Programme.__table__  # type: ignore[assignment]
-    wanted = [r["programme_id"] for r in rows]
+def _retire_rows_not_in_files(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> None:
+    """A programme or credit pack taken out of the file is retired (is_active false), not
+    deleted: old clicks and payments point at it."""
+    (key,) = table.primary_key.columns
+    wanted = [r[key.name] for r in rows]
     conn.execute(
         table.update()
-        .where(table.c.programme_id.not_in(wanted), table.c.is_active.is_(True))
+        .where(key.not_in(wanted), table.c.is_active.is_(True))
         .values(is_active=False)
     )
 

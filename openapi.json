@@ -4800,37 +4800,6 @@
         "title": "Payment",
         "type": "object"
       },
-      "PaystackEvent": {
-        "description": "The part of Paystack's webhook body the API reads (the real one also checks the signature).",
-        "properties": {
-          "data": {
-            "$ref": "#/components/schemas/PaystackEventData"
-          },
-          "event": {
-            "title": "Event",
-            "type": "string"
-          }
-        },
-        "required": [
-          "event",
-          "data"
-        ],
-        "title": "PaystackEvent",
-        "type": "object"
-      },
-      "PaystackEventData": {
-        "properties": {
-          "reference": {
-            "title": "Reference",
-            "type": "string"
-          }
-        },
-        "required": [
-          "reference"
-        ],
-        "title": "PaystackEventData",
-        "type": "object"
-      },
       "Plan": {
         "properties": {
           "audience": {
@@ -8198,7 +8167,6 @@
     },
     "/api/v1/credits": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_my_credits_api_v1_credits_get",
         "responses": {
           "200": {
@@ -8211,16 +8179,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8230,86 +8188,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -8319,21 +8197,7 @@
         ],
         "summary": "Get My Credits",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Payments"
         ]
       }
     },
@@ -11519,7 +11383,6 @@
     },
     "/api/v1/payments": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "list_my_payments_api_v1_payments_get",
         "parameters": [
           {
@@ -11528,6 +11391,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -11538,6 +11403,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -11554,16 +11420,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -11574,56 +11430,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -11633,36 +11439,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -11672,28 +11448,13 @@
         ],
         "summary": "List My Payments",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Payments"
         ]
       }
     },
     "/api/v1/payments/checkout": {
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: the checkout is pending until someone opens its authorization_url (a sample Paystack page on this API that pays it at once; add `?outcome=failed` or `?outcome=abandoned`), or POST /api/v1/payments/webhooks/paystack sends charge.success. Then this payment is paid and the credits are added.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Saves a pending payment and starts a Paystack transaction: send the person to authorization_url. Paystack sends them back to callback_url?reference=... (default: the website's /payments/callback; it must be a page of the website, 400 otherwise); then call GET /payments/{reference}. Only item_type credit_pack is on sale (400 for subscription_plan). 503 when payments are not set up or Paystack does not answer: nothing is charged.",
         "operationId": "start_checkout_api_v1_payments_checkout_post",
         "requestBody": {
           "content": {
@@ -11736,26 +11497,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
           "404": {
             "content": {
               "application/json": {
@@ -11766,26 +11507,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -11795,26 +11516,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
           },
           "503": {
             "content": {
@@ -11834,28 +11535,12 @@
         ],
         "summary": "Start Checkout",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: the checkout is pending until someone opens its authorization_url (a sample Paystack page on this API that pays it at once; add `?outcome=failed` or `?outcome=abandoned`), or POST /api/v1/payments/webhooks/paystack sends charge.success. Then this payment is paid and the credits are added.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Payments"
         ]
       }
     },
     "/api/v1/payments/credit-packs": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "list_credit_packs_api_v1_payments_credit_packs_get",
         "responses": {
           "200": {
@@ -11867,142 +11552,18 @@
               }
             },
             "description": "Successful Response"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "summary": "List Credit Packs",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Payments"
         ]
       }
     },
     "/api/v1/payments/webhooks/paystack": {
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample: `charge.success` pays the payment with that reference; other events are ignored.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "For Paystack only. The body must carry a valid x-paystack-signature (HMAC-SHA512 of the raw body with the secret key), 401 otherwise. charge.success pays the payment with that reference once; every event is stored once, so retries change nothing.",
         "operationId": "paystack_webhook_api_v1_payments_webhooks_paystack_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PaystackEvent"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "content": {
@@ -12034,86 +11595,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
           "503": {
             "content": {
               "application/json": {
@@ -12127,28 +11608,13 @@
         },
         "summary": "Paystack Webhook",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample: `charge.success` pays the payment with that reference; other events are ignored.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Payments"
         ]
       }
     },
     "/api/v1/payments/{reference}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample flow: the checkout is pending until someone opens its authorization_url (a sample Paystack page on this API that pays it at once; add `?outcome=failed` or `?outcome=abandoned`), or POST /api/v1/payments/webhooks/paystack sends charge.success. Then this payment is paid and the credits are added. A scenario only changes what is shown.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `pending` (the payment or job is still pending), `paid` (the payment has succeeded), `failed` (the payment or job failed).",
+        "description": "A pending payment is checked with Paystack first, so this shows paid as soon as Paystack has the money (even before its webhook arrives). Someone else's payment is 404.",
         "operationId": "get_payment_api_v1_payments__reference__get",
         "parameters": [
           {
@@ -12172,16 +11638,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -12191,26 +11647,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
-          "403": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not allowed: e.g. this belongs to another person"
           },
           "404": {
             "content": {
@@ -12222,26 +11658,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -12251,36 +11667,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -12290,25 +11676,7 @@
         ],
         "summary": "Get Payment",
         "tags": [
-          "Sample: Payments"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample flow: the checkout is pending until someone opens its authorization_url (a sample Paystack page on this API that pays it at once; add `?outcome=failed` or `?outcome=abandoned`), or POST /api/v1/payments/webhooks/paystack sends charge.success. Then this payment is paid and the credits are added. A scenario only changes what is shown.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "pending",
-          "paid",
-          "failed"
+          "Payments"
         ]
       }
     },
