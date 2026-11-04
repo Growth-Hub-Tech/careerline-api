@@ -19,6 +19,7 @@ from app.services.test_taking_service import (
     attempt_result,
     current_state,
 )
+from app.services.test_taking_service import cancel as cancel_test
 from app.services.test_taking_service import start_or_resume as start_attempt
 
 # Create a router for attempt endpoints
@@ -40,18 +41,20 @@ def score_or_none(attempt):
 @router.post(
     "/start",
     response_model=AttemptState,
-    responses=errors(401, 404, 409),
+    responses=errors(401, 402, 404, 409),
     description="Starts the adaptive test of a skill and returns its first question, or resumes "
     "the test already in progress for that skill (resumed: true, the same question). 16 "
     "questions, harder after a right answer and easier after a wrong one; 30 minutes. "
-    "declared_level is retired and ignored. 409 skill_not_ready: the skill cannot be tested yet.",
+    "declared_level is retired and ignored. 409 skill_not_ready: the skill cannot be tested yet. "
+    "A paid test (price_credits in GET /tests) takes its credits when a new test starts; 402 "
+    "payment_required without enough credits (see GET /tests/{test_id}/access).",
 )
 async def start_test_attempt(
     data: StartAttemptRequest,
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
-    return await start_attempt(db, current_learner.learner_id, data.skill_id)  # from token
+    return await start_attempt(db, current_learner.learner_id, data.skill_id, charge=True)
 
 
 # THE QUESTION TO ANSWER NOW (resume after a reload)
@@ -221,6 +224,6 @@ async def cancel_attempt(
             f"Cannot cancel attempt that is already {attempt.attempt_status.value.lower()}"
         )
 
-    # Cancel the attempt
-    attempt.attempt_status = AttemptStatus.CANCELLED
+    # Cancel the attempt (a paid test with no answer yet gives its credits back, Day 17)
+    await cancel_test(db, attempt)
     return ok(message=f"Attempt {attempt_id} cancelled successfully")

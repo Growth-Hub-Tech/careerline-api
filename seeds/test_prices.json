@@ -1,0 +1,17 @@
+{
+  "_note": "What each test costs in credits, by skill_id. A skill not listed here is free. Placeholder prices (the Day 2 sample's): the team sets the real ones.",
+  "prices": [
+    {
+      "skill_id": 2,
+      "price_credits": 2
+    },
+    {
+      "skill_id": 3,
+      "price_credits": 2
+    },
+    {
+      "skill_id": 8,
+      "price_credits": 1
+    }
+  ]
+}

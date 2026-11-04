@@ -9,6 +9,9 @@
   subscription_grant), with the balance after it.
 - paystack_events: every webhook event once (event + Paystack's id), so a retried event is
   recognised and ignored.
+- test_prices (Day 17): what a test costs in credits, per skill (seeds/test_prices.json); a
+  skill not listed is free. A test's credits are taken once when it starts (credit transaction
+  test_started with its attempt_id) and given back at most once (refund).
 """
 
 from datetime import datetime
@@ -112,6 +115,7 @@ class CreditTransaction(Base):
         ),
         CheckConstraint("change <> 0", name="ck_credit_transactions_change"),
         Index("ix_credit_transactions_learner", "learner_id", "created_at"),
+        UniqueConstraint("attempt_id", "reason", name="uq_credit_transactions_attempt_reason"),
     )
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
@@ -124,6 +128,10 @@ class CreditTransaction(Base):
     # a purchase: the payment it came from (one transaction per payment, ever)
     payment_id: Mapped[int | None] = mapped_column(
         BigInteger, ForeignKey("payments.id", ondelete="SET NULL"), nullable=True, unique=True
+    )
+    # a test's charge or refund (Day 17): one of each per attempt, ever
+    attempt_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("test_attempt.attempt_id", ondelete="SET NULL"), nullable=True
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
@@ -144,3 +152,14 @@ class PaystackEvent(Base):
     received_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
+
+
+class TestPrice(Base):
+    __tablename__ = "test_prices"
+    __test__ = False  # not a pytest test class
+    __table_args__ = (CheckConstraint("price_credits >= 0", name="ck_test_prices_price"),)
+
+    skill_id: Mapped[int] = mapped_column(
+        Integer, ForeignKey("skills.skill_id", ondelete="CASCADE"), primary_key=True
+    )
+    price_credits: Mapped[int] = mapped_column(Integer, nullable=False)

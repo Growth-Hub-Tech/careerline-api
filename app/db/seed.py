@@ -2,7 +2,7 @@
 
 Reference data = proficiency levels, level thresholds, skills, subskills, questions with their
 options, behavioural questions, job roles with their skills, the job-title ladder, the
-programmes with the roles and skills they cover, and the credit packs. Each row keeps its id
+programmes with the roles and skills they cover, the credit packs and the test prices. Each row keeps its id
 from the seed file and is upserted on it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
 database is put back to what the seed file says. Rows that are not in the files are left alone
 (attempts may point at them; a programme not in the file is retired), and learners' data is
@@ -36,7 +36,7 @@ from app.models.models import (
     Skill,
     Subskill,
 )
-from app.models.payments import CreditPack
+from app.models.payments import CreditPack, TestPrice
 from app.models.programmes import Programme, ProgrammeRole, ProgrammeSkill
 from app.models.roles import JobRole, JobRoleSkill, JobTitle
 from app.services import question_quality as quality
@@ -60,6 +60,7 @@ TABLES: dict[str, Table] = {
     "programme_roles": ProgrammeRole.__table__,  # type: ignore[dict-item]
     "programme_skills": ProgrammeSkill.__table__,  # type: ignore[dict-item]
     "credit_packs": CreditPack.__table__,  # type: ignore[dict-item]
+    "test_prices": TestPrice.__table__,  # type: ignore[dict-item]
 }
 LEVEL_TABLES = ("proficiency_level", "level_threshold")
 
@@ -189,6 +190,7 @@ def read_seed_rows(limits: quality.Thresholds | None = None) -> dict[str, list[d
                 "is_active": True,
             }
         )
+    rows["test_prices"] = list(_read("test_prices.json")["prices"])
     return rows
 
 
@@ -248,6 +250,12 @@ def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str,
             _retire_rows_not_in_files(conn, table, rows[name])
         if name in ("programme_roles", "programme_skills"):
             _drop_links_not_in_files(conn, table, rows[name])
+        if name == "test_prices":  # a price taken out of the file: that test is free again
+            conn.execute(
+                table.delete().where(
+                    table.c.skill_id.not_in([r["skill_id"] for r in rows["test_prices"]])
+                )
+            )
     return result
 
 

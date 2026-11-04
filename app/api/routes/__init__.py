@@ -15,6 +15,7 @@ from app.api.routes import (
     results,
     roles,
     skills,
+    tests_catalogue,
 )
 
 # Every API router. app/main.py mounts this under settings.API_PREFIX (/api/v1),
@@ -28,6 +29,7 @@ api_router.include_router(learners.router)
 api_router.include_router(skills.router)
 api_router.include_router(roles.router)
 api_router.include_router(roles.titles_router)
+api_router.include_router(tests_catalogue.router)
 api_router.include_router(attempts.router)
 api_router.include_router(profile.router)
 api_router.include_router(results.router)
