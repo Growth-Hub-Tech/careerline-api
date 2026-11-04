@@ -50,7 +50,13 @@ class CareerPathRecommendation(BaseModel):
         "skills can be tested yet"
     )
     programme: ProgrammeSummary | None = Field(
-        description="The programme that best prepares for this role; null when it has none"
+        description="The programme that best prepares for this role within the person's budget, "
+        "or else its cheapest one; null when it has none"
+    )
+    programme_within_budget: bool | None = Field(
+        None,
+        description="true: the programme fits the budget answer; false: no programme of this "
+        "role does, so programme is its cheapest; null: no programme",
     )
 
 

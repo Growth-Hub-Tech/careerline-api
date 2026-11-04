@@ -13,6 +13,13 @@
   latest one.
 - Day 14 (part 2): each path carries the programme that best prepares for its role (the first
   in the programme list's order, app/services/programmes.py); null when the role has none.
+- Day 15 (part 3): the budget answer counts. Each budget option is a price limit (max_price, in
+  kobo; null = no limit). A role with a programme within that limit gets the file's
+  budget.points on top of its answer points, and (when the budget has a limit) a reason that
+  always takes one of the places; a role whose programmes are all
+  over budget gets nothing (its score is out of the extra points too, so it drops); a role with
+  no programme at all is left as it was. The programme shown is the best one within budget, or
+  else the cheapest, and programme_within_budget says which.
 """
 
 import json
@@ -21,11 +28,12 @@ from functools import lru_cache
 from pathlib import Path
 
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.exceptions import BadRequestError
 from app.models.beginner import BeginnerIntake
+from app.models.programmes import Programme, ProgrammeRole
 from app.models.roles import JobRole, JobRoleSkill
 from app.repositories.question_repo import testable_skill_ids
 from app.schemas.beginner_path import (
@@ -51,6 +59,14 @@ class ScoredOption(BaseModel):
     label: str
     points: dict[str, int] = Field(default_factory=dict)  # role slug -> points
     reason: str = ""
+    # budget options only: the most a programme may cost, in kobo (None = no limit)
+    max_price: int | None = None
+
+
+class BudgetRules(BaseModel):
+    points: int = Field(ge=0)
+    reason_free: str
+    reason_within: str
 
 
 class ScoredQuestion(BaseModel):
@@ -66,6 +82,7 @@ class ScoredQuestion(BaseModel):
 
 class Questionnaire(BaseModel):
     version: str
+    budget: BudgetRules
     questions: list[ScoredQuestion]
 
     def public(self) -> IntakeQuestionnaire:
@@ -106,6 +123,26 @@ class RankedRole:
     reasons: list[str]
 
 
+BUDGET_QUESTION = "budget"
+
+
+@dataclass(frozen=True)
+class BudgetFit:
+    """What the budget means for each role: `limit` is the price limit in kobo (None = no
+    limit), `with_programmes` the roles (slugs) that have any programme and `affordable` those
+    with one within the limit."""
+
+    limit: int | None
+    with_programmes: set[str]
+    affordable: set[str]
+
+
+def budget_limit(questionnaire: Questionnaire, answers: dict[str, list[str]]) -> int | None:
+    question = next(q for q in questionnaire.questions if q.question_id == BUDGET_QUESTION)
+    option = question.option(answers[BUDGET_QUESTION][0])
+    return option.max_price if option else None
+
+
 def validate_answers(questionnaire: Questionnaire, answers: dict[str, list[str]]) -> None:
     by_id = {q.question_id: q for q in questionnaire.questions}
     unknown = sorted(set(answers) - set(by_id))
@@ -127,11 +164,16 @@ def validate_answers(questionnaire: Questionnaire, answers: dict[str, list[str]]
 
 
 def rank_roles(
-    questionnaire: Questionnaire, answers: dict[str, list[str]], roles: list[RoleInfo]
+    questionnaire: Questionnaire,
+    answers: dict[str, list[str]],
+    roles: list[RoleInfo],
+    budget: BudgetFit | None = None,
 ) -> list[RankedRole]:
+    rules = questionnaire.budget
     scored = []
     for position, role in enumerate(roles):
         best = got = 0
+        budget_reason = ""
         reasons: list[tuple[int, int, str]] = []  # (points, question order, reason)
         for order, question in enumerate(questionnaire.questions):
             best += max((o.points.get(role.slug, 0) for o in question.options), default=0)
@@ -145,10 +187,18 @@ def rank_roles(
             ]
         if got <= 0 or best <= 0:
             continue
+        if budget is not None and role.slug in budget.with_programmes:
+            best += rules.points
+            if role.slug in budget.affordable:
+                got += rules.points
+                if budget.limit is not None:  # no limit: nothing worth saying
+                    budget_reason = rules.reason_free if budget.limit == 0 else rules.reason_within
         texts: list[str] = []
         for _, _, reason in sorted(reasons, key=lambda r: (-r[0], r[1])):
             if reason not in texts:
                 texts.append(reason)
+        if budget_reason:  # money matters to a beginner: it always gets a place
+            texts = [*texts[: MAX_REASONS - 1], budget_reason]
         scored.append((round(100 * got / best), got, role, texts[:MAX_REASONS], position))
     scored.sort(key=lambda s: (-s[0], -s[1], s[2].role_id))
     return [
@@ -182,6 +232,23 @@ async def _starting_tests(db: AsyncSession, role_ids: list[int]) -> dict[int, in
     return starting
 
 
+async def _budget_fit(db: AsyncSession, limit: int | None) -> BudgetFit:
+    prices = (
+        await db.execute(
+            select(JobRole.slug, func.min(Programme.price_amount))
+            .join(ProgrammeRole, ProgrammeRole.role_id == JobRole.role_id)
+            .join(Programme, Programme.programme_id == ProgrammeRole.programme_id)
+            .where(Programme.is_active.is_(True))
+            .group_by(JobRole.slug)
+        )
+    ).all()
+    return BudgetFit(
+        limit=limit,
+        with_programmes={slug for slug, _ in prices},
+        affordable={slug for slug, cheapest in prices if limit is None or cheapest <= limit},
+    )
+
+
 async def submit_intake(
     db: AsyncSession, learner_id: int, submission: IntakeSubmission
 ) -> BeginnerPath:
@@ -198,9 +265,11 @@ async def submit_intake(
         RoleInfo(r.role_id, r.slug, r.title)
         for r in (await db.scalars(select(JobRole).order_by(JobRole.role_id))).all()
     ]
-    ranked = rank_roles(questionnaire, answers, roles)
+    limit = budget_limit(questionnaire, answers)
+    fit = await _budget_fit(db, limit)
+    ranked = rank_roles(questionnaire, answers, roles, budget=fit)
     starting = await _starting_tests(db, [r.role_id for r in ranked])
-    programmes = await best_programmes_for_roles(db, [r.role_id for r in ranked])
+    programmes = await best_programmes_for_roles(db, [r.role_id for r in ranked], limit)
     recommendations = [
         CareerPathRecommendation(
             rank=r.rank,
@@ -209,7 +278,8 @@ async def submit_intake(
             match_score=r.match_score,
             reasons=r.reasons,
             starting_test_id=starting.get(r.role_id),
-            programme=programmes.get(r.role_id),
+            programme=programmes[r.role_id].programme,
+            programme_within_budget=programmes[r.role_id].within_budget,
         )
         for r in ranked
     ]

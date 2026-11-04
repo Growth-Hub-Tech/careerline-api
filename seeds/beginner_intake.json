@@ -1,5 +1,10 @@
 {
   "version": "2026-11",
+  "budget": {
+    "points": 2,
+    "reason_free": "There is a free programme for this path",
+    "reason_within": "There is a programme within your budget"
+  },
   "questions": [
     {
       "question_id": "work_style",
@@ -247,19 +252,23 @@
       "options": [
         {
           "value": "free_only",
-          "label": "Free options only"
+          "label": "Free options only",
+          "max_price": 0
         },
         {
           "value": "under_50k",
-          "label": "Under NGN 50,000"
+          "label": "Under NGN 50,000",
+          "max_price": 4999999
         },
         {
           "value": "50k_to_200k",
-          "label": "NGN 50,000 to 200,000"
+          "label": "NGN 50,000 to 200,000",
+          "max_price": 20000000
         },
         {
           "value": "over_200k",
-          "label": "Over NGN 200,000"
+          "label": "Over NGN 200,000",
+          "max_price": null
         }
       ]
     }
