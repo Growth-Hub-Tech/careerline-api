@@ -111,6 +111,12 @@ class Settings(BaseSettings):
     # A checkout nobody paid is marked abandoned after this long (when it is next looked at)
     PAYMENT_ABANDON_MINUTES: int = 60
 
+    # Privacy (Day 18): a copy of my data is kept this many days; each download link works this
+    # many minutes; a deletion waits this many days so it can be cancelled
+    DATA_EXPORT_DAYS: int = 7
+    DATA_EXPORT_LINK_MINUTES: int = 15
+    ACCOUNT_DELETION_GRACE_DAYS: int = 30
+
     # Assessment config
     WEAK_THRESHOLD: int = 60
 

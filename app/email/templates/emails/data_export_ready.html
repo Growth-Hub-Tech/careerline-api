@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% set subject = "Your " ~ brand.name ~ " data is ready" %}
+{% block preheader %}The copy of your data you asked for is ready to download.{% endblock %}
+{% block content %}
+{% from "_components.html" import button with context %}
+<h1 style="margin:0 0 16px 0; font-size:22px; line-height:28px;">Your data is ready</h1>
+<p style="margin:0 0 16px 0;">Hi {{ full_name }}, the copy of everything {{ brand.name }} holds about you is ready. Sign in and download it from your privacy page.</p>
+{{ button(link, "Open my privacy page") }}
+<p style="margin:0 0 16px 0;">It stays available for {{ days }} days. After that you can ask for a new copy.</p>
+<p style="margin:0;">If you did not ask for this, change your password and tell us.</p>
+{% endblock %}
+{% block footer_note %}<p style="margin:0;">You got this email because of your {{ brand.name }} account.</p>{% endblock %}
