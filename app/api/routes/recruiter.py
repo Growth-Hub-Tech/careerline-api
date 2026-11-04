@@ -1,6 +1,6 @@
 """Recruiters (Days 19-20): the organisation's candidates. Access: app/core/permissions.py."""
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_session, get_db
@@ -8,7 +8,7 @@ from app.api.routes.organisation_users import acting_member
 from app.core.responses import EnvelopeRoute, errors
 from app.models.organisations import OrganisationMember
 from app.schemas.common import Page
-from app.schemas.recruiter import Candidate, CandidateCreate, CandidateStatus
+from app.schemas.recruiter import Candidate, CandidateCreate, CandidateReport, CandidateStatus
 from app.services import recruiting
 
 router = APIRouter(
@@ -59,3 +59,25 @@ async def get_candidate(
     actor: OrganisationMember = Depends(acting_member),
 ):
     return await recruiting.get_candidate(db, actor, candidate_id)
+
+
+# THE SCORED REPORT (Day 20): once the candidate has finished an invited test (404 before)
+@router.get(
+    "/candidates/{candidate_id}/report",
+    response_model=CandidateReport,
+    responses=errors(401, 403, 404),
+    description="fit compares the newest result of each invited test with the level the "
+    "candidate's role needs (without a role: MID and up strong_fit, JUNIOR possible_fit). "
+    "results: every finished invited test, newest first. report_url: the newest result's PDF "
+    "(works 15 minutes; null while it is being made: GET again).",
+)
+async def get_candidate_report(
+    candidate_id: int,
+    request: Request,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    def link(token: str) -> str:
+        return str(request.url_for("download_result_report", token=token))
+
+    return await recruiting.candidate_report(db, actor, candidate_id, link)

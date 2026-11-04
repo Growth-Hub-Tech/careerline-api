@@ -61,6 +61,7 @@ from app.schemas.attempts import (
 from app.services import adaptive_engine as engine
 from app.services import payments
 from app.services.explanations import queue_explanations
+from app.services.invitation_completion import complete_invitations
 from app.services.question_picking import pick_next
 from app.services.scoring_service import generate_recommendations
 
@@ -294,6 +295,8 @@ async def _finish(
             db, attempt.learner_id, attempt.skill_id, attempt.attempt_id, level_id
         )
     await save_skill_history(db, attempt, scored)
+    # Day 20: a test started from an invitation completes it
+    await complete_invitations(db, attempt.attempt_id)
     # Day 11: the AI explanations of the answers are written in the background
     await queue_explanations(db, attempt.attempt_id)
     logger.info(

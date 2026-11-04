@@ -247,6 +247,18 @@ async def report_status(
     return _report_payload(row, link_for)
 
 
+async def recruiter_report_link(
+    db: AsyncSession, attempt_id: int, link_for: Callable[[str], str]
+) -> str | None:
+    """Day 20: the PDF link of a result for the recruiter who invited the test (the caller has
+    checked that); the PDF is made the first time it is asked for. None while it is made."""
+    row, _ = await _report_row(db, attempt_id)
+    if row.status != "ready":
+        return None
+    token, _ = report_token(row.attempt_id, row.version)
+    return link_for(token)
+
+
 async def make_report_again(
     db: AsyncSession, result_id: int, learner_id: int, link_for: Callable[[str], str]
 ) -> Report:
