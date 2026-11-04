@@ -57,6 +57,7 @@ class Invitation(Base):
         CheckConstraint("kind IN ('candidate', 'team_member')", name="ck_invitations_kind"),
         Index("ix_invitations_organisation", "organisation_id", "sent_at"),
         Index("ix_invitations_candidate", "candidate_id"),
+        Index("ix_invitations_team_member", "team_member_id"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
@@ -67,6 +68,10 @@ class Invitation(Base):
     kind: Mapped[str] = mapped_column(String(20), nullable=False)
     candidate_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("candidates.id", ondelete="SET NULL"), nullable=True
+    )
+    # kind team_member: the roster entry it tests (Day 21)
+    team_member_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("team_members.id", ondelete="SET NULL"), nullable=True
     )
     email: Mapped[str] = mapped_column(String(320), nullable=False)
     full_name: Mapped[str] = mapped_column(String(120), nullable=False)

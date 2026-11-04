@@ -1,5 +1,6 @@
 """Day 3 sample answers: subscriptions, organisation audit, heatmap and targets (the flows are in
-test_day3_flows.py). Privacy is real since Day 18 (tests/integration/test_privacy.py), the
+test_day3_flows.py). The organisation and its roster are real since Day 21
+(tests/integration/test_team_roster.py), privacy since Day 18 (tests/integration/test_privacy.py), the
 recruiter's candidates and invitations since Days 19-20 (tests/integration/test_recruiter.py,
 test_candidate_reports.py)."""
 
@@ -15,29 +16,9 @@ async def test_plans_are_public(client):
     assert {p["audience"] for p in plans} == {"individual", "recruiter", "organisation"}
 
 
-async def test_my_organisation_roster_and_upload(client, auth):
-    org = assert_sample(await client.get(f"{API}/organisations/me", headers=auth))
-    assert org["organisation_id"] == 41 and org["seats_used"] <= org["seats_total"]
-    members = assert_sample(
-        await client.get(f"{ORG}/members", headers=auth, params={"department": "Lending"})
-    )
-    assert {m["department"] for m in members["items"]} == {"Lending"}
-    upload = await client.post(
-        f"{ORG}/members",
-        headers=auth,
-        json={
-            "members": [
-                {"full_name": "Ngozi Okeke", "email": "ngozi.okeke@example.com", "role_id": 102},
-                {"full_name": "New Person", "email": "new@example.com", "role_id": 101},
-            ]
-        },
-    )
-    assert assert_sample(upload) == {"added": 1, "updated": 1, "members_total": 5}
-
-
 async def test_another_organisation_is_a_404(client, auth):
     assert_sample_error(
-        await client.get(f"{API}/organisations/99/members", headers=auth), 404, "not_found"
+        await client.get(f"{API}/organisations/99/audits", headers=auth), 404, "not_found"
     )
 
 

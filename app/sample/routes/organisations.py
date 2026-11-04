@@ -17,9 +17,6 @@ from app.schemas.organisations import (
     HeatmapCell,
     HeatmapRow,
     HeatmapSkill,
-    Organisation,
-    RosterResult,
-    RosterUpload,
     Target,
     Targets,
     TargetsUpdate,
@@ -27,8 +24,10 @@ from app.schemas.organisations import (
 )
 
 ORG_ID = 41
+# The roster (GET/POST /organisations/{id}/members) and GET /organisations/me are real since
+# Day 21 (app/api/routes/organisations.py); the routes below still answer with sample data.
 ORG_NOTE = (
-    f"Organisation accounts don't exist yet: any login token works, the sample organisation is {ORG_ID}, "
+    f"Sample data for the sample organisation {ORG_ID} (the demo company): any login token works, "
     "and `forbidden` shows the 403 someone outside the organisation will get."
 )
 
@@ -51,15 +50,6 @@ targets_router = APIRouter(
     dependencies=[Depends(scenario)],
 )
 
-ORGANISATION = Organisation(
-    organisation_id=ORG_ID,
-    name="Acme Fintech Ltd",
-    industry="Financial services",
-    size="51-200",
-    seats_total=50,
-    seats_used=12,
-    created_at=days_ago(60),
-)
 ROLES = {101: "Frontend Developer", 102: "Backend Developer", 103: "Data Analyst"}
 SKILLS = {1: "Frontend Web Development", 2: "Backend Development", 3: "Database Management"}
 
@@ -149,59 +139,6 @@ def check_org(organisation_id: int) -> None:
         raise NotFoundError(
             f"Organisation {organisation_id} not found. The sample organisation is {ORG_ID}"
         )
-
-
-# MY ORGANISATION
-@audit_router.get(
-    "/me",
-    response_model=ApiResponse[Organisation],
-    openapi_extra=sample_route(summary_note=ORG_NOTE),
-)
-async def get_my_organisation(learner_id: int = Depends(sample_user)):
-    return sample(ORGANISATION)
-
-
-# TEAM ROSTER: everyone mapped to a role (PRD 6.2 step 1)
-@audit_router.get(
-    "/{organisation_id}/members",
-    response_model=ApiResponse[Page[TeamMember]],
-    openapi_extra=sample_route("empty", summary_note=ORG_NOTE),
-)
-async def list_team_members(
-    organisation_id: int,
-    department: str | None = None,
-    limit: int = 50,
-    offset: int = 0,
-    sc: Scenario = Depends(scenario),
-    learner_id: int = Depends(sample_user),
-):
-    check_org(organisation_id)
-    members = [] if sc.empty else MEMBERS
-    if department:
-        members = [m for m in members if m.department == department]
-    return sample(
-        Page[TeamMember](
-            items=members[offset : offset + limit], total=len(members), limit=limit, offset=offset
-        )
-    )
-
-
-# UPLOAD THE ROSTER: adds new people and updates existing ones (matched by email)
-@audit_router.post(
-    "/{organisation_id}/members",
-    response_model=ApiResponse[RosterResult],
-    openapi_extra=sample_route(
-        summary_note=ORG_NOTE + " More people than seats is `payment_required` (402)."
-    ),
-)
-async def upload_roster(
-    organisation_id: int, data: RosterUpload, learner_id: int = Depends(sample_user)
-):
-    check_org(organisation_id)
-    known = {m.email for m in MEMBERS}
-    updated = sum(1 for m in data.members if m.email in known)
-    added = len(data.members) - updated
-    return sample(RosterResult(added=added, updated=updated, members_total=len(MEMBERS) + added))
 
 
 # AUDITS: test the team for their roles, then compare against targets and the industry

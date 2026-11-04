@@ -18,6 +18,8 @@ from sqlalchemy.sql import func
 from app.db.base import Base
 
 ORGANISATION_ROLES = ("owner", "admin", "recruiter")
+# Seats of an organisation without an organisation plan
+DEFAULT_SEATS = 25
 
 
 class Organisation(Base):
@@ -27,6 +29,10 @@ class Organisation(Base):
     name: Mapped[str] = mapped_column(String(160), nullable=False)
     industry: Mapped[str | None] = mapped_column(String(80), nullable=True)
     size: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    # How many people the team roster may hold (Day 21). An organisation plan sets it (Days 25-26)
+    seats_total: Mapped[int] = mapped_column(
+        Integer, nullable=False, default=DEFAULT_SEATS, server_default=str(DEFAULT_SEATS)
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )

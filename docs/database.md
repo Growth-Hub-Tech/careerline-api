@@ -21,6 +21,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `c8e4a2f6b9d3` | 17 | `test_prices` (from `seeds/test_prices.json`; a skill not listed is free) and `credit_transactions.attempt_id` (the test a charge or refund was for; one of each per test). New table and an empty new column. |
 | `d4f9b3a7c2e8` | 18 | `learner_consents`, `consent_events` (every consent change), `data_exports` (a copy of a person's data, kept 7 days), `account_deletions` (scheduled, cancelled or completed). New empty tables. |
 | `e7a1c5d9f3b2` | 19 | `candidates` (one per email per organisation) and `invitations` (a link to take one test: sent, accepted, completed or revoked). New empty tables. |
+| `f3a9c1e5b7d4` | 21 | `team_members` (an organisation's team roster: one per email per organisation, each with a job role), `organisations.seats_total` (existing organisations get 25) and `invitations.team_member_id` (the roster entry a team invitation tests). New empty table and columns. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.

@@ -8936,7 +8936,7 @@
     },
     "/api/v1/organisations/me": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Owners, admins and recruiters. seats_total: how many people the team roster may hold.",
         "operationId": "get_my_organisation_api_v1_organisations_me_get",
         "responses": {
           "200": {
@@ -8949,16 +8949,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -8969,16 +8959,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
           "403": {
             "content": {
               "application/json": {
@@ -8988,66 +8968,6 @@
               }
             },
             "description": "Not allowed: e.g. this belongs to another person"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9057,28 +8977,13 @@
         ],
         "summary": "Get My Organisation",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Organisation audit"
         ]
       }
     },
     "/api/v1/organisations/{organisation_id}/audits": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "list_audits_api_v1_organisations__organisation_id__audits_get",
         "parameters": [
           {
@@ -9243,7 +9148,7 @@
           "Sample: Organisation audit"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -9260,7 +9165,7 @@
         ]
       },
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "start_audit_api_v1_organisations__organisation_id__audits_post",
         "parameters": [
           {
@@ -9415,7 +9320,7 @@
           "Sample: Organisation audit"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. send_invitations=true emails everyone their test link.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -9433,7 +9338,7 @@
     },
     "/api/v1/organisations/{organisation_id}/audits/{audit_id}": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "get_audit_api_v1_organisations__organisation_id__audits__audit_id__get",
         "parameters": [
           {
@@ -9587,7 +9492,7 @@
           "Sample: Organisation audit"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -9605,7 +9510,7 @@
     },
     "/api/v1/organisations/{organisation_id}/heatmap": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "get_heatmap_api_v1_organisations__organisation_id__heatmap_get",
         "parameters": [
           {
@@ -9781,7 +9686,7 @@
           "Sample: Heatmap"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -9800,7 +9705,7 @@
     },
     "/api/v1/organisations/{organisation_id}/members": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "Owners and admins. By name. department: only that department (any case). status follows the member's team invitations: not_invited, invited, in_progress, completed. latest_level: their newest team result in their role's main skill.",
         "operationId": "list_team_members_api_v1_organisations__organisation_id__members_get",
         "parameters": [
           {
@@ -9834,6 +9739,8 @@
             "required": false,
             "schema": {
               "default": 50,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -9844,6 +9751,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -9860,16 +9768,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9879,16 +9777,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -9910,26 +9798,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9939,36 +9807,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9978,27 +9816,11 @@
         ],
         "summary": "List Team Members",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Organisation audit"
         ]
       },
       "post": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. More people than seats is `payment_required` (402).\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Owners and admins. Up to 1000 people. People already on the roster (same email, any case) get the uploaded name, department and role. 402 payment_required: more people than seats. 404: an unknown role_id. 400: the same email twice. In every error case nothing is saved.",
         "operationId": "upload_roster_api_v1_organisations__organisation_id__members_post",
         "parameters": [
           {
@@ -10082,26 +9904,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -10111,36 +9913,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -10150,28 +9922,13 @@
         ],
         "summary": "Upload Roster",
         "tags": [
-          "Sample: Organisation audit"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. More people than seats is `payment_required` (402).",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Organisation audit"
         ]
       }
     },
     "/api/v1/organisations/{organisation_id}/targets": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
         "operationId": "get_targets_api_v1_organisations__organisation_id__targets_get",
         "parameters": [
           {
@@ -10316,7 +10073,7 @@
           "Sample: Targets"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
@@ -10333,7 +10090,7 @@
         ]
       },
       "put": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nOrganisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
         "operationId": "set_targets_api_v1_organisations__organisation_id__targets_put",
         "parameters": [
           {
@@ -10488,7 +10245,7 @@
           "Sample: Targets"
         ],
         "x-sample": true,
-        "x-sample-note": "Organisation accounts don't exist yet: any login token works, the sample organisation is 41, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.",
+        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.",
         "x-sample-scenarios": [
           "unauthenticated",
           "payment_required",
