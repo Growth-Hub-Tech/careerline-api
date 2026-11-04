@@ -1,10 +1,12 @@
 """Load the reference data in seeds/ into the database: `python -m app.db.seed`.
 
 Reference data = proficiency levels, level thresholds, skills, subskills, questions with their
-options, behavioural questions, job roles with their skills, and the job-title ladder. Each row keeps its id from the seed file and is upserted on
-it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
+options, behavioural questions, job roles with their skills, the job-title ladder, and the
+programmes with the roles and skills they cover. Each row keeps its id from the seed file and is
+upserted on it, so loading twice is safe: the second load changes nothing, and a row someone edited in the
 database is put back to what the seed file says. Rows that are not in the files are left alone
-(attempts may point at them), and learners' data is never touched. Afterwards the id counters
+(attempts may point at them; a programme not in the file is retired), and learners' data is
+never touched. Afterwards the id counters
 are moved past the highest id, so rows the app creates later get fresh ids.
 
 The seed files are the source of truth for the question bank: change a question there, in a pull
@@ -34,6 +36,7 @@ from app.models.models import (
     Skill,
     Subskill,
 )
+from app.models.programmes import Programme, ProgrammeRole, ProgrammeSkill
 from app.models.roles import JobRole, JobRoleSkill, JobTitle
 from app.services import question_quality as quality
 
@@ -52,6 +55,9 @@ TABLES: dict[str, Table] = {
     "job_titles": JobTitle.__table__,  # type: ignore[dict-item]
     "job_roles": JobRole.__table__,  # type: ignore[dict-item]
     "job_role_skills": JobRoleSkill.__table__,  # type: ignore[dict-item]
+    "programmes": Programme.__table__,  # type: ignore[dict-item]
+    "programme_roles": ProgrammeRole.__table__,  # type: ignore[dict-item]
+    "programme_skills": ProgrammeSkill.__table__,  # type: ignore[dict-item]
 }
 LEVEL_TABLES = ("proficiency_level", "level_threshold")
 
@@ -154,6 +160,23 @@ def read_seed_rows(limits: quality.Thresholds | None = None) -> dict[str, list[d
             }
             for position, s in enumerate(skills, start=1)
         )
+    for programme in _read("programmes.json")["programmes"]:
+        price = programme.pop("price")
+        role_ids, skill_ids = programme.pop("role_ids"), programme.pop("skill_ids")
+        rows["programmes"].append(
+            {
+                **programme,
+                "price_amount": price["amount"],
+                "currency": price["currency"],
+                "is_active": True,
+            }
+        )
+        pid = programme["programme_id"]
+        rows["programme_roles"].extend({"programme_id": pid, "role_id": r} for r in role_ids)
+        rows["programme_skills"].extend(
+            {"programme_id": pid, "skill_id": s, "position": position}
+            for position, s in enumerate(skill_ids, start=1)
+        )
     return rows
 
 
@@ -164,6 +187,10 @@ def _upsert(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> Count
     for start in range(0, len(rows), BATCH):
         values = insert(table).values(rows[start : start + BATCH])
         columns = [c for c in rows[0] if c not in key_names]
+        if not columns:  # a link table with nothing but its key: insert what is missing
+            added = conn.execute(values.on_conflict_do_nothing(index_elements=keys))
+            counts.inserted += added.rowcount
+            continue
         upsert: Any = values.on_conflict_do_update(
             index_elements=keys,
             set_={c: values.excluded[c] for c in columns},
@@ -205,6 +232,10 @@ def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str,
         _move_id_counter_past_max(conn, table)
         if name == "job_role_skills":
             _drop_role_skills_not_in_files(conn, rows["job_role_skills"])
+        if name == "programmes":
+            _retire_programmes_not_in_files(conn, rows["programmes"])
+        if name in ("programme_roles", "programme_skills"):
+            _drop_links_not_in_files(conn, table, rows[name])
     return result
 
 
@@ -220,6 +251,29 @@ def _drop_role_skills_not_in_files(conn: Connection, rows: list[dict[str, Any]])
         if (role_id, skill_id) not in wanted:
             conn.execute(
                 table.delete().where(table.c.role_id == role_id, table.c.skill_id == skill_id)
+            )
+
+
+def _retire_programmes_not_in_files(conn: Connection, rows: list[dict[str, Any]]) -> None:
+    """A programme taken out of the file is retired, not deleted: old clicks point at it."""
+    table: Table = Programme.__table__  # type: ignore[assignment]
+    wanted = [r["programme_id"] for r in rows]
+    conn.execute(
+        table.update()
+        .where(table.c.programme_id.not_in(wanted), table.c.is_active.is_(True))
+        .values(is_active=False)
+    )
+
+
+def _drop_links_not_in_files(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> None:
+    """A programme's roles and skills are exactly what the file says."""
+    other = next(c.name for c in table.primary_key.columns if c.name != "programme_id")
+    wanted = {(r["programme_id"], r[other]) for r in rows}
+    existing = conn.execute(select(table.c.programme_id, table.c[other])).all()
+    for programme_id, value in existing:
+        if (programme_id, value) not in wanted:
+            conn.execute(
+                table.delete().where(table.c.programme_id == programme_id, table.c[other] == value)
             )
 
 

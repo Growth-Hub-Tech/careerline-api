@@ -1,0 +1,323 @@
+{
+  "_note": "Placeholder catalogue: replace the providers, prices and urls with the real Incubate and partner programmes before launch. Prices are in kobo.",
+  "programmes": [
+    {
+      "programme_id": 301,
+      "slug": "frontend-engineering",
+      "name": "Frontend Engineering Bootcamp",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "hybrid",
+      "duration_weeks": 12,
+      "price": {
+        "amount": 25000000,
+        "currency": "NGN"
+      },
+      "summary": "HTML, CSS, JavaScript and React from first page to deployed portfolio app.",
+      "url": "https://example.com/programmes/frontend-engineering",
+      "skill_ids": [
+        1,
+        8
+      ],
+      "role_ids": [
+        101
+      ]
+    },
+    {
+      "programme_id": 302,
+      "slug": "backend-python",
+      "name": "Backend with Python and FastAPI",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "online",
+      "duration_weeks": 10,
+      "price": {
+        "amount": 20000000,
+        "currency": "NGN"
+      },
+      "summary": "REST APIs, authentication, databases and testing with Python.",
+      "url": "https://example.com/programmes/backend-python",
+      "skill_ids": [
+        2,
+        3
+      ],
+      "role_ids": [
+        102
+      ]
+    },
+    {
+      "programme_id": 303,
+      "slug": "sql-for-analysts",
+      "name": "SQL for Analysts",
+      "provider": "DataBridge Academy",
+      "provider_type": "partner",
+      "mode": "online",
+      "duration_weeks": 4,
+      "price": {
+        "amount": 4500000,
+        "currency": "NGN"
+      },
+      "summary": "Queries, joins, indexes and reporting on real business data.",
+      "url": "https://example.com/programmes/sql-for-analysts",
+      "skill_ids": [
+        3
+      ],
+      "role_ids": [
+        102,
+        103
+      ]
+    },
+    {
+      "programme_id": 304,
+      "slug": "web-basics",
+      "name": "Web Basics: HTML, CSS and JavaScript",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "online",
+      "duration_weeks": 6,
+      "price": {
+        "amount": 0,
+        "currency": "NGN"
+      },
+      "summary": "A free first course: build and publish your first web pages, with Git from day one.",
+      "url": "https://example.com/programmes/web-basics",
+      "skill_ids": [
+        1,
+        8,
+        13
+      ],
+      "role_ids": [
+        101
+      ]
+    },
+    {
+      "programme_id": 305,
+      "slug": "data-analysis-excel-power-bi",
+      "name": "Data Analysis with Excel and Power BI",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "hybrid",
+      "duration_weeks": 8,
+      "price": {
+        "amount": 15000000,
+        "currency": "NGN"
+      },
+      "summary": "Clean data, analyse it with Excel and SQL, and build dashboards people act on.",
+      "url": "https://example.com/programmes/data-analysis-excel-power-bi",
+      "skill_ids": [
+        19,
+        23,
+        3
+      ],
+      "role_ids": [
+        103
+      ]
+    },
+    {
+      "programme_id": 306,
+      "slug": "machine-learning-foundations",
+      "name": "Machine Learning Foundations",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "online",
+      "duration_weeks": 12,
+      "price": {
+        "amount": 30000000,
+        "currency": "NGN"
+      },
+      "summary": "Train, evaluate and ship machine learning models with Python and scikit-learn.",
+      "url": "https://example.com/programmes/machine-learning-foundations",
+      "skill_ids": [
+        20,
+        19,
+        21
+      ],
+      "role_ids": [
+        104,
+        105
+      ]
+    },
+    {
+      "programme_id": 307,
+      "slug": "python-maths-for-ml",
+      "name": "Python and Maths for Machine Learning",
+      "provider": "DataBridge Academy",
+      "provider_type": "partner",
+      "mode": "online",
+      "duration_weeks": 6,
+      "price": {
+        "amount": 4000000,
+        "currency": "NGN"
+      },
+      "summary": "The Python, statistics and linear algebra you need before machine learning.",
+      "url": "https://example.com/programmes/python-maths-for-ml",
+      "skill_ids": [
+        19,
+        20
+      ],
+      "role_ids": [
+        104
+      ]
+    },
+    {
+      "programme_id": 308,
+      "slug": "building-with-ai",
+      "name": "Building with AI: Prompts, NLP and LLM Apps",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "online",
+      "duration_weeks": 8,
+      "price": {
+        "amount": 18000000,
+        "currency": "NGN"
+      },
+      "summary": "Prompt design, language models and building small AI apps that solve real problems.",
+      "url": "https://example.com/programmes/building-with-ai",
+      "skill_ids": [
+        30,
+        24,
+        21
+      ],
+      "role_ids": [
+        105
+      ]
+    },
+    {
+      "programme_id": 309,
+      "slug": "ai-tools-starter",
+      "name": "AI Tools Starter",
+      "provider": "Learn AI Lagos",
+      "provider_type": "partner",
+      "mode": "online",
+      "duration_weeks": 3,
+      "price": {
+        "amount": 0,
+        "currency": "NGN"
+      },
+      "summary": "A free short course on using AI tools well at work: prompts, checking answers, safe use.",
+      "url": "https://example.com/programmes/ai-tools-starter",
+      "skill_ids": [
+        30
+      ],
+      "role_ids": [
+        105,
+        108
+      ]
+    },
+    {
+      "programme_id": 310,
+      "slug": "tech-sales-accelerator",
+      "name": "Tech Sales Accelerator",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "hybrid",
+      "duration_weeks": 6,
+      "price": {
+        "amount": 12000000,
+        "currency": "NGN"
+      },
+      "summary": "Prospecting, cold outreach, discovery calls and CRM habits for your first tech sales job.",
+      "url": "https://example.com/programmes/tech-sales-accelerator",
+      "skill_ids": [
+        36,
+        31,
+        33
+      ],
+      "role_ids": [
+        106,
+        107
+      ]
+    },
+    {
+      "programme_id": 311,
+      "slug": "sales-fundamentals-online",
+      "name": "Sales Fundamentals Online",
+      "provider": "SalesHub Africa",
+      "provider_type": "partner",
+      "mode": "online",
+      "duration_weeks": 4,
+      "price": {
+        "amount": 0,
+        "currency": "NGN"
+      },
+      "summary": "A free introduction to selling: the sales process, prospecting and first conversations.",
+      "url": "https://example.com/programmes/sales-fundamentals-online",
+      "skill_ids": [
+        31,
+        36
+      ],
+      "role_ids": [
+        106
+      ]
+    },
+    {
+      "programme_id": 312,
+      "slug": "closing-and-account-management",
+      "name": "Closing and Account Management",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "in_person",
+      "duration_weeks": 8,
+      "price": {
+        "amount": 22000000,
+        "currency": "NGN"
+      },
+      "summary": "Negotiation, closing, forecasting and growing the accounts you win.",
+      "url": "https://example.com/programmes/closing-and-account-management",
+      "skill_ids": [
+        37,
+        32,
+        38,
+        34
+      ],
+      "role_ids": [
+        107
+      ]
+    },
+    {
+      "programme_id": 313,
+      "slug": "digital-marketing-bootcamp",
+      "name": "Digital Marketing Bootcamp",
+      "provider": "Incubate",
+      "provider_type": "incubate",
+      "mode": "hybrid",
+      "duration_weeks": 8,
+      "price": {
+        "amount": 15000000,
+        "currency": "NGN"
+      },
+      "summary": "Campaigns, content, social media and growth, measured with real analytics.",
+      "url": "https://example.com/programmes/digital-marketing-bootcamp",
+      "skill_ids": [
+        39,
+        40,
+        18
+      ],
+      "role_ids": [
+        108
+      ]
+    },
+    {
+      "programme_id": 314,
+      "slug": "content-marketing-starter",
+      "name": "Content Marketing Starter",
+      "provider": "Growth School NG",
+      "provider_type": "partner",
+      "mode": "online",
+      "duration_weeks": 4,
+      "price": {
+        "amount": 3000000,
+        "currency": "NGN"
+      },
+      "summary": "Write posts people read, plan a content calendar and grow an audience online.",
+      "url": "https://example.com/programmes/content-marketing-starter",
+      "skill_ids": [
+        40,
+        41
+      ],
+      "role_ids": [
+        108
+      ]
+    }
+  ]
+}

@@ -105,6 +105,24 @@ def test_the_eight_pilot_job_roles_use_skills_that_have_questions():
         )
 
 
+def test_the_programmes_point_at_real_roles_and_skills():
+    programmes = ROWS["programmes"]
+    assert len(programmes) >= 8
+    ids = [p["programme_id"] for p in programmes]
+    assert len(ids) == len(set(ids)) and len({p["slug"] for p in programmes}) == len(ids)
+    roles, skills = set(_ids("job_roles", "role_id")), set(_ids("skills", "skill_id"))
+    linked_roles = {r["role_id"] for r in ROWS["programme_roles"]}
+    assert linked_roles == roles, "every pilot role needs at least one programme"
+    assert {r["programme_id"] for r in ROWS["programme_roles"]} == set(ids)
+    assert {r["skill_id"] for r in ROWS["programme_skills"]} <= skills
+    assert {r["programme_id"] for r in ROWS["programme_skills"]} == set(ids)
+    for programme in programmes:
+        assert programme["provider_type"] in {"incubate", "partner"}
+        assert programme["mode"] in {"online", "in_person", "hybrid"}
+        assert programme["duration_weeks"] >= 1 and programme["price_amount"] >= 0
+        assert programme["currency"] == "NGN" and programme["url"].startswith("https://")
+
+
 def test_the_job_title_ladder():
     ladder = sorted(ROWS["job_titles"], key=lambda row: row["rank"])
     assert [row["slug"] for row in ladder] == ["intern", "junior", "mid", "senior", "lead"]
