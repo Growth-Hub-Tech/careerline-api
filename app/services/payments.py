@@ -117,11 +117,19 @@ def _payment_out(payment: Payment) -> PaymentOut:
 
 
 async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutRequest) -> Checkout:
-    if data.item_type != "credit_pack":
-        raise BadRequestError("Subscriptions are not on sale yet; buy a credit pack")
-    pack = await db.get(CreditPack, data.item_id)
-    if pack is None or not pack.is_active:
-        raise NotFoundError(f"No credit pack with id {data.item_id}")
+    """A credit pack (Day 16) or a subscription plan (Day 25)."""
+    if data.item_type == "subscription_plan":
+        from app.services import subscriptions  # subscriptions uses this module
+
+        plan = await subscriptions.plan_for_checkout(db, learner, data.item_id)
+        item_id, description = plan.plan_id, f"{plan.name} subscription"
+        amount, currency, credits = plan.price_amount, plan.currency, plan.credits_per_interval
+    else:
+        pack = await db.get(CreditPack, data.item_id)
+        if pack is None or not pack.is_active:
+            raise NotFoundError(f"No credit pack with id {data.item_id}")
+        item_id, description = pack.pack_id, f"{pack.credits} test credits ({pack.name})"
+        amount, currency, credits = pack.price_amount, pack.currency, pack.credits
     callback = callback_url_for(data.callback_url)
     _require_paystack()
 
@@ -129,14 +137,14 @@ async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutReque
     try:
         started = await paystack.initialize(
             email=learner.email,
-            amount=pack.price_amount,
-            currency=pack.currency,
+            amount=amount,
+            currency=currency,
             reference=reference,
             callback_url=callback,
             metadata={
                 "learner_id": learner.learner_id,
-                "item_type": "credit_pack",
-                "item_id": pack.pack_id,
+                "item_type": data.item_type,
+                "item_id": item_id,
             },
         )
     except paystack.PaystackError as exc:
@@ -145,12 +153,12 @@ async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutReque
     payment = Payment(
         reference=reference,
         learner_id=learner.learner_id,
-        item_type="credit_pack",
-        item_id=pack.pack_id,
-        description=f"{pack.credits} test credits ({pack.name})",
-        amount=pack.price_amount,
-        currency=pack.currency,
-        credits=pack.credits,
+        item_type=data.item_type,
+        item_id=item_id,
+        description=description,
+        amount=amount,
+        currency=currency,
+        credits=credits,
         status="pending",
         authorization_url=started.authorization_url,
         access_code=started.access_code,
@@ -159,7 +167,12 @@ async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutReque
     db.add(payment)
     await db.flush()
     await db.refresh(payment)
-    logger.info("checkout_started", reference=reference, learner_id=learner.learner_id)
+    logger.info(
+        "checkout_started",
+        reference=reference,
+        learner_id=learner.learner_id,
+        item_type=data.item_type,
+    )
     return Checkout(
         **_payment_out(payment).model_dump(), authorization_url=started.authorization_url
     )
@@ -276,7 +289,15 @@ async def settle(
         payment.paid_at = datetime.now(UTC)
         payment.paystack_transaction_id = transaction.transaction_id
         payment.channel = transaction.channel
-        await _add_credits(db, payment.learner_id, payment.credits, "purchase", payment.id)
+        if payment.item_type == "subscription_plan":
+            from app.services import subscriptions  # subscriptions uses this module
+
+            payment.credits = await subscriptions.activate(db, payment, transaction)
+            await _add_credits(
+                db, payment.learner_id, payment.credits, "subscription_grant", payment.id
+            )
+        else:
+            await _add_credits(db, payment.learner_id, payment.credits, "purchase", payment.id)
         logger.info("payment_paid", reference=reference, source=source)
     elif transaction.status in FAILED_STATUSES:
         payment.status = "failed"

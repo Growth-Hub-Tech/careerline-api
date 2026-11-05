@@ -27,6 +27,7 @@ from app.schemas.common import LevelName, Page
 from app.schemas.organisations import Organisation as OrganisationOut
 from app.schemas.organisations import RosterResult, RosterUpload
 from app.schemas.organisations import TeamMember as TeamMemberOut
+from app.services import subscriptions
 
 
 def _now() -> datetime:
@@ -55,7 +56,7 @@ async def get_organisation(db: AsyncSession, organisation_id: int) -> Organisati
         name=row.name,
         industry=row.industry,
         size=row.size,
-        seats_total=row.seats_total,
+        seats_total=await subscriptions.organisation_seats(db, row.id, row.seats_total),
         seats_used=await seats_used(db, row.id),
         created_at=row.created_at,
     )
@@ -210,10 +211,11 @@ async def upload_roster(db: AsyncSession, organisation_id: int, data: RosterUplo
     }
     new_people = len(seen) - len(existing)
     total = await seats_used(db, organisation_id) + new_people
-    if total > organisation.seats_total:
+    seats = await subscriptions.organisation_seats(db, organisation_id, organisation.seats_total)
+    if total > seats:
         raise PaymentRequiredError(
             f"The roster would have {total} people and the organisation has "
-            f"{organisation.seats_total} seats. Add seats (an organisation plan) or upload fewer."
+            f"{seats} seats. Add seats (an organisation plan) or upload fewer."
         )
     now = _now()
     for item in data.members:

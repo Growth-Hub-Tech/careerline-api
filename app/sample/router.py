@@ -7,11 +7,7 @@ sample route ever has the same method and path as a real one.
 
 from fastapi import APIRouter
 
-from app.sample.routes import (
-    helpers,
-    profile,
-    subscriptions,
-)
+from app.sample.routes import profile
 
 sample_router = APIRouter()
 
@@ -20,10 +16,6 @@ sample_router = APIRouter()
 # beginner path on Day 13, programmes on Day 14,
 # payments and credits on Day 16, the test catalogue on Day 17, privacy on Day 18,
 # candidates and invitations on Day 19, the candidate report on Day 20, the organisation
-# audit (organisation, roster, audits, heatmap, targets) on Days 21-23;
-# see app/api/routes)
+# audit (organisation, roster, audits, heatmap, targets) on Days 21-23, subscriptions on
+# Day 25; see app/api/routes)
 sample_router.include_router(profile.router)
-
-# Day 3: second half of the API, with flows that work end to end on sample state
-sample_router.include_router(subscriptions.router)
-sample_router.include_router(helpers.router)

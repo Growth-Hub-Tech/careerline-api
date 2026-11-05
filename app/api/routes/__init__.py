@@ -19,6 +19,7 @@ from app.api.routes import (
     results,
     roles,
     skills,
+    subscriptions,
     tests_catalogue,
 )
 
@@ -41,6 +42,7 @@ api_router.include_router(results.downloads)
 api_router.include_router(beginner_path.router)
 api_router.include_router(programmes.router)
 api_router.include_router(payments.router)
+api_router.include_router(subscriptions.router)
 api_router.include_router(privacy.router)
 api_router.include_router(recommendations.router)
 api_router.include_router(contact.router)

@@ -39,6 +39,7 @@ from app.models.models import (
 from app.models.payments import CreditPack, TestPrice
 from app.models.programmes import Programme, ProgrammeRole, ProgrammeSkill
 from app.models.roles import JobRole, JobRoleSkill, JobTitle
+from app.models.subscriptions import SubscriptionPlan
 from app.services import question_quality as quality
 
 SEEDS_DIR = Path(__file__).resolve().parents[2] / "seeds"
@@ -61,6 +62,7 @@ TABLES: dict[str, Table] = {
     "programme_skills": ProgrammeSkill.__table__,  # type: ignore[dict-item]
     "credit_packs": CreditPack.__table__,  # type: ignore[dict-item]
     "test_prices": TestPrice.__table__,  # type: ignore[dict-item]
+    "subscription_plans": SubscriptionPlan.__table__,  # type: ignore[dict-item]
 }
 LEVEL_TABLES = ("proficiency_level", "level_threshold")
 
@@ -191,6 +193,16 @@ def read_seed_rows(limits: quality.Thresholds | None = None) -> dict[str, list[d
             }
         )
     rows["test_prices"] = list(_read("test_prices.json")["prices"])
+    for plan in _read("subscription_plans.json")["plans"]:
+        price = plan.pop("price")
+        rows["subscription_plans"].append(
+            {
+                **plan,
+                "price_amount": price["amount"],
+                "currency": price["currency"],
+                "is_active": True,
+            }
+        )
     return rows
 
 
@@ -246,7 +258,7 @@ def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str,
         _move_id_counter_past_max(conn, table)
         if name == "job_role_skills":
             _drop_role_skills_not_in_files(conn, rows["job_role_skills"])
-        if name in ("programmes", "credit_packs"):
+        if name in ("programmes", "credit_packs", "subscription_plans"):
             _retire_rows_not_in_files(conn, table, rows[name])
         if name in ("programme_roles", "programme_skills"):
             _drop_links_not_in_files(conn, table, rows[name])
@@ -275,8 +287,8 @@ def _drop_role_skills_not_in_files(conn: Connection, rows: list[dict[str, Any]])
 
 
 def _retire_rows_not_in_files(conn: Connection, table: Table, rows: list[dict[str, Any]]) -> None:
-    """A programme or credit pack taken out of the file is retired (is_active false), not
-    deleted: old clicks and payments point at it."""
+    """A programme, credit pack or plan taken out of the file is retired (is_active false), not
+    deleted: old clicks, payments and subscriptions point at it."""
     (key,) = table.primary_key.columns
     wanted = [r[key.name] for r in rows]
     conn.execute(

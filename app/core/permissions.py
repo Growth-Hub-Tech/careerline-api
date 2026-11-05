@@ -218,9 +218,6 @@ POLICIES: dict[str, Policy] = {
     "GET /organisations/{organisation_id}/heatmap": org(P.AUDITS_READ),
     "GET /organisations/{organisation_id}/targets": org(P.AUDITS_READ),
     "PUT /organisations/{organisation_id}/targets": org(P.AUDITS_MANAGE),
-    # Sample API helpers (test server only: drive the sample flows)
-    "GET /sample/paystack/{reference}": PUBLIC,
-    "POST /sample/reset": PUBLIC,
 }
 
 
