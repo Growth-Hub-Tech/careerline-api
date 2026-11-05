@@ -13,6 +13,8 @@ from app.schemas.common import Page
 from app.schemas.organisations import (
     Audit,
     AuditCreate,
+    AuditDeltas,
+    AuditRetest,
     AuditSummary,
     GroupBy,
     Heatmap,
@@ -157,6 +159,45 @@ async def start_draft_audit(
     actor: OrganisationMember = Depends(acting_member),
 ):
     return await audits.start_audit(db, actor, audit_id)
+
+
+# RE-TEST (Day 24): the same people and tests again, e.g. after training (PRD: pre/post re-test)
+@router.post(
+    "/{organisation_id}/audits/{audit_id}/retest",
+    status_code=201,
+    response_model=Audit,
+    responses=errors(400, 401, 403, 404, 409, 422),
+    description="Owners and admins. A new audit (baseline_audit_id = this one) for this audit's "
+    "people (or member_ids: some of them) and the same tests. Its benchmarks carry "
+    "baseline_average_score and score_delta; GET .../deltas shows each person's change. "
+    "send_invitations=false makes a draft (start it with .../start). 409: the audit is still a "
+    "draft. 400: a member who was not in the audit.",
+)
+async def retest_audit(
+    organisation_id: int,
+    audit_id: int,
+    data: AuditRetest,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    return await audits.retest_audit(db, actor, audit_id, data)
+
+
+@router.get(
+    "/{organisation_id}/audits/{audit_id}/deltas",
+    response_model=AuditDeltas,
+    responses=errors(400, 401, 403, 404),
+    description="Owners and admins. For a re-test: each person's newest score and level per "
+    "skill in the baseline audit (before) and in this one (after), and the change "
+    "(score_delta = after - before; null until both exist). By name. 400: not a re-test.",
+)
+async def get_audit_deltas(
+    organisation_id: int,
+    audit_id: int,
+    db: AsyncSession = Depends(get_db, scope="function"),
+    actor: OrganisationMember = Depends(acting_member),
+):
+    return await audits.audit_deltas(db, actor.organisation_id, audit_id)
 
 
 # CAPABILITY HEATMAP (Day 23): rows by department, role or person; columns are skills

@@ -61,6 +61,9 @@ class Benchmark(BaseModel):
     industry_average_score: float | None
     members_at_or_above_target: int
     members_tested: int
+    # Day 24, a re-test: the baseline audit's team average for this role and skill, and the change
+    baseline_average_score: float | None = None
+    score_delta: float | None = None
 
 
 class AuditSummary(BaseModel):
@@ -72,6 +75,9 @@ class AuditSummary(BaseModel):
     members_completed: int
     started_at: datetime | None
     completed_at: datetime | None
+    baseline_audit_id: int | None = Field(
+        default=None, description="Day 24: a re-test of this audit (null: not a re-test)"
+    )
 
 
 class Audit(AuditSummary):
@@ -85,6 +91,39 @@ class AuditCreate(BaseModel):
         default=None, description="Default: everyone in those roles"
     )
     send_invitations: bool = True
+
+
+class AuditRetest(BaseModel):
+    """Day 24: test the same people for the same tests again (after training, for example)."""
+
+    name: str | None = Field(
+        default=None, min_length=1, max_length=120, description='Default: "<name> (re-test)"'
+    )
+    member_ids: list[int] | None = Field(
+        default=None, description="Default: everyone in the baseline audit"
+    )
+    send_invitations: bool = True
+
+
+class MemberDelta(BaseModel):
+    member_id: int
+    full_name: str
+    role_id: int
+    skill_id: int
+    skill_name: str
+    before_score: float | None
+    before_level: LevelName | None
+    after_score: float | None
+    after_level: LevelName | None
+    score_delta: float | None
+
+
+class AuditDeltas(BaseModel):
+    """Each person's before (the baseline audit) and after (this re-test) per skill."""
+
+    audit_id: int
+    baseline_audit_id: int
+    items: list[MemberDelta]
 
 
 class HeatmapSkill(BaseModel):
