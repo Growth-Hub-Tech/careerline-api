@@ -78,6 +78,8 @@ class Settings(BaseSettings):
     LOGIN_MAX_FAILURES_PER_IP: int = 20  # ... and per IP address ...
     LOGIN_WINDOW_MINUTES: int = 15  # ... within this window, then 429 until it passes
     SIGNUPS_PER_IP_PER_HOUR: int = 20
+    # Day 29: Paystack checkouts (credit packs and plans) one person may start per hour
+    CHECKOUTS_PER_HOUR: int = 20
 
     # Question quality (Day 8, app/services/question_quality.py). The correct option is the single
     # longest and at least this many times the average wrong option: a review note / not served.
