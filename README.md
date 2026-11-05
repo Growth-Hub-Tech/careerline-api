@@ -152,7 +152,7 @@ A pull request into `main` must come from `dev`.
 
 ## Going live
 
-With `APP_ENV=production` the API refuses to start, and logs every reason at once, while a setting is unsafe or still a test one (`app/core/launch_checks.py`): `SECRET_KEY` shorter than 32 characters or a placeholder; `FRONTEND_URL` or a `CORS_ORIGINS` entry not https (or `*`, or localhost); `PAYSTACK_SECRET_KEY` not a live key (`sk_live_…`); emails not going out by SMTP (`EMAIL_BACKEND`, `SMTP_HOST`); the placeholder `EMAIL_FROM`; `CHECK_MIGRATIONS_ON_STARTUP=false`. Check a configuration from a shell before deploying it:
+With `APP_ENV=production` the API refuses to start, and logs every reason at once, while a setting is unsafe or still a test one (`app/core/launch_checks.py`): `SECRET_KEY` shorter than 32 characters or a placeholder; `FRONTEND_URL` or a `CORS_ORIGINS` entry not https (or `*`, or localhost); `PAYSTACK_SECRET_KEY` not a live key (`sk_live_…`); emails not going out by SMTP (`EMAIL_BACKEND`, `SMTP_HOST`); the placeholder `EMAIL_FROM`; `CHECK_MIGRATIONS_ON_STARTUP=false`. The whole launch checklist (services, settings, Paystack, data, the website, launch day) is [docs/launch.md](docs/launch.md). Check a configuration from a shell before deploying it:
 
 ```bash
 APP_ENV=production python -m app.core.launch_checks   # lists the problems; exit 1 if any
