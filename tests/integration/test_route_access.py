@@ -17,8 +17,8 @@ from sqlalchemy import text
 from app.core import permissions
 from app.core.permissions import POLICIES, Policy
 from app.core.security import create_access_token
+from app.db.demo import DEMO_ORGANISATION_ID as ORG_ID
 from app.main import app
-from app.sample.routes.organisations import ORG_ID
 
 USERS = ("anonymous", "learner", "recruiter", "admin", "owner", "other_org_owner")
 ROUTES = sorted(

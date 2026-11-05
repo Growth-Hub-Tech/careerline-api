@@ -9364,7 +9364,7 @@
     },
     "/api/v1/organisations/{organisation_id}/heatmap": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "Owners and admins. Columns: the skills of the people's roles. A cell averages the people's newest team result in that skill; level is that average's level; band compares it with the target (the organisation's target, else what the role needs; the highest in the row): strong meets it, developing is one level short, weak further, not_tested nobody has a result. department rows: key is the department in lower case (none: no department). audit_id: only that audit's people and results (null: everyone's newest team results).",
         "operationId": "get_heatmap_api_v1_organisations__organisation_id__heatmap_get",
         "parameters": [
           {
@@ -9419,16 +9419,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9438,16 +9428,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -9469,26 +9449,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9498,36 +9458,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9537,23 +9467,7 @@
         ],
         "summary": "Get Heatmap",
         "tags": [
-          "Sample: Heatmap"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Organisation audit"
         ]
       }
     },
@@ -9782,7 +9696,7 @@
     },
     "/api/v1/organisations/{organisation_id}/targets": {
       "get": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`, and for this route `empty` (lists come back empty).",
+        "description": "Owners and admins. By role, then skill. members_meeting: people in that role whose newest team result in that skill is at or above the target.",
         "operationId": "get_targets_api_v1_organisations__organisation_id__targets_get",
         "parameters": [
           {
@@ -9806,16 +9720,6 @@
             },
             "description": "Successful Response"
           },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Bad request: invalid input (the message says what is wrong)"
-          },
           "401": {
             "content": {
               "application/json": {
@@ -9825,16 +9729,6 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
-          },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
           },
           "403": {
             "content": {
@@ -9856,26 +9750,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -9885,36 +9759,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -9924,27 +9768,11 @@
         ],
         "summary": "Get Targets",
         "tags": [
-          "Sample: Targets"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow",
-          "empty"
+          "Organisation audit"
         ]
       },
       "put": {
-        "description": "**Sample data** (header `X-Sample-Data: true`): a realistic, typed sample answer until this endpoint is built for real. The response shape will not change.\n\nSample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.\n\nForce an edge case with the `X-Mock-Scenario` header: `unauthenticated`, `payment_required`, `forbidden`, `not_found`, `conflict`, `expired`, `validation_error`, `rate_limited`, `server_error`, `unavailable`, `slow`.",
+        "description": "Owners and admins. Replaces all targets (an empty list clears them). Audit benchmarks and the heatmap use them instead of what the role needs. 400: the same role and skill twice. 404: an unknown role or skill. Nothing changes on an error.",
         "operationId": "set_targets_api_v1_organisations__organisation_id__targets_put",
         "parameters": [
           {
@@ -9998,16 +9826,6 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
-          "402": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Payment required: not enough credits or no active subscription"
-          },
           "403": {
             "content": {
               "application/json": {
@@ -10028,26 +9846,6 @@
             },
             "description": "Not found"
           },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict: e.g. this attempt was already submitted"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
           "422": {
             "content": {
               "application/json": {
@@ -10057,36 +9855,6 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Server error: something went wrong on our side"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service unavailable: try again shortly"
           }
         },
         "security": [
@@ -10096,22 +9864,7 @@
         ],
         "summary": "Set Targets",
         "tags": [
-          "Sample: Targets"
-        ],
-        "x-sample": true,
-        "x-sample-note": "Sample data for the sample organisation 41 (the demo company): any login token works, and `forbidden` shows the 403 someone outside the organisation will get. Replaces all targets.",
-        "x-sample-scenarios": [
-          "unauthenticated",
-          "payment_required",
-          "forbidden",
-          "not_found",
-          "conflict",
-          "expired",
-          "validation_error",
-          "rate_limited",
-          "server_error",
-          "unavailable",
-          "slow"
+          "Organisation audit"
         ]
       }
     },

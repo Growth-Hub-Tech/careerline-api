@@ -25,8 +25,8 @@ from app.models.organisations import Organisation, OrganisationMember
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-# The demo company has the sample organisation's id (app/sample/routes/organisations.py), so
-# the organisation routes that still give sample answers answer for it.
+# The demo company has the id the sample organisation routes used (41) until the organisation
+# audit became real (Days 21-23), so links and notes from then still point at it.
 DEMO_ORGANISATION_ID = 41
 DEMO_COMPANY = "Demo Company Ltd"
 # Public and fake on purpose (test server only)

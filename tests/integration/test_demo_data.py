@@ -1,16 +1,16 @@
 """Day 7: demo accounts and a demo company for the test server (python -m app.db.demo).
 
 Loaded on start when DEMO_DATA_ON_START=true, never in production, safe to run on every
-deploy. The demo company has the id of the sample organisation (41), so the sample organisation
-routes answer for it."""
+deploy. The demo company has id 41, the id of the sample organisation before the organisation
+audit became real (Days 21-23)."""
 
 import pytest
 from sqlalchemy import text
 
 from app.core.config import settings
 from app.db import demo
+from app.db.demo import DEMO_ORGANISATION_ID as ORG_ID
 from app.db.seed import load as load_seeds
-from app.sample.routes.organisations import ORG_ID
 from tests.integration.conftest import login
 
 API = settings.API_PREFIX

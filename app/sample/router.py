@@ -9,7 +9,6 @@ from fastapi import APIRouter
 
 from app.sample.routes import (
     helpers,
-    organisations,
     profile,
     subscriptions,
 )
@@ -20,13 +19,11 @@ sample_router = APIRouter()
 # Day 6, roles on Day 8, results and their PDF report on Day 12, the
 # beginner path on Day 13, programmes on Day 14,
 # payments and credits on Day 16, the test catalogue on Day 17, privacy on Day 18,
-# candidates and invitations on Day 19, the candidate report on Day 20;
+# candidates and invitations on Day 19, the candidate report on Day 20, the organisation
+# audit (organisation, roster, audits, heatmap, targets) on Days 21-23;
 # see app/api/routes)
 sample_router.include_router(profile.router)
 
 # Day 3: second half of the API, with flows that work end to end on sample state
 sample_router.include_router(subscriptions.router)
-sample_router.include_router(organisations.audit_router)
-sample_router.include_router(organisations.heatmap_router)
-sample_router.include_router(organisations.targets_router)
 sample_router.include_router(helpers.router)
