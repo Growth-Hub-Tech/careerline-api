@@ -122,6 +122,32 @@ async def initialize(
     return Initialized(authorization_url=url, access_code=str(code or ""))
 
 
+async def charge_authorization(
+    *,
+    email: str,
+    amount: int,
+    currency: str,
+    reference: str,
+    authorization_code: str,
+    metadata: dict[str, Any],
+) -> Transaction:
+    """Charge a saved card again (subscription renewals). Paystack refuses a reference it has
+    seen, so the same reference can never be charged twice."""
+    data = await _call(
+        "POST",
+        "/transaction/charge_authorization",
+        json={
+            "email": email,
+            "amount": amount,
+            "currency": currency,
+            "reference": reference,
+            "authorization_code": authorization_code,
+            "metadata": metadata,
+        },
+    )
+    return transaction_from(data)
+
+
 async def verify(reference: str) -> Transaction:
     data = await _call("GET", f"/transaction/verify/{reference}")
     return transaction_from(data)

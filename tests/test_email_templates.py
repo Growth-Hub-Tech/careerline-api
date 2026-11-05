@@ -35,6 +35,11 @@ PLAIN_CONTEXT = {
     # Day 19 invitation
     "test_title": "Python",
     "expires_on": "09 Nov 2026",
+    # Day 26 renewal email
+    "plan_name": "Individual Monthly",
+    "declined": True,
+    "period_end": "02 Dec 2026",
+    "grace_days": 3,
 }
 SAMPLE_CONTEXT = {
     "ticket_id": "CT-20261027-0001",

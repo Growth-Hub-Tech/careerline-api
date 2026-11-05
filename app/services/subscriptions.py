@@ -14,6 +14,15 @@ year. Cancelling (cancel_at_period_end) keeps the plan until the period ends. A 
 without being paid again is past_due for SUBSCRIPTION_GRACE_DAYS, then cancelled. The status is
 brought up to date whenever a subscription is read.
 
+Renewals (Day 26): a paid period schedules a renew_subscription job an hour before it ends. The
+job charges the card of the first payment (Paystack's reusable authorization) through
+settle(), like any payment, so the next period starts where the last one ended and its credits
+are added once. Declined, or no reusable card: one email asking the person to pay again
+(POST /subscriptions works while past_due), and the card is tried again the next day, up to
+SUBSCRIPTION_RENEW_ATTEMPTS. Each attempt has its own fixed reference, so a job that runs again
+after a crash can never charge twice (Paystack refuses a known reference; its status is then
+read with verify). A cancelled plan is never charged.
+
 Seats: an organisation's seats are the most of its own seats_total (25 without a plan) and the
 seats of its live organisation plan.
 """
@@ -27,7 +36,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.config import settings
 from app.core.exceptions import ConflictError, ForbiddenError, NotFoundError
 from app.core.logging import get_logger
+from app.email.outbox import send_email
 from app.integrations import paystack
+from app.jobs.queue import enqueue
+from app.jobs.registry import job
 from app.models.models import Learner
 from app.models.organisations import OrganisationMember
 from app.models.payments import Payment
@@ -39,6 +51,9 @@ from app.schemas.subscriptions import Subscription as SubscriptionOut
 logger = get_logger(__name__)
 
 LIVE = ("active", "past_due")
+RENEW_JOB = "renew_subscription"
+RENEW_AHEAD = timedelta(hours=1)
+RETRY_AFTER = timedelta(days=1)
 
 
 def _now() -> datetime:
@@ -251,9 +266,135 @@ async def activate(db: AsyncSession, payment: Payment, transaction: paystack.Tra
         row.authorization_code = transaction.authorization_code
     await db.flush()
     payment.subscription_id = row.id
+    await schedule_renewal(db, row)
     return plan.credits_per_interval
 
 
 async def organisation_seats(db: AsyncSession, organisation_id: int, own_seats: int) -> int:
     plan = await _live_organisation_plan(db, organisation_id)
     return max(own_seats, plan.seats or 0) if plan else own_seats
+
+
+# ---------- renewals (Day 26) ----------
+
+
+def _stamp(value: datetime) -> str:
+    return _aware(value).astimezone(UTC).isoformat()
+
+
+async def schedule_renewal(
+    db: AsyncSession, row: Subscription, attempt: int = 1, run_after: datetime | None = None
+) -> None:
+    period_end = _stamp(row.current_period_end)
+    await enqueue(
+        db,
+        RENEW_JOB,
+        {"subscription_id": row.id, "period_end": period_end, "attempt": attempt},
+        dedupe_key=f"renew:{row.id}:{period_end}:{attempt}",
+        run_after=run_after or _aware(row.current_period_end) - RENEW_AHEAD,
+    )
+
+
+def _same_moment(a: str, b: datetime) -> bool:
+    try:
+        parsed = _aware(datetime.fromisoformat(a))
+    except ValueError:
+        return False
+    return abs(parsed - _aware(b)) < timedelta(seconds=1)
+
+
+async def _ask_to_pay(
+    db: AsyncSession, row: Subscription, plan: SubscriptionPlan, learner: Learner, declined: bool
+) -> None:
+    """One email per period: the plan could not be renewed, pay again to keep it."""
+    await send_email(
+        db,
+        to=learner.email,
+        template="subscription_payment_failed",
+        context={
+            "full_name": learner.full_name,
+            "plan_name": plan.name,
+            "declined": declined,
+            "period_end": _aware(row.current_period_end).strftime("%d %b %Y"),
+            "grace_days": settings.SUBSCRIPTION_GRACE_DAYS,
+            "link": f"{settings.FRONTEND_URL.rstrip('/')}/subscription",
+        },
+        dedupe_key=f"subscription_payment_failed:{row.id}:{_stamp(row.current_period_start)}",
+    )
+
+
+@job(RENEW_JOB)
+async def renew(session: AsyncSession, payload: dict[str, object]) -> None:
+    from app.services import payments  # payments uses this module
+
+    row = await session.scalar(
+        select(Subscription)
+        .where(Subscription.id == payload.get("subscription_id"))
+        .with_for_update()
+    )
+    if row is None:
+        return
+    bring_up_to_date(row)
+    if row.status == "cancelled" or row.cancel_at_period_end:
+        return  # ended or cancelled: never charged
+    if not _same_moment(str(payload.get("period_end")), row.current_period_end):
+        return  # already renewed (or paid again by hand): a newer job is scheduled
+    plan = await session.get(SubscriptionPlan, row.plan_id)
+    learner = await session.get(Learner, row.learner_id)
+    if plan is None or learner is None:
+        return
+    raw_attempt = payload.get("attempt")
+    attempt = raw_attempt if isinstance(raw_attempt, int) else 1
+    if not row.authorization_code:
+        await _ask_to_pay(session, row, plan, learner, declined=False)
+        return
+
+    end = _aware(row.current_period_end)
+    reference = f"cl_renew_{row.id}_{int(end.timestamp())}_{attempt}"
+    existing = await session.scalar(select(Payment).where(Payment.reference == reference))
+    if existing is not None and existing.status != "pending":
+        return  # this attempt already ended
+    try:
+        transaction = await paystack.charge_authorization(
+            email=learner.email,
+            amount=plan.price_amount,
+            currency=plan.currency,
+            reference=reference,
+            authorization_code=row.authorization_code,
+            metadata={
+                "learner_id": learner.learner_id,
+                "item_type": "subscription_plan",
+                "item_id": plan.plan_id,
+                "subscription_id": row.id,
+            },
+        )
+    except paystack.PaystackError:
+        # a known reference, or no answer: ask Paystack what happened to it; no answer at
+        # all raises, and the job runs again later with the same reference
+        transaction = await paystack.verify(reference)
+    if existing is None:
+        session.add(
+            Payment(
+                reference=reference,
+                learner_id=learner.learner_id,
+                item_type="subscription_plan",
+                item_id=plan.plan_id,
+                description=f"{plan.name} subscription (renewal)",
+                amount=plan.price_amount,
+                currency=plan.currency,
+                credits=plan.credits_per_interval,
+                status="pending",
+                authorization_url="",
+                access_code="",
+                callback_url=settings.FRONTEND_URL,
+                subscription_id=row.id,
+            )
+        )
+        await session.flush()
+    payment = await payments.settle(session, reference, transaction, source="renewal")
+    if payment is None or payment.status in ("paid", "pending"):
+        return  # paid: the next renewal is scheduled; pending: Paystack's webhook settles it
+    logger.info("subscription_renewal_declined", subscription_id=row.id, attempt=attempt)
+    await _ask_to_pay(session, row, plan, learner, declined=True)
+    if attempt < settings.SUBSCRIPTION_RENEW_ATTEMPTS:
+        await schedule_renewal(session, row, attempt + 1, run_after=_now() + RETRY_AFTER)
