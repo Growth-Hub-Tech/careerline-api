@@ -163,7 +163,7 @@ POLICIES: dict[str, Policy] = {
     "POST /results/{result_id}/report": SIGNED_IN,
     # A report's download link: the signed token in the path is the proof
     "GET /reports/{token}": PUBLIC,
-    # A learner's own things (sample routes until built: they answer for the caller)
+    # A learner's own things (they answer for the caller)
     "GET /tests/{test_id}/access": SIGNED_IN,
     "GET /profile": SIGNED_IN,
     "PATCH /profile": SIGNED_IN,

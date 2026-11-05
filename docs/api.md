@@ -278,56 +278,18 @@ A plan is started (or renewed) and its credits added exactly once per payment, h
 **Renewals (Day 26).** Nothing for the app to do: an hour before a period ends the server charges the card of the first payment again (when it was a card Paystack can charge again). Paid: the next period starts where the last one ended, its credits are added, and `GET /payments` shows a payment "… subscription (renewal)". Declined, or no card to charge (e.g. a bank transfer): the person gets one email ("Your … subscription could not be renewed") with a link to `<website>/subscription`, and the card is tried again once a day, up to `SUBSCRIPTION_RENEW_ATTEMPTS` (3) times. Unpaid when the period ends: `past_due` for the grace days, during which `POST /subscriptions` pays it again (a new period from that moment); then `cancelled`. A plan with `cancel_at_period_end` is never charged. When an organisation plan ends, the organisation's `seats_total` goes back to 25 (people already on the roster stay; uploads past the seats are `402`).
 
 
-## Sample data
+## Profile (Day 28)
 
-Endpoints that are not built yet answer with **realistic, typed sample data**, on their real path, in the real envelope, with the real response model. Build the screens against them now: when the real feature lands (Days 6–27) the path and the shape stay the same, only the data becomes real.
+- `GET /profile` → `{ learner_id, full_name, headline, location, current_role, years_experience, goals, weekly_hours, budget, linkedin_url, visibility, completeness, updated_at }`. Empty (`null`s, `goals: []`) and `visibility: "private"` until the person fills it in. `completeness` is the share filled in, in % (the name counts, so a new profile is 11).
+- `PATCH /profile` with only the fields to change; `null` clears one. `goals`: up to 10, each 1–100 characters (`422` otherwise). `linkedin_url` must be a LinkedIn link (`https://www.linkedin.com/...`, `400` otherwise). `visibility: "recruiters"` turns on the `share_profile_with_recruiters` consent and `"private"` turns it off: it is the same switch as in `GET /privacy/consents`, and every change is kept.
 
-How to tell:
+## No sample data
 
-- Response header `X-Sample-Data: true` (the browser can read it: it is in `Access-Control-Expose-Headers`), and `"message": "Sample data"` on success.
-- In `/docs` and `openapi.json` they are tagged `Sample: …` and carry `"x-sample": true`. When an endpoint becomes real, its `Sample:` tag and `x-sample` go away (see Changes below).
-- Protected sample endpoints need a real sign-in, and the organisation and recruiter ones the right organisation role (see "Who can call what"). On the test server, use the demo accounts.
-
-What is real today: `/auth/*`, `/accounts/*`, `/learners/*`, `/skills/*`, `/roles`, `/job-titles`, `/attempts/*`, `/results/*` (and the PDF report), `/beginner-path/*`, `/profile/skills` (and its history), `/recommendations/*`, `/contact`, `/payments/*`, `/credits`, `/privacy/*`, `/recruiter/*`, `/invitations/*`, `/organisations/*`, `/subscriptions/*` and who may call every route (they use the database; on the test server it holds the real question bank from `seeds/`). Everything tagged `Sample:` is sample.
-
-### Force an edge case: `X-Mock-Scenario`
-
-Send the header `X-Mock-Scenario: <name>` on any sample call to get that case, with the real status code and error envelope:
-
-| Scenario | Answer |
-| --- | --- |
-| `unauthenticated` | 401 `unauthenticated` |
-| `payment_required` | 402 `payment_required` |
-| `forbidden` | 403 `forbidden` |
-| `not_found` | 404 `not_found` |
-| `conflict` | 409 `conflict` |
-| `expired` | 410 `expired` |
-| `validation_error` | 422 `validation_error` with `details` |
-| `rate_limited` | 429 `rate_limited` with `Retry-After: 30` |
-| `server_error` | 500 `internal_error` |
-| `unavailable` | 503 `service_unavailable` |
-| `slow` | the normal answer after 2 seconds (loading states) |
-
-The scenarios each endpoint offers are listed in its description in `/docs` and in `x-sample-scenarios` (the only sample endpoints left, `GET`/`PATCH /profile`, offer the ones above). A name the endpoint doesn't offer is a 400 that lists the ones it does, so a typo never looks like a normal answer. Names ignore case.
-
-```bash
-curl -H "Authorization: Bearer $TOKEN" -H "X-Mock-Scenario: not_found" "$API/profile"
-```
-
-```ts
-// e.g. a dev-only switch in the app that adds the header to every call
-fetch(`${API}/profile`, { headers: { Authorization: `Bearer ${token}`, "X-Mock-Scenario": "slow" } });
-```
-
-Real endpoints ignore the header.
-
-### No sample flows left
-
-Since Day 25 every flow is real: checkout (credits and plans) goes through Paystack's test mode, invitations through real tests. The sample state, the sample Paystack page and the `/api/v1/sample/*` helpers are gone.
+Since Day 28 every endpoint is real: nothing answers `X-Sample-Data` any more, `X-Mock-Scenario` means nothing, and `openapi.json` has no `Sample:` tags or `x-sample`. For empty states and errors, use real data on the test server (the demo accounts, a new account, or the cases each endpoint's description lists).
 
 ## TypeScript types from `openapi.json`
 
-`openapi.json` in the repo is the whole contract (real + sample endpoints), regenerated in every PR that changes the API. Generate types from it, e.g. with [openapi-typescript](https://openapi-ts.dev):
+`openapi.json` in the repo is the whole contract, regenerated in every PR that changes the API. Generate types from it, e.g. with [openapi-typescript](https://openapi-ts.dev):
 
 ```bash
 npx openapi-typescript ../careerline-api/openapi.json -o src/api/schema.d.ts
@@ -347,7 +309,6 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 - Everything is under `/api/v1`. Inside v1 we only make **additive** changes without notice to the code: new endpoints, new optional fields, new error codes, new scenarios. The app must ignore fields it doesn't know.
 - A **breaking** change (removing or renaming a field or endpoint, changing a type, making a field required) is never made silently. The old one is first marked `deprecated` in `openapi.json` and kept for at least one week (or a `/api/v2` route is added), and it is announced as below.
-- A sample endpoint becoming real is not a breaking change: same path, same shape. It loses its `Sample:` tag and `x-sample`, and starts using real data (it may then answer 404/403 where the sample answered with made-up data).
 - **How changes are announced:** every PR that changes the API
   1. regenerates and commits `openapi.json` (CI fails otherwise), so the PR diff shows exactly what changed;
   2. has the label `api-change` (and `breaking-change` if it breaks anything);
@@ -361,7 +322,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 - Every deploy runs `scripts/start.sh`: `alembic upgrade head` first, then the server. If a migration fails, the new version never takes traffic.
 - `SECRET_KEY` is generated by Render once (`generateValue`) and shared with the worker; it never appears in the repo.
 - `CORS_ORIGINS` is the website's address(es), comma-separated, set in the dashboard: only those origins can call the API from a browser.
-- `APP_ENV=staging` and `SAMPLE_API_ENABLED=true`: the sample endpoints are on. In production they are off.
+- `APP_ENV=staging`: the test mailbox and the demo accounts are on. In production they are off.
 - The worker (`python -m app.worker`) runs the background jobs (emails, AI advice). On the **free plan** there is no worker service: set `RUN_JOBS_IN_WEB=true` on the web service and the API process runs the jobs itself.
 - `PAYSTACK_SECRET_KEY`: Paystack's **test** secret key (`sk_test_…`) on the test server, set in the dashboard. Without it checkout and the webhook answer `503` (nothing is charged). Set Paystack's webhook URL to `<API base>/api/v1/payments/webhooks/paystack`.
 - `DEMO_DATA_ON_START=true` loads the demo accounts and Demo Company Ltd on every deploy (see "Demo accounts"); it is refused in production.
@@ -371,6 +332,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 
 Newest first. One line per API change, with the PR.
 
+- **Day 28**: the profile is real (`GET`/`PATCH /profile`, see "Profile"), so **every endpoint is real**. **Breaking against the sample:** a new profile is empty and private (the sample showed "Ada Okafor"); `full_name` is the account's name; `visibility` is the `share_profile_with_recruiters` consent (changing one changes the other); `goals` are checked (up to 10, 1–100 characters, `422`) and `linkedin_url` must be a LinkedIn link (`400`). The sample API is gone: no `X-Sample-Data` header (also gone from `Access-Control-Expose-Headers`), no `X-Mock-Scenario`, no `Sample:` tags or `x-sample` in `openapi.json`; `SAMPLE_API_ENABLED` is no longer read.
 - **Day 26**: subscriptions renew themselves (see "Subscriptions": the saved card is charged an hour before the period ends; a decline emails the person and retries daily). No route or response shape changed. New optional env var `SUBSCRIPTION_RENEW_ATTEMPTS=3`; the website needs a `/subscription` page (the renewal email links to it). Nothing breaking.
 - **Day 25**: subscriptions are real (see "Subscriptions"; no more `X-Sample-Data` on `/subscriptions/*`). `item_type: "subscription_plan"` on `POST /payments/checkout` now works (it was `400`). **Breaking against the sample:** `POST /subscriptions` answers Paystack's real (test-mode) `authorization_url`, not the sample Paystack page; a subscription exists only once paid (`GET /subscriptions/me` is `null` before); `403` when the plan is not for the account (recruiter and organisation plans), `409` for a second live plan, `503` without payments set up; the sample scenarios `past_due`, `cancelled` and `no_subscription` are gone; `/api/v1/sample/paystack/{reference}`, `/api/v1/sample/reset` and the other sample helpers are gone. `POST /payments/checkout` can also answer `403`/`409` for plans. Same paths and response shapes. New optional env var `SUBSCRIPTION_GRACE_DAYS=3`; `SAMPLE_STATE_FILE` is no longer read.
 - **Day 24**: pre/post re-tests. New: `POST /organisations/{organisation_id}/audits/{audit_id}/retest` and `GET .../audits/{audit_id}/deltas` (see "Re-test"). New fields, all additive: `baseline_audit_id` on audits, `baseline_average_score` and `score_delta` on benchmarks, `previous_result` and `score_delta` on `GET /results/{result_id}`. Nothing breaking.

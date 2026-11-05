@@ -28,7 +28,6 @@ app/
   repositories/      database queries
   schemas/           Pydantic request/response models
   services/          business logic (attempts, scoring, recommendations)
-  sample/            sample answers for endpoints not built yet (see "Sample API")
   worker.py          background worker: runs the jobs (python -m app.worker)
 migrations/          Alembic environment and the one starting migration
 seeds/               reference data: levels, skills, subskills, questions and options (JSON)
@@ -72,19 +71,9 @@ API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
   Raise `NotFoundError`, `ForbiddenError`, `ConflictError`, etc. from `app/core/exceptions.py`. Unhandled exceptions return a generic 500 and are logged with their traceback; internals are never sent to the client. Validation errors list `details` without echoing the submitted values.
 - **Request ids.** Every response has an `X-Request-ID` header (an incoming one is reused when it is safe). The same id is in every log line and in the error body.
 
-## Sample API
-
-Endpoints that are not built yet answer with realistic, typed **sample data** (`app/sample/`), on their real `/api/v1` path, in the real envelope, with the real response model (`app/schemas/`). The frontend builds against them now; when a feature is built for real, its route moves to `app/api/routes` with the same path and model, the sample route is deleted, and the frontend changes nothing.
-
-- **Marked.** Every sample response (errors too) has the header `X-Sample-Data: true`, successes have `"message": "Sample data"`, and in `/docs` and `openapi.json` sample operations are tagged `Sample: …` with `x-sample: true`.
-- **Edge cases on demand.** Send `X-Mock-Scenario` to force one: `unauthenticated` (401), `payment_required` (402), `forbidden` (403), `not_found` (404), `conflict` (409), `expired` (410), `validation_error` (422), `rate_limited` (429), `server_error` (500), `unavailable` (503) and `slow` (2 s delay) work on every sample route; `empty`, `pending`, `paid`, … only where the route lists them (`x-sample-scenarios`). An unknown scenario is a 400.
-- **Login.** Protected sample routes need a real token from `POST /api/v1/auth/login`; the token is checked but no account is looked up.
-- **Never in the way.** A sample route can't have the same method and path as a real one (a test checks it), and real routes are mounted first.
-- **On or off.** `SAMPLE_API_ENABLED` (unset = on everywhere except `APP_ENV=production`).
-
 ## API description (openapi.json)
 
-`openapi.json` at the repo root is the whole contract, real and sample endpoints, for the frontend to generate TypeScript types from (see `docs/api.md`). After changing any route or response model:
+`openapi.json` at the repo root is the whole contract, for the frontend to generate TypeScript types from (see `docs/api.md`). After changing any route or response model:
 
 ```bash
 python scripts/export_openapi.py          # regenerate, then commit openapi.json
@@ -126,7 +115,6 @@ python scripts/export_openapi.py --check  # openapi.json matches the code
 ### Tests
 
 - `tests/test_app.py`, `tests/test_db_guard.py`: fast unit tests, no database needed.
-- `tests/sample/`: the sample API (marker, scenarios, every sample endpoint), no database needed.
 - `tests/test_worker_and_cors.py`, `tests/test_render_blueprint.py`: the worker, CORS and `render.yaml`.
 - `tests/integration/`: the real API on a real Postgres test database (register, login, attempts, scoring, recommendations, ownership, error envelopes). Open bugs are in `tests/integration/test_known_bugs.py`, marked `xfail(strict=True)`: they show as `xfailed` until the bug is fixed, then turn the run red so the marker gets removed.
 
@@ -164,7 +152,7 @@ A pull request into `main` must come from `dev`.
 
 ## API docs for the frontend
 
-[docs/api.md](docs/api.md): base URLs, login, envelopes and error codes, sample data and `X-Mock-Scenario`, generating TypeScript types from `openapi.json`, and how API changes are announced (changelog, `api-change` label).
+[docs/api.md](docs/api.md): base URLs, login, envelopes and error codes, generating TypeScript types from `openapi.json`, and how API changes are announced (changelog, `api-change` label).
 
 ## Environment variables
 

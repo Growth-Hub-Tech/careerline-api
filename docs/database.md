@@ -26,6 +26,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `b5d9f3a7e2c1` | 23 | `organisation_targets` (the level each role should reach in each skill, with an optional due date). New empty table. |
 | `c6e1a4b8f3d2` | 24 | `audits.baseline_audit_id` (the audit a re-test repeats). New empty column. |
 | `d7f2b5c9a3e4` | 25 | `subscription_plans` (filled by the seed loader), `subscriptions` (at most one active or past_due per person), `payments.subscription_id`. Two new tables and an empty column. |
+| `e8a3c6d1f4b5` | 28 | `profiles` (what each person tells us about themselves; who may see it is their consent). New empty table. |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.

@@ -17,12 +17,13 @@ def test_the_committed_openapi_file_is_up_to_date():
     )
 
 
-def test_the_openapi_file_includes_the_sample_routes_and_the_real_ones():
+def test_the_openapi_file_has_every_route_and_no_sample_ones():
     paths = json.loads(OPENAPI_FILE.read_text(encoding="utf-8"))["paths"]
-    assert "/api/v1/auth/login" in paths
-    assert "/api/v1/tests" in paths and "x-sample" not in paths["/api/v1/tests"]["get"]
-    assert "x-sample" not in paths["/api/v1/subscriptions/plans"]["get"]  # real since Day 25
-    assert paths["/api/v1/profile"]["get"]["x-sample"] is True
+    assert "/api/v1/auth/login" in paths and "/api/v1/profile" in paths
+    assert "/api/v1/subscriptions/plans" in paths
+    for operations in paths.values():
+        for operation in operations.values():
+            assert "x-sample" not in operation  # every route is real since Day 28
 
 
 def test_rendering_is_deterministic():
