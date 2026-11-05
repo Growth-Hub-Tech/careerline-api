@@ -1,7 +1,7 @@
 """Day 3 sample answers: subscriptions, organisation audit, heatmap and targets (the flows are in
-test_day3_flows.py). The organisation and its roster are real since Day 21
-(tests/integration/test_team_roster.py), privacy since Day 18 (tests/integration/test_privacy.py), the
-recruiter's candidates and invitations since Days 19-20 (tests/integration/test_recruiter.py,
+test_day3_flows.py). Real now: the organisation and its roster since Day 21
+(tests/integration/test_team_roster.py), audits since Day 22 (test_audits.py), privacy since
+Day 18 (tests/integration/test_privacy.py), the recruiter's candidates and invitations since Days 19-20 (tests/integration/test_recruiter.py,
 test_candidate_reports.py)."""
 
 import pytest
@@ -18,20 +18,8 @@ async def test_plans_are_public(client):
 
 async def test_another_organisation_is_a_404(client, auth):
     assert_sample_error(
-        await client.get(f"{API}/organisations/99/audits", headers=auth), 404, "not_found"
+        await client.get(f"{API}/organisations/99/heatmap", headers=auth), 404, "not_found"
     )
-
-
-async def test_audits_with_benchmarks(client, auth):
-    audits = assert_sample(await client.get(f"{ORG}/audits", headers=auth))
-    audit_id = audits["items"][0]["audit_id"]
-    audit = assert_sample(await client.get(f"{ORG}/audits/{audit_id}", headers=auth))
-    assert audit["benchmarks"][0]["target_level"] in {"BEGINNER", "JUNIOR", "MID", "ADVANCED"}
-    started = await client.post(
-        f"{ORG}/audits", headers=auth, json={"name": "Backend check", "role_ids": [102]}
-    )
-    new = assert_sample(started, 201)
-    assert new["status"] == "in_progress" and new["members_total"] == 2
 
 
 @pytest.mark.parametrize("group_by,rows", [("department", 2), ("role", 3), ("member", 2)])
