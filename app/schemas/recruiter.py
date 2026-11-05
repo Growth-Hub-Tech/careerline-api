@@ -17,6 +17,8 @@ class CandidateTestResult(BaseModel):
     passed: bool
     completed_at: datetime
     result_id: int
+    # Day 31: whether the result is shared with the organisation (true for every listed result today)
+    shared: bool
 
 
 class Candidate(BaseModel):

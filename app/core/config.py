@@ -97,6 +97,10 @@ class Settings(BaseSettings):
 
     # Organisation audits (Day 22): how long the team's test invitations work
     AUDIT_INVITATION_DAYS: int = 14
+    # Day 31: an audit can be re-tested this many days after its last test was started
+    RETEST_COOLDOWN_DAYS: int = 14
+    # Day 31: a recruiter's shortlist (the organisation's candidates) holds this many people
+    RECRUITER_SHORTLIST_LIMIT: int = 25
 
     # PDF skill reports (Day 12): how long a download link works
     REPORT_LINK_MINUTES: int = 15

@@ -1,8 +1,8 @@
 """Privacy (Day 18, NDPR / GDPR): consents, a copy of my data, and deleting my account.
 
 Consents
-- Three keys (marketing_emails, share_profile_with_recruiters, product_research), all off until
-  the person turns them on. Every change is stored in consent_events with its time; setting a
+- Five keys (marketing_emails, share_profile_with_recruiters, product_research, and since Day 31
+  aux_hr_sharing and incubate_sharing), all off until the person turns them on. Every change is stored in consent_events with its time; setting a
   consent to what it already is records nothing.
 
 A copy of my data
