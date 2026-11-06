@@ -4,7 +4,13 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-ConsentKey = Literal["marketing_emails", "share_profile_with_recruiters", "product_research"]
+ConsentKey = Literal[
+    "marketing_emails",
+    "share_profile_with_recruiters",
+    "product_research",
+    "aux_hr_sharing",
+    "incubate_sharing",
+]
 ExportStatus = Literal["queued", "ready", "expired"]
 
 

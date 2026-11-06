@@ -116,6 +116,12 @@ def bring_up_to_date(row: Subscription, now: datetime | None = None) -> None:
         row.updated_at = _now()
 
 
+def _grace_ends_at(row: Subscription) -> datetime | None:
+    if row.status != "past_due":
+        return None
+    return _aware(row.current_period_end) + timedelta(days=settings.SUBSCRIPTION_GRACE_DAYS)
+
+
 async def _subscription_out(db: AsyncSession, row: Subscription) -> SubscriptionOut:
     plan = await db.get(SubscriptionPlan, row.plan_id)
     return SubscriptionOut(
@@ -127,6 +133,7 @@ async def _subscription_out(db: AsyncSession, row: Subscription) -> Subscription
         current_period_end=row.current_period_end,
         cancel_at_period_end=row.cancel_at_period_end,
         seats=row.seats,
+        grace_ends_at=_grace_ends_at(row),
     )
 
 
@@ -168,6 +175,33 @@ async def cancel(db: AsyncSession, learner_id: int) -> SubscriptionOut:
         row.updated_at = _now()
         await db.flush()
         logger.info("subscription_cancelled", subscription_id=row.id)
+    return await _subscription_out(db, row)
+
+
+async def resume(db: AsyncSession, learner_id: int) -> SubscriptionOut:
+    """Undo a cancellation while the paid period still runs (Day 31). Nothing to resume: 409."""
+    row = await _live(db, learner_id, lock=True)
+    if row is None or not row.cancel_at_period_end:
+        raise ConflictError("Your plan is not cancelled, so there is nothing to resume")
+    row.cancel_at_period_end = False
+    row.cancelled_at = None
+    row.updated_at = _now()
+    await db.flush()
+    # the renewal may have run while the plan was cancelled (it does nothing then): if its
+    # hour before the period end has passed, ask for the renewal again, now
+    if _now() >= _aware(row.current_period_end) - RENEW_AHEAD:
+        await enqueue(
+            db,
+            RENEW_JOB,
+            {
+                "subscription_id": row.id,
+                "period_end": _stamp(row.current_period_end),
+                "attempt": 1,
+            },
+            dedupe_key=f"renew:{row.id}:{_stamp(row.current_period_end)}:resumed",
+            run_after=_now(),
+        )
+    logger.info("subscription_resumed", subscription_id=row.id)
     return await _subscription_out(db, row)
 
 

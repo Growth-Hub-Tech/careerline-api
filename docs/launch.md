@@ -22,7 +22,7 @@ Everything the API needs before real people and real money use it. The test serv
 - [ ] `LOG_JSON=true`, `CHECK_MIGRATIONS_ON_STARTUP=true` (the default).
 - [ ] `OPENAI_API_KEY`: optional (without it the plain advice and explanations are used).
 - [ ] **Not** set in production: `DEMO_DATA_ON_START` (refused anyway), `TEST_MAILBOX_TOKEN` (there is no test mailbox in production). `SEED_ON_START=true` only for the first deploy and when the seed files change.
-- [ ] Optional, with their defaults: `AUDIT_INVITATION_DAYS=14`, `SUBSCRIPTION_GRACE_DAYS=3`, `SUBSCRIPTION_RENEW_ATTEMPTS=3`, `CHECKOUTS_PER_HOUR=20`, `ACCOUNT_DELETION_GRACE_DAYS=30`, `DATA_EXPORT_DAYS=7` (every variable is in `.env.example`).
+- [ ] Optional, with their defaults: `AUDIT_INVITATION_DAYS=14`, `SUBSCRIPTION_GRACE_DAYS=3`, `SUBSCRIPTION_RENEW_ATTEMPTS=3`, `CHECKOUTS_PER_HOUR=20`, `ACCOUNT_DELETION_GRACE_DAYS=30`, `DATA_EXPORT_DAYS=7`, `RETEST_COOLDOWN_DAYS=14`, `RECRUITER_SHORTLIST_LIMIT=25` (every variable is in `.env.example`).
 
 ## 3. Paystack
 
