@@ -3131,6 +3131,10 @@
             "title": "Result Id",
             "type": "integer"
           },
+          "shared": {
+            "title": "Shared",
+            "type": "boolean"
+          },
           "test_id": {
             "title": "Test Id",
             "type": "integer"
@@ -3147,7 +3151,8 @@
           "percentage_score",
           "passed",
           "completed_at",
-          "result_id"
+          "result_id",
+          "shared"
         ],
         "title": "CandidateTestResult",
         "type": "object"
@@ -3367,7 +3372,9 @@
             "enum": [
               "marketing_emails",
               "share_profile_with_recruiters",
-              "product_research"
+              "product_research",
+              "aux_hr_sharing",
+              "incubate_sharing"
             ],
             "title": "Key",
             "type": "string"
@@ -3396,7 +3403,9 @@
             "enum": [
               "marketing_emails",
               "share_profile_with_recruiters",
-              "product_research"
+              "product_research",
+              "aux_hr_sharing",
+              "incubate_sharing"
             ],
             "title": "Key",
             "type": "string"
@@ -6470,6 +6479,18 @@
             "format": "date-time",
             "title": "Current Period Start",
             "type": "string"
+          },
+          "grace_ends_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grace Ends At"
           },
           "plan_id": {
             "title": "Plan Id",
@@ -13202,6 +13223,53 @@
           }
         ],
         "summary": "Cancel My Subscription",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/v1/subscriptions/me/resume": {
+      "post": {
+        "description": "Undoes cancel_at_period_end while the period is still running. 409: the plan is not cancelled, or there is no live plan to resume.",
+        "operationId": "resume_my_subscription_api_v1_subscriptions_me_resume_post",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Subscription_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Resume My Subscription",
         "tags": [
           "Subscriptions"
         ]

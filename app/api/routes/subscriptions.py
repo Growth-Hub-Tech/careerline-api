@@ -60,6 +60,21 @@ async def subscribe(
     return await payment_service.start_checkout(db, current_learner, request)
 
 
+# RESUME (Day 31): undo a cancellation while the paid period still runs
+@router.post(
+    "/me/resume",
+    response_model=Subscription,
+    responses=errors(401, 409),
+    description="Undoes cancel_at_period_end while the period is still running. 409: the plan is "
+    "not cancelled, or there is no live plan to resume.",
+)
+async def resume_my_subscription(
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await subscription_service.resume(db, current_learner.learner_id)
+
+
 # CANCEL: the plan stays until the end of the period
 @router.post(
     "/me/cancel",

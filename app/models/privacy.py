@@ -26,7 +26,14 @@ from sqlalchemy.sql import func
 
 from app.db.base import Base
 
-CONSENT_KEYS = ("marketing_emails", "share_profile_with_recruiters", "product_research")
+# Day 31: AuxHR and Incubate sharing are off until the person turns them on, like the others
+CONSENT_KEYS = (
+    "marketing_emails",
+    "share_profile_with_recruiters",
+    "product_research",
+    "aux_hr_sharing",
+    "incubate_sharing",
+)
 
 
 class LearnerConsent(Base):

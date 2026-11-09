@@ -19,6 +19,12 @@ from tests.integration.test_team_roster import add_role, person, upload
 API = settings.API_PREFIX
 
 
+@pytest.fixture(autouse=True)
+def no_retest_cooldown(monkeypatch):
+    # Day 31: the cooldown has its own tests (test_day31.py); these check the re-test itself
+    monkeypatch.setattr(settings, "RETEST_COOLDOWN_DAYS", 0)
+
+
 def only_beginner(info) -> bool:
     return info["level"] == "BEGINNER"
 

@@ -18,7 +18,7 @@ import secrets
 from collections import defaultdict
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
@@ -457,6 +457,27 @@ async def start_audit(db: AsyncSession, actor: OrganisationMember, audit_id: int
 # ---------- re-tests (Day 24) ----------
 
 
+class RetestTooSoonError(ConflictError):
+    code = "retest_too_soon"
+
+
+async def _retest_cooldown_ends(
+    db: AsyncSession, organisation_id: int, audit_id: int
+) -> datetime | None:
+    """When the audit (or its last re-test) can be re-tested again; None: it can now (Day 31)."""
+    last = await db.scalar(
+        select(func.max(Audit.started_at)).where(
+            Audit.organisation_id == organisation_id,
+            Audit.started_at.is_not(None),
+            or_(Audit.id == audit_id, Audit.baseline_audit_id == audit_id),
+        )
+    )
+    if last is None:
+        return None
+    ends = last.astimezone(UTC) + timedelta(days=settings.RETEST_COOLDOWN_DAYS)
+    return ends if ends > _now() else None
+
+
 async def retest_audit(
     db: AsyncSession, actor: OrganisationMember, audit_id: int, data: AuditRetest
 ) -> AuditOut:
@@ -464,6 +485,16 @@ async def retest_audit(
     first = await _own_audit(db, actor.organisation_id, audit_id)
     if first.started_at is None:
         raise ConflictError("This audit is still a draft: start it before re-testing it")
+    available = await _retest_cooldown_ends(db, actor.organisation_id, first.id)
+    if available is not None:
+        when = f"{available.day} {available:%b %Y}"
+        raise RetestTooSoonError(
+            f"Too soon to re-test this audit: try again on {when}",
+            details={
+                "try_again_on": available.date().isoformat(),
+                "available_at": available.isoformat(),
+            },
+        )
     members = (await _audit_members(db, [first.id]))[first.id]
     if data.member_ids is not None:
         wanted = set(data.member_ids)

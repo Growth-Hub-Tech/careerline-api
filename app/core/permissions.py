@@ -187,6 +187,7 @@ POLICIES: dict[str, Policy] = {
     "GET /subscriptions/me": SIGNED_IN,
     "POST /subscriptions": SIGNED_IN,
     "POST /subscriptions/me/cancel": SIGNED_IN,
+    "POST /subscriptions/me/resume": SIGNED_IN,
     # Paystack calls this; the real one will check Paystack's signature
     "POST /payments/webhooks/paystack": PUBLIC,
     # Invitations: candidates open and accept them; recruiters and admins send them

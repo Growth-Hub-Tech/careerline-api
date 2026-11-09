@@ -39,6 +39,8 @@ async def test_consents_start_off_and_every_change_is_kept(client, learner, db):
         ("marketing_emails", False),
         ("share_profile_with_recruiters", False),
         ("product_research", False),
+        ("aux_hr_sharing", False),
+        ("incubate_sharing", False),
     ]
 
     changed = await client.put(

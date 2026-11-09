@@ -30,6 +30,8 @@ class Subscription(BaseModel):
     current_period_end: datetime
     cancel_at_period_end: bool
     seats: int | None
+    # Day 31: while past_due, the day the grace days end (the plan is cancelled after it); else null
+    grace_ends_at: datetime | None = None
 
 
 class SubscribeRequest(BaseModel):

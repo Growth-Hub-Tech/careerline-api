@@ -90,6 +90,12 @@ def fit_for(results: list[tuple[str, str | None]]) -> str:
     return "strong_fit" if worst <= 0 else "possible_fit" if worst == 1 else "not_a_fit"
 
 
+def _shared_with_recruiters(invitation: Invitation) -> bool:
+    """Day 31: the marker each result carries. Today a completed invited test is shared with the
+    organisation that invited the candidate; nothing hides a result yet."""
+    return invitation.status == "completed"
+
+
 async def _completed_results(
     db: AsyncSession, candidates: list[Candidate]
 ) -> dict[int, list[tuple[CandidateTestResult, SkillHistory]]]:
@@ -133,6 +139,7 @@ async def _completed_results(
             passed=_meets(history.level.value, target),
             completed_at=history.recorded_at,
             result_id=history.attempt_id,
+            shared=_shared_with_recruiters(invitation),
         )
         out[candidate.id].append((result, history))
     return out
@@ -221,11 +228,19 @@ async def _check_role(db: AsyncSession, role_id: int | None) -> None:
         raise NotFoundError(f"Role {role_id} not found")
 
 
+class ShortlistFullError(ConflictError):
+    code = "shortlist_full"
+
+
 async def add_candidate(
     db: AsyncSession, actor: OrganisationMember, data: CandidateCreate
 ) -> CandidateOut:
     await _check_role(db, data.role_id)
     email = _email(str(data.email))
+    # one at a time per organisation, so the shortlist limit holds under concurrent adds
+    await db.execute(
+        select(Organisation.id).where(Organisation.id == actor.organisation_id).with_for_update()
+    )
     exists = await db.scalar(
         select(Candidate.id).where(
             Candidate.organisation_id == actor.organisation_id, Candidate.email == email
@@ -233,6 +248,15 @@ async def add_candidate(
     )
     if exists is not None:
         raise ConflictError(f"{email} is already one of your candidates (candidate {exists})")
+    limit = settings.RECRUITER_SHORTLIST_LIMIT
+    count = await db.scalar(
+        select(func.count(Candidate.id)).where(Candidate.organisation_id == actor.organisation_id)
+    )
+    if (count or 0) >= limit:
+        raise ShortlistFullError(
+            f"Your shortlist is full: it holds {limit} candidates",
+            details={"limit": limit, "count": count},
+        )
     row = Candidate(
         organisation_id=actor.organisation_id,
         full_name=data.full_name.strip(),
