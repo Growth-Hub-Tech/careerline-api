@@ -15,6 +15,7 @@ stored as a SHA-256 hash.
 import hashlib
 import re
 import secrets
+import threading
 from datetime import UTC, datetime, timedelta
 
 import bcrypt
@@ -27,8 +28,12 @@ from app.core.config import settings
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
 
-# Argon2id with the library's defaults (RFC 9106 "low memory" profile: 64 MiB, 3 passes)
-_hasher = PasswordHasher()
+# Argon2id with OWASP's minimum (19 MiB, 2 passes, 1 lane). The library's default takes 64 MiB
+# per hash, too much for a 512 MB server when several people sign in at once. Hashes made with
+# the old parameters still verify, and needs_rehash() moves them over at the next sign-in.
+_hasher = PasswordHasher(memory_cost=19456, time_cost=2, parallelism=1)
+# At most two hashes at a time in each process, so a burst of sign-ins cannot run it out of memory
+_hashing = threading.BoundedSemaphore(2)
 _BCRYPT_PREFIXES = ("$2a$", "$2b$", "$2y$")
 # A well-formed bcrypt hash (the bcrypt library panics on malformed ones instead of failing)
 _BCRYPT_HASH = re.compile(r"^\$2[aby]\$\d{2}\$[./A-Za-z0-9]{53}$")
@@ -36,12 +41,18 @@ _dummy_hash: str | None = None
 
 
 def hash_password(password: str) -> str:
-    return _hasher.hash(password)
+    with _hashing:
+        return _hasher.hash(password)
 
 
 def verify_password(plain_password: str, hashed_password: str | None) -> bool:
     if not hashed_password:
         return False
+    with _hashing:
+        return _verify(plain_password, hashed_password)
+
+
+def _verify(plain_password: str, hashed_password: str) -> bool:
     if hashed_password.startswith("$argon2"):
         try:
             return _hasher.verify(hashed_password, plain_password)
@@ -74,7 +85,7 @@ def burn_password_check(plain_password: str) -> None:
     as long and the answer time does not tell whether the account exists)."""
     global _dummy_hash
     if _dummy_hash is None:
-        _dummy_hash = _hasher.hash(secrets.token_urlsafe(16))
+        _dummy_hash = hash_password(secrets.token_urlsafe(16))
     verify_password(plain_password, _dummy_hash)
 
 

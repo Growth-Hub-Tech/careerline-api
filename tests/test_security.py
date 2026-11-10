@@ -1,6 +1,10 @@
 """Day 6: password hashing (Argon2id, old bcrypt hashes still accepted) and session tokens."""
 
+import threading
+import time
+
 import bcrypt
+from argon2 import PasswordHasher, extract_parameters
 from jose import jwt
 
 from app.core import security
@@ -61,3 +65,49 @@ def test_one_time_tokens_are_random_and_stored_hashed():
     assert token != other and len(token) >= 32
     assert digest == security.hash_one_time_token(token)
     assert token not in digest
+
+
+def test_new_hashes_use_owasps_minimum_so_signing_in_needs_19_mib():
+    params = extract_parameters(security.hash_password("correct-horse-battery"))
+    assert (params.memory_cost, params.time_cost, params.parallelism) == (19456, 2, 1)
+
+
+def test_hashes_made_with_the_old_64_mib_parameters_still_work_and_are_moved_over():
+    old = PasswordHasher().hash("correct-horse-battery")  # the library defaults used before
+    assert extract_parameters(old).memory_cost == 65536
+    assert security.verify_password("correct-horse-battery", old)
+    assert security.needs_rehash(old)
+
+
+def test_at_most_two_passwords_are_hashed_at_once(monkeypatch):
+    lock = threading.Lock()
+    running = most = 0
+
+    class SlowHasher:
+        def _work(self) -> None:
+            nonlocal running, most
+            with lock:
+                running += 1
+                most = max(most, running)
+            time.sleep(0.05)
+            with lock:
+                running -= 1
+
+        def hash(self, password: str) -> str:
+            self._work()
+            return "$argon2id$fake"
+
+        def verify(self, hashed: str, password: str) -> bool:
+            self._work()
+            return True
+
+    monkeypatch.setattr(security, "_hasher", SlowHasher())
+    jobs = [lambda: security.hash_password("x")] * 4 + [
+        lambda: security.verify_password("x", "$argon2id$fake")
+    ] * 4
+    threads = [threading.Thread(target=job) for job in jobs]
+    for thread in threads:
+        thread.start()
+    for thread in threads:
+        thread.join()
+    assert most == 2
