@@ -4,7 +4,7 @@
   when one is completed, in_progress when one is accepted, invited when one is waiting (sent and
   not expired), otherwise added.
 - POST /invitations (kind candidate) finds or adds the candidate by candidate_id or email, then
-  emails the invitee the link (FRONTEND_URL/invite/{token}). Revoking a sent or accepted
+  emails the invitee the link (FRONTEND_URL/invitations/{token}). Revoking a sent or accepted
   invitation is allowed (again: no change); an expired or completed one is a 409.
 - Another organisation's candidates and invitations are a 404, never a 403.
 - The invitee: GET /invitations/token/{token} is public (who invited them, which test); accepting
@@ -50,7 +50,7 @@ def _email(value: str) -> str:
 
 
 def invite_url(token: str) -> str:
-    return f"{settings.FRONTEND_URL.rstrip('/')}/invite/{token}"
+    return f"{settings.FRONTEND_URL.rstrip('/')}/invitations/{token}"
 
 
 def invitation_status(row: Invitation) -> str:

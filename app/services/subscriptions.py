@@ -351,7 +351,7 @@ async def _ask_to_pay(
             "declined": declined,
             "period_end": _aware(row.current_period_end).strftime("%d %b %Y"),
             "grace_days": settings.SUBSCRIPTION_GRACE_DAYS,
-            "link": f"{settings.FRONTEND_URL.rstrip('/')}/subscription",
+            "link": f"{settings.FRONTEND_URL.rstrip('/')}/billing",
         },
         dedupe_key=f"subscription_payment_failed:{row.id}:{_stamp(row.current_period_start)}",
     )

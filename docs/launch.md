@@ -15,7 +15,7 @@ Everything the API needs before real people and real money use it. `render.yaml`
 
 - [ ] `SECRET_KEY`: random, at least 32 characters (Render: `generateValue`), shared by the web service and the worker. Changing it signs everyone out.
 - [ ] `DATABASE_URL`: the production database.
-- [ ] `FRONTEND_URL`: the website's https address (every link in an email points there: `/verify-email`, `/reset-password`, `/forgot-password`, `/invite/<token>`, `/settings/privacy`, `/subscription`).
+- [ ] `FRONTEND_URL`: the website's https address (every link in an email points there: `/verify-email`, `/reset-password`, `/forgot-password`, `/invitations/<token>`, `/settings/privacy`, `/billing`).
 - [ ] `CORS_ORIGINS`: the website's https origin(s) only.
 - [ ] The website and the API on one domain (for example `careerline.ng` and `api.careerline.ng`), so the sign-in cookie works with `SESSION_COOKIE_SAMESITE=lax` (the default; `none` is refused in production).
 - [ ] `PAYSTACK_SECRET_KEY`: the **live** secret key (`sk_live_…`).
@@ -43,7 +43,7 @@ Everything the API needs before real people and real money use it. `render.yaml`
 ## 5. The website
 
 - [ ] Types regenerated from the final `openapi.json`; nothing reads `X-Sample-Data` or sends `X-Mock-Scenario` (gone since Day 28).
-- [ ] The pages the API sends people to exist: `/verify-email`, `/reset-password`, `/forgot-password`, `/invite/<token>`, `/settings/privacy`, `/subscription` (emails) and `/payments/callback` (back from Paystack).
+- [ ] The pages the API sends people to exist: `/verify-email`, `/reset-password`, `/forgot-password`, `/invitations/<token>`, `/settings/privacy`, `/billing` (emails) and `/payments/callback` (back from Paystack).
 
 ## 6. On launch day
 

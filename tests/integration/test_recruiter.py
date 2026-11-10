@@ -117,7 +117,7 @@ async def test_an_invitation_is_sent_by_email_and_adds_the_candidate(client, rec
     sent = response.json()["data"]
     assert sent["status"] == "sent" and sent["kind"] == "candidate"
     assert sent["test_id"] == 200 + skill["skill_id"] and sent["test_title"] == "Python"
-    assert sent["invite_url"] == f"{settings.FRONTEND_URL.rstrip('/')}/invite/{sent['token']}"
+    assert sent["invite_url"] == f"{settings.FRONTEND_URL.rstrip('/')}/invitations/{sent['token']}"
     assert sent["organisation_id"] == recruiter["id"] and sent["candidate_id"]
     expires = datetime.fromisoformat(sent["expires_at"]) - datetime.fromisoformat(sent["sent_at"])
     assert timedelta(days=6, hours=23) < expires <= timedelta(days=7, minutes=1)
