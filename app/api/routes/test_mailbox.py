@@ -2,8 +2,9 @@
 password reset and the contact form end to end without a real inbox.
 
 Emails land here when EMAIL_BACKEND=test_mailbox (the default when APP_ENV=staging). Never
-mounted in production; answers 404 when emails really go out; asks for X-Test-Mailbox-Token
-when TEST_MAILBOX_TOKEN is set.
+mounted in production; answers 404 when emails really go out or when TEST_MAILBOX_TOKEN is not
+set (an open mailbox would hand anyone's password reset link to anyone); otherwise it asks for
+that token in X-Test-Mailbox-Token.
 """
 
 import re
@@ -28,10 +29,10 @@ _LINK = re.compile(r"https?://[^\s<>\"\')]+")
 async def mailbox_guard(
     x_test_mailbox_token: str | None = Header(default=None, include_in_schema=False),
 ) -> None:
-    if not settings.test_mailbox_enabled:
-        raise NotFoundError("Not found")
     expected = settings.TEST_MAILBOX_TOKEN
-    if expected and not secrets.compare_digest(x_test_mailbox_token or "", expected):
+    if not settings.test_mailbox_enabled or not expected:
+        raise NotFoundError("Not found")
+    if not secrets.compare_digest(x_test_mailbox_token or "", expected):
         raise UnauthorizedError("Send the test mailbox token in X-Test-Mailbox-Token")
 
 
@@ -57,7 +58,7 @@ def _links(text: str) -> list[str]:
     response_model=TestMailbox,
     responses=errors(401, 404),
     description="The emails sent to one address on the test server, newest first. "
-    "Send X-Test-Mailbox-Token when the server has one.",
+    "Send the server's X-Test-Mailbox-Token (404 when the server has none).",
 )
 async def read_test_mailbox(
     to: str = Query(

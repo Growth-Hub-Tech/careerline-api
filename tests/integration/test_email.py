@@ -11,6 +11,7 @@ from app.email.outbox import send_email
 from app.jobs import registry
 from app.jobs.runner import JobRunner
 from app.main import create_app
+from tests.integration.conftest import MAILBOX, MAILBOX_TOKEN
 
 API = settings.API_PREFIX
 CONTEXT = {
@@ -27,7 +28,7 @@ CONTEXT = {
 @pytest.fixture(autouse=True)
 def mailbox(monkeypatch):
     monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
-    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", "")
+    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", MAILBOX_TOKEN)
 
 
 async def queue(to="ada@example.com", **kwargs) -> int:
@@ -113,7 +114,9 @@ async def test_andrew_reads_the_test_mailbox_through_the_api(client, db):
     await queue(to="someone-else@example.com")
     await drain()
 
-    response = await client.get(f"{API}/test-mailbox", params={"to": "ada@example.com"})
+    response = await client.get(
+        f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
+    )
     assert response.status_code == 200, response.text
     messages = response.json()["data"]["messages"]
     assert len(messages) == 1
@@ -123,14 +126,28 @@ async def test_andrew_reads_the_test_mailbox_through_the_api(client, db):
     assert message["text"] and message["html"]
     assert "https://example.com/help" in message["links"]
 
-    response = await client.delete(f"{API}/test-mailbox", params={"to": "ada@example.com"})
+    response = await client.delete(
+        f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
+    )
     assert response.status_code == 200, response.text
     assert response.json()["data"]["deleted"] == 1
-    response = await client.get(f"{API}/test-mailbox", params={"to": "ada@example.com"})
+    response = await client.get(
+        f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
+    )
     assert response.json()["data"]["messages"] == []
 
 
-async def test_the_test_mailbox_needs_the_token_when_one_is_set(client, monkeypatch):
+async def test_without_a_configured_token_the_test_mailbox_does_not_exist(client, monkeypatch):
+    # an open mailbox would let anyone read anyone's password reset link
+    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", "")
+    for method in ("GET", "DELETE"):
+        response = await client.request(
+            method, f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
+        )
+        assert response.status_code == 404, (method, response.text)
+
+
+async def test_the_test_mailbox_needs_its_token(client, monkeypatch):
     monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", "letmein-not-a-real-token")
     response = await client.get(f"{API}/test-mailbox", params={"to": "ada@example.com"})
     assert response.status_code == 401

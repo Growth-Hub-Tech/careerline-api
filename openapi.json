@@ -13369,7 +13369,7 @@
         ]
       },
       "get": {
-        "description": "The emails sent to one address on the test server, newest first. Send X-Test-Mailbox-Token when the server has one.",
+        "description": "The emails sent to one address on the test server, newest first. Send the server's X-Test-Mailbox-Token (404 when the server has none).",
         "operationId": "read_test_mailbox_api_v1_test_mailbox_get",
         "parameters": [
           {

@@ -13,7 +13,14 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.jobs.runner import JobRunner
-from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
+from tests.integration.conftest import (
+    MAILBOX,
+    MAILBOX_TOKEN,
+    PASSWORD,
+    assert_error_envelope,
+    login,
+    register,
+)
 
 API = settings.API_PREFIX
 NEW_PASSWORD = "a-brand-new-password"
@@ -22,7 +29,7 @@ NEW_PASSWORD = "a-brand-new-password"
 @pytest.fixture(autouse=True)
 def mailbox(monkeypatch):
     monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
-    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", "")
+    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", MAILBOX_TOKEN)
     monkeypatch.setattr(settings, "FRONTEND_URL", "https://app.careerline.test")
 
 
@@ -34,7 +41,7 @@ async def drain():
 
 async def emails(client, address: str) -> list[dict]:
     await drain()
-    response = await client.get(f"{API}/test-mailbox", params={"to": address})
+    response = await client.get(f"{API}/test-mailbox", params={"to": address}, headers=MAILBOX)
     assert response.status_code == 200, response.text
     return response.json()["data"]["messages"]
 

@@ -52,7 +52,7 @@ services:
       - key: RUN_JOBS_IN_WEB
         value: 'false' # the worker below runs the jobs (on the free plan, with no worker, set true)
       - key: TEST_MAILBOX_TOKEN
-        sync: false # emails go to the test mailbox on staging; this keeps GET /api/v1/test-mailbox private
+        generateValue: true # emails go to the test mailbox on staging; without this token GET /api/v1/test-mailbox answers 404
       - key: SUPPORT_EMAIL
         sync: false # where contact form messages go (on staging they land in the test mailbox)
       - key: FRONTEND_URL

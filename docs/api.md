@@ -93,10 +93,10 @@ Every email (contact form today; sign-up confirmation and password reset next) i
 ```http
 GET /api/v1/test-mailbox?to=ada@example.com        # newest first: subject, text, html, links[]
 DELETE /api/v1/test-mailbox?to=ada@example.com     # empty it before a test
-X-Test-Mailbox-Token: <ask the backend lead>       # only when the server has a token set
+X-Test-Mailbox-Token: <ask the backend lead>       # always needed
 ```
 
-`links` lists every link in the email (e.g. the confirmation link), so a test can take `links[0]`. The test mailbox does not exist in production, and answers `404` when emails really go out.
+`links` lists every link in the email (e.g. the confirmation link), so a test can take `links[0]`. The test mailbox does not exist in production, and answers `404` when emails really go out or when the server has no `TEST_MAILBOX_TOKEN`.
 
 ## Who can call what (Day 7)
 
@@ -327,7 +327,7 @@ type Envelope<T> = { success: true; message: string | null; data: T };
 - The worker (`python -m app.worker`) runs the background jobs (emails, AI advice). On the **free plan** there is no worker service: set `RUN_JOBS_IN_WEB=true` on the web service and the API process runs the jobs itself.
 - `PAYSTACK_SECRET_KEY`: Paystack's **test** secret key (`sk_test_…`) on the test server, set in the dashboard. Without it checkout and the webhook answer `503` (nothing is charged). Set Paystack's webhook URL to `<API base>/api/v1/payments/webhooks/paystack`.
 - `DEMO_DATA_ON_START=true` loads the demo accounts and Demo Company Ltd on every deploy (see "Demo accounts"); it is refused in production.
-- Emails: `APP_ENV=staging` sends them to the test mailbox (see "Emails and the test mailbox"); set `TEST_MAILBOX_TOKEN` to keep it private. Production needs `EMAIL_BACKEND=smtp` with `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `EMAIL_FROM` and `SUPPORT_EMAIL`.
+- Emails: `APP_ENV=staging` sends them to the test mailbox (see "Emails and the test mailbox"); it answers only with `TEST_MAILBOX_TOKEN` (`404` while that is unset). Production needs `EMAIL_BACKEND=smtp` with `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `EMAIL_FROM` and `SUPPORT_EMAIL`.
 
 ## Changelog
 

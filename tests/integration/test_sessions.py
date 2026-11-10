@@ -6,7 +6,14 @@ from jose import jwt
 
 from app.core.config import settings
 from app.jobs.runner import JobRunner
-from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
+from tests.integration.conftest import (
+    MAILBOX,
+    MAILBOX_TOKEN,
+    PASSWORD,
+    assert_error_envelope,
+    login,
+    register,
+)
 
 API = settings.API_PREFIX
 
@@ -14,7 +21,7 @@ API = settings.API_PREFIX
 @pytest.fixture(autouse=True)
 def mailbox(monkeypatch):
     monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
-    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", "")
+    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", MAILBOX_TOKEN)
 
 
 def bearer(token: str) -> dict:
@@ -60,7 +67,9 @@ async def test_a_password_reset_ends_every_session(client):
     runner = JobRunner(worker_id="test")
     while await runner.run_once():
         pass
-    mail = await client.get(f"{API}/test-mailbox", params={"to": "ada@example.com"})
+    mail = await client.get(
+        f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
+    )
     reset = next(m for m in mail.json()["data"]["messages"] if "reset" in m["subject"].lower())
     token = reset["links"][0].split("token=")[1]
     response = await client.post(
