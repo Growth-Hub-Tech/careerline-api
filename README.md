@@ -51,7 +51,7 @@ alembic upgrade head
 uvicorn app.main:app --reload      # http://localhost:8000
 ```
 
-API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
+API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`; production serves neither).
 
 ## API conventions
 

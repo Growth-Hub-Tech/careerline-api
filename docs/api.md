@@ -9,7 +9,7 @@ For the frontend (Andrew) and anyone calling the API. The contract is `openapi.j
 | Local | `http://localhost:8000/api/v1` | `http://localhost:8000/docs` |
 | Test server (Render) | `https://<careerline-api service URL>/api/v1` (shown at the top of the service in Render, e.g. `https://careerline-api.onrender.com`) | `https://<service URL>/docs` |
 
-Outside the `/api/v1` prefix: `GET /healthz` (the app is up), `GET /readyz` (the database is reachable and migrated), `/docs` (Swagger) and `/openapi.json` (the live contract).
+Outside the `/api/v1` prefix: `GET /healthz` (the app is up), `GET /readyz` (the database is reachable and migrated), `/docs` (Swagger) and `/openapi.json` (the live contract). Production does not serve `/docs`, `/redoc` or `/openapi.json`; the contract is `openapi.json` in this repo.
 
 ## Log in
 

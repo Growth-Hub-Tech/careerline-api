@@ -68,10 +68,16 @@ async def lifespan(app: FastAPI):
 def create_app() -> FastAPI:
     configure_logging()
 
+    # The interactive docs and the API description are for the team: production does not serve
+    # them (scripts/export_openapi.py builds openapi.json without them)
+    docs = not settings.is_production
     app = FastAPI(
         title=settings.APP_NAME,
         description="CareerLine AI API: skill tests, scoring, proficiency levels and personalised learning pathways",
         version="2.0.0",
+        docs_url="/docs" if docs else None,
+        redoc_url="/redoc" if docs else None,
+        openapi_url="/openapi.json" if docs else None,
         lifespan=lifespan,
         # Every route passes its access rule first (app/core/permissions.py: the one place)
         dependencies=[Depends(authorize)],
