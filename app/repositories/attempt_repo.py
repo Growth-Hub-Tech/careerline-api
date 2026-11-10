@@ -7,7 +7,6 @@ from app.core.logging import get_logger
 from app.models.models import (
     Option,
     ProficiencyLevel,
-    TestAttempt,
 )
 
 logger = get_logger(__name__)
@@ -36,18 +35,3 @@ async def get_options_for_question(
     options_list = [{"option_id": o.option_id, "option_text": o.option_text} for o in options]
     random.Random(f"{attempt_id}-{question_id}").shuffle(options_list)
     return options_list
-
-
-# Fetch a test attempt by ID
-async def get_attempt_by_id(db: AsyncSession, attempt_id: int):
-    result = await db.execute(select(TestAttempt).where(TestAttempt.attempt_id == attempt_id))
-    return result.scalar_one_or_none()
-
-
-# Fetch an attempt and lock its row until the transaction ends,
-# so two submits of the same attempt can't run at the same time
-async def get_attempt_for_update(db: AsyncSession, attempt_id: int):
-    result = await db.execute(
-        select(TestAttempt).where(TestAttempt.attempt_id == attempt_id).with_for_update()
-    )
-    return result.scalar_one_or_none()

@@ -123,7 +123,6 @@ async def submit_answers(data: SubmitRequest):
     )
 
 
-# GET ATTEMPT DETAIL
 # MY ATTEMPT HISTORY: the learner comes from the session (Day 7)
 @router.get("/me", responses=errors(401))
 async def get_my_attempts(

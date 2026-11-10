@@ -114,12 +114,6 @@ def decode_token(token: str) -> tuple[int, str | None] | None:
         return None
 
 
-def decode_access_token(token: str) -> int | None:
-    """The learner id of a valid token (signature and expiry only; no session check)."""
-    decoded = decode_token(token)
-    return decoded[0] if decoded else None
-
-
 def hash_one_time_token(token: str) -> str:
     return hashlib.sha256(token.encode("utf-8")).hexdigest()
 

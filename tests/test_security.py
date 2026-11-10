@@ -52,7 +52,6 @@ def test_a_session_token_carries_the_session_and_expires():
     assert claims["sid"] == "5b0f5c2e-0000-4000-8000-000000000001"
     assert claims["exp"] > claims["iat"]
     assert security.decode_token(token) == (7, "5b0f5c2e-0000-4000-8000-000000000001")
-    assert security.decode_access_token(token) == 7
 
 
 def test_a_token_without_a_session_has_no_session_id():

@@ -34,7 +34,6 @@ class Settings(BaseSettings):
     # App
     APP_NAME: str = "CareerLine API"
     APP_ENV: str = "development"
-    APP_PORT: int = 8000
     API_PREFIX: str = "/api/v1"  # Global prefix for every API route (health checks sit outside it)
 
     # Logging: JSON lines in production, readable console output in development

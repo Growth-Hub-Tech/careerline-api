@@ -3,16 +3,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.logging import get_logger
 from app.models.models import BehaviouralQuestion, Skill
-from app.repositories.learner_repo import create_learner
 
 logger = get_logger(__name__)
-
-
-# REGISTER A NEW LEARNER OR FETCH DETAILS IF ALREADY EXISTS
-async def register_learner(db: AsyncSession, full_name: str, email: str, phone: str):
-    # create_learner handles duplicate check internally
-    learner_id = await create_learner(db, full_name, email, phone)
-    return learner_id
 
 
 # GET BEHAVIOURAL QUESTIONS FOR A SKILL
@@ -79,7 +71,6 @@ async def submit_behavioural_answers(
         )
         db.add(profile)
 
-    # await db.commit()
     logger.info(
         "behavioural_answers_saved",
         learner_id=learner_id,
