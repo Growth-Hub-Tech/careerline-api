@@ -10,9 +10,9 @@ from tests.integration.conftest import take_test
 API = settings.API_PREFIX
 
 
-async def test_negative_paging_on_my_attempts_is_refused_not_a_server_error(client, learner):
-    # a negative limit or offset is a bad request (422 from the paging check), never a 500
-    for query in ("limit=-1", "offset=-1", "limit=0"):
+async def test_out_of_range_paging_on_my_attempts_is_refused_not_a_server_error(client, learner):
+    # a limit outside 1-100 or a negative offset is a bad request (422 from the paging check)
+    for query in ("limit=-1", "offset=-1", "limit=0", "limit=101"):
         response = await client.get(f"{API}/attempts/me?{query}", headers=learner["headers"])
         assert response.status_code == 422, (query, response.status_code, response.text)
 
