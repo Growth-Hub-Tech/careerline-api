@@ -20,13 +20,20 @@ async def test_the_worker_stops_cleanly_when_asked(monkeypatch):
         checks.append(True)
         return True
 
+    scheduled = []
+
+    async def fake_schedule() -> None:
+        scheduled.append(True)
+
     monkeypatch.setattr(worker, "check_database", fake_check)
+    monkeypatch.setattr(worker, "schedule_todays_cleanup", fake_schedule)
     stop = asyncio.Event()
     task = asyncio.create_task(worker.run(stop, heartbeat_seconds=0.01))
     await asyncio.sleep(0.05)
     stop.set()
     await asyncio.wait_for(task, timeout=2)
     assert len(checks) >= 2  # the start check and at least one heartbeat
+    assert scheduled == [True]  # today's housekeeping, once per start
 
 
 def test_the_worker_process_starts_and_exits_on_sigterm():
@@ -90,3 +97,13 @@ async def test_cors_refuses_other_origins(client):
 def test_cors_origins_come_from_a_comma_separated_env_var(monkeypatch, value, expected):
     monkeypatch.setenv("CORS_ORIGINS", value)
     assert Settings(_env_file=None).CORS_ORIGINS == expected
+
+
+async def test_without_a_database_the_cleanup_is_not_scheduled_and_nothing_crashes(monkeypatch):
+    from app.jobs import cleanup
+
+    def no_database():
+        raise ConnectionRefusedError("no database")
+
+    monkeypatch.setattr(cleanup, "AsyncSessionLocal", no_database)
+    await cleanup.schedule_todays_cleanup()  # logs cleanup_not_scheduled and returns

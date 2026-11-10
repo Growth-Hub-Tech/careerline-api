@@ -18,6 +18,7 @@ from app.core.middleware import (
 from app.core.permissions import authorize
 from app.db.migration_check import assert_database_at_head
 from app.db.session import engine
+from app.jobs.cleanup import schedule_todays_cleanup
 from app.jobs.runner import JobRunner
 
 logger = get_logger(__name__)
@@ -49,6 +50,7 @@ async def lifespan(app: FastAPI):
     stop_jobs = asyncio.Event()
     jobs_task = None
     if settings.RUN_JOBS_IN_WEB:
+        await schedule_todays_cleanup()
         jobs_task = asyncio.create_task(JobRunner().run_forever(stop_jobs))
         logger.info("jobs_running_in_web_process")
     try:
