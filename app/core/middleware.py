@@ -12,6 +12,8 @@ from app.core.logging import get_logger
 logger = get_logger("app.request")
 
 REQUEST_ID_HEADER = "X-Request-ID"
+# No route needs more: the biggest real body, a 1,000-person staff list, is about 300 KB
+MAX_BODY_BYTES = 2 * 1024 * 1024
 # An inbound request id is reused only if it is short and plain, so it can't inject anything into logs
 _VALID_REQUEST_ID = re.compile(r"^[A-Za-z0-9._-]{1,128}$")
 
@@ -88,6 +90,58 @@ class SecurityHeadersMiddleware:
             await send(message)
 
         await self.app(scope, receive, send_with_headers)
+
+
+# Answers 413 for a body over max_bytes before the route reads any of it. With a Content-Length
+# the header decides (the server never passes on more than it says). Without one (a chunked
+# body) the body is read here first, up to the limit, and then handed to the app.
+class BodySizeLimitMiddleware:
+    def __init__(self, app: ASGIApp, *, max_bytes: int = MAX_BODY_BYTES):
+        self.app = app
+        self.max_bytes = max_bytes
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        length = _header(scope, b"content-length")
+        if length is not None:
+            if length.isdigit() and int(length) > self.max_bytes:
+                await self._too_large(scope, receive, send)
+            else:
+                await self.app(scope, receive, send)
+            return
+
+        received: list[Message] = []
+        size = 0
+        while True:
+            message = await receive()
+            received.append(message)
+            if message["type"] != "http.request":
+                break  # the client went away: the app sees that too
+            size += len(message.get("body", b""))
+            if size > self.max_bytes:
+                await self._too_large(scope, receive, send)
+                return
+            if not message.get("more_body", False):
+                break
+
+        async def replay() -> Message:
+            return received.pop(0) if received else await receive()
+
+        await self.app(scope, replay, send)
+
+    async def _too_large(self, scope: Scope, receive: Receive, send: Send) -> None:
+        request_id = scope.get("state", {}).get("request_id")
+        megabytes = self.max_bytes // (1024 * 1024)
+        response = error_response(
+            request_id,
+            413,
+            "payload_too_large",
+            f"The request is too large: send at most {megabytes} MB.",
+        )
+        await response(scope, receive, send)
 
 
 def _header(scope: Scope, name: bytes) -> str | None:

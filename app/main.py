@@ -10,7 +10,11 @@ from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.launch_checks import production_problems
 from app.core.logging import configure_logging, get_logger
-from app.core.middleware import RequestContextMiddleware, SecurityHeadersMiddleware
+from app.core.middleware import (
+    BodySizeLimitMiddleware,
+    RequestContextMiddleware,
+    SecurityHeadersMiddleware,
+)
 from app.core.permissions import authorize
 from app.db.migration_check import assert_database_at_head
 from app.db.session import engine
@@ -74,8 +78,9 @@ def create_app() -> FastAPI:
     )
 
     # Middleware runs outermost-last: CORS -> security headers -> request id / access log / 500s
-    # -> gzip
+    # -> body size limit (413) -> gzip
     app.add_middleware(GZipMiddleware, minimum_size=1000)
+    app.add_middleware(BodySizeLimitMiddleware)
     app.add_middleware(RequestContextMiddleware)
     app.add_middleware(SecurityHeadersMiddleware, hsts=settings.is_production)
     app.add_middleware(
