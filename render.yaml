@@ -1,9 +1,11 @@
-# Render Blueprint for the CareerLine test server: web API + background worker + Postgres 16.
-# (On the free plan, which has no worker service, create the web service by hand and set
+# Render Blueprint for CareerLine: the test server (branch dev, APP_ENV=staging) and production
+# (branch main, APP_ENV=production), each a web API + background worker + Postgres 16.
+# (On the free plan, which has no worker service, create the test web service by hand and set
 # RUN_JOBS_IN_WEB=true: see docs/api.md, "Test server".)
 # Render dashboard: New > Blueprint > pick this repo and branch. Values marked sync: false are
 # asked for once in the dashboard; nothing secret is stored in this file.
-# Real values and the exact steps are in docs/api.md ("Test server").
+# Real values and the exact steps: docs/api.md ("Test server") and docs/launch.md (production).
+# Syncing this file creates every service in it, production's included: review the plans first.
 
 databases:
   - name: careerline-test-db
@@ -13,6 +15,14 @@ databases:
     plan: basic-256mb
     region: frankfurt
     ipAllowList: [] # only Render services can connect
+
+  - name: careerline-production-db
+    databaseName: careerline
+    user: careerline
+    postgresMajorVersion: '16'
+    plan: basic-256mb # production needs daily backups and point-in-time recovery (docs/launch.md)
+    region: frankfurt
+    ipAllowList: []
 
 services:
   - type: web
@@ -87,6 +97,8 @@ services:
           envVarKey: SECRET_KEY
       - key: OPENAI_API_KEY
         sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false # subscription renewals charge the saved card from the worker
       - key: APP_ENV
         value: staging
       - key: LOG_JSON
@@ -100,6 +112,116 @@ services:
       - key: SUPPORT_EMAIL
         sync: false
       - key: FRONTEND_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.13.12
+
+  # ---------- production (docs/launch.md) ----------
+
+  - type: web
+    name: careerline-api-production
+    runtime: python
+    region: frankfurt
+    plan: starter
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash scripts/start.sh
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: careerline-production-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: APP_ENV
+        value: production # refuses to start while a launch setting is wrong (app/core/launch_checks.py)
+      - key: SEED_ON_START
+        value: 'false' # set true for the first deploy and when the seed files change
+      - key: LOG_JSON
+        value: 'true'
+      - key: WEB_CONCURRENCY
+        value: '2'
+      - key: DB_POOL_SIZE
+        value: '5'
+      - key: DB_MAX_OVERFLOW
+        value: '5'
+      - key: RUN_JOBS_IN_WEB
+        value: 'false' # the production worker runs the jobs
+      - key: CORS_ORIGINS
+        sync: false # the website's https origin(s)
+      - key: FRONTEND_URL
+        sync: false # the website's https address (links in emails)
+      - key: PAYSTACK_SECRET_KEY
+        sync: false # the live key (sk_live_...)
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_SECURITY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.13.12
+
+  - type: worker
+    name: careerline-worker-production
+    runtime: python
+    region: frankfurt
+    plan: starter
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.worker
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: careerline-production-db
+          property: connectionString
+      - key: SECRET_KEY
+        fromService:
+          type: web
+          name: careerline-api-production
+          envVarKey: SECRET_KEY
+      - key: APP_ENV
+        value: production
+      - key: LOG_JSON
+        value: 'true'
+      - key: DB_POOL_SIZE
+        value: '5'
+      - key: DB_MAX_OVERFLOW
+        value: '5'
+      - key: FRONTEND_URL
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false # subscription renewals charge the saved card from the worker
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_SECURITY
+        sync: false
+      - key: SENTRY_DSN
         sync: false
       - key: PYTHON_VERSION
         value: 3.13.12

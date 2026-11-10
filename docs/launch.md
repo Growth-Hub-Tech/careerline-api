@@ -1,6 +1,6 @@
 # Going live: the launch checklist (Day 30)
 
-Everything the API needs before real people and real money use it. The test server (`render.yaml`, `APP_ENV=staging`) stays as it is; production is a second set of services with its own database. Tick each line in the launch PR.
+Everything the API needs before real people and real money use it. `render.yaml` holds both the test server (`careerline-api`, `careerline-worker`, `careerline-test-db`: branch `dev`, `APP_ENV=staging`) and production (`careerline-api-production`, `careerline-worker-production`, `careerline-production-db`: branch `main`, `APP_ENV=production`), each with its own database. Syncing the Blueprint creates every service in it, so check the production plans first; the dashboard then asks for each `sync: false` value. Tick each line in the launch PR.
 
 ## 1. Services
 
