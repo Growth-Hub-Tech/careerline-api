@@ -47,6 +47,11 @@ def production_problems(settings: Settings) -> list[str]:
         problems.append("EMAIL_FROM must be a real sender address, not the placeholder")
     if not settings.CHECK_MIGRATIONS_ON_STARTUP:
         problems.append("CHECK_MIGRATIONS_ON_STARTUP must stay true (never serve an old schema)")
+    if settings.SESSION_COOKIE_SAMESITE == "none":
+        problems.append(
+            "SESSION_COOKIE_SAMESITE must be lax or strict (put the website and the API on one "
+            "domain): none sends the sign-in cookie with other sites' requests"
+        )
     if not settings.SENTRY_DSN:
         problems.append("SENTRY_DSN must be set so the team hears about errors (Sentry)")
     return problems

@@ -45,6 +45,7 @@ def test_good_production_settings_have_no_problems():
         ({"EMAIL_FROM": "CareerLine <no-reply@careerline.local>"}, "EMAIL_FROM"),
         ({"CHECK_MIGRATIONS_ON_STARTUP": "false"}, "CHECK_MIGRATIONS_ON_STARTUP"),
         ({"SENTRY_DSN": ""}, "SENTRY_DSN"),
+        ({"SESSION_COOKIE_SAMESITE": "none"}, "SESSION_COOKIE_SAMESITE"),
     ],
 )
 def test_each_unsafe_production_setting_is_named(changes, word):
@@ -68,3 +69,9 @@ async def test_production_refuses_to_start_with_problems(monkeypatch):
     with pytest.raises(RuntimeError, match="SECRET_KEY"):
         async with main.lifespan(main.app):
             pass
+
+
+def test_the_cookie_samesite_setting_is_checked_and_case_insensitive():
+    assert settings_with(SESSION_COOKIE_SAMESITE=" LAX ").SESSION_COOKIE_SAMESITE == "lax"
+    with pytest.raises(ValueError):
+        settings_with(SESSION_COOKIE_SAMESITE="sideways")

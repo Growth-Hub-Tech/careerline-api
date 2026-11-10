@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
@@ -45,6 +45,11 @@ class Settings(BaseSettings):
 
     # Comma-separated list of frontend origins allowed to call the API
     CORS_ORIGINS: Annotated[list[str], NoDecode] = ["http://localhost:5173"]
+    # The sign-in cookie's SameSite. lax (production): the site and the API share a domain, so
+    # the site's requests carry the cookie and other sites' requests do not. none: the test
+    # server, whose site and API are on different domains (Safari and private windows still
+    # block it there). Either way a cookie only counts on a change from one of CORS_ORIGINS.
+    SESSION_COOKIE_SAMESITE: Literal["lax", "strict", "none"] = "lax"
 
     # Refuse to start when the database is behind the latest migration
     CHECK_MIGRATIONS_ON_STARTUP: bool = True
@@ -138,6 +143,11 @@ class Settings(BaseSettings):
         if isinstance(value, str):
             return [origin.strip() for origin in value.split(",") if origin.strip()]
         return value
+
+    @field_validator("SESSION_COOKIE_SAMESITE", mode="before")
+    @classmethod
+    def _lower_samesite(cls, value):
+        return str(value).strip().lower()
 
     @field_validator("EMAIL_BACKEND", mode="before")
     @classmethod

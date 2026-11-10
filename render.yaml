@@ -45,6 +45,8 @@ services:
         generateValue: true # Render makes a long random value once and keeps it
       - key: CORS_ORIGINS
         sync: false # the website's address(es), comma-separated, e.g. https://careerline-web.onrender.com,http://localhost:5173
+      - key: SESSION_COOKIE_SAMESITE
+        value: none # the test website and API are on different domains (production keeps lax)
       - key: OPENAI_API_KEY
         sync: false # optional: without it a plain fallback recommendation is used
       - key: PAYSTACK_SECRET_KEY

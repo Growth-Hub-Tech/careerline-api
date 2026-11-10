@@ -17,6 +17,7 @@ Everything the API needs before real people and real money use it. `render.yaml`
 - [ ] `DATABASE_URL`: the production database.
 - [ ] `FRONTEND_URL`: the website's https address (every link in an email points there: `/verify-email`, `/reset-password`, `/forgot-password`, `/invite/<token>`, `/settings/privacy`, `/subscription`).
 - [ ] `CORS_ORIGINS`: the website's https origin(s) only.
+- [ ] The website and the API on one domain (for example `careerline.ng` and `api.careerline.ng`), so the sign-in cookie works with `SESSION_COOKIE_SAMESITE=lax` (the default; `none` is refused in production).
 - [ ] `PAYSTACK_SECRET_KEY`: the **live** secret key (`sk_live_…`).
 - [ ] Email: `EMAIL_BACKEND=smtp` (or unset), `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_SECURITY`, a real `EMAIL_FROM` on a domain with SPF, DKIM and DMARC set up, and `SUPPORT_EMAIL`.
 - [ ] `LOG_JSON=true`, `CHECK_MIGRATIONS_ON_STARTUP=true` (the default).

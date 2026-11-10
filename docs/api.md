@@ -15,14 +15,16 @@ Outside the `/api/v1` prefix: `GET /healthz` (the app is up), `GET /readyz` (the
 
 1. **Sign up:** `POST /api/v1/auth/register` with JSON `{ "full_name", "email", "phone", "password" }` (password at least 8 characters). The answer already holds a token (the new account is signed in). A confirmation email is sent at the same time.
 2. **Sign in:** `POST /api/v1/auth/login` as a **form** (`application/x-www-form-urlencoded`), not JSON: `username=<email>&password=<password>`. The answer is the standard OAuth2 body `{ "access_token", "token_type": "bearer", "learner_id", "full_name" }` (no envelope). Emails are not case-sensitive.
-3. Send `Authorization: Bearer <access_token>` on every protected call. A token lasts 24 hours; a `401` means sign in again.
-4. **Sign out:** `POST /api/v1/auth/logout` (with the token). That token stops working at once; other devices stay signed in. `?everywhere=true` signs out every device.
+3. **The website** does not keep the token: sign-in also sets it in the `careerline_session` cookie (HttpOnly, Secure, 24 hours), and the browser sends it back when every request is made with `credentials: "include"`. On a `POST`, `PUT`, `PATCH` or `DELETE` the cookie counts only when the request's `Origin` is one of `CORS_ORIGINS` (other sites can make a browser send the cookie, not the `Origin`). Other clients send `Authorization: Bearer <access_token>`; when both are sent, the header wins. A token lasts 24 hours; a `401` means sign in again.
+4. **Sign out:** `POST /api/v1/auth/logout` (with the cookie or the token). That session stops working at once and the cookie is deleted; other devices stay signed in. `?everywhere=true` signs out every device.
 
 ```ts
 const form = new URLSearchParams({ username: email, password });
-const res = await fetch(`${API}/auth/login`, { method: "POST", body: form });
-const { access_token } = await res.json();
+await fetch(`${API}/auth/login`, { method: "POST", body: form, credentials: "include" });
+const me = await fetch(`${API}/accounts/me`, { credentials: "include" }); // the cookie signs it in
 ```
+
+`SESSION_COOKIE_SAMESITE` sets the cookie's `SameSite`: `lax` (the default, and production's) needs the website and the API on one domain (for example `careerline.ng` and `api.careerline.ng`); the test server, whose website and API are on different domains, uses `none`, which Safari and private windows block.
 
 **Sessions.** Every sign-in is a session on the server. Sign-out ends one; a password reset ends all of them; changing the password ends all the others (the device that changed it stays signed in). Tokens issued before Day 6 no longer work: sign in again.
 

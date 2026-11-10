@@ -6,7 +6,8 @@ that verifies one replaces it with an Argon2id hash (needs_rehash).
 
 Session tokens: a signed JWT with the learner id (sub) and the server-side session id (sid).
 The session row decides whether the token still works, so signing out (or resetting the
-password) ends it at once. See app/services/session_service.py.
+password) ends it at once. See app/services/session_service.py. Sign-in returns the token and
+also sets it in the SESSION_COOKIE cookie for the website (app/api/routes/auth.py).
 
 One-time tokens (email confirmation, password reset): random, sent only in the email link,
 stored as a SHA-256 hash.
@@ -27,6 +28,8 @@ from app.core.config import settings
 
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
+# The website's copy of the session token: an HttpOnly cookie, so page scripts cannot read it
+SESSION_COOKIE = "careerline_session"
 
 # Argon2id with OWASP's minimum (19 MiB, 2 passes, 1 lane). The library's default takes 64 MiB
 # per hash, too much for a 512 MB server when several people sign in at once. Hashes made with

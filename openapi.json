@@ -8156,7 +8156,7 @@
     },
     "/api/v1/auth/login": {
       "post": {
-        "description": "OAuth2 password form: username = email. A wrong password and an unknown email get the same 401. After 5 failed sign-ins for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After, whatever the password.",
+        "description": "OAuth2 password form: username = email. A wrong password and an unknown email get the same 401. After 5 failed sign-ins for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After, whatever the password. Also sets the token in the HttpOnly careerline_session cookie for the website (send requests with credentials; a cookie counts on a POST, PUT, PATCH or DELETE only with an Origin listed in CORS_ORIGINS).",
         "operationId": "login_api_v1_auth_login_post",
         "requestBody": {
           "content": {
@@ -8218,7 +8218,7 @@
     },
     "/api/v1/auth/logout": {
       "post": {
-        "description": "Ends this session: its token stops working at once. everywhere=true ends every session of the account (all devices).",
+        "description": "Ends this session: its token stops working at once, and the session cookie is deleted. everywhere=true ends every session of the account (all devices).",
         "operationId": "logout_api_v1_auth_logout_post",
         "parameters": [
           {
