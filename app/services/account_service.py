@@ -37,6 +37,7 @@ from app.jobs.registry import job
 from app.models.accounts import AccountToken
 from app.models.models import Learner, LearnerStatus
 from app.schemas.auth import RegisterRequest
+from app.schemas.common import PASSWORD_MAX_LENGTH
 from app.services.session_service import revoke_all_sessions, start_session
 
 logger = get_logger(__name__)
@@ -216,7 +217,9 @@ async def login(
             raise _limited(retry, "Too many sign-in attempts. Try again later.")
 
     learner = await find_learner_by_email(db, email)
-    if learner is None or not learner.hashed_password:
+    if len(password) > PASSWORD_MAX_LENGTH:
+        valid = False  # refused before hashing, so a huge password cannot tie up the server
+    elif learner is None or not learner.hashed_password:
         await asyncio.to_thread(burn_password_check, password)
         valid = False
     else:

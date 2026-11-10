@@ -3,6 +3,8 @@ from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field
 
+from app.schemas.common import FULL_NAME_MAX_LENGTH, PASSWORD_MAX_LENGTH, PHONE_MAX_LENGTH
+
 AccountType = Literal["learner", "recruiter", "organisation_admin"]
 
 
@@ -24,13 +26,13 @@ class Account(BaseModel):
 class AccountUpdate(BaseModel):
     """Send only the fields to change."""
 
-    full_name: str | None = Field(default=None, min_length=1, max_length=120)
-    phone: str | None = Field(default=None, max_length=32)
+    full_name: str | None = Field(default=None, min_length=1, max_length=FULL_NAME_MAX_LENGTH)
+    phone: str | None = Field(default=None, max_length=PHONE_MAX_LENGTH)
 
 
 class ChangePasswordRequest(BaseModel):
-    current_password: str
-    new_password: str = Field(min_length=8)
+    current_password: str = Field(max_length=PASSWORD_MAX_LENGTH)
+    new_password: str = Field(min_length=8, max_length=PASSWORD_MAX_LENGTH)
 
 
 class PasswordResetRequest(BaseModel):
@@ -39,7 +41,7 @@ class PasswordResetRequest(BaseModel):
 
 class PasswordResetConfirm(BaseModel):
     token: str
-    new_password: str = Field(min_length=8)
+    new_password: str = Field(min_length=8, max_length=PASSWORD_MAX_LENGTH)
 
 
 class VerifyEmailRequest(BaseModel):

@@ -4,6 +4,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from app.schemas.common import PASSWORD_MAX_LENGTH
+
 ConsentKey = Literal[
     "marketing_emails",
     "share_profile_with_recruiters",
@@ -44,7 +46,7 @@ class DataExport(BaseModel):
 
 
 class AccountDeletionRequest(BaseModel):
-    password: str
+    password: str = Field(max_length=PASSWORD_MAX_LENGTH)
     reason: str | None = Field(default=None, max_length=500)
 
 

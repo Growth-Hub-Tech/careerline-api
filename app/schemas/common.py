@@ -6,7 +6,24 @@ from pydantic import BaseModel, Field
 
 from app.models.models import LevelName
 
-__all__ = ["Acknowledgement", "Currency", "LevelName", "Money", "Page"]
+__all__ = [
+    "EMAIL_MAX_LENGTH",
+    "FULL_NAME_MAX_LENGTH",
+    "PASSWORD_MAX_LENGTH",
+    "PHONE_MAX_LENGTH",
+    "Acknowledgement",
+    "Currency",
+    "LevelName",
+    "Money",
+    "Page",
+]
+
+# The learner table's column sizes: a longer value is a 422, never a database error (a 500)
+FULL_NAME_MAX_LENGTH = 100
+EMAIL_MAX_LENGTH = 100
+PHONE_MAX_LENGTH = 20
+# Longer passwords are refused before hashing, so a huge one cannot tie up the server
+PASSWORD_MAX_LENGTH = 128
 
 Currency = Literal["NGN", "USD"]
 
