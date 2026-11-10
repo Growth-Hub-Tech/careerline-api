@@ -19,9 +19,9 @@ import threading
 from datetime import UTC, datetime, timedelta
 
 import bcrypt
+import jwt
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
-from jose import JWTError, jwt
 
 from app.core.config import settings
 
@@ -107,7 +107,7 @@ def decode_token(token: str) -> tuple[int, str | None] | None:
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[ALGORITHM])
         session_id = payload.get("sid")
         return int(payload["sub"]), str(session_id) if session_id else None
-    except (JWTError, KeyError, TypeError, ValueError):
+    except (jwt.PyJWTError, KeyError, TypeError, ValueError):
         return None
 
 

@@ -35,7 +35,7 @@ import uuid
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from jose import JWTError, jwt
+import jwt
 from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -239,7 +239,7 @@ async def export_download(db: AsyncSession, token: str) -> tuple[bytes, str]:
         if claims.get("typ") != TOKEN_TYPE:
             raise gone
         export_id = int(claims["eid"])
-    except (JWTError, KeyError, TypeError, ValueError):
+    except (jwt.PyJWTError, KeyError, TypeError, ValueError):
         raise gone from None
     row = await db.get(DataExport, export_id)
     if row is None or row.status != "ready" or row.content is None or _expired(row):

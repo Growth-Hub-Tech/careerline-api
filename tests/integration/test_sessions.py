@@ -1,8 +1,8 @@
 """Day 6: sessions are revocable. Sign-out ends one session; a password reset ends all of them;
 a password change ends all the others."""
 
+import jwt
 import pytest
-from jose import jwt
 
 from app.core.config import settings
 from app.jobs.runner import JobRunner

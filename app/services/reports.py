@@ -18,7 +18,7 @@ from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from jose import JWTError, jwt
+import jwt
 from sqlalchemy import and_, func, or_, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -322,7 +322,7 @@ async def report_download(db: AsyncSession, token: str) -> tuple[bytes, str]:
         if claims.get("typ") != TOKEN_TYPE:
             raise gone
         attempt_id, version = int(claims["rid"]), int(claims["ver"])
-    except (JWTError, KeyError, TypeError, ValueError):
+    except (jwt.PyJWTError, KeyError, TypeError, ValueError):
         raise gone from None
     row = await db.get(ResultReport, attempt_id)
     if row is None or row.version != version or row.status != "ready" or row.pdf is None:

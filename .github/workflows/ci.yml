@@ -167,7 +167,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: pip-audit
-        # Report only: some pinned packages (e.g. ecdsa via python-jose) have advisories with no fix yet
+        # Report only: an advisory with no fix yet must not block every PR
         run: |
           pip install pip-audit
           pip-audit -r requirements.txt --desc on || echo "::warning::pip-audit found vulnerable dependencies; see this job's log."

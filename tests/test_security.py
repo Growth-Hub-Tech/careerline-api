@@ -2,10 +2,11 @@
 
 import threading
 import time
+import warnings
 
 import bcrypt
+import jwt
 from argon2 import PasswordHasher, extract_parameters
-from jose import jwt
 
 from app.core import security
 from app.core.config import settings
@@ -111,3 +112,34 @@ def test_at_most_two_passwords_are_hashed_at_once(monkeypatch):
     for thread in threads:
         thread.join()
     assert most == 2
+
+
+# Made by python-jose (the library used before PyJWT) with this key: tokens people already hold
+# keep working after the switch, so nobody is signed out by the deploy
+JOSE_KEY = "jose-era-secret-key-for-compatibility-tests"
+JOSE_TOKEN = (
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3IiwiaWF0IjoxNzkzNDkxMjAwLCJleHAiOjQxMDI0NDQ4MDAs"
+    "InNpZCI6IjViMGY1YzJlLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDAwMSJ9.nqqXrQbGvjwf8j7WLQnw-aawukory4Oz4E"
+    "SZ4wTfAzc"
+)
+
+
+def test_a_session_token_made_before_the_switch_to_pyjwt_still_works(monkeypatch):
+    monkeypatch.setattr(settings, "SECRET_KEY", JOSE_KEY)
+    assert security.decode_token(JOSE_TOKEN) == (7, "5b0f5c2e-0000-4000-8000-000000000001")
+
+
+def test_tampered_or_foreign_tokens_never_decode(monkeypatch):
+    monkeypatch.setattr(settings, "SECRET_KEY", JOSE_KEY)
+    header, payload, signature = JOSE_TOKEN.split(".")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")  # the right key is short for HS512: the point here
+        other_algorithm = jwt.encode({"sub": "7", "sid": "x"}, JOSE_KEY, "HS512")
+    for token in (
+        f"{header}.{payload}.{signature[:-2]}xx",
+        jwt.encode({"sub": "7", "sid": "x"}, "another-key-of-at-least-32-bytes!", "HS256"),
+        other_algorithm,  # signed with our key, but not with the algorithm we sign with
+        "not-a-token",
+        "",
+    ):
+        assert security.decode_token(token) is None, token
