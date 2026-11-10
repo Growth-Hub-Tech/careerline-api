@@ -12,7 +12,9 @@ from app.core.config import Settings, settings
 
 def test_jobs_do_not_run_in_the_web_process_by_default(monkeypatch):
     monkeypatch.delenv("RUN_JOBS_IN_WEB", raising=False)
-    assert Settings(DATABASE_URL="postgresql://x/y", SECRET_KEY="k").RUN_JOBS_IN_WEB is False
+    # _env_file=None: the default, not whatever this machine's .env says
+    defaults = Settings(_env_file=None, DATABASE_URL="postgresql://x/y", SECRET_KEY="k")
+    assert defaults.RUN_JOBS_IN_WEB is False
 
 
 async def test_the_web_process_starts_and_stops_the_job_loop_when_asked(monkeypatch):

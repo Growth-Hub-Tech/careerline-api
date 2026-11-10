@@ -110,7 +110,9 @@ def test_every_email_template_extends_the_layout():
 def test_the_default_backend_depends_on_the_environment(env, backend, monkeypatch):
     monkeypatch.delenv("EMAIL_BACKEND", raising=False)
     assert (
-        Settings(DATABASE_URL="postgresql://x/y", SECRET_KEY="k", APP_ENV=env).email_backend
+        Settings(
+            _env_file=None, DATABASE_URL="postgresql://x/y", SECRET_KEY="k", APP_ENV=env
+        ).email_backend
         == backend
     )
 
