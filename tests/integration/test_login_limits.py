@@ -10,7 +10,7 @@ import time
 import pytest
 
 from app.core.config import settings
-from tests.integration.conftest import assert_error_envelope, login, register
+from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
 
 API = settings.API_PREFIX
 
@@ -76,3 +76,25 @@ async def test_an_unknown_email_takes_as_long_as_a_wrong_password(client, ada):
     unknown = min([await timed(f"nobody{n}@example.com") for n in range(3)])
     # Both check a password hash; without that, an unknown email answers ~10x faster
     assert unknown > known * 0.5, (known, unknown)
+
+
+async def test_a_spoofed_forwarded_for_hop_does_not_escape_the_ip_limit(client, ada):
+    # The client controls every X-Forwarded-For hop except the last one (added by Render's proxy)
+    async def attempt(n: int, password: str = "not-the-password"):
+        return await client.post(
+            f"{API}/auth/login",
+            data={"username": f"guess{n}@example.com", "password": password},
+            headers={"X-Forwarded-For": f"10.9.{n}.1, 203.0.113.7"},
+        )
+
+    for n in range(20):
+        assert (await attempt(n)).status_code == 401
+    assert_error_envelope(await attempt(99), 429, "rate_limited")
+
+    # Another real address (a different last hop) is not affected
+    other = await client.post(
+        f"{API}/auth/login",
+        data={"username": "ada@example.com", "password": PASSWORD},
+        headers={"X-Forwarded-For": "198.51.100.2"},
+    )
+    assert other.status_code == 200, other.text

@@ -3,6 +3,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_session, get_db
+from app.core.rate_limit import client_ip
 from app.core.responses import EnvelopeRoute, errors, ok
 from app.schemas.auth import RegisterRequest, TokenResponse
 from app.schemas.common import Acknowledgement
@@ -17,8 +18,7 @@ token_router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 
 def _client(request: Request) -> tuple[str | None, str | None]:
-    ip = request.client.host if request.client else None
-    return ip, request.headers.get("user-agent")
+    return client_ip(request), request.headers.get("user-agent")
 
 
 # SIGN UP: creates the account, signs it in and emails a confirmation link

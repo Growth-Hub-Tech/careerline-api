@@ -15,11 +15,26 @@ from dataclasses import dataclass
 
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
+from starlette.requests import Request
 
 from app.core.config import settings
 
 # Events older than this are deleted as new ones come in (no limit looks back further)
 KEEP_SECONDS = 24 * 3600
+
+
+def client_ip(request: Request) -> str | None:
+    """The caller's IP address for per-IP limits.
+
+    Render's proxy appends the address it saw as the LAST X-Forwarded-For hop; everything before
+    it came from the client and can be anything. uvicorn (--forwarded-allow-ips "*") puts the
+    FIRST hop in request.client, so request.client.host is only used when there is no header.
+    """
+    hops = ",".join(request.headers.getlist("x-forwarded-for")).split(",")
+    last = hops[-1].strip()
+    if last:
+        return last
+    return request.client.host if request.client else None
 
 
 @dataclass(frozen=True)
