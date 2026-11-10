@@ -14,7 +14,7 @@ import signal
 from sqlalchemy import text
 
 from app.core.config import settings
-from app.core.logging import configure_logging, get_logger
+from app.core.logging import configure_logging, get_logger, init_error_monitoring
 from app.db.session import engine
 from app.jobs.runner import JobRunner
 
@@ -56,6 +56,7 @@ async def run(
 
 def main() -> None:
     configure_logging()
+    init_error_monitoring()
 
     async def _main() -> None:
         stop = asyncio.Event()

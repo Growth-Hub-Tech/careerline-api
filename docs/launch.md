@@ -20,6 +20,7 @@ Everything the API needs before real people and real money use it. The test serv
 - [ ] `PAYSTACK_SECRET_KEY`: the **live** secret key (`sk_live_…`).
 - [ ] Email: `EMAIL_BACKEND=smtp` (or unset), `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_SECURITY`, a real `EMAIL_FROM` on a domain with SPF, DKIM and DMARC set up, and `SUPPORT_EMAIL`.
 - [ ] `LOG_JSON=true`, `CHECK_MIGRATIONS_ON_STARTUP=true` (the default).
+- [ ] `SENTRY_DSN`: the Sentry project's DSN, on the web service and the worker, so 500s and failed or dead background jobs reach the team. In Sentry, turn on server-side data scrubbing (some error URLs hold short-lived download or invitation tokens).
 - [ ] `OPENAI_API_KEY`: optional (without it the plain advice and explanations are used).
 - [ ] **Not** set in production: `DEMO_DATA_ON_START` (refused anyway), `TEST_MAILBOX_TOKEN` (there is no test mailbox in production). `SEED_ON_START=true` only for the first deploy and when the seed files change.
 - [ ] Optional, with their defaults: `AUDIT_INVITATION_DAYS=14`, `SUBSCRIPTION_GRACE_DAYS=3`, `SUBSCRIPTION_RENEW_ATTEMPTS=3`, `CHECKOUTS_PER_HOUR=20`, `ACCOUNT_DELETION_GRACE_DAYS=30`, `DATA_EXPORT_DAYS=7`, `RETEST_COOLDOWN_DAYS=14`, `RECRUITER_SHORTLIST_LIMIT=25` (every variable is in `.env.example`).

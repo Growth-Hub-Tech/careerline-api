@@ -36,6 +36,8 @@ class Settings(BaseSettings):
     # Logging: JSON lines in production, readable console output in development
     LOG_LEVEL: str = "INFO"
     LOG_JSON: bool = False
+    # Errors go to Sentry when set (the project's DSN); required in production
+    SENTRY_DSN: str = ""
 
     # Comma-separated list of frontend origins allowed to call the API
     CORS_ORIGINS: Annotated[list[str], NoDecode] = ["http://localhost:5173"]

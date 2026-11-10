@@ -17,6 +17,7 @@ GOOD = {
     "SMTP_HOST": "smtp.example.com",
     "EMAIL_FROM": "CareerLine <hello@careerline.ng>",
     "CHECK_MIGRATIONS_ON_STARTUP": "true",  # the test run switches it off in the environment
+    "SENTRY_DSN": "https://public@o1.ingest.sentry.io/1",
 }
 
 
@@ -43,6 +44,7 @@ def test_good_production_settings_have_no_problems():
         ({"SMTP_HOST": ""}, "SMTP_HOST"),
         ({"EMAIL_FROM": "CareerLine <no-reply@careerline.local>"}, "EMAIL_FROM"),
         ({"CHECK_MIGRATIONS_ON_STARTUP": "false"}, "CHECK_MIGRATIONS_ON_STARTUP"),
+        ({"SENTRY_DSN": ""}, "SENTRY_DSN"),
     ],
 )
 def test_each_unsafe_production_setting_is_named(changes, word):

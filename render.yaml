@@ -47,6 +47,8 @@ services:
         value: 'true' # demo accounts and Demo Company Ltd (docs/api.md); refused in production
       - key: LOG_JSON
         value: 'true'
+      - key: SENTRY_DSN
+        sync: false # where errors are reported (Sentry); optional on the test server
       - key: WEB_CONCURRENCY
         value: '2'
       - key: RUN_JOBS_IN_WEB
@@ -85,6 +87,8 @@ services:
         value: staging
       - key: LOG_JSON
         value: 'true'
+      - key: SENTRY_DSN
+        sync: false
       - key: SUPPORT_EMAIL
         sync: false
       - key: FRONTEND_URL

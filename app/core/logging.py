@@ -1,7 +1,9 @@
 import logging
 import sys
 
+import sentry_sdk
 import structlog
+from sentry_sdk.integrations.logging import LoggingIntegration
 
 from app.core.config import settings
 
@@ -20,6 +22,7 @@ def configure_logging(level: str | None = None, json_logs: bool | None = None) -
         structlog.stdlib.add_log_level,
         structlog.processors.TimeStamper(fmt="iso", utc=True),
         structlog.processors.StackInfoRenderer(),
+        report_errors_to_sentry,
     ]
 
     renderer: structlog.types.Processor
@@ -58,3 +61,40 @@ def configure_logging(level: str | None = None, json_logs: bool | None = None) -
 
 def get_logger(name: str | None = None) -> structlog.stdlib.BoundLogger:
     return structlog.stdlib.get_logger(name)
+
+
+def init_error_monitoring() -> None:
+    """Send errors to Sentry when SENTRY_DSN is set (the API and the worker call this)."""
+    if not settings.SENTRY_DSN:
+        return
+    sentry_sdk.init(
+        dsn=settings.SENTRY_DSN,
+        environment=settings.APP_ENV,
+        send_default_pii=False,
+        # Request bodies hold passwords and emails, stack frames hold their values: never sent
+        max_request_body_size="never",
+        include_local_variables=False,
+        # Error log lines are sent by report_errors_to_sentry; other lines become breadcrumbs
+        integrations=[LoggingIntegration(event_level=None)],
+    )
+
+
+_ERROR_LEVELS = {"error", "exception", "critical"}
+
+
+def report_errors_to_sentry(
+    logger: object, method_name: str, event_dict: structlog.types.EventDict
+) -> structlog.types.EventDict:
+    """One Sentry event per error log line (500s, failed and dead jobs): the exception with its
+    stack trace when there is one, otherwise the event name, so events group by what went wrong
+    and not by each line's request id or time."""
+    if method_name in _ERROR_LEVELS and sentry_sdk.is_initialized():
+        with sentry_sdk.new_scope() as scope:
+            for key, value in event_dict.items():
+                if key not in ("event", "exc_info", "timestamp"):
+                    scope.set_extra(key, value)
+            if event_dict.get("exc_info") and sys.exc_info()[1] is not None:
+                sentry_sdk.capture_exception()
+            else:
+                sentry_sdk.capture_message(str(event_dict.get("event")), level="error")
+    return event_dict

@@ -9,7 +9,7 @@ from app.api.routes import api_router, health, test_mailbox
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.launch_checks import production_problems
-from app.core.logging import configure_logging, get_logger
+from app.core.logging import configure_logging, get_logger, init_error_monitoring
 from app.core.middleware import (
     BodySizeLimitMiddleware,
     RequestContextMiddleware,
@@ -67,6 +67,7 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     configure_logging()
+    init_error_monitoring()
 
     # The interactive docs and the API description are for the team: production does not serve
     # them (scripts/export_openapi.py builds openapi.json without them)
