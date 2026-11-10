@@ -9,10 +9,7 @@ from app.models.roles import JobRole, JobRoleSkill, JobTitle
 from app.repositories.question_repo import testable_skill_ids
 from app.schemas.common import Page
 from app.schemas.roles import JobTitleItem, JobTitleList, Role, RoleSkill, RoleSummary
-
-# Until GET /tests is real, a test is one skill's test: test_id = 200 + skill_id (the sample
-# catalogue's numbering)
-TEST_ID_OFFSET = 200
+from app.services.test_catalogue import TEST_ID_OFFSET
 
 
 def _summary(role: JobRole) -> RoleSummary:
