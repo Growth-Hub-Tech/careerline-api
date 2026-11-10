@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from pydantic import field_validator
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str
     SECRET_KEY: str
+    # Connections each process may open (2 web workers and the job worker share Render's small
+    # Postgres connection limit). At least 1: SQLAlchemy reads a pool size of 0 as "no limit".
+    DB_POOL_SIZE: int = Field(default=5, ge=1)
+    DB_MAX_OVERFLOW: int = Field(default=5, ge=0)
 
     # OpenAI
     OPENAI_API_KEY: str = ""

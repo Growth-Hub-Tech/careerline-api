@@ -51,6 +51,10 @@ services:
         sync: false # where errors are reported (Sentry); optional on the test server
       - key: WEB_CONCURRENCY
         value: '2'
+      - key: DB_POOL_SIZE
+        value: '5' # per process: 2 web workers + the worker open at most 3 x (5 + 5) connections
+      - key: DB_MAX_OVERFLOW
+        value: '5'
       - key: RUN_JOBS_IN_WEB
         value: 'false' # the worker below runs the jobs (on the free plan, with no worker, set true)
       - key: TEST_MAILBOX_TOKEN
@@ -89,6 +93,10 @@ services:
         value: 'true'
       - key: SENTRY_DSN
         sync: false
+      - key: DB_POOL_SIZE
+        value: '5'
+      - key: DB_MAX_OVERFLOW
+        value: '5'
       - key: SUPPORT_EMAIL
         sync: false
       - key: FRONTEND_URL
