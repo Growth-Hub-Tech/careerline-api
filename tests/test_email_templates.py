@@ -4,6 +4,7 @@ The layout (app/email/templates/layout.html + layout.txt) is the only file that 
 email looks; each email only fills its content. Omotoke's design replaces those two files.
 """
 
+import logging
 import re
 import smtplib
 from email.message import EmailMessage as MimeMessage
@@ -109,7 +110,9 @@ def test_every_email_template_extends_the_layout():
 def test_the_default_backend_depends_on_the_environment(env, backend, monkeypatch):
     monkeypatch.delenv("EMAIL_BACKEND", raising=False)
     assert (
-        Settings(DATABASE_URL="postgresql://x/y", SECRET_KEY="k", APP_ENV=env).email_backend
+        Settings(
+            _env_file=None, DATABASE_URL="postgresql://x/y", SECRET_KEY="k", APP_ENV=env
+        ).email_backend
         == backend
     )
 
@@ -138,7 +141,7 @@ def _message() -> EmailMessage:
     )
 
 
-async def test_smtp_sends_one_message_with_a_text_and_an_html_part(monkeypatch):
+async def test_smtp_sends_one_message_with_a_text_and_an_html_part(monkeypatch, caplog):
     sent: list[MimeMessage] = []
 
     class FakeSMTP:
@@ -164,7 +167,11 @@ async def test_smtp_sends_one_message_with_a_text_and_an_html_part(monkeypatch):
     monkeypatch.setattr(settings, "SMTP_HOST", "smtp.example.com")
     monkeypatch.setattr(settings, "SMTP_USERNAME", "user")
     monkeypatch.setattr(settings, "SMTP_PASSWORD", "not-a-real-password")
-    await backends.SmtpBackend().send(_message())
+    with caplog.at_level(logging.INFO):
+        await backends.SmtpBackend().send(_message())
+    (line,) = _log_lines(caplog, "email_sent")
+    assert line["reference"] == "outbox-1"
+    assert "ada@example.com" not in str(line)  # logs never hold the recipient's address
 
     (mime,) = sent
     assert mime["To"] == "ada@example.com"
@@ -181,8 +188,20 @@ async def test_smtp_without_a_host_fails_loudly(monkeypatch):
         await backends.SmtpBackend().send(_message())
 
 
-async def test_the_console_backend_only_logs(caplog):
-    await backends.ConsoleBackend().send(_message())
+async def test_the_console_backend_only_logs_and_without_the_address(caplog):
+    with caplog.at_level(logging.INFO):
+        await backends.ConsoleBackend().send(_message())
+    (line,) = _log_lines(caplog, "email_logged")
+    assert line["reference"] == "outbox-1"
+    assert "to" not in line
+
+
+def _log_lines(caplog, event: str) -> list[dict]:
+    return [
+        record.msg
+        for record in caplog.records
+        if isinstance(record.msg, dict) and record.msg.get("event") == event
+    ]
 
 
 def test_a_line_break_in_a_name_cannot_break_the_subject_header():

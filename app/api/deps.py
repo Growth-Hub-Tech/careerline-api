@@ -11,7 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
 from app.core.exceptions import ForbiddenError, UnauthorizedError
-from app.core.security import decode_token
+from app.core.security import SESSION_COOKIE, decode_token
 from app.db.session import get_db
 from app.models.models import Learner
 from app.models.organisations import OrganisationMember
@@ -26,8 +26,11 @@ __all__ = [
     "require_same_learner",
 ]
 
-# OAuth2PasswordBearer tells FastAPI (and /docs) where to look for the token
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/login")
+# OAuth2PasswordBearer tells FastAPI (and /docs) where to look for the token. auto_error=False:
+# the website sends the session cookie instead of the header
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/login", auto_error=False)
+
+SAFE_METHODS = {"GET", "HEAD", "OPTIONS"}
 
 
 def credentials_error() -> UnauthorizedError:
@@ -36,9 +39,23 @@ def credentials_error() -> UnauthorizedError:
     )
 
 
-def _bearer_token(request: Request) -> str | None:
+def _session_token(request: Request) -> str | None:
+    """The bearer token, or else the website's session cookie.
+
+    Another site can make a browser send the cookie but cannot set the Origin header, so on a
+    request that changes something the cookie counts only from one of CORS_ORIGINS (CSRF).
+    """
     scheme, _, token = (request.headers.get("Authorization") or "").partition(" ")
-    return token.strip() if scheme.lower() == "bearer" and token.strip() else None
+    if scheme.lower() == "bearer" and token.strip():
+        return token.strip()
+    cookie = request.cookies.get(SESSION_COOKIE)
+    if not cookie:
+        return None
+    if request.method not in SAFE_METHODS and request.headers.get("origin") not in set(
+        settings.CORS_ORIGINS
+    ):
+        return None
+    return cookie
 
 
 # The signed-in session, or None (no token, or a token that no longer works). The token must
@@ -47,7 +64,7 @@ def _bearer_token(request: Request) -> str | None:
 async def optional_current_session(
     request: Request, db: AsyncSession = Depends(get_db, scope="function")
 ) -> CurrentSession | None:
-    token = _bearer_token(request)
+    token = _session_token(request)
     if token is None:
         return None
     decoded = decode_token(token)
@@ -57,7 +74,7 @@ async def optional_current_session(
 
 
 async def get_current_session(
-    token: str = Depends(oauth2_scheme),
+    token: str | None = Depends(oauth2_scheme),
     current: CurrentSession | None = Depends(optional_current_session),
 ) -> CurrentSession:
     if current is None:

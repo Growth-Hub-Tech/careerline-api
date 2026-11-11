@@ -14,8 +14,9 @@ import signal
 from sqlalchemy import text
 
 from app.core.config import settings
-from app.core.logging import configure_logging, get_logger
+from app.core.logging import configure_logging, get_logger, init_error_monitoring
 from app.db.session import engine
+from app.jobs.cleanup import schedule_todays_cleanup
 from app.jobs.runner import JobRunner
 
 logger = get_logger("app.worker")
@@ -48,6 +49,7 @@ async def run(
 ) -> None:
     logger.info("worker_started", env=settings.APP_ENV)
     await check_database()
+    await schedule_todays_cleanup()
     runner = runner or JobRunner()
     await asyncio.gather(runner.run_forever(stop), _heartbeat(stop, heartbeat_seconds))
     await engine.dispose()
@@ -56,6 +58,7 @@ async def run(
 
 def main() -> None:
     configure_logging()
+    init_error_monitoring()
 
     async def _main() -> None:
         stop = asyncio.Event()

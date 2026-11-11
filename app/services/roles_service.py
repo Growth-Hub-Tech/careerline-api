@@ -4,30 +4,12 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.exceptions import NotFoundError
-from app.models.models import LevelName, Skill
+from app.models.models import Skill
 from app.models.roles import JobRole, JobRoleSkill, JobTitle
 from app.repositories.question_repo import testable_skill_ids
 from app.schemas.common import Page
 from app.schemas.roles import JobTitleItem, JobTitleList, Role, RoleSkill, RoleSummary
-
-LEVEL_ORDER = [level.value for level in LevelName]
-# A role skill's target level is what the role needs at the mid title
-MID_TITLE_LEVEL = "MID"
-# Until GET /tests is real, a test is one skill's test: test_id = 200 + skill_id (the sample
-# catalogue's numbering)
-TEST_ID_OFFSET = 200
-
-
-def expected_level_for_title(target_at_mid: str, title_level: str) -> str:
-    """The level a role needs in one skill at a title: the role skill's target level moved by
-    as many steps as the title's expected level is from MID, kept within the 4 levels.
-
-    Example: a main skill at MID needs ADVANCED for a senior; a supporting skill at JUNIOR
-    needs BEGINNER for a junior and MID for a senior.
-    """
-    shift = LEVEL_ORDER.index(title_level) - LEVEL_ORDER.index(MID_TITLE_LEVEL)
-    index = LEVEL_ORDER.index(target_at_mid) + shift
-    return LEVEL_ORDER[max(0, min(len(LEVEL_ORDER) - 1, index))]
+from app.services.test_catalogue import TEST_ID_OFFSET
 
 
 def _summary(role: JobRole) -> RoleSummary:

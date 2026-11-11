@@ -1,6 +1,6 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
-from pydantic import field_validator
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str
     SECRET_KEY: str
+    # Connections each process may open (2 web workers and the job worker share Render's small
+    # Postgres connection limit). At least 1: SQLAlchemy reads a pool size of 0 as "no limit".
+    DB_POOL_SIZE: int = Field(default=5, ge=1)
+    DB_MAX_OVERFLOW: int = Field(default=5, ge=0)
 
     # OpenAI
     OPENAI_API_KEY: str = ""
@@ -30,15 +34,21 @@ class Settings(BaseSettings):
     # App
     APP_NAME: str = "CareerLine API"
     APP_ENV: str = "development"
-    APP_PORT: int = 8000
     API_PREFIX: str = "/api/v1"  # Global prefix for every API route (health checks sit outside it)
 
     # Logging: JSON lines in production, readable console output in development
     LOG_LEVEL: str = "INFO"
     LOG_JSON: bool = False
+    # Errors go to Sentry when set (the project's DSN); required in production
+    SENTRY_DSN: str = ""
 
     # Comma-separated list of frontend origins allowed to call the API
     CORS_ORIGINS: Annotated[list[str], NoDecode] = ["http://localhost:5173"]
+    # The sign-in cookie's SameSite. lax (production): the site and the API share a domain, so
+    # the site's requests carry the cookie and other sites' requests do not. none: the test
+    # server, whose site and API are on different domains (Safari and private windows still
+    # block it there). Either way a cookie only counts on a change from one of CORS_ORIGINS.
+    SESSION_COOKIE_SAMESITE: Literal["lax", "strict", "none"] = "lax"
 
     # Refuse to start when the database is behind the latest migration
     CHECK_MIGRATIONS_ON_STARTUP: bool = True
@@ -132,6 +142,11 @@ class Settings(BaseSettings):
         if isinstance(value, str):
             return [origin.strip() for origin in value.split(",") if origin.strip()]
         return value
+
+    @field_validator("SESSION_COOKIE_SAMESITE", mode="before")
+    @classmethod
+    def _lower_samesite(cls, value):
+        return str(value).strip().lower()
 
     @field_validator("EMAIL_BACKEND", mode="before")
     @classmethod

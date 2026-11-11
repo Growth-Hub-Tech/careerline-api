@@ -126,6 +126,7 @@
       "AccountDeletionRequest": {
         "properties": {
           "password": {
+            "maxLength": 128,
             "title": "Password",
             "type": "string"
           },
@@ -154,7 +155,7 @@
           "full_name": {
             "anyOf": [
               {
-                "maxLength": 120,
+                "maxLength": 100,
                 "minLength": 1,
                 "type": "string"
               },
@@ -167,7 +168,7 @@
           "phone": {
             "anyOf": [
               {
-                "maxLength": 32,
+                "maxLength": 20,
                 "type": "string"
               },
               {
@@ -3235,10 +3236,12 @@
       "ChangePasswordRequest": {
         "properties": {
           "current_password": {
+            "maxLength": 128,
             "title": "Current Password",
             "type": "string"
           },
           "new_password": {
+            "maxLength": 128,
             "minLength": 8,
             "title": "New Password",
             "type": "string"
@@ -4953,6 +4956,7 @@
       "PasswordResetConfirm": {
         "properties": {
           "new_password": {
+            "maxLength": 128,
             "minLength": 8,
             "title": "New Password",
             "type": "string"
@@ -5612,19 +5616,24 @@
         "properties": {
           "email": {
             "format": "email",
+            "maxLength": 100,
             "title": "Email",
             "type": "string"
           },
           "full_name": {
+            "maxLength": 100,
+            "minLength": 1,
             "title": "Full Name",
             "type": "string"
           },
           "password": {
+            "maxLength": 128,
             "minLength": 8,
             "title": "Password",
             "type": "string"
           },
           "phone": {
+            "maxLength": 20,
             "title": "Phone",
             "type": "string"
           }
@@ -7416,6 +7425,8 @@
             "required": false,
             "schema": {
               "default": 10,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -7426,6 +7437,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -7494,6 +7506,8 @@
             "required": false,
             "schema": {
               "default": 10,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -7504,6 +7518,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -8141,7 +8156,7 @@
     },
     "/api/v1/auth/login": {
       "post": {
-        "description": "OAuth2 password form: username = email. A wrong password and an unknown email get the same 401. After 5 failed sign-ins for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After, whatever the password.",
+        "description": "OAuth2 password form: username = email. A wrong password and an unknown email get the same 401. After 5 failed sign-ins for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After, whatever the password. Also sets the token in the HttpOnly careerline_session cookie for the website (send requests with credentials; a cookie counts on a POST, PUT, PATCH or DELETE only with an Origin listed in CORS_ORIGINS).",
         "operationId": "login_api_v1_auth_login_post",
         "requestBody": {
           "content": {
@@ -8203,7 +8218,7 @@
     },
     "/api/v1/auth/logout": {
       "post": {
-        "description": "Ends this session: its token stops working at once. everywhere=true ends every session of the account (all devices).",
+        "description": "Ends this session: its token stops working at once, and the session cookie is deleted. everywhere=true ends every session of the account (all devices).",
         "operationId": "logout_api_v1_auth_logout_post",
         "parameters": [
           {
@@ -13363,7 +13378,7 @@
         ]
       },
       "get": {
-        "description": "The emails sent to one address on the test server, newest first. Send X-Test-Mailbox-Token when the server has one.",
+        "description": "The emails sent to one address on the test server, newest first. Send the server's X-Test-Mailbox-Token (404 when the server has none).",
         "operationId": "read_test_mailbox_api_v1_test_mailbox_get",
         "parameters": [
           {

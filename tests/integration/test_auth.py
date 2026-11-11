@@ -1,7 +1,7 @@
 from datetime import UTC, datetime, timedelta
 
+import jwt
 import pytest
-from jose import jwt
 from sqlalchemy import text
 
 from app.core.config import settings
@@ -104,7 +104,11 @@ async def test_expired_token_is_401(client, learner):
 
 
 async def test_token_signed_with_another_key_is_401(client, learner):
-    forged = jwt.encode({"sub": str(learner["learner_id"])}, "some-other-key", algorithm="HS256")
+    forged = jwt.encode(
+        {"sub": str(learner["learner_id"])},
+        "some-other-key-of-at-least-32-bytes",
+        algorithm="HS256",
+    )
     headers = {"Authorization": f"Bearer {forged}"}
     response = await client.get(f"{API}/learners/{learner['learner_id']}", headers=headers)
 

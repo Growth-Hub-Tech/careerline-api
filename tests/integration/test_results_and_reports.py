@@ -10,8 +10,8 @@ import io
 from datetime import UTC, datetime, timedelta
 from urllib.parse import urlparse
 
+import jwt
 import pytest
-from jose import jwt
 from pypdf import PdfReader
 from sqlalchemy import text
 
@@ -193,7 +193,7 @@ async def test_a_bad_or_old_link_is_410(client, learner, finished):
 
     tampered = await client.get(f"{API}/reports/{token[:-4]}abcd")
     assert_error_envelope(tampered, 410, "expired")
-    claims = jwt.get_unverified_claims(token)
+    claims = jwt.decode(token, options={"verify_signature": False})
     old = jwt.encode(
         {**claims, "exp": int((datetime.now(UTC) - timedelta(minutes=1)).timestamp())},
         settings.SECRET_KEY,

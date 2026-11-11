@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import current_membership, get_current_session, get_db
+from app.core.rate_limit import client_ip
 from app.core.responses import EnvelopeRoute, errors
 from app.models.models import Learner
 from app.models.organisations import OrganisationMember
@@ -101,8 +102,7 @@ async def request_password_reset(
     request: Request,
     db: AsyncSession = Depends(get_db, scope="function"),
 ):
-    ip = request.client.host if request.client else None
-    await account_service.request_password_reset(db, str(data.email), ip)
+    await account_service.request_password_reset(db, str(data.email), client_ip(request))
     return Acknowledgement()
 
 

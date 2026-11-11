@@ -47,11 +47,11 @@ from app.schemas.beginner_path import (
     QuestionKind,
 )
 from app.services.programmes import best_programmes_for_roles
+from app.services.test_catalogue import TEST_ID_OFFSET
 
 QUESTIONNAIRE_FILE = Path(__file__).resolve().parents[2] / "seeds" / "beginner_intake.json"
 RECOMMENDATIONS_COUNT = 3
 MAX_REASONS = 3
-TEST_ID_OFFSET = 200  # test_id = 200 + skill_id, as in GET /roles
 
 
 class ScoredOption(BaseModel):

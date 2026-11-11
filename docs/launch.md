@@ -1,6 +1,6 @@
 # Going live: the launch checklist (Day 30)
 
-Everything the API needs before real people and real money use it. The test server (`render.yaml`, `APP_ENV=staging`) stays as it is; production is a second set of services with its own database. Tick each line in the launch PR.
+Everything the API needs before real people and real money use it. `render.yaml` holds both the test server (`careerline-api`, `careerline-worker`, `careerline-test-db`: branch `dev`, `APP_ENV=staging`) and production (`careerline-api-production`, `careerline-worker-production`, `careerline-production-db`: branch `main`, `APP_ENV=production`), each with its own database. Syncing the Blueprint creates every service in it, so check the production plans first; the dashboard then asks for each `sync: false` value. Tick each line in the launch PR.
 
 ## 1. Services
 
@@ -15,11 +15,13 @@ Everything the API needs before real people and real money use it. The test serv
 
 - [ ] `SECRET_KEY`: random, at least 32 characters (Render: `generateValue`), shared by the web service and the worker. Changing it signs everyone out.
 - [ ] `DATABASE_URL`: the production database.
-- [ ] `FRONTEND_URL`: the website's https address (every link in an email points there: `/verify-email`, `/reset-password`, `/forgot-password`, `/invite/<token>`, `/settings/privacy`, `/subscription`).
+- [ ] `FRONTEND_URL`: the website's https address (every link in an email points there: `/verify-email`, `/reset-password`, `/forgot-password`, `/invitations/<token>`, `/settings/privacy`, `/billing`).
 - [ ] `CORS_ORIGINS`: the website's https origin(s) only.
+- [ ] The website and the API on one domain (for example `careerline.ng` and `api.careerline.ng`), so the sign-in cookie works with `SESSION_COOKIE_SAMESITE=lax` (the default; `none` is refused in production).
 - [ ] `PAYSTACK_SECRET_KEY`: the **live** secret key (`sk_live_…`).
 - [ ] Email: `EMAIL_BACKEND=smtp` (or unset), `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_SECURITY`, a real `EMAIL_FROM` on a domain with SPF, DKIM and DMARC set up, and `SUPPORT_EMAIL`.
 - [ ] `LOG_JSON=true`, `CHECK_MIGRATIONS_ON_STARTUP=true` (the default).
+- [ ] `SENTRY_DSN`: the Sentry project's DSN, on the web service and the worker, so 500s and failed or dead background jobs reach the team. In Sentry, turn on server-side data scrubbing (some error URLs hold short-lived download or invitation tokens).
 - [ ] `OPENAI_API_KEY`: optional (without it the plain advice and explanations are used).
 - [ ] **Not** set in production: `DEMO_DATA_ON_START` (refused anyway), `TEST_MAILBOX_TOKEN` (there is no test mailbox in production). `SEED_ON_START=true` only for the first deploy and when the seed files change.
 - [ ] Optional, with their defaults: `AUDIT_INVITATION_DAYS=14`, `SUBSCRIPTION_GRACE_DAYS=3`, `SUBSCRIPTION_RENEW_ATTEMPTS=3`, `CHECKOUTS_PER_HOUR=20`, `ACCOUNT_DELETION_GRACE_DAYS=30`, `DATA_EXPORT_DAYS=7`, `RETEST_COOLDOWN_DAYS=14`, `RECRUITER_SHORTLIST_LIMIT=25` (every variable is in `.env.example`).
@@ -41,7 +43,7 @@ Everything the API needs before real people and real money use it. The test serv
 ## 5. The website
 
 - [ ] Types regenerated from the final `openapi.json`; nothing reads `X-Sample-Data` or sends `X-Mock-Scenario` (gone since Day 28).
-- [ ] The pages the API sends people to exist: `/verify-email`, `/reset-password`, `/forgot-password`, `/invite/<token>`, `/settings/privacy`, `/subscription` (emails) and `/payments/callback` (back from Paystack).
+- [ ] The pages the API sends people to exist: `/verify-email`, `/reset-password`, `/forgot-password`, `/invitations/<token>`, `/settings/privacy`, `/billing` (emails) and `/payments/callback` (back from Paystack).
 
 ## 6. On launch day
 

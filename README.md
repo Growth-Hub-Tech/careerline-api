@@ -51,7 +51,7 @@ alembic upgrade head
 uvicorn app.main:app --reload      # http://localhost:8000
 ```
 
-API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`).
+API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`; production serves neither).
 
 ## API conventions
 
@@ -175,7 +175,7 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 
 Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Settings: `VERIFY_EMAIL_TOKEN_HOURS`, `PASSWORD_RESET_TOKEN_MINUTES`, `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR`, `CHECKOUTS_PER_HOUR` (Paystack payments one person may start per hour).
 
-Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
+Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). A daily `cleanup` job (`app/jobs/cleanup.py`) deletes finished jobs, sent emails and expired sessions once they are 30 days old. Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
 
 ### Email layout
 

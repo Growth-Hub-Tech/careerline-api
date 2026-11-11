@@ -1,7 +1,12 @@
 """Day 6: password hashing (Argon2id, old bcrypt hashes still accepted) and session tokens."""
 
+import threading
+import time
+import warnings
+
 import bcrypt
-from jose import jwt
+import jwt
+from argon2 import PasswordHasher, extract_parameters
 
 from app.core import security
 from app.core.config import settings
@@ -47,7 +52,6 @@ def test_a_session_token_carries_the_session_and_expires():
     assert claims["sid"] == "5b0f5c2e-0000-4000-8000-000000000001"
     assert claims["exp"] > claims["iat"]
     assert security.decode_token(token) == (7, "5b0f5c2e-0000-4000-8000-000000000001")
-    assert security.decode_access_token(token) == 7
 
 
 def test_a_token_without_a_session_has_no_session_id():
@@ -61,3 +65,80 @@ def test_one_time_tokens_are_random_and_stored_hashed():
     assert token != other and len(token) >= 32
     assert digest == security.hash_one_time_token(token)
     assert token not in digest
+
+
+def test_new_hashes_use_owasps_minimum_so_signing_in_needs_19_mib():
+    params = extract_parameters(security.hash_password("correct-horse-battery"))
+    assert (params.memory_cost, params.time_cost, params.parallelism) == (19456, 2, 1)
+
+
+def test_hashes_made_with_the_old_64_mib_parameters_still_work_and_are_moved_over():
+    old = PasswordHasher().hash("correct-horse-battery")  # the library defaults used before
+    assert extract_parameters(old).memory_cost == 65536
+    assert security.verify_password("correct-horse-battery", old)
+    assert security.needs_rehash(old)
+
+
+def test_at_most_two_passwords_are_hashed_at_once(monkeypatch):
+    lock = threading.Lock()
+    running = most = 0
+
+    class SlowHasher:
+        def _work(self) -> None:
+            nonlocal running, most
+            with lock:
+                running += 1
+                most = max(most, running)
+            time.sleep(0.05)
+            with lock:
+                running -= 1
+
+        def hash(self, password: str) -> str:
+            self._work()
+            return "$argon2id$fake"
+
+        def verify(self, hashed: str, password: str) -> bool:
+            self._work()
+            return True
+
+    monkeypatch.setattr(security, "_hasher", SlowHasher())
+    jobs = [lambda: security.hash_password("x")] * 4 + [
+        lambda: security.verify_password("x", "$argon2id$fake")
+    ] * 4
+    threads = [threading.Thread(target=job) for job in jobs]
+    for thread in threads:
+        thread.start()
+    for thread in threads:
+        thread.join()
+    assert most == 2
+
+
+# Made by python-jose (the library used before PyJWT) with this key: tokens people already hold
+# keep working after the switch, so nobody is signed out by the deploy
+JOSE_KEY = "jose-era-secret-key-for-compatibility-tests"
+JOSE_TOKEN = (
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3IiwiaWF0IjoxNzkzNDkxMjAwLCJleHAiOjQxMDI0NDQ4MDAs"
+    "InNpZCI6IjViMGY1YzJlLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDAwMSJ9.nqqXrQbGvjwf8j7WLQnw-aawukory4Oz4E"
+    "SZ4wTfAzc"
+)
+
+
+def test_a_session_token_made_before_the_switch_to_pyjwt_still_works(monkeypatch):
+    monkeypatch.setattr(settings, "SECRET_KEY", JOSE_KEY)
+    assert security.decode_token(JOSE_TOKEN) == (7, "5b0f5c2e-0000-4000-8000-000000000001")
+
+
+def test_tampered_or_foreign_tokens_never_decode(monkeypatch):
+    monkeypatch.setattr(settings, "SECRET_KEY", JOSE_KEY)
+    header, payload, signature = JOSE_TOKEN.split(".")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")  # the right key is short for HS512: the point here
+        other_algorithm = jwt.encode({"sub": "7", "sid": "x"}, JOSE_KEY, "HS512")
+    for token in (
+        f"{header}.{payload}.{signature[:-2]}xx",
+        jwt.encode({"sub": "7", "sid": "x"}, "another-key-of-at-least-32-bytes!", "HS256"),
+        other_algorithm,  # signed with our key, but not with the algorithm we sign with
+        "not-a-token",
+        "",
+    ):
+        assert security.decode_token(token) is None, token

@@ -21,6 +21,9 @@ from app.db.session import engine as app_engine
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PASSWORD = "correct-horse-battery"
+# The test mailbox answers only with its token (and 404 when none is configured)
+MAILBOX_TOKEN = "test-mailbox-token"
+MAILBOX = {"X-Test-Mailbox-Token": MAILBOX_TOKEN}
 
 
 def _create_database_if_missing(url: str) -> None:

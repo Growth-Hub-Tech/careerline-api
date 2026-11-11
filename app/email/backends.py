@@ -36,8 +36,11 @@ class ConsoleBackend:
     name = "console"
 
     async def send(self, message: EmailMessage, *, session: AsyncSession | None = None) -> None:
-        # Development only: the text body is logged so links can be clicked from the terminal
-        logger.info("email_logged", to=message.to, subject=message.subject, text=message.text)
+        # Development only: the text body is logged so links can be clicked from the terminal.
+        # The address is not: logs are kept and read by more people than the outbox
+        logger.info(
+            "email_logged", reference=message.reference, subject=message.subject, text=message.text
+        )
 
 
 class TestMailboxBackend:
@@ -96,7 +99,7 @@ class SmtpBackend:
             raise EmailNotConfigured("EMAIL_BACKEND is smtp but SMTP_HOST is not set")
         # smtplib blocks: run it in a thread so the API keeps answering meanwhile
         await asyncio.to_thread(self._send_blocking, self.build(message))
-        logger.info("email_sent", to=message.to, subject=message.subject)
+        logger.info("email_sent", reference=message.reference, subject=message.subject)
 
 
 def get_backend() -> EmailBackend:

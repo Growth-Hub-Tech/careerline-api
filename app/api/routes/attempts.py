@@ -1,5 +1,5 @@
-from fastapi import APIRouter, Depends
-from sqlalchemy import select
+from fastapi import APIRouter, Depends, Query
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_learner, get_db, require_same_learner
@@ -123,12 +123,11 @@ async def submit_answers(data: SubmitRequest):
     )
 
 
-# GET ATTEMPT DETAIL
 # MY ATTEMPT HISTORY: the learner comes from the session (Day 7)
 @router.get("/me", responses=errors(401))
 async def get_my_attempts(
-    limit: int = 10,
-    offset: int = 0,
+    limit: int = Query(10, ge=1, le=100),
+    offset: int = Query(0, ge=0),
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
@@ -170,8 +169,8 @@ async def get_attempt(
 @router.get("/learner/{learner_id}", responses=errors(401, 403), deprecated=True)
 async def get_learner_attempts(
     learner_id: int,
-    limit: int = 10,
-    offset: int = 0,
+    limit: int = Query(10, ge=1, le=100),
+    offset: int = Query(0, ge=0),
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
@@ -184,10 +183,14 @@ async def get_learner_attempts(
         .limit(limit)
     )
     attempts = result.scalars().all()
+    # total is every attempt this person has, not just the page they asked for
+    total = await db.scalar(
+        select(func.count()).select_from(TestAttempt).where(TestAttempt.learner_id == learner_id)
+    )
 
     return {
         "learner_id": learner_id,
-        "total": len(attempts),
+        "total": total or 0,
         "attempts": [
             {
                 "attempt_id": a.attempt_id,

@@ -2,8 +2,9 @@
 
 In production (APP_ENV=production) the API refuses to start while any of these is wrong, and
 says which: a guessable signing key, a website or CORS origin that is not https, a Paystack test
-key (or none: no payments), emails that would not really go out, the placeholder sender, or the
-schema check switched off. Elsewhere nothing is checked.
+key (or none: no payments), emails that would not really go out, the placeholder sender, the
+schema check switched off, or no Sentry DSN (nobody would hear about errors). Elsewhere nothing
+is checked.
 
     python -m app.core.launch_checks   # the same check from a shell (exit 1 with problems)
 """
@@ -46,6 +47,13 @@ def production_problems(settings: Settings) -> list[str]:
         problems.append("EMAIL_FROM must be a real sender address, not the placeholder")
     if not settings.CHECK_MIGRATIONS_ON_STARTUP:
         problems.append("CHECK_MIGRATIONS_ON_STARTUP must stay true (never serve an old schema)")
+    if settings.SESSION_COOKIE_SAMESITE == "none":
+        problems.append(
+            "SESSION_COOKIE_SAMESITE must be lax or strict (put the website and the API on one "
+            "domain): none sends the sign-in cookie with other sites' requests"
+        )
+    if not settings.SENTRY_DSN:
+        problems.append("SENTRY_DSN must be set so the team hears about errors (Sentry)")
     return problems
 
 

@@ -1,9 +1,11 @@
 from types import SimpleNamespace
 
+import httpx
+
 from app.api.deps import get_db
 from app.api.routes import api_router
 from app.core.config import settings
-from app.main import app
+from app.main import app, create_app
 
 
 class FakeSession:
@@ -157,3 +159,21 @@ async def test_the_old_duplicate_api_routes_are_gone(client):
         p for p in paths if p.startswith("/api/") and not p.startswith(settings.API_PREFIX + "/")
     ]
     assert old == []
+
+
+async def _docs_status(monkeypatch, env: str) -> dict[str, int]:
+    monkeypatch.setattr(settings, "APP_ENV", env)
+    transport = httpx.ASGITransport(app=create_app())
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        return {path: (await client.get(path)).status_code for path in DOCS}
+
+
+DOCS = ("/docs", "/redoc", "/openapi.json")
+
+
+async def test_production_serves_no_docs_or_api_description(monkeypatch):
+    assert await _docs_status(monkeypatch, "production") == dict.fromkeys(DOCS, 404)
+
+
+async def test_the_test_server_serves_the_docs(monkeypatch):
+    assert await _docs_status(monkeypatch, "staging") == dict.fromkeys(DOCS, 200)

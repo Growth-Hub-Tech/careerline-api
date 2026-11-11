@@ -21,14 +21,15 @@ def test_the_checklist_names_the_services_and_the_webhook():
         assert words in CHECKLIST, words
 
 
-# The website pages the API sends people to (emails and Paystack's return)
+# The website pages the API sends people to (emails and Paystack's return): each must be a
+# route of the website (careerline/src/routes), or the link in the email is a 404
 PAGES = (
     "/verify-email",
     "/reset-password",
     "/forgot-password",
-    "/invite/",
+    "/invitations/",
     "/settings/privacy",
-    "/subscription",
+    "/billing",
     "/payments/callback",
 )
 

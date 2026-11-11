@@ -171,7 +171,7 @@ async def test_a_declined_renewal_emails_the_person_and_tries_again_the_next_day
         )
     ).one()
     assert "Individual Monthly" in mail.subject
-    assert f"{settings.FRONTEND_URL}/subscription" in mail.text_body
+    assert f"{settings.FRONTEND_URL}/billing" in mail.text_body
     jobs = renew_jobs(db)
     assert jobs[-1].status == "queued" and jobs[-1].payload["attempt"] == 2
     assert jobs[-1].run_after - datetime.now(UTC) > timedelta(hours=23)
@@ -217,7 +217,7 @@ async def test_without_a_reusable_card_the_person_is_asked_to_pay(client, db, le
             "SELECT text_body FROM test_mailbox_messages WHERE subject LIKE '%could not be renewed'"
         )
     ).scalar()
-    assert "/subscription" in mail
+    assert "/billing" in mail
 
 
 async def test_a_cancelled_plan_is_not_renewed(client, db, learner, plans, fake):

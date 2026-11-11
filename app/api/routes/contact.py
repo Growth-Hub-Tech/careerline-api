@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.rate_limit import client_ip
 from app.core.responses import EnvelopeRoute, errors
 from app.db.session import get_db
 from app.schemas.contact import ContactReceipt, ContactRequest
@@ -22,9 +23,4 @@ router = APIRouter(prefix="/contact", tags=["Contact"], route_class=EnvelopeRout
 async def send_contact_message(
     data: ContactRequest, request: Request, db: AsyncSession = Depends(get_db, scope="function")
 ):
-    # Render's proxy appends the real client address as the LAST X-Forwarded-For entry. The
-    # entries before it come from the client, and uvicorn (--forwarded-allow-ips "*") puts the
-    # first one in request.client, so request.client.host can be anything the client sends.
-    hops = [hop.strip() for hop in request.headers.get("x-forwarded-for", "").split(",")]
-    client_ip = hops[-1] or (request.client.host if request.client else None)
-    return await submit_contact_message(db, data, client_ip)
+    return await submit_contact_message(db, data, client_ip(request))

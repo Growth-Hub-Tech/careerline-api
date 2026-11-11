@@ -21,6 +21,7 @@ from app.schemas.assessments import AssessmentAccess, AssessmentDetail, Assessme
 from app.schemas.common import Page
 from app.services.payments import credit_balance
 
+# A test is one skill's test: test_id = 200 + skill_id (the numbering every client already uses)
 TEST_ID_OFFSET = 200
 LEVELS = [LevelName.BEGINNER, LevelName.JUNIOR, LevelName.MID, LevelName.ADVANCED]
 WHAT_YOU_GET = [

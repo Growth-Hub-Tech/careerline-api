@@ -29,12 +29,13 @@ Deleting my account
   accounts, as the law requires).
 """
 
+import asyncio
 import json
 import uuid
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from jose import JWTError, jwt
+import jwt
 from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -238,7 +239,7 @@ async def export_download(db: AsyncSession, token: str) -> tuple[bytes, str]:
         if claims.get("typ") != TOKEN_TYPE:
             raise gone
         export_id = int(claims["eid"])
-    except (JWTError, KeyError, TypeError, ValueError):
+    except (jwt.PyJWTError, KeyError, TypeError, ValueError):
         raise gone from None
     row = await db.get(DataExport, export_id)
     if row is None or row.status != "ready" or row.content is None or _expired(row):
@@ -490,7 +491,8 @@ def _deletion_out(row: AccountDeletion) -> AccountDeletionOut:
 async def request_deletion(
     db: AsyncSession, learner: Learner, data: AccountDeletionRequest
 ) -> AccountDeletionOut:
-    if not verify_password(data.password, learner.hashed_password):
+    # Argon2 takes a while: in a thread, so the server keeps answering other requests meanwhile
+    if not await asyncio.to_thread(verify_password, data.password, learner.hashed_password):
         raise WrongPasswordError("The password is not right")
     row = await db.get(AccountDeletion, learner.learner_id, with_for_update=True)
     if row is not None and row.status == "scheduled":

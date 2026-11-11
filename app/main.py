@@ -9,11 +9,16 @@ from app.api.routes import api_router, health, test_mailbox
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.launch_checks import production_problems
-from app.core.logging import configure_logging, get_logger
-from app.core.middleware import RequestContextMiddleware, SecurityHeadersMiddleware
+from app.core.logging import configure_logging, get_logger, init_error_monitoring
+from app.core.middleware import (
+    BodySizeLimitMiddleware,
+    RequestContextMiddleware,
+    SecurityHeadersMiddleware,
+)
 from app.core.permissions import authorize
 from app.db.migration_check import assert_database_at_head
 from app.db.session import engine
+from app.jobs.cleanup import schedule_todays_cleanup
 from app.jobs.runner import JobRunner
 
 logger = get_logger(__name__)
@@ -45,6 +50,7 @@ async def lifespan(app: FastAPI):
     stop_jobs = asyncio.Event()
     jobs_task = None
     if settings.RUN_JOBS_IN_WEB:
+        await schedule_todays_cleanup()
         jobs_task = asyncio.create_task(JobRunner().run_forever(stop_jobs))
         logger.info("jobs_running_in_web_process")
     try:
@@ -63,19 +69,27 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     configure_logging()
+    init_error_monitoring()
 
+    # The interactive docs and the API description are for the team: production does not serve
+    # them (scripts/export_openapi.py builds openapi.json without them)
+    docs = not settings.is_production
     app = FastAPI(
         title=settings.APP_NAME,
         description="CareerLine AI API: skill tests, scoring, proficiency levels and personalised learning pathways",
         version="2.0.0",
+        docs_url="/docs" if docs else None,
+        redoc_url="/redoc" if docs else None,
+        openapi_url="/openapi.json" if docs else None,
         lifespan=lifespan,
         # Every route passes its access rule first (app/core/permissions.py: the one place)
         dependencies=[Depends(authorize)],
     )
 
     # Middleware runs outermost-last: CORS -> security headers -> request id / access log / 500s
-    # -> gzip
+    # -> body size limit (413) -> gzip
     app.add_middleware(GZipMiddleware, minimum_size=1000)
+    app.add_middleware(BodySizeLimitMiddleware)
     app.add_middleware(RequestContextMiddleware)
     app.add_middleware(SecurityHeadersMiddleware, hsts=settings.is_production)
     app.add_middleware(
