@@ -34,7 +34,6 @@ from app.models.history import SkillHistory
 from app.models.models import (
     AttemptQuestion,
     AttemptStatus,
-    LearnerAnswer,
     LevelName,
     Option,
     Question,
@@ -47,8 +46,6 @@ from app.repositories.attempt_repo import get_level_id_by_name, get_options_for_
 from app.repositories.question_repo import readiness
 from app.repositories.scoring_repo import (
     assign_learner_level,
-    save_difficulty_stats,
-    save_subskill_stats,
 )
 from app.schemas.attempts import (
     AttemptResult,
@@ -280,16 +277,6 @@ async def _finish(
     attempt.confidence = scored.confidence
     attempt.ended_by = ended_by
 
-    by_level: dict[LevelName, dict[str, int]] = {}
-    by_subskill: dict[int, dict[str, int]] = {}
-    for a in answers:
-        level_stats = by_level.setdefault(LevelName(a.level), {"correct": 0, "total": 0})
-        subskill_stats = by_subskill.setdefault(a.subskill_id, {"correct": 0, "total": 0})
-        for stats in (level_stats, subskill_stats):
-            stats["total"] += 1
-            stats["correct"] += int(a.correct)
-    await save_difficulty_stats(db, attempt.attempt_id, by_level)
-    await save_subskill_stats(db, attempt.attempt_id, by_subskill)
     if level_id:
         await assign_learner_level(
             db, attempt.learner_id, attempt.skill_id, attempt.attempt_id, level_id
@@ -307,7 +294,11 @@ async def _finish(
         ended_by=ended_by,
     )
     return await generate_recommendations(
-        db, attempt.attempt_id, attempt.learner_id, weak_subskill_ids=scored.weaknesses
+        db,
+        attempt.attempt_id,
+        attempt.learner_id,
+        subskills=scored.subskills,
+        weak_subskill_ids=scored.weaknesses,
     )
 
 
@@ -496,14 +487,7 @@ async def answer_question(
     current.row.selected_option_id = option_id
     current.row.is_correct = bool(option.is_correct)
     current.row.answered_at = _now()
-    db.add(
-        LearnerAnswer(
-            attempt_id=attempt_id,
-            question_id=question_id,
-            selected_option_id=option_id,
-            is_correct=bool(option.is_correct),
-        )
-    )
+
     await db.flush()
 
     answers = _answers(served)

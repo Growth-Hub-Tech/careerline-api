@@ -2,7 +2,6 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.models import (
-    AttemptSubskillScore,
     ProficiencyLevel,
     Skill,
     Subskill,
@@ -11,18 +10,14 @@ from app.models.models import (
 )
 
 
-# Fetch subskill performance for an attempt
-async def get_subskill_scores(db: AsyncSession, attempt_id: int):
+# Names of subskills, by id
+async def get_subskill_names(db: AsyncSession, subskill_ids: list[int]) -> dict[int, str]:
     result = await db.execute(
-        select(
-            AttemptSubskillScore.subskill_id,
-            AttemptSubskillScore.percentage_score,
-            Subskill.subskill_name,
+        select(Subskill.subskill_id, Subskill.subskill_name).where(
+            Subskill.subskill_id.in_(subskill_ids)
         )
-        .join(Subskill, AttemptSubskillScore.subskill_id == Subskill.subskill_id)
-        .where(AttemptSubskillScore.attempt_id == attempt_id)
     )
-    return result.all()
+    return {row.subskill_id: row.subskill_name for row in result.all()}
 
 
 # Fetch skill name for an attempt

@@ -1,12 +1,16 @@
 """Recommendations after a test. (The fixed pass/fail scoring that lived here was retired on
 Day 10: app/services/test_taking_service.py scores the adaptive test.)"""
 
+from collections.abc import Sequence
+from types import SimpleNamespace
+
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
 from app.core.logging import get_logger
 from app.integrations.openai_client import fallback_recommendation
-from app.repositories.recommendation_repo import get_subskill_scores, save_recommendations
+from app.repositories.recommendation_repo import get_subskill_names, save_recommendations
+from app.services.adaptive_engine import SubskillResult
 from app.services.ai_recommendations import ai_enabled, queue_ai_recommendations
 
 logger = get_logger(__name__)
@@ -14,15 +18,29 @@ logger = get_logger(__name__)
 
 # GENERATE RECOMMENDATIONS AFTER SCORING
 async def generate_recommendations(
-    db: AsyncSession, attempt_id: int, learner_id: int, weak_subskill_ids: list[int] | None = None
+    db: AsyncSession,
+    attempt_id: int,
+    learner_id: int,
+    subskills: Sequence[SubskillResult],
+    weak_subskill_ids: list[int] | None = None,
 ):
-    """Advice for the weak subskills of a finished test. weak_subskill_ids: the adaptive
-    engine's weaknesses (Day 10); without it, every subskill under WEAK_THRESHOLD percent."""
+    """Advice for the weak subskills of a finished test. subskills: the engine's result per
+    answered subskill. weak_subskill_ids: the engine's weaknesses (Day 10); without it, every
+    subskill under WEAK_THRESHOLD percent."""
 
-    # Fetch subskill scores
-    subskill_scores = await get_subskill_scores(db, attempt_id)
-    if not subskill_scores:
+    if not subskills:
         return None
+
+    # The engine returns scores by subskill id; the names come from the subskill table
+    names = await get_subskill_names(db, [s.subskill_id for s in subskills])
+    subskill_scores = [
+        SimpleNamespace(
+            subskill_id=s.subskill_id,
+            percentage_score=s.percentage_score,
+            subskill_name=names.get(s.subskill_id, "this subskill"),
+        )
+        for s in subskills
+    ]
 
     # Identify weak subskills
     if weak_subskill_ids is not None:
