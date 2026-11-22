@@ -14,6 +14,7 @@ import signal
 from sqlalchemy import text
 
 from app.core.config import settings
+from app.core.launch_checks import production_problems
 from app.core.logging import configure_logging, get_logger, init_error_monitoring
 from app.db.session import engine
 from app.jobs.cleanup import schedule_todays_cleanup
@@ -58,6 +59,10 @@ async def run(
 
 def main() -> None:
     configure_logging()
+    problems = production_problems(settings)
+    if problems:
+        logger.error("startup_refused", problems=problems)
+        raise SystemExit("Unsafe production settings: " + "; ".join(problems))
     init_error_monitoring()
 
     async def _main() -> None:

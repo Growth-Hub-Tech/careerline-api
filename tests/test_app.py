@@ -14,6 +14,9 @@ class FakeSession:
     async def execute(self, *args, **kwargs):
         return SimpleNamespace(scalars=lambda: SimpleNamespace(all=lambda: []))
 
+    async def scalar(self, *args, **kwargs):
+        return 0
+
 
 class BrokenSession:
     async def execute(self, *args, **kwargs):

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, Query, Request
 from fastapi.responses import Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -15,7 +15,7 @@ from app.services.reports import (
     result_detail,
 )
 
-# Results are finished adaptive tests (Day 12): result_id is the attempt_id
+# Results are finished adaptive tests: result_id is the attempt_id
 router = APIRouter(prefix="/results", tags=["Results"], route_class=EnvelopeRoute)
 # The download link of a ready report: the signed token in the path is the proof
 downloads = APIRouter(prefix="/reports", tags=["Results"], route_class=EnvelopeRoute)
@@ -29,10 +29,10 @@ def _link_for(request: Request):
 
 
 # MY RESULTS: my finished tests, newest first
-@router.get("", response_model=Page[ResultSummary], responses=errors(401))
+@router.get("", response_model=Page[ResultSummary], responses=errors(401, 422))
 async def list_my_results(
-    limit: int = 20,
-    offset: int = 0,
+    limit: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
