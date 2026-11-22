@@ -2429,7 +2429,7 @@
                 "type": "null"
               }
             ],
-            "description": "Day 24: a re-test of this audit (null: not a re-test)",
+            "description": "a re-test of this audit (null: not a re-test)",
             "title": "Baseline Audit Id"
           },
           "benchmarks": {
@@ -2578,7 +2578,7 @@
         "type": "object"
       },
       "AuditRetest": {
-        "description": "Day 24: test the same people for the same tests again (after training, for example).",
+        "description": "test the same people for the same tests again (after training, for example).",
         "properties": {
           "member_ids": {
             "anyOf": [
@@ -2633,7 +2633,7 @@
                 "type": "null"
               }
             ],
-            "description": "Day 24: a re-test of this audit (null: not a re-test)",
+            "description": "a re-test of this audit (null: not a re-test)",
             "title": "Baseline Audit Id"
           },
           "completed_at": {
@@ -4955,36 +4955,31 @@
       },
       "PasswordResetConfirm": {
         "properties": {
+          "email": {
+            "format": "email",
+            "maxLength": 100,
+            "title": "Email",
+            "type": "string"
+          },
           "new_password": {
             "maxLength": 128,
             "minLength": 8,
             "title": "New Password",
             "type": "string"
           },
-          "token": {
-            "title": "Token",
+          "pin": {
+            "maxLength": 10,
+            "minLength": 1,
+            "title": "Pin",
             "type": "string"
           }
         },
         "required": [
-          "token",
+          "email",
+          "pin",
           "new_password"
         ],
         "title": "PasswordResetConfirm",
-        "type": "object"
-      },
-      "PasswordResetRequest": {
-        "properties": {
-          "email": {
-            "format": "email",
-            "title": "Email",
-            "type": "string"
-          }
-        },
-        "required": [
-          "email"
-        ],
-        "title": "PasswordResetRequest",
         "type": "object"
       },
       "Payment": {
@@ -5125,7 +5120,7 @@
         "type": "object"
       },
       "PreviousResult": {
-        "description": "The person's result in the same skill just before this one (Day 24, pre/post re-test).",
+        "description": "The person's result in the same skill just before this one (pre/post re-test).",
         "properties": {
           "completed_at": {
             "format": "date-time",
@@ -5771,7 +5766,7 @@
                 "type": "null"
               }
             ],
-            "description": "Day 24: the result in the same skill just before this one"
+            "description": "the result in the same skill just before this one"
           },
           "recommendations": {
             "items": {
@@ -5793,7 +5788,7 @@
                 "type": "null"
               }
             ],
-            "description": "Day 24: percentage_score minus the previous result's (null without one)",
+            "description": "percentage_score minus the previous result's (null without one)",
             "title": "Score Delta"
           },
           "skill_id": {
@@ -5874,7 +5869,7 @@
         "type": "object"
       },
       "ResultSummary": {
-        "description": "A finished test (Day 12: real; result_id is the attempt_id). No pass or fail.",
+        "description": "A finished test (result_id is the attempt_id). No pass or fail.",
         "properties": {
           "attempt_id": {
             "title": "Attempt Id",
@@ -6414,7 +6409,7 @@
               }
             ],
             "deprecated": true,
-            "description": "Retired (Day 10): ignored. The test finds the level itself.",
+            "description": "Retired: ignored. The test finds the level itself.",
             "title": "Declared Level"
           },
           "skill_id": {
@@ -7147,7 +7142,7 @@
     },
     "/api/v1/accounts/me/password": {
       "post": {
-        "description": "Needs the current password (400 wrong_password otherwise). Signs out every other device; this session stays signed in. An email tells the owner.",
+        "description": "Needs the current password (400 wrong_password otherwise; 5 wrong tries in 15 minutes: 429). Signs out every other device; this session stays signed in.",
         "operationId": "change_my_password_api_v1_accounts_me_password_post",
         "requestBody": {
           "content": {
@@ -7199,6 +7194,16 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too many requests: slow down and retry after the Retry-After seconds"
           }
         },
         "security": [
@@ -7212,51 +7217,9 @@
         ]
       }
     },
-    "/api/v1/accounts/password-reset": {
-      "post": {
-        "description": "Always 202, whether or not the email has an account. If it has one, a reset link (valid 60 minutes, once) is emailed.",
-        "operationId": "request_password_reset_api_v1_accounts_password_reset_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PasswordResetRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "202": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Acknowledgement_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "summary": "Request Password Reset",
-        "tags": [
-          "Accounts"
-        ]
-      }
-    },
     "/api/v1/accounts/password-reset/confirm": {
       "post": {
-        "description": "Sets the new password and signs out every device. An old, used or unknown token is `expired` (410).",
+        "description": "Sets a new password with the account's email and the reset PIN (1234 for every account until emails are switched on). A wrong PIN or an unknown email is `invalid_reset_pin` (400). 5 wrong tries for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After. Signs out every device.",
         "operationId": "confirm_password_reset_api_v1_accounts_password_reset_confirm_post",
         "requestBody": {
           "content": {
@@ -7279,7 +7242,7 @@
             },
             "description": "Successful Response"
           },
-          "410": {
+          "400": {
             "content": {
               "application/json": {
                 "schema": {
@@ -7287,7 +7250,7 @@
                 }
               }
             },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
+            "description": "Bad request: invalid input (the message says what is wrong)"
           },
           "422": {
             "content": {
@@ -7298,6 +7261,16 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too many requests: slow down and retry after the Retry-After seconds"
           }
         },
         "summary": "Confirm Password Reset",
@@ -8189,6 +8162,16 @@
             },
             "description": "Not logged in: missing, invalid or expired token"
           },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -8279,7 +8262,7 @@
     },
     "/api/v1/auth/register": {
       "post": {
-        "description": "Creates the account and signs it in (the answer holds a token). A confirmation link is emailed; until it is opened, GET /accounts/me shows email_verified: false.",
+        "description": "Creates the account and signs it in: the answer holds a token and the careerline_session cookie is set. No email is sent. A taken email is 400 email_taken.",
         "operationId": "register_api_v1_auth_register_post",
         "requestBody": {
           "content": {
@@ -8311,6 +8294,16 @@
               }
             },
             "description": "Bad request: invalid input (the message says what is wrong)"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
           },
           "422": {
             "content": {
@@ -10852,7 +10845,7 @@
     },
     "/api/v1/payments/checkout": {
       "post": {
-        "description": "Saves a pending payment and starts a Paystack transaction: send the person to authorization_url. Paystack sends them back to callback_url?reference=... (default: the website's /payments/callback; it must be a page of the website, 400 otherwise); then call GET /payments/{reference}. item_type credit_pack (a pack's credits) or subscription_plan (Day 25, the same as POST /subscriptions: 403/409 as there). 503 when payments are not set up or Paystack does not answer: nothing is charged.",
+        "description": "Saves a pending payment and starts a Paystack transaction: send the person to authorization_url. Paystack sends them back to callback_url?reference=... (default: the website's /payments/callback; it must be a page of the website, 400 otherwise); then call GET /payments/{reference}. item_type credit_pack (a pack's credits) or subscription_plan (the same as POST /subscriptions: 403/409 as there). 503 when payments are not set up or Paystack does not answer: nothing is charged.",
         "operationId": "start_checkout_api_v1_payments_checkout_post",
         "requestBody": {
           "content": {
@@ -11190,7 +11183,7 @@
         ]
       },
       "post": {
-        "description": "Needs the password (400 wrong_password). Deletion happens 30 days later and can be cancelled until then; the account keeps working meanwhile. Asking again while one is scheduled answers that one.",
+        "description": "Needs the password (400 wrong_password; 5 wrong tries in 15 minutes: 429). Deletion happens 30 days later and can be cancelled until then; the account keeps working meanwhile. Asking again while one is scheduled answers that one.",
         "operationId": "request_account_deletion_api_v1_privacy_account_deletion_post",
         "requestBody": {
           "content": {
@@ -11242,6 +11235,16 @@
               }
             },
             "description": "Validation error: the request body or parameters are invalid (see details)"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too many requests: slow down and retry after the Retry-After seconds"
           }
         },
         "security": [
@@ -12579,6 +12582,8 @@
             "required": false,
             "schema": {
               "default": 20,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -12589,6 +12594,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }
@@ -12957,6 +12963,8 @@
             "required": false,
             "schema": {
               "default": 10,
+              "maximum": 100,
+              "minimum": 1,
               "title": "Limit",
               "type": "integer"
             }
@@ -12967,6 +12975,7 @@
             "required": false,
             "schema": {
               "default": 0,
+              "minimum": 0,
               "title": "Offset",
               "type": "integer"
             }

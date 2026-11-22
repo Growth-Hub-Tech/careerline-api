@@ -58,7 +58,7 @@ def test_the_day_5_emails_exist():
 
 
 def test_the_day_6_account_emails_exist():
-    assert {"verify_email", "password_reset", "password_changed"} <= set(available_emails())
+    assert {"verify_email", "password_changed"} <= set(available_emails())
 
 
 def test_the_confirm_button_uses_the_brand_colour_and_shows_the_link():

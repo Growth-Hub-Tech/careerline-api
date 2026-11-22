@@ -1,7 +1,7 @@
-"""Privacy (Day 18, NDPR / GDPR): consents, a copy of my data, and deleting my account.
+"""Privacy (NDPR / GDPR): consents, a copy of my data, and deleting my account.
 
 Consents
-- Five keys (marketing_emails, share_profile_with_recruiters, product_research, and since Day 31
+- Five keys (marketing_emails, share_profile_with_recruiters, product_research, and
   aux_hr_sharing and incubate_sharing), all off until the person turns them on. Every change is stored in consent_events with its time; setting a
   consent to what it already is records nothing.
 
@@ -29,7 +29,6 @@ Deleting my account
   accounts, as the law requires).
 """
 
-import asyncio
 import json
 import uuid
 from datetime import UTC, datetime, timedelta
@@ -42,7 +41,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.config import settings
 from app.core.exceptions import ExpiredError, NotFoundError
 from app.core.logging import get_logger
-from app.core.security import ALGORITHM, verify_password
+from app.core.security import ALGORITHM
 from app.email.outbox import send_email
 from app.jobs.queue import enqueue
 from app.jobs.registry import job
@@ -82,7 +81,7 @@ from app.schemas.privacy import (
     ConsentUpdate,
 )
 from app.schemas.privacy import DataExport as DataExportOut
-from app.services.account_service import WrongPasswordError
+from app.services.account_service import check_current_password
 from app.services.session_service import revoke_all_sessions
 
 logger = get_logger(__name__)
@@ -491,9 +490,7 @@ def _deletion_out(row: AccountDeletion) -> AccountDeletionOut:
 async def request_deletion(
     db: AsyncSession, learner: Learner, data: AccountDeletionRequest
 ) -> AccountDeletionOut:
-    # Argon2 takes a while: in a thread, so the server keeps answering other requests meanwhile
-    if not await asyncio.to_thread(verify_password, data.password, learner.hashed_password):
-        raise WrongPasswordError("The password is not right")
+    await check_current_password(db, learner, data.password)
     row = await db.get(AccountDeletion, learner.learner_id, with_for_update=True)
     if row is not None and row.status == "scheduled":
         return _deletion_out(row)

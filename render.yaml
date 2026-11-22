@@ -74,7 +74,7 @@ services:
       - key: SUPPORT_EMAIL
         sync: false # where contact form messages go (on staging they land in the test mailbox)
       - key: FRONTEND_URL
-        sync: false # the website: confirmation and reset links in emails point to its /verify-email and /reset-password pages
+        sync: false # the website: links in emails point to its pages
       - key: PYTHON_VERSION
         value: 3.13.12
 

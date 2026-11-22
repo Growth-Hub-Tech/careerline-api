@@ -13,7 +13,7 @@ Outside the `/api/v1` prefix: `GET /healthz` (the app is up), `GET /readyz` (the
 
 ## Log in
 
-1. **Sign up:** `POST /api/v1/auth/register` with JSON `{ "full_name", "email", "phone", "password" }` (password at least 8 characters). The answer already holds a token (the new account is signed in). A confirmation email is sent at the same time.
+1. **Sign up:** `POST /api/v1/auth/register` with JSON `{ "full_name", "email", "phone", "password" }` (password at least 8 characters). The answer already holds a token and sets the session cookie (the new account is signed in). No email is sent. Sign-up and sign-in from a browser on another site (an `Origin` not in `CORS_ORIGINS`) are `403 forbidden`.
 2. **Sign in:** `POST /api/v1/auth/login` as a **form** (`application/x-www-form-urlencoded`), not JSON: `username=<email>&password=<password>`. The answer is the standard OAuth2 body `{ "access_token", "token_type": "bearer", "learner_id", "full_name" }` (no envelope). Emails are not case-sensitive.
 3. **The website** does not keep the token: sign-in also sets it in the `careerline_session` cookie (HttpOnly, Secure, 24 hours), and the browser sends it back when every request is made with `credentials: "include"`. On a `POST`, `PUT`, `PATCH` or `DELETE` the cookie counts only when the request's `Origin` is one of `CORS_ORIGINS` (other sites can make a browser send the cookie, not the `Origin`). Other clients send `Authorization: Bearer <access_token>`; when both are sent, the header wins. A token lasts 24 hours; a `401` means sign in again.
 4. **Sign out:** `POST /api/v1/auth/logout` (with the cookie or the token). That session stops working at once and the cookie is deleted; other devices stay signed in. `?everywhere=true` signs out every device.
@@ -26,24 +26,19 @@ const me = await fetch(`${API}/accounts/me`, { credentials: "include" }); // the
 
 `SESSION_COOKIE_SAMESITE` sets the cookie's `SameSite`: `lax` (the default, and production's) needs the website and the API on one domain (for example `careerline.ng` and `api.careerline.ng`); the test server, whose website and API are on different domains, uses `none`, which Safari and private windows block.
 
-**Sessions.** Every sign-in is a session on the server. Sign-out ends one; a password reset ends all of them; changing the password ends all the others (the device that changed it stays signed in). Tokens issued before Day 6 no longer work: sign in again.
+**Sessions.** Every sign-in is a session on the server. Sign-out ends one; a password reset ends all of them; changing the password ends all the others (the device that changed it stays signed in).
 
 **Too many failed sign-ins.** After 5 failed sign-ins for one email (whether or not it has an account) or 20 from one IP address within 15 minutes, `POST /auth/login` answers `429 rate_limited` with `Retry-After` (seconds), even with the right password. Show "Too many attempts, try again in N minutes". A wrong password and an unknown email get exactly the same `401` ("Invalid email or password").
 
-### Email confirmation and password reset
+### Sign-up, password reset and email confirmation
 
-The emails link to two pages of the website (`FRONTEND_URL` on the server, e.g. `http://localhost:5173`), with the token in the query string:
+Sign-up does not send an email and does not need a confirmed email: `POST /api/v1/auth/register` signs the new account in (it also sets the session cookie) and `GET /api/v1/accounts/me` always shows `email_verified: true`. A taken email is `400 email_taken`.
 
-| Email | Link | The page calls | Answers |
-| --- | --- | --- | --- |
-| Confirm your email (after sign-up) | `/verify-email?token=…` | `POST /api/v1/accounts/verify-email` `{ "token" }` | `200`, or `410 expired` (old, used or unknown link: offer "send a new link") |
-| Reset your password | `/reset-password?token=…` | `POST /api/v1/accounts/password-reset/confirm` `{ "token", "new_password" }` | `200` (every device is signed out: send to sign-in), or `410 expired` |
+**Forgot password** uses a fixed reset PIN, `1234`, for every account until emails are switched on. This is a known, accepted risk: anyone who knows an account's email can reset its password. The rate limits below and the "password changed" email (when SMTP is set) are the only protection.
 
-- `POST /api/v1/accounts/password-reset` `{ "email" }` (forgot password) always answers `202`, whether or not the email has an account. The link works once, for 60 minutes; asking again makes the older link stop working.
-- `POST /api/v1/accounts/verify-email/resend` (signed in) sends a new confirmation link (the old one stops working); at most 3 an hour. Confirmation links work once, for 48 hours.
-- `GET /api/v1/accounts/me` shows `email_verified`. Signing in does not require a confirmed email (yet).
-- `POST /api/v1/accounts/me/password` `{ "current_password", "new_password" }`: a wrong current password is `400 wrong_password`.
-- On the test server, read these emails (and their `links`) from the test mailbox (below).
+- `POST /api/v1/accounts/password-reset/confirm` `{ "email", "pin", "new_password" }`: `200` (every device is signed out: send to sign-in). A wrong PIN or an unknown email get the same `400 invalid_reset_pin`. After 5 wrong tries for one email (or 20 from one IP address) in 15 minutes: `429 rate_limited` with `Retry-After`.
+- `POST /api/v1/accounts/me/password` `{ "current_password", "new_password" }`: a wrong current password is `400 wrong_password`; 5 wrong tries in 15 minutes give `429`. Deleting the account checks the password the same way.
+- The email confirmation routes (`POST /api/v1/accounts/verify-email`, `POST /api/v1/accounts/verify-email/resend`) still exist so confirmation can be switched back on, but nothing sends a confirmation email now.
 
 ## Answers and errors
 

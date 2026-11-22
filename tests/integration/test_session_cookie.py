@@ -136,3 +136,36 @@ async def test_a_plain_http_client_never_sends_the_secure_cookie(client):
     await register(client, "ada@example.com")
     await login(client, "ada@example.com", password=PASSWORD)
     assert (await client.get(f"{API}/accounts/me")).status_code == 401
+
+
+async def test_signing_up_sets_the_cookie_too(browser):
+    response = await register(browser, "ada@example.com")
+    assert response.status_code == 200, response.text
+    header = cookie_header(response).lower()
+    assert f"{SESSION_COOKIE}={response.json()['data']['access_token']}".lower() in header
+    me = await browser.get(f"{API}/accounts/me")
+    assert me.status_code == 200, me.text
+
+
+async def test_another_site_cannot_sign_a_browser_in_or_up(browser, site):
+    await register(browser, "ada@example.com")
+    browser.cookies.clear()
+    foreign = await browser.post(
+        f"{API}/auth/login",
+        data={"username": "ada@example.com", "password": PASSWORD},
+        headers={"Origin": FOREIGN},
+    )
+    assert foreign.status_code == 403
+    assert SESSION_COOKIE not in foreign.headers.get("set-cookie", "")
+    signup = await browser.post(
+        f"{API}/auth/register",
+        json={"full_name": "X", "email": "x@example.com", "phone": "080", "password": PASSWORD},
+        headers={"Origin": FOREIGN},
+    )
+    assert signup.status_code == 403
+    ours = await browser.post(
+        f"{API}/auth/login",
+        data={"username": "ada@example.com", "password": PASSWORD},
+        headers={"Origin": site},
+    )
+    assert ours.status_code == 200, ours.text

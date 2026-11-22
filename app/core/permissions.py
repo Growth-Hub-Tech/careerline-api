@@ -1,4 +1,4 @@
-"""Who may call what: the ONE place access is decided (Day 7).
+"""Who may call what: the ONE place access is decided.
 
 Every route has exactly one rule in POLICIES (tests/test_permissions_table.py fails otherwise,
 and a route with no rule is refused). `authorize`, a global dependency of the app, applies the
@@ -118,7 +118,6 @@ POLICIES: dict[str, Policy] = {
     "POST /accounts/me/password": SIGNED_IN,
     "POST /accounts/verify-email/resend": SIGNED_IN,
     # Email links: the token in the body is the proof
-    "POST /accounts/password-reset": PUBLIC,
     "POST /accounts/password-reset/confirm": PUBLIC,
     "POST /accounts/verify-email": PUBLIC,
     # Learners: only ever the caller
@@ -156,7 +155,7 @@ POLICIES: dict[str, Policy] = {
     "POST /contact": PUBLIC,
     "GET /test-mailbox": PUBLIC,
     "DELETE /test-mailbox": PUBLIC,
-    # Results and their PDF report (Day 12): the routes check the result is yours
+    # Results and their PDF report: the routes check the result is yours
     "GET /results": SIGNED_IN,
     "GET /results/{result_id}": SIGNED_IN,
     "GET /results/{result_id}/report": SIGNED_IN,

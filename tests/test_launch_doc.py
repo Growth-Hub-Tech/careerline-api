@@ -25,7 +25,6 @@ def test_the_checklist_names_the_services_and_the_webhook():
 # route of the website (careerline/src/routes), or the link in the email is a 404
 PAGES = (
     "/verify-email",
-    "/reset-password",
     "/forgot-password",
     "/invitations/",
     "/settings/privacy",
