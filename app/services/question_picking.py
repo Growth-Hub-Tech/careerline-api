@@ -1,6 +1,6 @@
-"""Picking questions (Day 9): balanced across subskills, the questions a person has seen least
+"""Picking questions: balanced across subskills, the questions a person has seen least
 first, one question at a time for the adaptive test (pick_next). (pick_balanced, the picking of
-the fixed test, went with that test on Day 10.) Works on any objects with question_id and
+the fixed test, went with that test.) Works on any objects with question_id and
 subskill_id (ORM rows or the simulation's questions); no database.
 """
 

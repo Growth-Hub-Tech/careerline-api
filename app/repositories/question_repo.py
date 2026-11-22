@@ -1,4 +1,4 @@
-"""The question bank's stock: how many ACTIVE questions each skill has per level (Day 8)."""
+"""The question bank's stock: how many ACTIVE questions each skill has per level."""
 
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession

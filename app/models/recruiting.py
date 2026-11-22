@@ -1,4 +1,4 @@
-"""Recruiting (Days 19-20): an organisation's candidates and the invitations it sends.
+"""Recruiting: an organisation's candidates and the invitations it sends.
 
 - candidates: one per email per organisation (emails kept in lower case).
 - invitations: a link (token) to take one catalogue test. sent -> accepted (the invitee signs
@@ -70,11 +70,11 @@ class Invitation(Base):
     candidate_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("candidates.id", ondelete="SET NULL"), nullable=True
     )
-    # kind team_member: the roster entry it tests (Day 21)
+    # kind team_member: the roster entry it tests
     team_member_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("team_members.id", ondelete="SET NULL"), nullable=True
     )
-    # the audit that sent it (Day 22)
+    # the audit that sent it
     audit_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("audits.id", ondelete="SET NULL"), nullable=True
     )

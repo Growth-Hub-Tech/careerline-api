@@ -1,11 +1,11 @@
-"""The organisation and its team roster (Day 21), always the caller's own organisation.
+"""The organisation and its team roster, always the caller's own organisation.
 
 - seats_used is the roster's size; an upload that would take it past seats_total is a 402 and
   saves nothing (updating people already there needs no seat).
 - An upload matches people by email (any case): new ones are added, known ones get the name,
   department and role from the upload. One email twice in the same upload is a 400; an unknown
   role is a 404; either way nothing is saved.
-- A member's status follows their team invitations (an audit sends them, Day 22), ignoring
+- A member's status follows their team invitations (an audit sends them), ignoring
   revoked ones: completed when at least one is completed and none is still open, in_progress
   when one is accepted (or some are done and others still open), invited when one is waiting,
   otherwise not_invited. latest_level: the newest result of their team tests in their role's

@@ -11,7 +11,7 @@ class StartAttemptRequest(BaseModel):
     declared_level: str | None = Field(
         default=None,
         deprecated=True,
-        description="Retired (Day 10): ignored. The test finds the level itself.",
+        description="Retired: ignored. The test finds the level itself.",
     )
 
 
@@ -81,7 +81,7 @@ class AttemptState(BaseModel):
     )
 
 
-# Day 11: the review of a finished test, with the right answers and their explanations
+# the review of a finished test, with the right answers and their explanations
 class ReviewOption(BaseModel):
     option_id: int
     option_text: str
@@ -122,7 +122,7 @@ class AttemptReview(BaseModel):
     items: list[ReviewItem]
 
 
-# The old fixed test (retired on Day 10): POST /attempts/submit answers 410
+# The old fixed test : POST /attempts/submit answers 410
 class AnswerItem(BaseModel):
     question_id: int
     selected_option_id: int

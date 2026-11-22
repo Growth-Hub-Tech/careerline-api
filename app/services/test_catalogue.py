@@ -1,8 +1,8 @@
-"""The test catalogue (Day 17): every skill that can be tested is a test.
+"""The test catalogue: every skill that can be tested is a test.
 
 - test_id = 200 + skill_id (as in GET /roles); only skills whose every level has enough reviewed
   questions are listed (app/repositories/question_repo.py).
-- Every test is the adaptive test of Day 10: all four levels, ADAPTIVE_QUESTION_COUNT
+- Every test is the adaptive test: all four levels, ADAPTIVE_QUESTION_COUNT
   questions, ATTEMPT_TIME_LIMIT_MINUTES.
 - price_credits comes from test_prices (seeds/test_prices.json); a skill not listed is free.
 - Access: a free test can always start; a paid one needs at least its price in credits.

@@ -1,4 +1,4 @@
-"""Subscriptions (Days 25-26).
+"""Subscriptions.
 
 - subscription_plans: what can be subscribed to (reference data from
   seeds/subscription_plans.json, filled by the seed loader). A plan taken out of the file is
@@ -7,7 +7,7 @@
   running), past_due (its renewal could not be charged; still usable for the grace days) or
   cancelled (ended). A person has at most one active or past_due subscription. An organisation
   plan names the organisation it gives seats to. authorization_code: Paystack's reusable card
-  authorization from the first payment, used to charge renewals (Day 26).
+  authorization from the first payment, used to charge renewals.
 """
 
 from datetime import datetime

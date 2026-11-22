@@ -1,4 +1,4 @@
-"""The organisation audit (Days 21-24): the organisation, its team roster, audits, the capability
+"""The organisation audit: the organisation, its team roster, audits, the capability
 heatmap and targets. Always the caller's own organisation (another one's id is a 404).
 Access: app/core/permissions.py."""
 
@@ -89,7 +89,7 @@ async def upload_roster(
     return await team.upload_roster(db, actor.organisation_id, data)
 
 
-# AUDITS (Day 22): test the team for their roles, then compare with targets and the industry
+# AUDITS: test the team for their roles, then compare with targets and the industry
 @router.get(
     "/{organisation_id}/audits",
     response_model=Page[AuditSummary],
@@ -161,7 +161,7 @@ async def start_draft_audit(
     return await audits.start_audit(db, actor, audit_id)
 
 
-# RE-TEST (Day 24): the same people and tests again, e.g. after training (PRD: pre/post re-test)
+# RE-TEST: the same people and tests again, e.g. after training (PRD: pre/post re-test)
 @router.post(
     "/{organisation_id}/audits/{audit_id}/retest",
     status_code=201,
@@ -200,7 +200,7 @@ async def get_audit_deltas(
     return await audits.audit_deltas(db, actor.organisation_id, audit_id)
 
 
-# CAPABILITY HEATMAP (Day 23): rows by department, role or person; columns are skills
+# CAPABILITY HEATMAP: rows by department, role or person; columns are skills
 @router.get(
     "/{organisation_id}/heatmap",
     response_model=Heatmap,
@@ -223,7 +223,7 @@ async def get_heatmap(
     return await capability.heatmap(db, actor.organisation_id, group_by, audit_id)
 
 
-# TARGETS (Day 23): the level each role should reach in each skill, and progress towards it
+# TARGETS: the level each role should reach in each skill, and progress towards it
 @router.get(
     "/{organisation_id}/targets",
     response_model=Targets,

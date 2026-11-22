@@ -1,4 +1,4 @@
-"""Privacy (Day 18, NDPR / GDPR).
+"""Privacy (NDPR / GDPR).
 
 - learner_consents: each person's current answer per consent key; consent_events: every change,
   with its time (the record that consent was given or withdrawn).
@@ -26,7 +26,7 @@ from sqlalchemy.sql import func
 
 from app.db.base import Base
 
-# Day 31: AuxHR and Incubate sharing are off until the person turns them on, like the others
+# AuxHR and Incubate sharing are off until the person turns them on, like the others
 CONSENT_KEYS = (
     "marketing_emails",
     "share_profile_with_recruiters",

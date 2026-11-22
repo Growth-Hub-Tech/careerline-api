@@ -1,4 +1,4 @@
-"""Organisations and their accounts' roles (Day 7)."""
+"""Organisations and their accounts' roles."""
 
 from datetime import datetime
 
@@ -29,7 +29,7 @@ class Organisation(Base):
     name: Mapped[str] = mapped_column(String(160), nullable=False)
     industry: Mapped[str | None] = mapped_column(String(80), nullable=True)
     size: Mapped[str | None] = mapped_column(String(40), nullable=True)
-    # How many people the team roster may hold (Day 21). An organisation plan sets it (Days 25-26)
+    # How many people the team roster may hold. An organisation plan sets it
     seats_total: Mapped[int] = mapped_column(
         Integer, nullable=False, default=DEFAULT_SEATS, server_default=str(DEFAULT_SEATS)
     )

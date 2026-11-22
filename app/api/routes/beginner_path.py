@@ -7,8 +7,8 @@ from app.models.models import Learner
 from app.schemas.beginner_path import BeginnerPath, IntakeQuestionnaire, IntakeSubmission
 from app.services.beginner_path import latest_career_paths, load_questionnaire, submit_intake
 
-# The beginner path (Day 13, part 1): intake questionnaire -> ranked career paths
-# (Day 14, part 2): each path with its programme
+# The beginner path (part 1): intake questionnaire -> ranked career paths
+# (part 2): each path with its programme
 router = APIRouter(prefix="/beginner-path", tags=["Beginner path"], route_class=EnvelopeRoute)
 
 

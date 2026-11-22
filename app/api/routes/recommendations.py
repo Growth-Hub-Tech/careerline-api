@@ -12,7 +12,7 @@ from app.repositories.recommendation_repo import get_learning_pathway
 router = APIRouter(prefix="/recommendations", tags=["Recommendations"], route_class=EnvelopeRoute)
 
 
-# MY LEARNING PATHWAY AND LEVELS: the learner comes from the session (Day 7)
+# MY LEARNING PATHWAY AND LEVELS: the learner comes from the session
 @router.get("/pathway/me/{skill_id}", responses=errors(401, 404))
 async def my_learning_pathway(
     skill_id: int,

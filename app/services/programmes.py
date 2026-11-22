@@ -1,4 +1,4 @@
-"""Programmes (Day 14): Incubate and partner courses that prepare for a job role.
+"""Programmes: Incubate and partner courses that prepare for a job role.
 
 - The catalogue comes from seeds/programmes.json (app/db/seed.py). Only active programmes are
   listed or found; a retired one is a 404.

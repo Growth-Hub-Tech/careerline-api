@@ -1,4 +1,4 @@
-"""Programmes (Day 14): Incubate and partner courses that prepare for a job role, and the clicks
+"""Programmes: Incubate and partner courses that prepare for a job role, and the clicks
 on them (for referral reporting).
 
 Programmes, and which roles and skills each one covers, are reference data from

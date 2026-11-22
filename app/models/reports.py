@@ -1,4 +1,4 @@
-"""The PDF skill report of a result (Day 12). One row per result: its status, the PDF itself
+"""The PDF skill report of a result. One row per result: its status, the PDF itself
 (small, so it lives in the database: the test server's disk is wiped on every deploy) and a
 version that goes up each time it is made again (older download links stop working)."""
 

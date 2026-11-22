@@ -1,4 +1,4 @@
-"""Subscriptions (Days 25-26).
+"""Subscriptions.
 
 Plans come from seeds/subscription_plans.json. Subscribing is a Paystack checkout of item_type
 subscription_plan (POST /subscriptions or POST /payments/checkout): payments.settle() calls
@@ -14,7 +14,7 @@ year. Cancelling (cancel_at_period_end) keeps the plan until the period ends. A 
 without being paid again is past_due for SUBSCRIPTION_GRACE_DAYS, then cancelled. The status is
 brought up to date whenever a subscription is read.
 
-Renewals (Day 26): a paid period schedules a renew_subscription job an hour before it ends. The
+Renewals: a paid period schedules a renew_subscription job an hour before it ends. The
 job charges the card of the first payment (Paystack's reusable authorization) through
 settle(), like any payment, so the next period starts where the last one ended and its credits
 are added once. Declined, or no reusable card: one email asking the person to pay again
@@ -179,7 +179,7 @@ async def cancel(db: AsyncSession, learner_id: int) -> SubscriptionOut:
 
 
 async def resume(db: AsyncSession, learner_id: int) -> SubscriptionOut:
-    """Undo a cancellation while the paid period still runs (Day 31). Nothing to resume: 409."""
+    """Undo a cancellation while the paid period still runs. Nothing to resume: 409."""
     row = await _live(db, learner_id, lock=True)
     if row is None or not row.cancel_at_period_end:
         raise ConflictError("Your plan is not cancelled, so there is nothing to resume")
@@ -309,7 +309,7 @@ async def organisation_seats(db: AsyncSession, organisation_id: int, own_seats: 
     return max(own_seats, plan.seats or 0) if plan else own_seats
 
 
-# ---------- renewals (Day 26) ----------
+# ---------- renewals ----------
 
 
 def _stamp(value: datetime) -> str:

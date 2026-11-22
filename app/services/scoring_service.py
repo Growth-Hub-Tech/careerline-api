@@ -1,5 +1,5 @@
 """Recommendations after a test. (The fixed pass/fail scoring that lived here was retired on
-Day 10: app/services/test_taking_service.py scores the adaptive test.)"""
+app/services/test_taking_service.py scores the adaptive test.)"""
 
 from collections.abc import Sequence
 from types import SimpleNamespace
@@ -25,7 +25,7 @@ async def generate_recommendations(
     weak_subskill_ids: list[int] | None = None,
 ):
     """Advice for the weak subskills of a finished test. subskills: the engine's result per
-    answered subskill. weak_subskill_ids: the engine's weaknesses (Day 10); without it, every
+    answered subskill. weak_subskill_ids: the engine's weaknesses; without it, every
     subskill under WEAK_THRESHOLD percent."""
 
     if not subskills:
@@ -58,7 +58,7 @@ async def generate_recommendations(
     weak_subskills = sorted(weak_subskills, key=lambda x: float(x.percentage_score))
 
     # Plain advice now; the AI advice comes from a background job (never inside the request:
-    # before Day 5 submit waited for one OpenAI call per weak subskill)
+    # before, submit waited for one OpenAI call per weak subskill)
     recommendations = []
     for priority, subskill in enumerate(weak_subskills, start=1):
         score = float(subskill.percentage_score)

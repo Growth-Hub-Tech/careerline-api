@@ -60,7 +60,7 @@ def _session_token(request: Request) -> str | None:
 
 # The signed-in session, or None (no token, or a token that no longer works). The token must
 # name a session that is still open (not signed out, not ended by a password reset, not
-# expired) and belongs to the token's learner. Tokens from before Day 6 have no session.
+# expired) and belongs to the token's learner.
 async def optional_current_session(
     request: Request, db: AsyncSession = Depends(get_db, scope="function")
 ) -> CurrentSession | None:

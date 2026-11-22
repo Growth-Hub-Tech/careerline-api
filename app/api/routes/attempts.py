@@ -37,7 +37,7 @@ def score_or_none(attempt):
     return None
 
 
-# START (OR RESUME) A TEST: the adaptive test of Day 10, one question at a time
+# START (OR RESUME) A TEST: the adaptive test, one question at a time
 @router.post(
     "/start",
     response_model=AttemptState,
@@ -95,7 +95,7 @@ async def answer_current_question(
     )
 
 
-# REVIEW A FINISHED TEST: right answers and explanations, only once the test is over (Day 11)
+# REVIEW A FINISHED TEST: right answers and explanations, only once the test is over
 @router.get(
     "/{attempt_id}/review",
     response_model=AttemptReview,
@@ -114,7 +114,7 @@ async def review_attempt(
     return await attempt_review(db, attempt_id, current_learner.learner_id)
 
 
-# THE OLD FIXED PASS/FAIL TEST: retired on Day 10
+# THE OLD FIXED PASS/FAIL TEST: retired
 @router.post("/submit", responses=errors(410), deprecated=True)
 async def submit_answers(data: SubmitRequest):
     raise GoneError(
@@ -123,7 +123,7 @@ async def submit_answers(data: SubmitRequest):
     )
 
 
-# MY ATTEMPT HISTORY: the learner comes from the session (Day 7)
+# MY ATTEMPT HISTORY: the learner comes from the session
 @router.get("/me", responses=errors(401))
 async def get_my_attempts(
     limit: int = Query(10, ge=1, le=100),
@@ -158,7 +158,7 @@ async def get_attempt(
             "overall_percentage": score_or_none(attempt),
             "start_time": attempt.start_time,
             "end_time": attempt.end_time,
-            # Day 10: the result of a finished adaptive test (null otherwise)
+            # the result of a finished adaptive test (null otherwise)
             "result": attempt_outcome.model_dump(mode="json") if attempt_outcome else None,
         }
     }
@@ -227,6 +227,6 @@ async def cancel_attempt(
             f"Cannot cancel attempt that is already {attempt.attempt_status.value.lower()}"
         )
 
-    # Cancel the attempt (a paid test with no answer yet gives its credits back, Day 17)
+    # Cancel the attempt (a paid test with no answer yet gives its credits back)
     await cancel_test(db, attempt)
     return ok(message=f"Attempt {attempt_id} cancelled successfully")

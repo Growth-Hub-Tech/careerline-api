@@ -1,4 +1,4 @@
-"""Settings that must be right before real people use the API (Day 29).
+"""Settings that must be right before real people use the API.
 
 In production (APP_ENV=production) the API refuses to start while any of these is wrong, and
 says which: a guessable signing key, a website or CORS origin that is not https, a Paystack test

@@ -1,4 +1,4 @@
-"""Results and their PDF skill reports (Day 12).
+"""Results and their PDF skill reports.
 
 - A result is a finished adaptive test: result_id is its attempt_id. Someone else's result, a
   test still running and an expired test without a result are all 404 (an id is never
@@ -179,7 +179,7 @@ async def result_detail(db: AsyncSession, result_id: int, learner_id: int) -> Re
 
 
 async def previous_result(db: AsyncSession, attempt: TestAttempt) -> PreviousResult | None:
-    """Day 24 (pre/post re-test): the person's result in the same skill just before this one."""
+    """the person's result in the same skill just before this one."""
     this = await db.scalar(
         select(SkillHistory).where(SkillHistory.attempt_id == attempt.attempt_id)
     )
@@ -284,7 +284,7 @@ async def report_status(
 async def recruiter_report_link(
     db: AsyncSession, attempt_id: int, link_for: Callable[[str], str]
 ) -> str | None:
-    """Day 20: the PDF link of a result for the recruiter who invited the test (the caller has
+    """the PDF link of a result for the recruiter who invited the test (the caller has
     checked that); the PDF is made the first time it is asked for. None while it is made."""
     row, _ = await _report_row(db, attempt_id)
     if row.status != "ready":

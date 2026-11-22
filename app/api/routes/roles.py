@@ -7,7 +7,7 @@ from app.schemas.common import Page
 from app.schemas.roles import JobTitleList, Role, RoleSummary
 from app.services import roles_service
 
-# ROLE CATALOGUE (Day 8, real since then): job roles and the skills (with target level) each
+# ROLE CATALOGUE: job roles and the skills (with target level) each
 # one needs. Public.
 router = APIRouter(prefix="/roles", tags=["Skills and roles"], route_class=EnvelopeRoute)
 titles_router = APIRouter(

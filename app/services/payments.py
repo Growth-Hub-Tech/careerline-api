@@ -1,4 +1,4 @@
-"""Payments and credits (Day 16, Paystack).
+"""Payments and credits (Paystack).
 
 The flow: POST /payments/checkout saves a pending payment and starts a Paystack transaction; the
 person pays on Paystack's page and comes back to callback_url?reference=...; Paystack tells the
@@ -119,8 +119,8 @@ def _payment_out(payment: Payment) -> PaymentOut:
 
 
 async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutRequest) -> Checkout:
-    """A credit pack (Day 16) or a subscription plan (Day 25). At most CHECKOUTS_PER_HOUR a
-    person (Day 29)."""
+    """A credit pack or a subscription plan. At most CHECKOUTS_PER_HOUR a
+    person."""
     limited = await rate_limit.hit(
         db,
         rate_limit.bucket("checkout:learner", str(learner.learner_id)),
@@ -231,7 +231,7 @@ async def _add_credits(
     return entry
 
 
-# ---------- credits pay for tests (Day 17) ----------
+# ---------- credits pay for tests ----------
 
 
 async def test_price(db: AsyncSession, skill_id: int) -> int:

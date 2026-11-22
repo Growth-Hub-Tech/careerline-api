@@ -10,7 +10,7 @@ ReportStatus = Literal["generating", "ready", "failed"]
 
 
 class ResultSummary(BaseModel):
-    """A finished test (Day 12: real; result_id is the attempt_id). No pass or fail."""
+    """A finished test (result_id is the attempt_id). No pass or fail."""
 
     result_id: int
     attempt_id: int
@@ -36,7 +36,7 @@ class ResultRecommendation(BaseModel):
 
 
 class PreviousResult(BaseModel):
-    """The person's result in the same skill just before this one (Day 24, pre/post re-test)."""
+    """The person's result in the same skill just before this one (pre/post re-test)."""
 
     result_id: int
     level: LevelName
@@ -56,11 +56,11 @@ class ResultDetail(ResultSummary):
     gaps: list[str]
     recommendations: list[ResultRecommendation]
     previous_result: PreviousResult | None = Field(
-        default=None, description="Day 24: the result in the same skill just before this one"
+        default=None, description="the result in the same skill just before this one"
     )
     score_delta: float | None = Field(
         default=None,
-        description="Day 24: percentage_score minus the previous result's (null without one)",
+        description="percentage_score minus the previous result's (null without one)",
     )
 
 

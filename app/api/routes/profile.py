@@ -12,7 +12,7 @@ from app.schemas.history import SkillHistoryEntry
 from app.schemas.profile import Profile, ProfileUpdate, SkillLevel, SkillProfile
 from app.services import profile as profile_service
 
-# MY PROFILE (Day 28) and MY SKILLS (Day 10): every finished test is saved to the skill history
+# MY PROFILE and MY SKILLS: every finished test is saved to the skill history
 router = APIRouter(prefix="/profile", tags=["Profile"], route_class=EnvelopeRoute)
 
 

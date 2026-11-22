@@ -1,4 +1,4 @@
-"""A person's skill history (Day 10): one entry per finished test, saved in the same
+"""A person's skill history: one entry per finished test, saved in the same
 transaction as the result."""
 
 from datetime import datetime

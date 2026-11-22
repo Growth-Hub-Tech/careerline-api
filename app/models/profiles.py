@@ -1,4 +1,4 @@
-"""The person's profile (Day 28): what they tell us about themselves, one row per person, made on
+"""The person's profile: what they tell us about themselves, one row per person, made on
 their first PATCH /profile. Who may see it (visibility) is not stored here: it is their
 share_profile_with_recruiters consent (app/models/privacy.py).
 

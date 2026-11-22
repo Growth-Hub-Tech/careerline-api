@@ -1,4 +1,4 @@
-"""Question quality (Day 8): what is wrong with a question, and may it be served?
+"""Question quality: what is wrong with a question, and may it be served?
 
 One check for the whole bank, used by the seed loader (which stores each question's status
 and issues in the database) and by scripts/check_questions.py (the report and the experts'

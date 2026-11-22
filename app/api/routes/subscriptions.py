@@ -9,7 +9,7 @@ from app.schemas.subscriptions import Plan, SubscribeRequest, Subscription
 from app.services import payments as payment_service
 from app.services import subscriptions as subscription_service
 
-# SUBSCRIPTIONS (Day 25, real since then): plans, subscribing through a Paystack checkout, my
+# SUBSCRIPTIONS: plans, subscribing through a Paystack checkout, my
 # subscription, cancelling at the end of the period
 router = APIRouter(prefix="/subscriptions", tags=["Subscriptions"], route_class=EnvelopeRoute)
 
@@ -60,7 +60,7 @@ async def subscribe(
     return await payment_service.start_checkout(db, current_learner, request)
 
 
-# RESUME (Day 31): undo a cancellation while the paid period still runs
+# RESUME: undo a cancellation while the paid period still runs
 @router.post(
     "/me/resume",
     response_model=Subscription,

@@ -1,4 +1,4 @@
-"""Paystack (Day 16): start a transaction, check one, and check a webhook's signature.
+"""Paystack: start a transaction, check one, and check a webhook's signature.
 
 - The secret key is settings.PAYSTACK_SECRET_KEY, from the environment only. Without it nothing
   here is called (the payment routes answer 503 first).
@@ -45,7 +45,7 @@ class Transaction:
     currency: str
     transaction_id: int | None
     channel: str | None
-    # a reusable card authorization (Day 25): what subscription renewals are charged to
+    # a reusable card authorization: what subscription renewals are charged to
     authorization_code: str | None = None
 
 

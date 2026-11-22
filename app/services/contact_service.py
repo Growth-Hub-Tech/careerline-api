@@ -1,4 +1,4 @@
-"""The contact form: store the message, email the team and thank the sender (Day 5)."""
+"""The contact form: store the message, email the team and thank the sender."""
 
 from datetime import UTC, datetime
 

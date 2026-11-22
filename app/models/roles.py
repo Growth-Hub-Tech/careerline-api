@@ -1,4 +1,4 @@
-"""Job roles, the skills each needs, and the job-title ladder (Day 8).
+"""Job roles, the skills each needs, and the job-title ladder.
 
 All three are reference data from the seed files (seeds/job_roles.json, seeds/job_titles.json).
 A role skill's target_level is what the role needs at the mid title; the ladder says how the

@@ -1,4 +1,4 @@
-"""Explanations of a finished test's answers (Day 11).
+"""Explanations of a finished test's answers.
 
 - GET /attempts/{id}/review shows each served question with the right answer, the person's
   choice and an explanation, and only once the test is over: nothing about the answers is

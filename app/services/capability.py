@@ -1,4 +1,4 @@
-"""Targets and the capability heatmap (Day 23), always the caller's own organisation.
+"""Targets and the capability heatmap, always the caller's own organisation.
 
 - Targets: the level each role should reach in each skill (optional due date). PUT replaces
   them all (one per role and skill: twice is a 400; an unknown role or skill is a 404; nothing

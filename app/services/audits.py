@@ -1,4 +1,4 @@
-"""Audits (Day 22): test an organisation's team for their job roles, then benchmark the results.
+"""Audits: test an organisation's team for their job roles, then benchmark the results.
 
 - An audit has roles; its members are the roster people in those roles (or the member_ids
   given, which must be on the roster and in those roles) whose role has at least one testable
@@ -9,7 +9,7 @@
   the audit (revoked ones don't count); otherwise in_progress. Nothing about it is stored but
   started_at: it always follows the invitations.
 - Benchmarks, per role and skill with at least one finished test in the audit: the target level
-  (the organisation's target, Day 23, else what the role needs, from the job role), the team's average score, how many reached the
+  (the organisation's target, else what the role needs, from the job role), the team's average score, how many reached the
   target, and the industry average (everyone's average score in that skill on CareerLine, once
   INDUSTRY_MIN_RESULTS people have one; null before, so nobody's score can be worked out).
 """
@@ -186,7 +186,7 @@ async def industry_averages(db: AsyncSession, skill_ids: set[int]) -> dict[int, 
 async def target_levels(
     db: AsyncSession, organisation_id: int, role_ids: list[int]
 ) -> dict[tuple[int, int], str]:
-    """(role, skill) -> the organisation's target (Day 23), else the level the role needs."""
+    """(role, skill) -> the organisation's target, else the level the role needs."""
     out = {
         (role_id, skill_id): target
         for role_id, skills in (await role_skills(db, role_ids)).items()
@@ -454,7 +454,7 @@ async def start_audit(db: AsyncSession, actor: OrganisationMember, audit_id: int
     return await _audit_out(db, audit)
 
 
-# ---------- re-tests (Day 24) ----------
+# ---------- re-tests ----------
 
 
 class RetestTooSoonError(ConflictError):
@@ -464,7 +464,7 @@ class RetestTooSoonError(ConflictError):
 async def _retest_cooldown_ends(
     db: AsyncSession, organisation_id: int, audit_id: int
 ) -> datetime | None:
-    """When the audit (or its last re-test) can be re-tested again; None: it can now (Day 31)."""
+    """When the audit (or its last re-test) can be re-tested again; None: it can now."""
     last = await db.scalar(
         select(func.max(Audit.started_at)).where(
             Audit.organisation_id == organisation_id,

@@ -1,4 +1,4 @@
-"""Payments and credits (Day 16).
+"""Payments and credits.
 
 - credit_packs: what credits cost (reference data from seeds/credit_packs.json).
 - payments: one Paystack checkout each, pending -> paid | failed | abandoned. A payment's credits
@@ -9,7 +9,7 @@
   subscription_grant), with the balance after it.
 - paystack_events: every webhook event once (event + Paystack's id), so a retried event is
   recognised and ignored.
-- test_prices (Day 17): what a test costs in credits, per skill (seeds/test_prices.json); a
+- test_prices: what a test costs in credits, per skill (seeds/test_prices.json); a
   skill not listed is free. A test's credits are taken once when it starts (credit transaction
   test_started with its attempt_id) and given back at most once (refund).
 """
@@ -84,7 +84,7 @@ class Payment(Base):
     callback_url: Mapped[str] = mapped_column(String(500), nullable=False)
     paystack_transaction_id: Mapped[int | None] = mapped_column(BigInteger, nullable=True)
     channel: Mapped[str | None] = mapped_column(String(40), nullable=True)
-    # Day 25: the subscription a paid subscription_plan payment started or renewed
+    # the subscription a paid subscription_plan payment started or renewed
     subscription_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("subscriptions.id", ondelete="SET NULL"), nullable=True
     )
@@ -133,7 +133,7 @@ class CreditTransaction(Base):
     payment_id: Mapped[int | None] = mapped_column(
         BigInteger, ForeignKey("payments.id", ondelete="SET NULL"), nullable=True, unique=True
     )
-    # a test's charge or refund (Day 17): one of each per attempt, ever
+    # a test's charge or refund: one of each per attempt, ever
     attempt_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("test_attempt.attempt_id", ondelete="SET NULL"), nullable=True
     )
