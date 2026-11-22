@@ -3,7 +3,12 @@ from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field
 
-from app.schemas.common import FULL_NAME_MAX_LENGTH, PASSWORD_MAX_LENGTH, PHONE_MAX_LENGTH
+from app.schemas.common import (
+    EMAIL_MAX_LENGTH,
+    FULL_NAME_MAX_LENGTH,
+    PASSWORD_MAX_LENGTH,
+    PHONE_MAX_LENGTH,
+)
 
 AccountType = Literal["learner", "recruiter", "organisation_admin"]
 
@@ -35,12 +40,9 @@ class ChangePasswordRequest(BaseModel):
     new_password: str = Field(min_length=8, max_length=PASSWORD_MAX_LENGTH)
 
 
-class PasswordResetRequest(BaseModel):
-    email: EmailStr
-
-
 class PasswordResetConfirm(BaseModel):
-    token: str
+    email: EmailStr = Field(max_length=EMAIL_MAX_LENGTH)
+    pin: str = Field(min_length=1, max_length=10)
     new_password: str = Field(min_length=8, max_length=PASSWORD_MAX_LENGTH)
 
 

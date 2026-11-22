@@ -4,6 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_session, get_db
 from app.core.config import settings
+from app.core.exceptions import ForbiddenError
 from app.core.rate_limit import client_ip
 from app.core.responses import EnvelopeRoute, errors, ok
 from app.core.security import ACCESS_TOKEN_EXPIRE_MINUTES, SESSION_COOKIE
@@ -12,7 +13,6 @@ from app.schemas.common import Acknowledgement
 from app.services import account_service
 from app.services.session_service import CurrentSession, revoke_all_sessions, revoke_session
 
-# Create router for auth endpoints
 router = APIRouter(prefix="/auth", tags=["Authentication"], route_class=EnvelopeRoute)
 
 # Login answers with a standard OAuth2 token body (no envelope), so it has its own router
@@ -20,6 +20,11 @@ token_router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 
 def _client(request: Request) -> tuple[str | None, str | None]:
+    """Who is signing in. A browser on another site is refused: it could sign the visitor in
+    to an account of the attacker's choosing (login CSRF). Clients that send no Origin pass."""
+    origin = request.headers.get("origin")
+    if origin is not None and origin not in set(settings.CORS_ORIGINS):
+        raise ForbiddenError("Sign in from the CareerLine website")
     return client_ip(request), request.headers.get("user-agent")
 
 
@@ -40,26 +45,28 @@ def _set_session_cookie(response: Response, token: str) -> None:
     )
 
 
-# SIGN UP: creates the account, signs it in and emails a confirmation link
 @router.post(
     "/register",
-    responses=errors(400, 429),
-    description="Creates the account and signs it in (the answer holds a token). A confirmation "
-    "link is emailed; until it is opened, GET /accounts/me shows email_verified: false.",
+    responses=errors(400, 403, 429),
+    description="Creates the account and signs it in: the answer holds a token and the "
+    f"{SESSION_COOKIE} cookie is set. No email is sent. A taken email is 400 email_taken.",
 )
 async def register(
-    data: RegisterRequest, request: Request, db: AsyncSession = Depends(get_db, scope="function")
+    data: RegisterRequest,
+    request: Request,
+    response: Response,
+    db: AsyncSession = Depends(get_db, scope="function"),
 ):
     ip, user_agent = _client(request)
     result = await account_service.register(db, data, ip, user_agent)
+    _set_session_cookie(response, result["access_token"])
     return ok(result, message=f"Learner {data.full_name} registered successfully")
 
 
-# SIGN IN: the OAuth2 password form (username = email)
 @token_router.post(
     "/login",
     response_model=TokenResponse,
-    responses=errors(401, 422, 429),
+    responses=errors(401, 403, 422, 429),
     description="OAuth2 password form: username = email. A wrong password and an unknown email "
     "get the same 401. After 5 failed sign-ins for one email (or 20 from one IP address) in 15 "
     "minutes: 429 with Retry-After, whatever the password. Also sets the token in the HttpOnly "
@@ -78,7 +85,6 @@ async def login(
     return result
 
 
-# SIGN OUT: ends this session (its token stops working at once), or every session
 @router.post(
     "/logout",
     response_model=Acknowledgement,

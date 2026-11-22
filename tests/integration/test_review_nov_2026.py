@@ -4,6 +4,8 @@ Each test states the correct behaviour. Run against the code before the fix, the
 fix in the same commit makes them pass.
 """
 
+import pytest
+
 from app.core.config import settings
 from app.services import account_service
 from tests.integration.conftest import PASSWORD, assert_error_envelope, login, take_test
@@ -81,7 +83,10 @@ async def test_every_password_field_refuses_more_than_128_characters(client, lea
     for path, body in (
         ("/accounts/me/password", {"current_password": long, "new_password": "long-enough-1"}),
         ("/accounts/me/password", {"current_password": PASSWORD, "new_password": long}),
-        ("/accounts/password-reset/confirm", {"token": "anything", "new_password": long}),
+        (
+            "/accounts/password-reset/confirm",
+            {"email": "a@example.com", "pin": "1234", "new_password": long},
+        ),
         ("/privacy/account-deletion", {"password": long}),
     ):
         response = await client.post(f"{API}{path}", json=body, headers=learner["headers"])
@@ -102,3 +107,11 @@ async def test_a_sign_in_with_a_huge_password_fails_without_hashing_it(
     # each one counted as a failed sign-in, like any wrong password
     response = await login(client, learner["email"], password="p" * 129)
     assert_error_envelope(response, 429, "rate_limited")
+
+
+@pytest.mark.parametrize(
+    "path", ["/results?limit=0", "/results?limit=101", "/results?offset=-1", "/skills/?limit=500"]
+)
+async def test_paging_is_bounded(client, learner, path):
+    response = await client.get(f"{API}{path}", headers=learner["headers"])
+    assert response.status_code == 422, response.text

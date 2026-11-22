@@ -1,10 +1,11 @@
-"""Day 6: sign-in attempts are limited, and nothing tells whether an email has an account.
+"""Sign-in attempts are limited, and nothing tells whether an email has an account.
 
 Per email address: 5 failed sign-ins in 15 minutes lock that address for the rest of the window
 (429 with Retry-After), even with the right password, and an unknown address locks the same way.
 Per IP address: 20 failed sign-ins in 15 minutes. Limits are in the database, so they survive a
 restart and hold across server processes."""
 
+import asyncio
 import time
 
 import pytest
@@ -98,3 +99,11 @@ async def test_a_spoofed_forwarded_for_hop_does_not_escape_the_ip_limit(client, 
         headers={"X-Forwarded-For": "198.51.100.2"},
     )
     assert other.status_code == 200, other.text
+
+
+async def test_parallel_wrong_passwords_cannot_get_past_the_limit(client, ada):
+    responses = await asyncio.gather(
+        *(login(client, "ada@example.com", password="not-the-password") for _ in range(10))
+    )
+    codes = sorted(r.status_code for r in responses)
+    assert codes == [401] * 5 + [429] * 5, codes

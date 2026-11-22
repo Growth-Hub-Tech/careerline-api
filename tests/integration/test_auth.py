@@ -73,7 +73,7 @@ async def test_registering_the_same_email_twice_is_400(client, learner):
     response = await register(client, learner["email"])
 
     assert response.status_code == 400
-    assert response.json()["error"]["message"] == "Email already registered"
+    assert response.json()["error"]["message"] == "An account with this email already exists"
 
 
 async def test_protected_route_without_a_token_is_401(client, learner):

@@ -1,11 +1,8 @@
-"""Day 6: real accounts, matching the published contract.
+"""Accounts: sign-up (no email), sign-in, my account, change password, and the reset PIN.
 
-Sign-up (POST /auth/register, unchanged), email confirmation (a link in an email, through the
-Day 5 email jobs), sign-in (POST /auth/login, unchanged), my account (GET/PATCH /accounts/me),
-change password, forgot and reset password. Tokens in links are single-use and expire.
+Email confirmation is switched off but its routes are kept, so they are still tested.
 """
 
-from datetime import UTC, datetime, timedelta
 from urllib.parse import parse_qs, urlparse
 
 import pytest
@@ -62,10 +59,10 @@ async def sign_up(client, email="ada@example.com") -> dict:
     return response.json()["data"]
 
 
-# --- Sign-up and email confirmation ---
+# --- Sign-up (no email) and the switched-off email confirmation ---
 
 
-async def test_sign_up_keeps_the_published_answer_and_sends_a_confirmation_email(client):
+async def test_sign_up_signs_in_sends_no_email_and_reports_the_email_as_confirmed(client):
     data = await sign_up(client)
     assert set(data) == {"access_token", "token_type", "learner_id"}
 
@@ -73,66 +70,35 @@ async def test_sign_up_keeps_the_published_answer_and_sends_a_confirmation_email
     assert me.status_code == 200, me.text
     account = me.json()["data"]
     assert account["email"] == "ada@example.com"
-    assert account["email_verified"] is False
+    assert account["email_verified"] is True
     assert account["account_type"] == "learner"
-    assert "X-Sample-Data" not in me.headers
-
-    (mail,) = await emails(client, "ada@example.com")
-    assert "confirm" in mail["subject"].lower()
-    assert token_from(mail, "/verify-email")
+    assert await emails(client, "ada@example.com") == []
 
 
-async def test_the_confirmation_link_confirms_the_email_once(client):
-    data = await sign_up(client)
-    token = token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
-
-    response = await client.post(f"{API}/accounts/verify-email", json={"token": token})
-    assert response.status_code == 200, response.text
-    assert response.json()["data"] == {"status": "accepted"}
-    me = await client.get(f"{API}/accounts/me", headers=bearer(data["access_token"]))
-    assert me.json()["data"]["email_verified"] is True
-
-    again = await client.post(f"{API}/accounts/verify-email", json={"token": token})
-    assert_error_envelope(again, 410, "expired")
-
-
-async def test_an_old_or_made_up_confirmation_link_is_410(client, db):
-    await sign_up(client)
-    token = token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
-    db.execute(text("UPDATE account_tokens SET expires_at = now() - interval '1 minute'"))
-    db.commit()
-    assert_error_envelope(
-        await client.post(f"{API}/accounts/verify-email", json={"token": token}), 410, "expired"
-    )
-    assert_error_envelope(
-        await client.post(f"{API}/accounts/verify-email", json={"token": "made-up-token-value"}),
-        410,
-        "expired",
-    )
-
-
-async def test_resend_sends_a_new_link_and_the_old_one_stops_working(client):
-    data = await sign_up(client)
-    first = token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
-
+async def resent_token(client, data: dict) -> str:
     response = await client.post(
         f"{API}/accounts/verify-email/resend", headers=bearer(data["access_token"])
     )
     assert response.status_code == 202, response.text
-    newest = (await emails(client, "ada@example.com"))[0]
-    second = token_from(newest, "/verify-email")
-    assert second != first
+    return token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
 
-    assert_error_envelope(
-        await client.post(f"{API}/accounts/verify-email", json={"token": first}), 410, "expired"
-    )
-    ok = await client.post(f"{API}/accounts/verify-email", json={"token": second})
-    assert ok.status_code == 200, ok.text
+
+async def test_the_kept_confirmation_link_still_works_once(client, db):
+    data = await sign_up(client)
+    token = await resent_token(client, data)
+
+    response = await client.post(f"{API}/accounts/verify-email", json={"token": token})
+    assert response.status_code == 200, response.text
+    assert db.execute(text("SELECT email_verified_at FROM learner")).scalar_one() is not None
+
+    again = await client.post(f"{API}/accounts/verify-email", json={"token": token})
+    assert_error_envelope(again, 410, "expired")
+    made_up = await client.post(f"{API}/accounts/verify-email", json={"token": "made-up-value"})
+    assert_error_envelope(made_up, 410, "expired")
 
 
 async def test_tokens_are_stored_hashed(client, db):
-    await sign_up(client)
-    token = token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
+    token = await resent_token(client, await sign_up(client))
     stored = db.execute(text("SELECT token_hash FROM account_tokens")).scalars().all()
     assert stored and token not in stored
 
@@ -140,7 +106,7 @@ async def test_tokens_are_stored_hashed(client, db):
 async def test_sign_up_emails_are_case_insensitive(client):
     await sign_up(client, "Ada@Example.com")
     response = await register(client, "ada@example.com")
-    assert_error_envelope(response, 400, "bad_request")
+    assert_error_envelope(response, 400, "email_taken")
     assert (await login(client, "ADA@example.com")).status_code == 200
 
 
@@ -185,72 +151,69 @@ async def test_changing_my_password_needs_the_current_one(client):
     assert any("password was changed" in s.lower() for s in subjects)
 
 
-# --- Forgot and reset password ---
+# --- Forgot password: the fixed reset PIN ---
 
 
-async def test_forgot_password_sends_a_reset_link_that_works_once(client):
-    await sign_up(client)
-    response = await client.post(
-        f"{API}/accounts/password-reset", json={"email": "ADA@example.com"}
-    )
-    assert response.status_code == 202, response.text
-    assert response.json()["data"] == {"status": "accepted"}
-
-    reset = next(
-        m for m in await emails(client, "ada@example.com") if "reset" in m["subject"].lower()
-    )
-    token = token_from(reset, "/reset-password")
-    response = await client.post(
+async def reset(client, email="ada@example.com", pin="1234", password=NEW_PASSWORD):
+    return await client.post(
         f"{API}/accounts/password-reset/confirm",
-        json={"token": token, "new_password": NEW_PASSWORD},
+        json={"email": email, "pin": pin, "new_password": password},
     )
+
+
+async def test_the_reset_pin_sets_a_new_password(client):
+    await sign_up(client)
+    response = await reset(client, email="ADA@example.com")
     assert response.status_code == 200, response.text
     assert (await login(client, "ada@example.com", NEW_PASSWORD)).status_code == 200
-
-    again = await client.post(
-        f"{API}/accounts/password-reset/confirm", json={"token": token, "new_password": "x" * 12}
-    )
-    assert_error_envelope(again, 410, "expired")
+    assert (await login(client, "ada@example.com", PASSWORD)).status_code == 401
 
 
-async def test_a_reset_link_expires_after_an_hour(client, db):
+async def test_a_wrong_pin_and_an_unknown_email_get_the_same_answer(client):
     await sign_up(client)
-    await client.post(f"{API}/accounts/password-reset", json={"email": "ada@example.com"})
-    reset = next(
-        m for m in await emails(client, "ada@example.com") if "reset" in m["subject"].lower()
-    )
-    token = token_from(reset, "/reset-password")
-    expires = db.execute(
-        text("SELECT expires_at FROM account_tokens WHERE purpose = 'password_reset'")
-    ).scalar_one()
-    assert expires <= datetime.now(UTC) + timedelta(minutes=61)
-    db.execute(text("UPDATE account_tokens SET expires_at = now() - interval '1 second'"))
-    db.commit()
+    wrong = await reset(client, pin="0000")
+    unknown = await reset(client, email="nobody@example.com")
+    assert_error_envelope(wrong, 400, "invalid_reset_pin")
+    assert_error_envelope(unknown, 400, "invalid_reset_pin")
+    assert wrong.json()["error"]["message"] == unknown.json()["error"]["message"]
+    assert (await login(client, "ada@example.com")).status_code == 200
+
+
+async def test_five_wrong_pins_lock_the_reset_even_with_the_right_pin(client):
+    await sign_up(client)
+    for _ in range(5):
+        assert (await reset(client, pin="9999")).status_code == 400
+    locked = await reset(client)
+    assert_error_envelope(locked, 429, "rate_limited")
+    assert int(locked.headers["Retry-After"]) > 0
+    assert (await login(client, "ada@example.com")).status_code == 200
+
+
+async def test_a_reset_clears_a_sign_in_lockout(client):
+    await sign_up(client)
+    for _ in range(5):
+        await login(client, "ada@example.com", "wrong-password")
+    assert (await login(client, "ada@example.com", NEW_PASSWORD)).status_code == 429
+    assert (await reset(client)).status_code == 200
+    assert (await login(client, "ada@example.com", NEW_PASSWORD)).status_code == 200
+
+
+async def test_the_old_reset_request_route_is_gone(client):
+    response = await client.post(f"{API}/accounts/password-reset", json={"email": "a@b.co"})
+    assert response.status_code in (404, 405)
+
+
+async def test_five_wrong_current_passwords_lock_the_password_change(client):
+    data = await sign_up(client)
+    body = {"current_password": "not-my-password", "new_password": NEW_PASSWORD}
+    for _ in range(5):
+        response = await client.post(
+            f"{API}/accounts/me/password", headers=bearer(data["access_token"]), json=body
+        )
+        assert_error_envelope(response, 400, "wrong_password")
     response = await client.post(
-        f"{API}/accounts/password-reset/confirm",
-        json={"token": token, "new_password": NEW_PASSWORD},
+        f"{API}/accounts/me/password",
+        headers=bearer(data["access_token"]),
+        json={"current_password": PASSWORD, "new_password": NEW_PASSWORD},
     )
-    assert_error_envelope(response, 410, "expired")
-
-
-async def test_a_confirmation_token_cannot_reset_a_password(client):
-    await sign_up(client)
-    verify = token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
-    response = await client.post(
-        f"{API}/accounts/password-reset/confirm",
-        json={"token": verify, "new_password": NEW_PASSWORD},
-    )
-    assert_error_envelope(response, 410, "expired")
-
-
-async def test_forgot_password_answers_the_same_whether_or_not_the_email_exists(client, db):
-    await sign_up(client)
-    known = await client.post(f"{API}/accounts/password-reset", json={"email": "ada@example.com"})
-    unknown = await client.post(
-        f"{API}/accounts/password-reset", json={"email": "nobody@example.com"}
-    )
-    assert known.status_code == unknown.status_code == 202
-    assert known.json() == unknown.json()
-    # Only the real account gets an email
-    assert await emails(client, "nobody@example.com") == []
-    assert any("reset" in m["subject"].lower() for m in await emails(client, "ada@example.com"))
+    assert_error_envelope(response, 429, "rate_limited")

@@ -1,5 +1,3 @@
-"""My account, email confirmation and password reset (Day 6: real, same contract as the sample)."""
-
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -13,7 +11,6 @@ from app.schemas.accounts import (
     AccountUpdate,
     ChangePasswordRequest,
     PasswordResetConfirm,
-    PasswordResetRequest,
     VerifyEmailRequest,
 )
 from app.schemas.common import Acknowledgement
@@ -38,7 +35,7 @@ def account_of(learner: Learner, membership: OrganisationMember | None) -> Accou
         email=learner.email,
         phone=learner.phone_number,
         account_type=ACCOUNT_TYPES.get(role or "", "learner"),
-        email_verified=learner.email_verified_at is not None,
+        email_verified=True,  # email confirmation is switched off for now
         organisation_id=membership.organisation_id if membership else None,
         organisation_role=role,
         created_at=learner.created_at,
@@ -74,9 +71,9 @@ async def update_my_account(
 @router.post(
     "/me/password",
     response_model=Acknowledgement,
-    responses=errors(400, 401),
-    description="Needs the current password (400 wrong_password otherwise). Signs out every "
-    "other device; this session stays signed in. An email tells the owner.",
+    responses=errors(400, 401, 429),
+    description="Needs the current password (400 wrong_password otherwise; 5 wrong tries in 15 "
+    "minutes: 429). Signs out every other device; this session stays signed in.",
 )
 async def change_my_password(
     data: ChangePasswordRequest,
@@ -89,34 +86,23 @@ async def change_my_password(
     return Acknowledgement()
 
 
-# PASSWORD RESET: always 202, whether or not the email has an account (no account guessing)
-@router.post(
-    "/password-reset",
-    status_code=202,
-    response_model=Acknowledgement,
-    description="Always 202, whether or not the email has an account. If it has one, a reset "
-    "link (valid 60 minutes, once) is emailed.",
-)
-async def request_password_reset(
-    data: PasswordResetRequest,
-    request: Request,
-    db: AsyncSession = Depends(get_db, scope="function"),
-):
-    await account_service.request_password_reset(db, str(data.email), client_ip(request))
-    return Acknowledgement()
-
-
 @router.post(
     "/password-reset/confirm",
     response_model=Acknowledgement,
-    responses=errors(410),
-    description="Sets the new password and signs out every device. An old, used or unknown "
-    "token is `expired` (410).",
+    responses=errors(400, 429),
+    description="Sets a new password with the account's email and the reset PIN (1234 for every "
+    "account until emails are switched on). A wrong PIN or an unknown email is "
+    "`invalid_reset_pin` (400). 5 wrong tries for one email (or 20 from one IP address) in 15 "
+    "minutes: 429 with Retry-After. Signs out every device.",
 )
 async def confirm_password_reset(
-    data: PasswordResetConfirm, db: AsyncSession = Depends(get_db, scope="function")
+    data: PasswordResetConfirm,
+    request: Request,
+    db: AsyncSession = Depends(get_db, scope="function"),
 ):
-    await account_service.reset_password(db, data.token, data.new_password)
+    await account_service.reset_password(
+        db, str(data.email), data.pin, data.new_password, client_ip(request)
+    )
     return Acknowledgement()
 
 

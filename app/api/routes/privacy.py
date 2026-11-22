@@ -13,7 +13,7 @@ from app.schemas.privacy import (
 )
 from app.services import privacy
 
-# PRIVACY (Day 18, NDPR / GDPR): my consents, a copy of my data, and deleting my account
+# PRIVACY (NDPR / GDPR): my consents, a copy of my data, and deleting my account
 router = APIRouter(prefix="/privacy", tags=["Privacy"], route_class=EnvelopeRoute)
 
 
@@ -104,8 +104,8 @@ async def get_data_export(
     "/account-deletion",
     status_code=202,
     response_model=AccountDeletion,
-    responses=errors(400, 401, 422),
-    description="Needs the password (400 wrong_password). Deletion happens 30 days later and "
+    responses=errors(400, 401, 422, 429),
+    description="Needs the password (400 wrong_password; 5 wrong tries in 15 minutes: 429). Deletion happens 30 days later and "
     "can be cancelled until then; the account keeps working meanwhile. Asking again while one "
     "is scheduled answers that one.",
 )

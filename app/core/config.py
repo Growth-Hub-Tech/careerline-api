@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     # OpenAI
     OPENAI_API_KEY: str = ""
     OPENAI_TIMEOUT_SECONDS: float = 30.0
-    # Day 11: the model that explains test answers (asked once per question, then kept)
+    # the model that explains test answers (asked once per question, then kept)
     OPENAI_EXPLANATION_MODEL: str = "gpt-4o-mini"
 
     # App
@@ -81,53 +81,52 @@ class Settings(BaseSettings):
     # The test mailbox API asks for this in X-Test-Mailbox-Token when it is set
     TEST_MAILBOX_TOKEN: str = ""
 
-    # Accounts (Day 6)
+    # Accounts
     VERIFY_EMAIL_TOKEN_HOURS: int = 48  # a confirmation link works this long, once
-    PASSWORD_RESET_TOKEN_MINUTES: int = 60  # a reset link works this long, once
     LOGIN_MAX_FAILURES_PER_EMAIL: int = 5  # failed sign-ins per email address ...
     LOGIN_MAX_FAILURES_PER_IP: int = 20  # ... and per IP address ...
     LOGIN_WINDOW_MINUTES: int = 15  # ... within this window, then 429 until it passes
     SIGNUPS_PER_IP_PER_HOUR: int = 20
-    # Day 29: Paystack checkouts (credit packs and plans) one person may start per hour
+    # Paystack checkouts (credit packs and plans) one person may start per hour
     CHECKOUTS_PER_HOUR: int = 20
 
-    # Question quality (Day 8, app/services/question_quality.py). The correct option is the single
+    # Question quality (app/services/question_quality.py). The correct option is the single
     # longest and at least this many times the average wrong option: a review note / not served.
     QUESTION_LENGTH_REVIEW_RATIO: float = 1.3
     QUESTION_LENGTH_BLOCK_RATIO: float = 2.0
     # A skill can be tested only when every level has at least this many ACTIVE questions
     MIN_ACTIVE_QUESTIONS_PER_LEVEL: int = 15
 
-    # The adaptive test (Day 9 engine, Day 10 test-taking; docs/adaptive-engine.md)
+    # The adaptive test (docs/adaptive-engine.md)
     ADAPTIVE_QUESTION_COUNT: int = 16
     ADAPTIVE_START_LEVEL: str = "JUNIOR"  # a first test; a retake starts at the level reached
     ATTEMPT_TIME_LIMIT_MINUTES: int = 30
     # A test whose time ran out is still scored when at least this many questions were answered
     ADAPTIVE_MIN_ANSWERS_FOR_RESULT: int = 8
 
-    # Organisation audits (Day 22): how long the team's test invitations work
+    # Organisation audits: how long the team's test invitations work
     AUDIT_INVITATION_DAYS: int = 14
-    # Day 31: an audit can be re-tested this many days after its last test was started
+    # an audit can be re-tested this many days after its last test was started
     RETEST_COOLDOWN_DAYS: int = 14
-    # Day 31: a recruiter's shortlist (the organisation's candidates) holds this many people
+    # a recruiter's shortlist (the organisation's candidates) holds this many people
     RECRUITER_SHORTLIST_LIMIT: int = 25
 
-    # PDF skill reports (Day 12): how long a download link works
+    # PDF skill reports: how long a download link works
     REPORT_LINK_MINUTES: int = 15
 
-    # Payments (Day 16): Paystack. The secret key comes only from the environment (sk_test_...
+    # Payments: Paystack. The secret key comes only from the environment (sk_test_...
     # on the test server); without it checkout and the webhook answer 503 and nothing is charged.
     PAYSTACK_SECRET_KEY: str = ""
     PAYSTACK_BASE_URL: str = "https://api.paystack.co"
     PAYSTACK_TIMEOUT_SECONDS: float = 15.0
     # A checkout nobody paid is marked abandoned after this long (when it is next looked at)
     PAYMENT_ABANDON_MINUTES: int = 60
-    # Day 25: a plan whose period ended without a payment stays usable (past_due) this long
+    # a plan whose period ended without a payment stays usable (past_due) this long
     SUBSCRIPTION_GRACE_DAYS: int = 3
-    # Day 26: how many times a renewal charges the saved card (once a day) before it gives up
+    # how many times a renewal charges the saved card (once a day) before it gives up
     SUBSCRIPTION_RENEW_ATTEMPTS: int = 3
 
-    # Privacy (Day 18): a copy of my data is kept this many days; each download link works this
+    # Privacy: a copy of my data is kept this many days; each download link works this
     # many minutes; a deletion waits this many days so it can be cancelled
     DATA_EXPORT_DAYS: int = 7
     DATA_EXPORT_LINK_MINUTES: int = 15

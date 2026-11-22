@@ -5,9 +5,7 @@ import jwt
 import pytest
 
 from app.core.config import settings
-from app.jobs.runner import JobRunner
 from tests.integration.conftest import (
-    MAILBOX,
     MAILBOX_TOKEN,
     PASSWORD,
     assert_error_envelope,
@@ -63,18 +61,9 @@ async def test_sign_out_everywhere_ends_every_session(client):
 
 async def test_a_password_reset_ends_every_session(client):
     phone, laptop = await two_sessions(client)
-    await client.post(f"{API}/accounts/password-reset", json={"email": "ada@example.com"})
-    runner = JobRunner(worker_id="test")
-    while await runner.run_once():
-        pass
-    mail = await client.get(
-        f"{API}/test-mailbox", params={"to": "ada@example.com"}, headers=MAILBOX
-    )
-    reset = next(m for m in mail.json()["data"]["messages"] if "reset" in m["subject"].lower())
-    token = reset["links"][0].split("token=")[1]
     response = await client.post(
         f"{API}/accounts/password-reset/confirm",
-        json={"token": token, "new_password": "new-password-1"},
+        json={"email": "ada@example.com", "pin": "1234", "new_password": "new-password-1"},
     )
     assert response.status_code == 200, response.text
     assert not await works(client, phone)
