@@ -1,4 +1,4 @@
-"""The beginner path, part 1 (Day 13): the intake questionnaire and ranked career paths.
+"""The beginner path, part 1: the intake questionnaire and ranked career paths.
 
 - The questionnaire lives in seeds/beginner_intake.json (personality, goals, time and money,
   PRD 4.2). Each option can give points to some job roles (by slug) with the reason shown to
@@ -11,9 +11,9 @@
   now; null when none can.
 - Every intake is kept with its answers and the paths it gave; GET .../recommendations is the
   latest one.
-- Day 14 (part 2): each path carries the programme that best prepares for its role (the first
+- Each path carries the programme that best prepares for its role (the first
   in the programme list's order, app/services/programmes.py); null when the role has none.
-- Day 15 (part 3): the budget answer counts. Each budget option is a price limit (max_price, in
+- The budget answer counts. Each budget option is a price limit (max_price, in
   kobo; null = no limit). A role with a programme within that limit gets the file's
   budget.points on top of its answer points, and (when the budget has a limit) a reason that
   always takes one of the places; a role whose programmes are all

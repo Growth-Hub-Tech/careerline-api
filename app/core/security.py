@@ -1,6 +1,6 @@
 """Passwords, session tokens and one-time tokens.
 
-Passwords: new hashes are Argon2id. Accounts created before Day 6 have bcrypt hashes (made by
+Passwords: new hashes are Argon2id. Older accounts have bcrypt hashes (made by
 passlib from the first 72 characters of the password); they still verify, and the sign-in
 that verifies one replaces it with an Argon2id hash (needs_rehash).
 

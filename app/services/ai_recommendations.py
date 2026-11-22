@@ -1,4 +1,4 @@
-"""The AI advice for an attempt's weak subskills, as a background job (Day 5).
+"""The AI advice for an attempt's weak subskills, as a background job.
 
 submit saves plain advice at once and queues "ai_recommendations" for the attempt; this job
 asks OpenAI once per weak subskill (in a thread, so it never blocks the event loop) and

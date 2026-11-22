@@ -1,4 +1,4 @@
-"""Taking a test for real (Day 10): the adaptive engine (Day 9) behind the API.
+"""Taking a test for real: the adaptive engine behind the API.
 
 - One question at a time, never with its answer; the next one is chosen after each answer.
 - Starting a skill that already has a test in progress resumes it (same question).
@@ -9,7 +9,7 @@
   the level for /recommendations/levels) and a skill-history entry are written in the same
   database transaction as the last answer: either all of it is saved or none of it.
 - There is no pass or fail and no self-declared level.
-- Day 17: a test with a price (test_prices) takes its credits when it starts (only a new test,
+- A test with a price (test_prices) takes its credits when it starts (only a new test,
   never a resumed one; 402 without enough credits). A test that ends before any answer
   (cancelled, or out of time) gives them back.
 """
@@ -75,7 +75,7 @@ STATUS_WORDS = {
 
 
 class SkillNotReady(ConflictError):
-    """Some level of the skill has too few ACTIVE questions to test it fairly (Day 8)."""
+    """Some level of the skill has too few ACTIVE questions to test it fairly."""
 
     code = "skill_not_ready"
 
@@ -282,9 +282,9 @@ async def _finish(
             db, attempt.learner_id, attempt.skill_id, attempt.attempt_id, level_id
         )
     await save_skill_history(db, attempt, scored)
-    # Day 20: a test started from an invitation completes it
+    # a test started from an invitation completes it
     await complete_invitations(db, attempt.attempt_id)
-    # Day 11: the AI explanations of the answers are written in the background
+    # the AI explanations of the answers are written in the background
     await queue_explanations(db, attempt.attempt_id)
     logger.info(
         "attempt_finished",

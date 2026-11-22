@@ -15,7 +15,7 @@ from app.schemas.payments import (
 )
 from app.services import payments as payment_service
 
-# PAYMENTS (Day 16, real since then): Paystack checkout for credit packs, the signed webhook,
+# PAYMENTS: Paystack checkout for credit packs, the signed webhook,
 # my payments and my credits
 router = APIRouter(tags=["Payments"], route_class=EnvelopeRoute)
 
@@ -36,7 +36,7 @@ async def list_credit_packs(db: AsyncSession = Depends(get_db, scope="function")
     "authorization_url. Paystack sends them back to callback_url?reference=... (default: the "
     "website's /payments/callback; it must be a page of the website, 400 otherwise); then call "
     "GET /payments/{reference}. item_type credit_pack (a pack's credits) or subscription_plan "
-    "(Day 25, the same as POST /subscriptions: 403/409 as there). 503 when payments are not set up or Paystack does not answer: nothing "
+    "(the same as POST /subscriptions: 403/409 as there). 503 when payments are not set up or Paystack does not answer: nothing "
     "is charged.",
 )
 async def start_checkout(

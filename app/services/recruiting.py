@@ -1,4 +1,4 @@
-"""Recruiting (Days 19-20): candidates and invitations, always within the caller's organisation.
+"""Recruiting: candidates and invitations, always within the caller's organisation.
 
 - A candidate is one email per organisation. Their status follows their invitations: completed
   when one is completed, in_progress when one is accepted, invited when one is waiting (sent and
@@ -91,7 +91,7 @@ def fit_for(results: list[tuple[str, str | None]]) -> str:
 
 
 def _shared_with_recruiters(invitation: Invitation) -> bool:
-    """Day 31: the marker each result carries. Today a completed invited test is shared with the
+    """the marker each result carries. Today a completed invited test is shared with the
     organisation that invited the candidate; nothing hides a result yet."""
     return invitation.status == "completed"
 
@@ -495,7 +495,7 @@ async def accept_invitation(db: AsyncSession, token: str, learner_id: int) -> In
     return await _public(db, row)
 
 
-# ---------- the candidate report (Day 20) ----------
+# ---------- the candidate report ----------
 
 
 async def candidate_report(

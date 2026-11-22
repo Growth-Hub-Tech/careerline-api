@@ -29,7 +29,6 @@ SHUTDOWN_GRACE_SECONDS = 25.0
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Day 29: production never starts with an unsafe or test setting (app/core/launch_checks.py)
     problems = production_problems(settings)
     if problems:
         logger.error("startup_refused", problems=problems)

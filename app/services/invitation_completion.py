@@ -1,4 +1,4 @@
-"""Day 20: a finished test completes the invitation it was started from (kept apart from
+"""a finished test completes the invitation it was started from (kept apart from
 app/services/recruiting.py, which starts tests, so the test-taking service can call it)."""
 
 from datetime import UTC, datetime

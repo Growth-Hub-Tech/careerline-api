@@ -1,4 +1,4 @@
-"""The beginner path (Day 13): each intake a person submits, with their answers and the career
+"""The beginner path: each intake a person submits, with their answers and the career
 paths they were given at the time."""
 
 from datetime import datetime

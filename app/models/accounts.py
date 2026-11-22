@@ -1,4 +1,4 @@
-"""Sign-in sessions and the one-time tokens of email links (Day 6)."""
+"""Sign-in sessions and the one-time tokens of email links."""
 
 import uuid
 from datetime import datetime

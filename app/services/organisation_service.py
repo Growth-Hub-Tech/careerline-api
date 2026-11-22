@@ -1,4 +1,4 @@
-"""Organisation accounts and their roles (Day 7). Who may call these is decided in
+"""Organisation accounts and their roles. Who may call these is decided in
 app/core/permissions.py; the rules about owners are here:
 - only an owner makes, demotes or removes an owner
 - an organisation always keeps at least one owner

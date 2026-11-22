@@ -26,12 +26,12 @@ class AttemptStatus(str, enum.Enum):
     IN_PROGRESS = "IN_PROGRESS"
     COMPLETED = "COMPLETED"
     CANCELLED = "CANCELLED"
-    PASSED = "PASSED"  # the retired fixed test (before Day 10)
-    FAILED = "FAILED"  # the retired fixed test (before Day 10)
-    EXPIRED = "EXPIRED"  # Day 10: the time ran out with too few answers for a result
+    PASSED = "PASSED"  # the retired fixed test
+    FAILED = "FAILED"  # the retired fixed test
+    EXPIRED = "EXPIRED"  # the time ran out with too few answers for a result
 
 
-# Day 8: set by the question-quality check when the seeds load (app/services/question_quality.py)
+# set by the question-quality check when the seeds load (app/services/question_quality.py)
 class QuestionStatus(str, enum.Enum):
     ACTIVE = "ACTIVE"  # served in tests
     NEEDS_REVIEW = "NEEDS_REVIEW"  # has a blocking issue; not served
@@ -85,7 +85,7 @@ class Learner(Base):
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     phone_number: Mapped[str] = mapped_column(String(20), nullable=True)
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=True)
-    # Day 6: set when the learner opens the confirmation link (NULL = not confirmed yet)
+    # set when the learner opens the confirmation link (NULL = not confirmed yet)
     email_verified_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
@@ -140,7 +140,7 @@ class Question(Base):
         pg_enum(LevelName, "levelname"), nullable=False
     )
     weight: Mapped[int] = mapped_column(Integer, default=1)
-    # Day 8: only ACTIVE questions are served; quality_issues lists what the check found
+    # only ACTIVE questions are served; quality_issues lists what the check found
     status: Mapped[QuestionStatus] = mapped_column(
         pg_enum(QuestionStatus, "questionstatus"),
         nullable=False,
@@ -194,7 +194,7 @@ class TestAttempt(Base):
     attempt_status: Mapped[AttemptStatus] = mapped_column(
         pg_enum(AttemptStatus, "attemptstatus"), default=AttemptStatus.IN_PROGRESS
     )
-    # Day 10: the adaptive test. fixed = the retired pass/fail test of before Day 10.
+    # the adaptive test. fixed = the retired pass/fail test.
     test_format: Mapped[str] = mapped_column(
         String(20), nullable=False, default="adaptive", server_default="fixed"
     )
@@ -340,7 +340,7 @@ class AttemptQuestion(Base):
         Integer, ForeignKey("questions.question_id"), primary_key=True
     )
     position: Mapped[int] = mapped_column(Integer, nullable=False)
-    # Day 10: served one at a time; the answer is kept on the same row
+    # served one at a time; the answer is kept on the same row
     level: Mapped[LevelName | None] = mapped_column(pg_enum(LevelName, "levelname"), nullable=True)
     served_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     selected_option_id: Mapped[int | None] = mapped_column(

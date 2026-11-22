@@ -1,4 +1,4 @@
-"""Recruiters (Days 19-20): the organisation's candidates. Access: app/core/permissions.py."""
+"""Recruiters: the organisation's candidates. Access: app/core/permissions.py."""
 
 from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -61,7 +61,7 @@ async def get_candidate(
     return await recruiting.get_candidate(db, actor, candidate_id)
 
 
-# THE SCORED REPORT (Day 20): once the candidate has finished an invited test (404 before)
+# THE SCORED REPORT: once the candidate has finished an invited test (404 before)
 @router.get(
     "/candidates/{candidate_id}/report",
     response_model=CandidateReport,

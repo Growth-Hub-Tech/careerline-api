@@ -1,4 +1,4 @@
-"""The adaptive test engine (Day 9). Plain, tested arithmetic, no database and no pass or fail.
+"""The adaptive test engine. Plain, tested arithmetic, no database and no pass or fail.
 
 How a test runs
 - About 16 questions (EngineConfig.length). The first is at the start level (JUNIOR).

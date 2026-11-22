@@ -26,7 +26,7 @@ from app.models.organisations import Organisation, OrganisationMember
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # The demo company has the id the sample organisation routes used (41) until the organisation
-# audit became real (Days 21-23), so links and notes from then still point at it.
+# audit became real, so links and notes from then still point at it.
 DEMO_ORGANISATION_ID = 41
 DEMO_COMPANY = "Demo Company Ltd"
 # Public and fake on purpose (test server only)
@@ -40,7 +40,7 @@ class DemoAccount:
     role: str | None  # role in the demo company; None = a learner
 
 
-# Day 10: a professional with finished tests and a skill history, for the results screens
+# a professional with finished tests and a skill history, for the results screens
 DEMO_PROFESSIONAL = "demo.professional@example.com"
 
 DEMO_ACCOUNTS = (
@@ -65,7 +65,7 @@ DEMO_RESULTS = (
 )
 
 
-# Day 21: the demo company's team roster (email, name, department, job role from
+# the demo company's team roster (email, name, department, job role from
 # seeds/job_roles.json). The demo learners are on it, so an audit's emails reach accounts that
 # can sign in and take the tests.
 DEMO_SEATS = 50

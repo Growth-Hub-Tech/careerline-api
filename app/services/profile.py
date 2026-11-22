@@ -1,4 +1,4 @@
-"""The person's profile (Day 28): GET /profile and PATCH /profile.
+"""The person's profile: GET /profile and PATCH /profile.
 
 Empty until the person fills it in (the row is made on their first PATCH). PATCH changes only the
 fields sent; null clears one. visibility is the share_profile_with_recruiters consent, so the

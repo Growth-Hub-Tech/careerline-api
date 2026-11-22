@@ -16,7 +16,7 @@ from app.services.learner_service import (
 router = APIRouter(prefix="/learners", tags=["Learners"], route_class=EnvelopeRoute)
 
 
-# MY PROFILE: the learner comes from the session (Day 7)
+# MY PROFILE: the learner comes from the session
 @router.get("/me", responses=errors(401))
 async def get_my_profile(
     db: AsyncSession = Depends(get_db, scope="function"),

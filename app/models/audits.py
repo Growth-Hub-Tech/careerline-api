@@ -1,15 +1,15 @@
-"""Organisation audits (Days 21-24): the team roster, audits, targets.
+"""Organisation audits: the team roster, audits, targets.
 
 - team_members: everyone the organisation tests, one per email per organisation (emails kept in
   lower case), each mapped to a job role. Their tests are team invitations (invitations.kind
   team_member, invitations.team_member_id). This is the organisation's own list: it is not an
   account and needs none.
-- audits (Day 22): one round of testing for some roles. audit_members: who is in it, with the
+- audits: one round of testing for some roles. audit_members: who is in it, with the
   role they had then. Its invitations carry invitations.audit_id. Draft until started_at; the
   status (in_progress, completed) follows its invitations and is not stored.
-- organisation_targets (Day 23): the level each role should reach in each skill, with an
+- organisation_targets: the level each role should reach in each skill, with an
   optional due date. Replaced as a whole by PUT /organisations/{id}/targets.
-- A re-test (Day 24) is an audit with baseline_audit_id: the same people and tests again.
+- A re-test is an audit with baseline_audit_id: the same people and tests again.
 """
 
 from datetime import date, datetime
@@ -67,7 +67,7 @@ class Audit(Base):
     )
     # None: a draft (no invitations sent yet)
     started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    # Day 24: a re-test of that audit (the same people, the same tests)
+    # a re-test of that audit (the same people, the same tests)
     baseline_audit_id: Mapped[int | None] = mapped_column(
         Integer, ForeignKey("audits.id", ondelete="SET NULL"), nullable=True
     )

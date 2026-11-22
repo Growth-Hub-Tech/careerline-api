@@ -13,7 +13,7 @@ from app.schemas.programmes import (
 )
 from app.services import programmes as programme_service
 
-# PROGRAMMES (Day 14, real since then): Incubate and partner courses that prepare for a job role
+# PROGRAMMES: Incubate and partner courses that prepare for a job role
 router = APIRouter(prefix="/programmes", tags=["Programmes"], route_class=EnvelopeRoute)
 
 

@@ -1,4 +1,4 @@
-"""Explanations of test questions (Day 11): asked from the AI once per question and kept for
+"""Explanations of test questions: asked from the AI once per question and kept for
 everyone. question_digest is a fingerprint of the question, its options and its right answer
 when the explanation was made: if the question changes, the kept one no longer counts."""
 

@@ -61,7 +61,7 @@ class Benchmark(BaseModel):
     industry_average_score: float | None
     members_at_or_above_target: int
     members_tested: int
-    # Day 24, a re-test: the baseline audit's team average for this role and skill, and the change
+    # A re-test: the baseline audit's team average for this role and skill, and the change
     baseline_average_score: float | None = None
     score_delta: float | None = None
 
@@ -76,7 +76,7 @@ class AuditSummary(BaseModel):
     started_at: datetime | None
     completed_at: datetime | None
     baseline_audit_id: int | None = Field(
-        default=None, description="Day 24: a re-test of this audit (null: not a re-test)"
+        default=None, description="a re-test of this audit (null: not a re-test)"
     )
 
 
@@ -94,7 +94,7 @@ class AuditCreate(BaseModel):
 
 
 class AuditRetest(BaseModel):
-    """Day 24: test the same people for the same tests again (after training, for example)."""
+    """test the same people for the same tests again (after training, for example)."""
 
     name: str | None = Field(
         default=None, min_length=1, max_length=120, description='Default: "<name> (re-test)"'

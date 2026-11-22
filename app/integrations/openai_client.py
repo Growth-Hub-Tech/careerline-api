@@ -80,7 +80,7 @@ def get_ai_benchmark(skill_name, subskill_name, level_name, score):
         return fallback_recommendation(subskill_name, score)
 
 
-# Day 11: why the right answer of a test question is right, asked once per question after a
+# why the right answer of a test question is right, asked once per question after a
 # test (app/services/explanations.py keeps it). None when there is no key or the call fails;
 # the caller then shows the standard explanation.
 def explain_answer(

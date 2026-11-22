@@ -1,4 +1,4 @@
-"""Invitations (Day 19): an organisation invites someone to take one test from the catalogue.
+"""Invitations: an organisation invites someone to take one test from the catalogue.
 Access: app/core/permissions.py."""
 
 from fastapi import APIRouter, Depends, Query

@@ -1,4 +1,4 @@
-"""The organisation's accounts and their roles (Day 7). Access: app/core/permissions.py."""
+"""The organisation's accounts and their roles. Access: app/core/permissions.py."""
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession

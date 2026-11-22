@@ -1,4 +1,4 @@
-"""Job roles, their skills and the job-title ladder (Day 8)."""
+"""Job roles, their skills and the job-title ladder."""
 
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession

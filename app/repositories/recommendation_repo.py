@@ -32,7 +32,7 @@ async def get_skill_name_for_attempt(db: AsyncSession, attempt_id: int):
 
 # Fetch learner level name for an attempt
 async def get_level_name_for_attempt(db: AsyncSession, attempt_id: int):
-    # The level the test gave (Day 10); old fixed tests only had the declared level
+    # The level the test gave; old fixed tests only had the declared level
     result = await db.execute(
         select(ProficiencyLevel.level_name)
         .join(

@@ -1,4 +1,4 @@
-"""The PDF skill report of one result (Day 12), drawn with fpdf2 (pure Python).
+"""The PDF skill report of one result, drawn with fpdf2 (pure Python).
 
 build_report_pdf(data) -> bytes. The built-in PDF fonts only know Latin-1, so text is first
 made safe: common typographic characters become their plain forms and anything else becomes

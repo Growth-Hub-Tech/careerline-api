@@ -8,7 +8,7 @@ from app.schemas.assessments import AssessmentAccess, AssessmentDetail, Assessme
 from app.schemas.common import Page
 from app.services import test_catalogue
 
-# TEST CATALOGUE (Day 17, real since then): every skill that can be tested, with its price in
+# TEST CATALOGUE: every skill that can be tested, with its price in
 # credits. Taking a test is /attempts.
 router = APIRouter(prefix="/tests", tags=["Tests"], route_class=EnvelopeRoute)
 
