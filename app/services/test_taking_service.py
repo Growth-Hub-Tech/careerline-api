@@ -44,9 +44,6 @@ from app.models.models import (
 )
 from app.repositories.attempt_repo import get_level_id_by_name, get_options_for_question
 from app.repositories.question_repo import readiness
-from app.repositories.scoring_repo import (
-    assign_learner_level,
-)
 from app.schemas.attempts import (
     AttemptResult,
     AttemptState,
@@ -277,10 +274,6 @@ async def _finish(
     attempt.confidence = scored.confidence
     attempt.ended_by = ended_by
 
-    if level_id:
-        await assign_learner_level(
-            db, attempt.learner_id, attempt.skill_id, attempt.attempt_id, level_id
-        )
     await save_skill_history(db, attempt, scored)
     # a test started from an invitation completes it
     await complete_invitations(db, attempt.attempt_id)
