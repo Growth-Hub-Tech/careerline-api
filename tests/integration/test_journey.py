@@ -60,7 +60,7 @@ async def test_full_learner_journey(client, learner, skill, db):
         {"skill_id": skill["skill_id"], "skill_name": "Python", "level": result["level"]}
     ]
     row = db.execute(
-        text("SELECT skill_id, attempt_id FROM learner_level WHERE learner_id = :id"),
+        text("SELECT skill_id, attempt_id FROM skill_history WHERE learner_id = :id"),
         {"id": learner["learner_id"]},
     ).one()
     assert tuple(row) == (skill["skill_id"], final["attempt_id"])

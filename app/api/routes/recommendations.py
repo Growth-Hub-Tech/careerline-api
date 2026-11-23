@@ -5,7 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.api.deps import get_current_learner, get_db, require_same_learner
 from app.core.exceptions import NotFoundError
 from app.core.responses import EnvelopeRoute, errors, ok
-from app.models.models import Learner, LearnerLevel, ProficiencyLevel, Skill
+from app.models.history import SkillHistory
+from app.models.models import Learner, Skill
 from app.repositories.recommendation_repo import get_learning_pathway
 
 # Create a router for recommendation endpoints
@@ -86,18 +87,26 @@ async def get_learner_levels(
     current_learner: Learner = Depends(get_current_learner),
 ):
     require_same_learner(learner_id, current_learner)
+    # The level for a skill is the level of the person's latest finished test in it: the newest
+    # skill_history row per skill (the same row learner_level used to copy)
+    latest = (
+        select(SkillHistory.skill_id, SkillHistory.level)
+        .where(SkillHistory.learner_id == learner_id)
+        .distinct(SkillHistory.skill_id)
+        .order_by(SkillHistory.skill_id, SkillHistory.recorded_at.desc(), SkillHistory.id.desc())
+        .subquery()
+    )
     result = await db.execute(
-        select(LearnerLevel.skill_id, Skill.skill_name, ProficiencyLevel.level_name)
-        .join(Skill, LearnerLevel.skill_id == Skill.skill_id)
-        .join(ProficiencyLevel, LearnerLevel.level_id == ProficiencyLevel.level_id)
-        .where(LearnerLevel.learner_id == learner_id)
+        select(latest.c.skill_id, Skill.skill_name, latest.c.level)
+        .join(Skill, latest.c.skill_id == Skill.skill_id)
+        .order_by(latest.c.skill_id)
     )
     levels = result.all()
 
     return {
         "learner_id": learner_id,
         "confirmed_levels": [
-            {"skill_id": row.skill_id, "skill_name": row.skill_name, "level": row.level_name.value}
+            {"skill_id": row.skill_id, "skill_name": row.skill_name, "level": row.level.value}
             for row in levels
         ],
     }
