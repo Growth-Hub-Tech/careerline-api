@@ -6,7 +6,6 @@ from types import SimpleNamespace
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
 from app.core.logging import get_logger
 from app.integrations.openai_client import fallback_recommendation
 from app.repositories.recommendation_repo import get_subskill_names, save_recommendations
@@ -14,6 +13,9 @@ from app.services.adaptive_engine import SubskillResult
 from app.services.ai_recommendations import ai_enabled, queue_ai_recommendations
 
 logger = get_logger(__name__)
+
+# Without the engine's weaknesses, a subskill under this percent counts as weak
+WEAK_THRESHOLD = 60
 
 
 # GENERATE RECOMMENDATIONS AFTER SCORING
@@ -46,9 +48,7 @@ async def generate_recommendations(
     if weak_subskill_ids is not None:
         weak_subskills = [s for s in subskill_scores if s.subskill_id in set(weak_subskill_ids)]
     else:
-        weak_subskills = [
-            s for s in subskill_scores if float(s.percentage_score) < settings.WEAK_THRESHOLD
-        ]
+        weak_subskills = [s for s in subskill_scores if float(s.percentage_score) < WEAK_THRESHOLD]
 
     if not weak_subskills:
         logger.info("no_weak_subskills", attempt_id=attempt_id)

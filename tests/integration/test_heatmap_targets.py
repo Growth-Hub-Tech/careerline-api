@@ -14,13 +14,13 @@ further, not_tested). With audit_id: only that audit's people and results.
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
-from tests.integration.conftest import _make_learner, assert_error_envelope
-from tests.integration.test_audits import finish, start, untestable  # noqa: F401
+from app.api import API_PREFIX
+from tests.integration.conftest import assert_error_envelope
+from tests.integration.test_audits import finish, start, untestable, with_accounts  # noqa: F401
 from tests.integration.test_recruiter import _org
 from tests.integration.test_team_roster import add_role, person, upload
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture
@@ -59,7 +59,7 @@ async def roster(client, owner, roles) -> dict:
     members = (
         await client.get(f"{API}/organisations/{owner['id']}/members", headers=owner["headers"])
     ).json()["data"]["items"]
-    return {m["email"]: m for m in members}
+    return await with_accounts(client, {m["email"]: m for m in members})
 
 
 async def put_targets(client, owner, items):
@@ -152,7 +152,7 @@ async def test_progress_counts_people_whose_newest_result_meets_the_target(
     client, db, owner, roles, roster, skill
 ):
     await start(client, owner, role_ids=[roles["backend"]])
-    ada = await _make_learner(client, "ada.p@example.com", "Ada Obi")
+    ada = roster["ada@example.com"]["account"]
     await finish(client, db, skill, "ada@example.com", ada)  # ADVANCED
     await put_targets(
         client,
@@ -171,7 +171,7 @@ async def test_audit_benchmarks_use_the_organisations_target(
     client, db, owner, roles, roster, skill
 ):
     audit = (await start(client, owner, role_ids=[roles["frontend"]])).json()["data"]
-    chi = await _make_learner(client, "chi.p@example.com", "Chi Eze")
+    chi = roster["chi@example.com"]["account"]
     await finish(
         client, db, skill, "chi@example.com", chi, right=lambda info: info["level"] == "BEGINNER"
     )
@@ -208,9 +208,9 @@ async def test_the_heatmap_by_department_role_and_person(
     untestable,  # noqa: F811
 ):
     await start(client, owner, role_ids=[roles["backend"], roles["frontend"]])
-    ada = await _make_learner(client, "ada.p@example.com", "Ada Obi")
+    ada = roster["ada@example.com"]["account"]
     await finish(client, db, skill, "ada@example.com", ada)  # all right
-    bola = await _make_learner(client, "bola.p@example.com", "Bola Ade")
+    bola = roster["bola@example.com"]["account"]
     await finish(client, db, skill, "bola@example.com", bola, right=lambda info: False)
     scores = dict(
         db.execute(
@@ -264,7 +264,7 @@ async def test_the_heatmap_by_department_role_and_person(
 
 async def test_the_heatmap_of_one_audit(client, db, owner, roles, roster, skill):
     first = (await start(client, owner, role_ids=[roles["frontend"]])).json()["data"]
-    chi = await _make_learner(client, "chi.p@example.com", "Chi Eze")
+    chi = roster["chi@example.com"]["account"]
     await finish(client, db, skill, "chi@example.com", chi)
     second = (await start(client, owner, role_ids=[roles["backend"]])).json()["data"]
     one = await heatmap(client, owner, group_by="member", audit_id=first["audit_id"])

@@ -59,6 +59,7 @@ TOKEN_TYPE = "result_report"
 ALGORITHM = "HS256"
 # A percentile needs something to compare with
 PERCENTILE_MIN_RESULTS = 5
+REPORT_LINK_MINUTES = 15  # how long a PDF report's download link works
 
 
 def catalogue_test_id(skill_id: int) -> int:
@@ -212,9 +213,7 @@ async def previous_result(db: AsyncSession, attempt: TestAttempt) -> PreviousRes
 
 
 def report_token(attempt_id: int, version: int) -> tuple[str, datetime]:
-    expires_at = (datetime.now(UTC) + timedelta(minutes=settings.REPORT_LINK_MINUTES)).replace(
-        microsecond=0
-    )
+    expires_at = (datetime.now(UTC) + timedelta(minutes=REPORT_LINK_MINUTES)).replace(microsecond=0)
     claims = {
         "typ": TOKEN_TYPE,
         "rid": attempt_id,

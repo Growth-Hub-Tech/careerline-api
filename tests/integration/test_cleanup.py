@@ -1,4 +1,4 @@
-"""Daily housekeeping: finished jobs, sent emails and expired sessions older than 30 days go."""
+"""Daily housekeeping: finished jobs and expired sessions older than 30 days go."""
 
 import uuid
 from datetime import UTC, datetime, timedelta
@@ -28,18 +28,6 @@ def _job(db, status: str, finished_at=None, run_after=None, locked_until=None) -
             "run_after": run_after,
             "locked_until": locked_until,
         },
-    ).scalar_one()
-    db.commit()
-    return row
-
-
-def _email(db, status: str, sent_at=None) -> int:
-    row = db.execute(
-        text(
-            "INSERT INTO email_outbox (to_email, template, subject, status, sent_at) "
-            "VALUES ('ada@example.com', 'probe', 'Hello', :status, :sent_at) RETURNING id"
-        ),
-        {"status": status, "sent_at": sent_at},
     ).scalar_one()
     db.commit()
     return row
@@ -78,8 +66,6 @@ async def test_old_finished_rows_go_and_everything_else_stays(db, learner):
         _job(db, "queued", run_after=NOW + timedelta(days=1)),
         _job(db, "running", locked_until=NOW + timedelta(hours=1)),
     }
-    gone_emails = {_email(db, "sent", OLD)}
-    kept_emails = {_email(db, "sent", YOUNG), _email(db, "queued")}
     gone_sessions = {_session(db, learner["learner_id"], OLD)}
     kept_sessions = {
         _session(db, learner["learner_id"], NOW - timedelta(days=1)),
@@ -88,11 +74,8 @@ async def test_old_finished_rows_go_and_everything_else_stays(db, learner):
 
     await _run_cleanup(TODAY)
 
-    jobs, emails, sessions = (
-        _ids(db, t) for t in ("background_jobs", "email_outbox", "auth_sessions")
-    )
+    jobs, sessions = (_ids(db, t) for t in ("background_jobs", "auth_sessions"))
     assert not gone_jobs & jobs and kept_jobs <= jobs
-    assert not gone_emails & emails and kept_emails <= emails
     assert not gone_sessions & sessions and kept_sessions <= sessions
 
 

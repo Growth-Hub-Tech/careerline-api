@@ -21,6 +21,10 @@ from app.core.logging import get_logger
 
 logger = get_logger(__name__)
 
+PAYSTACK_BASE_URL = "https://api.paystack.co"  # the same for test (sk_test_) and live keys
+# A call that takes longer is given up: PaystackError, so the caller answers 503
+PAYSTACK_TIMEOUT_SECONDS = 15.0
+
 # None = the real network; tests replace it with httpx.MockTransport
 TRANSPORT: httpx.AsyncBaseTransport | None = None
 
@@ -72,8 +76,8 @@ async def _call(method: str, path: str, json: dict[str, Any] | None = None) -> d
     headers = {"Authorization": f"Bearer {settings.PAYSTACK_SECRET_KEY}"}
     try:
         async with httpx.AsyncClient(
-            base_url=settings.PAYSTACK_BASE_URL,
-            timeout=settings.PAYSTACK_TIMEOUT_SECONDS,
+            base_url=PAYSTACK_BASE_URL,
+            timeout=PAYSTACK_TIMEOUT_SECONDS,
             transport=TRANSPORT,
         ) as client:
             response = await client.request(method, path, json=json, headers=headers)

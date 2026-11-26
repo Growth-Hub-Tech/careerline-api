@@ -5,7 +5,8 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from app.api.routes import api_router, health, test_mailbox
+from app.api import API_PREFIX
+from app.api.routes import api_router, health
 from app.core.config import settings
 from app.core.error_handlers import register_error_handlers
 from app.core.launch_checks import production_problems
@@ -35,15 +36,12 @@ async def lifespan(app: FastAPI):
         raise RuntimeError("Unsafe production settings: " + "; ".join(problems))
     # Never serve requests against an old schema: scripts/start.sh migrates first,
     # and this stops anyone who starts uvicorn directly on a database that is behind.
-    if settings.CHECK_MIGRATIONS_ON_STARTUP:
-        try:
-            await assert_database_at_head(engine)
-        except Exception:
-            logger.exception("startup_aborted")
-            raise
-    logger.info(
-        "startup", app=settings.APP_NAME, env=settings.APP_ENV, api_prefix=settings.API_PREFIX
-    )
+    try:
+        await assert_database_at_head(engine)
+    except Exception:
+        logger.exception("startup_aborted")
+        raise
+    logger.info("startup", env=settings.APP_ENV)
 
     # The free test server has no worker service: RUN_JOBS_IN_WEB=true runs the jobs in here
     stop_jobs = asyncio.Event()
@@ -74,7 +72,7 @@ def create_app() -> FastAPI:
     # them (scripts/export_openapi.py builds openapi.json without them)
     docs = not settings.is_production
     app = FastAPI(
-        title=settings.APP_NAME,
+        title="CareerLine API",
         description="CareerLine AI API: skill tests, scoring, proficiency levels and personalised learning pathways",
         version="2.0.0",
         docs_url="/docs" if docs else None,
@@ -104,10 +102,7 @@ def create_app() -> FastAPI:
     register_error_handlers(app)
 
     # Global API prefix: every API route lives under /api/v1 without a v1 folder
-    app.include_router(api_router, prefix=settings.API_PREFIX)
-    # The test server's mailbox (never in production; see app/api/routes/test_mailbox.py)
-    if not settings.is_production:
-        app.include_router(test_mailbox.router, prefix=settings.API_PREFIX)
+    app.include_router(api_router, prefix=API_PREFIX)
     # Outside the prefix: health checks
     app.include_router(health.router)
 

@@ -1,12 +1,12 @@
 import app.api.routes.attempts as attempts_routes
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import (
     answer,
     assert_error_envelope,
     register,
 )
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_the_retired_declared_level_is_ignored_whatever_it_says(client, learner, skill):

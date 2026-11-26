@@ -17,9 +17,9 @@ brought up to date whenever a subscription is read.
 Renewals: a paid period schedules a renew_subscription job an hour before it ends. The
 job charges the card of the first payment (Paystack's reusable authorization) through
 settle(), like any payment, so the next period starts where the last one ended and its credits
-are added once. Declined, or no reusable card: one email asking the person to pay again
-(POST /subscriptions works while past_due), and the card is tried again the next day, up to
-SUBSCRIPTION_RENEW_ATTEMPTS. Each attempt has its own fixed reference, so a job that runs again
+are added once. Declined, or no reusable card: the plan shows as past_due on the billing page,
+where the person can pay again (POST /subscriptions works while past_due), and the card is tried
+again the next day, up to SUBSCRIPTION_RENEW_ATTEMPTS. Each attempt has its own fixed reference, so a job that runs again
 after a crash can never charge twice (Paystack refuses a known reference; its status is then
 read with verify). A cancelled plan is never charged.
 
@@ -36,7 +36,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.config import settings
 from app.core.exceptions import ConflictError, ForbiddenError, NotFoundError
 from app.core.logging import get_logger
-from app.email.outbox import send_email
 from app.integrations import paystack
 from app.jobs.queue import enqueue
 from app.jobs.registry import job
@@ -54,6 +53,8 @@ LIVE = ("active", "past_due")
 RENEW_JOB = "renew_subscription"
 RENEW_AHEAD = timedelta(hours=1)
 RETRY_AFTER = timedelta(days=1)
+SUBSCRIPTION_GRACE_DAYS = 3  # a period that ended unpaid stays usable (past_due) this long
+SUBSCRIPTION_RENEW_ATTEMPTS = 3  # renewal charges of the saved card (once a day), then it gives up
 
 
 def _now() -> datetime:
@@ -103,7 +104,7 @@ def _status_now(row: Subscription, now: datetime) -> str:
         return row.status
     if row.cancel_at_period_end:
         return "cancelled"
-    if now < end + timedelta(days=settings.SUBSCRIPTION_GRACE_DAYS):
+    if now < end + timedelta(days=SUBSCRIPTION_GRACE_DAYS):
         return "past_due"
     return "cancelled"
 
@@ -119,7 +120,7 @@ def bring_up_to_date(row: Subscription, now: datetime | None = None) -> None:
 def _grace_ends_at(row: Subscription) -> datetime | None:
     if row.status != "past_due":
         return None
-    return _aware(row.current_period_end) + timedelta(days=settings.SUBSCRIPTION_GRACE_DAYS)
+    return _aware(row.current_period_end) + timedelta(days=SUBSCRIPTION_GRACE_DAYS)
 
 
 async def _subscription_out(db: AsyncSession, row: Subscription) -> SubscriptionOut:
@@ -337,26 +338,6 @@ def _same_moment(a: str, b: datetime) -> bool:
     return abs(parsed - _aware(b)) < timedelta(seconds=1)
 
 
-async def _ask_to_pay(
-    db: AsyncSession, row: Subscription, plan: SubscriptionPlan, learner: Learner, declined: bool
-) -> None:
-    """One email per period: the plan could not be renewed, pay again to keep it."""
-    await send_email(
-        db,
-        to=learner.email,
-        template="subscription_payment_failed",
-        context={
-            "full_name": learner.full_name,
-            "plan_name": plan.name,
-            "declined": declined,
-            "period_end": _aware(row.current_period_end).strftime("%d %b %Y"),
-            "grace_days": settings.SUBSCRIPTION_GRACE_DAYS,
-            "link": f"{settings.FRONTEND_URL.rstrip('/')}/billing",
-        },
-        dedupe_key=f"subscription_payment_failed:{row.id}:{_stamp(row.current_period_start)}",
-    )
-
-
 @job(RENEW_JOB)
 async def renew(session: AsyncSession, payload: dict[str, object]) -> None:
     from app.services import payments  # payments uses this module
@@ -380,7 +361,8 @@ async def renew(session: AsyncSession, payload: dict[str, object]) -> None:
     raw_attempt = payload.get("attempt")
     attempt = raw_attempt if isinstance(raw_attempt, int) else 1
     if not row.authorization_code:
-        await _ask_to_pay(session, row, plan, learner, declined=False)
+        # no reusable card: the person pays again from the billing page
+        logger.info("subscription_renewal_needs_payment", subscription_id=row.id)
         return
 
     end = _aware(row.current_period_end)
@@ -429,6 +411,5 @@ async def renew(session: AsyncSession, payload: dict[str, object]) -> None:
     if payment is None or payment.status in ("paid", "pending"):
         return  # paid: the next renewal is scheduled; pending: Paystack's webhook settles it
     logger.info("subscription_renewal_declined", subscription_id=row.id, attempt=attempt)
-    await _ask_to_pay(session, row, plan, learner, declined=True)
-    if attempt < settings.SUBSCRIPTION_RENEW_ATTEMPTS:
+    if attempt < SUBSCRIPTION_RENEW_ATTEMPTS:
         await schedule_renewal(session, row, attempt + 1, run_after=_now() + RETRY_AFTER)

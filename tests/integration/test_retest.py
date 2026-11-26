@@ -10,19 +10,20 @@
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
-from tests.integration.conftest import _make_learner, assert_error_envelope, take_test
-from tests.integration.test_audits import finish, start, untestable  # noqa: F401
+from app.api import API_PREFIX
+from app.services import audits as audit_service
+from tests.integration.conftest import assert_error_envelope, take_test
+from tests.integration.test_audits import finish, start, untestable, with_accounts  # noqa: F401
 from tests.integration.test_recruiter import _org
 from tests.integration.test_team_roster import add_role, person, upload
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture(autouse=True)
 def no_retest_cooldown(monkeypatch):
     # Day 31: the cooldown has its own tests (test_day31.py); these check the re-test itself
-    monkeypatch.setattr(settings, "RETEST_COOLDOWN_DAYS", 0)
+    monkeypatch.setattr(audit_service, "RETEST_COOLDOWN_DAYS", 0)
 
 
 def only_beginner(info) -> bool:
@@ -88,7 +89,7 @@ async def roster(client, owner, roles) -> dict:
     members = (
         await client.get(f"{API}/organisations/{owner['id']}/members", headers=owner["headers"])
     ).json()["data"]["items"]
-    return {m["email"]: m for m in members}
+    return await with_accounts(client, {m["email"]: m for m in members})
 
 
 async def retest(client, owner, audit_id: int, **body):
@@ -179,9 +180,9 @@ async def test_deltas_and_benchmarks_show_the_change_after_training(
     client, db, owner, roles, roster, skill
 ):
     first = (await start(client, owner, role_ids=[roles["backend"]])).json()["data"]
-    ada = await _make_learner(client, "ada.p@example.com", "Ada Obi")
+    ada = roster["ada@example.com"]["account"]
     await finish(client, db, skill, "ada@example.com", ada, right=only_beginner)
-    bola = await _make_learner(client, "bola.p@example.com", "Bola Ade")
+    bola = roster["bola@example.com"]["account"]
     await finish(client, db, skill, "bola@example.com", bola, right=only_beginner)
 
     second = (await retest(client, owner, first["audit_id"])).json()["data"]

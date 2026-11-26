@@ -3,17 +3,18 @@ open thousands of Paystack transactions in someone's name."""
 
 # ruff: noqa: F811 (pytest fixtures imported from test_payments)
 
-from app.core.config import settings
+from app.api import API_PREFIX
+from app.services import payments as payment_service
 from tests.integration.conftest import assert_error_envelope
 from tests.integration.test_payments import fake_paystack, packs  # noqa: F401
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_too_many_checkouts_in_an_hour_are_refused(
     client, learner, other_learner, fake_paystack, monkeypatch
 ):
-    monkeypatch.setattr(settings, "CHECKOUTS_PER_HOUR", 2)
+    monkeypatch.setattr(payment_service, "CHECKOUTS_PER_HOUR", 2)
     body = {"item_type": "credit_pack", "item_id": 1}
     for _ in range(2):
         response = await client.post(

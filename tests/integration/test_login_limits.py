@@ -10,10 +10,10 @@ import time
 
 import pytest
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture

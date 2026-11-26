@@ -5,11 +5,11 @@ in the path still work for your own id (and are marked deprecated); the id in th
 POST /learners/behavioural-answers is no longer needed and is ignored when it is yours.
 """
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.main import app
 from tests.integration.conftest import assert_error_envelope, start_attempt, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_my_profile(client, learner):

@@ -27,6 +27,7 @@ There is one starting migration, `migrations/versions/b7d24e6f0c13_initial_schem
 | `c6e1a4b8f3d2` | 24 | `audits.baseline_audit_id` (the audit a re-test repeats). New empty column. |
 | `d7f2b5c9a3e4` | 25 | `subscription_plans` (filled by the seed loader), `subscriptions` (at most one active or past_due per person), `payments.subscription_id`. Two new tables and an empty column. |
 | `e8a3c6d1f4b5` | 28 | `profiles` (what each person tells us about themselves; who may see it is their consent). New empty table. |
+| `5fecba266610` | – | Email removed: drops `email_outbox`, `test_mailbox_messages`, `contact_messages`, `account_tokens` and `learner.email_verified_at` (with their rows), deletes queued `send_email` jobs, adds `ix_invitations_email` (invitations are in-app). |
 
 - `scripts/start.sh` runs `alembic upgrade head` on every start (every Render deploy). If it fails, the server never starts.
 - New change: edit the models, `alembic revision --autogenerate -m "add x to y"`, read the generated file, `alembic upgrade head`. CI fails with more than one head.
@@ -55,6 +56,6 @@ python -m app.db.seed     # load into DATABASE_URL; prints inserted / updated / 
 - **The files win.** A question edited directly in the database is put back to what the file says on the next load. Change questions in the seed files, through a pull request, then load.
 - **Nothing else is touched.** Rows not in the files stay (old attempts may point at them), learners' data is never read or changed, and the id counters are moved past the highest id so new rows get fresh ids.
 - **Question statuses are worked out on every load.** The question-quality check (docs/question-quality.md) runs over the files and stores each question's `status` and `quality_issues`; only `ACTIVE` questions are served. To change a status, fix the question or record an expert decision, then load.
-- **On Render** the test server loads them on every deploy (`SEED_ON_START=true`). Production only loads them when someone runs the command.
+- **The test server** (`APP_ENV=staging`) loads them on every deploy (`scripts/start.sh`). Production only loads them when someone runs the command.
 
 Before the first load on a database that already has questions (the Render test database was filled by the old MySQL copy script, with the same ids), compare first if anyone edited questions there by hand (e.g. with `scripts/rebalance_distractors.py` output): the load would put the file version back.

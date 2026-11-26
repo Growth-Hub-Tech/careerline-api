@@ -19,8 +19,8 @@ from enum import StrEnum
 
 from fastapi import Depends, Request
 
+from app.api import API_PREFIX
 from app.api.deps import credentials_error, current_membership, optional_current_session
-from app.core.config import settings
 from app.core.exceptions import ForbiddenError, NotFoundError
 from app.core.logging import get_logger
 from app.models.organisations import OrganisationMember
@@ -116,10 +116,8 @@ POLICIES: dict[str, Policy] = {
     "GET /accounts/me": SIGNED_IN,
     "PATCH /accounts/me": SIGNED_IN,
     "POST /accounts/me/password": SIGNED_IN,
-    "POST /accounts/verify-email/resend": SIGNED_IN,
-    # Email links: the token in the body is the proof
+    # Forgot password: the email and the reset PIN are the proof
     "POST /accounts/password-reset/confirm": PUBLIC,
-    "POST /accounts/verify-email": PUBLIC,
     # Learners: only ever the caller
     "GET /learners/me": SIGNED_IN,
     "GET /learners/{learner_id}": SELF,
@@ -151,10 +149,6 @@ POLICIES: dict[str, Policy] = {
     "GET /beginner-path/intake": PUBLIC,
     "GET /payments/credit-packs": PUBLIC,
     "GET /subscriptions/plans": PUBLIC,
-    # Contact form (public) and the test server's mailbox (its own token, never in production)
-    "POST /contact": PUBLIC,
-    "GET /test-mailbox": PUBLIC,
-    "DELETE /test-mailbox": PUBLIC,
     # Results and their PDF report: the routes check the result is yours
     "GET /results": SIGNED_IN,
     "GET /results/{result_id}": SIGNED_IN,
@@ -192,6 +186,7 @@ POLICIES: dict[str, Policy] = {
     # Invitations: candidates open and accept them; recruiters and admins send them
     "GET /invitations/token/{token}": PUBLIC,
     "POST /invitations/token/{token}/accept": SIGNED_IN,
+    "GET /invitations/received": SIGNED_IN,
     "POST /invitations": org(P.INVITATIONS_MANAGE),
     "GET /invitations": org(P.INVITATIONS_READ),
     "GET /invitations/{invitation_id}": org(P.INVITATIONS_READ),
@@ -222,8 +217,8 @@ POLICIES: dict[str, Policy] = {
 
 
 def policy_key(method: str, path: str) -> str:
-    if path.startswith(settings.API_PREFIX + "/"):
-        path = path[len(settings.API_PREFIX) :]
+    if path.startswith(API_PREFIX + "/"):
+        path = path[len(API_PREFIX) :]
     return f"{method.upper()} {path}"
 
 

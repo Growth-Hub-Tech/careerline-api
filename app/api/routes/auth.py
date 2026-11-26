@@ -49,7 +49,7 @@ def _set_session_cookie(response: Response, token: str) -> None:
     "/register",
     responses=errors(400, 403, 429),
     description="Creates the account and signs it in: the answer holds a token and the "
-    f"{SESSION_COOKIE} cookie is set. No email is sent. A taken email is 400 email_taken.",
+    f"{SESSION_COOKIE} cookie is set. A taken email is 400 email_taken.",
 )
 async def register(
     data: RegisterRequest,

@@ -10,11 +10,11 @@ team invitations (sent by an audit, Day 22): not_invited until then.
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import assert_error_envelope
 from tests.integration.test_recruiter import _org
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def add_role(db, slug: str, title: str, skills: list[tuple[int, str]] = ()) -> int:

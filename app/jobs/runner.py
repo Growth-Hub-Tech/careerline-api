@@ -12,7 +12,6 @@ import uuid
 
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from app.core.config import settings
 from app.core.logging import get_logger
 from app.db.session import AsyncSessionLocal
 from app.jobs import registry
@@ -26,6 +25,12 @@ from app.jobs.queue import (
 )
 
 logger = get_logger(__name__)
+
+JOB_POLL_SECONDS = 2.0  # how often an idle worker looks for new jobs
+JOB_LEASE_SECONDS = 300.0  # a job is retried if its worker is silent this long
+JOB_BATCH_SIZE = 5
+JOB_RETRY_BASE_SECONDS = 30.0  # 30s, 1m, 2m, 4m ... between attempts
+JOB_RETRY_MAX_SECONDS = 3600.0
 
 
 def default_worker_id() -> str:
@@ -47,13 +52,13 @@ class JobRunner:
     ):
         self.worker_id = worker_id or default_worker_id()
         self.session_factory = session_factory or AsyncSessionLocal
-        self.lease_seconds = lease_seconds or settings.JOB_LEASE_SECONDS
+        self.lease_seconds = lease_seconds or JOB_LEASE_SECONDS
         # Stop a handler well before its lease runs out, so nobody else takes it meanwhile
         self.timeout_seconds = timeout_seconds or max(1.0, self.lease_seconds * 0.8)
-        self.poll_seconds = poll_seconds or settings.JOB_POLL_SECONDS
-        self.batch_size = batch_size or settings.JOB_BATCH_SIZE
-        self.retry_base_seconds = retry_base_seconds or settings.JOB_RETRY_BASE_SECONDS
-        self.retry_max_seconds = retry_max_seconds or settings.JOB_RETRY_MAX_SECONDS
+        self.poll_seconds = poll_seconds or JOB_POLL_SECONDS
+        self.batch_size = batch_size or JOB_BATCH_SIZE
+        self.retry_base_seconds = retry_base_seconds or JOB_RETRY_BASE_SECONDS
+        self.retry_max_seconds = retry_max_seconds or JOB_RETRY_MAX_SECONDS
         registry.load_handlers()
 
     def backoff_seconds(self, attempts: int) -> float:

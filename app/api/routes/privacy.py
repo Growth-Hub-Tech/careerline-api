@@ -52,7 +52,8 @@ async def update_my_consents(
     response_model=DataExport,
     responses=errors(401),
     description="Queues a copy of everything we hold about me (JSON). One at a time: while one "
-    "is queued or ready, this answers that one. An email says when it is ready.",
+    "is queued or ready, this answers that one. Poll GET /privacy/data-exports/{export_id} "
+    "until it is ready.",
 )
 async def request_data_export(
     request: Request,

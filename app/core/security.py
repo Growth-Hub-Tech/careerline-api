@@ -8,12 +8,8 @@ Session tokens: a signed JWT with the learner id (sub) and the server-side sessi
 The session row decides whether the token still works, so signing out (or resetting the
 password) ends it at once. See app/services/session_service.py. Sign-in returns the token and
 also sets it in the SESSION_COOKIE cookie for the website (app/api/routes/auth.py).
-
-One-time tokens (email confirmation, password reset): random, sent only in the email link,
-stored as a SHA-256 hash.
 """
 
-import hashlib
 import re
 import secrets
 import threading
@@ -112,13 +108,3 @@ def decode_token(token: str) -> tuple[int, str | None] | None:
         return int(payload["sub"]), str(session_id) if session_id else None
     except (jwt.PyJWTError, KeyError, TypeError, ValueError):
         return None
-
-
-def hash_one_time_token(token: str) -> str:
-    return hashlib.sha256(token.encode("utf-8")).hexdigest()
-
-
-def new_one_time_token() -> tuple[str, str]:
-    """A token for an email link, and the hash to store."""
-    token = secrets.token_urlsafe(32)
-    return token, hash_one_time_token(token)

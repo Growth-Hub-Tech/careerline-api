@@ -26,10 +26,6 @@
             "title": "Email",
             "type": "string"
           },
-          "email_verified": {
-            "title": "Email Verified",
-            "type": "boolean"
-          },
           "full_name": {
             "title": "Full Name",
             "type": "string"
@@ -80,7 +76,6 @@
           "email",
           "phone",
           "account_type",
-          "email_verified",
           "created_at"
         ],
         "title": "Account",
@@ -182,7 +177,7 @@
         "type": "object"
       },
       "Acknowledgement": {
-        "description": "For actions with nothing else to return (e.g. a password reset email was queued).",
+        "description": "For actions with nothing else to return (e.g. a password was changed).",
         "properties": {
           "status": {
             "const": "accepted",
@@ -718,39 +713,6 @@
         "title": "ApiResponse[Consents]",
         "type": "object"
       },
-      "ApiResponse_ContactReceipt_": {
-        "properties": {
-          "data": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/ContactReceipt"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "message": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Message"
-          },
-          "success": {
-            "const": true,
-            "default": true,
-            "title": "Success",
-            "type": "boolean"
-          }
-        },
-        "title": "ApiResponse[ContactReceipt]",
-        "type": "object"
-      },
       "ApiResponse_Credits_": {
         "properties": {
           "data": {
@@ -1178,6 +1140,39 @@
           }
         },
         "title": "ApiResponse[Page[Candidate]]",
+        "type": "object"
+      },
+      "ApiResponse_Page_InvitationPublic__": {
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Page_InvitationPublic_"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "success": {
+            "const": true,
+            "default": true,
+            "title": "Success",
+            "type": "boolean"
+          }
+        },
+        "title": "ApiResponse[Page[InvitationPublic]]",
         "type": "object"
       },
       "ApiResponse_Page_Invitation__": {
@@ -1772,72 +1767,6 @@
           }
         },
         "title": "ApiResponse[Targets]",
-        "type": "object"
-      },
-      "ApiResponse_TestMailboxCleared_": {
-        "properties": {
-          "data": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/TestMailboxCleared"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "message": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Message"
-          },
-          "success": {
-            "const": true,
-            "default": true,
-            "title": "Success",
-            "type": "boolean"
-          }
-        },
-        "title": "ApiResponse[TestMailboxCleared]",
-        "type": "object"
-      },
-      "ApiResponse_TestMailbox_": {
-        "properties": {
-          "data": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/TestMailbox"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "message": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Message"
-          },
-          "success": {
-            "const": true,
-            "default": true,
-            "title": "Success",
-            "type": "boolean"
-          }
-        },
-        "title": "ApiResponse[TestMailbox]",
         "type": "object"
       },
       "ApiResponse_Union_Subscription__NoneType__": {
@@ -3454,96 +3383,6 @@
         "title": "Consents",
         "type": "object"
       },
-      "ContactReceipt": {
-        "properties": {
-          "received_at": {
-            "format": "date-time",
-            "title": "Received At",
-            "type": "string"
-          },
-          "status": {
-            "const": "received",
-            "title": "Status",
-            "type": "string"
-          },
-          "ticket_id": {
-            "title": "Ticket Id",
-            "type": "string"
-          }
-        },
-        "required": [
-          "ticket_id",
-          "status",
-          "received_at"
-        ],
-        "title": "ContactReceipt",
-        "type": "object"
-      },
-      "ContactRequest": {
-        "properties": {
-          "email": {
-            "format": "email",
-            "title": "Email",
-            "type": "string"
-          },
-          "full_name": {
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "Full Name",
-            "type": "string"
-          },
-          "message": {
-            "maxLength": 5000,
-            "minLength": 10,
-            "title": "Message",
-            "type": "string"
-          },
-          "organisation": {
-            "anyOf": [
-              {
-                "maxLength": 160,
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Organisation"
-          },
-          "topic": {
-            "default": "general",
-            "enum": [
-              "general",
-              "support",
-              "sales",
-              "partnership",
-              "organisation_audit"
-            ],
-            "title": "Topic",
-            "type": "string"
-          },
-          "website": {
-            "anyOf": [
-              {
-                "maxLength": 200,
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "description": "Spam trap: leave it out or empty. Hide this input from people; bots fill it.",
-            "title": "Website"
-          }
-        },
-        "required": [
-          "full_name",
-          "email",
-          "message"
-        ],
-        "title": "ContactRequest",
-        "type": "object"
-      },
       "CreditPack": {
         "properties": {
           "credits": {
@@ -4765,6 +4604,37 @@
           "offset"
         ],
         "title": "Page[Candidate]",
+        "type": "object"
+      },
+      "Page_InvitationPublic_": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/InvitationPublic"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "limit": {
+            "title": "Limit",
+            "type": "integer"
+          },
+          "offset": {
+            "title": "Offset",
+            "type": "integer"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "total",
+          "limit",
+          "offset"
+        ],
+        "title": "Page[InvitationPublic]",
         "type": "object"
       },
       "Page_Invitation_": {
@@ -6876,106 +6746,6 @@
         "title": "TeamMemberCreate",
         "type": "object"
       },
-      "TestMailbox": {
-        "properties": {
-          "messages": {
-            "description": "Newest first",
-            "items": {
-              "$ref": "#/components/schemas/TestMailboxMessageOut"
-            },
-            "title": "Messages",
-            "type": "array"
-          },
-          "to": {
-            "title": "To",
-            "type": "string"
-          }
-        },
-        "required": [
-          "to",
-          "messages"
-        ],
-        "title": "TestMailbox",
-        "type": "object"
-      },
-      "TestMailboxCleared": {
-        "properties": {
-          "deleted": {
-            "title": "Deleted",
-            "type": "integer"
-          },
-          "to": {
-            "title": "To",
-            "type": "string"
-          }
-        },
-        "required": [
-          "to",
-          "deleted"
-        ],
-        "title": "TestMailboxCleared",
-        "type": "object"
-      },
-      "TestMailboxMessageOut": {
-        "properties": {
-          "html": {
-            "title": "Html",
-            "type": "string"
-          },
-          "id": {
-            "title": "Id",
-            "type": "integer"
-          },
-          "links": {
-            "description": "Every link in the email, e.g. a confirm or reset link",
-            "items": {
-              "type": "string"
-            },
-            "title": "Links",
-            "type": "array"
-          },
-          "received_at": {
-            "format": "date-time",
-            "title": "Received At",
-            "type": "string"
-          },
-          "reply_to": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Reply To"
-          },
-          "subject": {
-            "title": "Subject",
-            "type": "string"
-          },
-          "text": {
-            "title": "Text",
-            "type": "string"
-          },
-          "to": {
-            "title": "To",
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "to",
-          "subject",
-          "text",
-          "html",
-          "reply_to",
-          "links",
-          "received_at"
-        ],
-        "title": "TestMailboxMessageOut",
-        "type": "object"
-      },
       "TokenResponse": {
         "properties": {
           "access_token": {
@@ -7002,19 +6772,6 @@
           "full_name"
         ],
         "title": "TokenResponse",
-        "type": "object"
-      },
-      "VerifyEmailRequest": {
-        "properties": {
-          "token": {
-            "title": "Token",
-            "type": "string"
-          }
-        },
-        "required": [
-          "token"
-        ],
-        "title": "VerifyEmailRequest",
         "type": "object"
       },
       "WebhookReceipt": {
@@ -7219,7 +6976,7 @@
     },
     "/api/v1/accounts/password-reset/confirm": {
       "post": {
-        "description": "Sets a new password with the account's email and the reset PIN (1234 for every account until emails are switched on). A wrong PIN or an unknown email is `invalid_reset_pin` (400). 5 wrong tries for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After. Signs out every device.",
+        "description": "Sets a new password with the account's email and the reset PIN (1234 for every account). A wrong PIN or an unknown email is `invalid_reset_pin` (400). 5 wrong tries for one email (or 20 from one IP address) in 15 minutes: 429 with Retry-After. Signs out every device.",
         "operationId": "confirm_password_reset_api_v1_accounts_password_reset_confirm_post",
         "requestBody": {
           "content": {
@@ -7274,105 +7031,6 @@
           }
         },
         "summary": "Confirm Password Reset",
-        "tags": [
-          "Accounts"
-        ]
-      }
-    },
-    "/api/v1/accounts/verify-email": {
-      "post": {
-        "description": "The token from the confirmation link. An old, used or unknown token is `expired` (410).",
-        "operationId": "verify_email_api_v1_accounts_verify_email_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyEmailRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Acknowledgement_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "410": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Gone or expired: this old route is retired, or the link/offer has expired (see the message)"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "summary": "Verify Email",
-        "tags": [
-          "Accounts"
-        ]
-      }
-    },
-    "/api/v1/accounts/verify-email/resend": {
-      "post": {
-        "description": "Emails a new confirmation link (the old one stops working). Nothing is sent if the email is already confirmed. At most 3 an hour.",
-        "operationId": "resend_verification_email_api_v1_accounts_verify_email_resend_post",
-        "responses": {
-          "202": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_Acknowledgement_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          }
-        },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
-        "summary": "Resend Verification Email",
         "tags": [
           "Accounts"
         ]
@@ -8262,7 +7920,7 @@
     },
     "/api/v1/auth/register": {
       "post": {
-        "description": "Creates the account and signs it in: the answer holds a token and the careerline_session cookie is set. No email is sent. A taken email is 400 email_taken.",
+        "description": "Creates the account and signs it in: the answer holds a token and the careerline_session cookie is set. A taken email is 400 email_taken.",
         "operationId": "register_api_v1_auth_register_post",
         "requestBody": {
           "content": {
@@ -8454,58 +8112,6 @@
         ]
       }
     },
-    "/api/v1/contact": {
-      "post": {
-        "description": "Public, no login. Stores the message and emails the team (who can reply straight to the sender) and an acknowledgement to the sender. At most 5 messages an hour per email address and per IP address (then 429 with Retry-After).",
-        "operationId": "send_contact_message_api_v1_contact_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ContactRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "201": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_ContactReceipt_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          },
-          "429": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Too many requests: slow down and retry after the Retry-After seconds"
-          }
-        },
-        "summary": "Send Contact Message",
-        "tags": [
-          "Contact"
-        ]
-      }
-    },
     "/api/v1/credits": {
       "get": {
         "operationId": "get_my_credits_api_v1_credits_get",
@@ -8618,7 +8224,7 @@
         ]
       },
       "post": {
-        "description": "Emails the invitee the link. kind candidate (the default) adds the candidate by candidate_id or email when needed. 404: unknown test_id, candidate_id or another organisation_id. sent -> accepted (the invitee opens invite_url, signs in and calls POST /invitations/token/{token}/accept, which starts the test) -> completed (that test finished; result_id is set). A sent invitation past expires_at shows as expired.",
+        "description": "Invites someone who already has a CareerLine account; nothing is emailed. An email with no account is a 409 no_account. kind candidate (the default) adds the candidate by candidate_id or email when needed. 404: unknown test_id, candidate_id or another organisation_id. sent -> accepted (the invitee finds it in GET /invitations/received and calls POST /invitations/token/{token}/accept, which starts the test) -> completed (that test finished; result_id is set). A sent invitation past expires_at shows as expired.",
         "operationId": "send_invitation_api_v1_invitations_post",
         "requestBody": {
           "content": {
@@ -8671,6 +8277,16 @@
             },
             "description": "Not found"
           },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict: e.g. this attempt was already submitted"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -8683,6 +8299,78 @@
           }
         },
         "summary": "Send Invitation",
+        "tags": [
+          "Invitations"
+        ]
+      }
+    },
+    "/api/v1/invitations/received": {
+      "get": {
+        "description": "The invitations sent to my account's email, newest first; revoked ones are left out. Open one with /invitations/token/{token}.",
+        "operationId": "list_received_invitations_api_v1_invitations_received_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "minimum": 0,
+              "title": "Offset",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse_Page_InvitationPublic__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not logged in: missing, invalid or expired token"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Validation error: the request body or parameters are invalid (see details)"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "List Received Invitations",
         "tags": [
           "Invitations"
         ]
@@ -8753,7 +8441,7 @@
     },
     "/api/v1/invitations/token/{token}/accept": {
       "post": {
-        "description": "Starts the invited test (free: the organisation invited them) and returns its attempt_id; take it with /attempts/{attempt_id}/... Accepting twice is fine; another account, or a revoked or completed invitation, is a 409; expired is a 410.",
+        "description": "Starts the invited test (free: the organisation invited them) and returns its attempt_id; take it with /attempts/{attempt_id}/... Only the invited account may accept (another one is a 403). Accepting twice is fine; a revoked or completed invitation is a 409; expired is a 410.",
         "operationId": "accept_invitation_api_v1_invitations_token__token__accept_post",
         "parameters": [
           {
@@ -8786,6 +8474,16 @@
               }
             },
             "description": "Not logged in: missing, invalid or expired token"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not allowed: e.g. this belongs to another person"
           },
           "404": {
             "content": {
@@ -11351,7 +11049,7 @@
     },
     "/api/v1/privacy/data-exports": {
       "post": {
-        "description": "Queues a copy of everything we hold about me (JSON). One at a time: while one is queued or ready, this answers that one. An email says when it is ready.",
+        "description": "Queues a copy of everything we hold about me (JSON). One at a time: while one is queued or ready, this answers that one. Poll GET /privacy/data-exports/{export_id} until it is ready.",
         "operationId": "request_data_export_api_v1_privacy_data_exports_post",
         "responses": {
           "202": {
@@ -12283,7 +11981,7 @@
         ]
       },
       "post": {
-        "description": "409: that email is already a candidate here. 404: unknown role_id.",
+        "description": "409: that email is already a candidate here, or has no CareerLine account yet (no_account: only accounts can be invited). 404: unknown role_id.",
         "operationId": "add_candidate_api_v1_recruiter_candidates_post",
         "requestBody": {
           "content": {
@@ -13317,150 +13015,6 @@
         "summary": "List Plans",
         "tags": [
           "Subscriptions"
-        ]
-      }
-    },
-    "/api/v1/test-mailbox": {
-      "delete": {
-        "description": "Delete the emails sent to one address (start a test with an empty mailbox).",
-        "operationId": "clear_test_mailbox_api_v1_test_mailbox_delete",
-        "parameters": [
-          {
-            "description": "The address to clear",
-            "in": "query",
-            "name": "to",
-            "required": true,
-            "schema": {
-              "description": "The address to clear",
-              "maxLength": 320,
-              "pattern": "^[^@\\s]+@[^@\\s]+$",
-              "title": "To",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_TestMailboxCleared_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "summary": "Clear Test Mailbox",
-        "tags": [
-          "Test mailbox (test server only)"
-        ]
-      },
-      "get": {
-        "description": "The emails sent to one address on the test server, newest first. Send the server's X-Test-Mailbox-Token (404 when the server has none).",
-        "operationId": "read_test_mailbox_api_v1_test_mailbox_get",
-        "parameters": [
-          {
-            "description": "The address the emails were sent to",
-            "in": "query",
-            "name": "to",
-            "required": true,
-            "schema": {
-              "description": "The address the emails were sent to",
-              "maxLength": 320,
-              "pattern": "^[^@\\s]+@[^@\\s]+$",
-              "title": "To",
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "required": false,
-            "schema": {
-              "default": 20,
-              "maximum": 100,
-              "minimum": 1,
-              "title": "Limit",
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResponse_TestMailbox_"
-                }
-              }
-            },
-            "description": "Successful Response"
-          },
-          "401": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not logged in: missing, invalid or expired token"
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not found"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Validation error: the request body or parameters are invalid (see details)"
-          }
-        },
-        "summary": "Read Test Mailbox",
-        "tags": [
-          "Test mailbox (test server only)"
         ]
       }
     },

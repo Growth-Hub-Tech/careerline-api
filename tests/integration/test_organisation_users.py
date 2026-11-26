@@ -11,11 +11,11 @@ from datetime import UTC, datetime, timedelta
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.core.security import create_access_token
 from tests.integration.conftest import assert_error_envelope
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def add_learner(db, name: str) -> int:

@@ -1,6 +1,6 @@
 """Demo accounts and a demo company, for the test server only: `python -m app.db.demo`.
 
-scripts/start.sh runs it on every start when DEMO_DATA_ON_START=true. It refuses to run in
+scripts/start.sh runs it on every start of the test server (APP_ENV=staging). It refuses to run in
 production. Safe to run again: it creates what is missing and puts the demo accounts back to
 the documented password and roles (someone may have changed them while testing).
 
@@ -66,8 +66,8 @@ DEMO_RESULTS = (
 
 
 # the demo company's team roster (email, name, department, job role from
-# seeds/job_roles.json). The demo learners are on it, so an audit's emails reach accounts that
-# can sign in and take the tests.
+# seeds/job_roles.json). The demo learners are on it: an audit only invites people with an
+# account, and they see the invitations under Tasks.
 DEMO_SEATS = 50
 DEMO_ROSTER = (
     ("demo.learner@example.com", "Demo Learner", "Engineering", 101),
@@ -89,7 +89,6 @@ async def _account(db: AsyncSession, demo: DemoAccount) -> tuple[Learner, bool]:
             phone_number="+2348000000000",
             hashed_password=await asyncio.to_thread(hash_password, DEMO_PASSWORD),
             learner_status=LearnerStatus.ACTIVE,
-            email_verified_at=datetime.now(UTC),
         )
         db.add(learner)
         await db.flush()
@@ -97,8 +96,6 @@ async def _account(db: AsyncSession, demo: DemoAccount) -> tuple[Learner, bool]:
     if not await asyncio.to_thread(verify_password, DEMO_PASSWORD, learner.hashed_password):
         learner.hashed_password = await asyncio.to_thread(hash_password, DEMO_PASSWORD)
     learner.learner_status = LearnerStatus.ACTIVE
-    if learner.email_verified_at is None:
-        learner.email_verified_at = datetime.now(UTC)
     return learner, False
 
 

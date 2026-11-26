@@ -32,6 +32,7 @@ __all__ = [
     "QuestionIn",
     "QuestionStatus",
     "Severity",
+    "MIN_ACTIVE_QUESTIONS_PER_LEVEL",
     "Thresholds",
     "check_bank",
     "check_question",
@@ -40,6 +41,9 @@ __all__ = [
 ]
 
 LEVELS = ("BEGINNER", "JUNIOR", "MID", "ADVANCED")
+
+# A skill can be tested only when every level has at least this many ACTIVE questions
+MIN_ACTIVE_QUESTIONS_PER_LEVEL = 15
 
 
 class Severity(StrEnum):

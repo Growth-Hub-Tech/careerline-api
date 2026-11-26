@@ -5,6 +5,12 @@ from app.core.logging import get_logger
 
 logger = get_logger(__name__)
 
+# A call that takes longer is given up (then retried twice). The SDK's own default is 10
+# minutes, longer than a background job's lease (app/jobs/runner.py)
+OPENAI_TIMEOUT_SECONDS = 30.0
+# The model that explains test answers (asked once per question, then kept)
+OPENAI_EXPLANATION_MODEL = "gpt-4o-mini"
+
 # The OpenAI client is created on first use, and only when OPENAI_API_KEY is set.
 # (Before, it was created at import time, so the whole API crashed on startup without a key.)
 _client = None
@@ -18,7 +24,7 @@ def get_client():
         # Every outbound call has a timeout, so a slow OpenAI never hangs a request forever
         _client = OpenAI(
             api_key=settings.OPENAI_API_KEY,
-            timeout=settings.OPENAI_TIMEOUT_SECONDS,
+            timeout=OPENAI_TIMEOUT_SECONDS,
             max_retries=2,
         )
     return _client
@@ -103,7 +109,7 @@ def explain_answer(
     )
     try:
         response = client.chat.completions.create(
-            model=settings.OPENAI_EXPLANATION_MODEL,
+            model=OPENAI_EXPLANATION_MODEL,
             messages=[
                 {
                     "role": "system",

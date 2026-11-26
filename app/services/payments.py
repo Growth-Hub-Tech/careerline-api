@@ -56,6 +56,8 @@ logger = get_logger(__name__)
 UNAVAILABLE = "Payments are not available right now. Please try again later."
 CALLBACK_PATH = "/payments/callback"
 HISTORY_LIMIT = 50
+CHECKOUTS_PER_HOUR = 20  # Paystack checkouts (credit packs and plans) one person may start
+PAYMENT_ABANDON_MINUTES = 60  # a checkout nobody paid is marked abandoned after this long
 # Paystack's statuses that mean the money will not come
 FAILED_STATUSES = {"failed", "reversed"}
 
@@ -124,7 +126,7 @@ async def start_checkout(db: AsyncSession, learner: Learner, data: CheckoutReque
     limited = await rate_limit.hit(
         db,
         rate_limit.bucket("checkout:learner", str(learner.learner_id)),
-        limit=settings.CHECKOUTS_PER_HOUR,
+        limit=CHECKOUTS_PER_HOUR,
         window_seconds=3600,
     )
     if not limited.allowed:
@@ -326,7 +328,7 @@ def _old(payment: Payment) -> bool:
     created = payment.created_at
     if created.tzinfo is None:
         created = created.replace(tzinfo=UTC)
-    return datetime.now(UTC) - created > timedelta(minutes=settings.PAYMENT_ABANDON_MINUTES)
+    return datetime.now(UTC) - created > timedelta(minutes=PAYMENT_ABANDON_MINUTES)
 
 
 # ---------- reading ----------

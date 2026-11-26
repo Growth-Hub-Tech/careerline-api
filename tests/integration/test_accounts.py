@@ -1,52 +1,20 @@
 """Accounts: sign-up (no email), sign-in, my account, change password, and the reset PIN.
 
-Email confirmation is switched off but its routes are kept, so they are still tested.
+CareerLine sends no email: there is no email confirmation and no reset link.
 """
 
-from urllib.parse import parse_qs, urlparse
-
 import pytest
-from sqlalchemy import text
 
-from app.core.config import settings
-from app.jobs.runner import JobRunner
+from app.api import API_PREFIX
 from tests.integration.conftest import (
-    MAILBOX,
-    MAILBOX_TOKEN,
     PASSWORD,
     assert_error_envelope,
     login,
     register,
 )
 
-API = settings.API_PREFIX
+API = API_PREFIX
 NEW_PASSWORD = "a-brand-new-password"
-
-
-@pytest.fixture(autouse=True)
-def mailbox(monkeypatch):
-    monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
-    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", MAILBOX_TOKEN)
-    monkeypatch.setattr(settings, "FRONTEND_URL", "https://app.careerline.test")
-
-
-async def drain():
-    runner = JobRunner(worker_id="test")
-    while await runner.run_once():
-        pass
-
-
-async def emails(client, address: str) -> list[dict]:
-    await drain()
-    response = await client.get(f"{API}/test-mailbox", params={"to": address}, headers=MAILBOX)
-    assert response.status_code == 200, response.text
-    return response.json()["data"]["messages"]
-
-
-def token_from(message: dict, path: str) -> str:
-    link = next(link for link in message["links"] if urlparse(link).path == path)
-    assert link.startswith("https://app.careerline.test/")
-    return parse_qs(urlparse(link).query)["token"][0]
 
 
 def bearer(token: str) -> dict:
@@ -59,10 +27,10 @@ async def sign_up(client, email="ada@example.com") -> dict:
     return response.json()["data"]
 
 
-# --- Sign-up (no email) and the switched-off email confirmation ---
+# --- Sign-up (no email) ---
 
 
-async def test_sign_up_signs_in_sends_no_email_and_reports_the_email_as_confirmed(client):
+async def test_sign_up_signs_in_at_once(client):
     data = await sign_up(client)
     assert set(data) == {"access_token", "token_type", "learner_id"}
 
@@ -70,37 +38,8 @@ async def test_sign_up_signs_in_sends_no_email_and_reports_the_email_as_confirme
     assert me.status_code == 200, me.text
     account = me.json()["data"]
     assert account["email"] == "ada@example.com"
-    assert account["email_verified"] is True
+    assert "email_verified" not in account
     assert account["account_type"] == "learner"
-    assert await emails(client, "ada@example.com") == []
-
-
-async def resent_token(client, data: dict) -> str:
-    response = await client.post(
-        f"{API}/accounts/verify-email/resend", headers=bearer(data["access_token"])
-    )
-    assert response.status_code == 202, response.text
-    return token_from((await emails(client, "ada@example.com"))[0], "/verify-email")
-
-
-async def test_the_kept_confirmation_link_still_works_once(client, db):
-    data = await sign_up(client)
-    token = await resent_token(client, data)
-
-    response = await client.post(f"{API}/accounts/verify-email", json={"token": token})
-    assert response.status_code == 200, response.text
-    assert db.execute(text("SELECT email_verified_at FROM learner")).scalar_one() is not None
-
-    again = await client.post(f"{API}/accounts/verify-email", json={"token": token})
-    assert_error_envelope(again, 410, "expired")
-    made_up = await client.post(f"{API}/accounts/verify-email", json={"token": "made-up-value"})
-    assert_error_envelope(made_up, 410, "expired")
-
-
-async def test_tokens_are_stored_hashed(client, db):
-    token = await resent_token(client, await sign_up(client))
-    stored = db.execute(text("SELECT token_hash FROM account_tokens")).scalars().all()
-    assert stored and token not in stored
 
 
 async def test_sign_up_emails_are_case_insensitive(client):
@@ -147,8 +86,6 @@ async def test_changing_my_password_needs_the_current_one(client):
     assert response.status_code == 200, response.text
     assert (await login(client, "ada@example.com", NEW_PASSWORD)).status_code == 200
     assert (await login(client, "ada@example.com", PASSWORD)).status_code == 401
-    subjects = [m["subject"] for m in await emails(client, "ada@example.com")]
-    assert any("password was changed" in s.lower() for s in subjects)
 
 
 # --- Forgot password: the fixed reset PIN ---
@@ -198,8 +135,18 @@ async def test_a_reset_clears_a_sign_in_lockout(client):
     assert (await login(client, "ada@example.com", NEW_PASSWORD)).status_code == 200
 
 
-async def test_the_old_reset_request_route_is_gone(client):
-    response = await client.post(f"{API}/accounts/password-reset", json={"email": "a@b.co"})
+@pytest.mark.parametrize(
+    "method,path",
+    [
+        ("POST", "/accounts/password-reset"),
+        ("POST", "/accounts/verify-email"),
+        ("POST", "/accounts/verify-email/resend"),
+        ("POST", "/contact"),
+        ("GET", "/test-mailbox"),
+    ],
+)
+async def test_the_email_routes_are_gone(client, method, path):
+    response = await client.request(method, f"{API}{path}", json={"email": "a@b.co"})
     assert response.status_code in (404, 405)
 
 

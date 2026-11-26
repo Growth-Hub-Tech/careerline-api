@@ -1,19 +1,20 @@
 """Day 7: demo accounts and a demo company for the test server (python -m app.db.demo).
 
-Loaded on start when DEMO_DATA_ON_START=true, never in production, safe to run on every
+Loaded on every start of the test server (APP_ENV=staging), never in production, safe to run on every
 deploy. The demo company has id 41, the id of the sample organisation before the organisation
 audit became real (Days 21-23)."""
 
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.db import demo
 from app.db.demo import DEMO_ORGANISATION_ID as ORG_ID
 from app.db.seed import load as load_seeds
 from tests.integration.conftest import login
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_the_demo_data_loads_twice_without_changes(db, database):
@@ -47,7 +48,6 @@ async def test_every_demo_account_signs_in_with_the_documented_password(client):
             headers={"Authorization": f"Bearer {response.json()['access_token']}"},
         )
         data = me.json()["data"]
-        assert data["email_verified"] is True
         assert data["organisation_role"] == account.role
         if account.role:
             assert data["organisation_id"] == ORG_ID
@@ -68,10 +68,10 @@ async def test_the_demo_data_is_never_loaded_in_production(monkeypatch, db):
     assert db.execute(text("SELECT count(*) FROM organisations")).scalar() == 0
 
 
-def test_the_start_script_loads_the_demo_data_only_when_asked():
+def test_the_start_script_loads_the_demo_data_only_on_the_test_server():
     script = (demo.REPO_ROOT / "scripts" / "start.sh").read_text()
-    assert 'if [ "${DEMO_DATA_ON_START:-false}" = "true" ]' in script
-    assert "python -m app.db.demo" in script
+    condition = script.index('if [ "${APP_ENV:-development}" = "staging" ]')
+    assert condition < script.index("python -m app.db.demo") < script.index("fi\n", condition)
 
 
 async def test_the_demo_professional_has_results_and_a_skill_history(client, database, db):

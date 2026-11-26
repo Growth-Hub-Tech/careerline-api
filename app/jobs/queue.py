@@ -17,9 +17,8 @@ from typing import Any
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
-
 MAX_ERROR_LENGTH = 2000
+JOB_MAX_ATTEMPTS = 5  # then the job is dead-lettered (status "dead")
 
 
 @dataclass(frozen=True)
@@ -57,7 +56,7 @@ async def enqueue(
             "payload": json.dumps(payload or {}),
             "dedupe_key": dedupe_key,
             "run_after": run_after,
-            "max_attempts": max_attempts or settings.JOB_MAX_ATTEMPTS,
+            "max_attempts": max_attempts or JOB_MAX_ATTEMPTS,
         },
     )
     job_id = inserted.scalar_one_or_none()

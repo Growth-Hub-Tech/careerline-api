@@ -270,7 +270,7 @@ async def explain_answers(session: AsyncSession, payload: dict[str, Any]) -> Non
         values = {
             "explanation": explanation,
             "question_digest": q.digest,
-            "model": settings.OPENAI_EXPLANATION_MODEL,
+            "model": openai_client.OPENAI_EXPLANATION_MODEL,
         }
         await session.execute(
             insert(QuestionExplanation)

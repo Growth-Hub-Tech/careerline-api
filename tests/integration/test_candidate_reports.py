@@ -7,13 +7,21 @@ from urllib.parse import urlparse
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.jobs.runner import JobRunner
 from app.services.recruiting import fit_for
 from tests.integration.conftest import assert_error_envelope, take_test
-from tests.integration.test_recruiter import add_candidate, invite, recruiter, rival  # noqa: F401
+from tests.integration.test_recruiter import add_candidate, recruiter, rival  # noqa: F401
+from tests.integration.test_recruiter import invite as _invite
 
-API = settings.API_PREFIX
+API = API_PREFIX
+
+
+async def invite(client, who, skill, **extra):
+    """Invites the learner fixture's account (Ada), who takes the tests: invitations are for
+    accounts, and only the invited account can accept."""
+    ada = {"email": "ada@example.com", "full_name": "Ada Learner"}
+    return await _invite(client, who, skill, **{**ada, **extra})
 
 
 async def run_jobs() -> None:
@@ -103,7 +111,9 @@ async def test_the_report_scores_the_candidate_for_the_role(
     db,
 ):
     role_id = _role(db, skill, "BEGINNER")
-    candidate = (await add_candidate(client, recruiter, role_id=role_id)).json()["data"]
+    candidate = (
+        await add_candidate(client, recruiter, email="ada@example.com", role_id=role_id)
+    ).json()["data"]
     assert candidate["role_title"] == "Backend Developer"
     await _finished(client, recruiter, learner, skill, candidate_id=candidate["candidate_id"])
     path = f"{API}/recruiter/candidates/{candidate['candidate_id']}/report"

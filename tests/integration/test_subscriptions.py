@@ -14,6 +14,7 @@ from datetime import UTC, datetime, timedelta
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.db.seed import load
 from tests.integration.conftest import assert_error_envelope
@@ -26,7 +27,7 @@ from tests.integration.test_payments import (  # noqa: F401 (fake_paystack, pack
 )
 from tests.integration.test_recruiter import _org
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture

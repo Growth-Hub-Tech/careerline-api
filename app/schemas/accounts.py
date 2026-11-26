@@ -19,7 +19,6 @@ class Account(BaseModel):
     email: EmailStr
     phone: str | None
     account_type: AccountType
-    email_verified: bool
     organisation_id: int | None = None
     organisation_role: Literal["owner", "admin", "recruiter"] | None = Field(
         default=None,
@@ -44,7 +43,3 @@ class PasswordResetConfirm(BaseModel):
     email: EmailStr = Field(max_length=EMAIL_MAX_LENGTH)
     pin: str = Field(min_length=1, max_length=10)
     new_password: str = Field(min_length=8, max_length=PASSWORD_MAX_LENGTH)
-
-
-class VerifyEmailRequest(BaseModel):
-    token: str

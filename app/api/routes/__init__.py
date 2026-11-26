@@ -5,7 +5,6 @@ from app.api.routes import (
     attempts,
     auth,
     beginner_path,
-    contact,
     invitations,
     learners,
     organisation_users,
@@ -23,7 +22,7 @@ from app.api.routes import (
     tests_catalogue,
 )
 
-# Every API router. app/main.py mounts this under settings.API_PREFIX (/api/v1),
+# Every API router. app/main.py mounts this under API_PREFIX (/api/v1, app/api/__init__.py),
 # so no route or folder repeats the prefix.
 api_router = APIRouter()
 
@@ -45,7 +44,6 @@ api_router.include_router(payments.router)
 api_router.include_router(subscriptions.router)
 api_router.include_router(privacy.router)
 api_router.include_router(recommendations.router)
-api_router.include_router(contact.router)
 api_router.include_router(accounts.router)
 api_router.include_router(organisation_users.router)
 api_router.include_router(organisations.router)

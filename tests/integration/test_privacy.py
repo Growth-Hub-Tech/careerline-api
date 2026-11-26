@@ -10,11 +10,11 @@ from urllib.parse import urlparse
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.jobs.runner import JobRunner
 from tests.integration.conftest import PASSWORD, assert_error_envelope, login, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def run_jobs() -> None:
@@ -134,23 +134,6 @@ async def test_a_data_export_is_made_in_the_background_and_downloaded(client, le
         assert section in data
 
 
-async def test_the_ready_email_points_at_the_website(client, learner, db):
-    await client.post(f"{API}/privacy/data-exports", headers=learner["headers"])
-    runner = JobRunner(worker_id="test")  # stop before the email is sent (sending empties it)
-    while db.execute(text("SELECT status FROM data_exports")).scalar() != "ready":
-        assert await runner.run_once()
-        db.rollback()
-    (subject, body) = db.execute(
-        text(
-            "SELECT subject, text_body FROM email_outbox WHERE template = 'data_export_ready' "
-            "AND to_email = :e"
-        ),
-        {"e": learner["email"]},
-    ).one()
-    assert "ready" in subject.lower()
-    assert settings.FRONTEND_URL in body and "/data-exports/" not in body
-
-
 async def test_someone_elses_export_is_a_404(client, learner, other_learner):
     queued = (await client.post(f"{API}/privacy/data-exports", headers=learner["headers"])).json()
     response = await client.get(
@@ -210,12 +193,6 @@ async def test_deletion_is_scheduled_30_days_ahead_and_can_be_cancelled(client, 
     assert timedelta(days=29, hours=23) < planned - requested <= timedelta(days=30, minutes=1)
     status = await client.get(f"{API}/privacy/account-deletion", headers=learner["headers"])
     assert status.json()["data"]["status"] == "scheduled"
-    assert (
-        db.execute(
-            text("SELECT count(*) FROM email_outbox WHERE template = 'account_deletion_scheduled'")
-        ).scalar()
-        == 1
-    )
 
     cancelled = await client.delete(f"{API}/privacy/account-deletion", headers=learner["headers"])
     assert cancelled.status_code == 200, cancelled.text
@@ -289,12 +266,6 @@ async def test_a_due_deletion_erases_the_person_and_keeps_anonymous_records(
             {"l": learner["learner_id"]},
         ).scalar()
         assert count == 0, table
-    assert (
-        db.execute(
-            text("SELECT count(*) FROM email_outbox WHERE to_email = :e"), {"e": learner["email"]}
-        ).scalar()
-        == 0
-    )
     # the test result stays, anonymous, so other people's percentiles do not change
     assert (
         db.execute(

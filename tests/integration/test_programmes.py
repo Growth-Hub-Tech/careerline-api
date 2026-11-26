@@ -5,11 +5,11 @@ recorded (for referral reporting) and every career path and result points at a p
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.db.seed import load
 from tests.integration.conftest import assert_error_envelope, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 CATALOGUE = (
     "skills",
     "subskills",

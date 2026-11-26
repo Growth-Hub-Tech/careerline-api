@@ -14,9 +14,7 @@ SECRETS = {
     "OPENAI_API_KEY",
     "CORS_ORIGINS",
     "PAYSTACK_SECRET_KEY",
-    "SMTP_PASSWORD",
     "SENTRY_DSN",
-    "TEST_MAILBOX_TOKEN",
 }
 
 # (web, worker, database) per environment
@@ -101,13 +99,11 @@ def test_the_test_server_is_not_production_and_reads_cors_from_the_dashboard():
 
 def test_the_test_server_loads_the_seed_files_on_every_deploy():
     start = (ROOT / "scripts/start.sh").read_text()
-    assert "python -m app.db.seed" in start
-    assert (
-        start.index("alembic upgrade head")
-        < start.index("app.db.seed")
-        < start.index("exec uvicorn")
-    )
-    assert _env("careerline-api")["SEED_ON_START"]["value"] == "true"
+    condition = start.index('if [ "${APP_ENV:-development}" = "staging" ]')
+    seed = start.index("\n  python -m app.db.seed\n", condition)
+    assert start.index("alembic upgrade head") < condition < seed < start.index("fi\n", condition)
+    assert seed < start.index("exec uvicorn")
+    assert _env("careerline-api")["APP_ENV"]["value"] == "staging"
 
 
 def test_production_deploys_main_with_production_settings():
@@ -115,24 +111,14 @@ def test_production_deploys_main_with_production_settings():
     for name in (web, worker):
         assert _service(name)["branch"] == "main"
         env = _env(name)
-        assert env["APP_ENV"]["value"] == "production"
-        assert "DEMO_DATA_ON_START" not in env
-        assert "TEST_MAILBOX_TOKEN" not in env
-    web_env = _env(web)
-    assert web_env["SEED_ON_START"]["value"] == "false"
-    assert web_env["RUN_JOBS_IN_WEB"]["value"] == "false"
+        assert env["APP_ENV"]["value"] == "production"  # so start.sh loads no seeds or demo data
+    assert _env(web)["RUN_JOBS_IN_WEB"]["value"] == "false"
 
 
 def test_production_asks_for_its_real_settings_in_the_dashboard():
     web = _env(ENVIRONMENTS["production"][0])
     for key in (
         "PAYSTACK_SECRET_KEY",
-        "SMTP_HOST",
-        "SMTP_PORT",
-        "SMTP_USERNAME",
-        "SMTP_PASSWORD",
-        "SMTP_SECURITY",
-        "EMAIL_FROM",
         "CORS_ORIGINS",
         "FRONTEND_URL",
         "SENTRY_DSN",

@@ -13,10 +13,6 @@ GOOD = {
     "FRONTEND_URL": "https://careerline.ng",
     "CORS_ORIGINS": "https://careerline.ng,https://www.careerline.ng",
     "PAYSTACK_SECRET_KEY": "sk_live_" + "x" * 40,
-    "EMAIL_BACKEND": "smtp",
-    "SMTP_HOST": "smtp.example.com",
-    "EMAIL_FROM": "CareerLine <hello@careerline.ng>",
-    "CHECK_MIGRATIONS_ON_STARTUP": "true",  # the test run switches it off in the environment
     "SENTRY_DSN": "https://public@o1.ingest.sentry.io/1",
 }
 
@@ -40,10 +36,6 @@ def test_good_production_settings_have_no_problems():
         ({"CORS_ORIGINS": "http://localhost:5173"}, "CORS_ORIGINS"),
         ({"PAYSTACK_SECRET_KEY": ""}, "PAYSTACK_SECRET_KEY"),
         ({"PAYSTACK_SECRET_KEY": "sk_test_abc"}, "PAYSTACK_SECRET_KEY"),
-        ({"EMAIL_BACKEND": "console"}, "EMAIL_BACKEND"),
-        ({"SMTP_HOST": ""}, "SMTP_HOST"),
-        ({"EMAIL_FROM": "CareerLine <no-reply@careerline.local>"}, "EMAIL_FROM"),
-        ({"CHECK_MIGRATIONS_ON_STARTUP": "false"}, "CHECK_MIGRATIONS_ON_STARTUP"),
         ({"SENTRY_DSN": ""}, "SENTRY_DSN"),
         ({"SESSION_COOKIE_SAMESITE": "none"}, "SESSION_COOKIE_SAMESITE"),
     ],

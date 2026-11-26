@@ -15,15 +15,14 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine, make_url
 from sqlalchemy.pool import NullPool
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.db import seed
 from app.db.session import engine as app_engine
+from app.services import question_quality
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PASSWORD = "correct-horse-battery"
-# The test mailbox answers only with its token (and 404 when none is configured)
-MAILBOX_TOKEN = "test-mailbox-token"
-MAILBOX = {"X-Test-Mailbox-Token": MAILBOX_TOKEN}
 
 
 def _create_database_if_missing(url: str) -> None:
@@ -91,7 +90,7 @@ def skill(database: Engine, monkeypatch) -> dict:
     """One skill with 2 subskills; each subskill has 3 questions of 3 options (1 correct) at
     every level (6 per level). For these tests 3 active questions per level is enough to be
     tested (the real limit, MIN_ACTIVE_QUESTIONS_PER_LEVEL, is 15)."""
-    monkeypatch.setattr(settings, "MIN_ACTIVE_QUESTIONS_PER_LEVEL", 3)
+    monkeypatch.setattr(question_quality, "MIN_ACTIVE_QUESTIONS_PER_LEVEL", 3)
     questions: dict[int, dict] = {}
     with database.begin() as conn:
         skill_id = conn.execute(
@@ -150,7 +149,7 @@ def _add_question(conn, subskill_id: int, level: str, question_text: str) -> int
 
 async def register(client, email: str, password: str = PASSWORD, full_name: str = "Test Learner"):
     return await client.post(
-        f"{settings.API_PREFIX}/auth/register",
+        f"{API_PREFIX}/auth/register",
         json={"full_name": full_name, "email": email, "phone": "08000000000", "password": password},
     )
 
@@ -158,7 +157,7 @@ async def register(client, email: str, password: str = PASSWORD, full_name: str 
 async def login(client, email: str, password: str = PASSWORD):
     # OAuth2 password form: the email goes in "username"
     return await client.post(
-        f"{settings.API_PREFIX}/auth/login", data={"username": email, "password": password}
+        f"{API_PREFIX}/auth/login", data={"username": email, "password": password}
     )
 
 
@@ -186,7 +185,7 @@ async def other_learner(client) -> dict:
 async def start_attempt(client, headers: dict, skill_id: int) -> dict:
     """Start (or resume) an adaptive test; returns the attempt state with its first question."""
     response = await client.post(
-        f"{settings.API_PREFIX}/attempts/start", headers=headers, json={"skill_id": skill_id}
+        f"{API_PREFIX}/attempts/start", headers=headers, json={"skill_id": skill_id}
     )
     assert response.status_code == 200, response.text
     return response.json()["data"]
@@ -194,7 +193,7 @@ async def start_attempt(client, headers: dict, skill_id: int) -> dict:
 
 async def answer(client, headers: dict, attempt_id: int, question_id: int, option_id: int):
     return await client.post(
-        f"{settings.API_PREFIX}/attempts/{attempt_id}/answer",
+        f"{API_PREFIX}/attempts/{attempt_id}/answer",
         headers=headers,
         json={"question_id": question_id, "selected_option_id": option_id},
     )

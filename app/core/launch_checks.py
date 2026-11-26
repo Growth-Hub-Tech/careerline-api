@@ -2,9 +2,8 @@
 
 In production (APP_ENV=production) the API refuses to start while any of these is wrong, and
 says which: a guessable signing key, a website or CORS origin that is not https, a Paystack test
-key (or none: no payments), emails that would not really go out, the placeholder sender, the
-schema check switched off, or no Sentry DSN (nobody would hear about errors). Elsewhere nothing
-is checked.
+key (or none: no payments), a cross-site sign-in cookie, or no Sentry DSN (nobody would hear
+about errors). Elsewhere nothing is checked.
 
     python -m app.core.launch_checks   # the same check from a shell (exit 1 with problems)
 """
@@ -30,7 +29,9 @@ def production_problems(settings: Settings) -> list[str]:
     if len(key) < 32 or any(word in key.lower() for word in PLACEHOLDER_WORDS):
         problems.append("SECRET_KEY must be a random value of at least 32 characters")
     if not _https(settings.FRONTEND_URL):
-        problems.append("FRONTEND_URL must be the website's https address (links in emails)")
+        problems.append(
+            "FRONTEND_URL must be the website's https address (invitation and payment links)"
+        )
     origins = settings.CORS_ORIGINS
     if not origins or any(origin == "*" or not _https(origin) for origin in origins):
         problems.append("CORS_ORIGINS must list the website's https origins (no * or localhost)")
@@ -39,14 +40,6 @@ def production_problems(settings: Settings) -> list[str]:
             "PAYSTACK_SECRET_KEY must be Paystack's live secret key (sk_live_...): without it "
             "nobody can pay, and a test key takes no real money"
         )
-    if settings.email_backend != "smtp":
-        problems.append("EMAIL_BACKEND must be smtp (or unset) so emails really go out")
-    elif not settings.SMTP_HOST:
-        problems.append("SMTP_HOST must be set so emails really go out")
-    if "careerline.local" in settings.EMAIL_FROM:
-        problems.append("EMAIL_FROM must be a real sender address, not the placeholder")
-    if not settings.CHECK_MIGRATIONS_ON_STARTUP:
-        problems.append("CHECK_MIGRATIONS_ON_STARTUP must stay true (never serve an old schema)")
     if settings.SESSION_COOKIE_SAMESITE == "none":
         problems.append(
             "SESSION_COOKIE_SAMESITE must be lax or strict (put the website and the API on one "

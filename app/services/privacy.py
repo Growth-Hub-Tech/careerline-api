@@ -10,8 +10,8 @@ A copy of my data
   while a ready one has not expired, gives that one). The job writes one JSON file with
   everything held about the person (account, profile, consents and their history, behavioural answers,
   every test with its answers and result, skill history, beginner-path intakes, payments,
-  subscriptions, credits, programme clicks, organisations, sign-in sessions, contact messages) and emails them
-  that it is ready (the email points at the website, never at the file).
+  subscriptions, credits, programme clicks, organisations, sign-in sessions). The privacy page
+  shows when it is ready.
 - GET gives a download link that works DATA_EXPORT_LINK_MINUTES without a login (the signed
   token is the proof); a fresh one on every GET. After DATA_EXPORT_DAYS the file is emptied and
   the export and its links answer 410.
@@ -21,9 +21,8 @@ Deleting my account
   that moment) and can be cancelled until then; the account keeps working meanwhile.
 - When it is carried out: the person's name, email, phone and password are replaced, the
   account is switched off, every session ends, and their profile, consents, intakes, behavioural
-  answers, exports, programme clicks, organisation memberships, PDF reports, contact messages,
-  emails and test-mailbox messages are deleted, and Paystack's copies of their payment events
-  are emptied; a subscription is cancelled at once and its saved card forgotten, so it is never
+  answers, exports, programme clicks, organisation memberships and PDF reports are deleted, and
+  Paystack's copies of their payment events are emptied; a subscription is cancelled at once and its saved card forgotten, so it is never
   charged again. What stays, with no way back to the person: test attempts and their scores (so
   everyone else's percentiles do not move) and payments and credit records (kept for the
   accounts, as the law requires).
@@ -42,13 +41,10 @@ from app.core.config import settings
 from app.core.exceptions import ExpiredError, NotFoundError
 from app.core.logging import get_logger
 from app.core.security import ALGORITHM
-from app.email.outbox import send_email
 from app.jobs.queue import enqueue
 from app.jobs.registry import job
-from app.models.accounts import AccountToken, AuthSession
+from app.models.accounts import AuthSession
 from app.models.beginner import BeginnerIntake
-from app.models.contact import ContactMessage
-from app.models.email import EmailOutbox, TestMailboxMessage
 from app.models.history import SkillHistory
 from app.models.models import (
     AttemptQuestion,
@@ -90,7 +86,9 @@ EXPORT_JOB = "privacy.data_export"
 ERASE_JOB = "privacy.erase_account"
 TOKEN_TYPE = "data_export"
 DELETED_NAME = "Deleted account"
-PRIVACY_PAGE = "/settings/privacy"
+DATA_EXPORT_DAYS = 7  # a copy of my data is kept this long
+DATA_EXPORT_LINK_MINUTES = 15  # each download link works this long
+ACCOUNT_DELETION_GRACE_DAYS = 30  # a deletion waits this long, so it can be cancelled
 
 
 def _now() -> datetime:
@@ -164,9 +162,7 @@ async def has_consent(db: AsyncSession, learner_id: int, key: str) -> bool:
 
 
 def export_token(export_id: int) -> tuple[str, datetime]:
-    expires_at = (_now() + timedelta(minutes=settings.DATA_EXPORT_LINK_MINUTES)).replace(
-        microsecond=0
-    )
+    expires_at = (_now() + timedelta(minutes=DATA_EXPORT_LINK_MINUTES)).replace(microsecond=0)
     claims = {"typ": TOKEN_TYPE, "eid": export_id, "exp": int(expires_at.timestamp())}
     return jwt.encode(claims, settings.SECRET_KEY, algorithm=ALGORITHM), expires_at
 
@@ -257,7 +253,6 @@ async def build_export(db: AsyncSession, learner_id: int) -> dict[str, Any]:
             "full_name": learner.full_name,
             "email": learner.email,
             "phone_number": learner.phone_number,
-            "email_verified_at": _iso(learner.email_verified_at),
             "registered_at": _iso(learner.created_at),
             "status": learner.learner_status.value if learner.learner_status else None,
         },
@@ -437,14 +432,6 @@ async def build_export(db: AsyncSession, learner_id: int) -> dict[str, Any]:
             .order_by(AuthSession.created_at)
         )
     ]
-    out["contact_messages"] = [
-        {"ticket_id": m.ticket_id, "topic": m.topic, "message": m.message, "at": _iso(m.created_at)}
-        for m in await db.scalars(
-            select(ContactMessage)
-            .where(ContactMessage.email == learner.email)
-            .order_by(ContactMessage.id)
-        )
-    ]
     return out
 
 
@@ -459,20 +446,7 @@ async def make_data_export(session: AsyncSession, payload: dict[str, Any]) -> No
     row.content = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
     row.status = "ready"
     row.ready_at = _now()
-    row.expires_at = row.ready_at + timedelta(days=settings.DATA_EXPORT_DAYS)
-    learner = await session.get(Learner, row.learner_id)
-    if learner is not None:
-        await send_email(
-            session,
-            to=learner.email,
-            template="data_export_ready",
-            context={
-                "full_name": learner.full_name,
-                "link": settings.FRONTEND_URL.rstrip("/") + PRIVACY_PAGE,
-                "days": settings.DATA_EXPORT_DAYS,
-            },
-            dedupe_key=f"data-export:{row.id}:ready",
-        )
+    row.expires_at = row.ready_at + timedelta(days=DATA_EXPORT_DAYS)
     logger.info("data_export_ready", export_id=row.id)
 
 
@@ -495,7 +469,7 @@ async def request_deletion(
     if row is not None and row.status == "scheduled":
         return _deletion_out(row)
     now = _now().replace(microsecond=0)
-    when = now + timedelta(days=settings.ACCOUNT_DELETION_GRACE_DAYS)
+    when = now + timedelta(days=ACCOUNT_DELETION_GRACE_DAYS)
     if row is None:
         row = AccountDeletion(
             learner_id=learner.learner_id, status="scheduled", requested_at=now, scheduled_for=when
@@ -512,17 +486,6 @@ async def request_deletion(
         {"learner_id": learner.learner_id, "requested_at": now.isoformat()},
         dedupe_key=f"erase:{learner.learner_id}:{int(now.timestamp())}",
         run_after=when,
-    )
-    await send_email(
-        db,
-        to=learner.email,
-        template="account_deletion_scheduled",
-        context={
-            "full_name": learner.full_name,
-            "deletion_date": when.strftime("%d %b %Y"),
-            "link": settings.FRONTEND_URL.rstrip("/") + PRIVACY_PAGE,
-        },
-        dedupe_key=f"erase:{learner.learner_id}:{int(now.timestamp())}:email",
     )
     logger.info("account_deletion_scheduled", learner_id=learner.learner_id)
     return _deletion_out(row)
@@ -549,7 +512,6 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
     learner = await db.get(Learner, learner_id, with_for_update=True)
     if learner is None:
         return
-    email = learner.email
     references = list(
         await db.scalars(select(Payment.reference).where(Payment.learner_id == learner_id))
     )
@@ -557,7 +519,6 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
     await revoke_all_sessions(db, learner_id, "account_deleted")
     for model in (
         AuthSession,
-        AccountToken,
         LearnerConsent,
         ConsentEvent,
         BeginnerIntake,
@@ -569,9 +530,6 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
     ):
         await db.execute(delete(model).where(model.learner_id == learner_id))
     await db.execute(delete(ResultReport).where(ResultReport.attempt_id.in_(attempt_ids)))
-    await db.execute(delete(ContactMessage).where(ContactMessage.email == email))
-    await db.execute(delete(EmailOutbox).where(EmailOutbox.to_email == email))
-    await db.execute(delete(TestMailboxMessage).where(TestMailboxMessage.to_email == email))
     if references:
         await db.execute(
             update(PaystackEvent)
@@ -594,7 +552,6 @@ async def erase_learner(db: AsyncSession, learner_id: int) -> None:
     learner.email = f"deleted-{learner_id}-{uuid.uuid4().hex[:8]}@deleted.invalid"
     learner.phone_number = None  # type: ignore[assignment]
     learner.hashed_password = None  # type: ignore[assignment]
-    learner.email_verified_at = None
     learner.learner_status = LearnerStatus.INACTIVE
     await db.flush()
 

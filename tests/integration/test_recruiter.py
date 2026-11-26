@@ -1,9 +1,10 @@
 """Day 19: recruiters, part 1: candidates and sending invitations.
 
 An organisation's recruiters (and admins and owners) keep a list of candidates and invite them
-to take a test from the catalogue. The invitee gets an email with the link (opening and accepting
-it is Day 20). A candidate's status follows their invitations: added -> invited -> in_progress
--> completed. Everything is scoped to the caller's organisation.
+to take a test from the catalogue. Invitations are in-app: only an email with a CareerLine
+account can be invited, and nothing is emailed (opening and accepting it: test_invitation_links).
+A candidate's status follows their invitations: added -> invited -> in_progress -> completed.
+Everything is scoped to the caller's organisation.
 """
 
 from datetime import UTC, datetime, timedelta
@@ -11,11 +12,12 @@ from datetime import UTC, datetime, timedelta
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from tests.integration.conftest import assert_error_envelope
 from tests.integration.test_organisation_users import add_learner, headers_for
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def _org(db, name: str, person: str, role: str = "recruiter") -> dict:
@@ -32,6 +34,13 @@ def _org(db, name: str, person: str, role: str = "recruiter") -> dict:
     )
     db.commit()
     return {"id": org_id, "learner_id": learner_id, "headers": headers_for(db, learner_id)}
+
+
+@pytest.fixture(autouse=True)
+def invitees(db) -> None:
+    """The people these tests invite have accounts (only accounts can be invited)."""
+    for name in ("chidi", "ngozi"):
+        add_learner(db, name)
 
 
 @pytest.fixture
@@ -111,7 +120,7 @@ async def test_a_learner_without_an_organisation_is_refused(client, learner):
 # ---------- sending invitations ----------
 
 
-async def test_an_invitation_is_sent_by_email_and_adds_the_candidate(client, recruiter, skill, db):
+async def test_an_invitation_adds_the_candidate(client, recruiter, skill, db):
     response = await invite(client, recruiter, skill, message="Looking forward to it")
     assert response.status_code == 201, response.text
     sent = response.json()["data"]
@@ -129,14 +138,22 @@ async def test_an_invitation_is_sent_by_email_and_adds_the_candidate(client, rec
     ).json()["data"]
     assert candidate["status"] == "invited" and candidate["email"] == "chidi@example.com"
 
-    subject, body = db.execute(
-        text(
-            "SELECT subject, text_body FROM email_outbox WHERE template = 'invitation' "
-            "AND to_email = 'chidi@example.com'"
-        )
-    ).one()
-    assert "Acme Recruiting" in subject
-    assert sent["invite_url"] in body and "Looking forward to it" in body
+
+async def test_only_an_email_with_an_account_can_be_invited(client, recruiter, skill, db):
+    response = await invite(client, recruiter, skill, email="Nobody@Example.com")
+    error = assert_error_envelope(response, 409, "no_account")
+    assert "nobody@example.com" in error["message"] and "sign up" in error["message"]
+    assert db.execute(text("SELECT count(*) FROM candidates")).scalar() == 0
+    assert db.execute(text("SELECT count(*) FROM invitations")).scalar() == 0
+    added = await add_candidate(client, recruiter, email="nobody@example.com")
+    assert_error_envelope(added, 409, "no_account")
+    assert db.execute(text("SELECT count(*) FROM candidates")).scalar() == 0
+    # an account that was switched off cannot be invited either
+    db.execute(
+        text("UPDATE learner SET learner_status = 'INACTIVE' WHERE email = 'chidi@example.com'")
+    )
+    db.commit()
+    assert_error_envelope(await invite(client, recruiter, skill), 409, "no_account")
 
 
 async def test_inviting_a_known_candidate_reuses_them(client, recruiter, skill):

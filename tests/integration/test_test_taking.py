@@ -7,7 +7,7 @@ from datetime import UTC, datetime, timedelta
 from sqlalchemy import text
 
 import app.services.test_taking_service as test_taking
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import (
     answer,
     assert_error_envelope,
@@ -16,7 +16,7 @@ from tests.integration.conftest import (
     take_test,
 )
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def _status(db, attempt_id: int) -> str:
@@ -180,7 +180,7 @@ async def test_an_expired_test_with_few_answers_has_no_result(client, learner, s
 async def test_an_expired_test_with_enough_answers_is_scored(client, learner, skill, database, db):
     headers = learner["headers"]
     state = await start_attempt(client, headers, skill["skill_id"])
-    for _ in range(settings.ADAPTIVE_MIN_ANSWERS_FOR_RESULT):
+    for _ in range(test_taking.ADAPTIVE_MIN_ANSWERS_FOR_RESULT):
         question_id = state["question"]["question_id"]
         response = await answer(
             client, headers, state["attempt_id"], question_id, option_for(skill, question_id, True)
@@ -197,7 +197,7 @@ async def test_an_expired_test_with_enough_answers_is_scored(client, learner, sk
     data = current.json()["data"]
     assert data["status"] == "completed" and data["question"] is None
     assert data["result"]["ended_by"] == "time_up"
-    assert data["result"]["answered"] == settings.ADAPTIVE_MIN_ANSWERS_FOR_RESULT
+    assert data["result"]["answered"] == test_taking.ADAPTIVE_MIN_ANSWERS_FOR_RESULT
     assert _status(db, state["attempt_id"]) == "COMPLETED"
     assert db.execute(text("SELECT count(*) FROM skill_history")).scalar_one() == 1
 

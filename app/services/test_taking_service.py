@@ -21,7 +21,6 @@ from datetime import UTC, datetime, timedelta
 from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
 from app.core.exceptions import (
     BadRequestError,
     ConflictError,
@@ -56,13 +55,16 @@ from app.schemas.attempts import (
     SubskillRef,
 )
 from app.services import adaptive_engine as engine
-from app.services import payments
+from app.services import payments, question_quality
 from app.services.explanations import queue_explanations
 from app.services.invitation_completion import complete_invitations
 from app.services.question_picking import pick_next
 from app.services.scoring_service import generate_recommendations
 
 logger = get_logger(__name__)
+
+# A test whose time ran out is still scored when at least this many questions were answered
+ADAPTIVE_MIN_ANSWERS_FOR_RESULT = 8
 
 STATUS_WORDS = {
     AttemptStatus.IN_PROGRESS: "in_progress",
@@ -107,8 +109,8 @@ def _now() -> datetime:
 
 def _config(attempt: TestAttempt, start_level: str | None = None) -> engine.EngineConfig:
     return engine.EngineConfig(
-        length=attempt.question_count or settings.ADAPTIVE_QUESTION_COUNT,
-        start_level=start_level or settings.ADAPTIVE_START_LEVEL,
+        length=attempt.question_count or engine.ADAPTIVE_QUESTION_COUNT,
+        start_level=start_level or engine.ADAPTIVE_START_LEVEL,
     )
 
 
@@ -307,7 +309,7 @@ def _is_expired(attempt: TestAttempt) -> bool:
 
 
 async def _expire(db: AsyncSession, attempt: TestAttempt, served: list[Served]) -> None:
-    if len(_answers(served)) >= settings.ADAPTIVE_MIN_ANSWERS_FOR_RESULT:
+    if len(_answers(served)) >= ADAPTIVE_MIN_ANSWERS_FOR_RESULT:
         await _finish(db, attempt, served, "time_up")
     else:
         attempt.attempt_status = AttemptStatus.EXPIRED
@@ -415,7 +417,7 @@ async def start_or_resume(
         raise SkillNotReady(
             f"Skill {skill_id} cannot be tested yet: some levels have too few reviewed questions",
             details={
-                "minimum_per_level": settings.MIN_ACTIVE_QUESTIONS_PER_LEVEL,
+                "minimum_per_level": question_quality.MIN_ACTIVE_QUESTIONS_PER_LEVEL,
                 "short_by": short_by,
             },
         )
@@ -424,8 +426,8 @@ async def start_or_resume(
         learner_id=learner_id,
         skill_id=skill_id,
         test_format="adaptive",
-        question_count=settings.ADAPTIVE_QUESTION_COUNT,
-        expires_at=_now() + timedelta(minutes=settings.ATTEMPT_TIME_LIMIT_MINUTES),
+        question_count=engine.ADAPTIVE_QUESTION_COUNT,
+        expires_at=_now() + timedelta(minutes=engine.ATTEMPT_TIME_LIMIT_MINUTES),
         attempt_status=AttemptStatus.IN_PROGRESS,
     )
     db.add(attempt)
@@ -433,7 +435,7 @@ async def start_or_resume(
     if charge:
         price = await payments.test_price(db, skill_id)
         await payments.charge_for_test(db, learner_id, attempt.attempt_id, price)
-    start_level = await _latest_level(db, learner_id, skill_id) or settings.ADAPTIVE_START_LEVEL
+    start_level = await _latest_level(db, learner_id, skill_id) or engine.ADAPTIVE_START_LEVEL
     first: list[Served] = []
     await _serve_next(db, attempt, first, start_level)
     logger.info(

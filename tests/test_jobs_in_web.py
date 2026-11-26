@@ -10,6 +10,10 @@ from app import main
 from app.core.config import Settings, settings
 
 
+async def _database_at_head(engine) -> None:
+    """Startup always checks the schema; these tests have no database."""
+
+
 def test_jobs_do_not_run_in_the_web_process_by_default(monkeypatch):
     monkeypatch.delenv("RUN_JOBS_IN_WEB", raising=False)
     # _env_file=None: the default, not whatever this machine's .env says
@@ -36,7 +40,7 @@ async def test_the_web_process_starts_and_stops_the_job_loop_when_asked(monkeypa
         scheduled.append(True)
 
     monkeypatch.setattr(settings, "RUN_JOBS_IN_WEB", True)
-    monkeypatch.setattr(settings, "CHECK_MIGRATIONS_ON_STARTUP", False)
+    monkeypatch.setattr(main, "assert_database_at_head", _database_at_head)
     monkeypatch.setattr(main, "JobRunner", FakeRunner)
     monkeypatch.setattr(main, "schedule_todays_cleanup", fake_schedule)
     async with main.lifespan(main.app):
@@ -49,7 +53,7 @@ async def test_the_web_process_starts_and_stops_the_job_loop_when_asked(monkeypa
 async def test_without_the_setting_the_web_process_runs_no_jobs(monkeypatch):
     created = []
     monkeypatch.setattr(settings, "RUN_JOBS_IN_WEB", False)
-    monkeypatch.setattr(settings, "CHECK_MIGRATIONS_ON_STARTUP", False)
+    monkeypatch.setattr(main, "assert_database_at_head", _database_at_head)
     monkeypatch.setattr(main, "JobRunner", lambda **kwargs: created.append(kwargs))
     monkeypatch.setattr(main, "schedule_todays_cleanup", lambda: created.append("cleanup"))
     async with main.lifespan(main.app):

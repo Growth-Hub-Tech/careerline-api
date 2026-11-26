@@ -16,6 +16,7 @@ from pypdf import PdfReader
 from sqlalchemy import text
 
 import app.services.reports as reports
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.jobs.runner import JobRunner
 from tests.integration.conftest import (
@@ -26,7 +27,7 @@ from tests.integration.conftest import (
     take_test,
 )
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def _run_jobs() -> None:

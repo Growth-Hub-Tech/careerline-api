@@ -3,11 +3,12 @@ has enough of them."""
 
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.db.seed import load
+from app.services import question_quality
 from tests.integration.conftest import assert_error_envelope, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_questions_that_are_not_active_are_never_served(client, learner, skill, database, db):
@@ -35,7 +36,7 @@ async def test_questions_that_are_not_active_are_never_served(client, learner, s
 async def test_a_skill_short_of_active_questions_cannot_be_tested(
     client, learner, skill, database, monkeypatch
 ):
-    monkeypatch.setattr(settings, "MIN_ACTIVE_QUESTIONS_PER_LEVEL", 6)
+    monkeypatch.setattr(question_quality, "MIN_ACTIVE_QUESTIONS_PER_LEVEL", 6)
     mid = [qid for qid, info in skill["questions"].items() if info["level"] == "MID"]
     with database.begin() as conn:
         conn.execute(

@@ -15,11 +15,12 @@ from sqlalchemy import text
 import app.integrations.openai_client as openai_client
 import app.services.scoring_service as scoring_service
 import app.services.test_taking_service as test_taking_service
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.jobs.runner import JobRunner
 from tests.integration.conftest import take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def ai_jobs(db) -> int:

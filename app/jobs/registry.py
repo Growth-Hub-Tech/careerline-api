@@ -1,9 +1,9 @@
 """Job handlers by kind. A handler is `async def handler(session, payload) -> None`.
 
 The handler's database writes commit in the same transaction that marks the job done, so they
-happen exactly once. Anything outside the database (an email, an API call) can run again if a
-worker dies at the wrong moment, so handlers must be idempotent: check first, then act (the
-email handler skips a message already marked sent).
+happen exactly once. Anything outside the database (an API call) can run again if a worker
+dies at the wrong moment, so handlers must be idempotent: check first, then act (the renewal
+handler asks Paystack about a reference it already tried).
 """
 
 import importlib

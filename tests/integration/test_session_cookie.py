@@ -6,19 +6,14 @@ The browser fixture talks https, so httpx keeps and sends the Secure cookie the 
 import httpx
 import pytest
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.core.security import SESSION_COOKIE
 from app.main import app
 from tests.integration.conftest import PASSWORD, login, register
 
-API = settings.API_PREFIX
+API = API_PREFIX
 FOREIGN = "https://evil.example"
-CONTACT = {
-    "full_name": "Ada Okafor",
-    "email": "ada@example.com",
-    "topic": "general",
-    "message": "Hello there, a question about the audits.",
-}
 
 
 @pytest.fixture
@@ -79,8 +74,14 @@ async def test_a_change_with_the_cookie_needs_the_websites_origin(browser, site)
 
 async def test_another_sites_cookie_request_to_a_public_route_is_simply_anonymous(browser):
     await signed_in(browser)
-    response = await browser.post(f"{API}/contact", json=CONTACT, headers={"Origin": FOREIGN})
-    assert response.status_code == 201, response.text
+    response = await browser.post(
+        f"{API}/accounts/password-reset/confirm",
+        json={"email": "ada@example.com", "pin": "0000", "new_password": "a-new-password-here"},
+        headers={"Origin": FOREIGN},
+    )
+    # answered like any anonymous call (a wrong PIN), not refused for the cookie
+    assert response.status_code == 400, response.text
+    assert response.json()["error"]["code"] == "invalid_reset_pin"
 
 
 async def test_a_bearer_token_wins_over_the_cookie(browser):

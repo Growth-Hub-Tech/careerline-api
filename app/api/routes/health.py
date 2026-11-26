@@ -1,7 +1,6 @@
 from fastapi import APIRouter
 from sqlalchemy import text
 
-from app.core.config import settings
 from app.core.exceptions import ServiceUnavailableError
 from app.core.logging import get_logger
 from app.core.responses import EnvelopeRoute, ok
@@ -17,7 +16,7 @@ router = APIRouter(tags=["Health"], route_class=EnvelopeRoute)
 # Liveness: the process is up (no database call, so a slow database never restarts the app)
 @router.get("/healthz")
 async def health_check():
-    return ok({"status": "healthy"}, message=f"{settings.APP_NAME} is running")
+    return ok({"status": "healthy"}, message="CareerLine API is running")
 
 
 # Readiness: the database answers and is at the latest migration

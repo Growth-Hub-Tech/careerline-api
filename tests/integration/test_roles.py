@@ -2,10 +2,10 @@
 
 import pytest
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.db.seed import load
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture

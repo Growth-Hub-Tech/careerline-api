@@ -21,7 +21,6 @@ app/
                      plus health (/healthz, /readyz)
   core/              config, security, logging, exceptions, error handlers, response envelope, middleware
   db/                SQLAlchemy base, engine/session, migration check, seed loader (python -m app.db.seed)
-  email/             send_email(), backends (smtp, test mailbox, console), templates/ (one layout)
   integrations/      external services (OpenAI)
   jobs/              background jobs: Postgres queue, handler registry, runner
   models/            SQLAlchemy models
@@ -48,14 +47,16 @@ python3.13 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
 cp .env.example .env               # then set DATABASE_URL and SECRET_KEY
 alembic upgrade head
-uvicorn app.main:app --reload      # http://localhost:8000
+python -m app                      # http://localhost:8000 (PORT in .env)
 ```
+
+`python -m app` serves on `PORT` from `.env` (default 8000) and reloads on code changes. If that port is taken, change `PORT` in `.env`, and point the website's `VITE_API_URL` at the same port.
 
 API docs: http://localhost:8000/docs (OpenAPI at `/openapi.json`; production serves neither).
 
 ## API conventions
 
-- **Global prefix.** Every API route is served under `API_PREFIX` (default `/api/v1`), which `app/main.py` adds once. Route files and folders never repeat it. `/healthz`, `/readyz`, `/docs` and `/openapi.json` sit outside the prefix.
+- **Global prefix.** Every API route is served under `/api/v1` (`API_PREFIX` in `app/api/__init__.py`), which `app/main.py` adds once. Route files and folders never repeat it. `/healthz`, `/readyz`, `/docs` and `/openapi.json` sit outside the prefix.
 - **Success envelope.** Routes return their data; `EnvelopeRoute` wraps it:
   ```json
   { "success": true, "message": "Learner registered successfully", "data": { "learner_id": 1 } }
@@ -85,16 +86,16 @@ CI and `tests/test_openapi_file.py` fail when the committed file is out of date.
 ## Database migrations
 
 - `scripts/start.sh` runs `alembic upgrade head` before starting the server. If the migration fails, the server never starts.
-- On startup the app also checks that the database is at the latest migration and refuses to start if it is behind, even when someone runs `uvicorn` directly (`CHECK_MIGRATIONS_ON_STARTUP`).
+- On startup the app also checks that the database is at the latest migration and refuses to start if it is behind, even when someone runs `uvicorn` directly.
 - Migrations take a Postgres advisory lock, so two instances starting together never migrate at once.
 - Create one with `alembic revision --autogenerate -m "add x to y"`, review the generated file, and run `alembic upgrade head`. CI fails when there is more than one Alembic head.
 - Since Day 4 there is a single starting migration; see [docs/database.md](docs/database.md) for what that means for databases created before.
 
 ## Seed files
 
-`seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions, job roles, programmes). `python -m app.db.seed` loads it; running it again changes nothing. The test server loads it on every deploy (`SEED_ON_START=true`). Details: [docs/database.md](docs/database.md).
+`seeds/` holds the reference data (4 levels, score bands, 50 skills, 221 subskills, 4000 questions with their options, behavioural questions, job roles, programmes). `python -m app.db.seed` loads it; running it again changes nothing. The test server (`APP_ENV=staging`) loads it on every deploy (`scripts/start.sh`). Details: [docs/database.md](docs/database.md).
 
-`python -m app.db.demo` loads the demo accounts and Demo Company Ltd (listed in [docs/api.md](docs/api.md)); the test server runs it on every deploy (`DEMO_DATA_ON_START=true`), and it refuses to run in production.
+`python -m app.db.demo` loads the demo accounts and Demo Company Ltd (listed in [docs/api.md](docs/api.md)); the test server runs it on every deploy too, and it refuses to run in production.
 
 Access: every route has one rule in `app/core/permissions.py` (public, signed in, self, or an organisation permission per role); a new route needs one, or the tests fail and the route is refused.
 
@@ -152,7 +153,7 @@ A pull request into `main` must come from `dev`.
 
 ## Going live
 
-With `APP_ENV=production` the API refuses to start, and logs every reason at once, while a setting is unsafe or still a test one (`app/core/launch_checks.py`): `SECRET_KEY` shorter than 32 characters or a placeholder; `FRONTEND_URL` or a `CORS_ORIGINS` entry not https (or `*`, or localhost); `PAYSTACK_SECRET_KEY` not a live key (`sk_live_…`); emails not going out by SMTP (`EMAIL_BACKEND`, `SMTP_HOST`); the placeholder `EMAIL_FROM`; `CHECK_MIGRATIONS_ON_STARTUP=false`. The whole launch checklist (services, settings, Paystack, data, the website, launch day) is [docs/launch.md](docs/launch.md). Check a configuration from a shell before deploying it:
+With `APP_ENV=production` the API refuses to start, and logs every reason at once, while a setting is unsafe or still a test one (`app/core/launch_checks.py`): `SECRET_KEY` shorter than 32 characters or a placeholder; `FRONTEND_URL` or a `CORS_ORIGINS` entry not https (or `*`, or localhost); `PAYSTACK_SECRET_KEY` not a live key (`sk_live_…`); `SESSION_COOKIE_SAMESITE=none`; no `SENTRY_DSN`. The whole launch checklist (services, settings, Paystack, data, the website, launch day) is [docs/launch.md](docs/launch.md). Check a configuration from a shell before deploying it:
 
 ```bash
 APP_ENV=production python -m app.core.launch_checks   # lists the problems; exit 1 if any
@@ -164,7 +165,7 @@ APP_ENV=production python -m app.core.launch_checks   # lists the problems; exit
 
 ## Environment variables
 
-Every variable the code reads is listed in [.env.example](.env.example). The required ones:
+Every variable the code reads is listed in [.env.example](.env.example): only what differs between machines and servers. Fixed rules (test length and time limit, sign-in limits, grace periods, link lifetimes, job retries) are constants in the module that uses them. The required ones:
 
 | Variable       | Description                                                        |
 | -------------- | ------------------------------------------------------------------ |
@@ -173,13 +174,11 @@ Every variable the code reads is listed in [.env.example](.env.example). The req
 | `CORS_ORIGINS` | Comma-separated frontend origins (default `http://localhost:5173`) |
 | `LOG_JSON`     | `true` in production for JSON logs                                 |
 
-Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Settings: `VERIFY_EMAIL_TOKEN_HOURS`, `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR`, `CHECKOUTS_PER_HOUR` (Paystack payments one person may start per hour).
+Accounts: passwords are hashed with Argon2id (older bcrypt hashes still work and are upgraded at sign-in); sessions are rows in `auth_sessions`. Limits: `LOGIN_MAX_FAILURES_PER_EMAIL`, `LOGIN_MAX_FAILURES_PER_IP`, `LOGIN_WINDOW_MINUTES`, `SIGNUPS_PER_IP_PER_HOUR` (`app/services/account_service.py`) and `CHECKOUTS_PER_HOUR` (Paystack payments one person may start per hour, `app/services/payments.py`).
 
-Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` (polling, lease, retries). A daily `cleanup` job (`app/jobs/cleanup.py`) deletes finished jobs, sent emails and expired sessions once they are 30 days old. Email: `EMAIL_BACKEND` (`smtp`, `test_mailbox`, `console`), `EMAIL_FROM`, `SUPPORT_EMAIL`, `FRONTEND_URL`, `SMTP_*`, `TEST_MAILBOX_TOKEN`.
+Background jobs: `RUN_JOBS_IN_WEB` (run them inside the API, for a server with no worker), `JOB_*` constants in `app/jobs/runner.py` and `app/jobs/queue.py` (polling, lease, retries). A daily `cleanup` job (`app/jobs/cleanup.py`) deletes finished jobs and expired sessions once they are 30 days old.
 
-### Email layout
-
-Every email is rendered inside `app/email/templates/layout.html` (and `layout.txt` for the plain-text part). That pair is the only place that decides how emails look. Omotoke's email design replaces those two files, keeping the slot names documented at the top of `layout.html` (`content`, `preheader`, `footer_note`, `brand.*`).
+CareerLine sends no email. Invitations are in-app: only an email with an account can be invited, and the invitee finds it in `GET /invitations/received`. `FRONTEND_URL` is the website's address, for invitation links and Paystack's return.
 
 ## Scripts
 

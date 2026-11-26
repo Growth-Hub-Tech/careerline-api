@@ -88,15 +88,6 @@ def read_question_reviews() -> dict[int, str]:
     return {int(r["question_id"]): r["decision"] for r in reviews}
 
 
-def quality_thresholds() -> quality.Thresholds:
-    from app.core.config import settings
-
-    return quality.Thresholds(
-        review_ratio=settings.QUESTION_LENGTH_REVIEW_RATIO,
-        block_ratio=settings.QUESTION_LENGTH_BLOCK_RATIO,
-    )
-
-
 def _add_quality(rows: dict[str, list[dict[str, Any]]], limits: quality.Thresholds) -> None:
     """Give every question its status and issues from the quality check and the reviews."""
     skill_of = {s["subskill_id"]: s["skill_id"] for s in rows["subskills"]}
@@ -249,7 +240,7 @@ def _move_id_counter_past_max(conn: Connection, table: Table) -> None:
 
 def load(conn: Connection, tables: tuple[str, ...] = tuple(TABLES)) -> dict[str, Counts]:
     """Upsert the seed rows of these tables (all by default) inside the caller's transaction."""
-    rows = read_seed_rows(quality_thresholds())
+    rows = read_seed_rows()
     result: dict[str, Counts] = {}
     for name, table in TABLES.items():
         if name not in tables:

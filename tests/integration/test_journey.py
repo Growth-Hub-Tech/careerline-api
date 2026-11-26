@@ -1,9 +1,9 @@
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import answer, option_for, start_attempt, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_full_learner_journey(client, learner, skill, db):

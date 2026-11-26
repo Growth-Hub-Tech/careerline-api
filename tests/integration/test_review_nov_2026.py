@@ -6,11 +6,11 @@ fix in the same commit makes them pass.
 
 import pytest
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.services import account_service
 from tests.integration.conftest import PASSWORD, assert_error_envelope, login, take_test
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_out_of_range_paging_on_my_attempts_is_refused_not_a_server_error(client, learner):

@@ -9,10 +9,11 @@ from datetime import UTC, datetime, timedelta
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
+from app.services import adaptive_engine
 from tests.integration.conftest import answer, assert_error_envelope, option_for
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 def _test_id(skill: dict) -> int:
@@ -62,8 +63,8 @@ async def test_the_catalogue_lists_every_skill_that_can_be_tested(client, skill)
     assert item["title"] == "Python" and item["skill_name"] == "Python"
     assert item["format"] == "adaptive" and item["price_credits"] == 0
     assert item["levels"] == ["BEGINNER", "JUNIOR", "MID", "ADVANCED"]
-    assert item["question_count"] == settings.ADAPTIVE_QUESTION_COUNT
-    assert item["duration_minutes"] == settings.ATTEMPT_TIME_LIMIT_MINUTES
+    assert item["question_count"] == adaptive_engine.ADAPTIVE_QUESTION_COUNT
+    assert item["duration_minutes"] == adaptive_engine.ATTEMPT_TIME_LIMIT_MINUTES
     assert item["role_ids"] == []
     filtered = (await client.get(f"{API}/tests", params={"skill_id": 999})).json()["data"]
     assert filtered["items"] == [] and filtered["total"] == 0

@@ -2,9 +2,10 @@
 
 - An audit has roles; its members are the roster people in those roles (or the member_ids
   given, which must be on the roster and in those roles) whose role has at least one testable
-  skill. Started (now, or later from a draft), it sends each member a team invitation for every
-  testable skill of their role: free for them, accepted with any account, valid
-  AUDIT_INVITATION_DAYS days.
+  skill. Started (now, or later from a draft), it gives each member an in-app team invitation for
+  every testable skill of their role: free for them, accepted with their own account, valid
+  AUDIT_INVITATION_DAYS days. Every member invited needs a CareerLine account with their roster
+  email: otherwise nothing is sent and the start is a 409 no_account naming them.
 - Status: draft until started; completed once every member has finished every invitation of
   the audit (revoked ones don't count); otherwise in_progress. Nothing about it is stored but
   started_at: it always follows the invitations.
@@ -21,14 +22,12 @@ from datetime import UTC, datetime, timedelta
 from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
 from app.core.exceptions import BadRequestError, ConflictError, NotFoundError
 from app.core.logging import get_logger
-from app.email.outbox import send_email
 from app.models.audits import Audit, AuditMember, OrganisationTarget, TeamMember
 from app.models.history import SkillHistory
 from app.models.models import Skill
-from app.models.organisations import Organisation, OrganisationMember
+from app.models.organisations import OrganisationMember
 from app.models.recruiting import Invitation
 from app.models.roles import JobRoleSkill
 from app.repositories.question_repo import testable_skill_ids
@@ -43,11 +42,13 @@ from app.schemas.organisations import (
     MemberDelta,
 )
 from app.services import team
-from app.services.recruiting import LEVEL_ORDER, invite_url
+from app.services.recruiting import LEVEL_ORDER, NoAccountError, emails_with_accounts
 
 logger = get_logger(__name__)
 
 INDUSTRY_MIN_RESULTS = 5
+AUDIT_INVITATION_DAYS = 14  # how long the team's test invitations work
+RETEST_COOLDOWN_DAYS = 14  # an audit can be re-tested this long after its last test started
 
 
 def _now() -> datetime:
@@ -345,6 +346,28 @@ async def _pick_members(
     return sorted(chosen, key=lambda r: (r.full_name, r.id))
 
 
+NAMES_SHOWN = 5
+
+
+async def _require_accounts(db: AsyncSession, people: list[TeamMember]) -> None:
+    """Invitations are in-app: refuse (409, naming them) while anyone has no account."""
+    have = await emails_with_accounts(db, {p.email for p in people})
+    missing = sorted((p for p in people if p.email.lower() not in have), key=lambda p: p.full_name)
+    if not missing:
+        return
+    names = [p.full_name for p in missing[:NAMES_SHOWN]]
+    if len(missing) > NAMES_SHOWN:
+        names.append(f"{len(missing) - NAMES_SHOWN} more")
+    listed = names[0] if len(names) == 1 else f"{', '.join(names[:-1])} and {names[-1]}"
+    subject = f"{listed} has" if len(missing) == 1 else f"{len(missing)} people have"
+    who = "" if len(missing) == 1 else f": {listed}"
+    raise NoAccountError(
+        f"{subject} no CareerLine account yet{who}. Ask them to sign up with the email on the "
+        "team roster, or leave them out of the audit.",
+        details={"team_member_ids": [p.id for p in missing]},
+    )
+
+
 async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: Audit) -> int:
     members = (await _audit_members(db, [audit.id]))[audit.id]
     testable = await _testable_by_role(db, sorted({m.role_id for m in members}))
@@ -355,17 +378,17 @@ async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: 
             select(TeamMember).where(TeamMember.id.in_([m.team_member_id for m in members]))
         )
     }
-    names = await skill_names(db, {s for skills in testable.values() for s in skills})
-    organisation = await db.scalar(
-        select(Organisation.name).where(Organisation.id == audit.organisation_id)
-    )
-    now = _now()
-    sent = 0
+    planned: list[tuple[TeamMember, list[int]]] = []
     for member in sorted(members, key=lambda m: m.team_member_id):
-        person = people[member.team_member_id]
         skills = testable.get(member.role_id, [])
         if repeat is not None:  # a re-test: the tests they had in the baseline audit
             skills = [s for s in skills if s in repeat.get(member.team_member_id, set())]
+        if skills:
+            planned.append((people[member.team_member_id], skills))
+    await _require_accounts(db, [person for person, _ in planned])
+    now = _now()
+    sent = 0
+    for person, skills in planned:
         for skill_id in skills:
             row = Invitation(
                 token=secrets.token_urlsafe(32),
@@ -380,25 +403,9 @@ async def _send_invitations(db: AsyncSession, actor: OrganisationMember, audit: 
                 status="sent",
                 sent_by=actor.learner_id,
                 sent_at=now,
-                expires_at=now + timedelta(days=settings.AUDIT_INVITATION_DAYS),
+                expires_at=now + timedelta(days=AUDIT_INVITATION_DAYS),
             )
             db.add(row)
-            await db.flush()
-            await send_email(
-                db,
-                to=person.email,
-                template="invitation",
-                context={
-                    "full_name": person.full_name,
-                    "organisation": organisation or "",
-                    "test_title": names.get(skill_id, ""),
-                    "minutes": settings.ATTEMPT_TIME_LIMIT_MINUTES,
-                    "message": f"Part of {audit.name}.",
-                    "link": invite_url(row.token),
-                    "expires_on": row.expires_at.strftime("%d %b %Y"),
-                },
-                dedupe_key=f"invitation:{row.id}",
-            )
             sent += 1
     audit.started_at = now
     await db.flush()
@@ -474,7 +481,7 @@ async def _retest_cooldown_ends(
     )
     if last is None:
         return None
-    ends = last.astimezone(UTC) + timedelta(days=settings.RETEST_COOLDOWN_DAYS)
+    ends = last.astimezone(UTC) + timedelta(days=RETEST_COOLDOWN_DAYS)
     return ends if ends > _now() else None
 
 

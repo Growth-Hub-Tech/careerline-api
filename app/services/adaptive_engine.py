@@ -37,6 +37,12 @@ from dataclasses import dataclass, field
 LEVELS = ("BEGINNER", "JUNIOR", "MID", "ADVANCED")
 GRID = tuple(i / 20 for i in range(81))  # abilities 0.00, 0.05, ... 4.00
 
+# Every skill's test: 16 questions in 30 minutes. A first test starts at JUNIOR; a retake
+# starts at the level the person reached last time (app/services/test_taking_service.py).
+ADAPTIVE_QUESTION_COUNT = 16
+ADAPTIVE_START_LEVEL = "JUNIOR"
+ATTEMPT_TIME_LIMIT_MINUTES = 30
+
 
 @dataclass(frozen=True)
 class Answer:
@@ -48,8 +54,8 @@ class Answer:
 
 @dataclass(frozen=True)
 class EngineConfig:
-    length: int = 16
-    start_level: str = "JUNIOR"
+    length: int = ADAPTIVE_QUESTION_COUNT
+    start_level: str = ADAPTIVE_START_LEVEL
     discrimination: float = 1.7
     guessing: float = 0.25
     # score bands per level, as in seeds/level_thresholds.json

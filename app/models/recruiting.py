@@ -59,6 +59,8 @@ class Invitation(Base):
         Index("ix_invitations_candidate", "candidate_id"),
         Index("ix_invitations_team_member", "team_member_id"),
         Index("ix_invitations_audit", "audit_id"),
+        # GET /invitations/received: the invitations sent to one account's email
+        Index("ix_invitations_email", "email"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)

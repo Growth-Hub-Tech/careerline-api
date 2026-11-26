@@ -2,24 +2,17 @@
 a password change ends all the others."""
 
 import jwt
-import pytest
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from tests.integration.conftest import (
-    MAILBOX_TOKEN,
     PASSWORD,
     assert_error_envelope,
     login,
     register,
 )
 
-API = settings.API_PREFIX
-
-
-@pytest.fixture(autouse=True)
-def mailbox(monkeypatch):
-    monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
-    monkeypatch.setattr(settings, "TEST_MAILBOX_TOKEN", MAILBOX_TOKEN)
+API = API_PREFIX
 
 
 def bearer(token: str) -> dict:

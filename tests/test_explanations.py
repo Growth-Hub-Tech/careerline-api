@@ -62,7 +62,7 @@ def test_the_ai_is_told_the_question_the_options_and_the_right_answer(monkeypatc
     )
     assert text == "Lists keep order."
     call = completions.calls[0]
-    assert call["model"] == settings.OPENAI_EXPLANATION_MODEL
+    assert call["model"] == openai_client.OPENAI_EXPLANATION_MODEL
     prompt = " ".join(m["content"] for m in call["messages"])
     for part in ("Which keeps order?", "list", "set", "Lists", "Python"):
         assert part in prompt

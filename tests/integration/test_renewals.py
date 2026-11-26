@@ -18,9 +18,11 @@ import httpx
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.integrations import paystack
 from app.jobs.runner import JobRunner
+from app.services import subscriptions as subscription_service
 from tests.integration.test_payments import (  # noqa: F401 (packs: a fixture)
     SECRET,
     FakePaystack,
@@ -32,7 +34,7 @@ from tests.integration.test_payments import (  # noqa: F401 (packs: a fixture)
 from tests.integration.test_recruiter import _org
 from tests.integration.test_subscriptions import my_subscription, plans, subscribe  # noqa: F401
 
-API = settings.API_PREFIX
+API = API_PREFIX
 AUTH = {"authorization_code": "AUTH_test123", "reusable": True, "channel": "card"}
 
 
@@ -68,7 +70,6 @@ class RenewingPaystack(FakePaystack):
 @pytest.fixture
 def fake(monkeypatch, packs) -> RenewingPaystack:  # noqa: F811
     fake = RenewingPaystack()
-    monkeypatch.setattr(settings, "EMAIL_BACKEND", "test_mailbox")
     monkeypatch.setattr(settings, "PAYSTACK_SECRET_KEY", SECRET)
     monkeypatch.setattr(paystack, "TRANSPORT", httpx.MockTransport(fake))
     return fake
@@ -156,22 +157,13 @@ async def test_the_renewal_charges_the_card_and_starts_the_next_period(
     assert len(fake.calls("/transaction/charge_authorization")) == 1
 
 
-async def test_a_declined_renewal_emails_the_person_and_tries_again_the_next_day(
-    client, db, learner, plans, fake
-):
+async def test_a_declined_renewal_tries_again_the_next_day(client, db, learner, plans, fake):
     await subscribed(client, learner, fake)
     fake.charge_status = "failed"
     make_due(db)
     await run_jobs()
     assert (await my_subscription(client, learner))["status"] == "active"  # until the period ends
     assert await balance(client, learner) == 5
-    mail = db.execute(
-        text(
-            "SELECT subject, text_body FROM test_mailbox_messages WHERE subject LIKE '%could not be renewed'"
-        )
-    ).one()
-    assert "Individual Monthly" in mail.subject
-    assert f"{settings.FRONTEND_URL}/billing" in mail.text_body
     jobs = renew_jobs(db)
     assert jobs[-1].status == "queued" and jobs[-1].payload["attempt"] == 2
     assert jobs[-1].run_after - datetime.now(UTC) > timedelta(hours=23)
@@ -191,7 +183,7 @@ async def test_a_declined_renewal_emails_the_person_and_tries_again_the_next_day
 async def test_after_the_last_attempt_the_card_is_not_tried_again(
     client, db, learner, plans, fake, monkeypatch
 ):
-    monkeypatch.setattr(settings, "SUBSCRIPTION_RENEW_ATTEMPTS", 2)
+    monkeypatch.setattr(subscription_service, "SUBSCRIPTION_RENEW_ATTEMPTS", 2)
     await subscribed(client, learner, fake)
     fake.charge_status = "failed"
     for _ in range(3):
@@ -199,25 +191,21 @@ async def test_after_the_last_attempt_the_card_is_not_tried_again(
         await run_jobs()
     assert len(fake.calls("/transaction/charge_authorization")) == 2
     assert [j.status for j in renew_jobs(db)] == ["succeeded", "succeeded"]
-    count = db.execute(
-        text("SELECT count(*) FROM email_outbox WHERE template = 'subscription_payment_failed'")
-    ).scalar()
-    assert count == 1  # one email, not one per attempt
 
 
-async def test_without_a_reusable_card_the_person_is_asked_to_pay(client, db, learner, plans, fake):
+async def test_without_a_reusable_card_the_person_pays_again_from_billing(
+    client, db, learner, plans, fake
+):
     await subscribed(
         client, learner, fake, authorization={"authorization_code": "AUTH_x", "reusable": False}
     )
     make_due(db)
     await run_jobs()
     assert fake.calls("/transaction/charge_authorization") == []
-    mail = db.execute(
-        text(
-            "SELECT text_body FROM test_mailbox_messages WHERE subject LIKE '%could not be renewed'"
-        )
-    ).scalar()
-    assert "/billing" in mail
+    assert [j.status for j in renew_jobs(db)] == ["succeeded"]  # nothing retried without a card
+    db.execute(text("UPDATE subscriptions SET current_period_end = now() - interval '1 hour'"))
+    db.commit()
+    assert (await my_subscription(client, learner))["status"] == "past_due"
 
 
 async def test_a_cancelled_plan_is_not_renewed(client, db, learner, plans, fake):
@@ -226,12 +214,6 @@ async def test_a_cancelled_plan_is_not_renewed(client, db, learner, plans, fake)
     make_due(db)
     await run_jobs()
     assert fake.calls("/transaction/charge_authorization") == []
-    assert (
-        db.execute(
-            text("SELECT count(*) FROM email_outbox WHERE template LIKE 'subscription%'")
-        ).scalar()
-        == 0
-    )
     db.execute(text("UPDATE subscriptions SET current_period_end = now() - interval '1 minute'"))
     db.commit()
     assert (await my_subscription(client, learner))["status"] == "cancelled"

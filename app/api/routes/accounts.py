@@ -11,7 +11,6 @@ from app.schemas.accounts import (
     AccountUpdate,
     ChangePasswordRequest,
     PasswordResetConfirm,
-    VerifyEmailRequest,
 )
 from app.schemas.common import Acknowledgement
 from app.services import account_service
@@ -35,7 +34,6 @@ def account_of(learner: Learner, membership: OrganisationMember | None) -> Accou
         email=learner.email,
         phone=learner.phone_number,
         account_type=ACCOUNT_TYPES.get(role or "", "learner"),
-        email_verified=True,  # email confirmation is switched off for now
         organisation_id=membership.organisation_id if membership else None,
         organisation_role=role,
         created_at=learner.created_at,
@@ -91,7 +89,7 @@ async def change_my_password(
     response_model=Acknowledgement,
     responses=errors(400, 429),
     description="Sets a new password with the account's email and the reset PIN (1234 for every "
-    "account until emails are switched on). A wrong PIN or an unknown email is "
+    "account). A wrong PIN or an unknown email is "
     "`invalid_reset_pin` (400). 5 wrong tries for one email (or 20 from one IP address) in 15 "
     "minutes: 429 with Retry-After. Signs out every device.",
 )
@@ -103,34 +101,4 @@ async def confirm_password_reset(
     await account_service.reset_password(
         db, str(data.email), data.pin, data.new_password, client_ip(request)
     )
-    return Acknowledgement()
-
-
-@router.post(
-    "/verify-email",
-    response_model=Acknowledgement,
-    responses=errors(410),
-    description="The token from the confirmation link. An old, used or unknown token is "
-    "`expired` (410).",
-)
-async def verify_email(
-    data: VerifyEmailRequest, db: AsyncSession = Depends(get_db, scope="function")
-):
-    await account_service.verify_email(db, data.token)
-    return Acknowledgement()
-
-
-@router.post(
-    "/verify-email/resend",
-    status_code=202,
-    response_model=Acknowledgement,
-    responses=errors(401, 429),
-    description="Emails a new confirmation link (the old one stops working). Nothing is sent if "
-    "the email is already confirmed. At most 3 an hour.",
-)
-async def resend_verification_email(
-    current: CurrentSession = Depends(get_current_session),
-    db: AsyncSession = Depends(get_db, scope="function"),
-):
-    await account_service.resend_verification(db, current.learner)
     return Acknowledgement()

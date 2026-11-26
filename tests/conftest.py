@@ -24,7 +24,6 @@ elif os.environ.get("CI"):
 # No database is needed: nothing here connects (the engine connects lazily).
 os.environ.setdefault("DATABASE_URL", "postgresql://test:test@127.0.0.1:5432/careerline_test")
 os.environ.setdefault("SECRET_KEY", "test-secret-key-not-used-anywhere-else")
-os.environ["CHECK_MIGRATIONS_ON_STARTUP"] = "false"
 # Tests never call OpenAI, even when a real key is in .env
 os.environ["OPENAI_API_KEY"] = ""
 

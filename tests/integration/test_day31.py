@@ -15,16 +15,20 @@ from datetime import UTC, timedelta
 
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
+from app.services import audits as audit_service
+from app.services import recruiting as recruiting_service
+from app.services import subscriptions as subscription_service
 from tests.integration.conftest import assert_error_envelope
 from tests.integration.test_audits import start, untestable  # noqa: F401 (fixtures)
 from tests.integration.test_candidate_reports import _finished  # noqa: F401
+from tests.integration.test_organisation_users import add_learner
 from tests.integration.test_payments import fake_paystack, packs  # noqa: F401 (fixtures)
 from tests.integration.test_recruiter import add_candidate, recruiter, rival  # noqa: F401
 from tests.integration.test_retest import owner, retest, roles, roster  # noqa: F401
 from tests.integration.test_subscriptions import my_subscription, pay, plans, subscribe  # noqa: F401
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 # ---------- resume a cancelled plan ----------
@@ -101,7 +105,7 @@ async def test_the_grace_end_is_shown_only_while_the_plan_is_past_due(
     assert past_due["status"] == "past_due"
     end = _parse(past_due["current_period_end"])
     assert _parse(past_due["grace_ends_at"]) - end == timedelta(
-        days=settings.SUBSCRIPTION_GRACE_DAYS
+        days=subscription_service.SUBSCRIPTION_GRACE_DAYS
     )
 
     db.execute(text("UPDATE subscriptions SET current_period_end = now() - interval '10 days'"))
@@ -135,7 +139,7 @@ async def test_a_retest_too_soon_says_the_date_it_can_run_again(
     error = assert_error_envelope(
         await retest(client, owner, first["audit_id"]), 409, "retest_too_soon"
     )
-    available = started.astimezone(UTC) + timedelta(days=settings.RETEST_COOLDOWN_DAYS)
+    available = started.astimezone(UTC) + timedelta(days=audit_service.RETEST_COOLDOWN_DAYS)
     assert error["details"]["try_again_on"] == available.date().isoformat()
     assert "try again on" in error["message"]
 
@@ -158,15 +162,15 @@ async def test_the_retest_cooldown_is_a_setting(
     skill,
     monkeypatch,  # noqa: F811
 ):
-    monkeypatch.setattr(settings, "RETEST_COOLDOWN_DAYS", 0)
+    monkeypatch.setattr(audit_service, "RETEST_COOLDOWN_DAYS", 0)
     first = (await start(client, owner, role_ids=[roles["backend"]])).json()["data"]
     assert (await retest(client, owner, first["audit_id"])).status_code == 201
     assert (await retest(client, owner, first["audit_id"])).status_code == 201
 
 
 def test_the_defaults_are_fourteen_days_and_twenty_five_candidates():
-    assert settings.RETEST_COOLDOWN_DAYS == 14
-    assert settings.RECRUITER_SHORTLIST_LIMIT == 25
+    assert audit_service.RETEST_COOLDOWN_DAYS == 14
+    assert recruiting_service.RECRUITER_SHORTLIST_LIMIT == 25
 
 
 # ---------- recruiter shortlist cap ----------
@@ -174,10 +178,13 @@ def test_the_defaults_are_fourteen_days_and_twenty_five_candidates():
 
 async def test_the_shortlist_holds_its_limit_then_refuses_with_the_limit(
     client,
+    db,
     recruiter,
     monkeypatch,  # noqa: F811
 ):
-    monkeypatch.setattr(settings, "RECRUITER_SHORTLIST_LIMIT", 2)
+    monkeypatch.setattr(recruiting_service, "RECRUITER_SHORTLIST_LIMIT", 2)
+    for name in ("a", "b", "c"):
+        add_learner(db, name)  # only accounts can be candidates
     for email in ("a@example.com", "b@example.com"):
         assert (await add_candidate(client, recruiter, email=email)).status_code == 201
     error = assert_error_envelope(
@@ -191,10 +198,12 @@ async def test_the_shortlist_holds_its_limit_then_refuses_with_the_limit(
 
 async def test_a_candidate_already_on_the_list_is_still_a_409_not_a_full_list(
     client,
+    db,
     recruiter,
     monkeypatch,  # noqa: F811
 ):
-    monkeypatch.setattr(settings, "RECRUITER_SHORTLIST_LIMIT", 1)
+    monkeypatch.setattr(recruiting_service, "RECRUITER_SHORTLIST_LIMIT", 1)
+    add_learner(db, "a")
     assert (await add_candidate(client, recruiter, email="a@example.com")).status_code == 201
     assert_error_envelope(
         await add_candidate(client, recruiter, email="a@example.com"), 409, "conflict"
@@ -210,7 +219,7 @@ async def test_each_result_in_the_report_says_it_is_shared(
     learner,
     skill,  # noqa: F811
 ):
-    candidate = (await add_candidate(client, recruiter)).json()["data"]
+    candidate = (await add_candidate(client, recruiter, email=learner["email"])).json()["data"]
     await _finished(client, recruiter, learner, skill, candidate_id=candidate["candidate_id"])
     path = f"{API}/recruiter/candidates/{candidate['candidate_id']}/report"
     report = (await client.get(path, headers=recruiter["headers"])).json()["data"]

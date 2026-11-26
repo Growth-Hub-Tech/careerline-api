@@ -4,10 +4,11 @@ import jwt
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from tests.integration.conftest import PASSWORD, assert_error_envelope, login, register
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def test_readyz_is_ready_on_the_migrated_database(client):

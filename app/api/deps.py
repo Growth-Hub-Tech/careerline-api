@@ -9,6 +9,7 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.core.exceptions import ForbiddenError, UnauthorizedError
 from app.core.security import SESSION_COOKIE, decode_token
@@ -28,7 +29,7 @@ __all__ = [
 
 # OAuth2PasswordBearer tells FastAPI (and /docs) where to look for the token. auto_error=False:
 # the website sends the session cookie instead of the header
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/login", auto_error=False)
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{API_PREFIX}/auth/login", auto_error=False)
 
 SAFE_METHODS = {"GET", "HEAD", "OPTIONS"}
 

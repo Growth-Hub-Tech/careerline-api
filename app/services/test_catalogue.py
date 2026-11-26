@@ -11,7 +11,6 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
 from app.core.exceptions import NotFoundError
 from app.models.models import LevelName, Skill, Subskill
 from app.models.payments import TestPrice
@@ -19,6 +18,7 @@ from app.models.roles import JobRoleSkill
 from app.repositories.question_repo import testable_skill_ids
 from app.schemas.assessments import AssessmentAccess, AssessmentDetail, AssessmentSummary
 from app.schemas.common import Page
+from app.services.adaptive_engine import ADAPTIVE_QUESTION_COUNT, ATTEMPT_TIME_LIMIT_MINUTES
 from app.services.payments import credit_balance
 
 # A test is one skill's test: test_id = 200 + skill_id (the numbering every client already uses)
@@ -68,8 +68,8 @@ async def _summaries(db: AsyncSession, skill_ids: list[int]) -> list[AssessmentS
             skill_name=s.skill_name,
             levels=LEVELS,
             format="adaptive",
-            question_count=settings.ADAPTIVE_QUESTION_COUNT,
-            duration_minutes=settings.ATTEMPT_TIME_LIMIT_MINUTES,
+            question_count=ADAPTIVE_QUESTION_COUNT,
+            duration_minutes=ATTEMPT_TIME_LIMIT_MINUTES,
             price_credits=prices.get(s.skill_id, 0),
             role_ids=roles.get(s.skill_id, []),
         )

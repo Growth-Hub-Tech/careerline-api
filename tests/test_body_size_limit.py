@@ -2,7 +2,7 @@
 
 import httpx
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.core.middleware import MAX_BODY_BYTES, BodySizeLimitMiddleware
 
 
@@ -80,7 +80,7 @@ async def test_a_request_without_a_body_is_untouched():
 
 async def test_the_api_answers_a_too_large_body_with_the_error_envelope(client):
     response = await client.post(
-        f"{settings.API_PREFIX}/contact",
+        f"{API_PREFIX}/auth/register",
         content=b"{" + b" " * MAX_BODY_BYTES + b"}",
         headers={"Content-Type": "application/json", "Origin": "http://localhost:5173"},
     )

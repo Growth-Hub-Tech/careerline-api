@@ -7,11 +7,11 @@ programme shown is one within budget when there is one."""
 
 import pytest
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from app.db.seed import load
 from tests.integration.conftest import assert_error_envelope
 
-API = settings.API_PREFIX
+API = API_PREFIX
 ROLE_TABLES = ("skills", "subskills", "job_titles", "job_roles", "job_role_skills")
 
 

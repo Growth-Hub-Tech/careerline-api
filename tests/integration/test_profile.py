@@ -7,10 +7,10 @@ and every change is kept. completeness is the share of the profile filled in.
 
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import assert_error_envelope
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 async def get_profile(client, learner) -> dict:

@@ -12,12 +12,13 @@ import httpx
 import pytest
 from sqlalchemy import text
 
+from app.api import API_PREFIX
 from app.core.config import settings
 from app.db.seed import load
 from app.integrations import paystack
 from tests.integration.conftest import assert_error_envelope
 
-API = settings.API_PREFIX
+API = API_PREFIX
 SECRET = "paystack-test-secret-for-tests-only"
 
 

@@ -1,9 +1,9 @@
 """Daily housekeeping: delete what is no longer needed after 30 days.
 
-Finished background jobs (succeeded or dead), sent emails (the outbox row keeps the recipient's
-address) and expired sign-in sessions. Each run schedules the next day's in the same
-transaction as its deletes. Every process that runs jobs schedules today's when it starts, so a
-restart also restarts a chain that stopped; the dedupe key makes that a no-op otherwise.
+Finished background jobs (succeeded or dead) and expired sign-in sessions. Each run schedules
+the next day's in the same transaction as its deletes. Every process that runs jobs schedules
+today's when it starts, so a restart also restarts a chain that stopped; the dedupe key makes
+that a no-op otherwise.
 """
 
 from datetime import UTC, date, datetime, time, timedelta
@@ -17,7 +17,6 @@ from app.db.session import AsyncSessionLocal
 from app.jobs.queue import enqueue
 from app.jobs.registry import PermanentJobError, job
 from app.models.accounts import AuthSession
-from app.models.email import EmailOutbox
 from app.models.jobs import BackgroundJob
 
 logger = get_logger(__name__)
@@ -67,9 +66,6 @@ async def cleanup(session: AsyncSession, payload: dict[str, Any]) -> None:
             BackgroundJob.status.in_(("succeeded", "dead")), BackgroundJob.finished_at < cutoff
         )
     )
-    emails = await session.execute(
-        delete(EmailOutbox).where(EmailOutbox.status == "sent", EmailOutbox.sent_at < cutoff)
-    )
     sessions = await session.execute(delete(AuthSession).where(AuthSession.expires_at < cutoff))
 
     # The next day after this one (or after today, when this run is late: no catch-up runs)
@@ -78,7 +74,6 @@ async def cleanup(session: AsyncSession, payload: dict[str, Any]) -> None:
     logger.info(
         "cleanup_done",
         jobs=jobs.rowcount,  # type: ignore[attr-defined]
-        emails=emails.rowcount,  # type: ignore[attr-defined]
         sessions=sessions.rowcount,  # type: ignore[attr-defined]
         next_run=following.isoformat(),
     )

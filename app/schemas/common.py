@@ -44,6 +44,6 @@ class Page[T](BaseModel):
 
 
 class Acknowledgement(BaseModel):
-    """For actions with nothing else to return (e.g. a password reset email was queued)."""
+    """For actions with nothing else to return (e.g. a password was changed)."""
 
     status: Literal["accepted"] = "accepted"

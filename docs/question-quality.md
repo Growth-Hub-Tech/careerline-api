@@ -15,7 +15,7 @@ Every question in `seeds/questions/` goes through one check, `app/services/quest
 | `all_none_of_the_above` | review | "all/none of the above" options |
 | `not_four_options` | review | 3 or 5+ options |
 
-`length_giveaway` is the old `check_option_bias.py` check. The two limits are settings (`QUESTION_LENGTH_REVIEW_RATIO`, `QUESTION_LENGTH_BLOCK_RATIO`).
+`length_giveaway` is the old `check_option_bias.py` check. The two limits are the defaults of `Thresholds` in `app/services/question_quality.py` (1.3 and 2.0); `scripts/check_questions.py` can try others.
 
 ## Statuses
 

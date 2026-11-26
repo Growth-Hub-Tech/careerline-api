@@ -42,7 +42,8 @@ async def list_candidates(
     status_code=201,
     response_model=Candidate,
     responses=errors(401, 403, 404, 409, 422),
-    description="409: that email is already a candidate here. 404: unknown role_id.",
+    description="409: that email is already a candidate here, or has no CareerLine account "
+    "yet (no_account: only accounts can be invited). 404: unknown role_id.",
 )
 async def add_candidate(
     data: CandidateCreate,

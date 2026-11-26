@@ -53,28 +53,14 @@ services:
         sync: false # Paystack TEST secret key (sk_test_...) on the test server; without it payments answer 503
       - key: APP_ENV
         value: staging
-      - key: SEED_ON_START
-        value: 'true' # load seeds/ (levels, skills, questions) after migrating, on every deploy
-      - key: DEMO_DATA_ON_START
-        value: 'true' # demo accounts and Demo Company Ltd (docs/api.md); refused in production
       - key: LOG_JSON
         value: 'true'
       - key: SENTRY_DSN
         sync: false # where errors are reported (Sentry); optional on the test server
-      - key: WEB_CONCURRENCY
-        value: '2'
-      - key: DB_POOL_SIZE
-        value: '5' # per process: 2 web workers + the worker open at most 3 x (5 + 5) connections
-      - key: DB_MAX_OVERFLOW
-        value: '5'
       - key: RUN_JOBS_IN_WEB
         value: 'false' # the worker below runs the jobs (on the free plan, with no worker, set true)
-      - key: TEST_MAILBOX_TOKEN
-        generateValue: true # emails go to the test mailbox on staging; without this token GET /api/v1/test-mailbox answers 404
-      - key: SUPPORT_EMAIL
-        sync: false # where contact form messages go (on staging they land in the test mailbox)
       - key: FRONTEND_URL
-        sync: false # the website: links in emails point to its pages
+        sync: false # the website: invitation links and Paystack's return point to it
       - key: PYTHON_VERSION
         value: 3.13.12
 
@@ -85,7 +71,7 @@ services:
     plan: starter
     branch: dev
     buildCommand: pip install -r requirements.txt
-    # Runs the background jobs (emails, AI advice); stops cleanly on SIGTERM
+    # Runs the background jobs (AI advice, renewals, data exports); stops cleanly on SIGTERM
     startCommand: python -m app.worker
     envVars:
       - key: DATABASE_URL
@@ -106,12 +92,6 @@ services:
       - key: LOG_JSON
         value: 'true'
       - key: SENTRY_DSN
-        sync: false
-      - key: DB_POOL_SIZE
-        value: '5'
-      - key: DB_MAX_OVERFLOW
-        value: '5'
-      - key: SUPPORT_EMAIL
         sync: false
       - key: FRONTEND_URL
         sync: false
@@ -138,39 +118,17 @@ services:
         generateValue: true
       - key: APP_ENV
         value: production # refuses to start while a launch setting is wrong (app/core/launch_checks.py)
-      - key: SEED_ON_START
-        value: 'false' # set true for the first deploy and when the seed files change
       - key: LOG_JSON
         value: 'true'
-      - key: WEB_CONCURRENCY
-        value: '2'
-      - key: DB_POOL_SIZE
-        value: '5'
-      - key: DB_MAX_OVERFLOW
-        value: '5'
       - key: RUN_JOBS_IN_WEB
         value: 'false' # the production worker runs the jobs
       - key: CORS_ORIGINS
         sync: false # the website's https origin(s)
       - key: FRONTEND_URL
-        sync: false # the website's https address (links in emails)
+        sync: false # the website's https address (invitation links and Paystack's return)
       - key: PAYSTACK_SECRET_KEY
         sync: false # the live key (sk_live_...)
       - key: OPENAI_API_KEY
-        sync: false
-      - key: EMAIL_FROM
-        sync: false
-      - key: SUPPORT_EMAIL
-        sync: false
-      - key: SMTP_HOST
-        sync: false
-      - key: SMTP_PORT
-        sync: false
-      - key: SMTP_USERNAME
-        sync: false
-      - key: SMTP_PASSWORD
-        sync: false
-      - key: SMTP_SECURITY
         sync: false
       - key: SENTRY_DSN
         sync: false
@@ -199,29 +157,11 @@ services:
         value: production
       - key: LOG_JSON
         value: 'true'
-      - key: DB_POOL_SIZE
-        value: '5'
-      - key: DB_MAX_OVERFLOW
-        value: '5'
       - key: FRONTEND_URL
         sync: false
       - key: PAYSTACK_SECRET_KEY
         sync: false # subscription renewals charge the saved card from the worker
       - key: OPENAI_API_KEY
-        sync: false
-      - key: EMAIL_FROM
-        sync: false
-      - key: SUPPORT_EMAIL
-        sync: false
-      - key: SMTP_HOST
-        sync: false
-      - key: SMTP_PORT
-        sync: false
-      - key: SMTP_USERNAME
-        sync: false
-      - key: SMTP_PASSWORD
-        sync: false
-      - key: SMTP_SECURITY
         sync: false
       - key: SENTRY_DSN
         sync: false

@@ -59,14 +59,6 @@ def test_a_token_without_a_session_has_no_session_id():
     assert security.decode_token("not.a.token") is None
 
 
-def test_one_time_tokens_are_random_and_stored_hashed():
-    token, digest = security.new_one_time_token()
-    other, _ = security.new_one_time_token()
-    assert token != other and len(token) >= 32
-    assert digest == security.hash_one_time_token(token)
-    assert token not in digest
-
-
 def test_new_hashes_use_owasps_minimum_so_signing_in_needs_19_mib():
     params = extract_parameters(security.hash_password("correct-horse-battery"))
     assert (params.memory_cost, params.time_cost, params.parallelism) == (19456, 2, 1)

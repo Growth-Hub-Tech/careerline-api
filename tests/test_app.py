@@ -2,6 +2,7 @@ from types import SimpleNamespace
 
 import httpx
 
+from app.api import API_PREFIX
 from app.api.deps import get_db
 from app.api.routes import api_router
 from app.core.config import settings
@@ -36,7 +37,7 @@ async def test_healthz_returns_the_success_envelope(client):
     assert response.status_code == 200
     assert response.json() == {
         "success": True,
-        "message": f"{settings.APP_NAME} is running",
+        "message": "CareerLine API is running",
         "data": {"status": "healthy"},
     }
 
@@ -46,15 +47,15 @@ async def test_api_routes_are_mounted_under_the_global_prefix(client):
     route_paths = [route.path for route in api_router.routes]
 
     # Route files never repeat the prefix; app/main.py adds it once for all of them
-    assert not any(path.startswith(settings.API_PREFIX) for path in route_paths)
-    assert all(settings.API_PREFIX + path in paths for path in route_paths)
+    assert not any(path.startswith(API_PREFIX) for path in route_paths)
+    assert all(API_PREFIX + path in paths for path in route_paths)
     assert (await client.get("/skills/")).status_code == 404
 
 
 async def test_route_data_is_wrapped_in_the_success_envelope(client):
     use_session(FakeSession)
 
-    response = await client.get(f"{settings.API_PREFIX}/skills/")
+    response = await client.get(f"{API_PREFIX}/skills/")
 
     assert response.status_code == 200
     assert response.json() == {
@@ -65,7 +66,7 @@ async def test_route_data_is_wrapped_in_the_success_envelope(client):
 
 
 async def test_unknown_route_returns_the_error_envelope_with_a_request_id(client):
-    response = await client.get(f"{settings.API_PREFIX}/does-not-exist")
+    response = await client.get(f"{API_PREFIX}/does-not-exist")
 
     body = response.json()
     assert response.status_code == 404
@@ -76,7 +77,7 @@ async def test_unknown_route_returns_the_error_envelope_with_a_request_id(client
 
 async def test_validation_errors_never_echo_submitted_values(client):
     response = await client.post(
-        f"{settings.API_PREFIX}/auth/register",
+        f"{API_PREFIX}/auth/register",
         json={"email": "someone@example.com", "password": "SuperSecret123"},
     )
 
@@ -94,7 +95,7 @@ async def test_validation_errors_never_echo_submitted_values(client):
 async def test_unhandled_errors_return_a_generic_500_without_internals(client):
     use_session(BrokenSession)
 
-    response = await client.get(f"{settings.API_PREFIX}/skills/")
+    response = await client.get(f"{API_PREFIX}/skills/")
 
     body = response.json()
     assert response.status_code == 500
@@ -105,7 +106,7 @@ async def test_unhandled_errors_return_a_generic_500_without_internals(client):
 
 
 async def test_missing_token_gives_401_with_www_authenticate(client):
-    response = await client.get(f"{settings.API_PREFIX}/learners/1")
+    response = await client.get(f"{API_PREFIX}/learners/1")
 
     assert response.status_code == 401
     assert response.headers["WWW-Authenticate"] == "Bearer"
@@ -134,7 +135,7 @@ async def test_security_headers_are_set(client):
 
 
 async def test_login_keeps_the_standard_oauth2_token_body():
-    login = app.openapi()["paths"][f"{settings.API_PREFIX}/auth/login"]["post"]
+    login = app.openapi()["paths"][f"{API_PREFIX}/auth/login"]["post"]
 
     schema = login["responses"]["200"]["content"]["application/json"]["schema"]
     assert schema == {"$ref": "#/components/schemas/TokenResponse"}
@@ -158,9 +159,7 @@ async def test_the_old_duplicate_api_routes_are_gone(client):
         assert response.json()["error"]["code"] == "not_found"
 
     paths = app.openapi()["paths"]
-    old = [
-        p for p in paths if p.startswith("/api/") and not p.startswith(settings.API_PREFIX + "/")
-    ]
+    old = [p for p in paths if p.startswith("/api/") and not p.startswith(API_PREFIX + "/")]
     assert old == []
 
 

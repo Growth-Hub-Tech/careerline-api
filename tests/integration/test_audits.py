@@ -2,7 +2,8 @@
 
 POST /organisations/{id}/audits picks the roster people in the audit's roles (or the member_ids
 given) and, unless it is a draft, invites each of them to every testable skill of their role
-(team invitations, free for them, any account can accept). The audit is in_progress until every
+(in-app team invitations, free for them; everyone invited needs an account with their roster
+email, or nothing is sent and it is a 409 no_account). The audit is in_progress until every
 invitation is finished, then completed. Benchmarks compare each role and skill with its target
 level (what the role needs) and with everyone's average on CareerLine (the industry average,
 shown once at least 5 people have results in that skill).
@@ -11,12 +12,12 @@ shown once at least 5 people have results in that skill).
 import pytest
 from sqlalchemy import text
 
-from app.core.config import settings
+from app.api import API_PREFIX
 from tests.integration.conftest import _make_learner, assert_error_envelope, take_test
 from tests.integration.test_recruiter import _org
 from tests.integration.test_team_roster import add_role, person, upload
 
-API = settings.API_PREFIX
+API = API_PREFIX
 
 
 @pytest.fixture
@@ -51,6 +52,14 @@ def roles(db, skill, untestable) -> dict:
     }
 
 
+async def with_accounts(client, members: dict) -> dict:
+    """The roster people sign up with their roster email (only accounts can be invited); each
+    member gets its account under "account"."""
+    for email, member in members.items():
+        member["account"] = await _make_learner(client, email, member["full_name"])
+    return members
+
+
 @pytest.fixture
 async def roster(client, owner, roles) -> dict:
     response = await upload(
@@ -67,7 +76,7 @@ async def roster(client, owner, roles) -> dict:
     members = (
         await client.get(f"{API}/organisations/{owner['id']}/members", headers=owner["headers"])
     ).json()["data"]["items"]
-    return {m["email"]: m for m in members}
+    return await with_accounts(client, {m["email"]: m for m in members})
 
 
 async def start(client, owner, **body):
@@ -117,10 +126,6 @@ async def test_an_audit_invites_everyone_in_its_roles_to_each_testable_skill(
             (skill["skill_id"], "sent", "team_member", audit["audit_id"])
         ]
     assert team_invitations(db, "dayo@example.com") == []
-    emails = db.execute(
-        text("SELECT to_email FROM email_outbox WHERE template = 'invitation' ORDER BY id")
-    ).scalars()
-    assert sorted(emails) == ["ada@example.com", "bola@example.com", "chi@example.com"]
     members = (
         await client.get(f"{API}/organisations/{owner['id']}/members", headers=owner["headers"])
     ).json()["data"]["items"]
@@ -177,6 +182,43 @@ async def test_a_draft_sends_nothing_until_it_is_started(client, db, owner, role
     assert_error_envelope(again, 409, "conflict")
 
 
+async def test_everyone_invited_needs_an_account_or_nothing_is_sent(
+    client, db, owner, roles, roster
+):
+    newcomers = [
+        person("Efe Nwosu", "efe@example.com", roles["frontend"], "Lending"),
+        person("Gbenga Ade", "gbenga@example.com", roles["frontend"], "Lending"),
+        person("Femi Ola", "femi@example.com", roles["nothing"], "Lending"),
+    ]
+    assert (await upload(client, owner, newcomers)).status_code == 200
+    response = await start(client, owner, role_ids=[roles["backend"], roles["frontend"]])
+    error = assert_error_envelope(response, 409, "no_account")
+    assert error["message"].startswith(
+        "2 people have no CareerLine account yet: Efe Nwosu and Gbenga Ade."
+    )
+    assert "sign up with the email on the team roster" in error["message"]
+    assert len(error["details"]["team_member_ids"]) == 2
+    for table in ("audits", "invitations"):
+        assert db.execute(text(f"SELECT count(*) FROM {table}")).scalar() == 0, table
+
+    # a draft can wait for them; starting it is refused the same way until they sign up
+    draft = await start(client, owner, role_ids=[roles["frontend"]], send_invitations=False)
+    assert draft.status_code == 201, draft.text
+    url = f"{API}/organisations/{owner['id']}/audits/{draft.json()['data']['audit_id']}/start"
+    await _make_learner(client, "gbenga@example.com", "Gbenga Ade")
+    error = assert_error_envelope(
+        await client.post(url, headers=owner["headers"]), 409, "no_account"
+    )
+    assert error["message"].startswith("Efe Nwosu has no CareerLine account yet.")
+    assert team_invitations(db, "gbenga@example.com") == []
+    await _make_learner(client, "efe@example.com", "Efe Nwosu")
+    started = await client.post(url, headers=owner["headers"])
+    assert started.status_code == 200, started.text
+    assert len(team_invitations(db, "efe@example.com")) == 1
+    # Femi's role has no test that can be taken: never invited, so no account needed
+    assert team_invitations(db, "femi@example.com") == []
+
+
 async def test_finished_tests_complete_members_and_then_the_audit_with_benchmarks(
     client, db, owner, roles, roster, skill
 ):
@@ -184,7 +226,7 @@ async def test_finished_tests_complete_members_and_then_the_audit_with_benchmark
         "data"
     ]
     url = f"{API}/organisations/{owner['id']}/audits/{audit['audit_id']}"
-    ada = await _make_learner(client, "ada.personal@example.com", "Ada Obi")
+    ada = roster["ada@example.com"]["account"]
     await finish(client, db, skill, "ada@example.com", ada)  # all right: ADVANCED
 
     now = (await client.get(url, headers=owner["headers"])).json()["data"]
@@ -204,9 +246,8 @@ async def test_finished_tests_complete_members_and_then_the_audit_with_benchmark
     assert by_email["ada@example.com"]["status"] == "completed"
     assert by_email["ada@example.com"]["latest_level"] == "ADVANCED"
 
-    for email, name in (("bola@example.com", "Bola Ade"), ("chi@example.com", "Chi Eze")):
-        who = await _make_learner(client, f"x.{email}", name)
-        await finish(client, db, skill, email, who, right=lambda info: False)
+    for email in ("bola@example.com", "chi@example.com"):
+        await finish(client, db, skill, email, roster[email]["account"], right=lambda info: False)
     done = (await client.get(url, headers=owner["headers"])).json()["data"]
     assert done["status"] == "completed" and done["completed_at"]
     assert done["members_completed"] == 3
@@ -225,7 +266,7 @@ async def test_the_industry_average_shows_once_five_people_have_results(
         someone = await _make_learner(client, f"self{n}@example.com", f"Self Tester {n}")
         await take_test(client, someone["headers"], skill, right=lambda info: False)
     audit = (await start(client, owner, role_ids=[roles["frontend"]])).json()["data"]
-    chi = await _make_learner(client, "chi.personal@example.com", "Chi Eze")
+    chi = roster["chi@example.com"]["account"]
     await finish(client, db, skill, "chi@example.com", chi)
     got = (
         await client.get(

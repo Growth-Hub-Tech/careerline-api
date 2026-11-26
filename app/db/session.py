@@ -2,11 +2,17 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from app.core.config import settings
 
+# Connections each process may open: every web worker and the job worker open up to
+# DB_POOL_SIZE + DB_MAX_OVERFLOW, so the database's connection limit must cover them all.
+# At least 1: SQLAlchemy reads a pool size of 0 as "no limit".
+DB_POOL_SIZE = 5
+DB_MAX_OVERFLOW = 5
+
 # Creating async engine with connection pooling (postgresql:// is converted to postgresql+asyncpg://)
 engine = create_async_engine(
     settings.async_database_url,
-    pool_size=settings.DB_POOL_SIZE,  # connections kept open
-    max_overflow=settings.DB_MAX_OVERFLOW,  # extra connections allowed beyond pool_size
+    pool_size=DB_POOL_SIZE,  # connections kept open
+    max_overflow=DB_MAX_OVERFLOW,  # extra connections allowed beyond pool_size
     pool_pre_ping=True,  # Drop connections the database closed while they sat in the pool
     echo=False,  # Set to True to see SQL queries in terminal
 )

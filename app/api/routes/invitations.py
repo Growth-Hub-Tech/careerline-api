@@ -16,7 +16,7 @@ from app.services import recruiting
 router = APIRouter(prefix="/invitations", tags=["Invitations"], route_class=EnvelopeRoute)
 
 FLOW = (
-    "sent -> accepted (the invitee opens invite_url, signs in and calls POST "
+    "sent -> accepted (the invitee finds it in GET /invitations/received and calls POST "
     "/invitations/token/{token}/accept, which starts the test) -> completed (that test finished; "
     "result_id is set). A sent invitation past expires_at shows as expired."
 )
@@ -26,8 +26,9 @@ FLOW = (
     "",
     status_code=201,
     response_model=Invitation,
-    responses=errors(401, 403, 404, 422),
-    description="Emails the invitee the link. kind candidate (the default) adds the candidate "
+    responses=errors(401, 403, 404, 409, 422),
+    description="Invites someone who already has a CareerLine account; nothing is emailed. An "
+    "email with no account is a 409 no_account. kind candidate (the default) adds the candidate "
     "by candidate_id or email when needed. 404: unknown test_id, candidate_id or another "
     "organisation_id. " + FLOW,
 )
@@ -47,6 +48,23 @@ async def list_sent_invitations(
     actor: OrganisationMember = Depends(acting_member),
 ):
     return await recruiting.list_invitations(db, actor, limit, offset)
+
+
+# THE INVITEE: my invitations (declared before /{invitation_id}, which would match the path)
+@router.get(
+    "/received",
+    response_model=Page[InvitationPublic],
+    responses=errors(401, 422),
+    description="The invitations sent to my account's email, newest first; revoked ones are "
+    "left out. Open one with /invitations/token/{token}.",
+)
+async def list_received_invitations(
+    limit: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    db: AsyncSession = Depends(get_db, scope="function"),
+    current_learner: Learner = Depends(get_current_learner),
+):
+    return await recruiting.received_invitations(db, current_learner, limit, offset)
 
 
 @router.get("/{invitation_id}", response_model=Invitation, responses=errors(401, 403, 404))
@@ -72,7 +90,7 @@ async def revoke_invitation(
     return await recruiting.revoke_invitation(db, actor, invitation_id)
 
 
-# THE INVITEE: public view of the link, then accept (signed in)
+# THE INVITEE: public view of one invitation, then accept (signed in as the invited account)
 @router.get(
     "/token/{token}",
     response_model=InvitationPublic,
@@ -86,14 +104,15 @@ async def open_invitation(token: str, db: AsyncSession = Depends(get_db, scope="
 @router.post(
     "/token/{token}/accept",
     response_model=InvitationPublic,
-    responses=errors(401, 404, 409, 410),
+    responses=errors(401, 403, 404, 409, 410),
     description="Starts the invited test (free: the organisation invited them) and returns its "
-    "attempt_id; take it with /attempts/{attempt_id}/... Accepting twice is fine; another "
-    "account, or a revoked or completed invitation, is a 409; expired is a 410.",
+    "attempt_id; take it with /attempts/{attempt_id}/... Only the invited account may accept "
+    "(another one is a 403). Accepting twice is fine; a revoked or completed invitation is a "
+    "409; expired is a 410.",
 )
 async def accept_invitation(
     token: str,
     db: AsyncSession = Depends(get_db, scope="function"),
     current_learner: Learner = Depends(get_current_learner),
 ):
-    return await recruiting.accept_invitation(db, token, current_learner.learner_id)
+    return await recruiting.accept_invitation(db, token, current_learner)

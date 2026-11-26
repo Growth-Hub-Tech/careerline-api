@@ -3,14 +3,16 @@
 - A candidate is one email per organisation. Their status follows their invitations: completed
   when one is completed, in_progress when one is accepted, invited when one is waiting (sent and
   not expired), otherwise added.
-- POST /invitations (kind candidate) finds or adds the candidate by candidate_id or email, then
-  emails the invitee the link (FRONTEND_URL/invitations/{token}). Revoking a sent or accepted
-  invitation is allowed (again: no change); an expired or completed one is a 409.
+- Invitations are in-app: only an email that has a CareerLine account can be a candidate or be
+  invited (409 no_account otherwise), and the invitee sees it in GET /invitations/received. Nothing is
+  emailed. POST /invitations (kind candidate) finds or adds the candidate by candidate_id or
+  email. Revoking a sent or accepted invitation is allowed (again: no change); an expired or
+  completed one is a 409.
 - Another organisation's candidates and invitations are a 404, never a 403.
 - The invitee: GET /invitations/token/{token} is public (who invited them, which test); accepting
-  needs a signed-in account (any email: people often use another address), starts the invited
-  test free of charge (the organisation invited them) and ties the invitation to that account;
-  another account accepting it afterwards is a 409. Expired: 410. Revoked or completed: 409.
+  needs the invited account (another account is a 403), starts the invited test free of charge
+  (the organisation invited them) and ties the invitation to that account. Expired: 410.
+  Revoked or completed: 409.
 """
 
 import secrets
@@ -22,11 +24,18 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
-from app.core.exceptions import ConflictError, ExpiredError, NotFoundError
+from app.core.exceptions import ConflictError, ExpiredError, ForbiddenError, NotFoundError
 from app.core.logging import get_logger
-from app.email.outbox import send_email
 from app.models.history import SkillHistory
-from app.models.models import AttemptStatus, LevelName, Skill, Subskill, TestAttempt
+from app.models.models import (
+    AttemptStatus,
+    Learner,
+    LearnerStatus,
+    LevelName,
+    Skill,
+    Subskill,
+    TestAttempt,
+)
 from app.models.organisations import Organisation, OrganisationMember
 from app.models.recruiting import Candidate, Invitation
 from app.models.roles import JobRole, JobRoleSkill
@@ -36,9 +45,12 @@ from app.schemas.invitations import InvitationCreate, InvitationPublic
 from app.schemas.recruiter import Candidate as CandidateOut
 from app.schemas.recruiter import CandidateCreate, CandidateReport, CandidateTestResult
 from app.services import reports, test_catalogue
+from app.services.adaptive_engine import ATTEMPT_TIME_LIMIT_MINUTES
 from app.services.test_taking_service import start_or_resume
 
 logger = get_logger(__name__)
+
+RECRUITER_SHORTLIST_LIMIT = 25  # a recruiter's shortlist (the organisation's candidates)
 
 
 def _now() -> datetime:
@@ -47,6 +59,33 @@ def _now() -> datetime:
 
 def _email(value: str) -> str:
     return value.strip().lower()
+
+
+class NoAccountError(ConflictError):
+    code = "no_account"
+
+
+async def emails_with_accounts(db: AsyncSession, emails: set[str]) -> set[str]:
+    """The (lowercase) emails of these that belong to an account that can sign in."""
+    wanted = {_email(e) for e in emails}
+    if not wanted:
+        return set()
+    found = await db.scalars(
+        select(func.lower(Learner.email)).where(
+            func.lower(Learner.email).in_(wanted),
+            Learner.learner_status.is_distinct_from(LearnerStatus.INACTIVE),
+        )
+    )
+    return set(found)
+
+
+async def _require_account(db: AsyncSession, email: str) -> None:
+    """Candidates and invitees are accounts: invitations are in-app."""
+    if not await emails_with_accounts(db, {email}):
+        raise NoAccountError(
+            f"{email} has no CareerLine account yet. Ask them to sign up with this email, "
+            "then invite them."
+        )
 
 
 def invite_url(token: str) -> str:
@@ -248,7 +287,8 @@ async def add_candidate(
     )
     if exists is not None:
         raise ConflictError(f"{email} is already one of your candidates (candidate {exists})")
-    limit = settings.RECRUITER_SHORTLIST_LIMIT
+    await _require_account(db, email)
+    limit = RECRUITER_SHORTLIST_LIMIT
     count = await db.scalar(
         select(func.count(Candidate.id)).where(Candidate.organisation_id == actor.organisation_id)
     )
@@ -346,6 +386,7 @@ async def send_invitation(
         raise NotFoundError(f"Organisation {data.organisation_id} not found")
     test = await test_catalogue.get_test(db, data.test_id)  # 404 for a test nobody can take
     email = _email(str(data.email))
+    await _require_account(db, email)
     candidate_id = None
     if data.kind == "candidate":
         candidate = await _candidate_for(db, actor, data, email)
@@ -367,24 +408,6 @@ async def send_invitation(
     )
     db.add(row)
     await db.flush()
-    organisation = await db.scalar(
-        select(Organisation.name).where(Organisation.id == actor.organisation_id)
-    )
-    await send_email(
-        db,
-        to=email,
-        template="invitation",
-        context={
-            "full_name": row.full_name,
-            "organisation": organisation or "",
-            "test_title": test.title,
-            "minutes": test.duration_minutes,
-            "message": data.message or "",
-            "link": invite_url(row.token),
-            "expires_on": row.expires_at.strftime("%d %b %Y"),
-        },
-        dedupe_key=f"invitation:{row.id}",
-    )
     logger.info("invitation_sent", invitation_id=row.id, organisation_id=actor.organisation_id)
     return _invitation_out(row, test.title)
 
@@ -453,31 +476,68 @@ async def _by_token(db: AsyncSession, token: str, *, lock: bool = False) -> Invi
     return row
 
 
+async def _publics(db: AsyncSession, rows: list[Invitation]) -> list[InvitationPublic]:
+    if not rows:
+        return []
+    organisations = {
+        organisation_id: name
+        for organisation_id, name in await db.execute(
+            select(Organisation.id, Organisation.name).where(
+                Organisation.id.in_({r.organisation_id for r in rows})
+            )
+        )
+    }
+    names = await _skill_names(db, {r.skill_id for r in rows})
+    return [
+        InvitationPublic(
+            token=row.token,
+            status=invitation_status(row),
+            invited_by=organisations.get(row.organisation_id, ""),
+            full_name=row.full_name,
+            test_id=test_catalogue.TEST_ID_OFFSET + row.skill_id,
+            test_title=names.get(row.skill_id, ""),
+            duration_minutes=ATTEMPT_TIME_LIMIT_MINUTES,
+            message=row.message,
+            expires_at=row.expires_at,
+            attempt_id=row.attempt_id,
+        )
+        for row in rows
+    ]
+
+
 async def _public(db: AsyncSession, row: Invitation) -> InvitationPublic:
-    organisation = await db.scalar(
-        select(Organisation.name).where(Organisation.id == row.organisation_id)
-    )
-    names = await _skill_names(db, {row.skill_id})
-    return InvitationPublic(
-        token=row.token,
-        status=invitation_status(row),
-        invited_by=organisation or "",
-        full_name=row.full_name,
-        test_id=test_catalogue.TEST_ID_OFFSET + row.skill_id,
-        test_title=names.get(row.skill_id, ""),
-        duration_minutes=settings.ATTEMPT_TIME_LIMIT_MINUTES,
-        message=row.message,
-        expires_at=row.expires_at,
-        attempt_id=row.attempt_id,
-    )
+    return (await _publics(db, [row]))[0]
 
 
 async def open_invitation(db: AsyncSession, token: str) -> InvitationPublic:
     return await _public(db, await _by_token(db, token))
 
 
-async def accept_invitation(db: AsyncSession, token: str, learner_id: int) -> InvitationPublic:
+async def received_invitations(
+    db: AsyncSession, learner: Learner, limit: int, offset: int
+) -> Page[InvitationPublic]:
+    """The invitations sent to the learner's email, newest first (revoked ones are left out)."""
+    where = (Invitation.email == _email(learner.email), Invitation.status != "revoked")
+    total = await db.scalar(select(func.count()).select_from(Invitation).where(*where))
+    rows = list(
+        await db.scalars(
+            select(Invitation)
+            .where(*where)
+            .order_by(Invitation.sent_at.desc(), Invitation.id.desc())
+            .limit(limit)
+            .offset(offset)
+        )
+    )
+    return Page[InvitationPublic](
+        items=await _publics(db, rows), total=total or 0, limit=limit, offset=offset
+    )
+
+
+async def accept_invitation(db: AsyncSession, token: str, learner: Learner) -> InvitationPublic:
+    learner_id = learner.learner_id
     row = await _by_token(db, token, lock=True)
+    if row.email != _email(learner.email):
+        raise ForbiddenError("This invitation is for another account")
     if row.status in ("revoked", "completed"):
         raise ConflictError(f"This invitation is {row.status}")
     if row.status == "accepted":
